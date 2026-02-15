@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiantWaves Media - Gateway to Your World News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #b91c1c;
+            --primary-dark: #991b1b;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .top-bar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-bar-left span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-bar a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .top-bar a:hover {
+            color: white;
+        }
+
+        /* Header */
+        .main-header {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .slogan {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 10px 40px 10px 15px;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            width: 250px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            width: 300px;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: var(--primary-dark);
+        }
+
+        .subscribe-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .subscribe-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: var(--bg);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .nav-menu .live {
+            color: var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Breaking News Ticker */
+        .breaking-bar {
+            background: var(--primary);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+        }
+
+        .breaking-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .breaking-label {
+            background: white;
+            color: var(--primary);
+            padding: 4px 12px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            animation: flash 1.5s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .breaking-text {
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .hero-main {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .hero-main:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-main img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .hero-main:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 40px;
+            color: white;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero-excerpt {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-side {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .side-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            transition: transform 0.3s;
+        }
+
+        .side-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .side-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .side-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .side-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            padding: 25px;
+            color: white;
+        }
+
+        .side-title {
+            font-size: 1.2rem;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        /* Section Headers */
+        .section-header {
+            max-width: 1400px;
+            margin: 50px auto 25px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 5px;
+            height: 30px;
+            background: var(--primary);
+        }
+
+        .view-all {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s;
+        }
+
+        .view-all:hover {
+            gap: 10px;
+        }
+
+        /* News Grid */
+        .news-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .news-card {
+            background: var(--bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .news-card-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .news-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .news-card:hover .news-card-image img {
+            transform: scale(1.1);
+        }
+
+        .news-card-content {
+            padding: 20px;
+        }
+
+        .news-card-category {
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .news-card-title {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .news-card:hover .news-card-title {
+            color: var(--primary);
+        }
+
+        .news-card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .news-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            background: var(--bg-alt);
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+
+        .featured-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .featured-large {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .featured-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .featured-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .featured-item {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .featured-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .featured-item:hover {
+            transform: translateX(10px);
+        }
+
+        .featured-item-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            opacity: 0.3;
+            line-height: 1;
+            min-width: 40px;
+        }
+
+        .featured-item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .featured-item:hover .featured-item-content h4 {
+            color: var(--primary);
+        }
+
+        .featured-item-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Video Section */
+        .video-section {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .main-video {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--secondary);
+            height: 450px;
+        }
+
+        .main-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--accent);
+        }
+
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 15px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .video-item:hover {
+            background: var(--bg-alt);
+        }
+
+        .video-thumb {
+            position: relative;
+            width: 140px;
+            height: 80px;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .video-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            border-radius: 3px;
+        }
+
+        .video-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .video-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Opinion Section */
+        .opinion-section {
+            background: var(--secondary);
+            color: white;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+
+        .opinion-header {
+            max-width: 1400px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .opinion-title {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .opinion-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .opinion-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s;
+        }
+
+        .opinion-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .opinion-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .opinion-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .opinion-topic {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .newsletter-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .newsletter-text {
+            margin-bottom: 25px;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 15px 30px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-brand .logo span {
+            color: var(--accent);
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 40px auto 0;
+            padding: 20px 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-main img {
+                height: 400px;
+            }
+            
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .opinion-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-menu a {
+                padding: 12px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-clock"></i> <span id="current-time">Loading...</span></span>
+                <span><i class="fas fa-map-marker-alt"></i> Global Edition</span>
+                <span><i class="fas fa-thermometer-half"></i> London 12°C | NYC 18°C | Tokyo 22°C</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fas fa-user"></i> Sign In</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fas fa-rss"></i> RSS</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="#" class="logo">Radiant<span>Waves</span></a>
+                <span class="slogan">Gateway to your world news, connecting you to the world</span>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search news, topics...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#" class="live"><i class="fas fa-circle"></i> Live</a></li>
+                <li><a href="#">World</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Climate</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">More <i class="fas fa-chevron-down"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="breaking-bar">
+        <div class="breaking-container">
+            <span class="breaking-label">Breaking</span>
+            <span class="breaking-text">Global Climate Summit reaches historic agreement on carbon emissions • Tech giants announce new AI safety protocols • Markets rally as inflation data shows improvement</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section fade-in">
+        <article class="hero-main">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=800&fit=crop" alt="Breaking News">
+            <div class="hero-overlay">
+                <span class="category-tag">World News</span>
+                <h1 class="hero-title">Historic Peace Agreement Signed After Decades of Conflict in Eastern Region</h1>
+                <p class="hero-excerpt">Leaders from seven nations gather in Geneva to sign comprehensive treaty marking the end of hostilities and opening new chapter for regional cooperation and economic development.</p>
+                <div class="hero-meta">
+                    <span><i class="fas fa-user"></i> Sarah Mitchell</span>
+                    <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                    <span><i class="fas fa-comment"></i> 234 Comments</span>
+                </div>
+            </div>
+        </article>
+        
+        <div class="hero-side">
+            <article class="side-card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Business">
+                <div class="side-overlay">
+                    <span class="category-tag" style="font-size: 0.7rem; padding: 4px 10px;">Business</span>
+                    <h3 class="side-title">Global Markets Reach Record Highs as Tech Sector Surges</h3>
+                </div>
+            </article>
+            <article class="side-card">
+                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop" alt="Technology">
+                <div class="side-overlay">
+                    <span class="category-tag" style="font-size: 0.7rem; padding: 4px 10px; background: var(--accent);">Technology</span>
+                    <h3 class="side-title">Revolutionary Quantum Computing Breakthrough Announced</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <div class="section-header">
+        <h2 class="section-title">Latest News</h2>
+        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <section class="news-grid fade-in">
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop" alt="Politics">
+                <span class="category-tag" style="position: absolute; top: 15px; left: 15px;">Politics</span>
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-category">Policy Update</div>
+                <h3 class="news-card-title">Senate Passes Landmark Infrastructure Bill with Bipartisan Support</h3>
+                <p class="news-card-excerpt">Comprehensive legislation promises to modernize transportation networks and create millions of jobs over the next decade.</p>
+                <div class="news-card-meta">
+                    <span><i class="fas fa-clock"></i> 3 hours ago</span>
+                    <span><i class="fas fa-share-alt"></i> Share</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop" alt="Science">
+                <span class="category-tag" style="position: absolute; top: 15px; left: 15px; background: var(--accent);">Science</span>
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-category">Discovery</div>
+                <h3 class="news-card-title">NASA's Perseverance Rover Completes Historic Sample Depot</h3>
+                <p class="news-card-excerpt">Ten carefully selected rock and soil samples now await future retrieval mission in groundbreaking Mars exploration.</p>
+                <div class="news-card-meta">
+                    <span><i class="fas fa-clock"></i> 4 hours ago</span>
+                    <span><i class="fas fa-share-alt"></i> Share</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop" alt="Health">
+                <span class="category-tag" style="position: absolute; top: 15px; left: 15px; background: #10b981;">Health</span>
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-category">Medical Breakthrough</div>
+                <h3 class="news-card-title">New Cancer Treatment Shows 90% Success Rate in Clinical Trials</h3>
+                <p class="news-card-excerpt">Revolutionary immunotherapy approach offers hope for patients with previously untreatable forms of cancer.</p>
+                <div class="news-card-meta">
+                    <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                    <span><i class="fas fa-share-alt"></i> Share</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36b51?w=600&h=400&fit=crop" alt="Environment">
+                <span class="category-tag" style="position: absolute; top: 15px; left: 15px; background: #059669;">Climate</span>
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-category">Environment</div>
+                <h3 class="news-card-title">Great Barrier Reef Shows Signs of Recovery After Conservation Efforts</h3>
+                <p class="news-card-excerpt">Marine biologists report highest coral coverage in 20 years following unprecedented protection initiatives.</p>
+                <div class="news-card-meta">
+                    <span><i class="fas fa-clock"></i> 6 hours ago</span>
+                    <span><i class="fas fa-share-alt"></i> Share</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="featured-section">
+        <div class="section-header" style="border-bottom-color: white;">
+            <h2 class="section-title" style="color: white;">Featured Stories</h2>
+            <a href="#" class="view-all" style="color: var(--accent);">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="featured-grid">
+            <div class="featured-large">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000&h=800&fit=crop" alt="Featured">
+                <div class="hero-overlay">
+                    <span class="category-tag">Investigation</span>
+                    <h2 class="hero-title" style="font-size: 2rem;">Inside the Global Supply Chain Crisis: A Deep Dive Analysis</h2>
+                    <p class="hero-excerpt">Our investigative team spent six months tracing the complex networks that keep the world's economy moving.</p>
+                </div>
+            </div>
+            
+            <div class="featured-content">
+                <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--secondary);">Trending Now</h3>
+                <div class="featured-list">
+                    <div class="featured-item">
+                        <span class="featured-item-number">01</span>
+                        <div class="featured-item-content">
+                            <h4>The Future of Remote Work: Permanent Shift or Temporary Trend?</h4>
+                            <p>Business • 8 min read</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <span class="featured-item-number">02</span>
+                        <div class="featured-item-content">
+                            <h4>Cryptocurrency Regulation: What Investors Need to Know</h4>
+                            <p>Finance • 6 min read</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <span class="featured-item-number">03</span>
+                        <div class="featured-item-content">
+                            <h4>Renewable Energy Surpasses Coal in Global Capacity</h4>
+                            <p>Climate • 5 min read</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <span class="featured-item-number">04</span>
+                        <div class="featured-item-content">
+                            <h4>Gen Z Reshapes the Workplace: New Expectations</h4>
+                            <p>Careers • 7 min read</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <div class="section-header">
+        <h2 class="section-title">RadiantWaves TV</h2>
+        <a href="#" class="view-all">All Videos <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <section class="video-section fade-in">
+        <div class="video-grid">
+            <div class="main-video">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop" alt="Main Video">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="hero-overlay">
+                    <span class="category-tag">Documentary</span>
+                    <h2 class="hero-title" style="font-size: 1.8rem;">The Changing Face of Modern Journalism</h2>
+                    <p class="hero-excerpt">An exclusive documentary exploring how digital transformation is reshaping newsrooms worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="video-list">
+                <div class="video-item">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" alt="Video 1">
+                        <span class="video-duration">12:34</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Live: UN Security Council Emergency Session</h4>
+                        <span><i class="fas fa-eye"></i> 45K views • 2 hours ago</span>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop" alt="Video 2">
+                        <span class="video-duration">08:15</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Market Analysis: Weekly Financial Roundup</h4>
+                        <span><i class="fas fa-eye"></i> 32K views • 5 hours ago</span>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com

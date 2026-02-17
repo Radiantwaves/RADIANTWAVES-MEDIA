@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiantWaves Media - Gateway to Your World News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Bar with Social Media */
+        .top-bar {
+            background: #000;
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        .facebook { background: #3b5998; }
+        .instagram { background: #e4405f; }
+        .tiktok { background: #000; border: 1px solid #fff; }
+        .twitter { background: #1da1f2; }
+
+        /* Header with Logo */
+        .main-header {
+            background: #bb1919;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 3px solid #000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .logo-text p {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 10px 15px;
+            width: 250px;
+            outline: none;
+        }
+
+        .search-box button {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            overflow-x: auto;
+        }
+
+        .nav-list li {
+            flex-shrink: 0;
+        }
+
+        .nav-list a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .nav-list a:hover, .nav-list a.active {
+            background: #bb1919;
+        }
+
+        /* Breaking News Ticker */
+        .breaking-news {
+            background: #ff0000;
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            width: 100%;
+        }
+
+        .ticker-content {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .ticker-item {
+            padding: 0 50px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 30px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            margin-bottom: 30px;
+        }
+
+        .hero-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: #333;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            padding: 30px;
+        }
+
+        .category-tag {
+            background: #bb1919;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* News Cards */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 15px;
+        }
+
+        .news-meta {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .news-excerpt {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .widget {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .widget-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #bb1919;
+        }
+
+        .trending-list {
+            list-style: none;
+        }
+
+        .trending-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .trending-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #bb1919;
+            min-width: 30px;
+        }
+
+        .trending-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Music Player Widget */
+        .music-player {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .music-player h3 {
+            margin-bottom: 15px;
+        }
+
+        .music-link {
+            display: block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .music-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Entertainment Section */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #bb1919;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .view-all {
+            color: #bb1919;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .entertainment-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .ent-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .ent-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .ent-content {
+            padding: 15px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #bb1919;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #000;
+        }
+
+        /* Social Widget */
+        .social-widget {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #000;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #bb1919;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 2;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .entertainment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-links {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar with Social Media -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="date-weather">
+                    <span id="current-date"></span>
+                    <span>🌤️ 24°C</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com/yourpage" class="radiantwaves media" target="_blank">📘 Facebook</a>
+                    <a href="https://instagram.com/radiantwaves1" class="instagram" target="_blank">📷 Instagram</a>
+                    <a href="https://tiktok.com/@radiantwavesmedia" class="tiktok" target="_blank">🎵 TikTok</a>
+                    <a href="https://twitter.com/radiant" class="twitter" target="_blank">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with Logo -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="RadiantWaves Media Logo" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <h1>RadiantWaves Media</h1>
+                        <p>Gateway to your world news, connecting you to the world</p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search news, topics...">
+                    <button>🔍 Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="world.html">WORLD</a></li>
+                <li><a href="politics.html">POLITICS</a></li>
+                <li><a href="business.html">BUSINESS</a></li>
+                <li><a href="technology.html">TECHNOLOGY</a></li>
+                <li><a href="science.html">SCIENCE</a></li>
+                <li><a href="health.html">HEALTH</a></li>
+                <li><a href="entertainment.html">ENTERTAINMENT</a></li>
+                <li><a href="sports.html">SPORTS</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="breaking-news">
+        <div class="container">
+            <div class="ticker-wrapper">
+                <div class="ticker-content" id="ticker-content">
+                    <span class="ticker-item">Loading breaking news...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Hero Section -->
+                    <section class="hero-section">
+                        <div class="hero-card">
+                            <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b9?w=800" class="hero-image" alt="Featured News">
+                            <div class="hero-content">
+                                <span class="category-tag">Top Story</span>
+                                <h2 class="hero-title">Global Leaders Unite for Historic Climate Action Plan</h2>
+                                <p>In an unprecedented move, world leaders have committed to aggressive carbon reduction targets...</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Latest News -->
+                    <section>
+                        <div class="section-header">
+                            <h2 class="section-title">Latest News</h2>
+                            <a href="world.html" class="view-all">View All →</a>
+                        </div>
+                        <div class="news-grid">
+                            <article class="news-card">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400" class="news-image" alt="AI News">
+                                <div class="news-content">
+                                    <div class="news-meta">2 hours ago | Technology</div>
+                                    <h3 class="news-title">AI Revolution Transforms Healthcare Industry</h3>
+                                    <p class="news-excerpt">New diagnostic tools powered by artificial intelligence are saving lives...</p>
+                                </div>
+                            </article>
+                            <article class="news-card">
+                                <img src="https://images.unsplash.com/photo-1611974765270-ca1258634369?w=400" class="news-image" alt="Business">
+                                <div class="news-content">
+                                    <div class="news-meta">3 hours ago | Business</div>
+                                    <h3 class="news-title">Stock Markets Hit Record Highs Globally</h3>
+                                    <p class="news-excerpt">Investors celebrate as major indices reach unprecedented levels...</p>
+                                </div>
+                            </article>
+                            <article class="news-card">
+                                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400" class="news-image" alt="Space">
+                                <div class="news-content">
+                                    <div class="news-meta">4 hours ago | Science</div>
+                                    <h3 class="news-title">Space Mission Discovers Water on Distant Moon</h3>
+                                    <p class="news-excerpt">Astronomers confirm presence of liquid water in breakthrough finding...</p>
+                                </div>
+                            </article>
+                            <article class="news-card">
+                                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400" class="news-image" alt="World">
+                                <div class="news-content">
+                                    <div class="news-meta">5 hours ago | World</div>
+                                    <h3 class="news-title">Diplomatic Breakthrough in Middle East Peace Talks</h3>
+                                    <p class="news-excerpt">Historic agreement paves way for regional stability and cooperation...</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Entertainment Hub -->
+                    <section id="entertainment">
+                        <div class="section-header">
+                            <h2 class="section-title">🎬 Entertainment Hub</h2>
+                            <a href="entertainment.html" class="view-all">Browse Library →</a>
+                        </div>
+                        <div class="entertainment-grid">
+                            <div class="ent-card">
+                                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=300" class="ent-image" alt="Movie">
+                                <div class="ent-content">
+                                    <h4>The Last Horizon</h4>
+                                    <p>Action, 2024</p>
+                                    <a href="https://drive.google.com/your-movie-link" class="download-btn">⬇️ Watch</a>
+                                </div>
+                            </div>
+                            <div class="ent-card">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300" class="ent-image" alt="Music">
+                                <div class="ent-content">
+                                    <h4>Global Hits 2024</h4>
+                                    <p>Various Artists</p>
+                                    <a href="https://drive.google.com/your-music-link" class="download-btn">⬇️ Listen</a>
+                                </div>
+                            </div>
+                            <div class="ent-card">
+                                <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=300" class="ent-image" alt="Series">
+                                <div class="ent-content">
+                                    <h4>Tech Chronicles</h4>
+                                    <p>Documentary, S1</p>
+                                    <a href="https://drive.google.com/your-series-link" class="download-btn">⬇️ Watch</a>
+                                </div>
+                            </div>
+                            <div class="ent-card">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=300" class="ent-image" alt="Podcast">
+                                <div class="ent-content">
+                                    <h4>World News Daily</h4>
+                                    <p>Episode 245</p>
+                                    <a href="https://drive.google.com/your-podcast-link" class="download-btn">⬇️ Listen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column - Sidebar -->
+                <aside class="sidebar">
+                    <!-- Trending -->
+                    <div class="widget">
+                        <h3 class="widget-title">🔥 Trending Now</h3>
+                        <ul class="trending-list">
+                            <li>
+                                <span class="trending-number">1</span>
+                                <span class="trending-text">Cryptocurrency Regulations Announced</span>
+                            </li>
+                            <li>
+                                <span class="trending-number">2</span>
+                                <span class="trending-text">New iPhone Features Leaked</span>
+                            </li>
+                            <li>
+                                <span class="trending-number">3</span>
+                                <span class="trending-text">Olympics 2024 Preview</span>
+                            </li>
+                            <li>
+                                <span class="trending-number">4</span>
+                                <span class="trending-text">Hollywood Strike Ends</span>
+                            </li>
+                            <li>
+                                <span class="trending-number">5</span>
+                                <span class="trending-text">Electric Car Price Wars</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Music Player Widget -->
+                    <div class="widget music-player">
+                        <h3>🎵 Listen Now</h3>
+                        <p style="margin-bottom: 15px; font-size: 14px;">Stream the latest hits</p>
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" class="music-link" target="_blank">🎧 Afrobeats Mix 2024</a>
+                        <a href="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF" class="music-link" target="_blank">🎧 Global Top 50</a>
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DWY1j0gQ2VetX" class="music-link" target="_blank">🎧 Ramadan Special</a>
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DX9wC1KY45plY" class="music-link" target="_blank">🎧 Gospel Hits</a>
+                    </div>
+
+                    <!-- Follow Us Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">📱 Follow Us</h3>
+                        <div class="social-widget">
+                            <a href="https://facebook.com/yourpage" class="social-btn facebook" target="_blank">Facebook</a>
+                            <a href="https://instagram.com/yourpage" class="social-btn instagram" target="_blank">Instagram</a>
+                            <a href="https://tiktok.com/@yourpage" class="social-btn tiktok" target="_blank">TikTok</a>
+                            <a href="https://twitter.com/yourpage" class="social-btn twitter" target="_blank">Twitter</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="widget">
+                        <h3 class="widget-title">📧 Newsletter</h3>
+                        <p style="margin-bottom: 15px; font-size: 14px;">Get the latest news delivered to your inbox daily.</p>
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <button style="width: 100%; padding: 10px; background: #bb1919; color: white; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>News Sections</h3>
+                    <ul>
+                        <li><a href="world.html">World News</a></li>
+                        <li><a href="politics.html">Politics</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="science.html">Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Entertainment</h3>
+                    <ul>
+                        <li><a href="entertainment.html">Movies</a></li>
+                        <li><a href="entertainment.html">Music</a></li>
+                        <li><a href="entertainment.html">TV Shows</a></li>
+                        <li><a href="entertainment.html">Podcasts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RadiantWaves Media. Gateway to your world news, connecting you to the world.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/yourpage" target="_blank">📘</a>
+                    <a href="https://instagram.com/yourpage" target="_blank">📷</a>
+                    <a href="https://tiktok.com/@yourpage" target="_blank">🎵</a>
+                    <a href="https://twitter.com/yourpage" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateDate() {
+            const dateElement = document.getElementById('current-date');
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+        updateDate();
+
+        async function loadBreakingNews() {
+            try {
+                const response = await fetch('breaking-news.txt');
+                const text = await response.text();
+                const lines = text.split('\n').filter(line => line.trim() !== '');
+                
+                const tickerContent = document.getElementById('ticker-content');
+                let tickerHTML = '';
+                lines.forEach(line => {
+                    tickerHTML += `<span class="ticker-item">${line.trim()}</span>`;
+                });
+                lines.forEach(line => {
+                    tickerHTML += `<span class="ticker-item">${line.trim()}</span>`;
+                });
+                
+                tickerContent.innerHTML = tickerHTML;
+            } catch (error) {
+                document.getElementById('ticker-content').innerHTML = 
+                    '<span class="ticker-item">🔴 Welcome to RadiantWaves Media - Your Gateway to World News</span>';
+            }
+        }
+        loadBreakingNews();
+        setInterval(loadBreakingNews, 300000);
+    </script>
+</body>
+</html>

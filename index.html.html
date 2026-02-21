@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiant Waves</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.top-bar {
+  background: #f4f4f4;
+  padding: 6px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background: #0A1F44;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav a { color: #fff; }
+nav a:hover { color: #D71920; }
+
+.breaking-container {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.breaking-label {
+  background: #D71920;
+  color: #fff;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.breaking-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.breaking-time {
+  font-size: 13px;
+  color: #666;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr;
+  gap: 25px;
+  padding: 25px;
+}
+
+.main-story img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.main-story h2 {
+  color: #0A1F44;
+  margin: 10px 0;
+}
+
+.secondary-story {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.secondary-story h3 {
+  color: #0A1F44;
+  font-size: 18px;
+}
+
+.sidebar {
+  background: #f9f9f9;
+  padding: 15px;
+}
+
+.sidebar h4 {
+  margin-top: 0;
+  color: #0A1F44;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+footer {
+  background: #0A1F44;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 8px;
+}
+
+footer a:hover { color: #D71920; }
+
+@media(max-width: 1000px) {
+  main { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  <div>
+    Weather: 24°C | Olympics 2026 | Download Our App
+  </div>
+  <div>
+    🔍 Search
+  </div>
+</div>
+
+<header>
+  <div class="logo">Radiant Waves</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Europe</a>
+    <a href="#">Africa</a>
+    <a href="#">Asia</a>
+    <a href="#">America</a>
+    <a href="#">Politics</a>
+    <a href="#">Business</a>
+    <a href="#">Music</a>
+    <a href="#">Movies</a>
+  </nav>
+</header>
+
+<div class="breaking-container">
+  <div class="breaking-label">BREAKING NOW</div>
+  <div>
+    <div class="breaking-title">Global Leaders Meet for Emergency Summit</div>
+    <div class="breaking-time">Updated 10 minutes ago</div>
+  </div>
+</div>
+
+<main>
+
+  <div class="main-story">
+    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c">
+    <h2>Major Economic Shift Across Europe</h2>
+    <p>Markets respond as new policies are introduced across several European nations.</p>
+  </div>
+
+  <div>
+    <div class="secondary-story">
+      <h3>Africa Trade Growth Increases</h3>
+      <p>New agreements boost regional economic partnerships.</p>
+    </div>
+
+    <div class="secondary-story">
+      <h3>Asia Technology Expansion</h3>
+      <p>Tech companies report record-breaking innovation growth.</p>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <h4>Latest Updates</h4>
+    <ul>
+      <li>Olympics 2026 preparation underway</li>
+      <li>Weather alert issued in coastal regions</li>
+      <li>New movie breaks global box office record</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  Follow Us:
+   <a href="https://twitter.com/RadiantWaves13528995" target="_blank">Twitter</a> |
+   <a href="https://facebook.com/radiant waves" target="_blank">Facebook</a> |
+   <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a> |
+   <a href="#">LinkedIn</a> (coming soon)
+  <br><br>
+  © 2026 Radiant Waves
+</footer>
+
+</body>
+</html>

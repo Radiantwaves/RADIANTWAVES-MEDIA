@@ -97,13 +97,30 @@ footer a { color:#fff; margin:0 8px; }
   </nav>
 </header>
 
-<div class="breaking-container">
-  <div class="breaking-label">BREAKING NOW</div>
-  <div>
-    <div id="breaking-title">Major Policy Announcement in Europe</div>
-    <div id="breaking-time">Updated 15 minutes ago</div>
-  </div>
-</div>
+<script>
+const breakingNewsList = [
+  { title: "France announces major economic reform plan", time: "Updated 10 minutes ago" },
+  { title: "Olympics 2026 preparations intensify across Europe", time: "Updated 25 minutes ago" },
+  { title: "Tech markets rally after global summit announcement", time: "Updated 1 hour ago" }
+];
+
+let currentIndex = 0;
+
+function updateBreakingNews() {
+  const news = breakingNewsList[currentIndex];
+
+  document.getElementById("breaking-title").textContent = news.title;
+  document.getElementById("breaking-time").textContent = news.time;
+
+  currentIndex = (currentIndex + 1) % breakingNewsList.length;
+}
+
+// Change every 5 seconds
+setInterval(updateBreakingNews, 5000);
+
+// Load first one immediately
+updateBreakingNews();
+</script>
 
 <main>
   <div class="main-story">
@@ -159,3 +176,4 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
 
 </body>
 </html>
+

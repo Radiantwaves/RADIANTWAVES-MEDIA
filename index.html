@@ -3,244 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves</title>
-
-<!-- PWA manifest -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0A1F44">
+<title>RadiantWaves Media</title>
 
 <style>
-/* ===== GLOBAL ===== */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #222;
-}
-a { text-decoration: none; color: inherit; }
-
-/* ===== TOP BAR ===== */
-.top-bar {
   background: #f4f4f4;
-  padding: 6px 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
 }
 
-/* ===== HEADER ===== */
 header {
-  background: #0A1F44;
-  color: #fff;
-  padding: 20px;
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
-
-.logo { font-size: 28px; font-weight: bold; }
 
 nav {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-nav a { color: #fff; }
-nav a:hover { color: #D71920; }
-
-/* ===== BREAKING NEWS TICKER ===== */
-.breaking-bar {
-  background: #D71920;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 5px 0;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.breaking-content span {
-  display: inline-block;
-  margin-right: 50px;
-  animation: scrollNews 20s linear infinite;
-}
-
-@keyframes scrollNews {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
-}
-
-/* ===== MAIN GRID ===== */
-main {
-  display: grid;
-  grid-template-columns: 2fr 1.2fr 1fr;
-  gap: 25px;
-  padding: 25px;
-}
-
-/* ===== MAIN STORY ===== */
-.main-story img { width: 100%; height: 300px; object-fit: cover; }
-.main-story h2 { color: #0A1F44; margin: 10px 0; }
-
-/* ===== SECONDARY STORIES ===== */
-.secondary-story {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-}
-
-.secondary-story h3 { color: #0A1F44; font-size: 18px; }
-
-/* ===== RIGHT SIDEBAR ===== */
-.sidebar {
-  background: #f9f9f9;
-  padding: 15px;
-}
-
-.sidebar h4 { margin-top: 0; color: #0A1F44; }
-.sidebar ul { list-style: none; padding: 0; }
-.sidebar li { margin-bottom: 10px; font-size: 14px; }
-
-/* ===== FOOTER ===== */
-footer {
-  background: #0A1F44;
-  color: #fff;
+  background: #222;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
-  margin-top: 30px;
 }
 
-footer a { color: #fff; margin: 0 8px; }
-footer a:hover { color: #D71920; }
-
-/* ===== MUSIC BUTTON ===== */
-#play-music {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background: #0A1F44;
+nav a {
   color: white;
-  border: none;
-  border-radius: 5px;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
   cursor: pointer;
 }
 
-@media(max-width: 1000px) { main { grid-template-columns: 1fr; } }
+nav a:hover {
+  color: #ffcc00;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.main-story img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.breaking {
+  background: red;
+  color: white;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.breaking span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 18s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div>Weather: 24°C | Olympics 2026 | <a href="#">Download Our App</a></div>
-  <div>🔍 Search</div>
-</div>
-
-<!-- HEADER -->
 <header>
-  <div class="logo">Radiant Waves</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Europe</a>
-    <a href="#">Africa</a>
-    <a href="#">Asia</a>
-    <a href="#">America</a>
-    <a href="#">Politics</a>
-    <a href="#">Business</a>
-    <a href="#">Music</a>
-    <a href="#">Movies</a>
-  </nav>
+  <h1>RadiantWaves Media</h1>
 </header>
 
-<!-- BREAKING NEWS TICKER -->
-<div class="breaking-bar">
-  <div class="breaking-content" id="breaking-news">Loading breaking news...</div>
+<nav>
+  <a onclick="showSection('home')">Home</a>
+  <a onclick="showSection('nigeria')">Nigeria</a>
+  <a onclick="showSection('secondary')">Global</a>
+</nav>
+
+<div class="breaking">
+  <span id="breakingNews"></span>
 </div>
 
-<!-- MAIN CONTENT -->
-<main>
-  <!-- LEFT: MAIN STORY -->
-  <div class="main-story" id="main-story"></div>
+<div class="container">
 
-  <!-- MIDDLE: SECONDARY -->
-  <div id="secondary-stories"></div>
-
-  <!-- RIGHT: SIDEBAR -->
-  <div class="sidebar">
-    <h4>Latest Updates</h4>
-    <ul id="latest-updates"></ul>
+  <div id="home" class="section">
+    <div class="main-story card">
+      <h2 id="mainTitle"></h2>
+      <img id="mainImage" src="">
+      <p id="mainSummary"></p>
+    </div>
   </div>
-</main>
 
-<!-- FOOTER -->
-<footer>
-  Follow Us:
-  <a href="https://twitter.com/RadiantWaves12528995" target="_blank">Twitter</a> |
-  <a href="https://facebook.com/radiantwaves" target="_blank">Facebook</a> |
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a> |
-  <a href="#">LinkedIn</a>
-  <br><br>
-  © 2026 Radiant Waves
-</footer>
+  <div id="secondary" class="section" style="display:none;">
+    <h2>Global News</h2>
+    <div id="secondaryNews"></div>
+  </div>
 
-<!-- ===== MUSIC BUTTON ===== -->
-<audio id="bg-music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <div id="nigeria" class="section" style="display:none;">
+    <h2>Nigeria News</h2>
+    <div id="nigeriaNews"></div>
+  </div>
 
-<button id="play-music" onclick="document.getElementById('bg-music').play(); this.style.display='none';">
-  ▶ Play Music
-</button>
+</div>
 
-<!-- ===== SCRIPT ===== -->
 <script>
-// Load news content
 fetch("news.json")
-  .then(res => res.json())
-  .then(data => {
-    // Breaking news ticker
-    const ticker = document.getElementById("breaking-news");
-    ticker.innerHTML = "";
-    data.breaking.forEach(item => {
-      const span = document.createElement("span");
-      span.innerText = item.title + " - " + item.time;
-      ticker.appendChild(span);
-    });
+.then(response => response.json())
+.then(data => {
 
-    // Main story
-    const main = document.getElementById("main-story");
-    main.innerHTML = `
-      <img src="${data.main.image}" alt="${data.main.title}">
-      <h2>${data.main.title}</h2>
-      <p>${data.main.summary}</p>
+  // Breaking News
+  let breakingText = data.breaking.map(item => item.title).join(" ⚡ ");
+  document.getElementById("breakingNews").innerText = breakingText;
+
+  // Main Story
+  document.getElementById("mainTitle").innerText = data.main.title;
+  document.getElementById("mainSummary").innerText = data.main.summary;
+  document.getElementById("mainImage").src = data.main.image;
+
+  // Global News
+  let secondaryHTML = "";
+  data.secondary.forEach(item => {
+    secondaryHTML += `
+      <div class="card">
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+      </div>
     `;
-
-    // Secondary stories
-    const secondary = document.getElementById("secondary-stories");
-    data.secondary.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "secondary-story";
-      div.innerHTML = `<h3>${item.title}</h3><p>${item.summary}</p>`;
-      secondary.appendChild(div);
-    });
-
-    // Sidebar updates
-    const updates = document.getElementById("latest-updates");
-    data.updates.forEach(update => {
-      const li = document.createElement("li");
-      li.textContent = update;
-      updates.appendChild(li);
-    });
   });
+  document.getElementById("secondaryNews").innerHTML = secondaryHTML;
 
-// Register PWA service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-    .then(() => console.log('Service Worker Registered'));
+  // Nigeria News
+  if(data.nigeria){
+    let nigeriaHTML = "";
+    data.nigeria.forEach(item => {
+      nigeriaHTML += `
+        <div class="card">
+          <h3>${item.title}</h3>
+          <p>${item.summary}</p>
+        </div>
+      `;
+    });
+    document.getElementById("nigeriaNews").innerHTML = nigeriaHTML;
+  }
+
+});
+
+function showSection(sectionId){
+  document.querySelectorAll(".section").forEach(section => {
+    section.style.display = "none";
+  });
+  document.getElementById(sectionId).style.display = "block";
 }
 </script>
 

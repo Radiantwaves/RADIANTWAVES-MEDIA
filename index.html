@@ -9,13 +9,13 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#111111">
 
-  <!-- Optional CSS -->
+  <!-- Optional CSS (you can keep your previous styles here) -->
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
     header { padding: 10px; background:#111; color:white; text-align:center; }
     #liveDateTime { font-size:14px; margin-top:5px; }
-    button#musicToggle { position:fixed; bottom:20px; right:20px; padding:10px; background:#111; color:white; border:none; border-radius:5px; }
     #main-content { padding:10px; }
+    button#musicToggle { position:fixed; bottom:20px; right:20px; padding:10px; background:#111; color:white; border:none; border-radius:5px; }
     .news-section { margin-bottom:20px; }
     .news-section h2 { border-bottom:2px solid #111; padding-bottom:5px; }
     .news-item { margin-bottom:10px; }
@@ -30,7 +30,7 @@
 </header>
 
 <div id="main-content">
-  <!-- All news sections -->
+  <!-- News sections exactly as before -->
   <div id="home" class="news-section"><h2>Home</h2></div>
   <div id="nigeria" class="news-section"><h2>Nigeria</h2></div>
   <div id="europe" class="news-section"><h2>Europe</h2></div>
@@ -77,24 +77,24 @@
     });
   }
 
-  // Load news dynamically from news.json
+  // Load news dynamically from news.json (keeps previous layout intact)
   fetch('news.json')
     .then(response => response.json())
     .then(data => {
-      for (const section in data) {
-        if(section !== "main" && section !== "breaking") {
-          const container = document.getElementById(section);
-          if(container && Array.isArray(data[section])) {
-            data[section].forEach(item => {
-              const div = document.createElement('div');
-              div.classList.add('news-item');
-              div.innerHTML = `<strong>${item.title}</strong><p>${item.summary}</p>` + (item.image ? `<img src="${item.image}" alt="${item.title}">` : '');
-              container.appendChild(div);
-            });
-          }
+      const sections = ['home','nigeria','europe','africa','asia','america','politics','business','music','movies','olympics'];
+      sections.forEach(section => {
+        const container = document.getElementById(section);
+        if(container && data[section] && Array.isArray(data[section])) {
+          data[section].forEach(item => {
+            const div = document.createElement('div');
+            div.classList.add('news-item');
+            div.innerHTML = `<strong>${item.title}</strong><p>${item.summary}</p>` + (item.image ? `<img src="${item.image}" alt="${item.title}">` : '');
+            container.appendChild(div);
+          });
         }
-      }
-      // Main story
+      });
+
+      // Main story in Home section
       if(data.main){
         const homeContainer = document.getElementById('home');
         const div = document.createElement('div');

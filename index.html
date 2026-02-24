@@ -25,6 +25,7 @@ footer{background:#111;color:white;text-align:center;padding:15px;margin-top:30p
 .social-icons img{width:30px;vertical-align:middle;margin:0 10px;}
 .card img{width:100%;height:200px;object-fit:cover;margin-bottom:10px;}
 .section{display:none;}
+button{cursor:pointer;}
 </style>
 </head>
 <body>
@@ -78,19 +79,27 @@ footer{background:#111;color:white;text-align:center;padding:15px;margin-top:30p
 <!-- SOCIAL MEDIA -->
 <div style="text-align:center; margin-top:30px;" class="social-icons">
   <h3>Follow Us</h3>
-  <a href="https://facebook.com/yourpage" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-  <a href="https://twitter.com/yourpage" target="_blank"><img src="twitter.png" alt="Twitter"></a>
-  <a href="https://tiktok.com/@yourpage" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
-  <a href="https://instagram.com/yourpage" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+  <a href="https://facebook.com/radiantwaves" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+  <a href="https://twitter.com/radiant13528995" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+  <a href="https://instagram.com/radiantwaves1" target="_blank"><img src="instagram.png" alt="Instagram"></a>
 </div>
 
 <footer>
   © 2026 RadiantWaves Media | Global News Network
 </footer>
 
-<audio id="bgMusic" autoplay loop>
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
   <source src="news-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
+
+<div style="text-align:center; margin-top:10px;">
+  <button onclick="toggleMusic()" style="padding:10px 20px;font-size:16px;">
+    Play / Pause Music
+  </button>
+</div>
 
 <script>
 // ========================
@@ -111,7 +120,11 @@ updateClock();
 // ========================
 function toggleMusic(){
   const music = document.getElementById("bgMusic");
-  if(music.paused){ music.play(); } else { music.pause(); }
+  if(music.paused){
+    music.play().catch(err => console.log("Play blocked:", err));
+  } else {
+    music.pause();
+  }
 }
 
 // ========================

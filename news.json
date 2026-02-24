@@ -1,25 +1,45 @@
 {
   "breaking": [
-    { "title": "Global markets rally today", "time": "08:30" },
-    { "title": "Olympics 2026 updates released", "time": "09:00" },
-    { "title": "Weather alert: Storm in Europe", "time": "09:15" }
+    {
+      "title": "France officially begins preparations for the 2030 Winter Olympics after flag handover",
+      "time": "Updated today"
+    },
+    {
+      "title": "European streaming records surge following Milano-Cortina 2026 closing ceremony",
+      "time": "Updated today"
+    },
+    {
+      "title": "Major winter storm continues to disrupt parts of North America",
+      "time": "Updated today"
+    }
   ],
-  "main": {
-    "title": "France Launches New Economic Reform Plan",
-    "summary": "France introduces a sweeping economic reform aimed at boosting growth and employment. Experts are analyzing the potential impact on European markets.",
-    "image": "main-story.jpg"
-  },
-  "secondary": [
-    { "title": "Tech Markets Rally After Global Summit", "summary": "Technology stocks surged today following announcements at the global economic summit in Geneva." },
-    { "title": "Music Awards 2026 Nominations Revealed", "summary": "The biggest names in music have been nominated for the 2026 awards. Fans are excited to see who will take home the top honors." },
-    { "title": "New Movie Releases This Week", "summary": "Several blockbuster movies are hitting theaters this week, including highly anticipated sequels." }
-  ],
-  "updates": [
-    "Global oil prices increase by 2% today",
-    "European Parliament passes new environmental legislation",
-    "AI technology trends dominate tech conference 2026",
-    "Local elections results announced in multiple countries",
-    "Sports highlights: Champions League quarterfinals start this week"
-  ]
 
+  "main": {
+    "title": "France Takes Olympic Flag, Launching Road to 2030 Winter Games",
+    "summary": "France has officially received the Olympic flag following the conclusion of the Milano-Cortina 2026 Winter Olympics. Celebrations marked the symbolic transition as preparations intensify for the 2030 Winter Games in the French Alps, with infrastructure planning and committee restructuring already underway.",
+    "image": "image/main-story.jpg"
+  },
+
+  "secondary": [
+    {
+      "title": "Milano-Cortina 2026 Closes With Cultural Celebration",
+      "summary": "The Winter Games concluded with a vibrant closing ceremony celebrating athletes, international unity and European heritage."
+    },
+    {
+      "title": "Olympic Committee Restructuring Begins in France",
+      "summary": "Organizational changes and leadership adjustments are shaping early preparations for the 2030 Winter Olympics."
+    },
+    {
+      "title": "Global Markets React to Post-Olympic Economic Forecasts",
+      "summary": "European markets show cautious optimism as analysts review the economic impact of the Winter Games."
+    }
+  ],
+
+  "updates": [
+    "France accelerates 2030 Winter Olympics planning",
+    "Streaming viewership hits record highs across Europe",
+    "Winter storm alerts remain active in North America",
+    "Infrastructure discussions begin for French Alps venues",
+    "Milano-Cortina 2026 praised for record digital engagement"
+  ]
 }

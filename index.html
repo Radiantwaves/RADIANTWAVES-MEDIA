@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,11 @@
     header { padding: 10px; background:#111; color:white; text-align:center; }
     #liveDateTime { font-size:14px; margin-top:5px; }
     button#musicToggle { position:fixed; bottom:20px; right:20px; padding:10px; background:#111; color:white; border:none; border-radius:5px; }
+    #main-content { padding:10px; }
+    .news-section { margin-bottom:20px; }
+    .news-section h2 { border-bottom:2px solid #111; padding-bottom:5px; }
+    .news-item { margin-bottom:10px; }
+    .news-item img { max-width:100%; height:auto; display:block; margin-top:5px; }
   </style>
 </head>
 <body>
@@ -24,9 +29,19 @@
   <div id="liveDateTime"></div>
 </header>
 
-<!-- Main content goes here -->
 <div id="main-content">
-  <!-- News and sections will load here via your existing scripts -->
+  <!-- All news sections -->
+  <div id="home" class="news-section"><h2>Home</h2></div>
+  <div id="nigeria" class="news-section"><h2>Nigeria</h2></div>
+  <div id="europe" class="news-section"><h2>Europe</h2></div>
+  <div id="africa" class="news-section"><h2>Africa</h2></div>
+  <div id="asia" class="news-section"><h2>Asia</h2></div>
+  <div id="america" class="news-section"><h2>America</h2></div>
+  <div id="politics" class="news-section"><h2>Politics</h2></div>
+  <div id="business" class="news-section"><h2>Business</h2></div>
+  <div id="music" class="news-section"><h2>Music</h2></div>
+  <div id="movies" class="news-section"><h2>Movies</h2></div>
+  <div id="olympics" class="news-section"><h2>Olympics</h2></div>
 </div>
 
 <!-- Background music -->
@@ -61,9 +76,35 @@
       });
     });
   }
-</script>
 
-<!-- Your other existing scripts can remain below -->
+  // Load news dynamically from news.json
+  fetch('news.json')
+    .then(response => response.json())
+    .then(data => {
+      for (const section in data) {
+        if(section !== "main" && section !== "breaking") {
+          const container = document.getElementById(section);
+          if(container && Array.isArray(data[section])) {
+            data[section].forEach(item => {
+              const div = document.createElement('div');
+              div.classList.add('news-item');
+              div.innerHTML = `<strong>${item.title}</strong><p>${item.summary}</p>` + (item.image ? `<img src="${item.image}" alt="${item.title}">` : '');
+              container.appendChild(div);
+            });
+          }
+        }
+      }
+      // Main story
+      if(data.main){
+        const homeContainer = document.getElementById('home');
+        const div = document.createElement('div');
+        div.classList.add('news-item');
+        div.innerHTML = `<strong>${data.main.title}</strong><p>${data.main.summary}</p>` + (data.main.image ? `<img src="${data.main.image}" alt="${data.main.title}">` : '');
+        homeContainer.insertBefore(div, homeContainer.firstChild);
+      }
+    })
+    .catch(err => console.error('Error loading news:', err));
+</script>
 
 </body>
 </html>

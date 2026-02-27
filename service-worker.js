@@ -1,32 +1,41 @@
-const CACHE_NAME = 'radiantwaves-cache-v1';
+const CACHE_NAME = "radiantwaves-v2"; // Incremented version
 const urlsToCache = [
-  'index.html',
-  'news.json',
-  'main-story.jpg',
-  'app.html',
-  'Olympics.html',
-  'news-music.mp3'
+  "index.html",
+  "news.json",
+  "manifest.json",
+  "main-story.jpg",
+  "icons/icon-192.png",
+  "icons/icon-512.png"
 ];
 
-self.addEventListener('install', event => {
+// Install event: cache all necessary files
+self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(urlsToCache);
     })
   );
+  self.skipWaiting();
 });
 
-self.addEventListener('activate', event => {
+// Activate event: clear old caches
+self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
+    caches.keys().then(keyList => {
       return Promise.all(
-        cacheNames.filter(name => name !== CACHE_NAME).map(name => caches.delete(name))
+        keyList.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
       );
     })
   );
+  self.clients.claim();
 });
 
-self.addEventListener('fetch', event => {
+// Fetch event: serve cached content if offline
+self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request).then(response => {
       return response || fetch(event.request);

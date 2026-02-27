@@ -1,135 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Media</title>
-<link rel="manifest" href="manifest.json">
-
-<style>
-body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#f4f4f4;}
-header{background:#cc0000;color:white;padding:15px;}
-header h1{margin:0;}
-nav{background:#111;padding:10px;text-align:center;}
-nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
-nav a:hover{color:#cc0000;}
-.breaking{background:black;color:white;padding:8px;font-weight:bold;}
-#liveDateTime{font-size:14px;margin-top:5px;}
-.container{width:95%;margin:auto;margin-top:20px;}
-.main-headline{background:white;padding:20px;margin-bottom:20px;}
-.main-headline img{width:100%;max-height:400px;object-fit:cover;}
-.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-.news-card{background:white;padding:15px;}
-.news-card img{width:100%;height:200px;object-fit:cover;}
-footer{background:#111;color:white;text-align:center;padding:15px;margin-top:30px;}
-.card img{width:100%;height:200px;object-fit:cover;margin-bottom:10px;}
-.section{display:none;}
-button{cursor:pointer;}
-
-/* SOCIAL ICONS HOVER + GLOW */
-.social-icons img {
-  filter: grayscale(100%) brightness(0) invert(0);
-  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-.social-icons img:hover {
-  filter: invert(20%) sepia(90%) saturate(5000%) hue-rotate(350deg) brightness(1);
-  transform: scale(1.2);
-  box-shadow: 0 0 8px rgba(255,0,0,0.8);
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiant Waves Media</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
+    header { background:#000; color:#fff; padding:15px; text-align:center; }
+    nav { background:#222; display:flex; justify-content:space-around; padding:10px; }
+    nav button { color:#fff; background:#444; border:none; padding:10px 15px; cursor:pointer; }
+    .section { display:none; padding:10px; }
+    .card { background:#fff; margin:10px 0; padding:10px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.2); }
+    .card img { max-width:100%; border-radius:5px; }
+    #liveDateTime { margin-top:5px; font-size:14px; text-align:center; color:#333; }
+    footer { background:#000; color:#fff; text-align:center; padding:10px; }
+    .social img { width:30px; margin:0 5px; vertical-align:middle; }
+    /* Breaking news ticker */
+    #breakingNews { background:#ff0000; color:#fff; padding:5px; white-space:nowrap; overflow:hidden; }
+    #breakingContent { display:inline-block; padding-left:100%; }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>RadiantWaves Media</h1>
+  <h1>Radiant Waves Media</h1>
   <div id="liveDateTime"></div>
 </header>
 
+<!-- Breaking News Ticker -->
+<div id="breakingNews">
+  <div id="breakingContent"></div>
+</div>
+
 <nav>
-  <a href="#" onclick="showSection('home')">Home</a>
-  <a href="#" onclick="showSection('nigeria')">Nigeria</a>
-  <a href="#" onclick="showSection('europe')">Europe</a>
-  <a href="#" onclick="showSection('africa')">Africa</a>
-  <a href="#" onclick="showSection('asia')">Asia</a>
-  <a href="#" onclick="showSection('america')">America</a>
-  <a href="#" onclick="showSection('politics')">Politics</a>
-  <a href="#" onclick="showSection('business')">Business</a>
-  <a href="#" onclick="showSection('music')">Music</a>
-  <a href="#" onclick="showSection('movies')">Movies</a>
-  <a href="#" onclick="showSection('olympics')">Sports</a>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('nigeria')">Nigeria</button>
+  <button onclick="showSection('europe')">Europe</button>
+  <button onclick="showSection('africa')">Africa</button>
+  <button onclick="showSection('asia')">Asia</button>
+  <button onclick="showSection('america')">America</button>
+  <button onclick="showSection('politics')">Politics</button>
+  <button onclick="showSection('business')">Business</button>
+  <button onclick="showSection('music')">Music</button>
+  <button onclick="showSection('movies')">Movies</button>
+  <button onclick="showSection('sport')">Sport</button>
 </nav>
 
-<div class="breaking">
-  <marquee id="breakingNews"></marquee>
-</div>
-
-<div class="container">
-
-  <!-- MAIN STORY -->
-  <div class="main-headline section" id="home">
+<!-- Sections -->
+<div id="home" class="section">
+  <div class="card">
     <h2 id="mainTitle"></h2>
-    <img id="mainImage" src="" alt="Main Story">
+    <img id="mainImage" src="" alt="Main story">
     <p id="mainSummary"></p>
   </div>
-
-  <!-- OTHER SECTIONS -->
-  <div class="section" id="nigeria"><h2>Nigeria</h2><div id="nigeriaNews" class="news-grid"></div></div>
-  <div class="section" id="europe"><h2>Europe</h2><div id="europeNews" class="news-grid"></div></div>
-  <div class="section" id="africa"><h2>Africa</h2><div id="africaNews" class="news-grid"></div></div>
-  <div class="section" id="asia"><h2>Asia</h2><div id="asiaNews" class="news-grid"></div></div>
-  <div class="section" id="america"><h2>America</h2><div id="americaNews" class="news-grid"></div></div>
-  <div class="section" id="politics"><h2>Politics</h2><div id="politicsNews" class="news-grid"></div></div>
-  <div class="section" id="business"><h2>Business</h2><div id="businessNews" class="news-grid"></div></div>
-  <div class="section" id="music"><h2>Music</h2><div id="musicNews" class="news-grid"></div></div>
-  <div class="section" id="movies"><h2>Movies</h2><div id="moviesNews" class="news-grid"></div></div>
-  <div class="section" id="olympics"><h2>Sports</h2><div id="olympicsNews" class="news-grid"></div></div>
-
 </div>
 
-<!-- SOCIAL MEDIA via CDN -->
-<div style="text-align:center; margin-top:30px;" class="social-icons">
-  <h3>Follow Us</h3>
-  <a href="https://facebook.com/radiantwavesnews/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" width="30">
-  </a>
-  <a href="https://twitter.com/radiant13528995" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" width="30">
-  </a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" width="30">
-  </a>
-  <a href="https://instagram.com/radiantwaves1" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" width="30">
-  </a>
-  <!-- FUTURE ICONS PLACEHOLDER -->
-  <a href="#" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" width="30">
-  </a>
-  <a href="#" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="30">
-  </a>
-</div>
+<div id="nigeria" class="section"><div id="nigeriaNews"></div></div>
+<div id="europe" class="section"><div id="europeNews"></div></div>
+<div id="africa" class="section"><div id="africaNews"></div></div>
+<div id="asia" class="section"><div id="asiaNews"></div></div>
+<div id="america" class="section"><div id="americaNews"></div></div>
+<div id="politics" class="section"><div id="politicsNews"></div></div>
+<div id="business" class="section"><div id="businessNews"></div></div>
+<div id="music" class="section"><div id="musicNews"></div></div>
+<div id="movies" class="section"><div id="moviesNews"></div></div>
+<div id="sport" class="section"><div id="sportNews"></div></div>
+
+<!-- Background music -->
+<audio id="bgMusic" src="news-music.mp3" loop></audio>
+<button onclick="toggleMusic()">Play/Pause Music</button>
 
 <footer>
-  © 2026 RadiantWaves Media | Global News Network
+  <div class="social">
+    <a href="https://www.facebook.com/radiantwavesnews" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+    <a href="https://twitter.com/radiant13528995" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+    <a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+    <a href="https://www.instagram.com/radiantwaves1" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+  </div>
+  &copy; 2026 Radiant Waves Media
 </footer>
 
-<!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="news-music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<div style="text-align:center; margin-top:10px;">
-  <button onclick="toggleMusic()" style="padding:10px 20px;font-size:16px;">
-    Play / Pause Music
-  </button>
-</div>
-
 <script>
-// ========================
-// LIVE CLOCK & DATE
-// ========================
+// Load news from JSON
+fetch("news.json")
+.then(response => response.json())
+.then(data => {
+  // Main story
+  document.getElementById("mainTitle").innerText = data.main.title;
+  document.getElementById("mainSummary").innerText = data.main.summary;
+  document.getElementById("mainImage").src = data.main.image;
+
+  function loadSection(sectionName){
+    if(data[sectionName]){
+      let html="";
+      data[sectionName].forEach(item=>{
+        html+=`
+          <div class="card">
+            ${item.image ? `<img src="${item.image}">` : ""}
+            <h3>${item.title}</h3>
+            <p>${item.summary}</p>
+          </div>`;
+      });
+      document.getElementById(sectionName+"News").innerHTML=html;
+    }
+  }
+
+  ["nigeria","europe","africa","asia","america",
+   "politics","business","music","movies","sport"]
+   .forEach(loadSection);
+
+  // Initialize breaking news ticker
+  const breakingItems = data.breaking.map(item => item.title).join("  ⚡  ");
+  const breakingContent = document.getElementById("breakingContent");
+  breakingContent.innerText = breakingItems;
+
+  let position = 0;
+  setInterval(() => {
+    position -= 2; // adjust speed here
+    if(Math.abs(position) > breakingContent.offsetWidth) position = window.innerWidth;
+    breakingContent.style.transform = `translateX(${position}px)`;
+  }, 50);
+});
+
+// Navigation
+function showSection(id){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+showSection("home");
+
+// Live Clock & Date
 function updateClock() {
   const now = new Date();
   const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
@@ -137,88 +139,23 @@ function updateClock() {
   const time = now.toLocaleTimeString();
   document.getElementById("liveDateTime").innerHTML = date + " | " + time;
 }
-setInterval(updateClock, 1000);
+setInterval(updateClock,1000);
 updateClock();
 
-// ========================
-// BACKGROUND MUSIC TOGGLE
-// ========================
+// Background music toggle
 function toggleMusic(){
-  const music = document.getElementById("bgMusic");
-  if(music.paused){
-    music.play().catch(err => console.log("Play blocked:", err));
-  } else {
-    music.pause();
-  }
+  const music=document.getElementById("bgMusic");
+  if(music.paused){ music.play(); } else { music.pause(); }
 }
 
-// ========================
-// FETCH NEWS JSON
-// ========================
-fetch("news.json")
-  .then(response => response.json())
-  .then(data => {
-
-    // ===== BREAKING NEWS =====
-    if(data.breaking && data.breaking.length > 0){
-      document.getElementById("breakingNews").innerText =
-        data.breaking.map(item => item.title).join(" | ");
-    }
-
-    // ===== MAIN STORY =====
-    if(data.main){
-      document.getElementById("mainTitle").innerText = data.main.title;
-      document.getElementById("mainSummary").innerText = data.main.summary;
-      if(data.main.image) document.getElementById("mainImage").src = data.main.image;
-    }
-
-    // ===== DYNAMIC SECTIONS =====
-    function loadSection(sectionName){
-      if(data[sectionName] && data[sectionName].length > 0){
-        let html = "";
-        data[sectionName].forEach(item => {
-          html += `
-            <div class="card">
-              ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ""}
-              <h3>${item.title}</h3>
-              <p>${item.summary}</p>
-            </div>`;
-        });
-        document.getElementById(sectionName + "News").innerHTML = html;
-      }
-    }
-
-    const sections = ["nigeria","europe","africa","asia","america",
-                      "politics","business","music","movies","olympics"];
-    sections.forEach(loadSection);
-
-  });
-
-// ========================
-// NAVIGATION
-// ========================
-function showSection(id){
-  document.querySelectorAll(".section").forEach(s => s.style.display = "none");
-  document.getElementById(id).style.display = "block";
-}
-
-// Show Home by default
-showSection("home");
-
-// ========================
-// PWA SERVICE WORKER
-// ========================
+// Register service worker for PWA
 if("serviceWorker" in navigator){
-  navigator.serviceWorker.register("service-worker.js")
-    .then(()=>console.log("Service Worker Registered"))
-    .catch(err => console.log("Service Worker Error:", err));
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("service-worker.js")
+      .then(()=> console.log("Service Worker Registered"));
+  });
 }
 </script>
 
 </body>
 </html>
-
-
-
-
-

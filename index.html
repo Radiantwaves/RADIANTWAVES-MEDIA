@@ -1,59 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radiant Waves Media</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000000">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
-    header { background:#000; color:#fff; padding:15px; text-align:center; }
-    nav { background:#222; display:flex; justify-content:space-around; padding:10px; flex-wrap:wrap; }
-    nav button { color:#fff; background:#444; border:none; padding:10px 15px; cursor:pointer; margin:2px; }
-    .section { display:none; padding:10px; max-height:none; overflow:auto; }
-    .card { background:#fff; margin:10px 0; padding:10px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.2); cursor:pointer; }
-    .card img { max-width:100%; border-radius:5px; }
-    #liveDateTime { color:#fff; margin-top:5px; font-size:14px; text-align:center; }
-    footer { background:#000; color:#fff; text-align:center; padding:10px; }
-    .social img { width:30px; margin:0 5px; vertical-align:middle; }
-    /* Breaking news ticker */
-    #breakingNews { background:#ff0000; color:#fff; padding:5px; white-space:nowrap; overflow:hidden; margin-top:5px; }
-    #breakingContent { display:inline-block; padding-left:100%; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiant Waves Media</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
+
+header { background:#000; color:#fff; padding:15px; text-align:center; }
+
+#liveDateTime { color:#fff; margin-top:5px; font-size:14px; }
+
+#breakingNews {
+  background:#ff0000;
+  color:#fff;
+  padding:5px;
+  white-space:nowrap;
+  overflow:hidden;
+  margin-top:5px;
+}
+
+#breakingContent {
+  display:inline-block;
+  padding-left:100%;
+}
+
+nav {
+  background:#222;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding:10px;
+}
+
+nav button {
+  color:#fff;
+  background:#444;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+  margin:2px;
+}
+
+.section {
+  display:none;
+  padding:10px;
+  max-height:calc(100vh - 200px);
+  overflow-y:auto;
+}
+
+.card {
+  background:#fff;
+  margin:10px 0;
+  padding:10px;
+  border-radius:8px;
+  box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.card img {
+  max-width:100%;
+  border-radius:5px;
+}
+
+footer {
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+}
+
+.social img {
+  width:30px;
+  margin:0 5px;
+  vertical-align:middle;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Radiant Waves Media</h1>
+<h1>Radiant Waves Media</h1>
 
-  <!-- Breaking news ticker -->
-  <div id="breakingNews">
-    <div id="breakingContent"></div>
-  </div>
+<div id="breakingNews">
+  <div id="breakingContent"></div>
+</div>
 
-  <div id="liveDateTime"></div>
+<div id="liveDateTime"></div>
 </header>
 
 <nav>
-  <button onclick="showSection('home')">Home</button>
-  <button onclick="showSection('nigeria')">Nigeria</button>
-  <button onclick="showSection('europe')">Europe</button>
-  <button onclick="showSection('africa')">Africa</button>
-  <button onclick="showSection('asia')">Asia</button>
-  <button onclick="showSection('america')">America</button>
-  <button onclick="showSection('politics')">Politics</button>
-  <button onclick="showSection('business')">Business</button>
-  <button onclick="showSection('music')">Music</button>
-  <button onclick="showSection('movies')">Movies</button>
-  <button onclick="showSection('sport')">Sport</button>
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('nigeria')">Nigeria</button>
+<button onclick="showSection('europe')">Europe</button>
+<button onclick="showSection('africa')">Africa</button>
+<button onclick="showSection('asia')">Asia</button>
+<button onclick="showSection('america')">America</button>
+<button onclick="showSection('politics')">Politics</button>
+<button onclick="showSection('business')">Business</button>
+<button onclick="showSection('music')">Music</button>
+<button onclick="showSection('movies')">Movies</button>
+<button onclick="showSection('sport')">Sport</button>
 </nav>
 
 <!-- Sections -->
 <div id="home" class="section">
   <div class="card">
     <h2 id="mainTitle"></h2>
-    <img id="mainImage" src="" alt="Main story">
+    <img id="mainImage" src="" alt="">
     <p id="mainSummary"></p>
   </div>
 </div>
@@ -69,92 +127,98 @@
 <div id="movies" class="section"><div id="moviesNews"></div></div>
 <div id="sport" class="section"><div id="sportNews"></div></div>
 
-<!-- Background music -->
 <audio id="bgMusic" src="news-music.mp3" loop></audio>
-<button onclick="toggleMusic()">Play/Pause Music</button>
+<button onclick="toggleMusic()">Play / Pause Music</button>
 
 <footer>
-  <div class="social">
-    <a href="https://www.facebook.com/radiantwavesnews" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://twitter.com/radiant13528995" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
-    <a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
-    <a href="https://www.instagram.com/radiantwaves1" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-  </div>
-  &copy; 2026 Radiant Waves Media
+<div class="social">
+<a href="https://www.facebook.com/radiantwavesnews" target="_blank">
+<img src="facebook.png">
+</a>
+
+<a href="https://twitter.com/radiant13528995" target="_blank">
+<img src="twitter.png">
+</a>
+
+<a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank">
+<img src="tiktok.png">
+</a>
+
+<a href="https://www.instagram.com/radiantwaves1" target="_blank">
+<img src="Instagram.png">
+</a>
+</div>
+
+© 2026 Radiant Waves Media
 </footer>
 
 <script>
-// Load news from JSON
 fetch("news.json")
 .then(response => response.json())
 .then(data => {
-  // Main story
-  document.getElementById("mainTitle").innerText = data.main.title;
-  document.getElementById("mainSummary").innerText = data.main.summary;
-  document.getElementById("mainImage").src = data.main.image;
 
-  function loadSection(sectionName){
-    if(data[sectionName]){
-      let html="";
-      data[sectionName].forEach(item=>{
-        html+=`
-          <div class="card">
-            ${item.image ? `<img src="${item.image}">` : ""}
-            <h3>${item.title}</h3>
-            <p>${item.summary}</p>
-          </div>`;
-      });
-      document.getElementById(sectionName+"News").innerHTML=html;
-    }
+document.getElementById("mainTitle").innerText = data.main.title;
+document.getElementById("mainSummary").innerText = data.main.summary;
+document.getElementById("mainImage").src = data.main.image;
+
+function loadSection(sectionName){
+  if(data[sectionName]){
+    let html="";
+    data[sectionName].forEach(item=>{
+      html+=`
+      <div class="card">
+        ${item.image ? `<img src="${item.image}">` : ""}
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+      </div>`;
+    });
+    document.getElementById(sectionName+"News").innerHTML=html;
   }
+}
 
-  ["nigeria","europe","africa","asia","america",
-   "politics","business","music","movies","sport"]
-   .forEach(loadSection);
+["nigeria","europe","africa","asia","america",
+ "politics","business","music","movies","sport"]
+.forEach(loadSection);
 
-  // Breaking news ticker
-  const breakingItems = data.breaking.map(item => item.title).join(" ⚡ ");
-  const breakingContent = document.getElementById("breakingContent");
-  breakingContent.innerText = breakingItems;
+const breakingItems = data.breaking.map(item => item.title).join(" ⚡ ");
+const breakingContent = document.getElementById("breakingContent");
+breakingContent.innerText = breakingItems;
 
-  let position = 0;
-  setInterval(() => {
-    position -= 2;
-    if(Math.abs(position) > breakingContent.offsetWidth) position = window.innerWidth;
-    breakingContent.style.transform = `translateX(${position}px)`;
-  }, 50);
+let position = 0;
+setInterval(() => {
+  position -= 2;
+  if(Math.abs(position) > breakingContent.offsetWidth)
+    position = window.innerWidth;
+  breakingContent.style.transform = `translateX(${position}px)`;
+}, 50);
+
 });
 
-// Navigation
 function showSection(id){
-  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
-  document.getElementById(id).style.display="block";
+document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+document.getElementById(id).style.display="block";
 }
 showSection("home");
 
-// Live Clock & Date
 function updateClock() {
-  const now = new Date();
-  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-  const date = now.toLocaleDateString(undefined, options);
-  const time = now.toLocaleTimeString();
-  document.getElementById("liveDateTime").innerText = date + " | " + time;
+const now = new Date();
+const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+const date = now.toLocaleDateString(undefined, options);
+const time = now.toLocaleTimeString();
+document.getElementById("liveDateTime").innerText = date + " | " + time;
 }
 setInterval(updateClock,1000);
 updateClock();
 
-// Background music toggle
 function toggleMusic(){
-  const music=document.getElementById("bgMusic");
-  if(music.paused){ music.play(); } else { music.pause(); }
+const music=document.getElementById("bgMusic");
+if(music.paused){ music.play(); } else { music.pause(); }
 }
 
-// Register service worker for PWA
 if("serviceWorker" in navigator){
-  window.addEventListener("load", function(){
-    navigator.serviceWorker.register("service-worker.js")
-      .then(()=> console.log("Service Worker Registered"));
-  });
+window.addEventListener("load", function(){
+navigator.serviceWorker.register("service-worker.js");
+});
 }
 </script>
 

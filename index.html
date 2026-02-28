@@ -73,18 +73,18 @@ footer {
   padding:10px;
 }
 
-social img {
+.social img {
   width: 28px;
   margin: 0 8px;
-  background: #ffffff;   /* white background to make black icons visible */
-  padding: 6px;          /* spacing around the icon */
-  border-radius: 50%;    /* round corners */
-  vertical-align: middle; /* keep icons aligned with text */
+  background: #ffffff;  /* white background for visibility */
+  padding: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
   transition: transform 0.3s;
 }
 
 .social img:hover {
-  transform: scale(1.1);  /* optional hover effect */
+  transform: scale(1.1);
 }
 </style>
 </head>
@@ -139,98 +139,98 @@ social img {
 <button onclick="toggleMusic()">Play / Pause Music</button>
 
 <footer>
-  <div class="social">
-    <a href="https://www.facebook.com/radiantwavesnews" target="_blank">
-      <img src="facebook.png" alt="Facebook">
-    </a>
-
-    <a href="https://twitter.com/radiant13528995" target="_blank">
-      <img src="twitter.png" alt="Twitter">
-    </a>
-
-    <a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank">
-      <img src="tiktok.png" alt="TikTok">
-    </a>
-
-    <a href="https://www.instagram.com/radiantwaves1" target="_blank">
-      <img src="Instagram.png" alt="Instagram">
-    </a>
-  </div>
-
-  © 2026 Radiant Waves Media
+<div class="social">
+  <a href="https://www.facebook.com/radiantwavesnews" target="_blank">
+    <img src="facebook.png" alt="Facebook">
+  </a>
+  <a href="https://twitter.com/radiant13528995" target="_blank">
+    <img src="twitter.png" alt="Twitter">
+  </a>
+  <a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank">
+    <img src="tiktok.png" alt="TikTok">
+  </a>
+  <a href="https://www.instagram.com/radiantwaves1" target="_blank">
+    <img src="Instagram.png" alt="Instagram">
+  </a>
+</div>
+© 2026 Radiant Waves Media
 </footer>
+
 <script>
+// Load news from JSON
 fetch("news.json")
 .then(response => response.json())
 .then(data => {
+  // Main story
+  document.getElementById("mainTitle").innerText = data.main.title;
+  document.getElementById("mainSummary").innerText = data.main.summary;
+  document.getElementById("mainImage").src = data.main.image;
 
-document.getElementById("mainTitle").innerText = data.main.title;
-document.getElementById("mainSummary").innerText = data.main.summary;
-document.getElementById("mainImage").src = data.main.image;
-
-function loadSection(sectionName){
-  if(data[sectionName]){
-    let html="";
-    data[sectionName].forEach(item=>{
-      html+=`
-      <div class="card">
-        ${item.image ? `<img src="${item.image}">` : ""}
-        <h3>${item.title}</h3>
-        <p>${item.summary}</p>
-      </div>`;
-    });
-    document.getElementById(sectionName+"News").innerHTML=html;
+  function loadSection(sectionName){
+    if(data[sectionName]){
+      let html="";
+      data[sectionName].forEach(item=>{
+        html+=`
+          <div class="card">
+            ${item.image ? `<img src="${item.image}">` : ""}
+            <h3>${item.title}</h3>
+            <p>${item.summary}</p>
+          </div>`;
+      });
+      document.getElementById(sectionName+"News").innerHTML=html;
+    }
   }
-}
 
-["nigeria","europe","africa","asia","america",
- "politics","business","music","movies","sport"]
-.forEach(loadSection);
+  ["nigeria","europe","africa","asia","america",
+   "politics","business","music","movies","sport"]
+   .forEach(loadSection);
 
-const breakingItems = data.breaking.map(item => item.title).join(" ⚡ ");
-const breakingContent = document.getElementById("breakingContent");
-breakingContent.innerText = breakingItems;
-
-let position = 0;
-setInterval(() => {
-  position -= 2;
-  if(Math.abs(position) > breakingContent.offsetWidth)
-    position = window.innerWidth;
-  breakingContent.style.transform = `translateX(${position}px)`;
-}, 50);
+  // Breaking news ticker
+  const breakingItems = data.breaking.map(item => item.title).join(" ⚡ ");
+  const breakingContent = document.getElementById("breakingContent");
+  breakingContent.innerText = breakingItems;
+  let position = 0;
+  setInterval(() => {
+    position -= 2;
+    if(Math.abs(position) > breakingContent.offsetWidth)
+      position = window.innerWidth;
+    breakingContent.style.transform = `translateX(${position}px)`;
+  }, 50);
 
 });
 
+// Navigation
 function showSection(id){
-document.querySelectorAll(".section").forEach(s=>s.style.display="none");
-document.getElementById(id).style.display="block";
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
 }
 showSection("home");
 
+// Live Clock & Date
 function updateClock() {
-const now = new Date();
-const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-const date = now.toLocaleDateString(undefined, options);
-const time = now.toLocaleTimeString();
-document.getElementById("liveDateTime").innerText = date + " | " + time;
+  const now = new Date();
+  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  const date = now.toLocaleDateString(undefined, options);
+  const time = now.toLocaleTimeString();
+  document.getElementById("liveDateTime").innerText = date + " | " + time;
 }
 setInterval(updateClock,1000);
 updateClock();
 
+// Background music toggle
 function toggleMusic(){
-const music=document.getElementById("bgMusic");
-if(music.paused){ music.play(); } else { music.pause(); }
+  const music=document.getElementById("bgMusic");
+  if(music.paused){ music.play(); } else { music.pause(); }
 }
 
+// Register service worker for PWA
 if("serviceWorker" in navigator){
-window.addEventListener("load", function(){
-navigator.serviceWorker.register("service-worker.js");
-});
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("service-worker.js")
+      .then(()=>console.log("Service Worker Registered"));
+  });
 }
 </script>
 
 </body>
 </html>
-
-
-

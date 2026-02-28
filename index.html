@@ -9,12 +9,12 @@
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f0f0f0; }
     header { background:#000; color:#fff; padding:15px; text-align:center; }
-    nav { background:#222; display:flex; justify-content:space-around; padding:10px; }
-    nav button { color:#fff; background:#444; border:none; padding:10px 15px; cursor:pointer; }
-    .section { display:none; padding:10px; }
-    .card { background:#fff; margin:10px 0; padding:10px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.2); }
+    nav { background:#222; display:flex; justify-content:space-around; padding:10px; flex-wrap:wrap; }
+    nav button { color:#fff; background:#444; border:none; padding:10px 15px; cursor:pointer; margin:2px; }
+    .section { display:none; padding:10px; max-height:none; overflow:auto; }
+    .card { background:#fff; margin:10px 0; padding:10px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.2); cursor:pointer; }
     .card img { max-width:100%; border-radius:5px; }
-    #liveDateTime { margin-top:5px; font-size:14px; text-align:center; color:#333; }
+    #liveDateTime { color:#fff; margin-top:5px; font-size:14px; text-align:center; }
     footer { background:#000; color:#fff; text-align:center; padding:10px; }
     .social img { width:30px; margin:0 5px; vertical-align:middle; }
     /* Breaking news ticker */
@@ -27,7 +27,7 @@
 <header>
   <h1>Radiant Waves Media</h1>
 
-  <!-- Breaking news ticker inside header -->
+  <!-- Breaking news ticker -->
   <div id="breakingNews">
     <div id="breakingContent"></div>
   </div>
@@ -112,14 +112,14 @@ fetch("news.json")
    "politics","business","music","movies","sport"]
    .forEach(loadSection);
 
-  // Initialize breaking news ticker
-  const breakingItems = data.breaking.map(item => item.title).join("  ⚡  ");
+  // Breaking news ticker
+  const breakingItems = data.breaking.map(item => item.title).join(" ⚡ ");
   const breakingContent = document.getElementById("breakingContent");
   breakingContent.innerText = breakingItems;
 
   let position = 0;
   setInterval(() => {
-    position -= 2; // adjust speed here
+    position -= 2;
     if(Math.abs(position) > breakingContent.offsetWidth) position = window.innerWidth;
     breakingContent.style.transform = `translateX(${position}px)`;
   }, 50);
@@ -138,7 +138,7 @@ function updateClock() {
   const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
   const date = now.toLocaleDateString(undefined, options);
   const time = now.toLocaleTimeString();
-  document.getElementById("liveDateTime").innerHTML = date + " | " + time;
+  document.getElementById("liveDateTime").innerText = date + " | " + time;
 }
 setInterval(updateClock,1000);
 updateClock();

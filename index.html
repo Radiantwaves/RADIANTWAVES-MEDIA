@@ -73,13 +73,18 @@ footer {
   padding:10px;
 }
 
-.social img {
-  width:28px;
-  margin:0 8px;
-  background:#ffffff;        /* wite box behinde icon */
-  padding: 6px;
-  border-radius:50%          /* round corner */
-  vertical-align:middle;
+social img {
+  width: 28px;
+  margin: 0 8px;
+  background: #ffffff;   /* white background to make black icons visible */
+  padding: 6px;          /* spacing around the icon */
+  border-radius: 50%;    /* round corners */
+  vertical-align: middle; /* keep icons aligned with text */
+  transition: transform 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.1);  /* optional hover effect */
 }
 </style>
 </head>
@@ -134,27 +139,26 @@ footer {
 <button onclick="toggleMusic()">Play / Pause Music</button>
 
 <footer>
-<div class="social">
-<a href="https://www.facebook.com/radiantwavesnews" target="_blank">
-<img src="facebook.png">
-</a>
+  <div class="social">
+    <a href="https://www.facebook.com/radiantwavesnews" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
 
-<a href="https://twitter.com/radiant13528995" target="_blank">
-<img src="twitter.png">
-</a>
+    <a href="https://twitter.com/radiant13528995" target="_blank">
+      <img src="twitter.png" alt="Twitter">
+    </a>
 
-<a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank">
-<img src="tiktok.png">
-</a>
+    <a href="https://www.tiktok.com/@radiantwavesmedia" target="_blank">
+      <img src="tiktok.png" alt="TikTok">
+    </a>
 
-<a href="https://www.instagram.com/radiantwaves1" target="_blank">
-<img src="Instagram.png">
-</a>
-</div>
+    <a href="https://www.instagram.com/radiantwaves1" target="_blank">
+      <img src="Instagram.png" alt="Instagram">
+    </a>
+  </div>
 
-© 2026 Radiant Waves Media
+  © 2026 Radiant Waves Media
 </footer>
-
 <script>
 fetch("news.json")
 .then(response => response.json())
@@ -227,5 +231,6 @@ navigator.serviceWorker.register("service-worker.js");
 
 </body>
 </html>
+
 
 

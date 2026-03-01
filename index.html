@@ -12,14 +12,14 @@ header{ background:#000; padding:15px; text-align:center; font-size:28px; font-w
 #breaking{ background:red; padding:8px; overflow:hidden; white-space:nowrap; pointer-events:none;}
 #breakingContent{ display:inline-block; padding-left:100%; animation:scroll 25s linear infinite;}
 @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
-.main{ padding:20px; text-align:center; }
+.main{ padding:20px; text-align:center; position:relative; z-index:5; }
 .main img{ width:100%; max-height:350px; object-fit:cover; }
 .main h2{ color:#00ffcc; margin:10px 0; }
-.tabs{ display:flex; overflow-x:auto; gap:10px; padding:10px 15px; background:#222; }
+.tabs{ display:flex; overflow-x:auto; gap:10px; padding:10px 15px; background:#222; position:relative; z-index:10; }
 .tabs button{ flex-shrink:0; padding:8px 15px; border:none; background:#333; color:#00ffcc; border-radius:5px; cursor:pointer; transition:0.2s; white-space:nowrap; }
 .tabs button.active, .tabs button:hover{ background:#00ffcc; color:#000; }
-.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; padding:10px 0; }
-.headline-row a{ flex-shrink:0; color:#00ffcc; text-decoration:none; font-weight:bold; padding:5px 10px; background:#222; border-radius:5px; transition:0.2s; white-space:nowrap; }
+.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; padding:10px 0; position:relative; z-index:10; }
+.headline-row a{ flex-shrink:0; color:#00ffcc; text-decoration:none; font-weight:bold; padding:5px 10px; background:#222; border-radius:5px; transition:0.2s; white-space:nowrap; position:relative; z-index:10; }
 .headline-row a:hover{ background:#333; color:#fff; }
 .social{ text-align:center; padding:15px; background:#000; }
 .social img{ width:28px; margin:0 10px; }
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const tabsContainer = document.getElementById("tabsContainer");
   const headlineContainer = document.getElementById("headlineContainer");
+  const toast = document.getElementById("toast");
 
   fetch("news.json").then(r=>r.json()).then(data=>{
     const sections = ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
     sections.forEach((section,i)=>{
       const btn = document.createElement("button");
       btn.innerText = sectionNames[section];
-      if(i===0) btn.classList.add("active"); // first tab active
+      if(i===0) btn.classList.add("active");
       btn.addEventListener("click", function(){
         document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
         this.classList.add("active");
@@ -94,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // MAIN STORY ROTATION
     let mainIndex = 0;
-    const toast = document.getElementById("toast");
     function rotateMain(){
       const story = data.main[mainIndex];
       document.getElementById("mainTitle").innerText = story.title;
@@ -127,7 +127,15 @@ document.addEventListener("DOMContentLoaded", function(){
         a.dataset.summary = item.summary;
         a.dataset.image = item.image || "main-story.jpg";
 
+        // CLICK / TOUCH EVENT FOR DESKTOP & MOBILE
         a.addEventListener("click", function(e){
+          e.preventDefault();
+          document.getElementById("mainTitle").innerText = this.dataset.title;
+          document.getElementById("mainSummary").innerText = this.dataset.summary;
+          document.getElementById("mainImage").src = this.dataset.image;
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+        a.addEventListener("touchstart", function(e){
           e.preventDefault();
           document.getElementById("mainTitle").innerText = this.dataset.title;
           document.getElementById("mainSummary").innerText = this.dataset.summary;

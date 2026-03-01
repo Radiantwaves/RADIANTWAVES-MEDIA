@@ -7,22 +7,22 @@
 <link rel="manifest" href="manifest.json">
 <style>
 body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#111; color:white; }
-header{ background:#000; padding:15px; text-align:center; font-size:28px; font-weight:bold; color:#00ffcc; position:relative; z-index:1000;}
-#liveDateTime{ text-align:center; padding:8px; background:#222; color:#00ffcc; font-size:14px; position:relative; pointer-events:none;}
-#breaking{ background:red; padding:8px; overflow:hidden; white-space:nowrap; position:relative; pointer-events:none;}
+header{ background:#000; padding:15px; text-align:center; font-size:28px; font-weight:bold; color:#00ffcc; }
+#liveDateTime{ text-align:center; padding:8px; background:#222; color:#00ffcc; font-size:14px; pointer-events:none;}
+#breaking{ background:red; padding:8px; overflow:hidden; white-space:nowrap; pointer-events:none;}
 #breakingContent{ display:inline-block; padding-left:100%; animation:scroll 25s linear infinite;}
 @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
-.main{ padding:20px; text-align:center; max-height:400px; overflow:hidden; }
-.main img{ width:100%; height:250px; object-fit:cover; display:block; }
+.main{ padding:20px; text-align:center; }
+.main img{ width:100%; max-height:350px; object-fit:cover; }
 .main h2{ color:#00ffcc; margin:10px 0; }
 .section-wrapper{ padding:20px; }
 .section-wrapper h2{ border-bottom:2px solid #00ffcc; padding-bottom:5px; color:#00ffcc; }
-.section{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
-.card{ background:#222; margin:0; padding:10px; border-radius:5px; cursor:pointer; transition:0.2s; pointer-events:auto; z-index:1;}
+.section{ display:flex; overflow-x:auto; gap:10px; }
+.card{ min-width:250px; background:#222; padding:10px; border-radius:5px; cursor:pointer; transition:0.2s; flex-shrink:0; }
 .card:hover{ background:#333; }
-.card img{ width:100%; max-height:200px; object-fit:cover; }
-.card h3{ margin:5px 0; }
-.card p{ margin:0; }
+.card img{ width:100%; max-height:150px; object-fit:cover; }
+.card h3{ margin:5px 0; font-size:16px; }
+.card p{ display:none; }
 .article-panel{ display:none; background:#111; padding:20px; margin:10px 0; border:1px solid #00ffcc; border-radius:5px; }
 .article-panel h2{ color:#00ffcc; }
 .social{ text-align:center; padding:15px; background:#000; }
@@ -36,11 +36,9 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
 <header>Radiant Waves Media</header>
 <div id="liveDateTime"></div>
 
-<div id="breaking">
-  <span id="breakingContent">Loading breaking news...</span>
-</div>
+<div id="breaking"><span id="breakingContent">Loading breaking news...</span></div>
 
-<div class="main" id="mainContainer">
+<div class="main">
   <img id="mainImage" src="main-story.jpg">
   <h2 id="mainTitle">Loading headline...</h2>
   <p id="mainSummary"></p>
@@ -81,7 +79,6 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
-  // LIVE CLOCK
   function updateClock(){
     const now=new Date();
     const options={ weekday:'long', year:'numeric', month:'long', day:'numeric' };
@@ -90,12 +87,9 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   setInterval(updateClock,1000); updateClock();
 
-  // CLOSE ARTICLE PANEL
   window.closeArticle=function(){ document.getElementById("articlePanel").style.display="none"; }
 
-  // LOAD NEWS
   fetch("news.json").then(r=>r.json()).then(data=>{
-    // MAIN ROTATION WITH TOAST
     let index=0;
     const toast=document.getElementById("toast");
     function rotateMain(){
@@ -104,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function(){
       document.getElementById("mainSummary").innerText=story.summary;
       document.getElementById("mainImage").src=story.image;
 
-      // Toast notification
       toast.innerText="Breaking: "+story.title;
       toast.style.display="block";
       setTimeout(()=>{toast.style.display="none";},3500);
@@ -113,11 +106,9 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     rotateMain(); setInterval(rotateMain,8000);
 
-    // BREAKING NEWS
     document.getElementById("breakingContent").innerText=
       data.breaking.map(item=>item.title).join(" ⚡ ");
 
-    // LOAD SECTIONS
     const sections=["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
     sections.forEach(section=>{
       const container=document.getElementById(section+"News");
@@ -134,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     });
 
-    // DELEGATED CLICK + TOUCH
     const container=document.getElementById("sectionsContainer");
     function handleCardClick(e){
       const card=e.target.closest(".card");
@@ -151,13 +141,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   });
 
-  // MUSIC TOGGLE
   window.toggleMusic=function(){
     const music=document.getElementById("bgMusic");
     if(music.paused){ music.play(); } else { music.pause(); }
   }
 
-  // SERVICE WORKER
   if("serviceWorker" in navigator){
     navigator.serviceWorker.register("service-worker.js").then(()=>console.log("Service Worker Registered"));
   }

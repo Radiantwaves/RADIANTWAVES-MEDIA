@@ -12,14 +12,47 @@
   nav { display:flex; justify-content:center; flex-wrap:wrap; background:#333; }
   nav button { background:#444; color:#fff; border:none; padding:10px 15px; margin:5px; cursor:pointer; border-radius:4px; }
   nav button:hover { background:#555; }
+
+  /* Main story styling */
   #mainStory { text-align:center; padding:15px; background:#222; margin:10px; border-radius:6px; box-shadow:0 0 6px #000; }
-  #mainStory img { max-width:100%; border-radius:6px; }
+  #mainStory img { max-width:100%; border-radius:6px; margin-top:10px; }
+  #mainTitle { color:#1e90ff; } /* Main headline blue */
+  #mainSummary { color:#fff; }
+
+  /* Sections */
   .section { display:none; padding:10px; }
-  .card { background:#222; padding:10px; margin:10px 0; border-radius:6px; box-shadow:0 0 4px #000; cursor:pointer; color:#fff; }
+
+  /* Cards */
+  .card { background:#fff; padding:10px; margin:10px 0; border-radius:6px; box-shadow:0 0 4px #000; cursor:pointer; color:#000; }
   .card img { max-width:100%; border-radius:4px; display:block; margin-bottom:5px; }
+  .card h3 { color:#1e90ff; } /* Card headline blue */
+  .card p { color:#000; }
+
+  /* Social icons */
   #social { display:flex; justify-content:center; margin:10px; }
   #social img { width:40px; height:40px; margin:0 5px; vertical-align:middle; }
-  #breakingNews { background:#ffeb3b; color:#000; padding:5px 10px; margin:10px; border-radius:4px; font-weight:bold; overflow:hidden; white-space:nowrap; }
+
+  /* Scrolling Breaking news ticker */
+  #breakingNews {
+    background:#ffeb3b;
+    color:#000;
+    padding:5px 10px;
+    margin:10px;
+    border-radius:4px;
+    font-weight:bold;
+    overflow:hidden;
+    white-space:nowrap;
+    position: relative;
+  }
+  #breakingNews span.ticker {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollTicker 15s linear infinite;
+  }
+  @keyframes scrollTicker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
   .camera-icon { display:inline-block; width:16px; height:16px; background:url('https://img.icons8.com/ios-glyphs/30/camera.png') no-repeat center center; background-size:contain; margin-right:4px; vertical-align:middle; }
 </style>
 </head>
@@ -73,7 +106,6 @@
 <button onclick="toggleMusic()">Play / Pause Music</button>
 
 <script>
-// Version for news update alert
 let lastVersion = null;
 
 // Load news
@@ -86,26 +118,22 @@ function loadNews() {
       document.getElementById("mainSummary").innerText = data.main[0].summary;
       document.getElementById("mainImage").src = data.main[0].image;
 
-      // Breaking news
+      // Breaking news with scrolling ticker
       if(data.breaking){
-        let breakingHTML = data.breaking.map(b => {
-          // Show camera icon if main image exists
-          return `<span class="camera-icon"></span>${b.title}`;
-        }).join(" | ");
-        document.getElementById("breakingNews").innerHTML = breakingHTML;
+        let breakingHTML = data.breaking.map(b => `<span class="camera-icon"></span>${b.title}`).join(" | ");
+        document.getElementById("breakingNews").innerHTML = `<span class="ticker">${breakingHTML}</span>`;
       }
 
       // Load sections
       function loadSection(sectionName){
         if(data[sectionName]){
           let html = "";
-          data[sectionName].forEach((item, index) => {
-            html += `
-              <div class="card" onclick="showMainStory('${sectionName}', ${index})">
-                ${item.image ? `<img src="${item.image}">` : ""}
-                <h3>${item.title}</h3>
-                <p>${item.summary}</p>
-              </div>`;
+          data[sectionName].forEach((item,index)=>{
+            html += `<div class="card" onclick="showMainStory('${sectionName}', ${index})">
+                      ${item.image ? `<img src="${item.image}">` : ""}
+                      <h3>${item.title}</h3>
+                      <p>${item.summary}</p>
+                     </div>`;
           });
           document.getElementById(sectionName).innerHTML = html;
         }
@@ -120,20 +148,17 @@ function loadNews() {
             body:"News has been updated! Click to view.",
             icon:data.main[0].image
           });
-        } else {
-          alert("News has been updated!");
-        }
+        } else { alert("News has been updated!"); }
       }
       lastVersion = data.version;
-
     }).catch(err => console.log("Failed to load news:", err));
 }
 
 // Show main story from section card
-function showMainStory(section, index){
+function showMainStory(section,index){
   fetch("news.json?v=" + Date.now())
     .then(res => res.json())
-    .then(data => {
+    .then(data=>{
       let story = data[section][index];
       document.getElementById("mainTitle").innerText = story.title;
       document.getElementById("mainSummary").innerText = story.summary;
@@ -149,27 +174,27 @@ function showSection(id){
 showSection("nigeria"); // default section
 
 // Live clock & date
-function updateClock() {
-  const now = new Date();
-  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-  const date = now.toLocaleDateString(undefined, options);
-  const time = now.toLocaleTimeString();
-  document.getElementById("liveDateTime").innerHTML = date + " | " + time;
+function updateClock(){
+  const now=new Date();
+  const options={ weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  const date=now.toLocaleDateString(undefined,options);
+  const time=now.toLocaleTimeString();
+  document.getElementById("liveDateTime").innerHTML=date+" | "+time;
 }
 setInterval(updateClock,1000);
 updateClock();
 
 // Background music toggle
 function toggleMusic(){
-  const music = document.getElementById("bgMusic");
-  if(music.paused){ music.play(); } else { music.pause(); }
+  const music=document.getElementById("bgMusic");
+  if(music.paused){ music.play(); }else{ music.pause(); }
 }
 
-// Register service worker
+// Service Worker
 if("serviceWorker" in navigator){
-  window.addEventListener("load", () => {
+  window.addEventListener("load",()=>{
     navigator.serviceWorker.register("service-worker.js")
-      .then(() => console.log("Service Worker Registered"));
+      .then(()=>console.log("Service Worker Registered"));
   });
 }
 
@@ -182,7 +207,6 @@ if("Notification" in window){
 
 // Initial load
 loadNews();
-// Refresh news every 5 minutes
 setInterval(loadNews, 300000);
 </script>
 

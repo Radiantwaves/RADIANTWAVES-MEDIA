@@ -17,8 +17,9 @@ header{ background:#000; padding:15px; text-align:center; font-size:28px; font-w
 .main h2{ color:#00ffcc; margin:10px 0; }
 .section-wrapper{ padding:20px; }
 .section-wrapper h2{ border-bottom:2px solid #00ffcc; padding-bottom:5px; color:#00ffcc; }
-.section{ display:flex; overflow-x:auto; gap:10px; }
-.card{ min-width:250px; background:#222; padding:10px; border-radius:5px; cursor:pointer; transition:0.2s; flex-shrink:0; }
+.section{ display:flex; overflow-x:auto; gap:10px; scroll-behavior: smooth; }
+.section::-webkit-scrollbar { height:6px; }
+.card{ min-width:250px; background:#222; padding:10px; border-radius:5px; cursor:pointer; transition:0.2s; flex-shrink:0; pointer-events:auto; }
 .card:hover{ background:#333; }
 .card img{ width:100%; max-height:150px; object-fit:cover; }
 .card h3{ margin:5px 0; font-size:16px; }
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function(){
   fetch("news.json").then(r=>r.json()).then(data=>{
     let index=0;
     const toast=document.getElementById("toast");
+
     function rotateMain(){
       const story=data.main[index];
       document.getElementById("mainTitle").innerText=story.title;
@@ -136,8 +138,8 @@ document.addEventListener("DOMContentLoaded", function(){
         window.scrollTo({top:0, behavior:"smooth"});
       }
     }
-    container.addEventListener("click",handleCardClick);
-    container.addEventListener("touchstart",handleCardClick);
+    container.addEventListener("click", handleCardClick);
+    container.addEventListener("touchstart", handleCardClick);
 
   });
 
@@ -155,3 +157,4 @@ document.addEventListener("DOMContentLoaded", function(){
 
 </body>
 </html>
+  

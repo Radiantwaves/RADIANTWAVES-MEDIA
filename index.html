@@ -6,20 +6,21 @@
 <title>Radiant Waves Media</title>
 <link rel="manifest" href="manifest.json">
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#111; color:#fff; }
   header { background:#222; color:#fff; padding:10px; text-align:center; }
   #liveDateTime { font-size:0.9em; color:#ccc; }
   nav { display:flex; justify-content:center; flex-wrap:wrap; background:#333; }
   nav button { background:#444; color:#fff; border:none; padding:10px 15px; margin:5px; cursor:pointer; border-radius:4px; }
   nav button:hover { background:#555; }
-  #mainStory { text-align:center; padding:15px; background:#fff; margin:10px; border-radius:6px; box-shadow:0 0 6px #ccc; }
+  #mainStory { text-align:center; padding:15px; background:#222; margin:10px; border-radius:6px; box-shadow:0 0 6px #000; }
   #mainStory img { max-width:100%; border-radius:6px; }
   .section { display:none; padding:10px; }
-  .card { background:#fff; padding:10px; margin:10px 0; border-radius:6px; box-shadow:0 0 4px #ccc; cursor:pointer; }
-  .card img { max-width:100%; border-radius:4px; }
+  .card { background:#222; padding:10px; margin:10px 0; border-radius:6px; box-shadow:0 0 4px #000; cursor:pointer; color:#fff; }
+  .card img { max-width:100%; border-radius:4px; display:block; margin-bottom:5px; }
   #social { display:flex; justify-content:center; margin:10px; }
   #social img { width:40px; height:40px; margin:0 5px; vertical-align:middle; }
-  #breakingNews { background:#ffeb3b; padding:5px 10px; margin:10px; border-radius:4px; font-weight:bold; overflow:hidden; white-space:nowrap; }
+  #breakingNews { background:#ffeb3b; color:#000; padding:5px 10px; margin:10px; border-radius:4px; font-weight:bold; overflow:hidden; white-space:nowrap; }
+  .camera-icon { display:inline-block; width:16px; height:16px; background:url('https://img.icons8.com/ios-glyphs/30/camera.png') no-repeat center center; background-size:contain; margin-right:4px; vertical-align:middle; }
 </style>
 </head>
 <body>
@@ -72,11 +73,12 @@
 <button onclick="toggleMusic()">Play / Pause Music</button>
 
 <script>
-// Load news from JSON
+// Version for news update alert
 let lastVersion = null;
 
+// Load news
 function loadNews() {
-  fetch("news.json?v=" + new Date().getTime())
+  fetch("news.json?v=" + Date.now())
     .then(response => response.json())
     .then(data => {
       // Main story
@@ -85,43 +87,51 @@ function loadNews() {
       document.getElementById("mainImage").src = data.main[0].image;
 
       // Breaking news
-      if (data.breaking) {
-        document.getElementById("breakingNews").innerText = data.breaking.map(b => b.title).join(" | ");
+      if(data.breaking){
+        let breakingHTML = data.breaking.map(b => {
+          // Show camera icon if main image exists
+          return `<span class="camera-icon"></span>${b.title}`;
+        }).join(" | ");
+        document.getElementById("breakingNews").innerHTML = breakingHTML;
       }
 
-      // Function to load sections
+      // Load sections
       function loadSection(sectionName){
         if(data[sectionName]){
-          let html="";
-          data[sectionName].forEach(item=>{
-            html+=`
-              <div class="card" onclick="showMainStory('${sectionName}', ${data[sectionName].indexOf(item)})">
+          let html = "";
+          data[sectionName].forEach((item, index) => {
+            html += `
+              <div class="card" onclick="showMainStory('${sectionName}', ${index})">
                 ${item.image ? `<img src="${item.image}">` : ""}
                 <h3>${item.title}</h3>
                 <p>${item.summary}</p>
               </div>`;
           });
-          document.getElementById(sectionName).innerHTML=html;
+          document.getElementById(sectionName).innerHTML = html;
         }
       }
-
       ["nigeria","europe","africa","asia","america",
-       "politics","business","music","movies","sport"]
-       .forEach(loadSection);
+       "politics","business","music","movies","sport"].forEach(loadSection);
 
       // Alert if news updated
       if(lastVersion && lastVersion !== data.version){
-        if(Notification.permission === "granted"){
-          new Notification("Radiant Waves News",{body:"News has been updated! Click to view.", icon:data.main[0].image});
-        } else { alert("News has been updated!"); }
+        if(Notification.permission==="granted"){
+          new Notification("Radiant Waves News", {
+            body:"News has been updated! Click to view.",
+            icon:data.main[0].image
+          });
+        } else {
+          alert("News has been updated!");
+        }
       }
       lastVersion = data.version;
 
     }).catch(err => console.log("Failed to load news:", err));
 }
 
+// Show main story from section card
 function showMainStory(section, index){
-  fetch("news.json?v=" + new Date().getTime())
+  fetch("news.json?v=" + Date.now())
     .then(res => res.json())
     .then(data => {
       let story = data[section][index];
@@ -138,7 +148,7 @@ function showSection(id){
 }
 showSection("nigeria"); // default section
 
-// Live Clock & Date
+// Live clock & date
 function updateClock() {
   const now = new Date();
   const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
@@ -155,15 +165,15 @@ function toggleMusic(){
   if(music.paused){ music.play(); } else { music.pause(); }
 }
 
-// Register service worker for PWA
+// Register service worker
 if("serviceWorker" in navigator){
-  window.addEventListener("load", function(){
+  window.addEventListener("load", () => {
     navigator.serviceWorker.register("service-worker.js")
       .then(() => console.log("Service Worker Registered"));
   });
 }
 
-// Request notification permission
+// Notification permission
 if("Notification" in window){
   Notification.requestPermission().then(permission=>{
     if(permission==="granted") console.log("Notifications enabled");
@@ -172,8 +182,7 @@ if("Notification" in window){
 
 // Initial load
 loadNews();
-
-// Optional: Refresh news every 5 minutes
+// Refresh news every 5 minutes
 setInterval(loadNews, 300000);
 </script>
 

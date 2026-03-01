@@ -15,9 +15,10 @@ header{ background:#000; padding:15px; text-align:center; font-size:28px; font-w
 .main{ padding:20px; text-align:center; }
 .main img{ width:100%; max-height:350px; object-fit:cover; }
 .main h2{ color:#00ffcc; margin:10px 0; }
-.section-wrapper{ padding:20px; }
-.section-wrapper h2{ border-bottom:2px solid #00ffcc; padding-bottom:5px; color:#00ffcc; }
-.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; }
+.tabs{ display:flex; overflow-x:auto; gap:10px; padding:10px 15px; background:#222; }
+.tabs button{ flex-shrink:0; padding:8px 15px; border:none; background:#333; color:#00ffcc; border-radius:5px; cursor:pointer; transition:0.2s; white-space:nowrap; }
+.tabs button.active, .tabs button:hover{ background:#00ffcc; color:#000; }
+.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; padding:10px 0; }
 .headline-row a{ flex-shrink:0; color:#00ffcc; text-decoration:none; font-weight:bold; padding:5px 10px; background:#222; border-radius:5px; transition:0.2s; white-space:nowrap; }
 .headline-row a:hover{ background:#333; color:#fff; }
 .social{ text-align:center; padding:15px; background:#000; }
@@ -38,18 +39,11 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
   <p id="mainSummary"></p>
 </div>
 
-<div id="sectionsContainer">
-  <div class="section-wrapper" id="nigeriaWrapper"><h2>Nigeria</h2><div id="nigeriaNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="europeWrapper"><h2>Europe</h2><div id="europeNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="americaWrapper"><h2>America</h2><div id="americaNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="africaWrapper"><h2>Africa</h2><div id="africaNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="asiaWrapper"><h2>Asia</h2><div id="asiaNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="politicsWrapper"><h2>Politics</h2><div id="politicsNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="businessWrapper"><h2>Business</h2><div id="businessNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="sportWrapper"><h2>Sport</h2><div id="sportNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="musicWrapper"><h2>Music</h2><div id="musicNews" class="headline-row"></div></div>
-  <div class="section-wrapper" id="moviesWrapper"><h2>Movies</h2><div id="moviesNews" class="headline-row"></div></div>
-</div>
+<!-- Tabs for sections -->
+<div class="tabs" id="tabsContainer"></div>
+
+<!-- Headline row container -->
+<div id="headlineContainer"></div>
 
 <div class="toast" id="toast"></div>
 
@@ -75,13 +69,34 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   setInterval(updateClock,1000); updateClock();
 
-  // LOAD NEWS FROM JSON
+  const tabsContainer = document.getElementById("tabsContainer");
+  const headlineContainer = document.getElementById("headlineContainer");
+
   fetch("news.json").then(r=>r.json()).then(data=>{
-    // MAIN ROTATION
-    let index = 0;
+    const sections = ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
+    const sectionNames = {
+      nigeria:"Nigeria", europe:"Europe", america:"America", africa:"Africa", asia:"Asia",
+      politics:"Politics", business:"Business", sport:"Sport", music:"Music", movies:"Movies"
+    };
+
+    // CREATE TABS
+    sections.forEach((section,i)=>{
+      const btn = document.createElement("button");
+      btn.innerText = sectionNames[section];
+      if(i===0) btn.classList.add("active"); // first tab active
+      btn.addEventListener("click", function(){
+        document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
+        this.classList.add("active");
+        renderHeadlines(section);
+      });
+      tabsContainer.appendChild(btn);
+    });
+
+    // MAIN STORY ROTATION
+    let mainIndex = 0;
     const toast = document.getElementById("toast");
     function rotateMain(){
-      const story = data.main[index];
+      const story = data.main[mainIndex];
       document.getElementById("mainTitle").innerText = story.title;
       document.getElementById("mainSummary").innerText = story.summary;
       document.getElementById("mainImage").src = story.image;
@@ -90,18 +105,20 @@ document.addEventListener("DOMContentLoaded", function(){
       toast.style.display = "block";
       setTimeout(()=>{ toast.style.display="none"; }, 3500);
 
-      index = (index + 1) % data.main.length;
+      mainIndex = (mainIndex + 1) % data.main.length;
     }
-    rotateMain(); setInterval(rotateMain, 8000);
+    rotateMain(); setInterval(rotateMain,8000);
 
     // BREAKING NEWS TICKER
-    document.getElementById("breakingContent").innerText = 
+    document.getElementById("breakingContent").innerText =
       data.breaking.map(item=>item.title).join(" ⚡ ");
 
-    // SECTIONS HEADLINES
-    const sections = ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
-    sections.forEach(section=>{
-      const container = document.getElementById(section+"News");
+    // RENDER HEADLINES FUNCTION
+    function renderHeadlines(section){
+      headlineContainer.innerHTML = "";
+      const row = document.createElement("div");
+      row.className = "headline-row";
+
       data[section].forEach(item=>{
         const a = document.createElement("a");
         a.href="#";
@@ -118,9 +135,14 @@ document.addEventListener("DOMContentLoaded", function(){
           window.scrollTo({top:0, behavior:"smooth"});
         });
 
-        container.appendChild(a);
+        row.appendChild(a);
       });
-    });
+
+      headlineContainer.appendChild(row);
+    }
+
+    // INITIAL RENDER: first section
+    renderHeadlines(sections[0]);
 
   });
 
@@ -137,6 +159,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
-
 </body>
 </html>

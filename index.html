@@ -6,166 +6,176 @@
 <title>Radiant Waves Media</title>
 <link rel="manifest" href="manifest.json">
 <style>
-body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#111; color:white; }
-header{ background:#000; padding:15px; text-align:center; font-size:28px; font-weight:bold; color:#00ffcc; }
-#liveDateTime{ text-align:center; padding:8px; background:#222; color:#00ffcc; font-size:14px; pointer-events:none;}
-#breaking{ background:red; padding:8px; overflow:hidden; white-space:nowrap; pointer-events:none;}
-#breakingContent{ display:inline-block; padding-left:100%; animation:scroll 25s linear infinite;}
-@keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
-.main{ padding:20px; text-align:center; position:relative; z-index:5; }
-.main img{ width:100%; max-height:350px; object-fit:cover; }
-.main h2{ color:#00ffcc; margin:10px 0; }
-.tabs{ display:flex; overflow-x:auto; gap:10px; padding:10px 15px; background:#222; position:relative; z-index:10; }
-.tabs button{ flex-shrink:0; padding:8px 15px; border:none; background:#333; color:#00ffcc; border-radius:5px; cursor:pointer; transition:0.2s; white-space:nowrap; }
-.tabs button.active, .tabs button:hover{ background:#00ffcc; color:#000; }
-.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; padding:10px 0; position:relative; z-index:10; }
-.headline-row a{ flex-shrink:0; color:#00ffcc; text-decoration:none; font-weight:bold; padding:5px 10px; background:#222; border-radius:5px; transition:0.2s; white-space:nowrap; position:relative; z-index:10; }
-.headline-row a:hover{ background:#333; color:#fff; }
-.social{ text-align:center; padding:15px; background:#000; }
-.social img{ width:28px; margin:0 10px; }
-footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
-.toast{ position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:#00ffcc; color:#000; padding:10px 20px; border-radius:5px; display:none; z-index:2000; font-weight:bold;}
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+  header { background:#222; color:#fff; padding:10px; text-align:center; }
+  #liveDateTime { font-size:0.9em; color:#ccc; }
+  nav { display:flex; justify-content:center; flex-wrap:wrap; background:#333; }
+  nav button { background:#444; color:#fff; border:none; padding:10px 15px; margin:5px; cursor:pointer; border-radius:4px; }
+  nav button:hover { background:#555; }
+  #mainStory { text-align:center; padding:15px; background:#fff; margin:10px; border-radius:6px; box-shadow:0 0 6px #ccc; }
+  #mainStory img { max-width:100%; border-radius:6px; }
+  .section { display:none; padding:10px; }
+  .card { background:#fff; padding:10px; margin:10px 0; border-radius:6px; box-shadow:0 0 4px #ccc; cursor:pointer; }
+  .card img { max-width:100%; border-radius:4px; }
+  #social { display:flex; justify-content:center; margin:10px; }
+  #social img { width:40px; height:40px; margin:0 5px; vertical-align:middle; }
+  #breakingNews { background:#ffeb3b; padding:5px 10px; margin:10px; border-radius:4px; font-weight:bold; overflow:hidden; white-space:nowrap; }
 </style>
 </head>
 <body>
 
-<header>Radiant Waves Media</header>
-<div id="liveDateTime"></div>
-<div id="breaking"><span id="breakingContent">Loading breaking news...</span></div>
+<header>
+  <h1>Radiant Waves Media</h1>
+  <div id="liveDateTime"></div>
+</header>
 
-<div class="main">
-  <img id="mainImage" src="main-story.jpg">
-  <h2 id="mainTitle">Loading headline...</h2>
+<nav>
+  <button onclick="showSection('nigeria')">Nigeria</button>
+  <button onclick="showSection('europe')">Europe</button>
+  <button onclick="showSection('america')">America</button>
+  <button onclick="showSection('africa')">Africa</button>
+  <button onclick="showSection('asia')">Asia</button>
+  <button onclick="showSection('politics')">Politics</button>
+  <button onclick="showSection('business')">Business</button>
+  <button onclick="showSection('music')">Music</button>
+  <button onclick="showSection('movies')">Movies</button>
+  <button onclick="showSection('sport')">Sport</button>
+</nav>
+
+<div id="mainStory">
+  <h2 id="mainTitle">Loading headlines...</h2>
+  <img id="mainImage" src="" alt="Main Story">
   <p id="mainSummary"></p>
 </div>
 
-<!-- Tabs for sections -->
-<div class="tabs" id="tabsContainer"></div>
+<div id="breakingNews">Loading breaking news...</div>
 
-<!-- Headline row container -->
-<div id="headlineContainer"></div>
+<div id="nigeria" class="section"></div>
+<div id="europe" class="section"></div>
+<div id="america" class="section"></div>
+<div id="africa" class="section"></div>
+<div id="asia" class="section"></div>
+<div id="politics" class="section"></div>
+<div id="business" class="section"></div>
+<div id="music" class="section"></div>
+<div id="movies" class="section"></div>
+<div id="sport" class="section"></div>
 
-<div class="toast" id="toast"></div>
-
-<div class="social">
-  <a href="#"><img src="facebook.png"></a>
-  <a href="#"><img src="twitter.png"></a>
-  <a href="#"><img src="Instagram.png"></a>
-  <a href="#"><img src="tiktok.png" style="background:white;padding:4px;border-radius:6px;"></a>
+<div id="social">
+  <img src="facebook.png" alt="Facebook">
+  <img src="twitter.png" alt="Twitter">
+  <img src="Instagram.png" alt="Instagram">
+  <img src="tiktok.png" alt="TikTok">
 </div>
 
-<footer>© 2026 Radiant Waves Media</footer>
-<audio id="bgMusic" src="news-music.mp3" loop></audio>
+<audio id="bgMusic" loop src="news-music.mp3"></audio>
+<button onclick="toggleMusic()">Play / Pause Music</button>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+// Load news from JSON
+let lastVersion = null;
 
-  // LIVE CLOCK
-  function updateClock(){
-    const now = new Date();
-    const options={ weekday:'long', year:'numeric', month:'long', day:'numeric' };
-    document.getElementById("liveDateTime").innerHTML=
-      now.toLocaleDateString(undefined, options) + " | " + now.toLocaleTimeString();
-  }
-  setInterval(updateClock,1000); updateClock();
+function loadNews() {
+  fetch("news.json?v=" + new Date().getTime())
+    .then(response => response.json())
+    .then(data => {
+      // Main story
+      document.getElementById("mainTitle").innerText = data.main[0].title;
+      document.getElementById("mainSummary").innerText = data.main[0].summary;
+      document.getElementById("mainImage").src = data.main[0].image;
 
-  const tabsContainer = document.getElementById("tabsContainer");
-  const headlineContainer = document.getElementById("headlineContainer");
-  const toast = document.getElementById("toast");
+      // Breaking news
+      if (data.breaking) {
+        document.getElementById("breakingNews").innerText = data.breaking.map(b => b.title).join(" | ");
+      }
 
-  fetch("news.json").then(r=>r.json()).then(data=>{
-    const sections = ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
-    const sectionNames = {
-      nigeria:"Nigeria", europe:"Europe", america:"America", africa:"Africa", asia:"Asia",
-      politics:"Politics", business:"Business", sport:"Sport", music:"Music", movies:"Movies"
-    };
+      // Function to load sections
+      function loadSection(sectionName){
+        if(data[sectionName]){
+          let html="";
+          data[sectionName].forEach(item=>{
+            html+=`
+              <div class="card" onclick="showMainStory('${sectionName}', ${data[sectionName].indexOf(item)})">
+                ${item.image ? `<img src="${item.image}">` : ""}
+                <h3>${item.title}</h3>
+                <p>${item.summary}</p>
+              </div>`;
+          });
+          document.getElementById(sectionName).innerHTML=html;
+        }
+      }
 
-    // CREATE TABS
-    sections.forEach((section,i)=>{
-      const btn = document.createElement("button");
-      btn.innerText = sectionNames[section];
-      if(i===0) btn.classList.add("active");
-      btn.addEventListener("click", function(){
-        document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
-        this.classList.add("active");
-        renderHeadlines(section);
-      });
-      tabsContainer.appendChild(btn);
-    });
+      ["nigeria","europe","africa","asia","america",
+       "politics","business","music","movies","sport"]
+       .forEach(loadSection);
 
-    // MAIN STORY ROTATION
-    let mainIndex = 0;
-    function rotateMain(){
-      const story = data.main[mainIndex];
+      // Alert if news updated
+      if(lastVersion && lastVersion !== data.version){
+        if(Notification.permission === "granted"){
+          new Notification("Radiant Waves News",{body:"News has been updated! Click to view.", icon:data.main[0].image});
+        } else { alert("News has been updated!"); }
+      }
+      lastVersion = data.version;
+
+    }).catch(err => console.log("Failed to load news:", err));
+}
+
+function showMainStory(section, index){
+  fetch("news.json?v=" + new Date().getTime())
+    .then(res => res.json())
+    .then(data => {
+      let story = data[section][index];
       document.getElementById("mainTitle").innerText = story.title;
       document.getElementById("mainSummary").innerText = story.summary;
-      document.getElementById("mainImage").src = story.image;
+      document.getElementById("mainImage").src = story.image || "main-story.jpg";
+    });
+}
 
-      toast.innerText = "Breaking: " + story.title;
-      toast.style.display = "block";
-      setTimeout(()=>{ toast.style.display="none"; }, 3500);
+// Navigation
+function showSection(id){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+showSection("nigeria"); // default section
 
-      mainIndex = (mainIndex + 1) % data.main.length;
-    }
-    rotateMain(); setInterval(rotateMain,8000);
+// Live Clock & Date
+function updateClock() {
+  const now = new Date();
+  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  const date = now.toLocaleDateString(undefined, options);
+  const time = now.toLocaleTimeString();
+  document.getElementById("liveDateTime").innerHTML = date + " | " + time;
+}
+setInterval(updateClock,1000);
+updateClock();
 
-    // BREAKING NEWS TICKER
-    document.getElementById("breakingContent").innerText =
-      data.breaking.map(item=>item.title).join(" ⚡ ");
+// Background music toggle
+function toggleMusic(){
+  const music = document.getElementById("bgMusic");
+  if(music.paused){ music.play(); } else { music.pause(); }
+}
 
-    // RENDER HEADLINES FUNCTION
-    function renderHeadlines(section){
-      headlineContainer.innerHTML = "";
-      const row = document.createElement("div");
-      row.className = "headline-row";
-
-      data[section].forEach(item=>{
-        const a = document.createElement("a");
-        a.href="#";
-        a.innerText = item.title;
-        a.dataset.title = item.title;
-        a.dataset.summary = item.summary;
-        a.dataset.image = item.image || "main-story.jpg";
-
-        // CLICK / TOUCH EVENT FOR DESKTOP & MOBILE
-        a.addEventListener("click", function(e){
-          e.preventDefault();
-          document.getElementById("mainTitle").innerText = this.dataset.title;
-          document.getElementById("mainSummary").innerText = this.dataset.summary;
-          document.getElementById("mainImage").src = this.dataset.image;
-          window.scrollTo({top:0, behavior:"smooth"});
-        });
-        a.addEventListener("touchstart", function(e){
-          e.preventDefault();
-          document.getElementById("mainTitle").innerText = this.dataset.title;
-          document.getElementById("mainSummary").innerText = this.dataset.summary;
-          document.getElementById("mainImage").src = this.dataset.image;
-          window.scrollTo({top:0, behavior:"smooth"});
-        });
-
-        row.appendChild(a);
-      });
-
-      headlineContainer.appendChild(row);
-    }
-
-    // INITIAL RENDER: first section
-    renderHeadlines(sections[0]);
-
+// Register service worker for PWA
+if("serviceWorker" in navigator){
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker Registered"));
   });
+}
 
-  // MUSIC TOGGLE
-  window.toggleMusic=function(){
-    const music=document.getElementById("bgMusic");
-    if(music.paused){ music.play(); } else { music.pause(); }
-  }
+// Request notification permission
+if("Notification" in window){
+  Notification.requestPermission().then(permission=>{
+    if(permission==="granted") console.log("Notifications enabled");
+  });
+}
 
-  // SERVICE WORKER
-  if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("service-worker.js").then(()=>console.log("Service Worker Registered"));
-  }
+// Initial load
+loadNews();
 
-});
+// Optional: Refresh news every 5 minutes
+setInterval(loadNews, 300000);
 </script>
+
 </body>
 </html>

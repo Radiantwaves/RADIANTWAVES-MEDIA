@@ -17,15 +17,9 @@ header{ background:#000; padding:15px; text-align:center; font-size:28px; font-w
 .main h2{ color:#00ffcc; margin:10px 0; }
 .section-wrapper{ padding:20px; }
 .section-wrapper h2{ border-bottom:2px solid #00ffcc; padding-bottom:5px; color:#00ffcc; }
-.section{ display:flex; overflow-x:auto; gap:10px; scroll-behavior: smooth; }
-.section::-webkit-scrollbar { height:6px; }
-.card{ min-width:250px; background:#222; padding:10px; border-radius:5px; cursor:pointer; transition:0.2s; flex-shrink:0; pointer-events:auto; }
-.card:hover{ background:#333; }
-.card img{ width:100%; max-height:150px; object-fit:cover; }
-.card h3{ margin:5px 0; font-size:16px; }
-.card p{ display:none; }
-.article-panel{ display:none; background:#111; padding:20px; margin:10px 0; border:1px solid #00ffcc; border-radius:5px; }
-.article-panel h2{ color:#00ffcc; }
+.headline-row{ display:flex; overflow-x:auto; gap:15px; scroll-behavior:smooth; }
+.headline-row a{ flex-shrink:0; color:#00ffcc; text-decoration:none; font-weight:bold; padding:5px 10px; background:#222; border-radius:5px; transition:0.2s; white-space:nowrap; }
+.headline-row a:hover{ background:#333; color:#fff; }
 .social{ text-align:center; padding:15px; background:#000; }
 .social img{ width:28px; margin:0 10px; }
 footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
@@ -36,7 +30,6 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
 
 <header>Radiant Waves Media</header>
 <div id="liveDateTime"></div>
-
 <div id="breaking"><span id="breakingContent">Loading breaking news...</span></div>
 
 <div class="main">
@@ -46,23 +39,16 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
 </div>
 
 <div id="sectionsContainer">
-  <div class="section-wrapper" id="nigeriaWrapper"><h2>Nigeria</h2><div id="nigeriaNews" class="section"></div></div>
-  <div class="section-wrapper" id="europeWrapper"><h2>Europe</h2><div id="europeNews" class="section"></div></div>
-  <div class="section-wrapper" id="americaWrapper"><h2>America</h2><div id="americaNews" class="section"></div></div>
-  <div class="section-wrapper" id="africaWrapper"><h2>Africa</h2><div id="africaNews" class="section"></div></div>
-  <div class="section-wrapper" id="asiaWrapper"><h2>Asia</h2><div id="asiaNews" class="section"></div></div>
-  <div class="section-wrapper" id="politicsWrapper"><h2>Politics</h2><div id="politicsNews" class="section"></div></div>
-  <div class="section-wrapper" id="businessWrapper"><h2>Business</h2><div id="businessNews" class="section"></div></div>
-  <div class="section-wrapper" id="sportWrapper"><h2>Sport</h2><div id="sportNews" class="section"></div></div>
-  <div class="section-wrapper" id="musicWrapper"><h2>Music</h2><div id="musicNews" class="section"></div></div>
-  <div class="section-wrapper" id="moviesWrapper"><h2>Movies</h2><div id="moviesNews" class="section"></div></div>
-</div>
-
-<div id="articlePanel" class="article-panel">
-  <h2 id="articleTitle"></h2>
-  <img id="articleImage" src="" style="width:100%;max-height:350px;object-fit:cover;">
-  <p id="articleSummary"></p>
-  <button onclick="closeArticle()" style="margin-top:10px;padding:8px;background:#00ffcc;border:none;border-radius:5px;color:#000;cursor:pointer;">Close</button>
+  <div class="section-wrapper" id="nigeriaWrapper"><h2>Nigeria</h2><div id="nigeriaNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="europeWrapper"><h2>Europe</h2><div id="europeNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="americaWrapper"><h2>America</h2><div id="americaNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="africaWrapper"><h2>Africa</h2><div id="africaNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="asiaWrapper"><h2>Asia</h2><div id="asiaNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="politicsWrapper"><h2>Politics</h2><div id="politicsNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="businessWrapper"><h2>Business</h2><div id="businessNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="sportWrapper"><h2>Sport</h2><div id="sportNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="musicWrapper"><h2>Music</h2><div id="musicNews" class="headline-row"></div></div>
+  <div class="section-wrapper" id="moviesWrapper"><h2>Movies</h2><div id="moviesNews" class="headline-row"></div></div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -80,74 +66,71 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
+  // LIVE CLOCK
   function updateClock(){
-    const now=new Date();
+    const now = new Date();
     const options={ weekday:'long', year:'numeric', month:'long', day:'numeric' };
     document.getElementById("liveDateTime").innerHTML=
-      now.toLocaleDateString(undefined, options)+" | "+now.toLocaleTimeString();
+      now.toLocaleDateString(undefined, options) + " | " + now.toLocaleTimeString();
   }
   setInterval(updateClock,1000); updateClock();
 
-  window.closeArticle=function(){ document.getElementById("articlePanel").style.display="none"; }
-
+  // LOAD NEWS FROM JSON
   fetch("news.json").then(r=>r.json()).then(data=>{
-    let index=0;
-    const toast=document.getElementById("toast");
-
+    // MAIN ROTATION
+    let index = 0;
+    const toast = document.getElementById("toast");
     function rotateMain(){
-      const story=data.main[index];
-      document.getElementById("mainTitle").innerText=story.title;
-      document.getElementById("mainSummary").innerText=story.summary;
-      document.getElementById("mainImage").src=story.image;
+      const story = data.main[index];
+      document.getElementById("mainTitle").innerText = story.title;
+      document.getElementById("mainSummary").innerText = story.summary;
+      document.getElementById("mainImage").src = story.image;
 
-      toast.innerText="Breaking: "+story.title;
-      toast.style.display="block";
-      setTimeout(()=>{toast.style.display="none";},3500);
+      toast.innerText = "Breaking: " + story.title;
+      toast.style.display = "block";
+      setTimeout(()=>{ toast.style.display="none"; }, 3500);
 
-      index=(index+1)%data.main.length;
+      index = (index + 1) % data.main.length;
     }
-    rotateMain(); setInterval(rotateMain,8000);
+    rotateMain(); setInterval(rotateMain, 8000);
 
-    document.getElementById("breakingContent").innerText=
+    // BREAKING NEWS TICKER
+    document.getElementById("breakingContent").innerText = 
       data.breaking.map(item=>item.title).join(" ⚡ ");
 
-    const sections=["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
+    // SECTIONS HEADLINES
+    const sections = ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"];
     sections.forEach(section=>{
-      const container=document.getElementById(section+"News");
+      const container = document.getElementById(section+"News");
       data[section].forEach(item=>{
-        const card=document.createElement("div");
-        card.className="card";
-        if(item.image){ let img=document.createElement("img"); img.src=item.image; card.appendChild(img);}
-        let h3=document.createElement("h3"); h3.innerText=item.title; card.appendChild(h3);
-        let p=document.createElement("p"); p.innerText=item.summary; card.appendChild(p);
-        card.dataset.title=item.title;
-        card.dataset.summary=item.summary;
-        card.dataset.image=item.image || "main-story.jpg";
-        container.appendChild(card);
+        const a = document.createElement("a");
+        a.href="#";
+        a.innerText = item.title;
+        a.dataset.title = item.title;
+        a.dataset.summary = item.summary;
+        a.dataset.image = item.image || "main-story.jpg";
+
+        a.addEventListener("click", function(e){
+          e.preventDefault();
+          document.getElementById("mainTitle").innerText = this.dataset.title;
+          document.getElementById("mainSummary").innerText = this.dataset.summary;
+          document.getElementById("mainImage").src = this.dataset.image;
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+        container.appendChild(a);
       });
     });
 
-    const container=document.getElementById("sectionsContainer");
-    function handleCardClick(e){
-      const card=e.target.closest(".card");
-      if(card){
-        document.getElementById("articleTitle").innerText=card.dataset.title;
-        document.getElementById("articleSummary").innerText=card.dataset.summary;
-        document.getElementById("articleImage").src=card.dataset.image;
-        document.getElementById("articlePanel").style.display="block";
-        window.scrollTo({top:0, behavior:"smooth"});
-      }
-    }
-    container.addEventListener("click", handleCardClick);
-    container.addEventListener("touchstart", handleCardClick);
-
   });
 
+  // MUSIC TOGGLE
   window.toggleMusic=function(){
     const music=document.getElementById("bgMusic");
     if(music.paused){ music.play(); } else { music.pause(); }
   }
 
+  // SERVICE WORKER
   if("serviceWorker" in navigator){
     navigator.serviceWorker.register("service-worker.js").then(()=>console.log("Service Worker Registered"));
   }
@@ -157,4 +140,3 @@ document.addEventListener("DOMContentLoaded", function(){
 
 </body>
 </html>
-  

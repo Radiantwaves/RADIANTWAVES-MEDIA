@@ -1,44 +1,41 @@
-const CACHE_NAME = "radiantwaves-v2"; // Incremented version
+const CACHE_NAME = "radiantwaves-v2";
+
 const urlsToCache = [
   "index.html",
   "news.json",
-  "manifest.json",
   "main-story.jpg",
-  "icons/icon-192.png",
-  "icons/icon-512.png"
+  "facebook.png",
+  "twitter.png",
+  "Instagram.png",
+  "tiktok.png",
+  "icon-192.png",
+  "icon-512.png",
+  "news-music.mp3"
 ];
 
-// Install event: cache all necessary files
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
-  );
   self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  );
 });
 
-// Activate event: clear old caches
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keyList => {
+    caches.keys().then(keys => {
       return Promise.all(
-        keyList.map(key => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
+        keys.filter(key => key !== CACHE_NAME)
+            .map(key => caches.delete(key))
       );
     })
   );
-  self.clients.claim();
+  return self.clients.claim();
 });
 
-// Fetch event: serve cached content if offline
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
   );
 });

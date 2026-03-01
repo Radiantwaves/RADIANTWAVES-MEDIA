@@ -12,9 +12,9 @@ header{ background:#000; padding:15px; text-align:center; font-size:28px; font-w
 #breaking{ background:red; padding:8px; overflow:hidden; white-space:nowrap; position:relative; pointer-events:none;}
 #breakingContent{ display:inline-block; padding-left:100%; animation:scroll 25s linear infinite;}
 @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
-.main{ padding:20px; text-align:center; }
-.main img{ width:100%; max-height:350px; object-fit:cover; }
-.main h2{ color:#00ffcc; }
+.main{ padding:20px; text-align:center; max-height:400px; overflow:hidden; }
+.main img{ width:100%; height:250px; object-fit:cover; display:block; }
+.main h2{ color:#00ffcc; margin:10px 0; }
 .section-wrapper{ padding:20px; }
 .section-wrapper h2{ border-bottom:2px solid #00ffcc; padding-bottom:5px; color:#00ffcc; }
 .section{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
@@ -40,7 +40,7 @@ footer{ text-align:center; padding:10px; background:#000; font-size:12px; }
   <span id="breakingContent">Loading breaking news...</span>
 </div>
 
-<div class="main">
+<div class="main" id="mainContainer">
   <img id="mainImage" src="main-story.jpg">
   <h2 id="mainTitle">Loading headline...</h2>
   <p id="mainSummary"></p>
@@ -83,43 +83,38 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // LIVE CLOCK
   function updateClock(){
-    const now = new Date();
-    const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-    document.getElementById("liveDateTime").innerHTML =
-      now.toLocaleDateString(undefined, options) + " | " + now.toLocaleTimeString();
+    const now=new Date();
+    const options={ weekday:'long', year:'numeric', month:'long', day:'numeric' };
+    document.getElementById("liveDateTime").innerHTML=
+      now.toLocaleDateString(undefined, options)+" | "+now.toLocaleTimeString();
   }
-  setInterval(updateClock,1000);
-  updateClock();
+  setInterval(updateClock,1000); updateClock();
 
   // CLOSE ARTICLE PANEL
-  window.closeArticle = function(){ document.getElementById("articlePanel").style.display="none"; }
+  window.closeArticle=function(){ document.getElementById("articlePanel").style.display="none"; }
 
   // LOAD NEWS
-  fetch("news.json")
-  .then(r=>r.json())
-  .then(data=>{
-
-    // MAIN ROTATION WITH TOAST NOTIFICATION
+  fetch("news.json").then(r=>r.json()).then(data=>{
+    // MAIN ROTATION WITH TOAST
     let index=0;
     const toast=document.getElementById("toast");
     function rotateMain(){
-      const story = data.main[index];
-      document.getElementById("mainTitle").innerText = story.title;
-      document.getElementById("mainSummary").innerText = story.summary;
-      document.getElementById("mainImage").src = story.image;
+      const story=data.main[index];
+      document.getElementById("mainTitle").innerText=story.title;
+      document.getElementById("mainSummary").innerText=story.summary;
+      document.getElementById("mainImage").src=story.image;
 
-      // Non-intrusive toast
-      toast.innerText = "Breaking: "+story.title;
+      // Toast notification
+      toast.innerText="Breaking: "+story.title;
       toast.style.display="block";
       setTimeout(()=>{toast.style.display="none";},3500);
 
       index=(index+1)%data.main.length;
     }
-    rotateMain();
-    setInterval(rotateMain,8000);
+    rotateMain(); setInterval(rotateMain,8000);
 
     // BREAKING NEWS
-    document.getElementById("breakingContent").innerText =
+    document.getElementById("breakingContent").innerText=
       data.breaking.map(item=>item.title).join(" ⚡ ");
 
     // LOAD SECTIONS
@@ -129,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(){
       data[section].forEach(item=>{
         const card=document.createElement("div");
         card.className="card";
-        if(item.image){ let img=document.createElement("img"); img.src=item.image; card.appendChild(img); }
+        if(item.image){ let img=document.createElement("img"); img.src=item.image; card.appendChild(img);}
         let h3=document.createElement("h3"); h3.innerText=item.title; card.appendChild(h3);
         let p=document.createElement("p"); p.innerText=item.summary; card.appendChild(p);
         card.dataset.title=item.title;
@@ -139,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     });
 
-    // DELEGATED CLICK / TOUCH
+    // DELEGATED CLICK + TOUCH
     const container=document.getElementById("sectionsContainer");
     function handleCardClick(e){
       const card=e.target.closest(".card");
@@ -164,8 +159,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // SERVICE WORKER
   if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("service-worker.js")
-      .then(()=>console.log("Service Worker Registered"));
+    navigator.serviceWorker.register("service-worker.js").then(()=>console.log("Service Worker Registered"));
   }
 
 });

@@ -13,6 +13,7 @@ body{
   background:#111;
   color:white;
 }
+
 header{
   background:#000;
   padding:15px;
@@ -21,6 +22,7 @@ header{
   font-weight:bold;
   color:#00ffcc;
 }
+
 #liveDateTime{
   text-align:center;
   padding:8px;
@@ -28,49 +30,65 @@ header{
   color:#00ffcc;
   font-size:14px;
 }
+
 #breaking{
   background:red;
   padding:8px;
   overflow:hidden;
   white-space:nowrap;
 }
+
 #breakingContent{
   display:inline-block;
   padding-left:100%;
   animation:scroll 25s linear infinite;
 }
+
 @keyframes scroll{
   from{transform:translateX(0);}
   to{transform:translateX(-100%);}
 }
+
 .main{
   padding:20px;
   text-align:center;
 }
+
 .main img{
   width:100%;
   max-height:350px;
   object-fit:cover;
 }
+
 .main h2{
   color:#00ffcc;
 }
+
 .section{
   padding:20px;
   display:grid;
   grid-template-columns:1fr;
   gap:10px;
 }
+
 @media(min-width:600px){
   .section{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2, 1fr);
   }
 }
+
+@media(min-width:900px){
+  .section{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
 .section h2{
   border-bottom:2px solid #00ffcc;
   padding-bottom:5px;
   color:#00ffcc;
 }
+
 .card{
   background:#222;
   margin:10px 0;
@@ -79,20 +97,25 @@ header{
   cursor:pointer;
   transition:0.2s;
 }
+
 .card:hover{
   background:#333;
 }
+
 .card img{
   width:100%;
   max-height:200px;
   object-fit:cover;
 }
+
 .card h3{
   margin:5px 0;
 }
+
 .card p{
   margin:0;
 }
+
 .article-panel{
   display:none;
   background:#111;
@@ -101,18 +124,22 @@ header{
   border:1px solid #00ffcc;
   border-radius:5px;
 }
+
 .article-panel h2{
   color:#00ffcc;
 }
+
 .social{
   text-align:center;
   padding:15px;
   background:#000;
 }
+
 .social img{
   width:28px;
   margin:0 10px;
 }
+
 footer{
   text-align:center;
   padding:10px;
@@ -209,16 +236,36 @@ fetch("news.json")
   // LOAD SECTIONS WITH CLICKABLE CARDS
   function loadSection(sectionName){
     if(data[sectionName]){
-      let html="";
+      let container = document.getElementById(sectionName+"News");
       data[sectionName].forEach(item=>{
-        html+=`
-        <div class="card" onclick="showArticle('${item.title.replace(/'/g,'\\\'')}','${item.summary.replace(/'/g,'\\\'')}','${item.image}')">
-          ${item.image ? `<img src="${item.image}">` : ""}
-          <h3>${item.title}</h3>
-          <p>${item.summary}</p>
-        </div>`;
+        let card = document.createElement("div");
+        card.className = "card";
+
+        if(item.image){
+          let img = document.createElement("img");
+          img.src = item.image;
+          card.appendChild(img);
+        }
+
+        let h3 = document.createElement("h3");
+        h3.innerText = item.title;
+        card.appendChild(h3);
+
+        let p = document.createElement("p");
+        p.innerText = item.summary;
+        card.appendChild(p);
+
+        // CLICK TO OPEN ARTICLE PANEL
+        card.addEventListener("click", ()=>{
+          document.getElementById("articleTitle").innerText = item.title;
+          document.getElementById("articleSummary").innerText = item.summary;
+          document.getElementById("articleImage").src = item.image;
+          document.getElementById("articlePanel").style.display="block";
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+        container.appendChild(card);
       });
-      document.getElementById(sectionName+"News").innerHTML += html;
     }
   }
 
@@ -227,14 +274,6 @@ fetch("news.json")
    .forEach(loadSection);
 
 });
-
-// SHOW ARTICLE INSIDE PANEL
-function showArticle(title,summary,image){
-  document.getElementById("articleTitle").innerText = title;
-  document.getElementById("articleSummary").innerText = summary;
-  document.getElementById("articleImage").src = image;
-  document.getElementById("articlePanel").style.display="block";
-}
 
 // BACKGROUND MUSIC TOGGLE
 function toggleMusic(){

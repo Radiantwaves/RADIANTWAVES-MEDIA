@@ -1,143 +1,25 @@
 {
-  "main": {
-    "title": "Global Headlines - 1 March 2026",
-    "summary": "Major political shifts, economic updates, and global developments dominate headlines as March begins.",
-    "image": "main-story.jpg"
-  },
+  "mainHeadlines": [
+    {
+      "title": "Global Markets React to Rising Oil Prices",
+      "summary": "Investors respond cautiously as crude prices climb at the start of March.",
+      "image": "main-story.jpg"
+    },
+    {
+      "title": "Nigeria Announces New Economic Reform Plan",
+      "summary": "Government outlines fiscal restructuring aimed at stabilizing the naira.",
+      "image": "main-story.jpg"
+    },
+    {
+      "title": "US Approves Climate Emergency Funding",
+      "summary": "Lawmakers pass major environmental support package.",
+      "image": "main-story.jpg"
+    }
+  ],
+
   "breaking": [
-    { "title": "Nigeria announces new fuel pricing framework" },
-    { "title": "US Senate passes emergency climate funding bill" },
-    { "title": "EU leaders hold emergency migration talks" },
-    { "title": "Global oil prices rise amid supply concerns" }
-  ],
-  "nigeria": [
-    {
-      "title": "Federal Government unveils new fuel pricing structure",
-      "summary": "Authorities say the new pricing model will stabilize supply and reduce smuggling across borders.",
-      "image": ""
-    },
-    {
-      "title": "Naira shows slight recovery in parallel market",
-      "summary": "Currency traders report marginal gains as dollar demand eases at the weekend.",
-      "image": ""
-    },
-    {
-      "title": "Security agencies intensify operations in North-East",
-      "summary": "Joint task forces conduct coordinated raids targeting insurgent hideouts.",
-      "image": ""
-    },
-    {
-      "title": "Labour suspends strike threat after fresh negotiations",
-      "summary": "Union leaders say progress has been made in talks over unpaid allowances.",
-      "image": ""
-    }
-  ],
-  "europe": [
-    {
-      "title": "EU leaders meet over migration surge",
-      "summary": "Emergency discussions focus on border security and humanitarian response strategies.",
-      "image": ""
-    },
-    {
-      "title": "UK economy records modest growth in Q1 preview",
-      "summary": "Preliminary data suggests steady expansion despite inflation concerns.",
-      "image": ""
-    },
-    {
-      "title": "Germany boosts renewable energy investment",
-      "summary": "New funding package targets wind and solar expansion projects.",
-      "image": ""
-    }
-  ],
-  "africa": [
-    {
-      "title": "African Union pushes continental trade expansion",
-      "summary": "Leaders reaffirm commitment to strengthening the AfCFTA agreement.",
-      "image": ""
-    },
-    {
-      "title": "South Africa tackles nationwide power shortages",
-      "summary": "Energy officials outline new strategies to stabilize electricity supply.",
-      "image": ""
-    }
-  ],
-  "asia": [
-    {
-      "title": "China signals policy shift to support small businesses",
-      "summary": "Officials announce tax incentives to boost domestic economic growth.",
-      "image": ""
-    },
-    {
-      "title": "India launches nationwide digital education upgrade",
-      "summary": "The initiative aims to modernize public schools with advanced technology.",
-      "image": ""
-    }
-  ],
-  "america": [
-    {
-      "title": "US Senate approves emergency climate funding bill",
-      "summary": "Lawmakers secure billions in funding for clean energy and disaster preparedness.",
-      "image": ""
-    },
-    {
-      "title": "Canada introduces housing affordability measures",
-      "summary": "Government plans incentives for first-time home buyers.",
-      "image": ""
-    },
-    {
-      "title": "Brazil expands agricultural exports to Asia",
-      "summary": "Trade officials confirm new supply agreements with key Asian markets.",
-      "image": ""
-    }
-  ],
-  "politics": [
-    {
-      "title": "Global leaders call for diplomatic solutions to trade tensions",
-      "summary": "International forums emphasize dialogue over escalating tariffs.",
-      "image": ""
-    },
-    {
-      "title": "Election reforms proposed in multiple African states",
-      "summary": "Governments debate new measures to enhance transparency and voter trust.",
-      "image": ""
-    }
-  ],
-  "business": [
-    {
-      "title": "Global oil prices climb amid supply disruption fears",
-      "summary": "Markets react to concerns over reduced output from major producers.",
-      "image": ""
-    },
-    {
-      "title": "Tech companies report strong February earnings",
-      "summary": "AI-driven services continue to drive profit growth worldwide.",
-      "image": ""
-    }
-  ],
-  "music": [
-    {
-      "title": "International music awards celebrate African artists",
-      "summary": "Several Nigerian and Ghanaian musicians receive global recognition.",
-      "image": ""
-    }
-  ],
-  "movies": [
-    {
-      "title": "Hollywood blockbuster breaks opening weekend records",
-      "summary": "The action thriller tops global box office charts in its first week.",
-      "image": ""
-    }
-  ],
-  "sport": [
-    {
-      "title": "Premier League title race tightens",
-      "summary": "Top clubs remain separated by just three points after weekend fixtures.",
-      "image": ""
-    },
-    {
-      "title": "Athletics federation confirms dates for continental championships",
-      "summary": "Preparations intensify ahead of the upcoming major sporting event.",
-      "image": ""
-    }
+    { "title": "Oil prices rise 3% overnight" },
+    { "title": "Naira records slight recovery" },
+    { "title": "EU migration talks continue in Brussels" }
   ]
 }

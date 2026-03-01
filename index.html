@@ -19,8 +19,7 @@ header{
   font-size:28px;
   font-weight:bold;
   color:#00ffcc;
-  position:sticky;
-  top:0;
+  position:relative; /* not sticky to prevent blocking */
   z-index:1000;
 }
 #liveDateTime{
@@ -29,18 +28,16 @@ header{
   background:#222;
   color:#00ffcc;
   font-size:14px;
-  position:sticky;
-  top:60px;
-  z-index:1000;
+  position:relative; /* not sticky */
+  pointer-events:none; /* allow clicks through */
 }
 #breaking{
   background:red;
   padding:8px;
   overflow:hidden;
   white-space:nowrap;
-  position:sticky;
-  top:88px;
-  z-index:1000;
+  position:relative; /* not sticky */
+  pointer-events:none; /* allow clicks through */
 }
 #breakingContent{
   display:inline-block;
@@ -83,6 +80,7 @@ header{
   border-radius:5px;
   cursor:pointer;
   transition:0.2s;
+  pointer-events:auto; /* ensure clickable */
 }
 .card:hover{
   background:#333;
@@ -127,6 +125,7 @@ footer{
 </style>
 </head>
 <body>
+
 <header>Radiant Waves Media</header>
 <div id="liveDateTime"></div>
 
@@ -140,7 +139,6 @@ footer{
 <p id="mainSummary"></p>
 </div>
 
-<!-- Sections -->
 <div id="sectionsContainer">
   <div class="section-wrapper" id="nigeriaWrapper"><h2>Nigeria</h2><div id="nigeriaNews" class="section"></div></div>
   <div class="section-wrapper" id="europeWrapper"><h2>Europe</h2><div id="europeNews" class="section"></div></div>
@@ -169,7 +167,6 @@ footer{
 </div>
 
 <footer>© 2026 Radiant Waves Media</footer>
-
 <audio id="bgMusic" src="news-music.mp3" loop></audio>
 
 <script>
@@ -180,8 +177,8 @@ document.addEventListener("DOMContentLoaded", function(){
     const now = new Date();
     const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
     document.getElementById("liveDateTime").innerHTML =
-    now.toLocaleDateString(undefined, options) + " | " +
-    now.toLocaleTimeString();
+      now.toLocaleDateString(undefined, options) + " | " +
+      now.toLocaleTimeString();
   }
   setInterval(updateClock,1000);
   updateClock();
@@ -211,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("breakingContent").innerText =
       data.breaking.map(item=>item.title).join(" ⚡ ");
 
-    // LOAD SECTIONS WITH DELEGATED CLICK
+    // LOAD SECTIONS
     ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"]
     .forEach(sectionName=>{
       const container = document.getElementById(sectionName+"News");
@@ -226,16 +223,16 @@ document.addEventListener("DOMContentLoaded", function(){
         let h3 = document.createElement("h3"); h3.innerText=item.title; card.appendChild(h3);
         let p = document.createElement("p"); p.innerText=item.summary; card.appendChild(p);
 
-        // Store data attributes for click
+        // store data for click
         card.dataset.title = item.title;
         card.dataset.summary = item.summary;
-        card.dataset.image = item.image;
+        card.dataset.image = item.image || "main-story.jpg";
 
         container.appendChild(card);
       });
     });
 
-    // Delegated click event
+    // DELEGATED CLICK EVENT
     document.getElementById("sectionsContainer").addEventListener("click", function(e){
       const card = e.target.closest(".card");
       if(card){
@@ -249,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   });
 
-  // BACKGROUND MUSIC TOGGLE
+  // MUSIC TOGGLE
   window.toggleMusic = function(){
     const music=document.getElementById("bgMusic");
     if(music.paused){ music.play(); } else { music.pause(); }

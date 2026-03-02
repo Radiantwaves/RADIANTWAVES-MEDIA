@@ -6,112 +6,25 @@
 <title>Radiant Waves Media</title>
 <link rel="manifest" href="manifest.json">
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
-}
-header{
-    background:#000;
-    padding:15px;
-    text-align:center;
-}
-header h1{
-    margin:0;
-}
-#liveDateTime{
-    font-size:14px;
-    color:#ccc;
-    margin-top:5px;
-}
-/* Social Icons under header */
-#social{
-    text-align:center;
-    padding:10px;
-    background:#111;
-}
-#social img{
-    width:28px;
-    margin:0 8px;
-    background:white;
-    padding:5px;
-    border-radius:6px;
-}
-/* Section Menu */
-#sectionsMenu{
-    display:flex;
-    justify-content:center;
-    background:#222;
-    padding:8px;
-    flex-wrap:wrap;
-}
-#sectionsMenu button{
-    background:#333;
-    color:#1e90ff;
-    border:none;
-    margin:4px;
-    padding:6px 12px;
-    cursor:pointer;
-    border-radius:4px;
-}
-#sectionsMenu button:hover{
-    background:#1e90ff;
-    color:white;
-}
-/* Breaking News */
-#breakingNews{
-    background:#ff3b3b;
-    color:white;
-    padding:8px;
-    overflow:hidden;
-    white-space:nowrap;
-    font-weight:bold;
-}
-#breakingNews span{
-    display:inline-block;
-    padding-left:100%;
-    animation:scroll 18s linear infinite;
-}
-@keyframes scroll{
-    0%{ transform:translateX(0); }
-    100%{ transform:translateX(-100%); }
-}
-/* Main Story */
-#mainStory{
-    padding:15px;
-    text-align:center;
-}
-#mainStory img{
-    width:100%;
-    max-height:400px;
-    object-fit:cover;
-    border-radius:8px;
-}
-#mainTitle{
-    color:#1e90ff;
-    margin-top:10px;
-}
-/* Sections */
-.section{
-    padding:10px;
-}
-.card{
-    background:white;
-    color:black;
-    padding:10px;
-    margin-bottom:10px;
-    border-radius:6px;
-    cursor:pointer;
-}
-.card img{
-    width:100%;
-    border-radius:6px;
-}
-.card h3{
-    color:#1e90ff;
-    margin:5px 0;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:white;}
+header{background:#000;padding:15px;text-align:center;}
+header h1{margin:0;}
+#liveDateTime{font-size:14px;color:#ccc;margin-top:5px;}
+#sectionsMenu{display:flex;justify-content:center;background:#222;padding:8px;flex-wrap:wrap;}
+#sectionsMenu button{background:#333;color:#1e90ff;border:none;margin:4px;padding:6px 12px;cursor:pointer;border-radius:4px;}
+#sectionsMenu button:hover{background:#1e90ff;color:white;}
+#breakingNews{background:#ff3b3b;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
+#breakingNews span{display:inline-block;padding-left:100%;animation:scroll 18s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+#mainStory{padding:15px;text-align:center;}
+#mainStory img{width:100%;max-height:400px;object-fit:cover;border-radius:8px;}
+#mainTitle{color:#1e90ff;margin-top:10px;}
+.section{padding:10px;display:none;}
+.card{background:white;color:black;padding:10px;margin-bottom:10px;border-radius:6px;cursor:pointer;}
+.card img{width:100%;border-radius:6px;}
+.card h3{color:#1e90ff;margin:5px 0;}
+#social{text-align:center;padding:10px;background:#111;}
+#social img{width:28px;margin:0 8px;background:white;padding:5px;border-radius:6px;}
 </style>
 </head>
 <body>
@@ -120,17 +33,6 @@ header h1{
 <h1>Radiant Waves Media</h1>
 <div id="liveDateTime"></div>
 </header>
-
-<!-- Social Icons -->
-<div id="social">
-<a href="#"><img src="facebook.png"></a>
-<a href="#"><img src="twitter.png"></a>
-<a href="#"><img src="instagram.png"></a>
-<a href="#"><img src="tiktok.png"></a>
-</div>
-
-<!-- Breaking News -->
-<div id="breakingNews"><span>Loading breaking news...</span></div>
 
 <!-- Section Menu -->
 <div id="sectionsMenu">
@@ -145,6 +47,12 @@ header h1{
 <button onclick="showSection('music')">Music</button>
 <button onclick="showSection('movies')">Movies</button>
 </div>
+
+<!-- Social Icons -->
+<div id="social"></div>
+
+<!-- Breaking News -->
+<div id="breakingNews"><span>Loading breaking news...</span></div>
 
 <!-- Main Story -->
 <div id="mainStory">
@@ -171,9 +79,28 @@ let lastVersion=null;
 // Show only one section at a time
 function showSection(sectionName){
     ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"].forEach(s=>{
-        document.getElementById(s).style.display = "none";
+        const el=document.getElementById(s);
+        if(el) el.style.display = (s===sectionName) ? "block" : "none";
     });
-    document.getElementById(sectionName).style.display = "block";
+}
+
+// Load Social Icons dynamically from JSON
+function loadSocial(data){
+    const container=document.getElementById("social");
+    container.innerHTML="";
+    if(data.social){
+        data.social.forEach(s=>{
+            const link=document.createElement("a");
+            link.href=s.link||"#";
+            link.target="_blank";
+            const img=document.createElement("img");
+            img.src=s.image;
+            img.alt=s.title;
+            img.onerror=function(){this.style.display='none';};
+            link.appendChild(img);
+            container.appendChild(link);
+        });
+    }
 }
 
 // Load News
@@ -210,7 +137,10 @@ function loadNews(){
         }
         ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"].forEach(loadSection);
 
-        // Notification alert on update
+        // Load social icons
+        loadSocial(data);
+
+        // Notification alert on version change
         if(lastVersion && lastVersion!==data.version){
             alert("News Updated!");
         }
@@ -219,36 +149,37 @@ function loadNews(){
     .catch(err=>console.log("Error loading news:",err));
 }
 
-// Click to show main
+// Click to show main story
 function showMain(section,index){
     fetch("news.json?v="+Date.now())
     .then(res=>res.json())
     .then(data=>{
+        if(!data[section] || !data[section][index]) return;
         let story=data[section][index];
         const mainImg=document.getElementById("mainImage");
-        mainImg.onerror=function(){ mainImg.src="main-story.jpg"; };
-        mainImg.src=story.image;
-        document.getElementById("mainTitle").innerText=story.title;
-        document.getElementById("mainSummary").innerText=story.summary;
+        mainImg.onerror=function(){ mainImg.src='main-story.jpg'; };
+        mainImg.src=story.image || 'main-story.jpg';
+        document.getElementById("mainTitle").innerText=story.title || "";
+        document.getElementById("mainSummary").innerText=story.summary || "";
     });
 }
 
-// Clock
+// Live Clock
 function updateClock(){
     const now=new Date();
     document.getElementById("liveDateTime").innerText=
-    now.toDateString()+" | "+now.toLocaleTimeString();
+        now.toDateString()+" | "+now.toLocaleTimeString();
 }
 setInterval(updateClock,1000);
 updateClock();
 
-// Service Worker
+// Service Worker for PWA
 if("serviceWorker" in navigator){
     navigator.serviceWorker.register("service-worker.js");
 }
 
 // Initial Load
-showSection("nigeria"); // default section
+showSection("nigeria"); // default visible section
 loadNews();
 setInterval(loadNews,300000); // reload news every 5 min
 </script>

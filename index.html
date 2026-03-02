@@ -59,6 +59,7 @@ header h1{margin:0;}
 <img id="mainImage" src="main-story.jpg">
 <h2 id="mainTitle">Loading...</h2>
 <p id="mainSummary"></p>
+<a id="readMoreBtn" href="#" target="_blank">Read More</a>
 </div>
 
 <!-- Sections -->
@@ -84,7 +85,7 @@ function showSection(sectionName){
     });
 }
 
-// Load Social Icons dynamically from JSON
+// Load Social Icons dynamically
 function loadSocial(data){
     const container=document.getElementById("social");
     container.innerHTML="";
@@ -114,6 +115,7 @@ function loadNews(){
         mainImg.src=data.main[0].image;
         document.getElementById("mainTitle").innerText=data.main[0].title;
         document.getElementById("mainSummary").innerText=data.main[0].summary;
+        document.getElementById("readMoreBtn").href=data.main[0].link||"#";
 
         // Breaking news
         if(data.breaking){
@@ -127,41 +129,28 @@ function loadNews(){
             let html="";
             data[name].forEach((item,index)=>{
                 html+=`
-                <div class="card" onclick="showMain('${name}',${index})">
+                <div class="card">
+                  <a href="${item.link||'#'}" target="_blank">
                     ${item.image?`<img src="${item.image}" onerror="this.src='main-story.jpg'">`:""}
                     <h3>${item.title}</h3>
                     <p>${item.summary}</p>
+                  </a>
                 </div>`;
             });
             document.getElementById(name).innerHTML=html;
         }
         ["nigeria","europe","america","africa","asia","politics","business","sport","music","movies"].forEach(loadSection);
 
-        // Load social icons
+        // Social icons
         loadSocial(data);
 
-        // Notification alert on version change
+        // Notification alert
         if(lastVersion && lastVersion!==data.version){
             alert("News Updated!");
         }
         lastVersion=data.version;
     })
     .catch(err=>console.log("Error loading news:",err));
-}
-
-// Click to show main story
-function showMain(section,index){
-    fetch("news.json?v="+Date.now())
-    .then(res=>res.json())
-    .then(data=>{
-        if(!data[section] || !data[section][index]) return;
-        let story=data[section][index];
-        const mainImg=document.getElementById("mainImage");
-        mainImg.onerror=function(){ mainImg.src='main-story.jpg'; };
-        mainImg.src=story.image || 'main-story.jpg';
-        document.getElementById("mainTitle").innerText=story.title || "";
-        document.getElementById("mainSummary").innerText=story.summary || "";
-    });
 }
 
 // Live Clock
@@ -179,9 +168,9 @@ if("serviceWorker" in navigator){
 }
 
 // Initial Load
-showSection("nigeria"); // default visible section
+showSection("nigeria");
 loadNews();
-setInterval(loadNews,300000); // reload news every 5 min
+setInterval(loadNews,300000); // reload every 5 min
 </script>
 
 </body>

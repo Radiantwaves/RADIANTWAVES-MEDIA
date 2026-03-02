@@ -1,97 +1,112 @@
 {
-  "version": "2026-03-02-02",
+  "version": "2026-03-02-03",
+
   "main": [
     {
-      "title": "Middle East Tensions Escalate as Regional Strikes Continue",
-      "summary": "New coordinated strikes in the Middle East have caused widespread concern. Retaliatory actions and airspace closures continue, impacting global trade and travel.",
-      "image": "https://images.unsplash.com/photo-1581091012184-5c4c5a1f7a6c",
-      "fallback": "main-story.jpg"
+      "title": "Global Leaders Push for Urgent Talks as Middle East Conflict Intensifies",
+      "summary": "Rising tensions in the Middle East have prompted urgent diplomatic efforts worldwide. Airspace restrictions and security alerts continue as regional powers exchange warnings.",
+      "image": "main-story.jpg"
     }
   ],
+
   "breaking": [
     {
-      "title": "Airspace Restrictions in Gulf Cause Flight Delays",
-      "summary": "Flights across major Gulf cities have been canceled or rerouted due to airspace closures."
+      "title": "Major Gulf Airports Announce Emergency Flight Adjustments"
     },
     {
-      "title": "World Leaders Urge Diplomatic Resolution",
-      "summary": "Global leaders call for restraint as regional tensions intensify."
+      "title": "Oil Prices Climb Amid Ongoing Regional Uncertainty"
     }
   ],
+
   "nigeria": [
     {
-      "title": "Nigeria’s World Cup Qualification in FIFA Dispute",
-      "summary": "Super Eagles await FIFA decision over eligibility issues that could affect their 2026 World Cup bid.",
+      "title": "Nigeria Strengthens Border Security Amid Global Tensions",
+      "summary": "Authorities announce increased monitoring at key border points to ensure national safety.",
       "image": "nigeria1.jpg"
     },
     {
-      "title": "Oil Prices Rise, Supporting Naira Despite Inflation Risks",
-      "summary": "Rising oil prices provide temporary relief for Nigeria’s foreign exchange liquidity, but inflation remains a concern.",
+      "title": "CBN Signals New Measures to Stabilize Naira",
+      "summary": "Central Bank officials hint at additional policies to manage foreign exchange volatility.",
       "image": "nigeria2.jpg"
     }
   ],
+
   "europe": [
     {
-      "title": "EU Condemns Middle East Escalation",
-      "summary": "European Union officials urge for diplomacy and de-escalation in the region.",
+      "title": "EU Foreign Ministers Call for Immediate Ceasefire",
+      "summary": "European leaders emphasize diplomacy as the only solution to avoid broader instability.",
       "image": "europe1.jpg"
     }
   ],
+
   "america": [
     {
-      "title": "US Confirms Role in Regional Strikes",
-      "summary": "The United States acknowledges involvement in recent Middle East strikes, emphasizing international security concerns.",
+      "title": "US Senate Debates Emergency Security Funding",
+      "summary": "Lawmakers discuss new defense allocations in response to rising global tensions.",
       "image": "america1.jpg"
     }
   ],
+
   "africa": [
     {
-      "title": "African Union Calls for Regional Restraint",
-      "summary": "The AU warns that ongoing conflict risks destabilizing African economies and security.",
+      "title": "African Union Urges Peaceful Negotiations",
+      "summary": "AU leaders warn that extended instability could affect trade and food supply chains.",
       "image": "africa1.jpg"
     }
   ],
+
   "asia": [
     {
-      "title": "Asian Airlines Report Disruptions Amid Global Flight Reroutes",
-      "summary": "Airlines across Asia experience flight cancellations due to Middle East airspace closures.",
+      "title": "Asian Markets React to Middle East Developments",
+      "summary": "Stock exchanges show volatility following overnight geopolitical updates.",
       "image": "asia1.jpg"
     }
   ],
+
+  "politics": [
+    {
+      "title": "UN Security Council Schedules Emergency Session",
+      "summary": "An urgent meeting has been called to address rising international security concerns.",
+      "image": "politics1.jpg"
+    }
+  ],
+
   "business": [
     {
-      "title": "OPEC+ Announces Modest Oil Production Increase",
-      "summary": "OPEC+ raises oil output slightly to stabilize markets while geopolitical risks persist.",
+      "title": "Energy Sector Stocks Rally on Oil Surge",
+      "summary": "Energy companies see gains as crude prices rise amid supply concerns.",
       "image": "business1.jpg"
     }
   ],
+
   "sport": [
     {
-      "title": "Nigeria Awaits FIFA Verdict on World Cup Qualification",
-      "summary": "Super Eagles’ World Cup hopes hinge on eligibility ruling from FIFA.",
+      "title": "Super Eagles Prepare for Crucial Qualifier",
+      "summary": "Nigeria’s national team intensifies training ahead of upcoming international fixtures.",
       "image": "sport1.jpg"
     }
   ],
-  "social": [
+
+  "music": [
     {
-      "title": "Facebook",
-      "image": "facebook.png",
-      "link": "https://facebook.com/yourpage"
-    },
-    {
-      "title": "Twitter",
-      "image": "twitter.png",
-      "link": "https://twitter.com/yourpage"
-    },
-    {
-      "title": "Instagram",
-      "image": "instagram.png",
-      "link": "https://instagram.com/yourpage"
-    },
-    {
-      "title": "TikTok",
-      "image": "tiktok.png",
-      "link": "https://tiktok.com/@yourpage"
+      "title": "African Artists Dominate Global Streaming Charts",
+      "summary": "Afrobeats continues its international rise with multiple chart-topping releases.",
+      "image": "music1.jpg"
     }
+  ],
+
+  "movies": [
+    {
+      "title": "International Film Festival Highlights Emerging Talent",
+      "summary": "New filmmakers receive global recognition at this year’s festival showcase.",
+      "image": "movies1.jpg"
+    }
+  ],
+
+  "social": [
+    { "title": "Facebook", "image": "facebook.png" },
+    { "title": "Twitter", "image": "twitter.png" },
+    { "title": "Instagram", "image": "instagram.png" },
+    { "title": "TikTok", "image": "tiktok.png" }
   ]
 }

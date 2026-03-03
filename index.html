@@ -7,22 +7,22 @@
 
 <style>
 body{margin:0;font-family:Arial;background:#f4f4f4;}
-header{background:#111;color:white;padding:15px;text-align:center;font-size:24px;}
+header{background:#111;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
 nav{background:#b30000;text-align:center;}
-nav a{color:white;padding:12px;display:inline-block;cursor:pointer;}
+nav a{color:white;padding:12px 15px;display:inline-block;cursor:pointer;font-size:14px;}
 nav a:hover{background:#111;}
 .breaking{background:red;color:white;padding:8px;white-space:nowrap;overflow:hidden;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 20s linear infinite;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 25s linear infinite;}
 @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-.main,.card{background:white;margin:15px;padding:15px;}
-.card{cursor:pointer;}
-.card img,.main img{width:100%;}
+.main{background:white;margin:15px;padding:15px;}
+.main img{width:100%;}
+.card{background:white;margin:15px;padding:15px;cursor:pointer;}
+.card img{width:100%;}
 .time{color:gray;font-size:12px;}
-.news-container{padding:10px;}
-#details{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;overflow:auto;}
+#details{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;overflow:auto;}
 .details-content{background:white;color:black;margin:30px;padding:20px;}
 button{padding:8px 15px;margin:10px;}
-.social{text-align:center;padding:20px;}
+.social{text-align:center;padding:20px;background:#111;}
 .social img{width:40px;margin:0 8px;}
 </style>
 </head>
@@ -39,23 +39,35 @@ button{padding:8px 15px;margin:10px;}
 </div>
 
 <div class="breaking">
-<span>🔴 Trump Says New Strikes Target Iranian Leadership | 🔴 Cruise Ship Stuck Amid Missile Threats | 🔴 Cyberattack Hits Global Banks</span>
+<span>
+🔴 Trump Says New Strikes Target Iranian Leadership |
+🔴 Cruise Ship Stuck in Middle East Crisis Zone |
+🔴 Cyberattack Disrupts Global Banking |
+🔴 Tinubu Nominates Oyedele as Finance Minister |
+🔴 Austin Shooting Terror Motive Investigated
+</span>
 </div>
 
 <nav>
 <a onclick="filterNews('All')">Home</a>
 <a onclick="filterNews('Nigeria')">Nigeria</a>
+<a onclick="filterNews('Europe')">Europe</a>
+<a onclick="filterNews('America')">America</a>
+<a onclick="filterNews('Asia')">Asia</a>
 <a onclick="filterNews('World')">World</a>
+<a onclick="filterNews('Sports')">Sports</a>
+<a onclick="filterNews('Technology')">Technology</a>
+<a onclick="filterNews('Health')">Health</a>
 </nav>
 
 <div class="main">
-<img src="https://picsum.photos/800/400?1">
+<img src="https://picsum.photos/900/400?1">
 <h2>U.S. and Israeli Strikes Deepen Middle East Crisis</h2>
 <p class="time">March 4, 2026</p>
-<p>Coordinated military operations targeted senior Iranian commanders, escalating tensions across the region.</p>
+<p>Coordinated military operations targeted senior Iranian commanders using advanced intelligence tracking systems.</p>
 </div>
 
-<div class="news-container" id="news"></div>
+<div id="news"></div>
 
 <div id="details">
 <div class="details-content" id="detailsContent"></div>
@@ -64,25 +76,58 @@ button{padding:8px 15px;margin:10px;}
 <div class="social">
 <a href="https://instagram.com/YOUR_USERNAME" target="_blank"><img src="instagram.png"></a>
 <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank"><img src="tiktok.png"></a>
+<a href="https://facebook.com/YOUR_PAGE" target="_blank"><img src="facebook.png"></a>
+<a href="https://twitter.com/YOUR_USERNAME" target="_blank"><img src="twitter.png"></a>
 </div>
 
 <script>
 
 const newsData = [
-{
-category:"World",
-title:"Cruise Ship Stuck in Gulf",
-time:"March 4, 2026",
-summary:"Passengers stranded as tensions rise.",
-content:"Hundreds remain aboard after ports closed due to security threats."
-},
-{
-category:"Nigeria",
-title:"Tinubu Nominates Oyedele",
-time:"March 4, 2026",
+
+{category:"World",title:"Hacked Traffic Cameras Helped Track Iranian Targets",time:"March 4, 2026",
+summary:"Cyber intelligence used in precision strike.",
+content:"Officials revealed that satellite data and hacked surveillance cameras helped identify key Iranian commanders before the strike."},
+
+{category:"World",title:"Cruise Ship Stuck Amid Missile Threats",time:"March 4, 2026",
+summary:"Passengers stranded in Gulf region.",
+content:"Luxury cruise passengers remain stranded as ports closed due to security concerns."},
+
+{category:"America",title:"Austin Shooting Suspect Investigated",time:"March 4, 2026",
+summary:"Authorities examine terror motive.",
+content:"Federal investigators analyze extremist digital evidence linked to suspect."},
+
+{category:"America",title:"Secret Chemicals Found in US Food Supply",time:"March 4, 2026",
+summary:"Government launches safety review.",
+content:"An investigation uncovered untested additives in processed foods."},
+
+{category:"Nigeria",title:"Tinubu Nominates Oyedele as Minister",time:"March 4, 2026",
 summary:"Finance reform continues.",
-content:"President nominates fiscal expert to strengthen economy."
-}
+content:"President Tinubu nominates fiscal expert Taiwo Oyedele to support economic reform agenda."},
+
+{category:"Nigeria",title:"Yobe APC Chairman Re-Elected",time:"March 4, 2026",
+summary:"Party congress confirms leadership.",
+content:"Delegates voted overwhelmingly to maintain party leadership continuity."},
+
+{category:"Europe",title:"UK Issues Severe Storm Warning",time:"March 4, 2026",
+summary:"Heavy rainfall expected.",
+content:"Meteorological agencies warn of flooding across several regions."},
+
+{category:"Asia",title:"Asia Maritime Security Alert",time:"March 4, 2026",
+summary:"Shipping routes adjusted.",
+content:"Authorities advise vessels to avoid high-risk corridors."},
+
+{category:"Technology",title:"AI Breakthrough in Cancer Detection",time:"March 4, 2026",
+summary:"Early diagnosis improved.",
+content:"Tech firms introduce AI diagnostic tools capable of early detection."},
+
+{category:"Health",title:"Global Study Links Diet Additives to Risk",time:"March 4, 2026",
+summary:"Researchers urge regulation.",
+content:"International scientists recommend stricter oversight of preservatives."},
+
+{category:"Sports",title:"World Football Rankings Updated",time:"March 4, 2026",
+summary:"Major shifts recorded.",
+content:"Recent fixtures caused significant ranking reshuffles."}
+
 ];
 
 function displayNews(list){

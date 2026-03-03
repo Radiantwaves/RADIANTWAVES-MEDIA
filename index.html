@@ -82,14 +82,14 @@ h2.categoryHeader{margin-top:30px;color:#ff4500;border-bottom:1px solid #ccc;pad
 <script>
 // TIME DISPLAY
 function updateTime(){
-  let now = new Date();
-  let timeBox = document.getElementById("liveTime");
-  if(timeBox) timeBox.innerHTML = now.toDateString() + " | " + now.toLocaleTimeString();
+  let now=new Date();
+  let timeBox=document.getElementById("liveTime");
+  if(timeBox) timeBox.innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();
 }
 setInterval(updateTime,1000);
 updateTime();
 
-window.addEventListener("load", function(){
+window.addEventListener("load",function(){
 
 let mainArticle;
 let allArticles=[];
@@ -99,24 +99,24 @@ let breakingIndex=0;
 fetch("news.json?v="+Date.now())
 .then(res=>res.json())
 .then(data=>{
-  mainArticle = data.main;
-  allArticles = data.news;
+  mainArticle=data.main;
+  allArticles=data.news;
 
   // MAIN STORY
-  document.getElementById("mainImage").src = mainArticle.image;
-  document.getElementById("mainTitle").innerText = mainArticle.title;
-  document.getElementById("mainSummary").innerText = mainArticle.summary;
+  document.getElementById("mainImage").src=mainArticle.image;
+  document.getElementById("mainTitle").innerText=mainArticle.title;
+  document.getElementById("mainSummary").innerText=mainArticle.summary;
   document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
 
   // SOCIAL ICONS
-  let socialBox = document.getElementById("social");
-  socialBox.innerHTML = "";
+  let socialBox=document.getElementById("social");
+  socialBox.innerHTML="";
   data.social.forEach(function(s){
-    let link = document.createElement("a");
-    link.href = s.link;
+    let link=document.createElement("a");
+    link.href=s.link;
     link.target="_blank";
-    let img = document.createElement("img");
-    img.src = s.image;
+    let img=document.createElement("img");
+    img.src=s.image;
     link.appendChild(img);
     socialBox.appendChild(link);
   });
@@ -125,36 +125,36 @@ fetch("news.json?v="+Date.now())
   displayNews("Home");
 
   // NAVIGATION BUTTONS
-  const navBtns = document.querySelectorAll("nav button");
+  const navBtns=document.querySelectorAll("nav button");
   navBtns.forEach(function(btn){
-    btn.onclick = function(){
+    btn.onclick=function(){
       navBtns.forEach(b=>b.classList.remove("active"));
       this.classList.add("active");
-      let cat = this.getAttribute("data-category");
+      let cat=this.getAttribute("data-category");
       displayNews(cat);
     };
   });
 
-  // ROLLING BREAKING NEWS
+  // BREAKING NEWS TICKER
   function updateBreakingNews(){
     if(allArticles.length===0) return;
-    breakingIndex = (breakingIndex+1)%allArticles.length;
-    document.getElementById("breakingText").innerHTML = "Breaking: "+allArticles[breakingIndex].title;
+    breakingIndex=(breakingIndex+1)%allArticles.length;
+    document.getElementById("breakingText").innerHTML="Breaking: "+allArticles[breakingIndex].title;
   }
   setInterval(updateBreakingNews,8000);
 
   // FUTURE NEWS GENERATOR
   function generateFutureNews(){
-    const categories = ["Nigeria","Europe","Africa","America","Politics","Sports","Technology","World","Asia"];
-    const randomCat = categories[Math.floor(Math.random()*categories.length)];
-    const id = Math.floor(Math.random()*1000);
-    const newNews = {
-      title: "Future Event: "+randomCat+" Event "+id,
-      summary: "This is a forecasted event in "+randomCat+".",
-      content: "Details about future event "+id+" happening in "+randomCat+". Simulated news for testing.",
-      image: "https://picsum.photos/600/400?random="+(100+id),
-      category: randomCat,
-      time: new Date().toLocaleString()
+    const categories=["Nigeria","Europe","Africa","America","Politics","Sports","Technology","World","Asia"];
+    const randomCat=categories[Math.floor(Math.random()*categories.length)];
+    const id=Math.floor(Math.random()*1000);
+    const newNews={
+      title:"Future Event: "+randomCat+" Event "+id,
+      summary:"This is a forecasted event in "+randomCat+".",
+      content:"Details about future event "+id+" happening in "+randomCat+". Simulated news for testing.",
+      image:"https://picsum.photos/600/400?random="+(100+id),
+      category:randomCat,
+      time:new Date().toLocaleString()
     };
     allArticles.push(newNews);
   }
@@ -166,35 +166,35 @@ fetch("news.json?v="+Date.now())
 })
 .catch(err=>console.log("JSON ERROR:",err));
 
-// DISPLAY NEWS BY CATEGORY / HOME WITH GROUPING
+// DISPLAY NEWS
 function displayNews(category){
   let container=document.getElementById("newsSection");
   container.innerHTML="";
   if(category==="Home"){
     const cats=["Nigeria","Europe","Africa","America","Politics","Sports"];
     cats.forEach(cat=>{
-      let catNews = allArticles.filter(a=>a.category.toLowerCase().trim()===cat.toLowerCase().trim()).slice(0,5);
+      let catNews=allArticles.filter(a=>a.category.toLowerCase()===cat.toLowerCase()).slice(0,5);
       if(catNews.length>0){
-        let header = document.createElement("h2");
+        let header=document.createElement("h2");
         header.innerText=cat;
         header.className="categoryHeader";
         container.appendChild(header);
         catNews.forEach(n=>{
           let div=document.createElement("div");
           div.className="card";
-          div.innerHTML="<img src='"+n.image+"'><h3>"+n.title+"</h3><p>"+n.summary+"</p>";
+          div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p>`;
           div.onclick=()=>openArticle(n);
           container.appendChild(div);
         });
       }
     });
   } else {
-    let filtered = allArticles.filter(a=>a.category.toLowerCase().trim()===category.toLowerCase().trim());
+    let filtered=allArticles.filter(a=>a.category.toLowerCase()===category.toLowerCase());
     if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
     filtered.forEach(n=>{
       let div=document.createElement("div");
       div.className="card";
-      div.innerHTML="<img src='"+n.image+"'><h3>"+n.title+"</h3><p>"+n.summary+"</p>";
+      div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p>`;
       div.onclick=()=>openArticle(n);
       container.appendChild(div);
     });

@@ -1,11 +1,12 @@
 {
-  "breaking": "Breaking: Global tensions affect markets worldwide.",
+  "breaking": "Global markets react as tensions rise in multiple regions.",
 
   "main": {
     "title": "Middle East Conflict Escalates",
-    "summary": "Diplomatic talks continue as security concerns grow.",
+    "summary": "Diplomatic talks continue amid rising regional instability.",
     "image": "https://picsum.photos/900/500?random=900",
-    "content": "Full article content about Middle East conflict goes here. Stays inside your website."
+    "content": "Full detailed article content stays inside your website.",
+    "category": "Home"
   },
 
   "news": [
@@ -13,30 +14,29 @@
       "title": "Nigeria Announces Economic Reforms",
       "summary": "Government outlines new stabilization measures.",
       "image": "https://picsum.photos/600/400?random=901",
-      "content": "Complete Nigeria article written fully here inside your JSON file."
+      "content": "Full article about Nigeria economic reform inside your website.",
+      "category": "Nigeria"
     },
     {
       "title": "US Holds Emergency Debate",
       "summary": "Lawmakers discuss foreign policy.",
       "image": "https://picsum.photos/600/400?random=902",
-      "content": "Full US article content written inside your website."
+      "content": "Full article about US debate inside your website.",
+      "category": "America"
     },
     {
       "title": "Africa Sports Update",
       "summary": "Latest results and scores.",
       "image": "https://picsum.photos/600/400?random=903",
-      "content": "Sports news content goes here inside your site."
+      "content": "Sports news content inside your website.",
+      "category": "Africa"
     }
   ],
 
   "social": [
-    {
-      "image": "instagram.png",
-      "link": "#"
-    },
-    {
-      "image": "tiktok.png",
-      "link": "#"
-    }
+    {"image":"instagram.png","link":"#"},
+    {"image":"tiktok.png","link":"#"},
+    {"image":"facebook.png","link":"#"},
+    {"image":"twitter.png","link":"#"}
   ]
 }

@@ -151,21 +151,42 @@ fetch("news.json?v="+Date.now())
 })
 .catch(error=>{console.log("JSON ERROR:",error);});
 
-// DISPLAY NEWS BY CATEGORY
+// DISPLAY NEWS BY CATEGORY / HOME WITH GROUPING
 function displayNews(category){
   let container = document.getElementById("newsSection");
   container.innerHTML = "";
-  let filtered = allArticles.filter(item=>{
-    return category==="Home" || item.category.toLowerCase().trim()===category.toLowerCase().trim();
-  });
-  if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
-  filtered.forEach(item=>{
-    let div = document.createElement("div");
-    div.className="card";
-    div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
-    div.onclick=function(){openArticle(item);};
-    container.appendChild(div);
-  });
+
+  if(category === "Home"){
+    // Group news by categories
+    const categories = ["Nigeria","Europe","Africa","America","Politics","Sports"];
+    categories.forEach(cat=>{
+      let catNews = allArticles.filter(item => item.category.toLowerCase().trim()===cat.toLowerCase().trim()).slice(0,5); // latest 5
+      if(catNews.length>0){
+        let catHeader = document.createElement("h2");
+        catHeader.innerText = cat;
+        catHeader.style.marginTop = "25px";
+        container.appendChild(catHeader);
+        catNews.forEach(item=>{
+          let div = document.createElement("div");
+          div.className="card";
+          div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
+          div.onclick=function(){openArticle(item);};
+          container.appendChild(div);
+        });
+      }
+    });
+  } else {
+    // Filter by specific category
+    let filtered = allArticles.filter(item=>item.category.toLowerCase().trim()===category.toLowerCase().trim());
+    if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
+    filtered.forEach(item=>{
+      let div = document.createElement("div");
+      div.className="card";
+      div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
+      div.onclick=function(){openArticle(item);};
+      container.appendChild(div);
+    });
+  }
 }
 
 // OPEN ARTICLE

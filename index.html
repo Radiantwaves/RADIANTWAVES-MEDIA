@@ -68,18 +68,20 @@ Radiant Waves Media
 <div id="social"></div>
 
 <script>
+// --- TIME INIT ---
+function updateTime(){
+  let now = new Date();
+  let timeBox = document.getElementById("liveTime");
+  if(timeBox) timeBox.innerHTML = now.toDateString() + " | " + now.toLocaleTimeString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+// --- MAIN SCRIPT ---
 window.addEventListener("load", function(){
+
 let mainArticle;
 let allArticles=[];
-
-// TIME (temporary)
-function updateTime(){
-  let now=new Date();
-  let timeBox=document.getElementById("liveTime");
-  if(timeBox){timeBox.innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();}
-}
-setInterval(updateTime,1000);
-updateTime();
 
 // FETCH NEWS
 fetch("news.json?v="+Date.now())
@@ -112,16 +114,17 @@ fetch("news.json?v="+Date.now())
     link.appendChild(img);
     socialBox.appendChild(link);
   });
+
+  // NAVIGATION FIXED AFTER FETCH
+  document.querySelectorAll("nav button").forEach(function(btn){
+    btn.onclick = function(){
+      let cat = this.getAttribute("data-category");
+      displayNews(cat);
+    };
+  });
+
 })
 .catch(error=>{console.log("JSON ERROR:",error);});
-
-// NAVIGATION
-document.querySelectorAll("nav button").forEach(function(btn){
-  btn.onclick = function(){
-    let cat = this.getAttribute("data-category");
-    displayNews(cat);
-  };
-});
 
 // DISPLAY NEWS
 function displayNews(category){

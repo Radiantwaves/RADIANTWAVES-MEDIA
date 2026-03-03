@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves Media</title>
 <style>
-/* GENERAL */
 body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#fdfdfd;color:#111;}
 header{background:#000;color:#fff;padding:20px;text-align:center;font-size:28px;font-weight:bold;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
 header #siteTitle{flex-grow:1;}
@@ -27,6 +26,7 @@ nav button:hover, nav button.active{color:#ffa500;}
 .card:hover{box-shadow:0 6px 12px rgba(0,0,0,0.25);transform:translateY(-3px);}
 .card img{width:100%;border-radius:5px;}
 .card h3{color:#1e90ff;margin:10px 0 6px 0;}
+.card p.time{font-size:12px;color:#555;margin-top:4px;}
 #articlePage{display:none;padding:25px;}
 #articlePage img{width:100%;max-height:450px;object-fit:cover;border-radius:8px;margin-bottom:15px;}
 #backBtn{background:#000;color:#fff;border:none;padding:8px 14px;cursor:pointer;margin-bottom:20px;border-radius:5px;transition:0.3s;}
@@ -170,6 +170,7 @@ fetch("news.json?v="+Date.now())
 function displayNews(category){
   let container=document.getElementById("newsSection");
   container.innerHTML="";
+  
   if(category==="Home"){
     const cats=["Nigeria","Europe","Africa","America","Politics","Sports"];
     cats.forEach(cat=>{
@@ -182,7 +183,7 @@ function displayNews(category){
         catNews.forEach(n=>{
           let div=document.createElement("div");
           div.className="card";
-          div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p>`;
+          div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p><p class="time">${n.time}</p>`;
           div.onclick=()=>openArticle(n);
           container.appendChild(div);
         });
@@ -194,7 +195,7 @@ function displayNews(category){
     filtered.forEach(n=>{
       let div=document.createElement("div");
       div.className="card";
-      div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p>`;
+      div.innerHTML=`<img src="${n.image}"><h3>${n.title}</h3><p>${n.summary}</p><p class="time">${n.time}</p>`;
       div.onclick=()=>openArticle(n);
       container.appendChild(div);
     });

@@ -77,7 +77,6 @@ function updateTime(){
 setInterval(updateTime, 1000);
 updateTime();
 
-// MAIN SCRIPT
 window.addEventListener("load", function(){
 
 let mainArticle;
@@ -128,6 +127,26 @@ fetch("news.json?v="+Date.now())
     document.getElementById("breakingText").innerHTML = "Breaking: " + allArticles[breakingIndex].title;
   }
   setInterval(updateBreakingNews, 8000);
+
+  // FUTURE NEWS GENERATOR
+  function generateFutureNews(){
+    const categories = ["Nigeria","Europe","Africa","America","Politics","Sports","Technology","World","Asia"];
+    const randomCat = categories[Math.floor(Math.random()*categories.length)];
+    const id = Math.floor(Math.random()*1000);
+    const newNews = {
+      title: "Future Event: "+randomCat+" Event "+id,
+      summary: "This is a forecasted event in "+randomCat+".",
+      content: "Details about the future event "+id+" happening in "+randomCat+". This is simulated news for testing.",
+      image: "https://picsum.photos/600/400?random="+(100+id),
+      category: randomCat
+    };
+    allArticles.push(newNews);
+  }
+
+  setInterval(()=>{
+    generateFutureNews();
+    updateBreakingNews();
+  },30000);
 
 })
 .catch(error=>{console.log("JSON ERROR:",error);});

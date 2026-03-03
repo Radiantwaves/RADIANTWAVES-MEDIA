@@ -1,55 +1,36 @@
 {
+  "breaking": "Oil prices rise as global tensions continue.",
+
   "main": {
-    "title": "Middle East Tensions Escalate as Diplomatic Talks Continue",
-    "summary": "International mediators are working urgently to prevent further escalation while humanitarian concerns grow across affected regions.",
-    "image": "https://picsum.photos/900/500?random=301",
-    "link": "https://www.aljazeera.com/"
+    "title": "Middle East Tensions Escalate",
+    "summary": "Diplomatic efforts continue amid rising regional instability.",
+    "image": "https://picsum.photos/900/500?random=400",
+    "content": "Full detailed article content goes here. This article now stays inside your website. It does not link to BBC or Al Jazeera anymore."
   },
 
-  "breaking": "Oil prices rise sharply as global markets react to geopolitical developments.",
-
-  "nigeria": [
+  "news": [
     {
-      "title": "Nigeria Introduces New Economic Reform Measures",
-      "summary": "Government officials announced fiscal adjustments aimed at stabilizing inflation and supporting the national currency.",
-      "image": "https://picsum.photos/600/400?random=302",
-      "link": "https://www.bbc.com/news"
+      "title": "Nigeria Announces Economic Reforms",
+      "summary": "Government outlines new stabilization measures.",
+      "image": "https://picsum.photos/600/400?random=401",
+      "content": "Complete Nigeria article written fully here inside your JSON file."
+    },
+    {
+      "title": "US Holds Emergency Debate",
+      "summary": "Lawmakers discuss foreign policy.",
+      "image": "https://picsum.photos/600/400?random=402",
+      "content": "Full American politics article content written here."
     }
   ],
 
-  "america": [
+  "social": [
     {
-      "title": "US Congress Holds Emergency Foreign Policy Debate",
-      "summary": "Lawmakers discussed diplomatic and security strategies in response to ongoing global tensions.",
-      "image": "https://picsum.photos/600/400?random=303",
-      "link": "https://www.cnn.com/"
-    }
-  ],
-
-  "europe": [
+      "image": "instagram.png",
+      "link": "https://instagram.com/"
+    },
     {
-      "title": "European Leaders Urge Immediate Ceasefire",
-      "summary": "EU officials called for restraint and offered mediation to prevent further instability.",
-      "image": "https://picsum.photos/600/400?random=304",
-      "link": "https://www.euronews.com/"
-    }
-  ],
-
-  "sport": [
-    {
-      "title": "CAF Adjusts Tournament Schedule",
-      "summary": "Fixture dates were revised due to international travel considerations.",
-      "image": "https://picsum.photos/600/400?random=305",
-      "link": "https://www.espn.com/"
-    }
-  ],
-
-  "business": [
-    {
-      "title": "Energy Stocks Gain as Oil Prices Climb",
-      "summary": "Energy companies saw gains in early trading as crude prices surged.",
-      "image": "https://picsum.photos/600/400?random=306",
-      "link": "https://www.reuters.com/"
+      "image": "tiktok.png",
+      "link": "https://tiktok.com/"
     }
   ]
 }

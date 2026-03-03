@@ -69,11 +69,10 @@ Radiant Waves Media
 
 <script>
 window.addEventListener("load", function(){
-
 let mainArticle;
 let allArticles=[];
 
-// TIME (always works)
+// TIME (temporary)
 function updateTime(){
   let now=new Date();
   let timeBox=document.getElementById("liveTime");
@@ -113,7 +112,6 @@ fetch("news.json?v="+Date.now())
     link.appendChild(img);
     socialBox.appendChild(link);
   });
-
 })
 .catch(error=>{console.log("JSON ERROR:",error);});
 

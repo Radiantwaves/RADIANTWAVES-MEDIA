@@ -80,17 +80,20 @@ header{
 .card{
     border:1px solid #ddd;
     padding:10px;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .card img{
     width:100%;
 }
 
-.card a{
-    text-decoration:none;
+.card h3{
     color:#1e90ff;
-    font-weight:bold;
+}
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
 }
 </style>
 </head>
@@ -112,7 +115,7 @@ header{
 </div>
 
 <div id="main">
-<img id="mainImage" src="main-story.jpg">
+<img id="mainImage" src="">
 <h2 id="mainTitle">Loading...</h2>
 <p id="mainSummary"></p>
 <a id="mainLink" href="#" target="_blank">Read Full Story</a>
@@ -125,36 +128,40 @@ header{
 <div id="business" class="section"></div>
 
 <script>
+
 function show(section){
     document.querySelectorAll('.section').forEach(s=>s.style.display='none');
     document.getElementById(section).style.display='block';
 }
 
-fetch('news.json?v='+Date.now())
-.then(res=>res.json())
-.then(data=>{
+fetch('news.json?v=' + Date.now())
+.then(res => res.json())
+.then(data => {
 
     // MAIN STORY
-    document.getElementById('mainImage').src=data.main.image;
-    document.getElementById('mainTitle').innerText=data.main.title;
-    document.getElementById('mainSummary').innerText=data.main.summary;
-    document.getElementById('mainLink').href=data.main.link;
+    document.getElementById('mainImage').src = data.main.image;
+    document.getElementById('mainTitle').innerText = data.main.title;
+    document.getElementById('mainSummary').innerText = data.main.summary;
+    document.getElementById('mainLink').href = data.main.link;
 
-    // BREAKING
-    document.getElementById('breaking').innerHTML=
-    "<span>"+data.breaking+"</span>";
+    // BREAKING NEWS
+    document.getElementById('breaking').innerHTML =
+        "<span>" + data.breaking + "</span>";
 
     // LOAD SECTIONS
     function loadSection(name){
-        let container=document.getElementById(name);
-        container.innerHTML="";
-        data[name].forEach(item=>{
-            container.innerHTML+=`
-            <div class="card">
-                <img src="${item.image}">
-                <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-                <p>${item.summary}</p>
-            </div>`;
+        let container = document.getElementById(name);
+        container.innerHTML = "";
+
+        data[name].forEach(item => {
+            container.innerHTML += `
+            <a href="${item.link}" target="_blank" class="card-link">
+                <div class="card">
+                    <img src="${item.image}">
+                    <h3>${item.title}</h3>
+                    <p>${item.summary}</p>
+                </div>
+            </a>`;
         });
     }
 
@@ -163,10 +170,10 @@ fetch('news.json?v='+Date.now())
     loadSection('europe');
     loadSection('sport');
     loadSection('business');
-
 });
 
 show('nigeria');
+
 </script>
 
 </body>

@@ -6,174 +6,101 @@
 <title>Radiant Waves Media</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#ffffff;
-    color:#000000;
-}
+body{margin:0;font-family:Arial;background:#fff;color:#000;}
+header{background:#000;color:#fff;padding:15px;text-align:center;}
+#breaking{background:orange;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
+#breaking span{display:inline-block;padding-left:100%;animation:scroll 15s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 
-header{
-    background:#000;
-    color:white;
-    padding:15px;
-    text-align:center;
-}
+#main{padding:15px;text-align:center;}
+#main img{width:100%;max-height:400px;object-fit:cover;}
 
-#breaking{
-    background:orange;
-    color:black;
-    padding:8px;
-    font-weight:bold;
-    overflow:hidden;
-    white-space:nowrap;
-}
+.section{padding:15px;}
+.card{border:1px solid #ddd;padding:10px;margin-bottom:15px;cursor:pointer;}
+.card img{width:100%;}
+.card h3{color:#1e90ff;}
 
-#breaking span{
-    display:inline-block;
-    padding-left:100%;
-    animation:scroll 15s linear infinite;
-}
+#articlePage{display:none;padding:20px;}
+#backBtn{background:#1e90ff;color:#fff;border:none;padding:8px 12px;margin-bottom:10px;cursor:pointer;}
 
-@keyframes scroll{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-100%);}
-}
-
-#menu{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    background:#f2f2f2;
-    padding:10px;
-}
-
-#menu button{
-    margin:5px;
-    padding:8px 12px;
-    border:none;
-    background:#1e90ff;
-    color:white;
-    cursor:pointer;
-}
-
-#menu button:hover{
-    background:#000;
-}
-
-#main{
-    padding:15px;
-    text-align:center;
-}
-
-#main img{
-    width:100%;
-    max-height:400px;
-    object-fit:cover;
-}
-
-.section{
-    display:none;
-    padding:15px;
-}
-
-.card{
-    border:1px solid #ddd;
-    padding:10px;
-    margin-bottom:15px;
-}
-
-.card img{
-    width:100%;
-}
-
-.card h3{
-    color:#1e90ff;
-}
-
-.card-link{
-    text-decoration:none;
-    color:inherit;
-}
+#social{text-align:center;padding:10px;}
+#social img{width:30px;margin:5px;}
 </style>
 </head>
-
 <body>
 
 <header>
 <h1>Radiant Waves Media</h1>
 </header>
 
-<div id="breaking"><span>Loading breaking news...</span></div>
+<div id="breaking"><span>Loading...</span></div>
 
-<div id="menu">
-<button onclick="show('nigeria')">Nigeria</button>
-<button onclick="show('america')">America</button>
-<button onclick="show('europe')">Europe</button>
-<button onclick="show('sport')">Sport</button>
-<button onclick="show('business')">Business</button>
-</div>
+<div id="social"></div>
 
 <div id="main">
-<img id="mainImage" src="">
-<h2 id="mainTitle">Loading...</h2>
+<img id="mainImage">
+<h2 id="mainTitle"></h2>
 <p id="mainSummary"></p>
-<a id="mainLink" href="#" target="_blank">Read Full Story</a>
+<button onclick="openArticle(mainArticle)">Read Full Story</button>
 </div>
 
-<div id="nigeria" class="section"></div>
-<div id="america" class="section"></div>
-<div id="europe" class="section"></div>
-<div id="sport" class="section"></div>
-<div id="business" class="section"></div>
+<div id="newsSection" class="section"></div>
+
+<div id="articlePage">
+<button id="backBtn" onclick="goBack()">Back</button>
+<h2 id="articleTitle"></h2>
+<img id="articleImage" style="width:100%;max-height:400px;object-fit:cover;">
+<p id="articleContent"></p>
+</div>
 
 <script>
+let mainArticle=null;
 
-function show(section){
-    document.querySelectorAll('.section').forEach(s=>s.style.display='none');
-    document.getElementById(section).style.display='block';
-}
+fetch('news.json?v='+Date.now())
+.then(res=>res.json())
+.then(data=>{
 
-fetch('news.json?v=' + Date.now())
-.then(res => res.json())
-.then(data => {
+document.getElementById('breaking').innerHTML="<span>"+data.breaking+"</span>";
 
-    // MAIN STORY
-    document.getElementById('mainImage').src = data.main.image;
-    document.getElementById('mainTitle').innerText = data.main.title;
-    document.getElementById('mainSummary').innerText = data.main.summary;
-    document.getElementById('mainLink').href = data.main.link;
+mainArticle=data.main;
+document.getElementById('mainImage').src=data.main.image;
+document.getElementById('mainTitle').innerText=data.main.title;
+document.getElementById('mainSummary').innerText=data.main.summary;
 
-    // BREAKING NEWS
-    document.getElementById('breaking').innerHTML =
-        "<span>" + data.breaking + "</span>";
-
-    // LOAD SECTIONS
-    function loadSection(name){
-        let container = document.getElementById(name);
-        container.innerHTML = "";
-
-        data[name].forEach(item => {
-            container.innerHTML += `
-            <a href="${item.link}" target="_blank" class="card-link">
-                <div class="card">
-                    <img src="${item.image}">
-                    <h3>${item.title}</h3>
-                    <p>${item.summary}</p>
-                </div>
-            </a>`;
-        });
-    }
-
-    loadSection('nigeria');
-    loadSection('america');
-    loadSection('europe');
-    loadSection('sport');
-    loadSection('business');
+let container=document.getElementById('newsSection');
+container.innerHTML="";
+data.news.forEach(item=>{
+container.innerHTML+=`
+<div class="card" onclick='openArticle(${JSON.stringify(item)})'>
+<img src="${item.image}">
+<h3>${item.title}</h3>
+<p>${item.summary}</p>
+</div>`;
 });
 
-show('nigeria');
+// Social icons
+let social=document.getElementById('social');
+data.social.forEach(s=>{
+social.innerHTML+=`<a href="${s.link}" target="_blank"><img src="${s.image}"></a>`;
+});
 
+});
+
+function openArticle(article){
+document.getElementById('main').style.display="none";
+document.getElementById('newsSection').style.display="none";
+document.getElementById('articlePage').style.display="block";
+
+document.getElementById('articleTitle').innerText=article.title;
+document.getElementById('articleImage').src=article.image;
+document.getElementById('articleContent').innerText=article.content;
+}
+
+function goBack(){
+document.getElementById('articlePage').style.display="none";
+document.getElementById('main').style.display="block";
+document.getElementById('newsSection').style.display="block";
+}
 </script>
 
 </body>

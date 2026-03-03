@@ -6,127 +6,24 @@
 <title>Radiant Waves</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f4f4f4;
-}
-
-header{
-  background:#111;
-  color:white;
-  padding:15px;
-  font-size:26px;
-  font-weight:bold;
-  text-align:center;
-}
-
-nav{
-  background:#b30000;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-nav a{
-  color:white;
-  padding:12px 18px;
-  text-decoration:none;
-  cursor:pointer;
-}
-nav a:hover{
-  background:#111;
-}
-
-.breaking{
-  background:red;
-  color:white;
-  padding:8px;
-  overflow:hidden;
-  white-space:nowrap;
-}
-.breaking span{
-  display:inline-block;
-  padding-left:100%;
-  animation:scroll 20s linear infinite;
-}
-@keyframes scroll{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-100%);}
-}
-
-.main{
-  padding:20px;
-  background:white;
-  margin:15px;
-}
-.main img{
-  width:100%;
-  max-height:400px;
-  object-fit:cover;
-}
-
-.news-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
-  gap:15px;
-  padding:15px;
-}
-
-.card{
-  background:white;
-  padding:15px;
-  cursor:pointer;
-  transition:0.3s;
-}
-.card:hover{
-  transform:scale(1.02);
-}
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.time{
-  color:gray;
-  font-size:13px;
-}
-
-#details{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.8);
-  overflow:auto;
-}
-.details-content{
-  background:white;
-  margin:50px auto;
-  padding:20px;
-  width:90%;
-  max-width:800px;
-}
-.details-content img{
-  width:100%;
-}
-.close{
-  float:right;
-  cursor:pointer;
-  font-size:20px;
-  font-weight:bold;
-}
-
-.social{
-  text-align:center;
-  padding:20px;
-}
-.social img{
-  width:40px;
-  margin:0 10px;
-}
+body{margin:0;font-family:Arial;background:#f4f4f4;}
+header{background:#111;color:white;padding:15px;text-align:center;font-size:24px;}
+nav{background:#b30000;text-align:center;}
+nav a{color:white;padding:12px;display:inline-block;cursor:pointer;}
+nav a:hover{background:#111;}
+.breaking{background:red;color:white;padding:8px;white-space:nowrap;overflow:hidden;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 20s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+.main,.card{background:white;margin:15px;padding:15px;}
+.card{cursor:pointer;}
+.card img,.main img{width:100%;}
+.time{color:gray;font-size:12px;}
+.news-container{padding:10px;}
+#details{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;overflow:auto;}
+.details-content{background:white;color:black;margin:30px;padding:20px;}
+button{padding:8px 15px;margin:10px;}
+.social{text-align:center;padding:20px;}
+.social img{width:40px;margin:0 8px;}
 </style>
 </head>
 
@@ -134,113 +31,98 @@ nav a:hover{
 
 <header>Radiant Waves</header>
 
-<!-- BACKGROUND MUSIC -->
-<audio autoplay loop>
-  <source src="music.mp3" type="audio/mpeg">
+<div style="text-align:center;">
+<button onclick="toggleMusic()">▶ Play Music</button>
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mpeg">
 </audio>
+</div>
 
 <div class="breaking">
-  <span id="breakingNews">Loading breaking news...</span>
+<span>🔴 Trump Says New Strikes Target Iranian Leadership | 🔴 Cruise Ship Stuck Amid Missile Threats | 🔴 Cyberattack Hits Global Banks</span>
 </div>
 
 <nav>
-  <a onclick="filterNews('All')">Home</a>
-  <a onclick="filterNews('Nigeria')">Nigeria</a>
-  <a onclick="filterNews('Europe')">Europe</a>
-  <a onclick="filterNews('America')">America</a>
-  <a onclick="filterNews('Asia')">Asia</a>
-  <a onclick="filterNews('World')">World</a>
-  <a onclick="filterNews('Sports')">Sports</a>
-  <a onclick="filterNews('Technology')">Technology</a>
-  <a onclick="filterNews('Health')">Health</a>
+<a onclick="filterNews('All')">Home</a>
+<a onclick="filterNews('Nigeria')">Nigeria</a>
+<a onclick="filterNews('World')">World</a>
 </nav>
 
-<div class="main" id="mainStory"></div>
-<div class="news-container" id="newsContainer"></div>
+<div class="main">
+<img src="https://picsum.photos/800/400?1">
+<h2>U.S. and Israeli Strikes Deepen Middle East Crisis</h2>
+<p class="time">March 4, 2026</p>
+<p>Coordinated military operations targeted senior Iranian commanders, escalating tensions across the region.</p>
+</div>
+
+<div class="news-container" id="news"></div>
 
 <div id="details">
-  <div class="details-content">
-    <span class="close" onclick="closeDetails()">X</span>
-    <div id="detailsContent"></div>
-  </div>
+<div class="details-content" id="detailsContent"></div>
 </div>
 
 <div class="social">
-  <!-- REPLACE WITH YOUR REAL LINKS -->
-  <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
-    <img src="instagram.png">
-  </a>
-  <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank">
-    <img src="tiktok.png">
-  </a>
-  <a href="https://facebook.com/YOUR_PAGE" target="_blank">
-    <img src="facebook.png">
-  </a>
-  <a href="https://twitter.com/YOUR_USERNAME" target="_blank">
-    <img src="twitter.png">
-  </a>
+<a href="https://instagram.com/YOUR_USERNAME" target="_blank"><img src="instagram.png"></a>
+<a href="https://tiktok.com/@YOUR_USERNAME" target="_blank"><img src="tiktok.png"></a>
 </div>
 
 <script>
-let allNews=[];
 
-fetch("news.json?v="+Date.now())
-.then(res=>res.json())
-.then(data=>{
+const newsData = [
+{
+category:"World",
+title:"Cruise Ship Stuck in Gulf",
+time:"March 4, 2026",
+summary:"Passengers stranded as tensions rise.",
+content:"Hundreds remain aboard after ports closed due to security threats."
+},
+{
+category:"Nigeria",
+title:"Tinubu Nominates Oyedele",
+time:"March 4, 2026",
+summary:"Finance reform continues.",
+content:"President nominates fiscal expert to strengthen economy."
+}
+];
 
-  let breakingText="";
-  data.breaking.forEach(item=>{
-    breakingText += " 🔴 " + item.title + " | ";
-  });
-  document.getElementById("breakingNews").innerText = breakingText;
-
-  document.getElementById("mainStory").innerHTML = `
-    <img src="${data.main.image}">
-    <h2>${data.main.title}</h2>
-    <p class="time">${data.main.time}</p>
-    <p>${data.main.summary}</p>
-  `;
-
-  allNews = data.news;
-  displayNews("All");
+function displayNews(list){
+const container=document.getElementById("news");
+container.innerHTML="";
+list.forEach(n=>{
+container.innerHTML+=`
+<div class="card" onclick="openDetails('${n.title}','${n.content}','${n.time}')">
+<h3>${n.title}</h3>
+<p class="time">${n.time}</p>
+<p>${n.summary}</p>
+</div>`;
 });
-
-function displayNews(category){
-  const container=document.getElementById("newsContainer");
-  container.innerHTML="";
-
-  let filtered = category==="All" ? allNews :
-      allNews.filter(n=>n.category===category);
-
-  filtered.forEach(news=>{
-    container.innerHTML += `
-      <div class="card" onclick='openDetails(${JSON.stringify(news)})'>
-        <img src="${news.image}">
-        <h3>${news.title}</h3>
-        <p class="time">${news.time}</p>
-        <p>${news.summary}</p>
-      </div>
-    `;
-  });
 }
 
 function filterNews(category){
-  displayNews(category);
+if(category==="All"){displayNews(newsData);}
+else{displayNews(newsData.filter(n=>n.category===category));}
 }
 
-function openDetails(news){
-  document.getElementById("details").style.display="block";
-  document.getElementById("detailsContent").innerHTML=`
-    <h2>${news.title}</h2>
-    <p class="time">${news.time}</p>
-    <img src="${news.image}">
-    <p>${news.content}</p>
-  `;
+function openDetails(title,content,time){
+document.getElementById("details").style.display="block";
+document.getElementById("detailsContent").innerHTML=`
+<h2>${title}</h2>
+<p class="time">${time}</p>
+<p>${content}</p>
+<button onclick="closeDetails()">Close</button>`;
 }
 
 function closeDetails(){
-  document.getElementById("details").style.display="none";
+document.getElementById("details").style.display="none";
 }
+
+function toggleMusic(){
+const music=document.getElementById("bgMusic");
+if(music.paused){music.play();}else{music.pause();}
+}
+
+displayNews(newsData);
+
 </script>
 
 </body>

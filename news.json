@@ -1,36 +1,42 @@
 {
-  "breaking": "Global markets react as tensions rise in multiple regions.",
+  "breaking": "Breaking: Global tensions affect markets worldwide.",
 
   "main": {
-    "title": "Middle East Conflict Intensifies",
-    "summary": "Diplomatic talks continue as regional security concerns grow.",
-    "image": "https://picsum.photos/900/500?random=700",
-    "link": "https://www.aljazeera.com/"
+    "title": "Middle East Conflict Escalates",
+    "summary": "Diplomatic talks continue as security concerns grow.",
+    "image": "https://picsum.photos/900/500?random=900",
+    "content": "Full article content about Middle East conflict goes here. Stays inside your website."
   },
 
   "news": [
     {
-      "title": "Nigeria Economic Reform Announced",
-      "summary": "New fiscal policies aim to stabilize inflation.",
-      "image": "https://picsum.photos/600/400?random=701",
-      "link": "https://www.bbc.com/news"
+      "title": "Nigeria Announces Economic Reforms",
+      "summary": "Government outlines new stabilization measures.",
+      "image": "https://picsum.photos/600/400?random=901",
+      "content": "Complete Nigeria article written fully here inside your JSON file."
     },
     {
-      "title": "US Senate Debates Foreign Policy",
-      "summary": "Lawmakers discuss international response strategy.",
-      "image": "https://picsum.photos/600/400?random=702",
-      "link": "https://www.cnn.com/"
+      "title": "US Holds Emergency Debate",
+      "summary": "Lawmakers discuss foreign policy.",
+      "image": "https://picsum.photos/600/400?random=902",
+      "content": "Full US article content written inside your website."
+    },
+    {
+      "title": "Africa Sports Update",
+      "summary": "Latest results and scores.",
+      "image": "https://picsum.photos/600/400?random=903",
+      "content": "Sports news content goes here inside your site."
     }
   ],
 
   "social": [
     {
       "image": "instagram.png",
-      "link": "https://instagram.com/"
+      "link": "#"
     },
     {
       "image": "tiktok.png",
-      "link": "https://tiktok.com/"
+      "link": "#"
     }
   ]
 }

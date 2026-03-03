@@ -1,33 +1,88 @@
 {
   "main": {
-    "title": "Global Leaders Meet to Discuss Climate Security",
-    "summary": "Urgent talks take place as countries tackle rising environmental crises.",
-    "image": "https://picsum.photos/900/500?random=101",
-    "content": "World leaders convened today to address accelerating climate threats and global security measures. Policies will be proposed to mitigate environmental risks and promote international cooperation."
+    "title": "Global Leaders Meet Over Rising Security Concerns",
+    "summary": "World leaders convene to discuss security challenges, trade relations, and climate action.",
+    "content": "In a high-profile meeting, leaders from major countries gathered to tackle pressing security concerns, economic cooperation, and climate initiatives. Analysts believe these discussions could shape international policies in the coming months.",
+    "image": "https://picsum.photos/800/400?random=1",
+    "category": "World",
+    "time": "2026-03-03 08:00 AM"
   },
   "news": [
-    {"title":"Nigeria Introduces New Economic Measures","summary":"Government outlines fresh policies to stabilize markets.","image":"https://picsum.photos/600/400?random=102","content":"Nigeria's finance ministry announced a framework aimed at strengthening currency performance and attracting foreign investment.","category":"Nigeria"},
-    {"title":"European Union Holds Emergency Meeting on Trade","summary":"Leaders address economic instability.","image":"https://picsum.photos/600/400?random=103","content":"EU officials convened to assess trade challenges amid rising energy prices and supply chain disruptions.","category":"Europe"},
-    {"title":"African Union Summit Highlights Infrastructure Growth","summary":"Member states discuss development strategies.","image":"https://picsum.photos/600/400?random=104","content":"African leaders emphasized continental trade expansion, transport links, and technology investment for 2026 and beyond.","category":"Africa"},
-    {"title":"US Congress Debates Cybersecurity Bill","summary":"Lawmakers review national safety protocols.","image":"https://picsum.photos/600/400?random=105","content":"The US Congress is working on legislation to enhance cybersecurity defenses for critical infrastructure and personal data.","category":"America"},
-    {"title":"Political Reform Bill Sparks Debate in Nigeria","summary":"Opposition parties raise concerns over implementation.","image":"https://picsum.photos/600/400?random=106","content":"The proposed reforms aim to increase transparency, reduce corruption, and strengthen electoral systems.","category":"Politics"},
-    {"title":"Championship Final Ends in Dramatic Victory","summary":"Fans celebrate thrilling finish in sports arena.","image":"https://picsum.photos/600/400?random=107","content":"A last-minute goal secured victory in one of the most exciting matches of the season, thrilling fans worldwide.","category":"Sports"},
-    {"title":"Middle East Leaders Sign Peace Agreement","summary":"Historic accord aims to stabilize the region.","image":"https://picsum.photos/600/400?random=108","content":"Leaders agreed on long-term strategies to reduce conflict and improve regional cooperation across multiple sectors.","category":"Politics"},
-    {"title":"NASA Launches New Mars Rover","summary":"Exploration mission aims for groundbreaking discoveries.","image":"https://picsum.photos/600/400?random=109","content":"NASA’s latest rover has launched successfully and will explore Mars’ polar regions to search for signs of ancient water and life.","category":"World"},
-    {"title":"China Announces Renewable Energy Mega-Project","summary":"Green energy infrastructure to expand rapidly.","image":"https://picsum.photos/600/400?random=110","content":"China plans the largest solar and wind project ever, aiming to power millions of homes with clean energy by 2030.","category":"Asia"},
-    {"title":"Artificial Intelligence Regulates Traffic in Smart Cities","summary":"AI integration transforms urban mobility.","image":"https://picsum.photos/600/400?random=111","content":"Smart city technology uses AI to optimize traffic flows, reduce congestion, and improve public transportation efficiency.","category":"Technology"},
-    {"title":"India Launches Affordable Electric Vehicle Initiative","summary":"EV adoption set to increase rapidly.","image":"https://picsum.photos/600/400?random=112","content":"The Indian government has announced subsidies and incentives to accelerate the production and adoption of electric vehicles nationwide.","category":"Asia"},
-    {"title":"Global Economy Faces Inflation Pressure","summary":"Experts predict cautious growth trends.","image":"https://picsum.photos/600/400?random=113","content":"Analysts report rising commodity prices and supply chain challenges, with moderate GDP growth expected across major economies in 2026.","category":"World"},
-    {"title":"European Football League Final Draws Record Viewership","summary":"Fans celebrate international sports event.","image":"https://picsum.photos/600/400?random=114","content":"The championship final attracted millions of viewers worldwide, highlighting growing global interest in European football.","category":"Sports"},
-    {"title":"Breakthrough in Renewable Battery Storage","summary":"New technology promises longer energy retention.","image":"https://picsum.photos/600/400?random=115","content":"Scientists developed a next-generation battery capable of storing renewable energy for weeks, reducing reliance on fossil fuels.","category":"Technology"},
-    {"title":"UK Parliament Debates Health System Reform","summary":"Lawmakers discuss improving national care services.","image":"https://picsum.photos/600/400?random=116","content":"The reform proposal focuses on digital health services, hospital efficiency, and patient accessibility across the UK.","category":"Europe"},
-    {"title":"South America Grapples with Amazon Conservation","summary":"Environmental policies under discussion.","image":"https://picsum.photos/600/400?random=117","content":"Countries in the region are implementing coordinated policies to prevent deforestation and protect biodiversity in the Amazon rainforest.","category":"Africa"},
-    {"title":"Japan Announces Space Elevator Feasibility Study","summary":"Innovative project could revolutionize space travel.","image":"https://picsum.photos/600/400?random=118","content":"Japan explores futuristic engineering solutions for a potential space elevator to improve cost-effective satellite launches.","category":"Asia"}
+    {
+      "title": "Nigeria Introduces New Economic Measures",
+      "summary": "Government unveils stimulus package to boost local businesses.",
+      "content": "The Nigerian government announced a series of economic policies aimed at supporting SMEs and stimulating growth. Key sectors include agriculture, tech startups, and renewable energy.",
+      "image": "https://picsum.photos/600/400?random=2",
+      "category": "Nigeria",
+      "time": "2026-03-03 09:00 AM"
+    },
+    {
+      "title": "European Union Debates New Digital Privacy Law",
+      "summary": "EU proposes stricter regulations on online data handling.",
+      "content": "A new digital privacy law is under discussion in Brussels. The legislation would require tech companies to enhance user consent protocols and data transparency.",
+      "image": "https://picsum.photos/600/400?random=3",
+      "category": "Europe",
+      "time": "2026-03-03 09:30 AM"
+    },
+    {
+      "title": "African Nations Collaborate on Renewable Energy",
+      "summary": "Renewable energy initiative aims to power 50 million homes by 2030.",
+      "content": "Several African countries signed an agreement to develop renewable energy infrastructure, focusing on solar and wind projects. This initiative is expected to create thousands of jobs and promote sustainable growth.",
+      "image": "https://picsum.photos/600/400?random=4",
+      "category": "Africa",
+      "time": "2026-03-03 10:00 AM"
+    },
+    {
+      "title": "US Stock Market Shows Signs of Recovery",
+      "summary": "Investors optimistic as tech and green energy stocks rise.",
+      "content": "The US stock market rebounded after weeks of decline. Technology and green energy sectors led the recovery, while analysts caution that volatility may persist.",
+      "image": "https://picsum.photos/600/400?random=5",
+      "category": "America",
+      "time": "2026-03-03 10:30 AM"
+    },
+    {
+      "title": "Global Politics: Climate Summit Outcomes",
+      "summary": "Major agreements reached on carbon reduction and funding for developing countries.",
+      "content": "The international climate summit concluded with commitments from over 50 nations. The agreements focus on reducing emissions and providing financial support for countries most affected by climate change.",
+      "image": "https://picsum.photos/600/400?random=6",
+      "category": "Politics",
+      "time": "2026-03-03 11:00 AM"
+    },
+    {
+      "title": "Olympics 2026: Athletes Prepare for Opening Ceremony",
+      "summary": "Competitors train intensively ahead of the global sporting event.",
+      "content": "Athletes worldwide are finalizing their preparations for the upcoming Olympics. Countries are focusing on training, nutrition, and mental readiness to maximize performance.",
+      "image": "https://picsum.photos/600/400?random=7",
+      "category": "Sports",
+      "time": "2026-03-03 11:30 AM"
+    },
+    {
+      "title": "Technology Conference Highlights AI Advancements",
+      "summary": "New AI tools showcased, impacting healthcare and finance.",
+      "content": "At the global tech conference, companies demonstrated AI-powered solutions to optimize healthcare diagnostics and financial modeling. Experts discuss ethical considerations and long-term impacts.",
+      "image": "https://picsum.photos/600/400?random=8",
+      "category": "Technology",
+      "time": "2026-03-03 12:00 PM"
+    },
+    {
+      "title": "Asia-Pacific Trade Talks Conclude Successfully",
+      "summary": "Regional trade pact promises reduced tariffs and stronger economic ties.",
+      "content": "Leaders from the Asia-Pacific region agreed on a new trade framework that reduces tariffs, promotes investment, and strengthens economic collaboration across member countries.",
+      "image": "https://picsum.photos/600/400?random=9",
+      "category": "Asia",
+      "time": "2026-03-03 12:30 PM"
+    }
   ],
-  "social":[
-    {"image":"instagram.png","link":"#"},
-    {"image":"tiktok.png","link":"#"},
-    {"image":"facebook.png","link":"#"},
-    {"image":"twitter.png","link":"#"}
+  "social": [
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/yourprofile",
+      "image": "instagram.png"
+    },
+    {
+      "name": "TikTok",
+      "link": "https://www.tiktok.com/@yourprofile",
+      "image": "tiktok.png"
+    }
   ]
 }

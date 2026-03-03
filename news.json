@@ -1,112 +1,124 @@
 {
-  "version": "2026-03-03-01",
+  "version": "2026-03-03-02",
 
   "main": [
     {
-      "title": "Middle East Conflict Intensifies as Diplomacy Faces Challenges",
-      "summary": "Rising tensions continue in the Middle East with airspace restrictions and regional military alerts. Global leaders are calling for urgent dialogue.",
-      "image": "main-story.jpg"
+      "title": "Middle East Conflict Intensifies as Diplomatic Talks Stall",
+      "summary": "Fighting escalated overnight following renewed air operations and missile exchanges. International mediators are struggling to restart ceasefire negotiations as regional tensions rise. Aid agencies warn of worsening humanitarian conditions, with displacement numbers increasing across affected areas.",
+      "image": "https://picsum.photos/900/500?random=101",
+      "link": "https://www.aljazeera.com/"
     }
   ],
 
   "breaking": [
     {
-      "title": "Flights Delayed Across Gulf Amid Security Concerns"
+      "title": "Airspace restrictions expanded across parts of the Middle East amid rising tensions."
     },
     {
-      "title": "Oil Prices Spike as Regional Tensions Rise"
+      "title": "Global oil prices climb as investors react to regional instability."
     }
   ],
 
   "nigeria": [
     {
-      "title": "Nigeria Implements New Security Measures",
-      "summary": "Authorities increase monitoring at borders and airports to ensure national safety.",
-      "image": "nigeria1.jpg"
-    },
-    {
-      "title": "Super Eagles Intensify World Cup Preparations",
-      "summary": "Nigeria’s football team gears up for upcoming international matches.",
-      "image": "nigeria2.jpg"
-    }
-  ],
-
-  "europe": [
-    {
-      "title": "EU Urges Immediate Diplomatic Action",
-      "summary": "European Union leaders stress the need for negotiations to prevent further escalation.",
-      "image": "europe1.jpg"
+      "title": "Nigeria Announces New Economic Reform Measures",
+      "summary": "The federal government unveiled new fiscal reforms aimed at stabilizing inflation and strengthening the naira. Analysts say the measures could impact fuel pricing and foreign exchange policies in the coming weeks.",
+      "image": "https://picsum.photos/600/400?random=102",
+      "link": "https://www.bbc.com/news"
     }
   ],
 
   "america": [
     {
-      "title": "US Senate Discusses Emergency Security Funding",
-      "summary": "Lawmakers debate defense allocations in response to global geopolitical tensions.",
-      "image": "america1.jpg"
+      "title": "US Lawmakers Debate Emergency Foreign Policy Package",
+      "summary": "Congress held extended sessions discussing military funding and diplomatic engagement strategies related to the Middle East crisis. The administration emphasized a balanced approach between security and diplomacy.",
+      "image": "https://picsum.photos/600/400?random=103",
+      "link": "https://www.cnn.com/"
+    }
+  ],
+
+  "europe": [
+    {
+      "title": "European Leaders Call for Immediate Ceasefire",
+      "summary": "EU foreign ministers convened an emergency summit, urging restraint from all sides and offering to facilitate peace negotiations. Energy security remains a top concern across the continent.",
+      "image": "https://picsum.photos/600/400?random=104",
+      "link": "https://www.euronews.com/"
     }
   ],
 
   "africa": [
     {
-      "title": "African Union Calls for Peaceful Negotiations",
-      "summary": "AU warns that ongoing conflicts could affect regional trade and food security.",
-      "image": "africa1.jpg"
+      "title": "African Union Urges Dialogue Over Escalation",
+      "summary": "The African Union released a statement calling for peaceful resolution and warning about the broader economic effects of prolonged instability on developing economies.",
+      "image": "https://picsum.photos/600/400?random=105",
+      "link": "https://www.africanews.com/"
     }
   ],
 
   "asia": [
     {
-      "title": "Asian Markets React to Middle East Instability",
-      "summary": "Stock markets experience volatility following geopolitical updates.",
-      "image": "asia1.jpg"
+      "title": "Asian Markets React to Oil Price Surge",
+      "summary": "Stock markets across Asia showed mixed reactions as oil prices continued climbing. Economists warn that extended instability could disrupt supply chains and trade routes.",
+      "image": "https://picsum.photos/600/400?random=106",
+      "link": "https://www.channelnewsasia.com/"
     }
   ],
 
   "politics": [
     {
-      "title": "UN Security Council Schedules Emergency Meeting",
-      "summary": "Council convenes to address the ongoing crisis and assess international security measures.",
-      "image": "politics1.jpg"
+      "title": "UN Security Council Holds Emergency Session",
+      "summary": "The United Nations convened an urgent meeting to address the conflict. Several nations proposed draft resolutions calling for de-escalation and humanitarian access corridors.",
+      "image": "https://picsum.photos/600/400?random=107",
+      "link": "https://news.un.org/"
     }
   ],
 
   "business": [
     {
-      "title": "Energy Stocks Rise Amid Oil Price Surge",
-      "summary": "Energy companies report gains as crude prices increase due to regional instability.",
-      "image": "business1.jpg"
+      "title": "Energy Sector Stocks Rise Amid Global Uncertainty",
+      "summary": "Major oil and gas companies saw gains as crude prices increased. Investors are monitoring developments closely as shipping insurance premiums surge.",
+      "image": "https://picsum.photos/600/400?random=108",
+      "link": "https://www.reuters.com/"
     }
   ],
 
   "sport": [
     {
-      "title": "Nigeria’s National Teams Focus on International Fixtures",
-      "summary": "Athletes ramp up training in preparation for upcoming competitions.",
-      "image": "sport1.jpg"
+      "title": "CAF Confirms New Dates for Continental Fixtures",
+      "summary": "The Confederation of African Football announced adjustments to upcoming tournament schedules due to international travel advisories.",
+      "image": "https://picsum.photos/600/400?random=109",
+      "link": "https://www.espn.com/"
     }
   ],
 
   "music": [
     {
       "title": "African Artists Dominate Global Streaming Charts",
-      "summary": "Afrobeats continues to grow in popularity internationally with multiple chart-topping tracks.",
-      "image": "music1.jpg"
+      "summary": "Streaming platforms report record-breaking numbers for Afrobeats artists, reflecting the genre’s expanding international influence.",
+      "image": "https://picsum.photos/600/400?random=110",
+      "link": "https://www.billboard.com/"
     }
   ],
 
   "movies": [
     {
-      "title": "Film Festival Showcases Emerging Global Talent",
-      "summary": "New filmmakers gain recognition at this year’s festival.",
-      "image": "movies1.jpg"
+      "title": "Major Studios Delay International Premieres",
+      "summary": "Film studios have postponed several premieres in response to global uncertainty and shifting distribution schedules.",
+      "image": "https://picsum.photos/600/400?random=111",
+      "link": "https://variety.com/"
     }
   ],
 
   "social": [
-    { "title": "Facebook", "image": "facebook.png" },
-    { "title": "Twitter", "image": "twitter.png" },
-    { "title": "Instagram", "image": "instagram.png" },
-    { "title": "TikTok", "image": "tiktok.png" }
+    {
+      "title": "Instagram",
+      "image": "instagram.png",
+      "link": "https://instagram.com/"
+    },
+    {
+      "title": "TikTok",
+      "image": "tiktok.png",
+      "link": "https://tiktok.com/"
+    }
   ]
 }

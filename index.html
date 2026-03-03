@@ -4,74 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves Media</title>
-
 <style>
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#000;}
 header{background:#000;color:#fff;padding:20px;text-align:center;font-size:26px;font-weight:bold;}
 header button{margin-left:15px;padding:6px 10px;cursor:pointer;}
 nav{background:#111;padding:10px;text-align:center;}
-nav button{
-background:none;
-border:none;
-color:#fff;
-margin:0 10px;
-font-weight:bold;
-cursor:pointer;
-font-size:15px;
-}
+nav button{background:none;border:none;color:#fff;margin:0 10px;font-weight:bold;cursor:pointer;font-size:15px;}
 nav button:hover{color:yellow;}
-#breaking{
-background:#c40000;
-color:#fff;
-padding:8px;
-font-weight:bold;
-display:flex;
-justify-content:space-between;
-align-items:center;
-overflow:hidden;
-}
-#breakingText{
-white-space:nowrap;
-display:inline-block;
-padding-left:100%;
-animation:scroll 10s linear infinite;
-}
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
-}
+#breaking{background:#c40000;color:#fff;padding:8px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;overflow:hidden;}
+#breakingText{white-space:nowrap;display:inline-block;padding-left:100%;animation:scroll 10s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 #main{padding:20px;text-align:center;}
 #main img{width:100%;max-height:400px;object-fit:cover;}
-#main button{
-background:#1e90ff;
-color:#fff;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-margin-top:10px;
-}
-.card{
-border:1px solid #ddd;
-margin:15px;
-padding:10px;
-cursor:pointer;
-}
+#main button{background:#1e90ff;color:#fff;border:none;padding:10px 15px;cursor:pointer;margin-top:10px;}
+.card{border:1px solid #ddd;margin:15px;padding:10px;cursor:pointer;}
 .card img{width:100%;}
 .card h3{color:#1e90ff;}
 #articlePage{display:none;padding:20px;}
 #articlePage img{width:100%;max-height:400px;object-fit:cover;}
-#backBtn{
-background:#000;
-color:#fff;
-border:none;
-padding:8px 12px;
-cursor:pointer;
-}
+#backBtn{background:#000;color:#fff;border:none;padding:8px 12px;cursor:pointer;}
 #social{text-align:center;padding:20px;background:#f5f5f5;}
 #social img{width:30px;margin:5px;}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -113,7 +68,6 @@ Radiant Waves Media
 <div id="social"></div>
 
 <script>
-
 let mainArticle;
 let allArticles=[];
 
@@ -121,64 +75,58 @@ let allArticles=[];
 fetch("news.json?v="+Date.now())
 .then(res=>res.json())
 .then(data=>{
+mainArticle = data.main;
+allArticles = data.news;
 
 // BREAKING
-document.getElementById("breakingText").innerHTML =
-"Breaking: " + data.main.title;
+document.getElementById("breakingText").innerHTML = "Breaking: " + mainArticle.title;
 
 // MAIN STORY
-mainArticle=data.main;
-document.getElementById("mainImage").src=mainArticle.image;
-document.getElementById("mainTitle").innerText=mainArticle.title;
-document.getElementById("mainSummary").innerText=mainArticle.summary;
-document.getElementById("readMain").onclick=function(){
-openArticle(mainArticle);
-};
+document.getElementById("mainImage").src = mainArticle.image;
+document.getElementById("mainTitle").innerText = mainArticle.title;
+document.getElementById("mainSummary").innerText = mainArticle.summary;
+document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
 
-// NEWS
-allArticles=data.news;
+// SHOW HOME NEWS
 displayNews("Home");
 
 // SOCIAL
-let social=document.getElementById("social");
-data.social.forEach(s=>{
-social.innerHTML+=`<a href="${s.link}" target="_blank">
-<img src="${s.image}">
-</a>`;
+let socialBox = document.getElementById("social");
+socialBox.innerHTML = "";
+data.social.forEach(function(s){
+let link = document.createElement("a");
+link.href = s.link;
+link.target = "_blank";
+let img = document.createElement("img");
+img.src = s.image;
+link.appendChild(img);
+socialBox.appendChild(link);
 });
 
-});
+})
+.catch(error=>{console.log("JSON ERROR:",error);});
 
-// NAVIGATION (PHONE SAFE)
+// NAVIGATION
 document.querySelectorAll("nav button").forEach(btn=>{
-btn.addEventListener("click",function(){
-let cat=this.getAttribute("data-category");
+btn.onclick = function(){
+let cat = this.getAttribute("data-category");
 displayNews(cat);
-});
+};
 });
 
 // DISPLAY NEWS
 function displayNews(category){
-let container=document.getElementById("newsSection");
-container.innerHTML="";
-let filtered=allArticles.filter(item=>{
-return category==="Home" || item.category===category;
+let container = document.getElementById("newsSection");
+container.innerHTML = "";
+let filtered = allArticles.filter(item=>{
+return category==="Home" || item.category.toLowerCase().trim()===category.toLowerCase().trim();
 });
-if(filtered.length===0){
-container.innerHTML="<p style='padding:15px;'>No news available.</p>";
-return;
-}
+if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
 filtered.forEach(item=>{
-let div=document.createElement("div");
+let div = document.createElement("div");
 div.className="card";
-div.innerHTML=`
-<img src="${item.image}">
-<h3>${item.title}</h3>
-<p>${item.summary}</p>
-`;
-div.onclick=function(){
-openArticle(item);
-};
+div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
+div.onclick=function(){openArticle(item);};
 container.appendChild(div);
 });
 }
@@ -200,11 +148,11 @@ document.getElementById("main").style.display="block";
 document.getElementById("newsSection").style.display="block";
 };
 
-// TIME (ALWAYS WORKS)
+// TIME
 function updateTime(){
 let now=new Date();
-document.getElementById("liveTime").innerHTML=
-now.toDateString()+" | "+now.toLocaleTimeString();
+let timeBox=document.getElementById("liveTime");
+if(timeBox){timeBox.innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();}
 }
 setInterval(updateTime,1000);
 updateTime();
@@ -214,15 +162,9 @@ let music=new Audio("news-music.mp3");
 music.loop=true;
 let musicBtn=document.getElementById("musicBtn");
 musicBtn.onclick=function(){
-if(music.paused){
-music.play();
-musicBtn.innerText="⏸ Pause Music";
-}else{
-music.pause();
-musicBtn.innerText="▶ Play Music";
-}
+if(music.paused){music.play();musicBtn.innerText="⏸ Pause Music";}
+else{music.pause();musicBtn.innerText="▶ Play Music";}
 };
-
 </script>
 
 </body>

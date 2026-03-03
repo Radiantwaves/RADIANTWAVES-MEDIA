@@ -6,10 +6,10 @@
 <title>Radiant Waves Media</title>
 
 <style>
-body {margin:0; font-family: Arial, sans-serif; background:#fff; color:#000;}
+body {margin:0; font-family:Arial, sans-serif; background:#fff; color:#000;}
 header {background:#000; color:#fff; padding:15px; text-align:center;}
 nav {background:#111; color:#fff; padding:10px; text-align:center;}
-nav a {color:#fff; text-decoration:none; margin:0 10px; font-weight:bold;}
+nav a {color:#fff; text-decoration:none; margin:0 10px; font-weight:bold; cursor:pointer;}
 nav a:hover {color:yellow;}
 
 #breaking {background:orange; padding:8px; font-weight:bold; overflow:hidden; white-space:nowrap;}
@@ -42,17 +42,17 @@ nav a:hover {color:yellow;}
 </header>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Nigeria</a>
-<a href="#">Europe</a>
-<a href="#">Africa</a>
-<a href="#">Asia</a>
-<a href="#">America</a>
-<a href="#">Politics</a>
-<a href="#">Business</a>
-<a href="#">Music</a>
-<a href="#">Movies</a>
-<a href="#">Olympics</a>
+<a data-category="Home">Home</a>
+<a data-category="Nigeria">Nigeria</a>
+<a data-category="Europe">Europe</a>
+<a data-category="Africa">Africa</a>
+<a data-category="Asia">Asia</a>
+<a data-category="America">America</a>
+<a data-category="Politics">Politics</a>
+<a data-category="Business">Business</a>
+<a data-category="Music">Music</a>
+<a data-category="Movies">Movies</a>
+<a data-category="Olympics">Olympics</a>
 </nav>
 
 <div id="breaking"><span>Loading headlines...</span></div>
@@ -79,48 +79,71 @@ nav a:hover {color:yellow;}
 let mainArticle = null;
 let allArticles = [];
 
-// Load news from JSON
+// Load news
 fetch('news.json?v='+Date.now())
-.then(res=>res.json())
+.then(res => res.json())
 .then(data => {
     // Breaking news
-    document.getElementById('breaking').innerHTML = "<span>"+data.breaking+"</span>";
+    const breakingEl = document.getElementById('breaking');
+    breakingEl.innerHTML = "<span>"+data.breaking+"</span>";
+
+    // Simple alert on phone when breaking news changes
+    if (Notification && Notification.permission === "granted") {
+        new Notification("Breaking News", {body: data.breaking});
+    } else if (Notification && Notification.permission !== "denied") {
+        Notification.requestPermission().then(permission=>{
+            if(permission==="granted") new Notification("Breaking News",{body:data.breaking});
+        });
+    }
 
     // Main article
     mainArticle = data.main;
     document.getElementById('mainImage').src = mainArticle.image;
     document.getElementById('mainTitle').innerText = mainArticle.title;
     document.getElementById('mainSummary').innerText = mainArticle.summary;
-    document.getElementById('readMain').addEventListener('click', function(){
-        openArticle(mainArticle);
-    });
+    document.getElementById('readMain').addEventListener('click', ()=>openArticle(mainArticle));
 
-    // Other news
+    // All articles
     allArticles = data.news;
-    let container = document.getElementById('newsSection');
-    container.innerHTML = '';
-    allArticles.forEach((item, index) => {
-        let card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${item.image}">
-            <h3>${item.title}</h3>
-            <p>${item.summary}</p>
-        `;
-        card.addEventListener('click', function(){
-            openArticle(allArticles[index]);
-        });
-        container.appendChild(card);
-    });
+    displayNews('Home');
 
     // Social icons
-    let social = document.getElementById('social');
+    const social = document.getElementById('social');
     social.innerHTML = '';
-    data.social.forEach(s => {
+    data.social.forEach(s=>{
         social.innerHTML += `<a href="${s.link}" target="_blank"><img src="${s.image}"></a>`;
+    });
+
+    // Category filtering
+    document.querySelectorAll('nav a').forEach(link=>{
+        link.addEventListener('click', e=>{
+            e.preventDefault();
+            let category = link.getAttribute('data-category');
+            displayNews(category);
+        });
     });
 });
 
+// Function to display news filtered by category
+function displayNews(category){
+    let container = document.getElementById('newsSection');
+    container.innerHTML = '';
+    allArticles.forEach(item=>{
+        if(category==='Home' || item.category===category){
+            let card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${item.image}">
+                <h3>${item.title}</h3>
+                <p>${item.summary}</p>
+            `;
+            card.addEventListener('click', ()=>openArticle(item));
+            container.appendChild(card);
+        }
+    });
+}
+
+// Open article
 function openArticle(article){
     document.getElementById('main').style.display = 'none';
     document.getElementById('newsSection').style.display = 'none';
@@ -130,7 +153,8 @@ function openArticle(article){
     document.getElementById('articleContent').innerText = article.content;
 }
 
-document.getElementById('backBtn').addEventListener('click', function(){
+// Back button
+document.getElementById('backBtn').addEventListener('click', ()=>{
     document.getElementById('articlePage').style.display = 'none';
     document.getElementById('main').style.display = 'block';
     document.getElementById('newsSection').style.display = 'block';

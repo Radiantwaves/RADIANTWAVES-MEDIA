@@ -68,7 +68,7 @@ Radiant Waves Media
 <div id="social"></div>
 
 <script>
-// --- TIME INIT ---
+// TIME DISPLAY
 function updateTime(){
   let now = new Date();
   let timeBox = document.getElementById("liveTime");
@@ -77,11 +77,12 @@ function updateTime(){
 setInterval(updateTime, 1000);
 updateTime();
 
-// --- MAIN SCRIPT ---
+// MAIN SCRIPT
 window.addEventListener("load", function(){
 
 let mainArticle;
 let allArticles=[];
+let breakingIndex=0;
 
 // FETCH NEWS
 fetch("news.json?v="+Date.now())
@@ -90,19 +91,13 @@ fetch("news.json?v="+Date.now())
   mainArticle = data.main;
   allArticles = data.news;
 
-  // BREAKING
-  document.getElementById("breakingText").innerHTML = "Breaking: " + mainArticle.title;
-
   // MAIN STORY
   document.getElementById("mainImage").src = mainArticle.image;
   document.getElementById("mainTitle").innerText = mainArticle.title;
   document.getElementById("mainSummary").innerText = mainArticle.summary;
   document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
 
-  // SHOW HOME NEWS
-  displayNews("Home");
-
-  // SOCIAL
+  // SOCIAL ICONS
   let socialBox = document.getElementById("social");
   socialBox.innerHTML = "";
   data.social.forEach(function(s){
@@ -115,13 +110,24 @@ fetch("news.json?v="+Date.now())
     socialBox.appendChild(link);
   });
 
-  // NAVIGATION FIXED AFTER FETCH
+  // INITIAL NEWS DISPLAY
+  displayNews("Home");
+
+  // NAVIGATION BUTTONS
   document.querySelectorAll("nav button").forEach(function(btn){
     btn.onclick = function(){
       let cat = this.getAttribute("data-category");
       displayNews(cat);
     };
   });
+
+  // ROLLING BREAKING NEWS
+  function updateBreakingNews(){
+    if(allArticles.length === 0) return;
+    breakingIndex = (breakingIndex + 1) % allArticles.length;
+    document.getElementById("breakingText").innerHTML = "Breaking: " + allArticles[breakingIndex].title;
+  }
+  setInterval(updateBreakingNews, 8000);
 
 })
 .catch(error=>{console.log("JSON ERROR:",error);});

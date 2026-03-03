@@ -1,130 +1,70 @@
-<script>
-
-let mainArticle;
-let allArticles=[];
-
-// SAFE FETCH
-fetch("news.json?v="+Date.now())
-.then(response => response.json())
-.then(data => {
-
-mainArticle = data.main;
-allArticles = data.news;
-
-// BREAKING
-document.getElementById("breakingText").innerHTML =
-"Breaking: " + mainArticle.title;
-
-// MAIN STORY
-document.getElementById("mainImage").src = mainArticle.image;
-document.getElementById("mainTitle").innerText = mainArticle.title;
-document.getElementById("mainSummary").innerText = mainArticle.summary;
-
-document.getElementById("readMain").onclick = function(){
-openArticle(mainArticle);
-};
-
-// SHOW HOME NEWS
-displayNews("Home");
-
-// SOCIAL
-let socialBox = document.getElementById("social");
-socialBox.innerHTML = "";
-
-data.social.forEach(function(s){
-let link = document.createElement("a");
-link.href = s.link;
-link.target = "_blank";
-
-let img = document.createElement("img");
-img.src = s.image;
-
-link.appendChild(img);
-socialBox.appendChild(link);
-});
-
-})
-.catch(error => {
-console.log("JSON ERROR:", error);
-});
-
-// NAVIGATION SAFE
-document.querySelectorAll("nav button").forEach(function(btn){
-btn.onclick = function(){
-let cat = this.getAttribute("data-category");
-displayNews(cat);
-};
-});
-
-// DISPLAY NEWS
-function displayNews(category){
-let container = document.getElementById("newsSection");
-container.innerHTML = "";
-
-let filtered = allArticles.filter(function(item){
-return category === "Home" || item.category === category;
-});
-
-filtered.forEach(function(item){
-let div = document.createElement("div");
-div.className = "card";
-
-div.innerHTML =
-"<img src='"+item.image+"'>" +
-"<h3>"+item.title+"</h3>" +
-"<p>"+item.summary+"</p>";
-
-div.onclick = function(){
-openArticle(item);
-};
-
-container.appendChild(div);
-});
+{
+  "main": {
+    "title": "Global Leaders Meet Over Rising Security Concerns",
+    "summary": "High-level discussions continue as tensions rise across multiple regions.",
+    "image": "https://picsum.photos/900/500?random=21",
+    "content": "World leaders gathered today to discuss ongoing global security challenges and economic cooperation strategies. Further developments are expected later this week."
+  },
+  "news": [
+    {
+      "title": "Nigeria Introduces New Economic Measures",
+      "summary": "Government outlines fresh policies to stabilize markets.",
+      "image": "https://picsum.photos/600/400?random=22",
+      "content": "Nigeria's finance ministry announced a new framework aimed at strengthening currency performance and attracting foreign investment.",
+      "category": "Nigeria"
+    },
+    {
+      "title": "European Union Holds Emergency Meeting",
+      "summary": "Leaders address regional security matters.",
+      "image": "https://picsum.photos/600/400?random=23",
+      "content": "European officials convened to assess diplomatic strategies and reinforce cooperative agreements.",
+      "category": "Europe"
+    },
+    {
+      "title": "African Union Summit Highlights Trade Growth",
+      "summary": "Member states discuss continental development.",
+      "image": "https://picsum.photos/600/400?random=24",
+      "content": "African leaders emphasized trade expansion and infrastructure investment across the region.",
+      "category": "Africa"
+    },
+    {
+      "title": "US Congress Debates Foreign Policy Bill",
+      "summary": "Intense discussions continue in Washington.",
+      "image": "https://picsum.photos/600/400?random=25",
+      "content": "Lawmakers examined strategic international partnerships during the latest congressional session.",
+      "category": "America"
+    },
+    {
+      "title": "Political Reform Bill Sparks Debate",
+      "summary": "Opposition parties raise concerns.",
+      "image": "https://picsum.photos/600/400?random=26",
+      "content": "The proposed reforms aim to increase transparency and electoral accountability.",
+      "category": "Politics"
+    },
+    {
+      "title": "Championship Final Ends in Dramatic Victory",
+      "summary": "Fans celebrate thrilling finish.",
+      "image": "https://picsum.photos/600/400?random=27",
+      "content": "A last-minute goal secured victory in one of the most exciting matches of the season.",
+      "category": "Sports"
+    }
+  ],
+  "social": [
+    {
+      "image": "instagram.png",
+      "link": "#"
+    },
+    {
+      "image": "tiktok.png",
+      "link": "#"
+    },
+    {
+      "image": "facebook.png",
+      "link": "#"
+    },
+    {
+      "image": "twitter.png",
+      "link": "#"
+    }
+  ]
 }
-
-// OPEN ARTICLE
-function openArticle(article){
-document.getElementById("main").style.display="none";
-document.getElementById("newsSection").style.display="none";
-document.getElementById("articlePage").style.display="block";
-
-document.getElementById("articleTitle").innerText=article.title;
-document.getElementById("articleImage").src=article.image;
-document.getElementById("articleContent").innerText=article.content;
-}
-
-// BACK
-document.getElementById("backBtn").onclick=function(){
-document.getElementById("articlePage").style.display="none";
-document.getElementById("main").style.display="block";
-document.getElementById("newsSection").style.display="block";
-};
-
-// TIME (OUTSIDE FETCH SO IT NEVER BREAKS)
-function updateTime(){
-let now = new Date();
-let timeBox = document.getElementById("liveTime");
-if(timeBox){
-timeBox.innerHTML =
-now.toDateString() + " | " + now.toLocaleTimeString();
-}
-}
-setInterval(updateTime,1000);
-updateTime();
-
-// MUSIC
-let music = new Audio("news-music.mp3");
-music.loop = true;
-let musicBtn = document.getElementById("musicBtn");
-
-musicBtn.onclick = function(){
-if(music.paused){
-music.play();
-musicBtn.innerText="⏸ Pause Music";
-}else{
-music.pause();
-musicBtn.innerText="▶ Play Music";
-}
-};
-
-</script>

@@ -1,41 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves Media</title>
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#000;}
-header{background:#000;color:#fff;padding:20px;text-align:center;font-size:26px;font-weight:bold;}
-header button{margin-left:15px;padding:6px 10px;cursor:pointer;}
-nav{background:#111;padding:10px;text-align:center;}
-nav button{background:none;border:none;color:#fff;margin:0 10px;font-weight:bold;cursor:pointer;font-size:15px;}
-nav button:hover{color:yellow;}
-#breaking{background:#c40000;color:#fff;padding:8px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;overflow:hidden;}
-#breakingText{white-space:nowrap;display:inline-block;padding-left:100%;animation:scroll 10s linear infinite;}
+/* GENERAL */
+body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#fdfdfd;color:#111;}
+header{background:#000;color:#fff;padding:20px;text-align:center;font-size:28px;font-weight:bold;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
+header #siteTitle{flex-grow:1;}
+header button{padding:6px 12px;cursor:pointer;border-radius:5px;background:#1e90ff;color:#fff;border:none;transition:0.3s;}
+header button:hover{background:#0f6ecb;}
+nav{background:#111;padding:10px;text-align:center;position:sticky;top:68px;z-index:999;}
+nav button{background:none;border:none;color:#fff;margin:0 12px;font-weight:bold;cursor:pointer;font-size:16px;transition:0.3s;}
+nav button:hover, nav button.active{color:#ffa500;}
+#breaking{background:#ff4500;color:#fff;padding:8px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;overflow:hidden;font-size:14px;}
+#breakingText{white-space:nowrap;display:inline-block;padding-left:100%;animation:scroll 12s linear infinite;}
 @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-#main{padding:20px;text-align:center;}
-#main img{width:100%;max-height:400px;object-fit:cover;}
-#main button{background:#1e90ff;color:#fff;border:none;padding:10px 15px;cursor:pointer;margin-top:10px;}
-.card{border:1px solid #ddd;margin:15px;padding:10px;cursor:pointer;}
-.card img{width:100%;}
-.card h3{color:#1e90ff;}
-#articlePage{display:none;padding:20px;}
-#articlePage img{width:100%;max-height:400px;object-fit:cover;}
-#backBtn{background:#000;color:#fff;border:none;padding:8px 12px;cursor:pointer;margin-bottom:15px;}
+#main{padding:20px;text-align:center;position:relative;}
+#main img{width:100%;max-height:450px;object-fit:cover;border-radius:10px;}
+#mainTitle{font-size:26px;margin-top:15px;}
+#mainSummary{font-size:16px;color:#333;margin:10px 0;}
+#main button{background:#1e90ff;color:#fff;border:none;padding:12px 18px;cursor:pointer;margin-top:10px;border-radius:5px;transition:0.3s;}
+#main button:hover{background:#0f6ecb;}
+.card{border:1px solid #ddd;margin:15px;padding:12px;cursor:pointer;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.15);transition:0.3s;background:#fff;}
+.card:hover{box-shadow:0 6px 12px rgba(0,0,0,0.25);transform:translateY(-3px);}
+.card img{width:100%;border-radius:5px;}
+.card h3{color:#1e90ff;margin:10px 0 6px 0;}
+#articlePage{display:none;padding:25px;}
+#articlePage img{width:100%;max-height:450px;object-fit:cover;border-radius:8px;margin-bottom:15px;}
+#backBtn{background:#000;color:#fff;border:none;padding:8px 14px;cursor:pointer;margin-bottom:20px;border-radius:5px;transition:0.3s;}
+#backBtn:hover{background:#333;}
 #social{text-align:center;padding:20px;background:#f5f5f5;}
-#social img{width:30px;margin:5px;}
+#social img{width:40px;margin:6px;transition:0.3s;cursor:pointer;}
+#social img:hover{transform:scale(1.2);}
+h2.categoryHeader{margin-top:30px;color:#ff4500;border-bottom:1px solid #ccc;padding-bottom:5px;}
+#liveTime{font-size:14px;color:#fff;}
 </style>
 </head>
 <body>
 
 <header>
-Radiant Waves Media
+<div id="siteTitle">Radiant Waves Media</div>
 <button id="musicBtn">▶ Play Music</button>
 </header>
 
 <nav>
-<button data-category="Home">Home</button>
+<button data-category="Home" class="active">Home</button>
 <button data-category="Nigeria">Nigeria</button>
 <button data-category="Europe">Europe</button>
 <button data-category="Africa">Africa</button>
@@ -63,6 +74,7 @@ Radiant Waves Media
 <h2 id="articleTitle"></h2>
 <img id="articleImage">
 <p id="articleContent"></p>
+<p id="articleTime"></p>
 </div>
 
 <div id="social"></div>
@@ -74,7 +86,7 @@ function updateTime(){
   let timeBox = document.getElementById("liveTime");
   if(timeBox) timeBox.innerHTML = now.toDateString() + " | " + now.toLocaleTimeString();
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime,1000);
 updateTime();
 
 window.addEventListener("load", function(){
@@ -102,7 +114,7 @@ fetch("news.json?v="+Date.now())
   data.social.forEach(function(s){
     let link = document.createElement("a");
     link.href = s.link;
-    link.target = "_blank";
+    link.target="_blank";
     let img = document.createElement("img");
     img.src = s.image;
     link.appendChild(img);
@@ -113,8 +125,11 @@ fetch("news.json?v="+Date.now())
   displayNews("Home");
 
   // NAVIGATION BUTTONS
-  document.querySelectorAll("nav button").forEach(function(btn){
+  const navBtns = document.querySelectorAll("nav button");
+  navBtns.forEach(function(btn){
     btn.onclick = function(){
+      navBtns.forEach(b=>b.classList.remove("active"));
+      this.classList.add("active");
       let cat = this.getAttribute("data-category");
       displayNews(cat);
     };
@@ -122,11 +137,11 @@ fetch("news.json?v="+Date.now())
 
   // ROLLING BREAKING NEWS
   function updateBreakingNews(){
-    if(allArticles.length === 0) return;
-    breakingIndex = (breakingIndex + 1) % allArticles.length;
-    document.getElementById("breakingText").innerHTML = "Breaking: " + allArticles[breakingIndex].title;
+    if(allArticles.length===0) return;
+    breakingIndex = (breakingIndex+1)%allArticles.length;
+    document.getElementById("breakingText").innerHTML = "Breaking: "+allArticles[breakingIndex].title;
   }
-  setInterval(updateBreakingNews, 8000);
+  setInterval(updateBreakingNews,8000);
 
   // FUTURE NEWS GENERATOR
   function generateFutureNews(){
@@ -136,54 +151,51 @@ fetch("news.json?v="+Date.now())
     const newNews = {
       title: "Future Event: "+randomCat+" Event "+id,
       summary: "This is a forecasted event in "+randomCat+".",
-      content: "Details about the future event "+id+" happening in "+randomCat+". This is simulated news for testing.",
+      content: "Details about future event "+id+" happening in "+randomCat+". Simulated news for testing.",
       image: "https://picsum.photos/600/400?random="+(100+id),
-      category: randomCat
+      category: randomCat,
+      time: new Date().toLocaleString()
     };
     allArticles.push(newNews);
   }
-
   setInterval(()=>{
     generateFutureNews();
     updateBreakingNews();
   },30000);
 
 })
-.catch(error=>{console.log("JSON ERROR:",error);});
+.catch(err=>console.log("JSON ERROR:",err));
 
 // DISPLAY NEWS BY CATEGORY / HOME WITH GROUPING
 function displayNews(category){
-  let container = document.getElementById("newsSection");
-  container.innerHTML = "";
-
-  if(category === "Home"){
-    // Group news by categories
-    const categories = ["Nigeria","Europe","Africa","America","Politics","Sports"];
-    categories.forEach(cat=>{
-      let catNews = allArticles.filter(item => item.category.toLowerCase().trim()===cat.toLowerCase().trim()).slice(0,5); // latest 5
+  let container=document.getElementById("newsSection");
+  container.innerHTML="";
+  if(category==="Home"){
+    const cats=["Nigeria","Europe","Africa","America","Politics","Sports"];
+    cats.forEach(cat=>{
+      let catNews = allArticles.filter(a=>a.category.toLowerCase().trim()===cat.toLowerCase().trim()).slice(0,5);
       if(catNews.length>0){
-        let catHeader = document.createElement("h2");
-        catHeader.innerText = cat;
-        catHeader.style.marginTop = "25px";
-        container.appendChild(catHeader);
-        catNews.forEach(item=>{
-          let div = document.createElement("div");
+        let header = document.createElement("h2");
+        header.innerText=cat;
+        header.className="categoryHeader";
+        container.appendChild(header);
+        catNews.forEach(n=>{
+          let div=document.createElement("div");
           div.className="card";
-          div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
-          div.onclick=function(){openArticle(item);};
+          div.innerHTML="<img src='"+n.image+"'><h3>"+n.title+"</h3><p>"+n.summary+"</p>";
+          div.onclick=()=>openArticle(n);
           container.appendChild(div);
         });
       }
     });
   } else {
-    // Filter by specific category
-    let filtered = allArticles.filter(item=>item.category.toLowerCase().trim()===category.toLowerCase().trim());
+    let filtered = allArticles.filter(a=>a.category.toLowerCase().trim()===category.toLowerCase().trim());
     if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
-    filtered.forEach(item=>{
-      let div = document.createElement("div");
+    filtered.forEach(n=>{
+      let div=document.createElement("div");
       div.className="card";
-      div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
-      div.onclick=function(){openArticle(item);};
+      div.innerHTML="<img src='"+n.image+"'><h3>"+n.title+"</h3><p>"+n.summary+"</p>";
+      div.onclick=()=>openArticle(n);
       container.appendChild(div);
     });
   }
@@ -197,6 +209,7 @@ function openArticle(article){
   document.getElementById("articleTitle").innerText=article.title;
   document.getElementById("articleImage").src=article.image;
   document.getElementById("articleContent").innerText=article.content;
+  document.getElementById("articleTime").innerText=article.time?("Published: "+article.time):"";
 }
 
 // BACK BUTTON
@@ -217,6 +230,5 @@ musicBtn.onclick=function(){
 
 });
 </script>
-
 </body>
 </html>

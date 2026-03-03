@@ -68,103 +68,107 @@ Radiant Waves Media
 <div id="social"></div>
 
 <script>
+window.addEventListener("load", function(){
+
 let mainArticle;
 let allArticles=[];
+
+// TIME (always works)
+function updateTime(){
+  let now=new Date();
+  let timeBox=document.getElementById("liveTime");
+  if(timeBox){timeBox.innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();}
+}
+setInterval(updateTime,1000);
+updateTime();
 
 // FETCH NEWS
 fetch("news.json?v="+Date.now())
 .then(res=>res.json())
 .then(data=>{
-mainArticle = data.main;
-allArticles = data.news;
+  mainArticle = data.main;
+  allArticles = data.news;
 
-// BREAKING
-document.getElementById("breakingText").innerHTML = "Breaking: " + mainArticle.title;
+  // BREAKING
+  document.getElementById("breakingText").innerHTML = "Breaking: " + mainArticle.title;
 
-// MAIN STORY
-document.getElementById("mainImage").src = mainArticle.image;
-document.getElementById("mainTitle").innerText = mainArticle.title;
-document.getElementById("mainSummary").innerText = mainArticle.summary;
-document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
+  // MAIN STORY
+  document.getElementById("mainImage").src = mainArticle.image;
+  document.getElementById("mainTitle").innerText = mainArticle.title;
+  document.getElementById("mainSummary").innerText = mainArticle.summary;
+  document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
 
-// SHOW HOME NEWS
-displayNews("Home");
+  // SHOW HOME NEWS
+  displayNews("Home");
 
-// SOCIAL
-let socialBox = document.getElementById("social");
-socialBox.innerHTML = "";
-data.social.forEach(function(s){
-let link = document.createElement("a");
-link.href = s.link;
-link.target = "_blank";
-let img = document.createElement("img");
-img.src = s.image;
-link.appendChild(img);
-socialBox.appendChild(link);
-});
+  // SOCIAL
+  let socialBox = document.getElementById("social");
+  socialBox.innerHTML = "";
+  data.social.forEach(function(s){
+    let link = document.createElement("a");
+    link.href = s.link;
+    link.target = "_blank";
+    let img = document.createElement("img");
+    img.src = s.image;
+    link.appendChild(img);
+    socialBox.appendChild(link);
+  });
 
 })
 .catch(error=>{console.log("JSON ERROR:",error);});
 
 // NAVIGATION
-document.querySelectorAll("nav button").forEach(btn=>{
-btn.onclick = function(){
-let cat = this.getAttribute("data-category");
-displayNews(cat);
-};
+document.querySelectorAll("nav button").forEach(function(btn){
+  btn.onclick = function(){
+    let cat = this.getAttribute("data-category");
+    displayNews(cat);
+  };
 });
 
 // DISPLAY NEWS
 function displayNews(category){
-let container = document.getElementById("newsSection");
-container.innerHTML = "";
-let filtered = allArticles.filter(item=>{
-return category==="Home" || item.category.toLowerCase().trim()===category.toLowerCase().trim();
-});
-if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
-filtered.forEach(item=>{
-let div = document.createElement("div");
-div.className="card";
-div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
-div.onclick=function(){openArticle(item);};
-container.appendChild(div);
-});
+  let container = document.getElementById("newsSection");
+  container.innerHTML = "";
+  let filtered = allArticles.filter(item=>{
+    return category==="Home" || item.category.toLowerCase().trim()===category.toLowerCase().trim();
+  });
+  if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available.</p>";return;}
+  filtered.forEach(item=>{
+    let div = document.createElement("div");
+    div.className="card";
+    div.innerHTML = "<img src='"+item.image+"'><h3>"+item.title+"</h3><p>"+item.summary+"</p>";
+    div.onclick=function(){openArticle(item);};
+    container.appendChild(div);
+  });
 }
 
 // OPEN ARTICLE
 function openArticle(article){
-document.getElementById("main").style.display="none";
-document.getElementById("newsSection").style.display="none";
-document.getElementById("articlePage").style.display="block";
-document.getElementById("articleTitle").innerText=article.title;
-document.getElementById("articleImage").src=article.image;
-document.getElementById("articleContent").innerText=article.content;
+  document.getElementById("main").style.display="none";
+  document.getElementById("newsSection").style.display="none";
+  document.getElementById("articlePage").style.display="block";
+  document.getElementById("articleTitle").innerText=article.title;
+  document.getElementById("articleImage").src=article.image;
+  document.getElementById("articleContent").innerText=article.content;
 }
 
 // BACK BUTTON
 document.getElementById("backBtn").onclick=function(){
-document.getElementById("articlePage").style.display="none";
-document.getElementById("main").style.display="block";
-document.getElementById("newsSection").style.display="block";
+  document.getElementById("articlePage").style.display="none";
+  document.getElementById("main").style.display="block";
+  document.getElementById("newsSection").style.display="block";
 };
-
-// TIME
-function updateTime(){
-let now=new Date();
-let timeBox=document.getElementById("liveTime");
-if(timeBox){timeBox.innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();}
-}
-setInterval(updateTime,1000);
-updateTime();
 
 // MUSIC
 let music=new Audio("news-music.mp3");
 music.loop=true;
 let musicBtn=document.getElementById("musicBtn");
 musicBtn.onclick=function(){
-if(music.paused){music.play();musicBtn.innerText="⏸ Pause Music";}
-else{music.pause();musicBtn.innerText="▶ Play Music";}
+  if(music.paused){music.play();musicBtn.innerText="⏸ Pause Music";}
+  else{music.pause();musicBtn.innerText="▶ Play Music";}
 };
+
+});
 </script>
 
 </body>

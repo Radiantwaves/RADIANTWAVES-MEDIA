@@ -8,81 +8,17 @@
     "time": "2026-03-03 08:00 AM"
   },
   "news": [
-    {
-      "title": "Nigeria Introduces New Economic Measures",
-      "summary": "Government unveils stimulus package to boost local businesses.",
-      "content": "The Nigerian government announced a series of economic policies aimed at supporting SMEs and stimulating growth. Key sectors include agriculture, tech startups, and renewable energy.",
-      "image": "https://picsum.photos/600/400?random=2",
-      "category": "Nigeria",
-      "time": "2026-03-03 09:00 AM"
-    },
-    {
-      "title": "European Union Debates New Digital Privacy Law",
-      "summary": "EU proposes stricter regulations on online data handling.",
-      "content": "A new digital privacy law is under discussion in Brussels. The legislation would require tech companies to enhance user consent protocols and data transparency.",
-      "image": "https://picsum.photos/600/400?random=3",
-      "category": "Europe",
-      "time": "2026-03-03 09:30 AM"
-    },
-    {
-      "title": "African Nations Collaborate on Renewable Energy",
-      "summary": "Renewable energy initiative aims to power 50 million homes by 2030.",
-      "content": "Several African countries signed an agreement to develop renewable energy infrastructure, focusing on solar and wind projects. This initiative is expected to create thousands of jobs and promote sustainable growth.",
-      "image": "https://picsum.photos/600/400?random=4",
-      "category": "Africa",
-      "time": "2026-03-03 10:00 AM"
-    },
-    {
-      "title": "US Stock Market Shows Signs of Recovery",
-      "summary": "Investors optimistic as tech and green energy stocks rise.",
-      "content": "The US stock market rebounded after weeks of decline. Technology and green energy sectors led the recovery, while analysts caution that volatility may persist.",
-      "image": "https://picsum.photos/600/400?random=5",
-      "category": "America",
-      "time": "2026-03-03 10:30 AM"
-    },
-    {
-      "title": "Global Politics: Climate Summit Outcomes",
-      "summary": "Major agreements reached on carbon reduction and funding for developing countries.",
-      "content": "The international climate summit concluded with commitments from over 50 nations. The agreements focus on reducing emissions and providing financial support for countries most affected by climate change.",
-      "image": "https://picsum.photos/600/400?random=6",
-      "category": "Politics",
-      "time": "2026-03-03 11:00 AM"
-    },
-    {
-      "title": "Olympics 2026: Athletes Prepare for Opening Ceremony",
-      "summary": "Competitors train intensively ahead of the global sporting event.",
-      "content": "Athletes worldwide are finalizing their preparations for the upcoming Olympics. Countries are focusing on training, nutrition, and mental readiness to maximize performance.",
-      "image": "https://picsum.photos/600/400?random=7",
-      "category": "Sports",
-      "time": "2026-03-03 11:30 AM"
-    },
-    {
-      "title": "Technology Conference Highlights AI Advancements",
-      "summary": "New AI tools showcased, impacting healthcare and finance.",
-      "content": "At the global tech conference, companies demonstrated AI-powered solutions to optimize healthcare diagnostics and financial modeling. Experts discuss ethical considerations and long-term impacts.",
-      "image": "https://picsum.photos/600/400?random=8",
-      "category": "Technology",
-      "time": "2026-03-03 12:00 PM"
-    },
-    {
-      "title": "Asia-Pacific Trade Talks Conclude Successfully",
-      "summary": "Regional trade pact promises reduced tariffs and stronger economic ties.",
-      "content": "Leaders from the Asia-Pacific region agreed on a new trade framework that reduces tariffs, promotes investment, and strengthens economic collaboration across member countries.",
-      "image": "https://picsum.photos/600/400?random=9",
-      "category": "Asia",
-      "time": "2026-03-03 12:30 PM"
-    }
+    {"title":"Nigeria Introduces New Economic Measures","summary":"Government unveils stimulus package to boost local businesses.","content":"The Nigerian government announced a series of economic policies aimed at supporting SMEs and stimulating growth. Key sectors include agriculture, tech startups, and renewable energy.","image":"https://picsum.photos/600/400?random=2","category":"Nigeria","time":"2026-03-03 09:00 AM"},
+    {"title":"European Union Debates New Digital Privacy Law","summary":"EU proposes stricter regulations on online data handling.","content":"A new digital privacy law is under discussion in Brussels. The legislation would require tech companies to enhance user consent protocols and data transparency.","image":"https://picsum.photos/600/400?random=3","category":"Europe","time":"2026-03-03 09:30 AM"},
+    {"title":"African Nations Collaborate on Renewable Energy","summary":"Renewable energy initiative aims to power 50 million homes by 2030.","content":"Several African countries signed an agreement to develop renewable energy infrastructure, focusing on solar and wind projects. This initiative is expected to create thousands of jobs and promote sustainable growth.","image":"https://picsum.photos/600/400?random=4","category":"Africa","time":"2026-03-03 10:00 AM"},
+    {"title":"US Stock Market Shows Signs of Recovery","summary":"Investors optimistic as tech and green energy stocks rise.","content":"The US stock market rebounded after weeks of decline. Technology and green energy sectors led the recovery, while analysts caution that volatility may persist.","image":"https://picsum.photos/600/400?random=5","category":"America","time":"2026-03-03 10:30 AM"},
+    {"title":"Global Politics: Climate Summit Outcomes","summary":"Major agreements reached on carbon reduction and funding for developing countries.","content":"The international climate summit concluded with commitments from over 50 nations. The agreements focus on reducing emissions and providing financial support for countries most affected by climate change.","image":"https://picsum.photos/600/400?random=6","category":"Politics","time":"2026-03-03 11:00 AM"},
+    {"title":"Olympics 2026: Athletes Prepare for Opening Ceremony","summary":"Competitors train intensively ahead of the global sporting event.","content":"Athletes worldwide are finalizing their preparations for the upcoming Olympics. Countries are focusing on training, nutrition, and mental readiness to maximize performance.","image":"https://picsum.photos/600/400?random=7","category":"Sports","time":"2026-03-03 11:30 AM"}
   ],
   "social": [
-    {
-      "name": "Instagram",
-      "link": "https://www.instagram.com/yourprofile",
-      "image": "instagram.png"
-    },
-    {
-      "name": "TikTok",
-      "link": "https://www.tiktok.com/@yourprofile",
-      "image": "tiktok.png"
-    }
+    {"name":"Instagram","link":"https://instagram.com/yourprofile","image":"instagram.png"},
+    {"name":"TikTok","link":"https://tiktok.com/@yourprofile","image":"tiktok.png"},
+    {"name":"Twitter","link":"https://twitter.com/yourprofile","image":"twitter.png"},
+    {"name":"Facebook","link":"https://facebook.com/yourprofile","image":"facebook.png"}
   ]
 }

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves Media</title>
+
 <style>
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#000;}
 header{background:#000;color:#fff;padding:20px;text-align:center;font-size:28px;font-weight:bold;}
@@ -35,13 +36,13 @@ Radiant Waves Media
 </header>
 
 <nav>
-<a data-category="Home">Home</a>
-<a data-category="Nigeria">Nigeria</a>
-<a data-category="Europe">Europe</a>
-<a data-category="Africa">Africa</a>
-<a data-category="America">America</a>
-<a data-category="Politics">Politics</a>
-<a data-category="Sports">Sports</a>
+<a href="#" data-category="Home">Home</a>
+<a href="#" data-category="Nigeria">Nigeria</a>
+<a href="#" data-category="Europe">Europe</a>
+<a href="#" data-category="Africa">Africa</a>
+<a href="#" data-category="America">America</a>
+<a href="#" data-category="Politics">Politics</a>
+<a href="#" data-category="Sports">Sports</a>
 </nav>
 
 <div id="breaking">
@@ -68,24 +69,24 @@ Radiant Waves Media
 <div id="social"></div>
 
 <script>
-// Global variables
+
 let mainArticle;
 let allArticles=[];
 
-// Fetch news.json
 fetch("news.json?v="+Date.now())
 .then(res=>res.json())
 .then(data=>{
 
-// BREAKING NEWS AUTO
-document.getElementById("breakingText").innerHTML = "Breaking: " + data.main.title;
+// BREAKING AUTO FROM MAIN STORY
+document.getElementById("breakingText").innerHTML =
+"Breaking: " + data.main.title;
 
 // MAIN STORY
 mainArticle=data.main;
 document.getElementById("mainImage").src=mainArticle.image;
 document.getElementById("mainTitle").innerText=mainArticle.title;
 document.getElementById("mainSummary").innerText=mainArticle.summary;
-document.getElementById("readMain").onclick=function(){ openArticle(mainArticle); };
+document.getElementById("readMain").onclick=function(){openArticle(mainArticle);};
 
 // NEWS
 allArticles=data.news;
@@ -94,12 +95,15 @@ displayNews("Home");
 // SOCIAL ICONS
 let social=document.getElementById("social");
 data.social.forEach(s=>{
-social.innerHTML+=`<a href="${s.link}" target="_blank"><img src="${s.image}"></a>`;
+social.innerHTML+=`<a href="${s.link}" target="_blank">
+<img src="${s.image}">
+</a>`;
 });
 
-// NAV CLICK
+// NAVIGATION CLICK FIXED
 document.querySelectorAll("nav a").forEach(link=>{
-link.onclick=function(){
+link.onclick=function(e){
+e.preventDefault();
 let cat=this.getAttribute("data-category");
 displayNews(cat);
 };
@@ -107,26 +111,38 @@ displayNews(cat);
 
 // NOTIFICATION
 if("Notification" in window){
-if(Notification.permission==="granted"){new Notification("Breaking News",{body:data.main.title});}
-else if(Notification.permission!=="denied"){
-Notification.requestPermission().then(p=>{if(p==="granted"){new Notification("Breaking News",{body:data.main.title});}});
+if(Notification.permission==="granted"){
+new Notification("Breaking News",{body:data.main.title});
+}else if(Notification.permission!=="denied"){
+Notification.requestPermission().then(p=>{
+if(p==="granted"){
+new Notification("Breaking News",{body:data.main.title});
+}
+});
 }
 }
 
 });
 
-// DISPLAY NEWS FUNCTION
+// DISPLAY NEWS
 function displayNews(category){
 let container=document.getElementById("newsSection");
 container.innerHTML="";
 let filtered=allArticles.filter(item=>{
 return category==="Home" || item.category===category;
 });
-if(filtered.length===0){container.innerHTML="<p style='padding:15px;'>No news available yet.</p>";return;}
+if(filtered.length===0){
+container.innerHTML="<p style='padding:15px;'>No news available yet.</p>";
+return;
+}
 filtered.forEach(item=>{
 let div=document.createElement("div");
 div.className="card";
-div.innerHTML=`<img src="${item.image}"><h3>${item.title}</h3><p>${item.summary}</p>`;
+div.innerHTML=`
+<img src="${item.image}">
+<h3>${item.title}</h3>
+<p>${item.summary}</p>
+`;
 div.onclick=function(){openArticle(item);};
 container.appendChild(div);
 });
@@ -152,7 +168,8 @@ document.getElementById("newsSection").style.display="block";
 // LIVE TIME
 function updateTime(){
 const now=new Date();
-document.getElementById("liveTime").innerHTML=now.toDateString()+" | "+now.toLocaleTimeString();
+document.getElementById("liveTime").innerHTML=
+now.toDateString()+" | "+now.toLocaleTimeString();
 }
 setInterval(updateTime,1000);
 updateTime();
@@ -162,9 +179,15 @@ let music=new Audio("news-music.mp3");
 music.loop=true;
 let musicBtn=document.getElementById("musicBtn");
 musicBtn.onclick=function(){
-if(music.paused){music.play();musicBtn.innerText="⏸ Pause Music";}
-else{music.pause();musicBtn.innerText="▶ Play Music";}
+if(music.paused){
+music.play();
+musicBtn.innerText="⏸ Pause Music";
+}else{
+music.pause();
+musicBtn.innerText="▶ Play Music";
+}
 };
+
 </script>
 
 </body>

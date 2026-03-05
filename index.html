@@ -1,72 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naija Pulse News</title>
-<style>
-body{font-family:Arial, sans-serif;margin:0;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:15px;}
-header h1{margin:0;}
-nav{margin-top:10px;}
-nav a, nav button{color:white;margin-right:15px;text-decoration:none;font-weight:bold;background:none;border:none;cursor:pointer;font-size:16px;}
-nav a:hover, nav button:hover{text-decoration:underline;}
-.breaking{background:black;color:white;padding:8px;font-weight:bold;white-space:nowrap;overflow:hidden;}
-.container{display:flex;padding:20px;}
-#news-container{width:70%;}
-.news{background:white;margin-bottom:20px;padding:15px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-.news img{width:100%;border-radius:5px;margin-bottom:10px;max-height:200px;object-fit:cover;}
-.news h2{font-size:20px;margin:0;}
-.news a{text-decoration:none;color:black;}
-.news a:hover{color:#c40000;}
-aside{width:30%;padding-left:20px;}
-aside h3{border-bottom:2px solid #c40000;padding-bottom:5px;}
-footer{background:#111;color:white;text-align:center;padding:15px;margin-top:20px;}
-button.load-more{padding:10px 20px;font-size:16px;margin-top:10px;cursor:pointer;background:#c40000;color:white;border:none;border-radius:4px;}
-button.load-more:hover{background:#a30000;}
-</style>
-</head>
-<body>
-
-<header>
-<h1>📰 Naija Pulse</h1>
-<nav>
-<a href="#" onclick="loadSection('general')">Home</a>
-<a href="#" onclick="loadSection('nigeria')">Naija Pulse</a>
-<a href="#" onclick="loadSection('technology')">Technology</a>
-<a href="#" onclick="loadSection('sports')">Sports</a>
-<a href="#" onclick="loadSection('business')">Business</a>
-<button class="load-more" onclick="loadMore()">More Stories</button>
-</nav>
-</header>
-
-<div class="breaking"><marquee id="breakingNews">Loading breaking news...</marquee></div>
-
-<div class="container">
-<div id="news-container"></div>
-<aside>
-<h3>Follow Us</h3>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a><br>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">X (Twitter)</a><br>
-<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a><br>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a><br>
-
-<h3>Music Player</h3>
-<audio controls autoplay loop style="width:100%">
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-
-<h3>About</h3>
-<p>Naija Pulse delivers Nigerian and global breaking news, technology updates, sports headlines, and business stories.</p>
-</aside>
-</div>
-
-<footer>
-<p>© 2026 Naija Pulse News</p>
-</footer>
-
 <script>
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
+const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // replace with your real key
 let page = 1;
 let currentSection = "general";
 
@@ -77,49 +10,51 @@ function loadSection(section="general", reset=true){
     let url = "";
     switch(section){
         case "general":
-            url=`https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
+            url = `https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
             break;
         case "nigeria":
-            url=`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`;
+            url = `https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`;
             break;
         case "technology":
         case "sports":
         case "business":
-            url=`https://newsapi.org/v2/top-headlines?category=${section}&language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
+            url = `https://newsapi.org/v2/top-headlines?category=${section}&language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
             break;
-        default:
-            url=`https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
     }
 
     fetch(url)
     .then(res=>res.json())
-    .then(data=>displayNews(data.articles));
+    .then(data=>{
+        if(!data.articles || data.articles.length===0){
+            document.getElementById("news-container").innerHTML="<p>No news available.</p>";
+            return;
+        }
+        displayNews(data.articles);
+    })
+    .catch(err=>{
+        document.getElementById("news-container").innerHTML="<p>Unable to fetch news. Check API key or plan limit.</p>";
+    });
 }
 
 function loadMore(){ page++; loadSection(currentSection, false); }
 
 function displayNews(articles){
     const container = document.getElementById("news-container");
-    if(!articles || articles.length===0){ container.innerHTML += "<p>No news available.</p>"; return; }
-
     articles.forEach(article=>{
         if(article.url){
             const news = document.createElement("div");
             news.className="news";
             news.innerHTML=`
-            ${article.urlToImage? `<img src="${article.urlToImage}">` : ""}
+            ${article.urlToImage ? `<img src="${article.urlToImage}">` : ""}
             <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
             <p>${article.description || ""}</p>`;
             container.appendChild(news);
         }
     });
-
     const titles = articles.slice(0,5).map(a=>a.title).join(" 🔴 ");
     document.getElementById("breakingNews").innerText = titles;
 }
 
+// Initial load
 loadSection("general");
 </script>
-
-</body>
-</html>

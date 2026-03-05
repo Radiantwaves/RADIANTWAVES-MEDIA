@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
 <style>
-body{margin:0;font-family:Arial, sans-serif;background:#f4f4f4;}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
 header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
 .clock{text-align:center;background:#222;color:white;padding:5px;font-size:14px;}
 .breaking{background:black;color:white;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
@@ -17,6 +17,7 @@ nav button:hover{background:#c00;}
 .main-feature{display:flex;flex-wrap:wrap;margin:15px;}
 .main-feature img{flex:1 1 100%;border-radius:6px;}
 .main-feature h2{margin-top:10px;}
+.main-feature p{margin:5px;}
 .container{display:flex;flex-wrap:wrap;gap:15px;padding:15px;}
 .card{background:white;width:calc(33% - 10px);min-width:250px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;overflow:hidden;}
 .card img{width:100%;height:150px;object-fit:cover;}
@@ -35,11 +36,7 @@ audio{margin-top:10px;}
 <header>Radiant Waves News</header>
 <div class="clock" id="clock"></div>
 
-<div class="breaking">
-<span>
-🔴 Macron Urges De-escalation in Middle East | 🔴 Global Oil Prices Surge | 🔴 Nigeria Reviews Economic Forecast | 🔴 US Raises Military Alert | 🔴 Cybersecurity Agencies Warn of Attacks
-</span>
-</div>
+<div class="breaking"><span>Loading breaking news...</span></div>
 
 <nav>
 <button data-cat="Home">Home</button>
@@ -67,7 +64,7 @@ audio{margin-top:10px;}
 </footer>
 
 <script>
-const API = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your GNews API key
+const API = "10618a434f80cc4ffe52717ea1bf2401"; // Put your GNews API key here
 let allNews = [];
 
 // ===== LIVE CLOCK =====
@@ -80,25 +77,35 @@ updateClock();
 
 // ===== FETCH NEWS =====
 async function loadNews(category="Home"){
+  let apiArticles = [];
+  let localJSON = [];
+
   try{
+    // Load API
     let url = category==="Home" ? 
-      `https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}` :
-      `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=10&apikey=${API}`;
+      `https://gnews.io/api/v4/top-headlines?lang=en&max=100&apikey=${API}` :
+      `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=100&apikey=${API}`;
     const res = await fetch(url);
     const data = await res.json();
-    allNews = data.articles || await loadLocalJSON();
-  }catch(e){
-    allNews = await loadLocalJSON();
-  }
-  displayNews(category);
-}
+    apiArticles = (data.articles || []).map(a=>({
+      title: a.title,
+      content: a.description || a.content || "",
+      image: a.image || "https://picsum.photos/600/300",
+      publishedAt: a.publishedAt,
+      url: a.url,
+      category: category==="Home" ? "World" : category
+    }));
+  }catch(e){ apiArticles = []; }
 
-// ===== LOCAL JSON FALLBACK =====
-async function loadLocalJSON(){
   try{
-    const res = await fetch("news.json?v="+Date.now());
-    return await res.json();
-  }catch(e){ return []; }
+    const res2 = await fetch("news.json?v="+Date.now());
+    localJSON = await res2.json();
+  }catch(e){ localJSON = []; }
+
+  // Merge local and API
+  allNews = [...localJSON, ...apiArticles];
+  displayNews(category);
+  updateBreakingNewsTicker(localJSON, apiArticles);
 }
 
 // ===== DISPLAY NEWS =====
@@ -106,6 +113,7 @@ function displayNews(category){
   const featuredEl = document.getElementById("featured");
   const container = document.getElementById("news");
   const filtered = category==="Home" ? allNews : allNews.filter(n=>n.category && n.category.toLowerCase()===category.toLowerCase());
+
   if(filtered.length===0){ container.innerHTML="<p>No news available.</p>"; featuredEl.innerHTML=""; return; }
 
   // Featured story
@@ -113,22 +121,33 @@ function displayNews(category){
     <img src="${filtered[0].image || 'https://picsum.photos/800/400'}">
     <h2>${filtered[0].title}</h2>
     <p>${filtered[0].content || ""}</p>
-    <a href="${filtered[0].url||'#'}" target="_blank">Read Full Story</a>
+    <a href="${filtered[0].url && filtered[0].url!="#" ? filtered[0].url : "article.html?id=0"}" target="_blank">Read Full Story</a>
   `;
 
   // Other news
   container.innerHTML = "";
-  filtered.slice(1).forEach(n=>{
+  filtered.slice(1).forEach((n,i)=>{
     container.innerHTML += `
       <div class="card">
         <img src="${n.image || 'https://picsum.photos/600/300'}">
         <h3>${n.title}</h3>
-        <div class="time">${new Date(n.publishedAt||n.time).toLocaleString()}</div>
-        <p>${n.content||""}</p>
-        <a href="${n.url||'#'}" target="_blank">Read Full Story</a>
+        <div class="time">${new Date(n.publishedAt || n.time).toLocaleString()}</div>
+        <p>${n.content || ""}</p>
+        <a href="${n.url && n.url!="#" ? n.url : "article.html?id="+i}" target="_blank">Read Full Story</a>
       </div>
     `;
   });
+}
+
+// ===== DYNAMIC BREAKING NEWS TICKER =====
+function updateBreakingNewsTicker(localJSON, apiArticles){
+  // Take first 5 Naija Pulse + first 5 API global headlines
+  const naijaHeadlines = localJSON.slice(0,5).map(n=>"🔴 "+n.title);
+  const apiHeadlines = apiArticles.slice(0,5).map(n=>"🔴 "+n.title);
+  const headlines = [...naijaHeadlines,...apiHeadlines].join(" | ");
+
+  const breakingEl = document.querySelector(".breaking span");
+  if(breakingEl){ breakingEl.textContent = headlines || "No breaking news available"; }
 }
 
 // ===== BUTTON EVENTS =====

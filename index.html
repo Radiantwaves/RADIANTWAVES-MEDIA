@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
 <style>
-/* ===== GENERAL STYLES ===== */
 body{margin:0;font-family:Arial, sans-serif;background:#f4f4f4;}
 header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
 .clock{text-align:center;background:#222;color:white;padding:5px;font-size:14px;}
@@ -44,11 +43,8 @@ audio{margin-top:10px;}
 
 <nav>
 <button data-cat="Home">Home</button>
+<button data-cat="Nigeria">Naija Pulse</button>
 <button data-cat="World">World</button>
-<button data-cat="Africa">Africa</button>
-<button data-cat="Europe">Europe</button>
-<button data-cat="Asia">Asia</button>
-<button data-cat="America">America</button>
 <button data-cat="Technology">Technology</button>
 <button data-cat="Sports">Sports</button>
 </nav>
@@ -71,7 +67,7 @@ audio{margin-top:10px;}
 </footer>
 
 <script>
-const API = "10618a434f80cc4ffe52717ea1bf2401"; // replace with your GNews API key
+const API = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your GNews API key
 let allNews = [];
 
 // ===== LIVE CLOCK =====
@@ -85,14 +81,13 @@ updateClock();
 // ===== FETCH NEWS =====
 async function loadNews(category="Home"){
   try{
-    let url;
-    if(category==="Home") url = `https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}`;
-    else url = `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=10&apikey=${API}`;
+    let url = category==="Home" ? 
+      `https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}` :
+      `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=10&apikey=${API}`;
     const res = await fetch(url);
     const data = await res.json();
-    allNews = data.articles || [];
+    allNews = data.articles || await loadLocalJSON();
   }catch(e){
-    console.log("API failed, fallback to local JSON");
     allNews = await loadLocalJSON();
   }
   displayNews(category);
@@ -144,5 +139,6 @@ document.querySelectorAll("nav button").forEach(btn=>{
 // ===== INITIAL LOAD =====
 loadNews("Home");
 </script>
+
 </body>
 </html>

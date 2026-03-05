@@ -29,7 +29,7 @@ button.load-more:hover{background:#a30000;}
 <body>
 
 <header>
-<h1>📰 Naija Pulse</h1>
+<h1 id="pageTitle">Home</h1>
 <nav>
 <a href="#" onclick="loadSection('general')">Home</a>
 <a href="#" onclick="loadSection('nigeria')">Naija Pulse</a>
@@ -66,15 +66,21 @@ button.load-more:hover{background:#a30000;}
 </footer>
 
 <script>
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your NewsAPI key
+const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // replace with your NewsAPI key
 let page = 1;
 let currentSection = "general";
 
+function updateTitle(section){
+    let titles = {general:"Home", nigeria:"Naija Pulse", technology:"Technology", sports:"Sports", business:"Business"};
+    document.getElementById("pageTitle").innerText = titles[section] || "News";
+}
+
 function loadSection(section="general", reset=true){
+    updateTitle(section);
     if(reset){ page=1; document.getElementById("news-container").innerHTML=""; }
     currentSection = section;
 
-    let url = "";
+    let url="";
     switch(section){
         case "general":
             url=`https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
@@ -90,7 +96,7 @@ function loadSection(section="general", reset=true){
     }
 
     fetch(url)
-    .then(res => res.json())
+    .then(res=>res.json())
     .then(data=>{
         if(!data.articles || data.articles.length===0){
             document.getElementById("news-container").innerHTML += "<p>No news available at the moment.</p>";
@@ -123,7 +129,7 @@ function displayNews(articles){
     document.getElementById("breakingNews").innerText = titles;
 }
 
-// Initial load
+// Load Home first
 loadSection("general");
 </script>
 

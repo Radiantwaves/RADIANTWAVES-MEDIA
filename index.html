@@ -1,203 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Naija Pulse News</title>
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#f4f4f4;
-}
-
-header{
-background:#c40000;
-color:white;
-padding:15px;
-}
-
-header h1{
-margin:0;
-}
-
-nav{
-margin-top:10px;
-}
-
-nav a{
-color:white;
-margin-right:15px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
-}
-
-.breaking{
-background:black;
-color:white;
-padding:8px;
-font-weight:bold;
-}
-
-.container{
-display:flex;
-padding:20px;
-}
-
-#news-container{
-width:70%;
-}
-
-.news{
-background:white;
-margin-bottom:20px;
-padding:15px;
-border-radius:6px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.news img{
-width:100%;
-border-radius:5px;
-margin-bottom:10px;
-}
-
-.news h2{
-font-size:20px;
-}
-
-.news a{
-text-decoration:none;
-color:black;
-}
-
-.news a:hover{
-color:#c40000;
-}
-
-aside{
-width:30%;
-padding-left:20px;
-}
-
-aside h3{
-border-bottom:2px solid #c40000;
-padding-bottom:5px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:20px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>📰 Naija Pulse</h1>
-
-<nav>
-
-<a href="#" onclick="loadNews('general')">Home</a>
-
-<a href="#" onclick="loadNigeria()">Naija Pulse</a>
-
-<a href="#" onclick="loadCategory('technology')">Technology</a>
-
-<a href="#" onclick="loadCategory('sports')">Sports</a>
-
-<a href="#" onclick="loadCategory('business')">Business</a>
-
-</nav>
-
-</header>
-
-<div class="breaking">
-
-<marquee id="breakingNews">Loading breaking news...</marquee>
-
-</div>
-
-<div class="container">
-
-<div id="news-container"></div>
-
-<aside>
-
-<h3>Follow Us</h3>
-
-<p>Facebook</p>
-<p>Twitter</p>
-<p>Instagram</p>
-
-<h3>About</h3>
-
-<p>Naija Pulse delivers Nigerian and global breaking news, technology updates, sports headlines and business stories.</p>
-
-</aside>
-
-</div>
-
-<footer>
-
-<p>© 2026 Naija Pulse News</p>
-
-</footer>
-
 <script>
 
 const apiKey = "10618a434f80cc4ffe52717ea1bf2401"
 
-function loadNews(category="general"){
+let page = 1
+let currentCategory = "general"
 
-fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${category}&pageSize=20&apiKey=${apiKey}`)
+function loadNews(category="general", reset=true){
 
+if(reset){
+page = 1
+document.getElementById("news-container").innerHTML=""
+}
+
+currentCategory = category
+
+fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${category}&pageSize=12&page=${page}&apiKey=${apiKey}`)
 .then(res=>res.json())
-
 .then(data=>displayNews(data.articles))
 
 }
 
 function loadNigeria(){
 
-fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=20&apiKey=${apiKey}`)
+page = 1
+currentCategory = "nigeria"
 
+document.getElementById("news-container").innerHTML=""
+
+fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`)
 .then(res=>res.json())
-
 .then(data=>displayNews(data.articles))
 
 }
 
-function loadCategory(cat){
+function loadMore(){
 
-fetch(`https://newsapi.org/v2/top-headlines?category=${cat}&pageSize=20&apiKey=${apiKey}`)
+page++
 
+if(currentCategory === "nigeria"){
+
+fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`)
 .then(res=>res.json())
+.then(data=>displayNews(data.articles,false))
 
-.then(data=>displayNews(data.articles))
+}else{
+
+fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${currentCategory}&pageSize=12&page=${page}&apiKey=${apiKey}`)
+.then(res=>res.json())
+.then(data=>displayNews(data.articles,false))
+
+}
 
 }
 
 function displayNews(articles){
 
-const container=document.getElementById("news-container")
+const container = document.getElementById("news-container")
 
-container.innerHTML=""
+if(!articles || articles.length === 0){
+container.innerHTML += "<p>No news available.</p>"
+return
+}
 
 articles.forEach(article=>{
 
@@ -207,19 +70,15 @@ news.className="news"
 
 news.innerHTML=`
 
-<img src="${article.urlToImage || ''}">
+<img src="${article.urlToImage || ''}" style="width:100%;max-height:200px;object-fit:cover">
 
 <h2>
-
 <a href="${article.url}" target="_blank">
-
 ${article.title}
-
 </a>
-
 </h2>
 
-<p>${article.description || ''}</p>
+<p>${article.description || ""}</p>
 
 `
 
@@ -227,22 +86,8 @@ container.appendChild(news)
 
 })
 
-loadBreaking(articles)
-
-}
-
-function loadBreaking(articles){
-
-const titles=articles.slice(0,5).map(a=>a.title).join(" 🔴 ")
-
-document.getElementById("breakingNews").innerText=titles
-
 }
 
 loadNews()
 
 </script>
-
-</body>
-
-</html>

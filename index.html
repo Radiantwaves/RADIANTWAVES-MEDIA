@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radiant Waves News</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#f4f4f4;
 }
 
@@ -17,7 +20,7 @@ background:#c00;
 color:white;
 padding:15px;
 text-align:center;
-font-size:24px;
+font-size:26px;
 font-weight:bold;
 }
 
@@ -31,10 +34,9 @@ nav button{
 background:none;
 border:none;
 color:white;
-padding:14px 16px;
-cursor:pointer;
+padding:14px 18px;
 font-size:15px;
-white-space:nowrap;
+cursor:pointer;
 }
 
 nav button:hover{
@@ -53,7 +55,7 @@ white-space:nowrap;
 .breaking span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 20s linear infinite;
+animation:scroll 25s linear infinite;
 }
 
 @keyframes scroll{
@@ -71,7 +73,6 @@ margin-bottom:20px;
 padding:10px;
 border-radius:6px;
 box-shadow:0 2px 5px rgba(0,0,0,0.1);
-cursor:pointer;
 }
 
 .card img{
@@ -88,26 +89,22 @@ color:gray;
 font-size:13px;
 }
 
-.details{
-display:none;
-margin-top:10px;
-color:#333;
-}
-
 footer{
 background:#111;
 color:white;
 padding:20px;
 text-align:center;
-margin-top:20px;
 }
 
-.social a{
-margin:0 10px;
-color:white;
-text-decoration:none;
-font-size:18px;
+.social img{
+width:28px;
+margin:10px;
 }
+
+audio{
+margin-top:10px;
+}
+
 </style>
 </head>
 
@@ -117,47 +114,46 @@ font-size:18px;
 
 <div class="breaking">
 <span>
-🔴 Macron Pushes De-escalation in Middle East |
-🔴 U.S. Raises Global Military Alert |
-🔴 Oil Prices Surge Globally |
-🔴 Nigeria Reviews Revenue Forecast
+🔴 Global tensions rise in Middle East |
+🔴 Oil prices surge worldwide |
+🔴 Nigeria reviews economic policies |
+🔴 Cyber security agencies warn of attacks
 </span>
 </div>
 
 <nav>
-<button onclick="filterNews('All')">Home</button>
-<button onclick="filterNews('Nigeria')">Nigeria</button>
-<button onclick="filterNews('Europe')">Europe</button>
-<button onclick="filterNews('America')">America</button>
-<button onclick="filterNews('Asia')">Asia</button>
-<button onclick="filterNews('Africa')">Africa</button>
-<button onclick="filterNews('Sports')">Sports</button>
-<button onclick="filterNews('Technology')">Technology</button>
+
+<button onclick="loadAll()">Home</button>
+<button onclick="loadNigeria()">Naija Pulse</button>
+<button onclick="loadCategory('world')">World</button>
+<button onclick="loadCategory('technology')">Technology</button>
+<button onclick="loadCategory('sports')">Sports</button>
+
 </nav>
 
-<div class="container" id="newsContainer"></div>
+<div class="container" id="news"></div>
 
 <footer>
 
 <div class="social">
+
 <a href="https://instagram.com/radiantwaves1" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="30">
+<img src="instagram.png">
 </a>
 
 <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="30">
+<img src="tiktok.png">
 </a>
 
 <a href="https://facebook.com/radiantwavesnews" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="30">
+<img src="facebook.png">
 </a>
 
-<a href="https://twitter.com/radiant13528995" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="30">
+<a href="https://twitter.com/radiantwaves13528995" target="_blank">
+<img src="twitter.png">
 </a>
+
 </div>
-
-<br>
 
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
@@ -169,111 +165,107 @@ font-size:18px;
 
 <script>
 
-const newsData = [
+const API_KEY="10618a434f80cc4ffe52717ea1bf2401"
 
-{
-category:"World",
-title:"Macron Urges Israel to Avoid Ground Offensive in Lebanon",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?1",
-content:"French President Emmanuel Macron called Israeli Prime Minister Benjamin Netanyahu urging restraint along the Lebanon border. France warned that expanding military operations could destabilize the entire Middle East region."
-},
+function createCard(article){
 
-{
-category:"America",
-title:"U.S. Military Bases Increase Security Worldwide",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?2",
-content:"The Pentagon confirmed heightened security measures at overseas military installations amid fears of retaliation linked to ongoing Middle East tensions."
-},
+return `
 
-{
-category:"Nigeria",
-title:"Nigeria Reviews Economic Impact of Rising Oil Prices",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?3",
-content:"Nigeria's finance ministry is assessing revenue projections following a surge in global crude oil prices triggered by geopolitical instability."
-},
+<div class="card">
 
-{
-category:"Europe",
-title:"UK Holds Emergency Energy Security Meeting",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?4",
-content:"British officials convened emergency talks to evaluate fuel reserves and prepare contingency measures in case of prolonged global supply disruptions."
-},
+<img src="${article.image}">
 
-{
-category:"Asia",
-title:"China Calls for Immediate Ceasefire at UN",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?5",
-content:"China addressed the UN Security Council urging all parties involved in the Middle East crisis to engage in dialogue and avoid further escalation."
-},
+<h3>${article.title}</h3>
 
-{
-category:"Africa",
-title:"African Union Warns of Economic Ripple Effects",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?6",
-content:"The African Union expressed concern that global instability could negatively impact African trade, food supply chains, and fuel costs."
-},
+<p>${article.description || ""}</p>
 
-{
-category:"Technology",
-title:"Cybersecurity Agencies Warn of Possible Global Cyber Attacks",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?7",
-content:"Security agencies across Europe and North America warned of possible cyber retaliation targeting infrastructure and financial systems."
-},
+<div class="time">${new Date(article.publishedAt).toLocaleString()}</div>
 
-{
-category:"Sports",
-title:"International Football Bodies Review Match Security",
-time:"March 5, 2026 - 00:00",
-image:"https://picsum.photos/600/300?8",
-content:"Football governing bodies announced enhanced security protocols for upcoming international fixtures."
-}
+<a href="${article.url}" target="_blank">Read Full Story</a>
 
-];
-
-function displayNews(data){
-const container=document.getElementById("newsContainer");
-container.innerHTML="";
-data.forEach((news,index)=>{
-container.innerHTML+=`
-<div class="card" onclick="toggleDetails(${index})">
-<img src="${news.image}">
-<h3>${news.title}</h3>
-<div class="time">${news.time}</div>
-<div class="details" id="details${index}">
-<p>${news.content}</p>
 </div>
+
+`
+
+}
+
+function loadAll(){
+
+fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API_KEY}`)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let html=""
+
+data.articles.forEach(article=>{
+html+=createCard(article)
+})
+
+document.getElementById("news").innerHTML=html
+
+})
+
+}
+
+function loadCategory(category){
+
+fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&max=10&apikey=${API_KEY}`)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let html=""
+
+data.articles.forEach(article=>{
+html+=createCard(article)
+})
+
+document.getElementById("news").innerHTML=html
+
+})
+
+}
+
+function loadNigeria(){
+
+let html=`
+
+<div class="card">
+
+<img src="https://picsum.photos/600/300?1">
+
+<h3>Tinubu Administration Reviews Economic Strategy</h3>
+
+<p>Government officials say Nigeria is evaluating new fiscal measures aimed at stabilizing inflation and strengthening investor confidence.</p>
+
+<div class="time">March 5 2026</div>
+
 </div>
-`;
-});
+
+<div class="card">
+
+<img src="https://picsum.photos/600/300?2">
+
+<h3>Yobe APC Chairman Re-elected After Party Congress</h3>
+
+<p>The ruling party in Yobe State concluded its congress with the re-election of the state chairman amid renewed political alliances.</p>
+
+<div class="time">March 5 2026</div>
+
+</div>
+
+`
+
+document.getElementById("news").innerHTML=html
+
 }
 
-function toggleDetails(index){
-const detail=document.getElementById("details"+index);
-detail.style.display=detail.style.display==="block"?"none":"block";
-}
-
-function filterNews(category){
-if(category==="All"){
-displayNews(newsData);
-}else{
-displayNews(newsData.filter(n=>n.category===category));
-}
-}
-
-displayNews(newsData);
+loadAll()
 
 </script>
 
 </body>
 </html>
-
-
-
-

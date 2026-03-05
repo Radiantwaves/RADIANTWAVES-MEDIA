@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Radiant Waves News</title>
-
-<style>
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Radiant Waves News</title><style>
 
 body{
 margin:0;
@@ -16,7 +9,7 @@ background:#f4f4f4;
 }
 
 header{
-background:#c00;
+background:#c40000;
 color:white;
 text-align:center;
 padding:15px;
@@ -40,7 +33,7 @@ font-size:15px;
 }
 
 nav button:hover{
-background:#c00;
+background:#c40000;
 }
 
 .breaking{
@@ -55,7 +48,7 @@ white-space:nowrap;
 .breaking span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 18s linear infinite;
+animation:scroll 35s linear infinite;
 }
 
 @keyframes scroll{
@@ -72,7 +65,7 @@ background:white;
 margin-bottom:20px;
 padding:10px;
 border-radius:6px;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
+box-shadow:0 2px 5px rgba(0,0,0,0.15);
 }
 
 .card img{
@@ -95,6 +88,7 @@ background:#111;
 color:white;
 text-align:center;
 padding:20px;
+margin-top:20px;
 }
 
 .social img{
@@ -109,70 +103,36 @@ audio{
 margin-top:10px;
 }
 
-</style>
-</head>
-
-<body>
-
-<header>Radiant Waves News</header>
-
-<div class="breaking">
+</style></head><body><header>Radiant Waves News</header><div class="breaking">
 <span>
-🔴 Macron Calls for Middle East De-escalation |
+🔴 Macron Urges De-escalation in Middle East |
 🔴 Global Oil Prices Surge |
-🔴 Nigeria Reviews Economic Policy |
-🔴 US Raises Security Alert Worldwide
+🔴 Nigeria Reviews Economic Forecast |
+🔴 US Raises Military Alert Worldwide |
+🔴 Cybersecurity Agencies Warn of Attacks
 </span>
-</div>
-
-<nav>
-
-<button onclick="loadAll()">Home</button>
+</div><nav><button onclick="loadHome()">Home</button>
 <button onclick="loadNigeria()">Naija Pulse</button>
-<button onclick="loadCategory('world')">World</button>
-<button onclick="loadCategory('business')">Business</button>
-<button onclick="loadCategory('technology')">Technology</button>
-<button onclick="loadCategory('sports')">Sports</button>
+<button onclick="loadTopic('world')">World</button>
+<button onclick="loadTopic('business')">Business</button>
+<button onclick="loadTopic('technology')">Technology</button>
+<button onclick="loadTopic('sports')">Sports</button>
 
-</nav>
-
-<div class="container" id="news"></div>
-
-<footer>
-
-<div class="social">
-
-<a href="https://instagram.com/radiantwaves1">
+</nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1">
 <img src="instagram.png">
-</a>
-
-<a href="https://tiktok.com/@radiantwavesmedia">
+</a><a href="https://tiktok.com/@radiantwavesmedia">
 <img src="tiktok.png">
-</a>
-
-<a href="https://facebook.com/radiantwavesnews">
+</a><a href="https://facebook.com/radiantwavesnews">
 <img src="facebook.png">
-</a>
-
-<a href="https://twitter.com/radiantwaves13528995">
+</a><a href="https://twitter.com/radiantwaves13528995">
 <img src="twitter.png">
-</a>
-
-</div>
-
-<audio controls autoplay loop>
+</a></div><audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
-</audio>
+</audio><p>© 2026 Radiant Waves News</p></footer><script>
 
-<p>© 2026 Radiant Waves News</p>
+const API_KEY="10618a434f80cc4ffe52717ea1bf2401"
 
-</footer>
-
-<script>
-
-const API="https://gnews.io/api/v4/top-headlines?apikey=10618a434f80cc4ffe52717ea1bf2401&lang=en&max=10"
-
-function showNews(articles){
+function displayNews(articles){
 
 let output=""
 
@@ -204,33 +164,31 @@ document.getElementById("news").innerHTML=output
 
 }
 
-function loadAll(){
+function loadHome(){
 
-fetch(API)
+fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API_KEY}`)
 .then(res=>res.json())
-.then(data=>showNews(data.articles))
+.then(data=>displayNews(data.articles))
 
 }
 
-function loadCategory(cat){
+function loadTopic(topic){
 
-fetch(API+"&topic="+cat)
+fetch(`https://gnews.io/api/v4/top-headlines?topic=${topic}&lang=en&max=10&apikey=${API_KEY}`)
 .then(res=>res.json())
-.then(data=>showNews(data.articles))
+.then(data=>displayNews(data.articles))
 
 }
 
 function loadNigeria(){
 
-fetch("https://gnews.io/api/v4/search?q=Nigeria&apikey=10618a434f80cc4ffe52717ea1bf2401&lang=en&max=10")
+fetch(`https://gnews.io/api/v4/search?q=Nigeria&lang=en&max=10&apikey=${API_KEY}`)
 .then(res=>res.json())
-.then(data=>showNews(data.articles))
+.then(data=>displayNews(data.articles))
 
 }
 
-loadAll()
+loadHome()
 
-</script>
-
-</body>
+</script></body>
 </html>

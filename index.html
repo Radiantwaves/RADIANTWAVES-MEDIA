@@ -1,20 +1,147 @@
-<script>
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Radiant Waves News</title><style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+header{
+background:#c00;
+color:white;
+text-align:center;
+padding:15px;
+font-size:26px;
+font-weight:bold;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 25s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+nav{
+background:#111;
+display:flex;
+overflow:auto;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:14px 16px;
+cursor:pointer;
+font-size:15px;
+white-space:nowrap;
+}
+
+nav button:hover{
+background:#c00;
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+padding:10px;
+border-radius:6px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:5px;
+}
+
+.card h3{
+margin:10px 0 5px 0;
+}
+
+.time{
+color:gray;
+font-size:13px;
+margin-bottom:8px;
+}
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.social img{
+width:28px;
+margin:10px;
+background:white;
+padding:5px;
+border-radius:6px;
+}
+
+</style></head><body><header>Radiant Waves News</header><div class="breaking">
+<span>🔴 Macron Urges De-escalation in Middle East |
+🔴 Global Oil Prices Surge |
+🔴 Nigeria Reviews Economic Forecast |
+🔴 US Raises Military Alert Worldwide |
+🔴 Cybersecurity Agencies Warn of Attacks
+
+</span>
+</div><nav><button onclick="loadHome()">Home</button>
+<button onclick="loadNigeria()">Naija Pulse</button>
+<button onclick="loadTopic('world')">World</button>
+<button onclick="loadTopic('business')">Business</button>
+<button onclick="loadTopic('technology')">Technology</button>
+<button onclick="loadTopic('sports')">Sports</button>
+
+</nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1" target="_blank">
+<img src="instagram.png">
+</a><a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
+<img src="tiktok.png">
+</a><a href="https://facebook.com/radiantwavesnews" target="_blank">
+<img src="facebook.png">
+</a><a href="https://twitter.com/radiantwaves13528995" target="_blank">
+<img src="x.png">
+</a></div><audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio><p>© 2026 Radiant Waves News</p></footer><script>
 
 const API_KEY="10618a434f80cc4ffe52717ea1bf2401"
 
-const backupNews = [
+const backupNews=[
 
 {
 title:"Macron Urges De-escalation in Middle East Conflict",
-description:"French President Emmanuel Macron called on Israeli leadership to avoid expanding military operations along the Lebanon border, warning the conflict could destabilize the region.",
+description:"French President Emmanuel Macron called on Israel to avoid expanding military operations along the Lebanon border.",
 image:"https://picsum.photos/600/300?1",
 publishedAt:"2026-03-05T00:00:00Z",
 url:"#"
 },
 
 {
-title:"Global Oil Prices Surge Amid Rising Tensions",
-description:"Energy markets reacted sharply overnight as geopolitical risks in the Middle East triggered concerns over supply disruptions.",
+title:"Global Oil Prices Surge",
+description:"Energy markets rose sharply following rising tensions in the Middle East.",
 image:"https://picsum.photos/600/300?2",
 publishedAt:"2026-03-05T00:10:00Z",
 url:"#"
@@ -22,9 +149,9 @@ url:"#"
 
 {
 title:"Nigeria Reviews Economic Forecast",
-description:"Nigeria’s finance ministry has begun reassessing revenue projections following changes in global oil prices and currency movements.",
+description:"Nigeria’s finance ministry is reassessing revenue projections after changes in oil prices.",
 image:"https://picsum.photos/600/300?3",
-publishedAt:"2026-03-05T00:15:00Z",
+publishedAt:"2026-03-05T00:20:00Z",
 url:"#"
 }
 
@@ -65,27 +192,31 @@ document.getElementById("news").innerHTML=output
 function loadHome(){
 
 fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API_KEY}`)
+
 .then(res=>res.json())
+
 .then(data=>{
 
-if(data.articles && data.articles.length>0){
+if(data.articles){
 displayNews(data.articles)
 }else{
 displayNews(backupNews)
 }
 
 })
-.catch(()=>{
-displayNews(backupNews)
-})
+
+.catch(()=>displayNews(backupNews))
 
 }
 
 function loadTopic(topic){
 
 fetch(`https://gnews.io/api/v4/top-headlines?topic=${topic}&lang=en&max=10&apikey=${API_KEY}`)
+
 .then(res=>res.json())
+
 .then(data=>displayNews(data.articles))
+
 .catch(()=>displayNews(backupNews))
 
 }
@@ -93,12 +224,16 @@ fetch(`https://gnews.io/api/v4/top-headlines?topic=${topic}&lang=en&max=10&apike
 function loadNigeria(){
 
 fetch(`https://gnews.io/api/v4/search?q=Nigeria&lang=en&max=10&apikey=${API_KEY}`)
+
 .then(res=>res.json())
+
 .then(data=>displayNews(data.articles))
+
 .catch(()=>displayNews(backupNews))
 
 }
 
 loadHome()
 
-</script>
+</script></body>
+</html>

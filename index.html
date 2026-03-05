@@ -1,163 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News</title>
+
+<title>Naija Pulse News</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
-.clock{text-align:center;background:#222;color:white;padding:5px;font-size:14px;}
-.breaking{background:black;color:white;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 25s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-nav{background:#111;display:flex;overflow:auto;flex-wrap:wrap;}
-nav button{background:none;border:none;color:white;padding:14px 16px;cursor:pointer;font-size:15px;white-space:nowrap;}
-nav button:hover{background:#c00;}
-.main-feature{display:flex;flex-wrap:wrap;margin:15px;}
-.main-feature img{flex:1 1 100%;border-radius:6px;}
-.main-feature h2{margin-top:10px;}
-.main-feature p{margin:5px;}
-.container{display:flex;flex-wrap:wrap;gap:15px;padding:15px;}
-.card{background:white;width:calc(33% - 10px);min-width:250px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;overflow:hidden;}
-.card img{width:100%;height:150px;object-fit:cover;}
-.card h3{margin:10px 5px 5px 5px;font-size:16px;}
-.time{color:gray;font-size:12px;margin:5px;}
-.card p{margin:5px;font-size:14px;}
-footer{background:#111;color:white;padding:20px;text-align:center;}
-footer .social img{width:30px;margin:8px;background:white;padding:6px;border-radius:6px;}
-audio{margin-top:10px;}
-@media(max-width:900px){.card{width:calc(50% - 10px);}}
-@media(max-width:600px){.card{width:100%;}}
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#c40000;
+color:white;
+padding:15px;
+}
+
+header h1{
+margin:0;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin-right:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+#news-container{
+width:70%;
+}
+
+.news{
+background:white;
+margin-bottom:20px;
+padding:15px;
+border-radius:6px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news img{
+width:100%;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.news h2{
+font-size:20px;
+}
+
+.news a{
+text-decoration:none;
+color:black;
+}
+
+.news a:hover{
+color:#c40000;
+}
+
+aside{
+width:30%;
+padding-left:20px;
+}
+
+aside h3{
+border-bottom:2px solid #c40000;
+padding-bottom:5px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
 </style>
+
 </head>
+
 <body>
 
-<header>Radiant Waves News</header>
-<div class="clock" id="clock"></div>
+<header>
 
-<div class="breaking"><span>Loading breaking news...</span></div>
+<h1>📰 Naija Pulse</h1>
 
 <nav>
-<button data-cat="Home">Home</button>
-<button data-cat="Nigeria">Naija Pulse</button>
-<button data-cat="World">World</button>
-<button data-cat="Technology">Technology</button>
-<button data-cat="Sports">Sports</button>
+
+<a href="#" onclick="loadNews('general')">Home</a>
+
+<a href="#" onclick="loadNigeria()">Naija Pulse</a>
+
+<a href="#" onclick="loadCategory('technology')">Technology</a>
+
+<a href="#" onclick="loadCategory('sports')">Sports</a>
+
+<a href="#" onclick="loadCategory('business')">Business</a>
+
 </nav>
 
-<div class="main-feature" id="featured"></div>
-<div class="container" id="news"></div>
+</header>
 
-<footer>
-<div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank"><img src="instagram.png"></a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="tiktok.png"></a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="facebook.png"></a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank"><img src="twitter.png"></a>
+<div class="breaking">
+
+<marquee id="breakingNews">Loading breaking news...</marquee>
+
 </div>
 
-<audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-<p>© 2026 Radiant Waves News</p>
+<div class="container">
+
+<div id="news-container"></div>
+
+<aside>
+
+<h3>Follow Us</h3>
+
+<p>Facebook</p>
+<p>Twitter</p>
+<p>Instagram</p>
+
+<h3>About</h3>
+
+<p>Naija Pulse delivers Nigerian and global breaking news, technology updates, sports headlines and business stories.</p>
+
+</aside>
+
+</div>
+
+<footer>
+
+<p>© 2026 Naija Pulse News</p>
+
 </footer>
 
 <script>
-const API = "10618a434f80cc4ffe52717ea1bf2401"; // Put your GNews API key here
-let allNews = [];
 
-// ===== LIVE CLOCK =====
-function updateClock(){
-  const now = new Date();
-  document.getElementById("clock").innerText = now.toDateString() + " | " + now.toLocaleTimeString();
-}
-setInterval(updateClock,1000);
-updateClock();
+const apiKey = "10618a434f80cc4ffe52717ea1bf2401"
 
-// ===== FETCH NEWS =====
-async function loadNews(category="Home"){
-  let apiArticles = [];
-  let localJSON = [];
+function loadNews(category="general"){
 
-  try{
-    // Load API
-    let url = category==="Home" ? 
-      `https://gnews.io/api/v4/top-headlines?lang=en&max=100&apikey=${API}` :
-      `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=100&apikey=${API}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    apiArticles = (data.articles || []).map(a=>({
-      title: a.title,
-      content: a.description || a.content || "",
-      image: a.image || "https://picsum.photos/600/300",
-      publishedAt: a.publishedAt,
-      url: a.url,
-      category: category==="Home" ? "World" : category
-    }));
-  }catch(e){ apiArticles = []; }
+fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${category}&pageSize=20&apiKey=${apiKey}`)
 
-  try{
-    const res2 = await fetch("news.json?v="+Date.now());
-    localJSON = await res2.json();
-  }catch(e){ localJSON = []; }
+.then(res=>res.json())
 
-  // Merge local and API
-  allNews = [...localJSON, ...apiArticles];
-  displayNews(category);
-  updateBreakingNewsTicker(localJSON, apiArticles);
+.then(data=>displayNews(data.articles))
+
 }
 
-// ===== DISPLAY NEWS =====
-function displayNews(category){
-  const featuredEl = document.getElementById("featured");
-  const container = document.getElementById("news");
-  const filtered = category==="Home" ? allNews : allNews.filter(n=>n.category && n.category.toLowerCase()===category.toLowerCase());
+function loadNigeria(){
 
-  if(filtered.length===0){ container.innerHTML="<p>No news available.</p>"; featuredEl.innerHTML=""; return; }
+fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=20&apiKey=${apiKey}`)
 
-  // Featured story
-  featuredEl.innerHTML = `
-    <img src="${filtered[0].image || 'https://picsum.photos/800/400'}">
-    <h2>${filtered[0].title}</h2>
-    <p>${filtered[0].content || ""}</p>
-    <a href="${filtered[0].url && filtered[0].url!="#" ? filtered[0].url : "article.html?id=0"}" target="_blank">Read Full Story</a>
-  `;
+.then(res=>res.json())
 
-  // Other news
-  container.innerHTML = "";
-  filtered.slice(1).forEach((n,i)=>{
-    container.innerHTML += `
-      <div class="card">
-        <img src="${n.image || 'https://picsum.photos/600/300'}">
-        <h3>${n.title}</h3>
-        <div class="time">${new Date(n.publishedAt || n.time).toLocaleString()}</div>
-        <p>${n.content || ""}</p>
-        <a href="${n.url && n.url!="#" ? n.url : "article.html?id="+i}" target="_blank">Read Full Story</a>
-      </div>
-    `;
-  });
+.then(data=>displayNews(data.articles))
+
 }
 
-// ===== DYNAMIC BREAKING NEWS TICKER =====
-function updateBreakingNewsTicker(localJSON, apiArticles){
-  // Take first 5 Naija Pulse + first 5 API global headlines
-  const naijaHeadlines = localJSON.slice(0,5).map(n=>"🔴 "+n.title);
-  const apiHeadlines = apiArticles.slice(0,5).map(n=>"🔴 "+n.title);
-  const headlines = [...naijaHeadlines,...apiHeadlines].join(" | ");
+function loadCategory(cat){
 
-  const breakingEl = document.querySelector(".breaking span");
-  if(breakingEl){ breakingEl.textContent = headlines || "No breaking news available"; }
+fetch(`https://newsapi.org/v2/top-headlines?category=${cat}&pageSize=20&apiKey=${apiKey}`)
+
+.then(res=>res.json())
+
+.then(data=>displayNews(data.articles))
+
 }
 
-// ===== BUTTON EVENTS =====
-document.querySelectorAll("nav button").forEach(btn=>{
-  btn.addEventListener("click",()=>loadNews(btn.dataset.cat));
-});
+function displayNews(articles){
 
-// ===== INITIAL LOAD =====
-loadNews("Home");
+const container=document.getElementById("news-container")
+
+container.innerHTML=""
+
+articles.forEach(article=>{
+
+const news=document.createElement("div")
+
+news.className="news"
+
+news.innerHTML=`
+
+<img src="${article.urlToImage || ''}">
+
+<h2>
+
+<a href="${article.url}" target="_blank">
+
+${article.title}
+
+</a>
+
+</h2>
+
+<p>${article.description || ''}</p>
+
+`
+
+container.appendChild(news)
+
+})
+
+loadBreaking(articles)
+
+}
+
+function loadBreaking(articles){
+
+const titles=articles.slice(0,5).map(a=>a.title).join(" 🔴 ")
+
+document.getElementById("breakingNews").innerText=titles
+
+}
+
+loadNews()
+
 </script>
 
 </body>
+
 </html>

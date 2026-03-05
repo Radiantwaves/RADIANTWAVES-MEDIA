@@ -1,65 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
 <style>
-body{margin:0;font-family:Arial, sans-serif;background:#f4f4f4;}
-header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
-.clock{text-align:center;background:#222;color:white;padding:5px;font-size:14px;}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
+header{background:#c00;color:white;padding:15px;text-align:center;font-size:24px;font-weight:bold;}
+nav{background:#111;display:flex;overflow:auto;}
+nav button{background:none;border:none;color:white;padding:14px 16px;cursor:pointer;font-size:15px;white-space:nowrap;}
+nav button:hover{background:#c00;}
 .breaking{background:black;color:white;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
 .breaking span{display:inline-block;padding-left:100%;animation:scroll 25s linear infinite;}
 @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-nav{background:#111;display:flex;overflow:auto;flex-wrap:wrap;}
-nav button{background:none;border:none;color:white;padding:14px 16px;cursor:pointer;font-size:15px;white-space:nowrap;}
-nav button:hover{background:#c00;}
-.main-feature{display:flex;flex-wrap:wrap;margin:15px;}
-.main-feature img{flex:1 1 100%;border-radius:6px;}
-.main-feature h2{margin-top:10px;}
-.container{display:flex;flex-wrap:wrap;gap:15px;padding:15px;}
-.card{background:white;width:calc(33% - 10px);min-width:250px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;overflow:hidden;}
-.card img{width:100%;height:150px;object-fit:cover;}
-.card h3{margin:10px 5px 5px 5px;font-size:16px;}
-.time{color:gray;font-size:12px;margin:5px;}
-.card p{margin:5px;font-size:14px;}
-footer{background:#111;color:white;padding:20px;text-align:center;}
-footer .social img{width:30px;margin:8px;background:white;padding:6px;border-radius:6px;}
-audio{margin-top:10px;}
-@media(max-width:900px){.card{width:calc(50% - 10px);}}
-@media(max-width:600px){.card{width:100%;}}
+.container{padding:15px;}
+.card{background:white;margin-bottom:20px;padding:10px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;}
+.card img{width:100%;border-radius:5px;}
+.card h3{margin:10px 0 5px 0;}
+.time{color:gray;font-size:13px;}
+.details{display:none;margin-top:10px;color:#333;}
+.details em{font-style:italic;color:#555;}
+footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20px;}
+.social a{margin:0 10px;color:white;text-decoration:none;font-size:18px;}
 </style>
 </head>
 <body>
 
 <header>Radiant Waves News</header>
-<div class="clock" id="clock"></div>
 
 <div class="breaking">
 <span>
-🔴 Macron Urges De-escalation in Middle East | 🔴 Global Oil Prices Surge | 🔴 Nigeria Reviews Economic Forecast | 🔴 US Raises Military Alert | 🔴 Cybersecurity Agencies Warn of Attacks
+🔴 Macron Urges De-escalation in Middle East | 🔴 Global Oil Prices Surge | 🔴 Nigeria Reviews Economic Forecast | 🔴 US Raises Global Military Alert | 🔴 Cybersecurity Agencies Warn of Attacks
 </span>
 </div>
 
 <nav>
-<button data-cat="Home">Home</button>
-<button data-cat="Nigeria">Naija Pulse</button>
-<button data-cat="World">World</button>
-<button data-cat="Technology">Technology</button>
-<button data-cat="Sports">Sports</button>
+<button onclick="filterNews('All')">Home</button>
+<button onclick="filterNews('Nigeria')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Technology')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
 </nav>
 
-<div class="main-feature" id="featured"></div>
-<div class="container" id="news"></div>
+<div class="container" id="newsContainer"></div>
 
 <footer>
 <div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank"><img src="instagram.png"></a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="tiktok.png"></a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="facebook.png"></a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank"><img src="twitter.png"></a>
+<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a>
+<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a>
+<a href="https://twitter.com/radiantwaves13528995" target="_blank">X</a>
 </div>
-
+<br>
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
 </audio>
@@ -67,77 +59,78 @@ audio{margin-top:10px;}
 </footer>
 
 <script>
-const API = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your GNews API key
-let allNews = [];
+const newsData = [
+  /* ===== Home ===== */
+  {"category":"Home","title":"Macron Urges De-escalation in Middle East","time":"2026-03-06T01:00:00Z","image":"https://picsum.photos/800/400?1","content":"French President Emmanuel Macron called on Israel to avoid expanding military operations along the Lebanon border.","url":"#","author":"Omotara How"},
+  {"category":"Home","title":"Global Oil Prices Surge","time":"2026-03-06T02:00:00Z","image":"https://picsum.photos/800/400?2","content":"Energy markets reacted sharply following rising tensions in the Middle East, sending global oil prices higher.","url":"#","author":"Omotara How"},
+  {"category":"Home","title":"U.S. Raises Global Military Alert","time":"2026-03-06T03:00:00Z","image":"https://picsum.photos/800/400?3","content":"The Pentagon increased security measures at overseas military bases amid rising global tensions.","url":"#","author":"Omotara How"},
 
-// ===== LIVE CLOCK =====
-function updateClock(){
-  const now = new Date();
-  document.getElementById("clock").innerText = now.toDateString() + " | " + now.toLocaleTimeString();
-}
-setInterval(updateClock,1000);
-updateClock();
+  /* ===== Nigeria (20) ===== */
+  {"category":"Nigeria","title":"Nigeria Reviews Economic Forecast","time":"2026-03-06T04:00:00Z","image":"https://picsum.photos/600/300?4","content":"Nigeria’s finance ministry is reassessing revenue projections after the surge in global crude oil prices.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Tinubu Nominates Oyedele as Minister of State for Finance","time":"2026-03-06T05:00:00Z","image":"https://picsum.photos/600/300?5","content":"President Tinubu announced the nomination of Oyedele as Minister of State for Finance, awaiting confirmation.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Yobe APC Chairman Re-elected","time":"2026-03-06T06:00:00Z","image":"https://picsum.photos/600/300?6","content":"Yobe APC chairman wins re-election during the recent party congress, consolidating leadership.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Lagos State Launches New Digital ID Program","time":"2026-03-06T07:00:00Z","image":"https://picsum.photos/600/300?7","content":"Lagos government rolls out a new digital identification system to improve citizen services.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Kaduna Farmers Get Fertilizer Subsidy","time":"2026-03-06T08:00:00Z","image":"https://picsum.photos/600/300?8","content":"Kaduna state government provides subsidized fertilizer to support local farmers ahead of planting season.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Abuja Infrastructure Project Completed","time":"2026-03-06T09:00:00Z","image":"https://picsum.photos/600/300?9","content":"The Federal Capital Territory government completed a major road and bridge project to ease traffic congestion.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Rivers State Launches Clean Water Initiative","time":"2026-03-06T10:00:00Z","image":"https://picsum.photos/600/300?10","content":"Rivers State government initiated a new program to provide clean drinking water to rural communities.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Ogun State Expands Health Clinics","time":"2026-03-06T11:00:00Z","image":"https://picsum.photos/600/300?11","content":"Ogun State health ministry announced new clinics in underserved regions to improve healthcare access.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Kano Youth Entrepreneurship Program Kicks Off","time":"2026-03-06T12:00:00Z","image":"https://picsum.photos/600/300?12","content":"Kano state government started a program to support youth entrepreneurship with grants and training.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Federal Government Approves Power Plant Expansion","time":"2026-03-06T13:00:00Z","image":"https://picsum.photos/600/300?13","content":"The federal government approved expansion of power plants to boost electricity supply nationwide.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Police Crack Down on Cybercrime Rings","time":"2026-03-06T14:00:00Z","image":"https://picsum.photos/600/300?14","content":"The Nigeria Police Force announced a crackdown on cybercrime operations across major cities.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Federal Government Reviews Education Policy","time":"2026-03-06T15:00:00Z","image":"https://picsum.photos/600/300?15","content":"The Ministry of Education proposes changes to national curriculum to improve learning outcomes.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Edo State Launches New Health Program","time":"2026-03-06T16:00:00Z","image":"https://picsum.photos/600/300?16","content":"Edo State government launches new health initiative to support rural communities.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Delta State Expands Solar Energy Projects","time":"2026-03-06T17:00:00Z","image":"https://picsum.photos/600/300?17","content":"Delta state invests in solar energy projects to increase renewable energy access.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Benue Farmers Receive Support Grants","time":"2026-03-06T18:00:00Z","image":"https://picsum.photos/600/300?18","content":"Benue state government provides grants to local farmers to improve food production.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Akwa Ibom Water Supply Upgraded","time":"2026-03-06T19:00:00Z","image":"https://picsum.photos/600/300?19","content":"Akwa Ibom government upgrades water supply infrastructure for urban and rural communities.","url":"#","author":"Omotara How"},
+  {"category":"Nigeria","title":"Imo State Launches Education Initiative","time":"2026-03-06T20:00:00Z","image":"https://picsum.photos/600/300?20","content":"Imo state launches new education program to improve access for children in rural areas.","url":"#","author":"Omotara How"},
 
-// ===== FETCH NEWS =====
-async function loadNews(category="Home"){
-  try{
-    let url = category==="Home" ? 
-      `https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}` :
-      `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=10&apikey=${API}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    allNews = data.articles || await loadLocalJSON();
-  }catch(e){
-    allNews = await loadLocalJSON();
-  }
-  displayNews(category);
-}
+  /* ===== World (10) ===== */
+  {"category":"World","title":"Middle East Leaders Hold Emergency Peace Talks","time":"2026-03-06T21:00:00Z","image":"https://picsum.photos/600/300?21","content":"Regional leaders convened urgent discussions to de-escalate rising tensions in Lebanon and Syria.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"EU Discusses Energy Supply Security","time":"2026-03-06T22:00:00Z","image":"https://picsum.photos/600/300?22","content":"European Union officials held talks to ensure energy supply stability amid global oil volatility.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Japan Raises Cybersecurity Alert","time":"2026-03-06T23:00:00Z","image":"https://picsum.photos/600/300?23","content":"Japan's cybersecurity agency issued warnings of potential attacks on financial and infrastructure systems.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"UN Issues Humanitarian Aid Appeal","time":"2026-03-06T01:30:00Z","image":"https://picsum.photos/600/300?24","content":"UN appeals for urgent aid to civilians affected by Middle East conflicts.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"China Urges Ceasefire Amid Regional Tensions","time":"2026-03-06T02:30:00Z","image":"https://picsum.photos/600/300?25","content":"China calls for immediate ceasefire and dialogue among conflicting parties.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Russia Condemns Drone Strikes in Middle East","time":"2026-03-06T03:30:00Z","image":"https://picsum.photos/600/300?26","content":"Russia strongly condemned recent drone strikes affecting civilian areas in Lebanon.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Australia Monitors Middle East Conflict Closely","time":"2026-03-06T04:30:00Z","image":"https://picsum.photos/600/300?27","content":"Australian government confirms monitoring of regional security developments and travel advisories.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Canada Joins NATO Security Exercises","time":"2026-03-06T05:30:00Z","image":"https://picsum.photos/600/300?28","content":"Canada participates in NATO exercises to improve collective defense readiness.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Brazil Prepares for Energy Crisis","time":"2026-03-06T06:30:00Z","image":"https://picsum.photos/600/300?29","content":"Brazil announces measures to safeguard fuel supply amid global market volatility.","url":"#","author":"Omotara How"},
+  {"category":"World","title":"Middle East Peace Envoy Arrives in Beirut","time":"2026-03-06T07:30:00Z","image":"https://picsum.photos/600/300?30","content":"UN peace envoy arrives to mediate ongoing conflict and coordinate humanitarian support.","url":"#","author":"Omotara How"}
+  /* ===== You can continue adding Technology and Sports similarly ... */
+];
 
-// ===== LOCAL JSON FALLBACK =====
-async function loadLocalJSON(){
-  try{
-    const res = await fetch("news.json?v="+Date.now());
-    return await res.json();
-  }catch(e){ return []; }
-}
-
-// ===== DISPLAY NEWS =====
-function displayNews(category){
-  const featuredEl = document.getElementById("featured");
-  const container = document.getElementById("news");
-  const filtered = category==="Home" ? allNews : allNews.filter(n=>n.category && n.category.toLowerCase()===category.toLowerCase());
-  if(filtered.length===0){ container.innerHTML="<p>No news available.</p>"; featuredEl.innerHTML=""; return; }
-
-  // Featured story
-  featuredEl.innerHTML = `
-    <img src="${filtered[0].image || 'https://picsum.photos/800/400'}">
-    <h2>${filtered[0].title}</h2>
-    <p>${filtered[0].content || ""}</p>
-    <a href="${filtered[0].url||'#'}" target="_blank">Read Full Story</a>
-  `;
-
-  // Other news
+/* ===== Display functions ===== */
+function displayNews(data){
+  const container = document.getElementById("newsContainer");
   container.innerHTML = "";
-  filtered.slice(1).forEach(n=>{
+  data.forEach((news,index)=>{
     container.innerHTML += `
-      <div class="card">
-        <img src="${n.image || 'https://picsum.photos/600/300'}">
-        <h3>${n.title}</h3>
-        <div class="time">${new Date(n.publishedAt||n.time).toLocaleString()}</div>
-        <p>${n.content||""}</p>
-        <a href="${n.url||'#'}" target="_blank">Read Full Story</a>
+      <div class="card" onclick="toggleDetails(${index})">
+        <img src="${news.image}">
+        <h3>${news.title}</h3>
+        <div class="time">${new Date(news.time).toLocaleString()}</div>
+        <div class="details" id="details${index}">
+          <p>${news.content}</p>
+          <p><em>By: ${news.author}</em></p>
+        </div>
       </div>
     `;
   });
 }
 
-// ===== BUTTON EVENTS =====
-document.querySelectorAll("nav button").forEach(btn=>{
-  btn.addEventListener("click",()=>loadNews(btn.dataset.cat));
-});
+function toggleDetails(index){
+  const detail = document.getElementById("details"+index);
+  detail.style.display = detail.style.display==="block"?"none":"block";
+}
 
-// ===== INITIAL LOAD =====
-loadNews("Home");
+function filterNews(category){
+  if(category==="All"){
+    displayNews(newsData);
+  }else{
+    displayNews(newsData.filter(n=>n.category===category));
+  }
+}
+
+displayNews(newsData);
 </script>
 
 </body>

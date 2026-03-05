@@ -5,137 +5,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:15px;text-align:center;}
-header h1{margin:0;}
-nav{display:flex;justify-content:center;background:#111;}
-nav a, nav button{color:white;margin:0 10px;padding:14px 16px;text-decoration:none;font-weight:bold;border:none;background:none;cursor:pointer;}
-nav a:hover, nav button:hover{text-decoration:underline;}
-.breaking{background:black;color:white;padding:8px;font-weight:bold;white-space:nowrap;overflow:hidden;}
-.container{display:flex;padding:20px;}
-#news-container{width:70%;}
-.news{background:white;margin-bottom:20px;padding:15px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-.news img{width:100%;border-radius:5px;margin-bottom:10px;max-height:200px;object-fit:cover;}
-.news h2{font-size:20px;margin:0;}
-.news a{text-decoration:none;color:black;}
-.news a:hover{color:#c40000;}
-aside{width:30%;padding-left:20px;}
-aside h3{border-bottom:2px solid #c40000;padding-bottom:5px;}
-footer{background:#111;color:white;text-align:center;padding:15px;margin-top:20px;}
-button.load-more{padding:10px 20px;font-size:16px;margin-top:10px;cursor:pointer;background:#c40000;color:white;border:none;border-radius:4px;}
-button.load-more:hover{background:#a30000;}
+/* ===== GENERAL STYLES ===== */
+body{margin:0;font-family:Arial, sans-serif;background:#f4f4f4;}
+header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
+.clock{text-align:center;background:#222;color:white;padding:5px;font-size:14px;}
+.breaking{background:black;color:white;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 25s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+nav{background:#111;display:flex;overflow:auto;flex-wrap:wrap;}
+nav button{background:none;border:none;color:white;padding:14px 16px;cursor:pointer;font-size:15px;white-space:nowrap;}
+nav button:hover{background:#c00;}
+.main-feature{display:flex;flex-wrap:wrap;margin:15px;}
+.main-feature img{flex:1 1 100%;border-radius:6px;}
+.main-feature h2{margin-top:10px;}
+.container{display:flex;flex-wrap:wrap;gap:15px;padding:15px;}
+.card{background:white;width:calc(33% - 10px);min-width:250px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;overflow:hidden;}
+.card img{width:100%;height:150px;object-fit:cover;}
+.card h3{margin:10px 5px 5px 5px;font-size:16px;}
+.time{color:gray;font-size:12px;margin:5px;}
+.card p{margin:5px;font-size:14px;}
+footer{background:#111;color:white;padding:20px;text-align:center;}
+footer .social img{width:30px;margin:8px;background:white;padding:6px;border-radius:6px;}
+audio{margin-top:10px;}
+@media(max-width:900px){.card{width:calc(50% - 10px);}}
+@media(max-width:600px){.card{width:100%;}}
 </style>
 </head>
 <body>
 
-<header>
-<h1>Radiant Waves News</h1>
-</header>
+<header>Radiant Waves News</header>
+<div class="clock" id="clock"></div>
 
-<div class="breaking"><marquee id="breakingNews">Loading breaking news...</marquee></div>
-
-<nav>
-<a href="#" onclick="loadSection('general')">Home</a>
-<a href="#" onclick="loadSection('nigeria')">Naija Pulse</a>
-<a href="#" onclick="loadSection('world')">World</a>
-<a href="#" onclick="loadSection('technology')">Technology</a>
-<a href="#" onclick="loadSection('sports')">Sports</a>
-<a href="#" onclick="loadSection('business')">Business</a>
-<button class="load-more" onclick="loadMore()">More Stories</button>
-</nav>
-
-<div class="container">
-<div id="news-container"></div>
-
-<aside>
-<h3>Follow Us</h3>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a><br>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">X (Twitter)</a><br>
-<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a><br>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a><br>
-
-<h3>Music Player</h3>
-<audio controls autoplay loop style="width:100%">
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-
-<h3>About</h3>
-<p>Radiant Waves delivers breaking news, sports, technology, and Nigerian & global updates.</p>
-</aside>
+<div class="breaking">
+<span>
+🔴 Macron Urges De-escalation in Middle East | 🔴 Global Oil Prices Surge | 🔴 Nigeria Reviews Economic Forecast | 🔴 US Raises Military Alert | 🔴 Cybersecurity Agencies Warn of Attacks
+</span>
 </div>
 
+<nav>
+<button data-cat="Home">Home</button>
+<button data-cat="World">World</button>
+<button data-cat="Africa">Africa</button>
+<button data-cat="Europe">Europe</button>
+<button data-cat="Asia">Asia</button>
+<button data-cat="America">America</button>
+<button data-cat="Technology">Technology</button>
+<button data-cat="Sports">Sports</button>
+</nav>
+
+<div class="main-feature" id="featured"></div>
+<div class="container" id="news"></div>
+
 <footer>
+<div class="social">
+<a href="https://instagram.com/radiantwaves1" target="_blank"><img src="instagram.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="tiktok.png"></a>
+<a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="facebook.png"></a>
+<a href="https://twitter.com/radiantwaves13528995" target="_blank"><img src="twitter.png"></a>
+</div>
+
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
 <p>© 2026 Radiant Waves News</p>
 </footer>
 
 <script>
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your NewsAPI key
-let page=1;
-let currentSection="general";
+const API = "10618a434f80cc4ffe52717ea1bf2401"; // replace with your GNews API key
+let allNews = [];
 
-function updateTitle(section){
-    const titles={general:"Home", nigeria:"Naija Pulse", world:"World", technology:"Technology", sports:"Sports", business:"Business"};
-    document.title = "Radiant Waves News - " + (titles[section]||"News");
+// ===== LIVE CLOCK =====
+function updateClock(){
+  const now = new Date();
+  document.getElementById("clock").innerText = now.toDateString() + " | " + now.toLocaleTimeString();
+}
+setInterval(updateClock,1000);
+updateClock();
+
+// ===== FETCH NEWS =====
+async function loadNews(category="Home"){
+  try{
+    let url;
+    if(category==="Home") url = `https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}`;
+    else url = `https://gnews.io/api/v4/top-headlines?topic=${category.toLowerCase()}&lang=en&max=10&apikey=${API}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    allNews = data.articles || [];
+  }catch(e){
+    console.log("API failed, fallback to local JSON");
+    allNews = await loadLocalJSON();
+  }
+  displayNews(category);
 }
 
-function loadSection(section="general", reset=true){
-    updateTitle(section);
-    if(reset){ page=1; document.getElementById("news-container").innerHTML=""; }
-    currentSection=section;
-    
-    let url="";
-    switch(section){
-        case "general":
-        case "world":
-            url=`https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
-            break;
-        case "nigeria":
-            url=`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`;
-            break;
-        case "technology":
-        case "sports":
-        case "business":
-            url=`https://newsapi.org/v2/top-headlines?category=${section}&language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
-            break;
-    }
-
-    fetch(url)
-    .then(res=>res.json())
-    .then(data=>{
-        if(!data.articles || data.articles.length===0){
-            document.getElementById("news-container").innerHTML += "<p>No news available at the moment.</p>";
-            return;
-        }
-        displayNews(data.articles);
-    })
-    .catch(err=>{
-        console.error(err);
-        document.getElementById("news-container").innerHTML += "<p>Unable to fetch news. Check API key or plan limit.</p>";
-    });
+// ===== LOCAL JSON FALLBACK =====
+async function loadLocalJSON(){
+  try{
+    const res = await fetch("news.json?v="+Date.now());
+    return await res.json();
+  }catch(e){ return []; }
 }
 
-function loadMore(){ page++; loadSection(currentSection, false); }
+// ===== DISPLAY NEWS =====
+function displayNews(category){
+  const featuredEl = document.getElementById("featured");
+  const container = document.getElementById("news");
+  const filtered = category==="Home" ? allNews : allNews.filter(n=>n.category && n.category.toLowerCase()===category.toLowerCase());
+  if(filtered.length===0){ container.innerHTML="<p>No news available.</p>"; featuredEl.innerHTML=""; return; }
 
-function displayNews(articles){
-    const container=document.getElementById("news-container");
-    articles.forEach(article=>{
-        if(article.url){
-            const news=document.createElement("div");
-            news.className="news";
-            news.innerHTML=`
-            ${article.urlToImage? `<img src="${article.urlToImage}">` : ""}
-            <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
-            <p>${article.description || ""}</p>`;
-            container.appendChild(news);
-        }
-    });
-    const titles=articles.slice(0,5).map(a=>a.title).join(" 🔴 ");
-    document.getElementById("breakingNews").innerText = titles;
+  // Featured story
+  featuredEl.innerHTML = `
+    <img src="${filtered[0].image || 'https://picsum.photos/800/400'}">
+    <h2>${filtered[0].title}</h2>
+    <p>${filtered[0].content || ""}</p>
+    <a href="${filtered[0].url||'#'}" target="_blank">Read Full Story</a>
+  `;
+
+  // Other news
+  container.innerHTML = "";
+  filtered.slice(1).forEach(n=>{
+    container.innerHTML += `
+      <div class="card">
+        <img src="${n.image || 'https://picsum.photos/600/300'}">
+        <h3>${n.title}</h3>
+        <div class="time">${new Date(n.publishedAt||n.time).toLocaleString()}</div>
+        <p>${n.content||""}</p>
+        <a href="${n.url||'#'}" target="_blank">Read Full Story</a>
+      </div>
+    `;
+  });
 }
 
-// Load Home by default
-loadSection("general");
+// ===== BUTTON EVENTS =====
+document.querySelectorAll("nav button").forEach(btn=>{
+  btn.addEventListener("click",()=>loadNews(btn.dataset.cat));
+});
+
+// ===== INITIAL LOAD =====
+loadNews("Home");
 </script>
-
 </body>
 </html>

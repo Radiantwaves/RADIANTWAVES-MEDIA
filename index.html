@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naija Pulse News</title>
+<title>Radiant Waves News</title>
 <style>
-body{font-family:Arial, sans-serif;margin:0;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:15px;}
+body{font-family:Arial,sans-serif;margin:0;background:#f4f4f4;}
+header{background:#c40000;color:white;padding:15px;text-align:center;}
 header h1{margin:0;}
-nav{margin-top:10px;padding-left:15px;}
-nav a, nav button{color:white;margin-right:15px;text-decoration:none;font-weight:bold;background:none;border:none;cursor:pointer;font-size:16px;}
+nav{display:flex;justify-content:center;background:#111;}
+nav a, nav button{color:white;margin:0 10px;padding:14px 16px;text-decoration:none;font-weight:bold;border:none;background:none;cursor:pointer;}
 nav a:hover, nav button:hover{text-decoration:underline;}
 .breaking{background:black;color:white;padding:8px;font-weight:bold;white-space:nowrap;overflow:hidden;}
 .container{display:flex;padding:20px;}
@@ -29,21 +29,24 @@ button.load-more:hover{background:#a30000;}
 <body>
 
 <header>
-<h1 id="pageTitle">Home</h1>
+<h1>Radiant Waves News</h1>
+</header>
+
+<div class="breaking"><marquee id="breakingNews">Loading breaking news...</marquee></div>
+
 <nav>
 <a href="#" onclick="loadSection('general')">Home</a>
 <a href="#" onclick="loadSection('nigeria')">Naija Pulse</a>
+<a href="#" onclick="loadSection('world')">World</a>
 <a href="#" onclick="loadSection('technology')">Technology</a>
 <a href="#" onclick="loadSection('sports')">Sports</a>
 <a href="#" onclick="loadSection('business')">Business</a>
 <button class="load-more" onclick="loadMore()">More Stories</button>
 </nav>
-</header>
-
-<div class="breaking"><marquee id="breakingNews">Loading breaking news...</marquee></div>
 
 <div class="container">
 <div id="news-container"></div>
+
 <aside>
 <h3>Follow Us</h3>
 <a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a><br>
@@ -57,32 +60,33 @@ button.load-more:hover{background:#a30000;}
 </audio>
 
 <h3>About</h3>
-<p>Naija Pulse delivers Nigerian and global breaking news, technology updates, sports headlines, and business stories.</p>
+<p>Radiant Waves delivers breaking news, sports, technology, and Nigerian & global updates.</p>
 </aside>
 </div>
 
 <footer>
-<p>© 2026 Naija Pulse News</p>
+<p>© 2026 Radiant Waves News</p>
 </footer>
 
 <script>
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // replace with your NewsAPI key
-let page = 1;
-let currentSection = "general";
+const apiKey = "10618a434f80cc4ffe52717ea1bf2401"; // Replace with your NewsAPI key
+let page=1;
+let currentSection="general";
 
 function updateTitle(section){
-    let titles = {general:"Home", nigeria:"Naija Pulse", technology:"Technology", sports:"Sports", business:"Business"};
-    document.getElementById("pageTitle").innerText = titles[section] || "News";
+    const titles={general:"Home", nigeria:"Naija Pulse", world:"World", technology:"Technology", sports:"Sports", business:"Business"};
+    document.title = "Radiant Waves News - " + (titles[section]||"News");
 }
 
 function loadSection(section="general", reset=true){
     updateTitle(section);
     if(reset){ page=1; document.getElementById("news-container").innerHTML=""; }
-    currentSection = section;
-
+    currentSection=section;
+    
     let url="";
     switch(section){
         case "general":
+        case "world":
             url=`https://newsapi.org/v2/top-headlines?language=en&pageSize=12&page=${page}&apiKey=${apiKey}`;
             break;
         case "nigeria":
@@ -106,30 +110,30 @@ function loadSection(section="general", reset=true){
     })
     .catch(err=>{
         console.error(err);
-        document.getElementById("news-container").innerHTML += "<p>Unable to fetch news. Check your API key or plan limit.</p>";
+        document.getElementById("news-container").innerHTML += "<p>Unable to fetch news. Check API key or plan limit.</p>";
     });
 }
 
 function loadMore(){ page++; loadSection(currentSection, false); }
 
 function displayNews(articles){
-    const container = document.getElementById("news-container");
+    const container=document.getElementById("news-container");
     articles.forEach(article=>{
         if(article.url){
-            const news = document.createElement("div");
+            const news=document.createElement("div");
             news.className="news";
             news.innerHTML=`
-            ${article.urlToImage ? `<img src="${article.urlToImage}">` : ""}
+            ${article.urlToImage? `<img src="${article.urlToImage}">` : ""}
             <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
             <p>${article.description || ""}</p>`;
             container.appendChild(news);
         }
     });
-    const titles = articles.slice(0,5).map(a=>a.title).join(" 🔴 ");
+    const titles=articles.slice(0,5).map(a=>a.title).join(" 🔴 ");
     document.getElementById("breakingNews").innerText = titles;
 }
 
-// Load Home first
+// Load Home by default
 loadSection("general");
 </script>
 

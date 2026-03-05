@@ -3,18 +3,18 @@
 const apiKey = "10618a434f80cc4ffe52717ea1bf2401"
 
 let page = 1
-let currentCategory = "general"
+let currentSection = "world"
 
-function loadNews(category="general", reset=true){
+function loadWorld(reset=true){
 
 if(reset){
 page = 1
 document.getElementById("news-container").innerHTML=""
 }
 
-currentCategory = category
+currentSection="world"
 
-fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${category}&pageSize=12&page=${page}&apiKey=${apiKey}`)
+fetch(`https://newsapi.org/v2/everything?q=news&language=en&pageSize=12&page=${page}&sortBy=publishedAt&apiKey=${apiKey}`)
 .then(res=>res.json())
 .then(data=>displayNews(data.articles))
 
@@ -22,12 +22,38 @@ fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${category}&pag
 
 function loadNigeria(){
 
-page = 1
-currentCategory = "nigeria"
+page=1
+currentSection="nigeria"
 
 document.getElementById("news-container").innerHTML=""
 
-fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`)
+fetch(`https://newsapi.org/v2/everything?q=Nigeria&pageSize=12&page=${page}&sortBy=publishedAt&apiKey=${apiKey}`)
+.then(res=>res.json())
+.then(data=>displayNews(data.articles))
+
+}
+
+function loadTechnology(){
+
+page=1
+currentSection="tech"
+
+document.getElementById("news-container").innerHTML=""
+
+fetch(`https://newsapi.org/v2/everything?q=technology&pageSize=12&page=${page}&sortBy=publishedAt&apiKey=${apiKey}`)
+.then(res=>res.json())
+.then(data=>displayNews(data.articles))
+
+}
+
+function loadSports(){
+
+page=1
+currentSection="sports"
+
+document.getElementById("news-container").innerHTML=""
+
+fetch(`https://newsapi.org/v2/everything?q=sports&pageSize=12&page=${page}&sortBy=publishedAt&apiKey=${apiKey}`)
 .then(res=>res.json())
 .then(data=>displayNews(data.articles))
 
@@ -37,27 +63,23 @@ function loadMore(){
 
 page++
 
-if(currentCategory === "nigeria"){
+let query="news"
 
-fetch(`https://newsapi.org/v2/top-headlines?country=ng&pageSize=12&page=${page}&apiKey=${apiKey}`)
+if(currentSection==="nigeria") query="Nigeria"
+if(currentSection==="tech") query="technology"
+if(currentSection==="sports") query="sports"
+
+fetch(`https://newsapi.org/v2/everything?q=${query}&language=en&pageSize=12&page=${page}&sortBy=publishedAt&apiKey=${apiKey}`)
 .then(res=>res.json())
-.then(data=>displayNews(data.articles,false))
-
-}else{
-
-fetch(`https://newsapi.org/v2/top-headlines?language=en&category=${currentCategory}&pageSize=12&page=${page}&apiKey=${apiKey}`)
-.then(res=>res.json())
-.then(data=>displayNews(data.articles,false))
-
-}
+.then(data=>displayNews(data.articles))
 
 }
 
 function displayNews(articles){
 
-const container = document.getElementById("news-container")
+const container=document.getElementById("news-container")
 
-if(!articles || articles.length === 0){
+if(!articles || articles.length===0){
 container.innerHTML += "<p>No news available.</p>"
 return
 }
@@ -88,6 +110,6 @@ container.appendChild(news)
 
 }
 
-loadNews()
+loadWorld()
 
 </script>

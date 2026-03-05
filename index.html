@@ -1,6 +1,5 @@
 <!DOCTYPE html><html>
-<head>
-<meta charset="UTF-8">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Radiant Waves News</title><style>
 
 body{
@@ -12,10 +11,18 @@ background:#f4f4f4;
 header{
 background:#c00;
 color:white;
-text-align:center;
 padding:15px;
+text-align:center;
 font-size:26px;
 font-weight:bold;
+}
+
+.clock{
+text-align:center;
+background:#222;
+color:white;
+padding:5px;
+font-size:14px;
 }
 
 .breaking{
@@ -34,8 +41,8 @@ animation:scroll 25s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
 }
 
 nav{
@@ -72,7 +79,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.1);
 
 .card img{
 width:100%;
-border-radius:5px;
+border-radius:6px;
 }
 
 .card h3{
@@ -82,7 +89,7 @@ margin:10px 0 5px 0;
 .time{
 color:gray;
 font-size:13px;
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
 footer{
@@ -93,27 +100,30 @@ text-align:center;
 }
 
 .social img{
-width:28px;
-margin:10px;
+width:30px;
+margin:8px;
 background:white;
-padding:5px;
+padding:6px;
 border-radius:6px;
 }
 
-</style></head><body><header>Radiant Waves News</header><div class="breaking">
+audio{
+margin-top:10px;
+}
+
+</style></head><body><header>Radiant Waves News</header><div class="clock" id="clock"></div><div class="breaking">
 <span>🔴 Macron Urges De-escalation in Middle East |
 🔴 Global Oil Prices Surge |
 🔴 Nigeria Reviews Economic Forecast |
-🔴 US Raises Military Alert Worldwide |
+🔴 US Raises Military Alert |
 🔴 Cybersecurity Agencies Warn of Attacks
 
 </span>
-</div><nav><button onclick="loadHome()">Home</button>
-<button onclick="loadNigeria()">Naija Pulse</button>
-<button onclick="loadTopic('world')">World</button>
-<button onclick="loadTopic('business')">Business</button>
-<button onclick="loadTopic('technology')">Technology</button>
-<button onclick="loadTopic('sports')">Sports</button>
+</div><nav><button onclick="getHome()">Home</button>
+<button onclick="getNigeria()">Naija Pulse</button>
+<button onclick="getWorld()">World</button>
+<button onclick="getTech()">Technology</button>
+<button onclick="getSports()">Sports</button>
 
 </nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1" target="_blank">
 <img src="instagram.png">
@@ -122,62 +132,32 @@ border-radius:6px;
 </a><a href="https://facebook.com/radiantwavesnews" target="_blank">
 <img src="facebook.png">
 </a><a href="https://twitter.com/radiantwaves13528995" target="_blank">
-<img src="x.png">
+<img src="twitter.png">
 </a></div><audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
 </audio><p>© 2026 Radiant Waves News</p></footer><script>
 
-const API_KEY="10618a434f80cc4ffe52717ea1bf2401"
+const API="10618a434f80cc4ffe52717ea1bf2401"
 
-const backupNews=[
-
-{
-title:"Macron Urges De-escalation in Middle East Conflict",
-description:"French President Emmanuel Macron called on Israel to avoid expanding military operations along the Lebanon border.",
-image:"https://picsum.photos/600/300?1",
-publishedAt:"2026-03-05T00:00:00Z",
-url:"#"
-},
-
-{
-title:"Global Oil Prices Surge",
-description:"Energy markets rose sharply following rising tensions in the Middle East.",
-image:"https://picsum.photos/600/300?2",
-publishedAt:"2026-03-05T00:10:00Z",
-url:"#"
-},
-
-{
-title:"Nigeria Reviews Economic Forecast",
-description:"Nigeria’s finance ministry is reassessing revenue projections after changes in oil prices.",
-image:"https://picsum.photos/600/300?3",
-publishedAt:"2026-03-05T00:20:00Z",
-url:"#"
-}
-
-]
-
-function displayNews(articles){
+function showNews(articles){
 
 let output=""
 
-articles.forEach(article=>{
+articles.forEach(a=>{
 
 output+=`
 
 <div class="card">
 
-<img src="${article.image || 'https://picsum.photos/600/300'}">
+<img src="${a.image || 'https://picsum.photos/600/300'}">
 
-<h3>${article.title}</h3>
+<h3>${a.title}</h3>
 
-<div class="time">
-${new Date(article.publishedAt).toLocaleString()}
-</div>
+<div class="time">${new Date(a.publishedAt).toLocaleString()}</div>
 
-<p>${article.description || ""}</p>
+<p>${a.description || ""}</p>
 
-<a href="${article.url}" target="_blank">Read Full Story</a>
+<a href="${a.url}" target="_blank">Read Full Story</a>
 
 </div>
 
@@ -189,51 +169,62 @@ document.getElementById("news").innerHTML=output
 
 }
 
-function loadHome(){
+function getHome(){
 
-fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API_KEY}`)
-
+fetch(`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${API}`)
 .then(res=>res.json())
-
-.then(data=>{
-
-if(data.articles){
-displayNews(data.articles)
-}else{
-displayNews(backupNews)
-}
-
-})
-
-.catch(()=>displayNews(backupNews))
+.then(data=>showNews(data.articles))
 
 }
 
-function loadTopic(topic){
+function getNigeria(){
 
-fetch(`https://gnews.io/api/v4/top-headlines?topic=${topic}&lang=en&max=10&apikey=${API_KEY}`)
-
+fetch(`https://gnews.io/api/v4/search?q=Nigeria&lang=en&max=10&apikey=${API}`)
 .then(res=>res.json())
-
-.then(data=>displayNews(data.articles))
-
-.catch(()=>displayNews(backupNews))
+.then(data=>showNews(data.articles))
 
 }
 
-function loadNigeria(){
+function getWorld(){
 
-fetch(`https://gnews.io/api/v4/search?q=Nigeria&lang=en&max=10&apikey=${API_KEY}`)
-
+fetch(`https://gnews.io/api/v4/top-headlines?topic=world&lang=en&max=10&apikey=${API}`)
 .then(res=>res.json())
-
-.then(data=>displayNews(data.articles))
-
-.catch(()=>displayNews(backupNews))
+.then(data=>showNews(data.articles))
 
 }
 
-loadHome()
+function getTech(){
+
+fetch(`https://gnews.io/api/v4/top-headlines?topic=technology&lang=en&max=10&apikey=${API}`)
+.then(res=>res.json())
+.then(data=>showNews(data.articles))
+
+}
+
+function getSports(){
+
+fetch(`https://gnews.io/api/v4/top-headlines?topic=sports&lang=en&max=10&apikey=${API}`)
+.then(res=>res.json())
+.then(data=>showNews(data.articles))
+
+}
+
+function updateClock(){
+
+const now=new Date()
+
+document.getElementById("clock").innerHTML=
+now.toDateString()+" | "+now.toLocaleTimeString()
+
+}
+
+setInterval(updateClock,1000)
+
+updateClock()
+
+getHome()
+
+setInterval(getHome,600000)
 
 </script></body>
 </html>

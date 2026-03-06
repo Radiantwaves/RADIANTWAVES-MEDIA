@@ -56,17 +56,22 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 </footer>
 
 <script>
-// ===== Local news for all categories =====
-const localNews=[
+// ===== All local news =====
+const allNews=[
 {category:"Nigeria",title:"Tinubu Nominates Oyedele as Finance Minister",time:"March 6, 2026",image:"https://picsum.photos/800/400?101",content:"President Tinubu announced the nomination of Oyedele as Minister of State for Finance.",author:"Editor: Omotara How"},
 {category:"Nigeria",title:"Yobe APC Chairman Re-elected",time:"March 6, 2026",image:"https://picsum.photos/800/400?102",content:"The Yobe APC chairman secured re-election at the recent party congress.",author:"Editor: Omotara How"},
-{category:"Technology",title:"Global AI Companies Race to Release New Models",time:"March 6, 2026",image:"https://picsum.photos/800/400?103",content:"Tech companies invest billions into AI development across US, Europe, and Asia.",author:"Editor: Omotara How"},
-{category:"Sports",title:"Champions League Quarter-Final Draw Completed",time:"March 6, 2026",image:"https://picsum.photos/800/400?104",content:"UEFA conducted the Champions League quarter-final draw.",author:"Editor: Omotara How"},
-{category:"Sports",title:"FIFA Announces New International Tournament Calendar",time:"March 6, 2026",image:"https://picsum.photos/800/400?105",content:"FIFA confirmed new international football schedules.",author:"Editor: Omotara How"}
+{category:"Nigeria",title:"Nigeria Reviews Economic Forecast",time:"March 6, 2026",image:"https://picsum.photos/800/400?103",content:"Finance ministry reassesses revenue projections after global oil price surge.",author:"Editor: Omotara How"},
+{category:"Technology",title:"Global AI Companies Race to Release New Models",time:"March 6, 2026",image:"https://picsum.photos/800/400?104",content:"Tech companies invest billions into AI development across US, Europe, and Asia.",author:"Editor: Omotara How"},
+{category:"Technology",title:"Cybersecurity Experts Warn of New Global Attacks",time:"March 6, 2026",image:"https://picsum.photos/800/400?105",content:"Security agencies warn of potential cyber attacks worldwide.",author:"Editor: Omotara How"},
+{category:"Sports",title:"Champions League Quarter-Final Draw Completed",time:"March 6, 2026",image:"https://picsum.photos/800/400?106",content:"UEFA conducted the Champions League quarter-final draw.",author:"Editor: Omotara How"},
+{category:"Sports",title:"FIFA Announces New International Tournament Calendar",time:"March 6, 2026",image:"https://picsum.photos/800/400?107",content:"FIFA confirmed new international football schedules.",author:"Editor: Omotara How"},
+{category:"World",title:"Macron Urges De-escalation in Middle East Conflict",time:"March 6, 2026",image:"https://picsum.photos/800/400?108",content:"French President Macron urges restraint as tensions rise in Middle East.",author:"Editor: Omotara How"},
+{category:"World",title:"Global Oil Prices Surge",time:"March 6, 2026",image:"https://picsum.photos/800/400?109",content:"Energy markets react sharply to Middle East tensions.",author:"Editor: Omotara How"},
+{category:"World",title:"US Raises Global Military Alert",time:"March 6, 2026",image:"https://picsum.photos/800/400?110",content:"The Pentagon increased security measures at overseas bases amid rising tensions.",author:"Editor: Omotara How"}
+// ... add more stories up to 25 total
 ];
 
-// ===== Render function =====
-let allNews=[...localNews];
+// ===== Render =====
 function render(list){
   const container=document.getElementById("news");
   let html="";
@@ -91,39 +96,12 @@ function toggle(i){
 }
 
 function showCategory(cat){
-  if(cat==="All"){render(allNews);return;}
+  if(cat==="All"){render(allNews); return;}
   render(allNews.filter(n=>n.category===cat));
 }
 
+// ===== Initial render =====
 render(allNews);
-
-// ===== Optional: Load global news via API (only updates World category) =====
-const apiKey="10618a434f80cc4ffe52717ea1bf2401; // Replace with your NewsAPI key
-async function fetchGlobalNews(){
-  try{
-    const res=await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=${apiKey}`);
-    const data=await res.json();
-    if(!data.articles) return;
-    // Add to allNews array
-    const globalNews=data.articles.map((a,i)=>({
-      category:"World",
-      title:a.title || "No title",
-      time:a.publishedAt?new Date(a.publishedAt).toLocaleString():"Unknown time",
-      image:a.urlToImage || "https://picsum.photos/800/400?random="+i,
-      content:a.description || "Read full article on source",
-      author:"Editor: NewsAPI"
-    }));
-    allNews=[...localNews,...globalNews];
-    render(allNews);
-    // Update breaking news with first global headline
-    if(globalNews.length>0)document.getElementById("breaking-news").textContent="🔴 "+globalNews[0].title;
-  }catch(err){
-    console.error("API error:",err);
-  }
-}
-
-// Optional call to API
-fetchGlobalNews();
 </script>
 </body>
 </html>

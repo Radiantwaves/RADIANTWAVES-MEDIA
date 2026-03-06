@@ -123,7 +123,9 @@ font-size:18px;
 </audio><p>© 2026 Radiant Waves News</p></footer><script>
 
 const news=[
-
+  
+const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
+const API_URL = "https://gnews.io/api/v4/top-headlines?lang=en&max=10&token=" + API_KEY;
 {
 category:"World",
 title:"Macron Urges De-escalation in Middle East Conflict",
@@ -197,6 +199,31 @@ author:"Editor: Omotara How"
 }
 
 ];
+  async function loadGlobalNews(){
+
+try{
+
+const res = await fetch(API_URL + "&t=" + new Date().getTime());
+const data = await res.json();
+
+data.articles.forEach(a=>{
+news.unshift({
+category:"World",
+title:a.title,
+time:new Date().toDateString(),
+image:a.image || "https://picsum.photos/800/400",
+content:a.description || "Full story available on source website.",
+author:"Source: "+a.source.name
+});
+});
+
+render(news);
+
+}catch(err){
+console.log("API news error",err);
+}
+
+}
 
 function render(list){
 let html="";
@@ -230,3 +257,4 @@ render(news);
 
 </script></body>
 </html>
+

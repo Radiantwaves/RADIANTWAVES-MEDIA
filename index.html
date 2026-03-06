@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radiant Waves News</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#f4f4f4;
 }
 
@@ -31,7 +33,7 @@ nav button{
 background:none;
 border:none;
 color:white;
-padding:14px 16px;
+padding:14px 18px;
 cursor:pointer;
 font-size:15px;
 }
@@ -56,8 +58,8 @@ animation:scroll 25s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
 }
 
 .container{
@@ -67,9 +69,9 @@ padding:15px;
 .card{
 background:white;
 margin-bottom:18px;
-padding:10px;
 border-radius:6px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+padding:10px;
 cursor:pointer;
 }
 
@@ -79,7 +81,7 @@ border-radius:5px;
 }
 
 .card h3{
-margin:10px 0 5px 0;
+margin:10px 0 6px 0;
 }
 
 .time{
@@ -90,7 +92,6 @@ font-size:13px;
 .details{
 display:none;
 margin-top:10px;
-color:#333;
 }
 
 footer{
@@ -101,12 +102,11 @@ text-align:center;
 margin-top:20px;
 }
 
-.social a{
-margin:0 10px;
-color:white;
-text-decoration:none;
-font-size:18px;
+.social img{
+width:28px;
+margin:8px;
 }
+
 </style>
 </head>
 
@@ -114,34 +114,48 @@ font-size:18px;
 
 <header>Radiant Waves News</header>
 
-<<div class="breaking">
+<div class="breaking">
 <span>
-🔴 Gaza ceasefire talks intensify as global leaders push diplomacy |
-🔴 Nigerian naira shows slight recovery against dollar |
-🔴 EU warns of new cyber threats targeting banks |
-🔴 Oil prices fluctuate amid Middle East tensions |
-🔴 FIFA confirms expanded 2026 international schedule |
-🔴 Tech companies invest billions in new AI systems
+🔴 Macron urges de-escalation in Middle East |
+🔴 Global oil prices surge |
+🔴 Nigeria reviews economic forecast |
+🔴 Cybersecurity agencies warn of attacks |
+🔴 US raises global military alert
 </span>
 </div>
 
 <nav>
-<button onclick="filterNews('All')">Home</button>
-<button onclick="filterNews('Nigeria')">Naija Pulse</button>
-<button onclick="filterNews('World')">World</button>
-<button onclick="filterNews('Technology')">Technology</button>
-<button onclick="filterNews('Sports')">Sports</button>
+
+<button onclick="showCategory('All')">Home</button>
+<button onclick="showCategory('Nigeria')">Naija Pulse</button>
+<button onclick="showCategory('World')">World</button>
+<button onclick="showCategory('Technology')">Technology</button>
+<button onclick="showCategory('Sports')">Sports</button>
+
 </nav>
 
-<div class="container" id="newsContainer"></div>
+<div class="container" id="news"></div>
 
 <footer>
 
 <div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">X</a>
+
+<a href="https://instagram.com/radiantwaves1">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a href="https://tiktok.com/@radiantwavesmedia">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+</a>
+
+<a href="https://facebook.com/radiantwavesnews">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://twitter.com/radiantwaves13528995">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</a>
+
 </div>
 
 <br>
@@ -156,134 +170,144 @@ font-size:18px;
 
 <script>
 
-const newsData = [
+const news=[
 
 {
 category:"World",
-title:"Global Leaders Push New Gaza Ceasefire Negotiations",
+title:"Macron Calls for De-escalation in Middle East Conflict",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?11",
-content:"Diplomatic efforts intensified overnight as several world leaders urged both sides in the Gaza conflict to accept renewed ceasefire proposals.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"World",
-title:"Oil Markets React to Middle East Tensions",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?12",
-content:"Energy markets remain volatile as investors monitor geopolitical developments across the Middle East and global shipping routes.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"Nigeria",
-title:"Naira Shows Small Recovery in Foreign Exchange Market",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?13",
-content:"Nigeria’s currency recorded a slight gain in early trading after new monetary policies were introduced by the Central Bank.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"Nigeria",
-title:"Lagos Launches New Digital Transport Monitoring System",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?14",
-content:"The Lagos state government introduced a new digital platform to monitor transport operations and improve road safety across the city.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"Nigeria",
-title:"Nigeria Expands Renewable Energy Investment",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?15",
-content:"Authorities announced new partnerships aimed at expanding solar and renewable energy infrastructure across rural communities.",
+image:"https://picsum.photos/800/400?1",
+content:"French President Emmanuel Macron urged restraint as tensions continue rising across the Middle East.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"World",
-title:"United Nations Warns of Global Food Supply Pressure",
+title:"Oil Prices Surge as Tensions Rise",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?16",
-content:"The UN warned that climate disruptions and geopolitical conflicts could place additional strain on global food supply chains this year.",
+image:"https://picsum.photos/800/400?2",
+content:"Energy markets reacted quickly to geopolitical developments affecting global oil supply.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Nigeria",
+title:"Federal Government Reviews Economic Forecast",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?3",
+content:"Nigeria’s finance ministry is reassessing projections amid changing global oil prices.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Nigeria",
+title:"Lagos Expands Digital Traffic Monitoring",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?4",
+content:"New smart traffic systems aim to improve transportation management in Nigeria's largest city.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Nigeria",
+title:"Central Bank Considers Currency Stability Measures",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?5",
+content:"Financial regulators discuss new policies designed to stabilize the naira.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"Technology",
-title:"Major Tech Firms Race to Develop Next Generation AI",
+title:"Artificial Intelligence Investment Surges",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?17",
-content:"Technology companies in the United States, Europe and Asia announced new investments in advanced artificial intelligence research.",
+image:"https://picsum.photos/800/400?6",
+content:"Technology companies worldwide continue heavy investments in artificial intelligence research.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"Technology",
-title:"Cybersecurity Experts Warn of Banking Malware",
+title:"Cybersecurity Agencies Warn of Global Threats",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?18",
-content:"Cybersecurity analysts warned that a new malware campaign could target online banking systems in multiple regions.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"Technology",
-title:"New Smartphone Innovations Expected This Year",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?19",
-content:"Industry insiders expect several smartphone manufacturers to unveil advanced AI powered devices later this year.",
+image:"https://picsum.photos/800/400?7",
+content:"Experts warn that hackers may target global financial systems and infrastructure.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"Sports",
-title:"FIFA Confirms Expanded International Match Calendar",
+title:"Super Eagles Begin Training for International Matches",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?20",
-content:"Football governing body FIFA confirmed adjustments to the global match calendar as teams prepare for upcoming competitions.",
+image:"https://picsum.photos/800/400?8",
+content:"Nigeria's national football team prepares for upcoming international tournaments.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"Sports",
-title:"European Clubs Prepare for Champions League Quarterfinals",
+title:"Champions League Quarter-Final Fixtures Confirmed",
 time:"March 6, 2026",
-image:"https://picsum.photos/800/400?21",
-content:"Top European clubs are preparing for the decisive Champions League quarterfinal stage scheduled later this month.",
-author:"Editor: Omotara How"
-},
-
-{
-category:"Sports",
-title:"Nigeria Super Eagles Begin Preparations for Qualifiers",
-time:"March 6, 2026",
-image:"https://picsum.photos/800/400?22",
-content:"Nigeria’s national team coaching staff announced preparations for upcoming international qualifying matches.",
+image:"https://picsum.photos/800/400?9",
+content:"Europe's biggest football clubs prepare for crucial Champions League knockout matches.",
 author:"Editor: Omotara How"
 }
 
 ];
-function toggleDetails(index){
-const detail=document.getElementById("details"+index);
-detail.style.display=detail.style.display==="block"?"none":"block";
+
+function render(list){
+
+let html="";
+
+list.forEach((n,i)=>{
+
+html+=`
+
+<div class="card" onclick="toggle(${i})">
+
+<img src="${n.image}">
+
+<h3>${n.title}</h3>
+
+<div class="time">${n.time}</div>
+
+<div class="details" id="d${i}">
+
+<p>${n.content}</p>
+
+<p><em>${n.author}</em></p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("news").innerHTML=html;
+
 }
 
-function filterNews(category){
-if(category==="All"){
-displayNews(newsData);
-}else{
-displayNews(newsData.filter(n=>n.category===category));
-}
+function toggle(i){
+
+let d=document.getElementById("d"+i);
+
+d.style.display=d.style.display=="block"?"none":"block";
+
 }
 
-displayNews(newsData);
+function showCategory(cat){
+
+if(cat=="All"){render(news);return;}
+
+render(news.filter(n=>n.category==cat));
+
+}
+
+render(news);
 
 </script>
 
 </body>
 </html>
-

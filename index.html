@@ -20,7 +20,7 @@ nav button:hover{background:#c00;}
 .time{color:gray;font-size:13px;}
 .details{display:none;margin-top:10px;}
 footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20px;}
-.social a{color:white;margin:0 10px;text-decoration:none;font-size:18px;}
+.social img{width:32px;height:32px;vertical-align:middle;margin:0 8px;}
 </style>
 </head>
 <body>
@@ -28,7 +28,9 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 <header>Radiant Waves News</header>
 
 <div class="breaking">
-<span id="breaking-news">🔴 Macron urges de-escalation in Middle East | 🔴 Nigeria reviews economic forecast | 🔴 Global oil prices surge</span>
+<span id="breaking-news">
+🔴 Macron urges de-escalation in Middle East | 🔴 Nigeria reviews economic forecast | 🔴 Global oil prices surge
+</span>
 </div>
 
 <nav>
@@ -43,10 +45,18 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 
 <footer>
 <div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">X</a>
+<a href="https://instagram.com/radiantwaves1" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/32/174/174855.png" alt="Instagram">
+</a>
+<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png" alt="TikTok">
+</a>
+<a href="https://facebook.com/radiantwavesnews" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/32/145/145802.png" alt="Facebook">
+</a>
+<a href="https://twitter.com/radiantwaves13528995" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="X">
+</a>
 </div>
 <br>
 <audio controls autoplay loop>
@@ -56,19 +66,22 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 </footer>
 
 <script>
-// ===== All local news =====
+// ===== Local news =====
 const allNews=[
 {category:"Nigeria",title:"Tinubu Nominates Oyedele as Finance Minister",time:"March 6, 2026",image:"https://picsum.photos/800/400?101",content:"President Tinubu announced the nomination of Oyedele as Minister of State for Finance.",author:"Editor: Omotara How"},
 {category:"Nigeria",title:"Yobe APC Chairman Re-elected",time:"March 6, 2026",image:"https://picsum.photos/800/400?102",content:"The Yobe APC chairman secured re-election at the recent party congress.",author:"Editor: Omotara How"},
 {category:"Nigeria",title:"Nigeria Reviews Economic Forecast",time:"March 6, 2026",image:"https://picsum.photos/800/400?103",content:"Finance ministry reassesses revenue projections after global oil price surge.",author:"Editor: Omotara How"},
-{category:"Technology",title:"Global AI Companies Race to Release New Models",time:"March 6, 2026",image:"https://picsum.photos/800/400?104",content:"Tech companies invest billions into AI development across US, Europe, and Asia.",author:"Editor: Omotara How"},
-{category:"Technology",title:"Cybersecurity Experts Warn of New Global Attacks",time:"March 6, 2026",image:"https://picsum.photos/800/400?105",content:"Security agencies warn of potential cyber attacks worldwide.",author:"Editor: Omotara How"},
-{category:"Sports",title:"Champions League Quarter-Final Draw Completed",time:"March 6, 2026",image:"https://picsum.photos/800/400?106",content:"UEFA conducted the Champions League quarter-final draw.",author:"Editor: Omotara How"},
-{category:"Sports",title:"FIFA Announces New International Tournament Calendar",time:"March 6, 2026",image:"https://picsum.photos/800/400?107",content:"FIFA confirmed new international football schedules.",author:"Editor: Omotara How"},
-{category:"World",title:"Macron Urges De-escalation in Middle East Conflict",time:"March 6, 2026",image:"https://picsum.photos/800/400?108",content:"French President Macron urges restraint as tensions rise in Middle East.",author:"Editor: Omotara How"},
-{category:"World",title:"Global Oil Prices Surge",time:"March 6, 2026",image:"https://picsum.photos/800/400?109",content:"Energy markets react sharply to Middle East tensions.",author:"Editor: Omotara How"},
-{category:"World",title:"US Raises Global Military Alert",time:"March 6, 2026",image:"https://picsum.photos/800/400?110",content:"The Pentagon increased security measures at overseas bases amid rising tensions.",author:"Editor: Omotara How"}
-// ... add more stories up to 25 total
+{category:"Nigeria",title:"Lagos Infrastructure Projects Accelerate",time:"March 6, 2026",image:"https://picsum.photos/800/400?104",content:"New infrastructure projects launched across Lagos to boost transportation and commerce.",author:"Editor: Omotara How"},
+{category:"Technology",title:"Global AI Companies Race to Release New Models",time:"March 6, 2026",image:"https://picsum.photos/800/400?105",content:"Tech companies invest billions into AI development across US, Europe, and Asia.",author:"Editor: Omotara How"},
+{category:"Technology",title:"Cybersecurity Experts Warn of New Global Attacks",time:"March 6, 2026",image:"https://picsum.photos/800/400?106",content:"Security agencies warn of potential cyber attacks worldwide.",author:"Editor: Omotara How"},
+{category:"Sports",title:"Champions League Quarter-Final Draw Completed",time:"March 6, 2026",image:"https://picsum.photos/800/400?107",content:"UEFA conducted the Champions League quarter-final draw.",author:"Editor: Omotara How"},
+{category:"Sports",title:"FIFA Announces New International Tournament Calendar",time:"March 6, 2026",image:"https://picsum.photos/800/400?108",content:"FIFA confirmed new international football schedules.",author:"Editor: Omotara How"},
+{category:"World",title:"Macron Urges De-escalation in Middle East Conflict",time:"March 6, 2026",image:"https://picsum.photos/800/400?109",content:"French President Macron urges restraint as tensions rise in Middle East.",author:"Editor: Omotara How"},
+{category:"World",title:"Global Oil Prices Surge",time:"March 6, 2026",image:"https://picsum.photos/800/400?110",content:"Energy markets react sharply to Middle East tensions.",author:"Editor: Omotara How"},
+{category:"World",title:"US Raises Global Military Alert",time:"March 6, 2026",image:"https://picsum.photos/800/400?111",content:"The Pentagon increased security measures at overseas bases amid rising tensions.",author:"Editor: Omotara How"},
+{category:"World",title:"China Calls for Ceasefire",time:"March 6, 2026",image:"https://picsum.photos/800/400?112",content:"China urges all parties in Middle East to engage in dialogue and avoid escalation.",author:"Editor: Omotara How"},
+{category:"World",title:"African Union Warns of Economic Ripple Effects",time:"March 6, 2026",image:"https://picsum.photos/800/400?113",content:"AU warns global instability could impact trade and fuel costs in Africa.",author:"Editor: Omotara How"}
+// Add more stories here up to 25 total
 ];
 
 // ===== Render =====
@@ -100,7 +113,6 @@ function showCategory(cat){
   render(allNews.filter(n=>n.category===cat));
 }
 
-// ===== Initial render =====
 render(allNews);
 </script>
 </body>

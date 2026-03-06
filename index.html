@@ -1,9 +1,16 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News</title><style>
-body{margin:0;font-family:Arial;background:#f4f4f4;}
+<title>Radiant Waves News</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f4f4;
+}
 
 header{
 background:#c00;
@@ -24,7 +31,7 @@ nav button{
 background:none;
 border:none;
 color:white;
-padding:14px 18px;
+padding:14px 16px;
 cursor:pointer;
 font-size:15px;
 }
@@ -45,12 +52,12 @@ font-weight:bold;
 .breaking span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 20s linear infinite;
+animation:scroll 25s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
 
 .container{
@@ -60,9 +67,9 @@ padding:15px;
 .card{
 background:white;
 margin-bottom:18px;
-border-radius:6px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
 padding:10px;
+border-radius:6px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 cursor:pointer;
 }
 
@@ -72,7 +79,7 @@ border-radius:5px;
 }
 
 .card h3{
-margin:10px 0 6px 0;
+margin:10px 0 5px 0;
 }
 
 .time{
@@ -83,6 +90,7 @@ font-size:13px;
 .details{
 display:none;
 margin-top:10px;
+color:#333;
 }
 
 footer{
@@ -94,44 +102,67 @@ margin-top:20px;
 }
 
 .social a{
-color:white;
 margin:0 10px;
+color:white;
 text-decoration:none;
 font-size:18px;
 }
-</style></head><body><header>Radiant Waves News</header><div class="breaking">
+</style>
+</head>
+
+<body>
+
+<header>Radiant Waves News</header>
+
+<div class="breaking">
 <span>
 🔴 Macron urges de-escalation in Middle East |
-🔴 Nigeria reviews economic forecast |
 🔴 Global oil prices surge |
+🔴 Nigeria reviews economic forecast |
 🔴 Cybersecurity agencies warn of attacks |
 🔴 US raises global military alert
 </span>
-</div><nav>
-<button onclick="showCategory('All')">Home</button>
-<button onclick="showCategory('Nigeria')">Naija Pulse</button>
-<button onclick="showCategory('World')">World</button>
-<button onclick="showCategory('Technology')">Technology</button>
-<button onclick="showCategory('Sports')">Sports</button>
-</nav><div class="container" id="news"></div><footer><div class="social">
-<a href="https://instagram.com/radiantwaves1">Instagram</a>
-<a href="https://tiktok.com/@radiantwavesmedia">TikTok</a>
-<a href="https://facebook.com/radiantwavesnews">Facebook</a>
-<a href="https://twitter.com/radiantwaves13528995">X</a>
-</div><br><audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio><p>© 2026 Radiant Waves News</p></footer><script>
+</div>
 
-const news=[
-  
-const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
-const API_URL = "https://gnews.io/api/v4/top-headlines?lang=en&max=10&token=" + API_KEY;
+<nav>
+<button onclick="filterNews('All')">Home</button>
+<button onclick="filterNews('Nigeria')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Technology')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+</nav>
+
+<div class="container" id="newsContainer"></div>
+
+<footer>
+
+<div class="social">
+<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a>
+<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a>
+<a href="https://twitter.com/radiantwaves13528995" target="_blank">X</a>
+</div>
+
+<br>
+
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
+
+<p>© 2026 Radiant Waves News</p>
+
+</footer>
+
+<script>
+
+const newsData = [
+
 {
 category:"World",
 title:"Macron Urges De-escalation in Middle East Conflict",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?1",
-content:"French President Emmanuel Macron urged restraint as tensions rise across the Middle East following new military activity in the region.",
+content:"French President Emmanuel Macron urged restraint as tensions rise across the Middle East following recent military developments.",
 author:"Editor: Omotara How"
 },
 
@@ -140,16 +171,16 @@ category:"Nigeria",
 title:"Tinubu Nominates Oyedele as Finance Minister",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?2",
-content:"President Bola Tinubu nominated tax expert Taiwo Oyedele as Minister of State for Finance as the government pushes new economic reforms.",
+content:"President Bola Tinubu nominated tax expert Taiwo Oyedele as Minister of State for Finance as Nigeria pushes forward economic reforms.",
 author:"Editor: Omotara How"
 },
 
 {
 category:"Nigeria",
-title:"Yobe APC Chairman Re-elected After Congress",
+title:"Yobe APC Chairman Re-elected After Party Congress",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?3",
-content:"Delegates at the Yobe APC congress voted overwhelmingly to retain the party chairman during the latest internal elections.",
+content:"Delegates at the APC congress in Yobe voted overwhelmingly to retain the party chairman in a move aimed at strengthening leadership.",
 author:"Editor: Omotara How"
 },
 
@@ -164,10 +195,10 @@ author:"Editor: Omotara How"
 
 {
 category:"Technology",
-title:"Cybersecurity Experts Warn of New Global Attacks",
+title:"Cybersecurity Experts Warn of Possible Global Attacks",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?5",
-content:"Security agencies warn of potential cyber attacks targeting banks and infrastructure worldwide.",
+content:"Security agencies warn of potential cyber attacks targeting financial and infrastructure systems worldwide.",
 author:"Editor: Omotara How"
 },
 
@@ -176,7 +207,7 @@ category:"Sports",
 title:"FIFA Announces New International Tournament Calendar",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?6",
-content:"FIFA confirmed new international football schedules as teams prepare for upcoming tournaments.",
+content:"FIFA confirmed new international football schedules as teams prepare for upcoming global tournaments.",
 author:"Editor: Omotara How"
 },
 
@@ -194,67 +225,46 @@ category:"World",
 title:"Oil Prices Surge as Middle East Tensions Rise",
 time:"March 6, 2026",
 image:"https://picsum.photos/800/400?8",
-content:"Energy markets jumped sharply after new geopolitical tensions disrupted global supply expectations.",
+content:"Energy markets jumped sharply after geopolitical tensions raised fears of supply disruptions.",
 author:"Editor: Omotara How"
 }
 
 ];
-  async function loadGlobalNews(){
 
-try{
-
-const res = await fetch(API_URL + "&t=" + new Date().getTime());
-const data = await res.json();
-
-data.articles.forEach(a=>{
-news.unshift({
-category:"World",
-title:a.title,
-time:new Date().toDateString(),
-image:a.image || "https://picsum.photos/800/400",
-content:a.description || "Full story available on source website.",
-author:"Source: "+a.source.name
-});
-});
-
-render(news);
-
-}catch(err){
-console.log("API news error",err);
-}
-
-}
-
-function render(list){
-let html="";
-list.forEach((n,i)=>{
-html+=`
-<div class="card" onclick="toggle(${i})">
-<img src="${n.image}">
-<h3>${n.title}</h3>
-<div class="time">${n.time}</div>
-<div class="details" id="d${i}">
-<p>${n.content}</p>
-<p><em>${n.author}</em></p>
+function displayNews(data){
+const container=document.getElementById("newsContainer");
+container.innerHTML="";
+data.forEach((news,index)=>{
+container.innerHTML+=`
+<div class="card" onclick="toggleDetails(${index})">
+<img src="${news.image}">
+<h3>${news.title}</h3>
+<div class="time">${news.time}</div>
+<div class="details" id="details${index}">
+<p>${news.content}</p>
+<p><em>${news.author}</em></p>
 </div>
 </div>
 `;
 });
-document.getElementById("news").innerHTML=html;
 }
 
-function toggle(i){
-let d=document.getElementById("d"+i);
-d.style.display=d.style.display=="block"?"none":"block";
+function toggleDetails(index){
+const detail=document.getElementById("details"+index);
+detail.style.display=detail.style.display==="block"?"none":"block";
 }
 
-function showCategory(cat){
-if(cat=="All"){render(news);return;}
-render(news.filter(n=>n.category==cat));
+function filterNews(category){
+if(category==="All"){
+displayNews(newsData);
+}else{
+displayNews(newsData.filter(n=>n.category===category));
+}
 }
 
-render(news);
+displayNews(newsData);
 
-</script></body>
+</script>
+
+</body>
 </html>
-

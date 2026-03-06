@@ -1,137 +1,232 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c00;color:white;padding:15px;text-align:center;font-size:24px;font-weight:bold;}
-nav{background:#111;display:flex;overflow:auto;}
-nav button{background:none;border:none;color:white;padding:14px 16px;cursor:pointer;font-size:15px;white-space:nowrap;}
-nav button:hover{background:#c00;}
-.breaking{background:black;color:white;padding:8px;font-weight:bold;overflow:hidden;white-space:nowrap;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 25s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-.container{padding:15px;}
-.card{background:white;margin-bottom:20px;padding:10px;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,0.1);cursor:pointer;}
-.card img{width:100%;border-radius:5px;}
-.card h3{margin:10px 0 5px 0;}
-.time{color:gray;font-size:13px;}
-.details{display:none;margin-top:10px;color:#333;}
-.details em{font-style:italic;color:#555;}
-footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20px;}
-.social a{margin:0 10px;color:white;text-decoration:none;font-size:18px;}
-</style>
-</head>
-<body>
+<title>Radiant Waves News</title><style>
+body{margin:0;font-family:Arial;background:#f4f4f4;}
 
-<header>Radiant Waves News</header>
+header{
+background:#c00;
+color:white;
+padding:15px;
+text-align:center;
+font-size:26px;
+font-weight:bold;
+}
 
-<div class="breaking">
+nav{
+background:#111;
+display:flex;
+overflow:auto;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:14px 18px;
+cursor:pointer;
+font-size:15px;
+}
+
+nav button:hover{
+background:#c00;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+font-weight:bold;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:white;
+margin-bottom:18px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+padding:10px;
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+border-radius:5px;
+}
+
+.card h3{
+margin:10px 0 6px 0;
+}
+
+.time{
+color:gray;
+font-size:13px;
+}
+
+.details{
+display:none;
+margin-top:10px;
+}
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:20px;
+}
+
+.social a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-size:18px;
+}
+</style></head><body><header>Radiant Waves News</header><div class="breaking">
 <span>
-🔴 Macron Urges De-escalation in Middle East | 🔴 Global Oil Prices Surge | 🔴 Nigeria Reviews Economic Forecast | 🔴 US Raises Global Military Alert | 🔴 Cybersecurity Agencies Warn of Attacks
+🔴 Macron urges de-escalation in Middle East |
+🔴 Nigeria reviews economic forecast |
+🔴 Global oil prices surge |
+🔴 Cybersecurity agencies warn of attacks |
+🔴 US raises global military alert
 </span>
-</div>
-
-<nav>
-<button onclick="filterNews('All')">Home</button>
-<button onclick="filterNews('Nigeria')">Naija Pulse</button>
-<button onclick="filterNews('World')">World</button>
-<button onclick="filterNews('Technology')">Technology</button>
-<button onclick="filterNews('Sports')">Sports</button>
-</nav>
-
-<div class="container" id="newsContainer"></div>
-
-<footer>
-<div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">X</a>
-</div>
-<br>
-<audio controls autoplay loop>
+</div><nav>
+<button onclick="showCategory('All')">Home</button>
+<button onclick="showCategory('Nigeria')">Naija Pulse</button>
+<button onclick="showCategory('World')">World</button>
+<button onclick="showCategory('Technology')">Technology</button>
+<button onclick="showCategory('Sports')">Sports</button>
+</nav><div class="container" id="news"></div><footer><div class="social">
+<a href="https://instagram.com/radiantwaves1">Instagram</a>
+<a href="https://tiktok.com/@radiantwavesmedia">TikTok</a>
+<a href="https://facebook.com/radiantwavesnews">Facebook</a>
+<a href="https://twitter.com/radiantwaves13528995">X</a>
+</div><br><audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
-</audio>
-<p>© 2026 Radiant Waves News</p>
-</footer>
+</audio><p>© 2026 Radiant Waves News</p></footer><script>
 
-<script>
-const newsData = [
-  /* ===== Home ===== */
-  {"category":"Home","title":"Macron Urges De-escalation in Middle East","time":"2026-03-06T01:00:00Z","image":"https://picsum.photos/800/400?1","content":"French President Emmanuel Macron called on Israel to avoid expanding military operations along the Lebanon border.","url":"#","author":"Omotara How"},
-  {"category":"Home","title":"Global Oil Prices Surge","time":"2026-03-06T02:00:00Z","image":"https://picsum.photos/800/400?2","content":"Energy markets reacted sharply following rising tensions in the Middle East, sending global oil prices higher.","url":"#","author":"Omotara How"},
-  {"category":"Home","title":"U.S. Raises Global Military Alert","time":"2026-03-06T03:00:00Z","image":"https://picsum.photos/800/400?3","content":"The Pentagon increased security measures at overseas military bases amid rising global tensions.","url":"#","author":"Omotara How"},
+const news=[
 
-  /* ===== Nigeria (20) ===== */
-  {"category":"Nigeria","title":"Nigeria Reviews Economic Forecast","time":"2026-03-06T04:00:00Z","image":"https://picsum.photos/600/300?4","content":"Nigeria’s finance ministry is reassessing revenue projections after the surge in global crude oil prices.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Tinubu Nominates Oyedele as Minister of State for Finance","time":"2026-03-06T05:00:00Z","image":"https://picsum.photos/600/300?5","content":"President Tinubu announced the nomination of Oyedele as Minister of State for Finance, awaiting confirmation.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Yobe APC Chairman Re-elected","time":"2026-03-06T06:00:00Z","image":"https://picsum.photos/600/300?6","content":"Yobe APC chairman wins re-election during the recent party congress, consolidating leadership.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Lagos State Launches New Digital ID Program","time":"2026-03-06T07:00:00Z","image":"https://picsum.photos/600/300?7","content":"Lagos government rolls out a new digital identification system to improve citizen services.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Kaduna Farmers Get Fertilizer Subsidy","time":"2026-03-06T08:00:00Z","image":"https://picsum.photos/600/300?8","content":"Kaduna state government provides subsidized fertilizer to support local farmers ahead of planting season.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Abuja Infrastructure Project Completed","time":"2026-03-06T09:00:00Z","image":"https://picsum.photos/600/300?9","content":"The Federal Capital Territory government completed a major road and bridge project to ease traffic congestion.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Rivers State Launches Clean Water Initiative","time":"2026-03-06T10:00:00Z","image":"https://picsum.photos/600/300?10","content":"Rivers State government initiated a new program to provide clean drinking water to rural communities.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Ogun State Expands Health Clinics","time":"2026-03-06T11:00:00Z","image":"https://picsum.photos/600/300?11","content":"Ogun State health ministry announced new clinics in underserved regions to improve healthcare access.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Kano Youth Entrepreneurship Program Kicks Off","time":"2026-03-06T12:00:00Z","image":"https://picsum.photos/600/300?12","content":"Kano state government started a program to support youth entrepreneurship with grants and training.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Federal Government Approves Power Plant Expansion","time":"2026-03-06T13:00:00Z","image":"https://picsum.photos/600/300?13","content":"The federal government approved expansion of power plants to boost electricity supply nationwide.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Police Crack Down on Cybercrime Rings","time":"2026-03-06T14:00:00Z","image":"https://picsum.photos/600/300?14","content":"The Nigeria Police Force announced a crackdown on cybercrime operations across major cities.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Federal Government Reviews Education Policy","time":"2026-03-06T15:00:00Z","image":"https://picsum.photos/600/300?15","content":"The Ministry of Education proposes changes to national curriculum to improve learning outcomes.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Edo State Launches New Health Program","time":"2026-03-06T16:00:00Z","image":"https://picsum.photos/600/300?16","content":"Edo State government launches new health initiative to support rural communities.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Delta State Expands Solar Energy Projects","time":"2026-03-06T17:00:00Z","image":"https://picsum.photos/600/300?17","content":"Delta state invests in solar energy projects to increase renewable energy access.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Benue Farmers Receive Support Grants","time":"2026-03-06T18:00:00Z","image":"https://picsum.photos/600/300?18","content":"Benue state government provides grants to local farmers to improve food production.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Akwa Ibom Water Supply Upgraded","time":"2026-03-06T19:00:00Z","image":"https://picsum.photos/600/300?19","content":"Akwa Ibom government upgrades water supply infrastructure for urban and rural communities.","url":"#","author":"Omotara How"},
-  {"category":"Nigeria","title":"Imo State Launches Education Initiative","time":"2026-03-06T20:00:00Z","image":"https://picsum.photos/600/300?20","content":"Imo state launches new education program to improve access for children in rural areas.","url":"#","author":"Omotara How"},
+{
+category:"World",
+title:"Macron Urges De-escalation in Middle East Conflict",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?1",
+content:"French President Emmanuel Macron urged restraint as tensions rise across the Middle East following new military activity in the region.",
+author:"Editor: Omotara How"
+},
 
-  /* ===== World (10) ===== */
-  {"category":"World","title":"Middle East Leaders Hold Emergency Peace Talks","time":"2026-03-06T21:00:00Z","image":"https://picsum.photos/600/300?21","content":"Regional leaders convened urgent discussions to de-escalate rising tensions in Lebanon and Syria.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"EU Discusses Energy Supply Security","time":"2026-03-06T22:00:00Z","image":"https://picsum.photos/600/300?22","content":"European Union officials held talks to ensure energy supply stability amid global oil volatility.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Japan Raises Cybersecurity Alert","time":"2026-03-06T23:00:00Z","image":"https://picsum.photos/600/300?23","content":"Japan's cybersecurity agency issued warnings of potential attacks on financial and infrastructure systems.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"UN Issues Humanitarian Aid Appeal","time":"2026-03-06T01:30:00Z","image":"https://picsum.photos/600/300?24","content":"UN appeals for urgent aid to civilians affected by Middle East conflicts.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"China Urges Ceasefire Amid Regional Tensions","time":"2026-03-06T02:30:00Z","image":"https://picsum.photos/600/300?25","content":"China calls for immediate ceasefire and dialogue among conflicting parties.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Russia Condemns Drone Strikes in Middle East","time":"2026-03-06T03:30:00Z","image":"https://picsum.photos/600/300?26","content":"Russia strongly condemned recent drone strikes affecting civilian areas in Lebanon.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Australia Monitors Middle East Conflict Closely","time":"2026-03-06T04:30:00Z","image":"https://picsum.photos/600/300?27","content":"Australian government confirms monitoring of regional security developments and travel advisories.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Canada Joins NATO Security Exercises","time":"2026-03-06T05:30:00Z","image":"https://picsum.photos/600/300?28","content":"Canada participates in NATO exercises to improve collective defense readiness.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Brazil Prepares for Energy Crisis","time":"2026-03-06T06:30:00Z","image":"https://picsum.photos/600/300?29","content":"Brazil announces measures to safeguard fuel supply amid global market volatility.","url":"#","author":"Omotara How"},
-  {"category":"World","title":"Middle East Peace Envoy Arrives in Beirut","time":"2026-03-06T07:30:00Z","image":"https://picsum.photos/600/300?30","content":"UN peace envoy arrives to mediate ongoing conflict and coordinate humanitarian support.","url":"#","author":"Omotara How"}
-  /* ===== You can continue adding Technology and Sports similarly ... */
+{
+category:"Nigeria",
+title:"Tinubu Nominates Oyedele as Finance Minister",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?2",
+content:"President Bola Tinubu nominated tax expert Taiwo Oyedele as Minister of State for Finance as the government pushes new economic reforms.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Nigeria",
+title:"Yobe APC Chairman Re-elected After Congress",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?3",
+content:"Delegates at the Yobe APC congress voted overwhelmingly to retain the party chairman during the latest internal elections.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Technology",
+title:"Global AI Companies Race to Release New Models",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?4",
+content:"Technology companies across the US, Europe and Asia are investing billions into artificial intelligence development.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Technology",
+title:"Cybersecurity Experts Warn of New Global Attacks",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?5",
+content:"Security agencies warn of potential cyber attacks targeting banks and infrastructure worldwide.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Sports",
+title:"FIFA Announces New International Tournament Calendar",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?6",
+content:"FIFA confirmed new international football schedules as teams prepare for upcoming tournaments.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"Sports",
+title:"Champions League Quarter-Final Draw Completed",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?7",
+content:"European football giants learned their opponents after UEFA conducted the Champions League quarter-final draw.",
+author:"Editor: Omotara How"
+},
+
+{
+category:"World",
+title:"Oil Prices Surge as Middle East Tensions Rise",
+time:"March 6, 2026",
+image:"https://picsum.photos/800/400?8",
+content:"Energy markets jumped sharply after new geopolitical tensions disrupted global supply expectations.",
+author:"Editor: Omotara How"
+}
+
 ];
 
-/* ===== Display functions ===== */
-function displayNews(data){
-  const container = document.getElementById("newsContainer");
-  container.innerHTML = "";
-  data.forEach((news,index)=>{
-    container.innerHTML += `
-      <div class="card" onclick="toggleDetails(${index})">
-        <img src="${news.image}">
-        <h3>${news.title}</h3>
-        <div class="time">${new Date(news.time).toLocaleString()}</div>
-        <div class="details" id="details${index}">
-          <p>${news.content}</p>
-          <p><em>By: ${news.author}</em></p>
-        </div>
-      </div>
-    `;
-  });
+function render(list){
+let html="";
+list.forEach((n,i)=>{
+html+=`
+<div class="card" onclick="toggle(${i})">
+<img src="${n.image}">
+<h3>${n.title}</h3>
+<div class="time">${n.time}</div>
+<div class="details" id="d${i}">
+<p>${n.content}</p>
+<p><em>${n.author}</em></p>
+</div>
+</div>
+`;
+});
+document.getElementById("news").innerHTML=html;
 }
 
-function toggleDetails(index){
-  const detail = document.getElementById("details"+index);
-  detail.style.display = detail.style.display==="block"?"none":"block";
+function toggle(i){
+let d=document.getElementById("d"+i);
+d.style.display=d.style.display=="block"?"none":"block";
 }
 
-function filterNews(category){
-  if(category==="All"){
-    displayNews(newsData);
-  }else{
-    displayNews(newsData.filter(n=>n.category===category));
-  }
+function showCategory(cat){
+if(cat=="All"){render(news);return;}
+render(news.filter(n=>n.category==cat));
 }
 
-displayNews(newsData);
-</script>
+render(news);
 
-</body>
+</script></body>
 </html>

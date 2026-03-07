@@ -136,17 +136,24 @@ function render(){
             </div>
         `;
         card.onclick = ()=>{
-            const d = document.getElementById("d"+i);
-            d.style.display = d.style.display==="block"?"none":"block";
-        };
+    if(allNews[i].url && allNews[i].url !== ""){
+        window.open(allNews[i].url,"_blank");
+    } else {
+        const d = document.getElementById("d"+i);
+        d.style.display = d.style.display==="block"?"none":"block";
+    }
+};
         container.appendChild(card);
     });
 }
 
 /* === Filter by Category === */
 function showCategory(cat){
-    if(cat==="All"){filteredNews=allNews;}
-    else{filteredNews=allNews.filter(n=>n.category===cat);}
+    if(cat==="All"){
+        filteredNews=allNews; // show all categories
+    } else {
+        filteredNews=allNews.filter(n=>n.category===cat);
+    }
     render();
 }
 
@@ -173,3 +180,4 @@ setInterval(loadNews,600000);
 </script>
 </body>
 </html>
+

@@ -20,6 +20,7 @@ nav button:hover{background:#c40000;}
 .card img{width:100%;border-radius:5px;}
 .time{color:gray;font-size:13px;}
 .details{display:none;margin-top:10px;}
+.load-more{padding:10px 20px;margin:10px;cursor:pointer;background:#c40000;color:white;border:none;border-radius:5px;font-size:14px;}
 footer{background:#111;color:white;text-align:center;padding:20px;}
 .social img{width:32px;margin:0 6px;}
 </style>
@@ -61,17 +62,18 @@ footer{background:#111;color:white;text-align:center;padding:20px;}
 <script>
 let allNews = [];
 let filteredNews = [];
+let visibleCount = 10;
 
 /* === INSERT YOUR API KEY HERE === */
 const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
 
-/* === Load API News === */
+/* === Load API News per Category === */
 async function loadNews(){
     try{
         const categories = ["world","technology","sports"];
         let apiNews = [];
         for(let cat of categories){
-            const res = await fetch(`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=10&topic=${cat}`);
+            const res = await fetch(`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=25&topic=${cat}`);
             const data = await res.json();
             if(data.articles){
                 apiNews = apiNews.concat(data.articles.map(a=>({
@@ -80,13 +82,15 @@ async function loadNews(){
                     time:new Date(a.publishedAt).toLocaleDateString(),
                     image:a.image || "https://picsum.photos/800/400",
                     content:a.description || "Full story developing.",
-                    author:a.source.name
+                    author:a.source.name,
+                    url:a.url || ""
                 })));
             }
         }
         allNews = apiNews;
         addElectionNews();
         filteredNews = allNews;
+        visibleCount = 10;
         updateBreakingNews();
         render();
     }catch(e){
@@ -95,7 +99,7 @@ async function loadNews(){
     }
 }
 
-/* === Add Election Watch Stories === */
+/* === Election Watch Stories === */
 function addElectionNews(){
     allNews.push(
         {category:"Election",title:"France Prepares Municipal Elections",time:"7 March 2026",image:"https://picsum.photos/800/400?501",content:"France prepares nationwide municipal elections next week.",author:"Editor: Omotara How"},
@@ -109,21 +113,23 @@ function addElectionNews(){
 /* === Backup News if API Fails === */
 function loadBackup(){
     allNews = [
-        {category:"World",title:"Markets React to Rising Oil Prices",time:"7 March 2026",image:"https://picsum.photos/800/400?1",content:"Markets react cautiously as oil prices rise amid global tensions.",author:"Radiant Waves News"},
-        {category:"Technology",title:"AI Companies Release New Models",time:"7 March 2026",image:"https://picsum.photos/800/400?2",content:"Tech companies race to release new AI models.",author:"Radiant Waves News"},
-        {category:"Sports",title:"Champions League Draw Completed",time:"7 March 2026",image:"https://picsum.photos/800/400?3",content:"European football teams learn upcoming opponents.",author:"Radiant Waves News"}
+        {category:"World",title:"Markets React to Rising Oil Prices",time:"7 March 2026",image:"https://picsum.photos/800/400?1",content:"Markets react cautiously as oil prices rise amid global tensions.",author:"Radiant Waves News", url:""},
+        {category:"Technology",title:"AI Companies Release New Models",time:"7 March 2026",image:"https://picsum.photos/800/400?2",content:"Tech companies race to release new AI models.",author:"Radiant Waves News", url:""},
+        {category:"Sports",title:"Champions League Draw Completed",time:"7 March 2026",image:"https://picsum.photos/800/400?3",content:"European football teams learn upcoming opponents.",author:"Radiant Waves News", url:""}
     ];
     addElectionNews();
     filteredNews = allNews;
+    visibleCount = 10;
     updateBreakingNews();
     render();
 }
 
-/* === Render News Cards === */
+/* === Render News Cards with Load More === */
 function render(){
     const container = document.getElementById("news");
     container.innerHTML = "";
-    filteredNews.forEach((n,i)=>{
+    const toShow = filteredNews.slice(0, visibleCount);
+    toShow.forEach((n,i)=>{
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
@@ -136,29 +142,38 @@ function render(){
             </div>
         `;
         card.onclick = ()=>{
-    if(allNews[i].url && allNews[i].url !== ""){
-        window.open(allNews[i].url,"_blank");
-    } else {
-        const d = document.getElementById("d"+i);
-        d.style.display = d.style.display==="block"?"none":"block";
-    }
-};
+            if(n.url && n.url!==""){
+                window.open(n.url,"_blank");
+            }else{
+                const d = document.getElementById("d"+i);
+                d.style.display = d.style.display==="block"?"none":"block";
+            }
+        };
         container.appendChild(card);
     });
+    if(visibleCount < filteredNews.length){
+        const btn = document.createElement("button");
+        btn.className = "load-more";
+        btn.innerText = "Load More";
+        btn.onclick = ()=>{
+            visibleCount += 10;
+            render();
+        };
+        container.appendChild(btn);
+    }
 }
 
 /* === Filter by Category === */
 function showCategory(cat){
-    if(cat==="All"){
-        filteredNews=allNews; // show all categories
-    } else {
-        filteredNews=allNews.filter(n=>n.category===cat);
-    }
+    visibleCount = 10;
+    if(cat==="All"){filteredNews=allNews;}
+    else{filteredNews=allNews.filter(n=>n.category===cat);}
     render();
 }
 
 /* === Search Function === */
 function searchNews(text){
+    visibleCount = 10;
     filteredNews = allNews.filter(n=> n.title.toLowerCase().includes(text.toLowerCase()));
     render();
 }
@@ -172,12 +187,10 @@ function updateBreakingNews(){
 /* === Utility Capitalize Function === */
 function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
 
-/* === Load News Initially & Auto-refresh every 10 min === */
+/* === Load News Initially & Auto-refresh === */
 loadBackup();
 loadNews();
 setInterval(loadNews,600000);
-
 </script>
 </body>
 </html>
-

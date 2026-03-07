@@ -4,157 +4,218 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c00;color:white;padding:15px;text-align:center;font-size:26px;font-weight:bold;}
-nav{background:#111;display:flex;overflow:auto;}
-nav button{background:none;border:none;color:white;padding:14px 18px;cursor:pointer;font-size:15px;}
-nav button:hover{background:#c00;}
-.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 20s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
-.container{padding:15px;}
-.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:10px;cursor:pointer;}
-.card img{width:100%;border-radius:5px;}
-.card h3{margin:10px 0 6px 0;}
-.time{color:gray;font-size:13px;}
-.details{display:none;margin-top:10px;}
-footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20px;}
-.social img{width:32px;height:32px;vertical-align:middle;margin:0 8px;}
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#c40000;
+color:white;
+padding:15px;
+font-size:26px;
+text-align:center;
+font-weight:bold;
+}
+
+nav{
+background:#111;
+display:flex;
+overflow:auto;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:14px 18px;
+cursor:pointer;
+font-size:15px;
+}
+
+nav button:hover{
+background:#c40000;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+white-space:nowrap;
+overflow:hidden;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+padding:10px;
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+border-radius:5px;
+}
+
+.time{
+color:gray;
+font-size:13px;
+}
+
+.details{
+display:none;
+margin-top:10px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.social img{
+width:32px;
+margin:0 6px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>Radiant Waves News</header>
 
 <div class="breaking">
 <span id="breaking-news">
-🔴 Middle East conflict escalates after overnight strikes | 🔴 Global oil prices surge above $90 | 🔴 Stock markets react to rising tensions | 🔴 International Women’s Day events begin worldwide | 🔴 Formula One season begins in Melbourne
+🔴 Middle East tensions rise | 🔴 Oil prices surge | 🔴 France election next week | 🔴 Global markets cautious
 </span>
 </div>
 
 <nav>
+
 <button onclick="showCategory('All')">Home</button>
 <button onclick="showCategory('Nigeria')">Naija Pulse</button>
 <button onclick="showCategory('World')">World</button>
 <button onclick="showCategory('Technology')">Technology</button>
 <button onclick="showCategory('Sports')">Sports</button>
+<button onclick="showCategory('Election')">🗳 Election Watch</button>
+
 </nav>
 
 <div class="container" id="news"></div>
 
 <footer>
+
 <div class="social">
-<a href="https://instagram.com/radiantwaves1" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/32/174/174855.png" alt="Instagram">
+
+<a href="https://instagram.com">
+<img src="https://cdn-icons-png.flaticon.com/32/174/174855.png">
 </a>
-<a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png" alt="TikTok">
+
+<a href="https://facebook.com">
+<img src="https://cdn-icons-png.flaticon.com/32/145/145802.png">
 </a>
-<a href="https://facebook.com/radiantwavesnews" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/32/145/145802.png" alt="Facebook">
+
+<a href="https://tiktok.com">
+<img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png">
 </a>
-<a href="https://twitter.com/radiantwaves13528995" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="X">
+
+<a href="https://twitter.com">
+<img src="https://cdn-icons-png.flaticon.com/32/733/733579.png">
 </a>
+
 </div>
-<br>
-<audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
+
 <p>© 2026 Radiant Waves News</p>
+
 </footer>
 
 <script>
-// ===== Local news =====
-const allNews=[
 
-{category:"World",title:"Middle East Conflict Escalates After Overnight Airstrikes",time:"7 March 2026",image:"https://picsum.photos/800/400?201",content:"Military tensions intensified overnight after reported airstrikes targeted several strategic facilities. Global leaders are urging restraint and diplomatic negotiations to avoid wider conflict.",author:"Editor: Omotara How"},
+let allNews=[];
 
-{category:"World",title:"Global Oil Prices Surge Above $90 Amid Supply Fears",time:"7 March 2026",image:"https://picsum.photos/800/400?202",content:"Energy markets reacted strongly as fears of supply disruption pushed global oil prices higher during early morning trading.",author:"Editor: Omotara How"},
+fetch("news.json")
+.then(res=>res.json())
+.then(data=>{
+allNews=data;
+render(allNews);
+});
 
-{category:"World",title:"Stock Markets Open Cautiously Worldwide",time:"7 March 2026",image:"https://picsum.photos/800/400?203",content:"Major stock exchanges across Asia and Europe opened cautiously as investors reacted to geopolitical developments and energy market volatility.",author:"Editor: Omotara How"},
-
-{category:"World",title:"International Women's Day Events Begin Globally",time:"7 March 2026",image:"https://picsum.photos/800/400?204",content:"Communities worldwide are preparing events, conferences and marches to mark International Women's Day and promote gender equality.",author:"Editor: Omotara How"},
-
-{category:"World",title:"United Nations Expands Humanitarian Support",time:"7 March 2026",image:"https://picsum.photos/800/400?205",content:"The United Nations says additional humanitarian aid will be deployed to vulnerable regions affected by conflict and instability.",author:"Editor: Omotara How"},
-
-
-{category:"Nigeria",title:"Federal Government Reviews Economic Forecast",time:"7 March 2026",image:"https://picsum.photos/800/400?206",content:"Nigeria’s finance authorities are reviewing economic projections as global oil prices continue to fluctuate.",author:"Editor: Omotara How"},
-
-{category:"Nigeria",title:"Lagos Announces New Transport Infrastructure Projects",time:"7 March 2026",image:"https://picsum.photos/800/400?207",content:"The Lagos State Government announced new road and rail infrastructure plans to improve urban mobility.",author:"Editor: Omotara How"},
-
-{category:"Nigeria",title:"Agriculture Investment Program Launched",time:"7 March 2026",image:"https://picsum.photos/800/400?208",content:"Authorities unveiled a new agricultural investment program aimed at boosting food production and supporting farmers.",author:"Editor: Omotara How"},
-
-{category:"Nigeria",title:"Digital Skills Training Expands Across Nigerian Universities",time:"7 March 2026",image:"https://picsum.photos/800/400?209",content:"Universities are expanding technology training programs to prepare students for careers in the digital economy.",author:"Editor: Omotara How"},
-
-{category:"Nigeria",title:"Energy Sector Reforms Under Review",time:"7 March 2026",image:"https://picsum.photos/800/400?210",content:"Officials say new reforms are being studied to strengthen Nigeria’s electricity supply and energy infrastructure.",author:"Editor: Omotara How"},
-
-
-{category:"Technology",title:"Artificial Intelligence Investment Reaches New Record",time:"7 March 2026",image:"https://picsum.photos/800/400?211",content:"Major technology companies are investing billions into artificial intelligence research and development.",author:"Editor: Omotara How"},
-
-{category:"Technology",title:"Cybersecurity Experts Warn of Global Threats",time:"7 March 2026",image:"https://picsum.photos/800/400?212",content:"Security experts warn that rising geopolitical tensions may trigger coordinated cyber attacks worldwide.",author:"Editor: Omotara How"},
-
-{category:"Technology",title:"Tech Startups Attract Global Venture Funding",time:"7 March 2026",image:"https://picsum.photos/800/400?213",content:"Investment in technology startups continues to grow as investors focus on AI, robotics and renewable energy innovation.",author:"Editor: Omotara How"},
-
-{category:"Technology",title:"Cloud Computing Demand Continues to Rise",time:"7 March 2026",image:"https://picsum.photos/800/400?214",content:"Businesses worldwide are increasing reliance on cloud services to support digital transformation.",author:"Editor: Omotara How"},
-
-{category:"Technology",title:"New AI Tools Transform Media Industry",time:"7 March 2026",image:"https://picsum.photos/800/400?215",content:"Artificial intelligence tools are rapidly transforming journalism, marketing and media production worldwide.",author:"Editor: Omotara How"},
-
-
-{category:"Sports",title:"Formula One Season Begins in Melbourne",time:"7 March 2026",image:"https://picsum.photos/800/400?216",content:"The 2026 Formula One season officially begins this weekend with the Australian Grand Prix in Melbourne.",author:"Editor: Omotara How"},
-
-{category:"Sports",title:"Indian Wells Tennis Tournament Opens",time:"7 March 2026",image:"https://picsum.photos/800/400?217",content:"Top tennis stars are competing at the prestigious Indian Wells tournament in the United States.",author:"Editor: Omotara How"},
-
-{category:"Sports",title:"European Football Leagues Enter Final Stage",time:"7 March 2026",image:"https://picsum.photos/800/400?218",content:"Major European leagues approach the final stage of the season with championship battles intensifying.",author:"Editor: Omotara How"},
-
-{category:"Sports",title:"CAF Prepares New African Football Tournament",time:"7 March 2026",image:"https://picsum.photos/800/400?219",content:"African football authorities are planning new competitions aimed at promoting regional football development.",author:"Editor: Omotara How"},
-
-{category:"Sports",title:"Young Nigerian Athletes Shine in International Events",time:"7 March 2026",image:"https://picsum.photos/800/400?220",content:"Young Nigerian athletes continue to make impressive performances in global competitions.",author:"Editor: Omotara How"},
-
-
-{category:"World",title:"Global Aviation Sector Reports Travel Growth",time:"7 March 2026",image:"https://picsum.photos/800/400?221",content:"Air travel demand continues rising worldwide as tourism and business travel recover strongly.",author:"Editor: Omotara How"},
-
-{category:"World",title:"Climate Experts Call for Faster Action",time:"7 March 2026",image:"https://picsum.photos/800/400?222",content:"Scientists say stronger international cooperation is required to address climate change risks.",author:"Editor: Omotara How"},
-
-{category:"World",title:"Economic Growth Forecast Revised",time:"7 March 2026",image:"https://picsum.photos/800/400?223",content:"Global economic growth forecasts have been adjusted as markets react to geopolitical tensions.",author:"Editor: Omotara How"},
-
-{category:"World",title:"Global Shipping Routes Face Delays",time:"7 March 2026",image:"https://picsum.photos/800/400?224",content:"Shipping companies report delays on key international trade routes due to rising security concerns.",author:"Editor: Omotara How"},
-
-{category:"World",title:"Tourism Industry Shows Strong Recovery",time:"7 March 2026",image:"https://picsum.photos/800/400?225",content:"Tourism numbers continue to improve globally as international travel demand increases.",author:"Editor: Omotara How"}
-
-];
-// ===== Render =====
 function render(list){
-  const container=document.getElementById("news");
-  let html="";
-  list.forEach((n,i)=>{
-    html+=`
-    <div class="card" onclick="toggle(${i})">
-      <img src="${n.image}">
-      <h3>${n.title}</h3>
-      <div class="time">${n.time}</div>
-      <div class="details" id="d${i}">
-        <p>${n.content}</p>
-        <p><em>${n.author}</em></p>
-      </div>
-    </div>`;
-  });
-  container.innerHTML=html;
+
+const container=document.getElementById("news");
+
+let html="";
+
+list.forEach((n,i)=>{
+
+html+=`
+
+<div class="card" onclick="toggle(${i})">
+
+<img src="${n.image}">
+
+<h3>${n.title}</h3>
+
+<div class="time">${n.time}</div>
+
+<div class="details" id="d${i}">
+
+<p>${n.content}</p>
+
+<p><em>${n.author}</em></p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+container.innerHTML=html;
+
 }
 
 function toggle(i){
-  const d=document.getElementById("d"+i);
-  d.style.display=d.style.display==="block"?"none":"block";
+
+const d=document.getElementById("d"+i);
+
+d.style.display=d.style.display==="block"?"none":"block";
+
 }
 
 function showCategory(cat){
-  if(cat==="All"){render(allNews); return;}
-  render(allNews.filter(n=>n.category===cat));
+
+if(cat==="All"){render(allNews);return;}
+
+render(allNews.filter(n=>n.category===cat));
+
 }
 
-render(allNews);
 </script>
+
 </body>
 </html>
-

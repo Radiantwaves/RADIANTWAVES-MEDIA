@@ -37,6 +37,7 @@ footer{background:#111;color:white;text-align:center;padding:20px;}
 
 <nav>
 <button onclick="showCategory('All')">Home</button>
+<button onclick="showCategory('Naija Pulse')">Naija Pulse</button>
 <button onclick="showCategory('World')">World</button>
 <button onclick="showCategory('Technology')">Technology</button>
 <button onclick="showCategory('Sports')">Sports</button>
@@ -79,15 +80,17 @@ async function loadNews(){
                 apiNews = apiNews.concat(data.articles.map(a=>({
                     category:capitalize(cat),
                     title:a.title,
+                    synopsis:a.description || "Full story developing.",
+                    details:a.content || a.description || "Full story developing.",
                     time:new Date(a.publishedAt).toLocaleDateString(),
                     image:a.image || "https://picsum.photos/800/400",
-                    content:a.description || "Full story developing.",
                     author:a.source.name,
                     url:a.url || ""
                 })));
             }
         }
         allNews = apiNews;
+        addNaijaPulse();
         addElectionNews();
         filteredNews = allNews;
         visibleCount = 10;
@@ -99,98 +102,31 @@ async function loadNews(){
     }
 }
 
+/* === Naija Pulse Stories === */
+function addNaijaPulse(){
+    allNews.push(
+        {category:"Naija Pulse",title:"Tinubu Nominates Oyedele",synopsis:"President Bola Tinubu nominates Taiwo Oyedele as Finance Minister.",details:"This nomination is part of government's economic reform plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?1",author:"Editor: Omotara How",url:""},
+        {category:"Naija Pulse",title:"Yobe APC Chairman Re-elected",synopsis:"Yobe APC chairman wins re-election.",details:"Delegates voted overwhelmingly during the party congress.",time:"7 March 2026",image:"https://picsum.photos/600/300?2",author:"Editor: Omotara How",url:""},
+        {category:"Naija Pulse",title:"Lagos Traffic Law Enforcement Updates",synopsis:"New traffic regulations enforced across Lagos.",details:"Authorities report a drop in accidents following new laws.",time:"7 March 2026",image:"https://picsum.photos/600/300?3",author:"Editor: Omotara How",url:""}
+    );
+}
+
 /* === Election Watch Stories === */
 function addElectionNews(){
     allNews.push(
-        {category:"Election",title:"France Prepares Municipal Elections",time:"7 March 2026",image:"https://picsum.photos/800/400?501",content:"France prepares nationwide municipal elections next week.",author:"Editor: Omotara How"},
-        {category:"Election",title:"Nigeria Prepares 2027 Elections",time:"7 March 2026",image:"https://picsum.photos/800/400?502",content:"Political parties prepare for 2027 national elections.",author:"Editor: Omotara How"},
-        {category:"Election",title:"UK Local Elections Test Parties",time:"7 March 2026",image:"https://picsum.photos/800/400?503",content:"Upcoming UK local elections will test major parties.",author:"Editor: Omotara How"},
-        {category:"Election",title:"US Midterms Could Reshape Congress",time:"7 March 2026",image:"https://picsum.photos/800/400?504",content:"Midterms may shift balance of power in Congress.",author:"Editor: Omotara How"},
-        {category:"Election",title:"India State Elections Draw Attention",time:"7 March 2026",image:"https://picsum.photos/800/400?505",content:"State elections across India are closely watched.",author:"Editor: Omotara How"}
+        {category:"Election",title:"France Municipal Elections",synopsis:"France prepares municipal elections next week.",details:"Voters across France will elect local councils and mayors.",time:"7 March 2026",image:"https://picsum.photos/800/400?501",author:"Editor: Omotara How",url:""},
+        {category:"Election",title:"Nigeria Prepares 2027 Elections",synopsis:"Political parties prepare for 2027 national elections.",details:"Campaigns and candidate registration underway.",time:"7 March 2026",image:"https://picsum.photos/800/400?502",author:"Editor: Omotara How",url:""},
+        {category:"Election",title:"UK Local Elections",synopsis:"Upcoming UK local elections will test parties.",details:"Councils across UK vote for new representatives.",time:"7 March 2026",image:"https://picsum.photos/800/400?503",author:"Editor: Omotara How",url:""},
+        {category:"Election",title:"US Midterms Update",synopsis:"Midterms may shift balance of power.",details:"Political analysts monitor key swing states closely.",time:"7 March 2026",image:"https://picsum.photos/800/400?504",author:"Editor: Omotara How",url:""},
+        {category:"Election",title:"India State Elections",synopsis:"State elections across India are closely watched.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
     );
 }
 
 /* === Backup News if API Fails === */
 function loadBackup(){
     allNews = [
-        {category:"World",title:"Markets React to Rising Oil Prices",time:"7 March 2026",image:"https://picsum.photos/800/400?1",content:"Markets react cautiously as oil prices rise amid global tensions.",author:"Radiant Waves News", url:""},
-        {category:"Technology",title:"AI Companies Release New Models",time:"7 March 2026",image:"https://picsum.photos/800/400?2",content:"Tech companies race to release new AI models.",author:"Radiant Waves News", url:""},
-        {category:"Sports",title:"Champions League Draw Completed",time:"7 March 2026",image:"https://picsum.photos/800/400?3",content:"European football teams learn upcoming opponents.",author:"Radiant Waves News", url:""}
+        {category:"World",title:"Markets React to Rising Oil Prices",synopsis:"Markets react cautiously as oil prices rise.",details:"Markets react cautiously as oil prices rise amid global tensions.",time:"7 March 2026",image:"https://picsum.photos/800/400?1",author:"Radiant Waves News",url:""},
+        {category:"Technology",title:"AI Companies Release New Models",synopsis:"Tech companies race to release new AI models.",details:"Several companies launched AI models impacting global tech.",time:"7 March 2026",image:"https://picsum.photos/800/400?2",author:"Radiant Waves News",url:""},
+        {category:"Sports",title:"Champions League Draw Completed",synopsis:"European football teams learn upcoming opponents.",details:"Draws determine matchups for upcoming Champions League.",time:"7 March 2026",image:"https://picsum.photos/800/400?3",author:"Radiant Waves News",url:""}
     ];
-    addElectionNews();
-    filteredNews = allNews;
-    visibleCount = 10;
-    updateBreakingNews();
-    render();
-}
-
-/* === Render News Cards with Load More === */
-function render(){
-    const container = document.getElementById("news");
-    container.innerHTML = "";
-    const toShow = filteredNews.slice(0, visibleCount);
-    toShow.forEach((n,i)=>{
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-            <img src="${n.image}">
-            <h3>${n.title}</h3>
-            <div class="time">${n.time}</div>
-            <div class="details" id="d${i}">
-                <p>${n.content}</p>
-                <p><em>${n.author}</em></p>
-            </div>
-        `;
-        card.onclick = ()=>{
-            if(n.url && n.url!==""){
-                window.open(n.url,"_blank");
-            }else{
-                const d = document.getElementById("d"+i);
-                d.style.display = d.style.display==="block"?"none":"block";
-            }
-        };
-        container.appendChild(card);
-    });
-    if(visibleCount < filteredNews.length){
-        const btn = document.createElement("button");
-        btn.className = "load-more";
-        btn.innerText = "Load More";
-        btn.onclick = ()=>{
-            visibleCount += 10;
-            render();
-        };
-        container.appendChild(btn);
-    }
-}
-
-/* === Filter by Category === */
-function showCategory(cat){
-    visibleCount = 10;
-    if(cat==="All"){filteredNews=allNews;}
-    else{filteredNews=allNews.filter(n=>n.category===cat);}
-    render();
-}
-
-/* === Search Function === */
-function searchNews(text){
-    visibleCount = 10;
-    filteredNews = allNews.filter(n=> n.title.toLowerCase().includes(text.toLowerCase()));
-    render();
-}
-
-/* === Update Breaking News Ticker === */
-function updateBreakingNews(){
-    const breaking = document.getElementById("breaking-news");
-    breaking.innerText = allNews.slice(0,10).map(n=>"🔴 "+n.title).join(" | ");
-}
-
-/* === Utility Capitalize Function === */
-function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
-
-/* === Load News Initially & Auto-refresh === */
-loadBackup();
-loadNews();
-setInterval(loadNews,600000);
-</script>
-</body>
-</html>
+    addNaijaPulse

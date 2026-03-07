@@ -65,68 +65,111 @@ let allNews = [];
 let filteredNews = [];
 let visibleCount = 10;
 
-/* === INSERT YOUR API KEY HERE === */
-const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
+/* === Naija Pulse JSON embedded === */
+const naijaPulse = [
+  {category:"Naija Pulse",title:"Tinubu Nominates Oyedele",synopsis:"President Bola Tinubu nominates Taiwo Oyedele as Finance Minister.",details:"This nomination is part of government's economic reform plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?1",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Yobe APC Chairman Re-elected",synopsis:"Yobe APC chairman wins re-election.",details:"Delegates voted overwhelmingly during the party congress.",time:"7 March 2026",image:"https://picsum.photos/600/300?2",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Lagos Traffic Law Enforcement Updates",synopsis:"New traffic regulations enforced across Lagos.",details:"Authorities report a drop in accidents following new laws.",time:"7 March 2026",image:"https://picsum.photos/600/300?3",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Federal Government Approves New Budget",synopsis:"FG releases updated 2026 budget.",details:"Budget focuses on infrastructure, healthcare, and education.",time:"7 March 2026",image:"https://picsum.photos/600/300?4",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Niger Delta Security Patrols Intensified",synopsis:"New security measures in oil-rich Niger Delta.",details:"Authorities increase patrols following recent unrest.",time:"7 March 2026",image:"https://picsum.photos/600/300?5",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Kano State Teachers Strike Ends",synopsis:"Teachers return to classrooms after negotiations.",details:"The strike was resolved with salary adjustments and policy changes.",time:"7 March 2026",image:"https://picsum.photos/600/300?6",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Abuja Roads Renovation Begins",synopsis:"Major roadworks start in the capital.",details:"Renovations aim to improve traffic flow and reduce accidents.",time:"7 March 2026",image:"https://picsum.photos/600/300?7",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Kaduna Governor Launches Health Initiative",synopsis:"New healthcare program launched.",details:"Program aims to expand medical access in rural areas.",time:"7 March 2026",image:"https://picsum.photos/600/300?8",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Port Harcourt Flood Alert Issued",synopsis:"Flood warnings released after heavy rains.",details:"Residents advised to evacuate vulnerable areas.",time:"7 March 2026",image:"https://picsum.photos/600/300?9",author:"Editor: Omotara How",url:""},
+  {category:"Naija Pulse",title:"Osun State Launches New Education Policy",synopsis:"New reforms introduced in education sector.",details:"Focus on digital learning and teacher training.",time:"7 March 2026",image:"https://picsum.photos/600/300?10",author:"Editor: Omotara How",url:""}
+];
 
-/* === Load API News per Category === */
-async function loadNews(){
-    try{
-        const categories = ["world","technology","sports"];
-        let apiNews = [];
-        for(let cat of categories){
-            const res = await fetch(`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=25&topic=${cat}`);
-            const data = await res.json();
-            if(data.articles){
-                apiNews = apiNews.concat(data.articles.map(a=>({
-                    category:capitalize(cat),
-                    title:a.title,
-                    synopsis:a.description || "Full story developing.",
-                    details:a.content || a.description || "Full story developing.",
-                    time:new Date(a.publishedAt).toLocaleDateString(),
-                    image:a.image || "https://picsum.photos/800/400",
-                    author:a.source.name,
-                    url:a.url || ""
-                })));
+/* === Sample Global Stories (API or static backup) === */
+const globalNews = [
+  {category:"World",title:"Macron Urges De-escalation in Middle East",synopsis:"French President calls for calm amid tensions.",details:"Macron urges Israel and surrounding nations to exercise restraint.",time:"7 March 2026",image:"https://picsum.photos/800/400?11",author:"Editor: Global Desk",url:""},
+  {category:"World",title:"Global Oil Prices Surge",synopsis:"Energy markets spike after Middle East unrest.",details:"Oil prices jumped sharply affecting global economies.",time:"7 March 2026",image:"https://picsum.photos/800/400?12",author:"Editor: Global Desk",url:""},
+  {category:"World",title:"US Raises Global Military Alert",synopsis:"Pentagon increases overseas security.",details:"Security measures heightened at multiple bases globally.",time:"7 March 2026",image:"https://picsum.photos/800/400?13",author:"Editor: Global Desk",url:""},
+  {category:"Technology",title:"AI Companies Race to Release New Models",synopsis:"Tech giants push AI innovations.",details:"New AI models aim to revolutionize automation and productivity.",time:"7 March 2026",image:"https://picsum.photos/800/400?14",author:"Editor: Tech Desk",url:""},
+  {category:"Technology",title:"Cybersecurity Agencies Warn of Global Attacks",synopsis:"Potential cyberattacks target banks and infrastructure.",details:"Authorities alert the public and institutions worldwide.",time:"7 March 2026",image:"https://picsum.photos/800/400?15",author:"Editor: Tech Desk",url:""},
+  {category:"Sports",title:"Champions League Draw Completed",synopsis:"UEFA announces quarter-final matchups.",details:"Teams learn upcoming opponents after official draw.",time:"7 March 2026",image:"https://picsum.photos/800/400?16",author:"Editor: Sports Desk",url:""},
+  {category:"Sports",title:"FIFA Updates International Tournament Calendar",synopsis:"New international fixtures announced.",details:"Teams prepare for global tournaments under new schedule.",time:"7 March 2026",image:"https://picsum.photos/800/400?17",author:"Editor: Sports Desk",url:""}
+];
+
+/* === Election Watch === */
+const electionNews = [
+  {category:"Election",title:"France Municipal Elections",synopsis:"France prepares municipal elections next week.",details:"Voters across France will elect local councils and mayors.",time:"7 March 2026",image:"https://picsum.photos/800/400?501",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"Nigeria Prepares 2027 Elections",synopsis:"Political parties prepare for 2027 national elections.",details:"Campaigns and candidate registration underway.",time:"7 March 2026",image:"https://picsum.photos/800/400?502",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"UK Local Elections",synopsis:"Upcoming UK local elections will test parties.",details:"Councils across UK vote for new representatives.",time:"7 March 2026",image:"https://picsum.photos/800/400?503",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"US Midterms Update",synopsis:"Midterms may shift balance of power.",details:"Political analysts monitor key swing states closely.",time:"7 March 2026",image:"https://picsum.photos/800/400?504",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"India State Elections",synopsis:"State elections across India are closely watched.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
+];
+
+/* Merge all stories */
+allNews = naijaPulse.concat(globalNews).concat(electionNews);
+filteredNews = allNews;
+
+/* === Breaking News Ticker === */
+function updateBreakingNews(){
+    const breaking = document.getElementById("breaking-news");
+    breaking.innerText = allNews.slice(0,15).map(n=>"🔴 "+n.title).join(" | ");
+}
+updateBreakingNews();
+
+/* === Render News Cards === */
+function render(){
+    const container = document.getElementById("news");
+    container.innerHTML = "";
+    const toShow = filteredNews.slice(0,visibleCount);
+    toShow.forEach((n,i)=>{
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${n.image}">
+          <h3>${n.title}</h3>
+          <div class="time">${n.time}</div>
+          <p>${n.synopsis}</p>
+          <div class="details" id="d${i}">
+            <p>${n.details}</p>
+            <p><em>${n.author}</em></p>
+          </div>
+        `;
+        card.onclick = ()=>{
+            if(n.url && n.url!=="") window.open(n.url,"_blank");
+            else{
+                const d = document.getElementById("d"+i);
+                d.style.display = d.style.display==="block"?"none":"block";
             }
-        }
-        allNews = apiNews;
-        addNaijaPulse();
-        addElectionNews();
-        filteredNews = allNews;
-        visibleCount = 10;
-        updateBreakingNews();
-        render();
-    }catch(e){
-        console.log("API failed, loading backup news.");
-        loadBackup();
+        };
+        container.appendChild(card);
+    });
+    if(visibleCount < filteredNews.length){
+        const btn = document.createElement("button");
+        btn.className = "load-more";
+        btn.innerText = "Load More";
+        btn.onclick = ()=>{
+            visibleCount += 10;
+            render();
+        };
+        container.appendChild(btn);
     }
 }
 
-/* === Naija Pulse Stories === */
-function addNaijaPulse(){
-    allNews.push(
-        {category:"Naija Pulse",title:"Tinubu Nominates Oyedele",synopsis:"President Bola Tinubu nominates Taiwo Oyedele as Finance Minister.",details:"This nomination is part of government's economic reform plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?1",author:"Editor: Omotara How",url:""},
-        {category:"Naija Pulse",title:"Yobe APC Chairman Re-elected",synopsis:"Yobe APC chairman wins re-election.",details:"Delegates voted overwhelmingly during the party congress.",time:"7 March 2026",image:"https://picsum.photos/600/300?2",author:"Editor: Omotara How",url:""},
-        {category:"Naija Pulse",title:"Lagos Traffic Law Enforcement Updates",synopsis:"New traffic regulations enforced across Lagos.",details:"Authorities report a drop in accidents following new laws.",time:"7 March 2026",image:"https://picsum.photos/600/300?3",author:"Editor: Omotara How",url:""}
-    );
+/* === Show Category === */
+function showCategory(cat){
+    visibleCount = 10;
+    if(cat==="All") filteredNews=allNews;
+    else filteredNews=allNews.filter(n=>n.category===cat);
+    render();
 }
 
-/* === Election Watch Stories === */
-function addElectionNews(){
-    allNews.push(
-        {category:"Election",title:"France Municipal Elections",synopsis:"France prepares municipal elections next week.",details:"Voters across France will elect local councils and mayors.",time:"7 March 2026",image:"https://picsum.photos/800/400?501",author:"Editor: Omotara How",url:""},
-        {category:"Election",title:"Nigeria Prepares 2027 Elections",synopsis:"Political parties prepare for 2027 national elections.",details:"Campaigns and candidate registration underway.",time:"7 March 2026",image:"https://picsum.photos/800/400?502",author:"Editor: Omotara How",url:""},
-        {category:"Election",title:"UK Local Elections",synopsis:"Upcoming UK local elections will test parties.",details:"Councils across UK vote for new representatives.",time:"7 March 2026",image:"https://picsum.photos/800/400?503",author:"Editor: Omotara How",url:""},
-        {category:"Election",title:"US Midterms Update",synopsis:"Midterms may shift balance of power.",details:"Political analysts monitor key swing states closely.",time:"7 March 2026",image:"https://picsum.photos/800/400?504",author:"Editor: Omotara How",url:""},
-        {category:"Election",title:"India State Elections",synopsis:"State elections across India are closely watched.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
-    );
+/* === Search Function === */
+function searchNews(text){
+    visibleCount = 10;
+    filteredNews = allNews.filter(n=> n.title.toLowerCase().includes(text.toLowerCase()) || n.synopsis.toLowerCase().includes(text.toLowerCase()));
+    render();
 }
 
-/* === Backup News if API Fails === */
-function loadBackup(){
-    allNews = [
-        {category:"World",title:"Markets React to Rising Oil Prices",synopsis:"Markets react cautiously as oil prices rise.",details:"Markets react cautiously as oil prices rise amid global tensions.",time:"7 March 2026",image:"https://picsum.photos/800/400?1",author:"Radiant Waves News",url:""},
-        {category:"Technology",title:"AI Companies Release New Models",synopsis:"Tech companies race to release new AI models.",details:"Several companies launched AI models impacting global tech.",time:"7 March 2026",image:"https://picsum.photos/800/400?2",author:"Radiant Waves News",url:""},
-        {category:"Sports",title:"Champions League Draw Completed",synopsis:"European football teams learn upcoming opponents.",details:"Draws determine matchups for upcoming Champions League.",time:"7 March 2026",image:"https://picsum.photos/800/400?3",author:"Radiant Waves News",url:""}
-    ];
-    addNaijaPulse
+/* === Capitalize === */
+function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
+
+/* Initial render */
+render();
+</script>
+
+</body>
+</html>

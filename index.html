@@ -65,17 +65,13 @@ let allNews=[];
 let filteredNews=[];
 let visibleCount=10;
 
-/* === API Key === */
 const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
 
-/* === Fresh Naija Pulse JSON (20 stories) === */
+/* === Naija Pulse JSON === */
 const naijaPulse = [
 {category:"Naija Pulse",title:"Tinubu Nominates Oyedele as Finance Minister",synopsis:"President Bola Tinubu nominates Taiwo Oyedele.",details:"This nomination is part of government’s 2026 economic reform plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?1",author:"Editor: Omotara How",url:""},
 {category:"Naija Pulse",title:"Yobe APC Chairman Re-elected",synopsis:"Yobe APC chairman wins re-election.",details:"Delegates voted overwhelmingly during the party congress.",time:"7 March 2026",image:"https://picsum.photos/600/300?2",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Lagos Traffic Law Updates",synopsis:"New traffic regulations enforced across Lagos.",details:"Authorities report a drop in accidents following new laws.",time:"7 March 2026",image:"https://picsum.photos/600/300?3",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Federal Budget 2026 Approved",synopsis:"FG releases updated 2026 budget.",details:"Budget focuses on infrastructure, healthcare, and education.",time:"7 March 2026",image:"https://picsum.photos/600/300?4",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Niger Delta Security Patrols Intensified",synopsis:"New security measures in Niger Delta.",details:"Authorities increase patrols following unrest.",time:"7 March 2026",image:"https://picsum.photos/600/300?5",author:"Editor: Omotara How",url:""},
-// Add remaining 15 stories...
+// add remaining 18 stories...
 ];
 
 /* === Election Watch JSON === */
@@ -87,7 +83,14 @@ const electionNews = [
 {category:"Election",title:"India State Elections",synopsis:"State elections across India.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
 ];
 
-/* === Load API Stories (World, Technology, Sports) === */
+/* === Static fallback stories for World, Tech, Sports === */
+const fallbackStories=[
+{category:"World",title:"Middle East Conflict Escalates",synopsis:"Tensions rise in Middle East.",details:"Military activity reported in multiple regions.",time:"7 March 2026",image:"https://picsum.photos/800/400?101",author:"Editor: Omotara How",url:""},
+{category:"Technology",title:"AI Breakthrough Announced",synopsis:"New AI system released.",details:"Global tech companies invest heavily in AI.",time:"7 March 2026",image:"https://picsum.photos/800/400?201",author:"Editor: Omotara How",url:""},
+{category:"Sports",title:"Champions League Updates",synopsis:"Latest football results.",details:"Top teams advance to next stage.",time:"7 March 2026",image:"https://picsum.photos/800/400?301",author:"Editor: Omotara How",url:""}
+];
+
+/* === Load API Stories === */
 async function loadAPIStories(){
   const apiNews=[];
   try{
@@ -103,7 +106,7 @@ async function loadAPIStories(){
             synopsis:a.description||"Full story developing.",
             details:a.content||a.description||"Full story developing.",
             time:new Date(a.publishedAt).toLocaleDateString(),
-            image:a.image||"https://picsum.photos/800/400",
+            image:a.image||`https://picsum.photos/800/400?topic=${cat}`,
             author:a.source.name||"Unknown",
             url:a.url||""
           });
@@ -111,7 +114,8 @@ async function loadAPIStories(){
       }
     }
   }catch(e){
-    console.log("API failed, fallback to static stories.");
+    console.log("API failed, using fallback stories.");
+    fallbackStories.forEach(s=>apiNews.push(s));
   }finally{
     allNews=naijaPulse.concat(apiNews).concat(electionNews);
     filteredNews=allNews;
@@ -121,7 +125,7 @@ async function loadAPIStories(){
   }
 }
 
-/* === Render News Function === */
+/* === Render Function === */
 function render(){
   const container=document.getElementById("news");
   container.innerHTML="";
@@ -164,18 +168,18 @@ function showCategory(cat){
   render();
 }
 
-/* === Search Function === */
+/* === Search === */
 let searchTimeout;
 function searchNews(text){
   clearTimeout(searchTimeout);
   searchTimeout=setTimeout(()=>{
     visibleCount=10;
-    filteredNews=allNews.filter(n=>n.title.toLowerCase().includes(text.toLowerCase()) || n.synopsis.toLowerCase().includes(text.toLowerCase()) || n.details.toLowerCase().includes(text.toLowerCase()));
+    filteredNews=allNews.filter(n=>n.title.toLowerCase().includes(text.toLowerCase())||n.synopsis.toLowerCase().includes(text.toLowerCase())||n.details.toLowerCase().includes(text.toLowerCase()));
     render();
   },200);
 }
 
-/* === Breaking News Update === */
+/* === Breaking News === */
 function updateBreakingNews(){
   const breaking=document.getElementById("breaking-news");
   breaking.innerText=allNews.slice(0,20).map(n=>"🔴 "+n.title).join(" | ");
@@ -186,7 +190,7 @@ function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
 
 /* === Initial Load === */
 loadAPIStories();
-setInterval(loadAPIStories,300000); // Refresh every 5 min
+setInterval(loadAPIStories,300000); // Refresh every 5 minutes
 </script>
 </body>
 </html>

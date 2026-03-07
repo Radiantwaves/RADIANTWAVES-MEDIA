@@ -101,6 +101,8 @@ const electionNews = [
 
 /* === Load API News for World, Tech, Sports === */
 async function loadAPIStories(){
+async function loadAPIStories(){
+  const apiNews = [];
   try{
     const categories=["world","technology","sports"];
     for(let cat of categories){
@@ -108,7 +110,7 @@ async function loadAPIStories(){
       const data = await res.json();
       if(data.articles){
         data.articles.forEach(a=>{
-          allNews.push({
+          apiNews.push({
             category:capitalize(cat),
             title:a.title,
             synopsis:a.description||"Full story developing.",
@@ -122,16 +124,16 @@ async function loadAPIStories(){
       }
     }
   }catch(e){
-    console.log("API failed, using static backup news.");
+    console.log("API failed, using only static stories.");
   } finally{
-    allNews = naijaPulse.concat(electionNews,allNews);
-    filteredNews=allNews;
-    visibleCount=10;
+    // Combine all stories AFTER API
+    allNews = naijaPulse.concat(apiNews).concat(electionNews);
+    filteredNews = allNews;
+    visibleCount = 10;
     updateBreakingNews();
     render();
   }
 }
-
 /* === Render Function === */
 function render(){
   const container = document.getElementById("news");
@@ -205,3 +207,4 @@ setInterval(loadAPIStories,600000); // Refresh every 10 min
 
 </body>
 </html>
+

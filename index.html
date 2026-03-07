@@ -29,7 +29,7 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 
 <div class="breaking">
 <span id="breaking-news">
-🔴 Macron urges de-escalation in Middle East | 🔴 Nigeria reviews economic forecast | 🔴 Global oil prices surge
+🔴 Middle East conflict escalates after overnight strikes | 🔴 Global oil prices surge above $90 | 🔴 Stock markets react to rising tensions | 🔴 International Women’s Day events begin worldwide | 🔴 Formula One season begins in Melbourne
 </span>
 </div>
 
@@ -68,22 +68,62 @@ footer{background:#111;color:white;padding:20px;text-align:center;margin-top:20p
 <script>
 // ===== Local news =====
 const allNews=[
-{category:"Nigeria",title:"Tinubu Nominates Oyedele as Finance Minister",time:"March 6, 2026",image:"https://picsum.photos/800/400?101",content:"President Tinubu announced the nomination of Oyedele as Minister of State for Finance.",author:"Editor: Omotara How"},
-{category:"Nigeria",title:"Yobe APC Chairman Re-elected",time:"March 6, 2026",image:"https://picsum.photos/800/400?102",content:"The Yobe APC chairman secured re-election at the recent party congress.",author:"Editor: Omotara How"},
-{category:"Nigeria",title:"Nigeria Reviews Economic Forecast",time:"March 6, 2026",image:"https://picsum.photos/800/400?103",content:"Finance ministry reassesses revenue projections after global oil price surge.",author:"Editor: Omotara How"},
-{category:"Nigeria",title:"Lagos Infrastructure Projects Accelerate",time:"March 6, 2026",image:"https://picsum.photos/800/400?104",content:"New infrastructure projects launched across Lagos to boost transportation and commerce.",author:"Editor: Omotara How"},
-{category:"Technology",title:"Global AI Companies Race to Release New Models",time:"March 6, 2026",image:"https://picsum.photos/800/400?105",content:"Tech companies invest billions into AI development across US, Europe, and Asia.",author:"Editor: Omotara How"},
-{category:"Technology",title:"Cybersecurity Experts Warn of New Global Attacks",time:"March 6, 2026",image:"https://picsum.photos/800/400?106",content:"Security agencies warn of potential cyber attacks worldwide.",author:"Editor: Omotara How"},
-{category:"Sports",title:"Champions League Quarter-Final Draw Completed",time:"March 6, 2026",image:"https://picsum.photos/800/400?107",content:"UEFA conducted the Champions League quarter-final draw.",author:"Editor: Omotara How"},
-{category:"Sports",title:"FIFA Announces New International Tournament Calendar",time:"March 6, 2026",image:"https://picsum.photos/800/400?108",content:"FIFA confirmed new international football schedules.",author:"Editor: Omotara How"},
-{category:"World",title:"Macron Urges De-escalation in Middle East Conflict",time:"March 6, 2026",image:"https://picsum.photos/800/400?109",content:"French President Macron urges restraint as tensions rise in Middle East.",author:"Editor: Omotara How"},
-{category:"World",title:"Global Oil Prices Surge",time:"March 6, 2026",image:"https://picsum.photos/800/400?110",content:"Energy markets react sharply to Middle East tensions.",author:"Editor: Omotara How"},
-{category:"World",title:"US Raises Global Military Alert",time:"March 6, 2026",image:"https://picsum.photos/800/400?111",content:"The Pentagon increased security measures at overseas bases amid rising tensions.",author:"Editor: Omotara How"},
-{category:"World",title:"China Calls for Ceasefire",time:"March 6, 2026",image:"https://picsum.photos/800/400?112",content:"China urges all parties in Middle East to engage in dialogue and avoid escalation.",author:"Editor: Omotara How"},
-{category:"World",title:"African Union Warns of Economic Ripple Effects",time:"March 6, 2026",image:"https://picsum.photos/800/400?113",content:"AU warns global instability could impact trade and fuel costs in Africa.",author:"Editor: Omotara How"}
-// Add more stories here up to 25 total
-];
 
+{category:"World",title:"Middle East Conflict Escalates After Overnight Airstrikes",time:"7 March 2026",image:"https://picsum.photos/800/400?201",content:"Military tensions intensified overnight after reported airstrikes targeted several strategic facilities. Global leaders are urging restraint and diplomatic negotiations to avoid wider conflict.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Global Oil Prices Surge Above $90 Amid Supply Fears",time:"7 March 2026",image:"https://picsum.photos/800/400?202",content:"Energy markets reacted strongly as fears of supply disruption pushed global oil prices higher during early morning trading.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Stock Markets Open Cautiously Worldwide",time:"7 March 2026",image:"https://picsum.photos/800/400?203",content:"Major stock exchanges across Asia and Europe opened cautiously as investors reacted to geopolitical developments and energy market volatility.",author:"Editor: Omotara How"},
+
+{category:"World",title:"International Women's Day Events Begin Globally",time:"7 March 2026",image:"https://picsum.photos/800/400?204",content:"Communities worldwide are preparing events, conferences and marches to mark International Women's Day and promote gender equality.",author:"Editor: Omotara How"},
+
+{category:"World",title:"United Nations Expands Humanitarian Support",time:"7 March 2026",image:"https://picsum.photos/800/400?205",content:"The United Nations says additional humanitarian aid will be deployed to vulnerable regions affected by conflict and instability.",author:"Editor: Omotara How"},
+
+
+{category:"Nigeria",title:"Federal Government Reviews Economic Forecast",time:"7 March 2026",image:"https://picsum.photos/800/400?206",content:"Nigeria’s finance authorities are reviewing economic projections as global oil prices continue to fluctuate.",author:"Editor: Omotara How"},
+
+{category:"Nigeria",title:"Lagos Announces New Transport Infrastructure Projects",time:"7 March 2026",image:"https://picsum.photos/800/400?207",content:"The Lagos State Government announced new road and rail infrastructure plans to improve urban mobility.",author:"Editor: Omotara How"},
+
+{category:"Nigeria",title:"Agriculture Investment Program Launched",time:"7 March 2026",image:"https://picsum.photos/800/400?208",content:"Authorities unveiled a new agricultural investment program aimed at boosting food production and supporting farmers.",author:"Editor: Omotara How"},
+
+{category:"Nigeria",title:"Digital Skills Training Expands Across Nigerian Universities",time:"7 March 2026",image:"https://picsum.photos/800/400?209",content:"Universities are expanding technology training programs to prepare students for careers in the digital economy.",author:"Editor: Omotara How"},
+
+{category:"Nigeria",title:"Energy Sector Reforms Under Review",time:"7 March 2026",image:"https://picsum.photos/800/400?210",content:"Officials say new reforms are being studied to strengthen Nigeria’s electricity supply and energy infrastructure.",author:"Editor: Omotara How"},
+
+
+{category:"Technology",title:"Artificial Intelligence Investment Reaches New Record",time:"7 March 2026",image:"https://picsum.photos/800/400?211",content:"Major technology companies are investing billions into artificial intelligence research and development.",author:"Editor: Omotara How"},
+
+{category:"Technology",title:"Cybersecurity Experts Warn of Global Threats",time:"7 March 2026",image:"https://picsum.photos/800/400?212",content:"Security experts warn that rising geopolitical tensions may trigger coordinated cyber attacks worldwide.",author:"Editor: Omotara How"},
+
+{category:"Technology",title:"Tech Startups Attract Global Venture Funding",time:"7 March 2026",image:"https://picsum.photos/800/400?213",content:"Investment in technology startups continues to grow as investors focus on AI, robotics and renewable energy innovation.",author:"Editor: Omotara How"},
+
+{category:"Technology",title:"Cloud Computing Demand Continues to Rise",time:"7 March 2026",image:"https://picsum.photos/800/400?214",content:"Businesses worldwide are increasing reliance on cloud services to support digital transformation.",author:"Editor: Omotara How"},
+
+{category:"Technology",title:"New AI Tools Transform Media Industry",time:"7 March 2026",image:"https://picsum.photos/800/400?215",content:"Artificial intelligence tools are rapidly transforming journalism, marketing and media production worldwide.",author:"Editor: Omotara How"},
+
+
+{category:"Sports",title:"Formula One Season Begins in Melbourne",time:"7 March 2026",image:"https://picsum.photos/800/400?216",content:"The 2026 Formula One season officially begins this weekend with the Australian Grand Prix in Melbourne.",author:"Editor: Omotara How"},
+
+{category:"Sports",title:"Indian Wells Tennis Tournament Opens",time:"7 March 2026",image:"https://picsum.photos/800/400?217",content:"Top tennis stars are competing at the prestigious Indian Wells tournament in the United States.",author:"Editor: Omotara How"},
+
+{category:"Sports",title:"European Football Leagues Enter Final Stage",time:"7 March 2026",image:"https://picsum.photos/800/400?218",content:"Major European leagues approach the final stage of the season with championship battles intensifying.",author:"Editor: Omotara How"},
+
+{category:"Sports",title:"CAF Prepares New African Football Tournament",time:"7 March 2026",image:"https://picsum.photos/800/400?219",content:"African football authorities are planning new competitions aimed at promoting regional football development.",author:"Editor: Omotara How"},
+
+{category:"Sports",title:"Young Nigerian Athletes Shine in International Events",time:"7 March 2026",image:"https://picsum.photos/800/400?220",content:"Young Nigerian athletes continue to make impressive performances in global competitions.",author:"Editor: Omotara How"},
+
+
+{category:"World",title:"Global Aviation Sector Reports Travel Growth",time:"7 March 2026",image:"https://picsum.photos/800/400?221",content:"Air travel demand continues rising worldwide as tourism and business travel recover strongly.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Climate Experts Call for Faster Action",time:"7 March 2026",image:"https://picsum.photos/800/400?222",content:"Scientists say stronger international cooperation is required to address climate change risks.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Economic Growth Forecast Revised",time:"7 March 2026",image:"https://picsum.photos/800/400?223",content:"Global economic growth forecasts have been adjusted as markets react to geopolitical tensions.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Global Shipping Routes Face Delays",time:"7 March 2026",image:"https://picsum.photos/800/400?224",content:"Shipping companies report delays on key international trade routes due to rising security concerns.",author:"Editor: Omotara How"},
+
+{category:"World",title:"Tourism Industry Shows Strong Recovery",time:"7 March 2026",image:"https://picsum.photos/800/400?225",content:"Tourism numbers continue to improve globally as international travel demand increases.",author:"Editor: Omotara How"}
+
+];
 // ===== Render =====
 function render(list){
   const container=document.getElementById("news");
@@ -117,3 +157,4 @@ render(allNews);
 </script>
 </body>
 </html>
+

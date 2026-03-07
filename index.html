@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Radiant Waves News v3 -->
+
 <title>Radiant Waves News</title>
 
 <style>
@@ -114,6 +119,7 @@ margin:0 6px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -122,7 +128,7 @@ margin:0 6px;
 
 <div class="breaking">
 <span id="breaking-news">
-🔴 Global tensions rise | 🔴 Oil prices surge | 🔴 France election approaching | 🔴 Markets react worldwide
+🔴 Global tensions rise | 🔴 Oil prices surge | 🔴 France elections approaching | 🔴 Markets react worldwide
 </span>
 </div>
 
@@ -146,10 +152,10 @@ margin:0 6px;
 
 <div class="social">
 
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/174/174855.png"></a>
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/145/145802.png"></a>
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/733/733579.png"></a>
-<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png"></a>
+<img src="https://cdn-icons-png.flaticon.com/32/174/174855.png">
+<img src="https://cdn-icons-png.flaticon.com/32/145/145802.png">
+<img src="https://cdn-icons-png.flaticon.com/32/733/733579.png">
+<img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png">
 
 </div>
 
@@ -162,17 +168,21 @@ margin:0 6px;
 let allNews=[];
 let filteredNews=[];
 
+/* PASTE YOUR API KEY HERE */
+
 const API_KEY="10618a434f80cc4ffe52717ea1bf2401";
 
 async function loadNews(){
 
 try{
 
-const res=await fetch(`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=25`);
+const res = await fetch(
+`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=25`
+);
 
-const data=await res.json();
+const data = await res.json();
 
-allNews=data.articles.map(a=>({
+allNews = data.articles.map(a=>({
 
 category:"World",
 
@@ -194,9 +204,11 @@ filteredNews=allNews;
 
 render();
 
-}catch(e){
+}
 
-console.log("API failed loading backup");
+catch(e){
+
+console.log("API failed, loading backup");
 
 loadBackup();
 
@@ -213,8 +225,8 @@ category:"Election",
 title:"France Prepares for Municipal Elections",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?501",
-content:"France prepares for municipal elections scheduled next week which could influence national political momentum.",
-author:"Radiant Waves News"
+content:"France prepares for nationwide municipal elections scheduled next week.",
+author:"Editor: Omotara How"
 },
 
 {
@@ -222,8 +234,8 @@ category:"Election",
 title:"Nigeria Political Parties Prepare for 2027 Elections",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?502",
-content:"Political alliances and strategies are already forming ahead of Nigeria’s 2027 national elections.",
-author:"Radiant Waves News"
+content:"Political parties are already preparing strategies for the 2027 elections.",
+author:"Editor: Omotara How"
 },
 
 {
@@ -231,8 +243,8 @@ category:"Election",
 title:"UK Local Elections Expected to Test Major Parties",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?503",
-content:"Upcoming local elections will test support for political parties across the UK.",
-author:"Radiant Waves News"
+content:"Upcoming local elections will test the strength of major political parties.",
+author:"Editor: Omotara How"
 },
 
 {
@@ -240,8 +252,8 @@ category:"Election",
 title:"US Midterm Elections Expected to Reshape Congress",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?504",
-content:"The United States prepares for midterm elections that could reshape the balance of power in Congress.",
-author:"Radiant Waves News"
+content:"The upcoming midterm elections could reshape the balance of power in Congress.",
+author:"Editor: Omotara How"
 },
 
 {
@@ -249,8 +261,8 @@ category:"Election",
 title:"India State Elections Draw Global Attention",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?505",
-content:"State elections in India are closely watched as indicators of national political trends.",
-author:"Radiant Waves News"
+content:"State elections across India are closely watched by political analysts.",
+author:"Editor: Omotara How"
 }
 
 );
@@ -266,7 +278,7 @@ category:"World",
 title:"Global Markets React to Rising Oil Prices",
 time:"7 March 2026",
 image:"https://picsum.photos/800/400?1",
-content:"Markets around the world reacted cautiously as oil prices climbed amid geopolitical tensions.",
+content:"Markets reacted cautiously as oil prices climbed amid geopolitical tensions.",
 author:"Radiant Waves News"
 }
 
@@ -328,7 +340,9 @@ if(cat==="All"){
 
 filteredNews=allNews;
 
-}else{
+}
+
+else{
 
 filteredNews=allNews.filter(n=>n.category===cat);
 
@@ -342,7 +356,7 @@ function searchNews(text){
 
 filteredNews=allNews.filter(n=>
 
-title.toLowerCase().includes(text.toLowerCase())
+n.title.toLowerCase().includes(text.toLowerCase())
 
 );
 

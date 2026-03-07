@@ -64,30 +64,57 @@ footer{background:#111;color:white;text-align:center;padding:20px;}
 let allNews=[];
 let filteredNews=[];
 let visibleCount=10;
-
 const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
 
 /* === Naija Pulse JSON === */
 const naijaPulse = [
-{category:"Naija Pulse",title:"Tinubu Nominates Oyedele as Finance Minister",synopsis:"President Bola Tinubu nominates Taiwo Oyedele.",details:"This nomination is part of government’s 2026 economic reform plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?1",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Yobe APC Chairman Re-elected",synopsis:"Yobe APC chairman wins re-election.",details:"Delegates voted overwhelmingly during the party congress.",time:"7 March 2026",image:"https://picsum.photos/600/300?2",author:"Editor: Omotara How",url:""},
-// add remaining 18 stories...
+  {
+    "category": "Naija Pulse",
+    "title": "El‑Rufai’s Family Demands His Release from ICPC Custody",
+    "synopsis": "The family of former Kaduna governor Nasir El‑Rufai has called for his immediate release, alleging unlawful detention by the Independent Corrupt Practices and Other Related Offences Commission (ICPC).",
+    "details": "The family says the former governor has been held beyond the legal period without formal charges, calling the detention unlawful and without legal basis. They appealed for his unconditional release and respect for due process amidst ongoing investigations. El‑Rufai had been invited and detained on allegations involving interception of communications and related offenses.",
+    "time": "7 March 2026",
+    "image": "https://picsum.photos/600/300?101",
+    "author": "Editor: Radiant Waves Pulse",
+    "url": ""
+  },
+  {
+    "category": "Naija Pulse",
+    "title": "Peter Obi Insists On His Right to Travel Across Nigeria",
+    "synopsis": "Former presidential candidate Peter Obi says threats will not stop him from visiting any part of Nigeria.",
+    "details": "Speaking during a visit to Anambra State, Obi affirmed that as a constitutional right, he will continue to travel freely across the nation. He emphasized his commitment to contesting the 2027 presidential election.",
+    "time": "7 March 2026",
+    "image": "https://picsum.photos/600/300?102",
+    "author": "Editor: Radiant Waves Pulse",
+    "url": ""
+  },
+  {
+    "category": "Naija Pulse",
+    "title": "Sunday Igboho Relocates Supporters in Oyo",
+    "synopsis": "Yoruba activist Sunday Igboho moves to organize supporters in Oyo State.",
+    "details": "Sunday Igboho has been engaging with local leaders to coordinate community awareness programs and civic engagements, amidst ongoing regional security concerns.",
+    "time": "7 March 2026",
+    "image": "https://picsum.photos/600/300?103",
+    "author": "Editor: Radiant Waves Pulse",
+    "url": ""
+  }
+  // Add more entries to reach 20+ Nigerian stories
 ];
 
 /* === Election Watch JSON === */
 const electionNews = [
-{category:"Election",title:"France Municipal Elections",synopsis:"France prepares municipal elections next week.",details:"Voters across France will elect local councils and mayors.",time:"7 March 2026",image:"https://picsum.photos/800/400?501",author:"Editor: Omotara How",url:""},
-{category:"Election",title:"Nigeria Prepares 2027 Elections",synopsis:"Political parties prepare for 2027 national elections.",details:"Campaigns and candidate registration underway.",time:"7 March 2026",image:"https://picsum.photos/800/400?502",author:"Editor: Omotara How",url:""},
-{category:"Election",title:"UK Local Elections",synopsis:"Upcoming UK local elections.",details:"Councils vote for new representatives.",time:"7 March 2026",image:"https://picsum.photos/800/400?503",author:"Editor: Omotara How",url:""},
-{category:"Election",title:"US Midterms Update",synopsis:"Midterms may shift balance of power.",details:"Analysts monitor key swing states.",time:"7 March 2026",image:"https://picsum.photos/800/400?504",author:"Editor: Omotara How",url:""},
-{category:"Election",title:"India State Elections",synopsis:"State elections across India.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
+  {category:"Election",title:"France Municipal Elections",synopsis:"France prepares municipal elections next week.",details:"Voters across France will elect local councils and mayors.",time:"7 March 2026",image:"https://picsum.photos/800/400?501",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"Nigeria Prepares 2027 Elections",synopsis:"Political parties prepare for 2027 national elections.",details:"Campaigns and candidate registration underway.",time:"7 March 2026",image:"https://picsum.photos/800/400?502",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"UK Local Elections",synopsis:"Upcoming UK local elections.",details:"Councils vote for new representatives.",time:"7 March 2026",image:"https://picsum.photos/800/400?503",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"US Midterms Update",synopsis:"Midterms may shift balance of power.",details:"Analysts monitor key swing states.",time:"7 March 2026",image:"https://picsum.photos/800/400?504",author:"Editor: Omotara How",url:""},
+  {category:"Election",title:"India State Elections",synopsis:"State elections across India.",details:"Results expected to influence national policies.",time:"7 March 2026",image:"https://picsum.photos/800/400?505",author:"Editor: Omotara How",url:""}
 ];
 
-/* === Static fallback stories for World, Tech, Sports === */
+/* === Fallback Stories for World, Tech, Sports === */
 const fallbackStories=[
-{category:"World",title:"Middle East Conflict Escalates",synopsis:"Tensions rise in Middle East.",details:"Military activity reported in multiple regions.",time:"7 March 2026",image:"https://picsum.photos/800/400?101",author:"Editor: Omotara How",url:""},
-{category:"Technology",title:"AI Breakthrough Announced",synopsis:"New AI system released.",details:"Global tech companies invest heavily in AI.",time:"7 March 2026",image:"https://picsum.photos/800/400?201",author:"Editor: Omotara How",url:""},
-{category:"Sports",title:"Champions League Updates",synopsis:"Latest football results.",details:"Top teams advance to next stage.",time:"7 March 2026",image:"https://picsum.photos/800/400?301",author:"Editor: Omotara How",url:""}
+{category:"World",title:"Middle East Conflict Escalates",synopsis:"Tensions rise in Middle East.",details:"Military activity reported in multiple regions.",time:"7 March 2026",image:"https://picsum.photos/800/400?101",author:"Editor: Radiant Waves Pulse",url:""},
+{category:"Technology",title:"AI Breakthrough Announced",synopsis:"New AI system released.",details:"Global tech companies invest heavily in AI.",time:"7 March 2026",image:"https://picsum.photos/800/400?201",author:"Editor: Radiant Waves Pulse",url:""},
+{category:"Sports",title:"Champions League Updates",synopsis:"Latest football results.",details:"Top teams advance to next stage.",time:"7 March 2026",image:"https://picsum.photos/800/400?301",author:"Editor: Radiant Waves Pulse",url:""}
 ];
 
 /* === Load API Stories === */
@@ -174,7 +201,11 @@ function searchNews(text){
   clearTimeout(searchTimeout);
   searchTimeout=setTimeout(()=>{
     visibleCount=10;
-    filteredNews=allNews.filter(n=>n.title.toLowerCase().includes(text.toLowerCase())||n.synopsis.toLowerCase().includes(text.toLowerCase())||n.details.toLowerCase().includes(text.toLowerCase()));
+    filteredNews=allNews.filter(n=>
+      n.title.toLowerCase().includes(text.toLowerCase())||
+      n.synopsis.toLowerCase().includes(text.toLowerCase())||
+      n.details.toLowerCase().includes(text.toLowerCase())
+    );
     render();
   },200);
 }

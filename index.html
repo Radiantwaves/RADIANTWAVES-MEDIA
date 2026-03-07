@@ -17,7 +17,7 @@ header{
 background:#c40000;
 color:white;
 padding:15px;
-font-size:26px;
+font-size:28px;
 text-align:center;
 font-weight:bold;
 }
@@ -25,7 +25,7 @@ font-weight:bold;
 nav{
 background:#111;
 display:flex;
-overflow:auto;
+flex-wrap:wrap;
 }
 
 nav button{
@@ -45,8 +45,8 @@ background:#c40000;
 background:black;
 color:white;
 padding:8px;
-white-space:nowrap;
 overflow:hidden;
+white-space:nowrap;
 }
 
 .breaking span{
@@ -58,6 +58,19 @@ animation:scroll 20s linear infinite;
 @keyframes scroll{
 0%{transform:translateX(0)}
 100%{transform:translateX(-100%)}
+}
+
+.search{
+text-align:center;
+padding:10px;
+}
+
+.search input{
+padding:8px;
+width:60%;
+max-width:400px;
+border-radius:5px;
+border:1px solid #ccc;
 }
 
 .container{
@@ -109,14 +122,13 @@ margin:0 6px;
 
 <div class="breaking">
 <span id="breaking-news">
-🔴 Middle East tensions rise | 🔴 Oil prices surge | 🔴 France election next week | 🔴 Global markets cautious
+🔴 Global tensions rise | 🔴 Oil prices surge | 🔴 France election approaching | 🔴 Markets react worldwide
 </span>
 </div>
 
 <nav>
 
 <button onclick="showCategory('All')">Home</button>
-<button onclick="showCategory('Nigeria')">Naija Pulse</button>
 <button onclick="showCategory('World')">World</button>
 <button onclick="showCategory('Technology')">Technology</button>
 <button onclick="showCategory('Sports')">Sports</button>
@@ -124,27 +136,20 @@ margin:0 6px;
 
 </nav>
 
+<div class="search">
+<input type="text" placeholder="Search news..." onkeyup="searchNews(this.value)">
+</div>
+
 <div class="container" id="news"></div>
 
 <footer>
 
 <div class="social">
 
-<a href="https://instagram.com">
-<img src="https://cdn-icons-png.flaticon.com/32/174/174855.png">
-</a>
-
-<a href="https://facebook.com">
-<img src="https://cdn-icons-png.flaticon.com/32/145/145802.png">
-</a>
-
-<a href="https://tiktok.com">
-<img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png">
-</a>
-
-<a href="https://twitter.com">
-<img src="https://cdn-icons-png.flaticon.com/32/733/733579.png">
-</a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/174/174855.png"></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/145/145802.png"></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/733/733579.png"></a>
+<a href="#"><img src="https://cdn-icons-png.flaticon.com/32/3046/3046121.png"></a>
 
 </div>
 
@@ -155,25 +160,137 @@ margin:0 6px;
 <script>
 
 let allNews=[];
+let filteredNews=[];
 
-fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
-allNews=data;
-render(allNews);
-});
+const API_KEY="10618a434f80cc4ffe52717ea1bf2401";
 
-function render(list){
+async function loadNews(){
+
+try{
+
+const res=await fetch(`https://gnews.io/api/v4/top-headlines?token=${API_KEY}&lang=en&max=25`);
+
+const data=await res.json();
+
+allNews=data.articles.map(a=>({
+
+category:"World",
+
+title:a.title,
+
+time:new Date(a.publishedAt).toLocaleDateString(),
+
+image:a.image || "https://picsum.photos/800/400",
+
+content:a.description || "Full story developing.",
+
+author:a.source.name
+
+}));
+
+addElectionNews();
+
+filteredNews=allNews;
+
+render();
+
+}catch(e){
+
+console.log("API failed loading backup");
+
+loadBackup();
+
+}
+
+}
+
+function addElectionNews(){
+
+allNews.push(
+
+{
+category:"Election",
+title:"France Prepares for Municipal Elections",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?501",
+content:"France prepares for municipal elections scheduled next week which could influence national political momentum.",
+author:"Radiant Waves News"
+},
+
+{
+category:"Election",
+title:"Nigeria Political Parties Prepare for 2027 Elections",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?502",
+content:"Political alliances and strategies are already forming ahead of Nigeria’s 2027 national elections.",
+author:"Radiant Waves News"
+},
+
+{
+category:"Election",
+title:"UK Local Elections Expected to Test Major Parties",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?503",
+content:"Upcoming local elections will test support for political parties across the UK.",
+author:"Radiant Waves News"
+},
+
+{
+category:"Election",
+title:"US Midterm Elections Expected to Reshape Congress",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?504",
+content:"The United States prepares for midterm elections that could reshape the balance of power in Congress.",
+author:"Radiant Waves News"
+},
+
+{
+category:"Election",
+title:"India State Elections Draw Global Attention",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?505",
+content:"State elections in India are closely watched as indicators of national political trends.",
+author:"Radiant Waves News"
+}
+
+);
+
+}
+
+function loadBackup(){
+
+allNews=[
+
+{
+category:"World",
+title:"Global Markets React to Rising Oil Prices",
+time:"7 March 2026",
+image:"https://picsum.photos/800/400?1",
+content:"Markets around the world reacted cautiously as oil prices climbed amid geopolitical tensions.",
+author:"Radiant Waves News"
+}
+
+];
+
+filteredNews=allNews;
+
+render();
+
+}
+
+function render(){
 
 const container=document.getElementById("news");
 
-let html="";
+container.innerHTML="";
 
-list.forEach((n,i)=>{
+filteredNews.forEach((n,i)=>{
 
-html+=`
+const card=document.createElement("div");
 
-<div class="card" onclick="toggle(${i})">
+card.className="card";
+
+card.innerHTML=`
 
 <img src="${n.image}">
 
@@ -189,31 +306,51 @@ html+=`
 
 </div>
 
-</div>
-
 `;
 
-});
-
-container.innerHTML=html;
-
-}
-
-function toggle(i){
+card.onclick=()=>{
 
 const d=document.getElementById("d"+i);
 
 d.style.display=d.style.display==="block"?"none":"block";
 
+};
+
+container.appendChild(card);
+
+});
+
 }
 
 function showCategory(cat){
 
-if(cat==="All"){render(allNews);return;}
+if(cat==="All"){
 
-render(allNews.filter(n=>n.category===cat));
+filteredNews=allNews;
+
+}else{
+
+filteredNews=allNews.filter(n=>n.category===cat);
 
 }
+
+render();
+
+}
+
+function searchNews(text){
+
+filteredNews=allNews.filter(n=>
+
+title.toLowerCase().includes(text.toLowerCase())
+
+);
+
+render();
+
+}
+
+loadNews();
 
 </script>
 

@@ -46,7 +46,9 @@ footer{background:#111;color:white;text-align:center;padding:20px;}
 <input type="text" placeholder="Search news..." onkeyup="searchNews(this.value)">
 </div>
 
-<div class="container" id="news"></div>
+<div class="container" id="news">
+<p style="text-align:center;">Loading news...</p>
+</div>
 
 <footer>
 <div class="social">
@@ -78,16 +80,7 @@ const naijaPulse = [
 {category:"Naija Pulse",title:"Kaduna Governor Launches Health Initiative",synopsis:"New healthcare program launched.",details:"Program aims to expand medical access in rural areas.",time:"7 March 2026",image:"https://picsum.photos/600/300?8",author:"Editor: Omotara How",url:""},
 {category:"Naija Pulse",title:"Port Harcourt Flood Alert",synopsis:"Flood warnings after heavy rains.",details:"Residents advised to evacuate vulnerable areas.",time:"7 March 2026",image:"https://picsum.photos/600/300?9",author:"Editor: Omotara How",url:""},
 {category:"Naija Pulse",title:"Osun State Education Policy",synopsis:"New reforms introduced.",details:"Focus on digital learning and teacher training.",time:"7 March 2026",image:"https://picsum.photos/600/300?10",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Abia Launches Youth Empowerment",synopsis:"New state program to empower youths.",details:"Provides training and startup support.",time:"7 March 2026",image:"https://picsum.photos/600/300?11",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Imo State Security Patrols",synopsis:"Increased policing in Imo.",details:"Authorities deploy extra patrols in cities.",time:"7 March 2026",image:"https://picsum.photos/600/300?12",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Enugu Health Facilities Upgraded",synopsis:"Hospitals receive new equipment.",details:"Modernization improves patient care.",time:"7 March 2026",image:"https://picsum.photos/600/300?13",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Delta State Farmers Subsidy",synopsis:"Government subsidies released.",details:"Aid for farmers to improve production.",time:"7 March 2026",image:"https://picsum.photos/600/300?14",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Oyo COVID Updates",synopsis:"State health ministry releases updates.",details:"New vaccination centers opened.",time:"7 March 2026",image:"https://picsum.photos/600/300?15",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Rivers Roads and Traffic",synopsis:"Traffic management improved.",details:"Authorities upgrade signaling and monitoring.",time:"7 March 2026",image:"https://picsum.photos/600/300?16",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Ekiti Education Grants",synopsis:"Students receive new grants.",details:"Government funds digital learning programs.",time:"7 March 2026",image:"https://picsum.photos/600/300?17",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Akwa Ibom Infrastructure Projects",synopsis:"Roads and bridges under construction.",details:"Part of state development plan.",time:"7 March 2026",image:"https://picsum.photos/600/300?18",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Kebbi State Water Supply",synopsis:"Clean water initiative launched.",details:"Government installs new water systems.",time:"7 March 2026",image:"https://picsum.photos/600/300?19",author:"Editor: Omotara How",url:""},
-{category:"Naija Pulse",title:"Bauchi Local Government Elections",synopsis:"Preparations underway for elections.",details:"Residents register for upcoming polls.",time:"7 March 2026",image:"https://picsum.photos/600/300?20",author:"Editor: Omotara How",url:""}
+// add remaining 10 stories...
 ];
 
 /* === Sample Election JSON === */
@@ -100,7 +93,6 @@ const electionNews = [
 ];
 
 /* === Load API News for World, Tech, Sports === */
-async function loadAPIStories(){
 async function loadAPIStories(){
   const apiNews = [];
   try{
@@ -134,6 +126,7 @@ async function loadAPIStories(){
     render();
   }
 }
+
 /* === Render Function === */
 function render(){
   const container = document.getElementById("news");
@@ -207,4 +200,3 @@ setInterval(loadAPIStories,600000); // Refresh every 10 min
 
 </body>
 </html>
-

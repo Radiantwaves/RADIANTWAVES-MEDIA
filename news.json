@@ -1,62 +1,175 @@
-const news = [
-  // --- Naija Pulse Stories ---
-  {title:"Peter Obi Advocates for Electoral Reform",category:"Naija",image:"https://picsum.photos/800/500?politics1",summary:"Obi calls for reforms to strengthen democracy in Nigeria.",details:"Peter Obi emphasized the need for credible elections, highlighting past irregularities and proposing reforms to the electoral process. He stressed that democratic systems thrive when institutions are transparent and accountable.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
-  
-  {title:"Nasir El-Rufai Discusses Governance Reforms",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor talks about policy changes.",details:"El-Rufai discussed economic and governance reforms, highlighting the importance of public-private partnerships and accountability in state projects.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist addresses local security concerns.",details:"Sunday Igboho emphasized community protection and collaboration with authorities in Southwest Nigeria to prevent violence, calling for unity among residents.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
-  
-  {title:"Tinubu Promises Electricity Fix",category:"Naija",image:"https://picsum.photos/800/500?electricity",summary:"President updates Nigerians on electricity rollout.",details:"President Bola Tinubu assured Nigerians that electricity issues are being addressed. Meters are being installed zone by zone, and households are being prioritized for steady supply.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"Student Loan Disbursement Update",category:"Naija",image:"https://picsum.photos/800/500?studentloan",summary:"Students receive monthly allowances.",details:"The government confirmed that students who applied for loans are now receiving monthly allowances. This is part of the national education support program aimed at reducing financial barriers.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
-  
-  {title:"Buhari Foundation Launches Health Initiative",category:"Naija",image:"https://picsum.photos/800/500?health",summary:"New health initiative targets rural areas.",details:"The Buhari Foundation launched a new health program targeting rural communities, providing access to basic healthcare services and awareness campaigns.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
-  
-  {title:"Lagos Traffic Management System Expands",category:"Naija",image:"https://picsum.photos/800/500?traffic",summary:"New roads and monitoring to reduce congestion.",details:"The Lagos State government has expanded its traffic management systems, including new roads, sensors, and live monitoring to reduce congestion during peak hours.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
-  
-  {title:"Nigeria Banks Adopt Digital Payment Methods",category:"Naija",image:"https://picsum.photos/800/500?finance",summary:"Digital finance continues to grow.",details:"Major banks are increasing digital payment adoption across the country, encouraging cashless transactions and providing mobile banking apps to rural and urban customers.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
-  
-  {title:"Kaduna State Launches Agricultural Program",category:"Naija",image:"https://picsum.photos/800/500?agriculture",summary:"Farmers receive new support packages.",details:"Kaduna State initiated a program to support local farmers with seeds, fertilizers, and training on modern farming techniques to boost agricultural output.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
-  
-  {title:"Abuja Real Estate Market Trends",category:"Naija",image:"https://picsum.photos/800/500?realestate",summary:"Property prices continue to rise.",details:"Real estate experts note an increase in property values in Abuja due to growing demand and government infrastructure projects improving access.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
-  
-  {title:"Niger Delta Environmental Cleanup Efforts",category:"Naija",image:"https://picsum.photos/800/500?environment",summary:"Cleanup programs tackle pollution.",details:"Government and private initiatives focus on cleaning oil spill areas in the Niger Delta, restoring ecosystems and providing new jobs to locals.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"Tech Startups Receive Funding Boost",category:"Naija",image:"https://picsum.photos/800/500?startup",summary:"Investors back Nigerian tech startups.",details:"Several startups in Lagos and Abuja received funding from private investors and international partners, supporting growth in fintech, AI, and e-commerce sectors.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
-  
-  {title:"University Strikes End in Lagos",category:"Naija",image:"https://picsum.photos/800/500?education",summary:"Students return to classrooms.",details:"After weeks of negotiation, university staff reached an agreement with administration, ending strikes and allowing students to resume academic activities.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
-  
-  {title:"Nigerian Film Industry Growth",category:"Naija",image:"https://picsum.photos/800/500?nollywood",summary:"Box office revenue rises.",details:"Nollywood sees increased box office revenue and international collaborations, reflecting the growing global influence of Nigerian cinema.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
-  
-  {title:"Healthcare Workers Strike Ends",category:"Naija",image:"https://picsum.photos/800/500?healthcare",summary:"Agreement reached between government and unions.",details:"Healthcare unions reached a new agreement with the government, improving salaries and working conditions for nurses and medical staff.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"Electric Vehicle Adoption Expands in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?ev",summary:"EV charging stations set up.",details:"The government supports EV adoption by installing charging stations in major cities and offering incentives to buyers, boosting sustainable transport.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
-  
-  {title:"Lagos Carnival Attracts International Tourists",category:"Naija",image:"https://picsum.photos/800/500?festival",summary:"Tourism boost for Lagos.",details:"The Lagos Carnival welcomed thousands of international visitors, showcasing Nigerian culture, arts, and music.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
-  
-  {title:"Nigeria Launches Digital ID Program",category:"Naija",image:"https://picsum.photos/800/500?id",summary:"National identification system expands.",details:"The digital ID program aims to provide every citizen with secure identification to access government services efficiently.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
-  
-  {title:"Renewable Energy Projects in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?renewable",summary:"Solar and wind initiatives grow.",details:"Nigeria invests in solar and wind energy projects to diversify power sources and reduce reliance on fossil fuels.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
-  
-  {title:"Youth Entrepreneurship Programs Expand",category:"Naija",image:"https://picsum.photos/800/500?youth",summary:"Young entrepreneurs receive mentorship.",details:"Programs to train and mentor young entrepreneurs continue across Lagos, Abuja, and Port Harcourt, focusing on fintech, agriculture, and creative industries.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
-  
-  {title:"Nigeria's Transportation Upgrade",category:"Naija",image:"https://picsum.photos/800/500?transport",summary:"Rail and road projects underway.",details:"Major rail and highway projects are progressing to improve connectivity between states, reducing travel time and boosting commerce.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"COVID-19 Updates and Health Guidelines",category:"Naija",image:"https://picsum.photos/800/500?covid",summary:"Vaccination campaigns continue.",details:"The government urges citizens to continue vaccination and follow safety protocols, monitoring case numbers and providing updated health guidance.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
-  
-  {title:"Agricultural Export Boost",category:"Naija",image:"https://picsum.photos/800/500?export",summary:"Nigeria increases crop exports.",details:"The export of cocoa, sesame seeds, and palm oil rises due to government incentives, improving revenue for farmers and the national economy.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
-  
-  {title:"National Sports Development Program",category:"Naija",image:"https://picsum.photos/800/500?sportsdev",summary:"Youth sports receive funding.",details:"The government launched programs to fund youth sports initiatives nationwide, focusing on talent development and sports infrastructure.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
+{
+  "generated": "8 March 2026",
+  "editorial": "Radiant Waves News Desk",
+  "sections": [
+    
+{
+"title": "Naija Pulse",
+"stories": [
 
-  // --- Election Watch Stories ---
-  {title:"Nigeria Election Updates",category:"Election",image:"https://picsum.photos/800/500?nigelection",summary:"Latest updates from Nigeria elections.",details:"Full details on candidates, campaigns, and electoral process in Nigeria. Tinubu's campaign focus includes electricity, student loans, and economic reforms.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
-  
-  {title:"France Election Updates",category:"Election",image:"https://picsum.photos/800/500?france",summary:"France presidential election coverage.",details:"Details on campaigns, candidates, political debates, and projections for the upcoming French election.",author:"Editor: Omotara How",source:"Le Monde, March 8, 2026"},
-  
-  {title:"UK Election Updates",category:"Election",image:"https://picsum.photos/800/500?uk",summary:"General elections coverage.",details:"Full reporting on UK election candidates, parties, polls, and voting procedures.",author:"Editor: Omotara How",source:"BBC, March 8, 2026"},
-  
-  {title:"USA Election Updates",category:"Election",image:"https://picsum.photos/800/500?usa",summary:"US elections and political updates.",details:"Coverage includes Senate, House, and Presidential campaigns, candidate statements, and official results.",author:"Editor: Omotara How",source:"CNN, March 8, 2026"},
-  
-  {title:"India Election Updates",category:"Election",image:"https://picsum.photos/800/500?india",summary:"Indian elections ongoing coverage.",details:"Coverage includes state elections, candidate campaigns, voting procedures, and election forecasts across India.",author:"Editor: Omotara How",source:"The Times of India, March 8, 2026"}
-];
+{
+"headline": "IG Appoints DCP Anthony Placid as New Police Public Relations Officer",
+"summary": "Nigeria’s Inspector-General of Police has named Deputy Commissioner Anthony Placid as the new Force Public Relations Officer.",
+"content": "The Inspector-General of Police has officially appointed Deputy Commissioner of Police Anthony Placid as the new Force Public Relations Officer. Placid replaces Olumuyiwa Adejobi who had been serving in the position during a period of intense security debates in the country. Police headquarters said the appointment is part of efforts to strengthen communication between the police and the public. Placid previously served in strategic investigative and operational roles across several commands and is expected to improve transparency in police operations. Security analysts say the new spokesperson will face immediate challenges including communicating reforms within the police force, responding to public criticism of law enforcement operations and rebuilding trust between citizens and officers.",
+"category": "Nigeria"
+},
 
+{
+"headline": "NDLEA Arrests Former Lagos Councillor With 40kg of Skunk",
+"summary": "Nigeria’s anti-drug agency intercepted a major cannabis shipment and arrested a former councillor.",
+"content": "The National Drug Law Enforcement Agency has arrested a former Lagos councillor allegedly linked to the trafficking of approximately forty kilograms of skunk cannabis. Officials said the drugs were hidden in several packages disguised as personal goods, while additional narcotics were reportedly found concealed in baby diapers during related searches. NDLEA spokespersons said the arrest demonstrates the agency’s expanding crackdown on organized drug trafficking networks across Nigeria’s major cities and border routes. Authorities also noted that several suspects connected to the case are currently under investigation. Analysts say the arrest highlights the growing sophistication of narcotics smuggling operations and the increasing involvement of individuals from diverse professional backgrounds.",
+"category": "Crime"
+},
+
+{
+"headline": "Opposition Parties Consider Consensus Strategy Ahead of 2027 Elections",
+"summary": "Opposition leaders are exploring alliances to reduce the cost and fragmentation of party primaries.",
+"content": "Leaders from several opposition parties in Nigeria are discussing the possibility of forming a consensus coalition ahead of the 2027 presidential election. Political insiders say the talks are driven by concerns about the financial burden of nationwide direct primaries and the risk of splitting opposition votes across multiple candidates. The proposed arrangement could involve selecting a single candidate to challenge the ruling party. Analysts note that coalition politics has become more common in Nigerian elections as parties attempt to consolidate regional support bases and strengthen their chances in national contests.",
+"category": "Politics"
+},
+
+{
+"headline": "Transport Fares Surge in Anambra as Petrol Prices Hit ₦1,200",
+"summary": "Residents face rising transport costs following another increase in petrol prices.",
+"content": "Commuters across Anambra State are experiencing sharp increases in transportation fares after petrol prices climbed to nearly ₦1,200 per litre in some parts of the state. Drivers say the price surge has made it impossible to maintain previous fares without operating at a loss. Many residents have reported that short urban trips now cost nearly double what they paid just months ago. Economists say fluctuating fuel prices remain one of the most direct drivers of inflation in Nigeria because transportation costs influence food distribution and daily commuting expenses.",
+"category": "Economy"
+},
+
+{
+"headline": "Tinubu Government Expands Electricity Meter Programme",
+"summary": "The federal government says nationwide meter distribution is being accelerated.",
+"content": "The Nigerian government has announced the expansion of its electricity metering programme aimed at eliminating estimated billing. Officials say the plan involves distributing prepaid meters to households region by region in order to improve transparency in electricity billing and reduce disputes between consumers and distribution companies. President Bola Tinubu had previously promised major reforms in the power sector during his campaign. Government representatives say the programme is part of broader energy reforms intended to improve power supply reliability and attract investment into the electricity industry.",
+"category": "Energy"
+},
+
+{
+"headline": "Student Loan Programme Begins Disbursement to Beneficiaries",
+"summary": "Some Nigerian students confirm receiving their first loan payments.",
+"content": "Nigeria’s newly launched student loan programme has begun disbursing funds to eligible applicants. Several university students have confirmed receiving their first monthly allowances under the scheme. The initiative is designed to provide financial assistance to students from low-income families and expand access to higher education. Education experts say the programme could significantly improve university enrollment if properly funded and managed. However, they also stress the importance of transparent loan management systems to ensure repayment sustainability.",
+"category": "Education"
+},
+
+{
+"headline": "Bandits Attack Sokoto Community, Abduct Residents",
+"summary": "Armed bandits reportedly killed one person and kidnapped five others.",
+"content": "Security sources in Sokoto State say armed bandits attacked a rural community overnight, killing at least one resident and abducting five others. Local leaders said the attackers arrived on motorcycles and fired shots before taking several villagers away. Security forces have launched search operations in nearby forests where bandits often maintain hideouts. The attack highlights ongoing security challenges in northwestern Nigeria where kidnapping for ransom has become a persistent threat to rural communities.",
+"category": "Security"
+},
+
+{
+"headline": "Peter Obi Calls for Economic Reforms and Youth Empowerment",
+"summary": "The former presidential candidate urges stronger support for young entrepreneurs.",
+"content": "Peter Obi, the former presidential candidate of the Labour Party, has renewed his call for economic reforms aimed at empowering Nigeria’s youth population. Speaking at a leadership conference, Obi emphasized the need to invest more heavily in education, small business financing and digital innovation. He argued that Nigeria’s large youth population represents an untapped economic advantage if the right policies are implemented. Political observers say Obi continues to maintain a strong support base among young voters who remain active in civic engagement and policy debates.",
+"category": "Politics"
+},
+
+{
+"headline": "Debates Continue Around Nasir El-Rufai’s Political Influence",
+"summary": "Observers debate the future role of the former Kaduna governor.",
+"content": "Political discussions across Nigeria continue to focus on the role of former Kaduna State governor Nasir El-Rufai in national politics. El-Rufai has remained an influential figure within policy and governance debates, frequently commenting on issues such as fiscal federalism, economic reform and political restructuring. Analysts say his political future could include advisory roles, party leadership positions or participation in broader policy discussions leading up to future elections.",
+"category": "Politics"
+},
+
+{
+"headline": "Sunday Igboho Supporters Renew Calls for Regional Dialogue",
+"summary": "Advocates say dialogue remains essential to addressing regional grievances.",
+"content": "Supporters of Yoruba activist Sunday Igboho have again called for peaceful dialogue between regional leaders and federal authorities. Advocacy groups argue that addressing economic inequality, local security concerns and political representation will require sustained engagement among stakeholders. Political analysts say the debate reflects broader discussions across Nigeria about regional autonomy, governance reforms and national unity.",
+"category": "Society"
+}
+
+]
+},
+
+{
+"title": "World News",
+"stories": [
+
+{
+"headline": "Middle East Conflict Enters Dangerous New Phase",
+"summary": "Analysts warn that regional tensions could escalate further.",
+"content": "Military analysts say the ongoing conflict in the Middle East has entered a more volatile phase following a series of strikes targeting infrastructure and strategic facilities. Regional governments have accused each other of escalating the confrontation, while international observers warn that miscalculations could widen the conflict. Diplomatic channels remain active as global powers push for negotiations to prevent broader regional instability.",
+"category": "Geopolitics"
+},
+
+{
+"headline": "Tensions Rise as Infrastructure Becomes Target in Regional War",
+"summary": "Energy installations and transport networks are increasingly at risk.",
+"content": "Recent attacks on energy facilities and transportation routes have highlighted a new stage in the Middle East conflict where critical infrastructure is increasingly targeted. Analysts say such attacks aim to disrupt economic stability and create pressure on governments involved in the war. Energy markets have already reacted to the uncertainty, with oil prices showing increased volatility.",
+"category": "Energy"
+},
+
+{
+"headline": "Norway Investigates Explosion Near US Embassy",
+"summary": "Police say the investigation remains in early stages.",
+"content": "Norwegian authorities are investigating an explosion that occurred near the United States Embassy. Police said they are examining whether the incident could be related to extremist activity but emphasized that it is too early to draw conclusions. Security measures around diplomatic facilities have been temporarily increased as investigators analyze evidence from the scene.",
+"category": "Security"
+},
+
+{
+"headline": "Explosive Device Found Near New York Mayor’s Residence",
+"summary": "Officials say the device could have caused serious injury.",
+"content": "Authorities in New York say an explosive device discovered near the mayor’s residence was capable of causing significant damage if it had detonated. Bomb disposal experts safely neutralized the device while investigators began tracing its origin. Officials say the incident is being treated with the highest level of security concern while motives remain under investigation.",
+"category": "Security"
+},
+
+{
+"headline": "Global Climate Patterns Show Record Warm and Cold Extremes",
+"summary": "Scientists say unusual winter patterns illustrate climate volatility.",
+"content": "Climate scientists say the most recent winter season demonstrated an unusual pattern of both record warmth and extreme cold events across different regions. Experts argue that such fluctuations reflect the increasing instability of global climate systems. Researchers warn that societies must adapt to more unpredictable weather patterns affecting agriculture, energy demand and disaster preparedness.",
+"category": "Environment"
+}
+
+]
+},
+
+{
+"title": "Technology",
+"stories": [
+
+{
+"headline": "BlockDAG Cryptocurrency Enters Top 100 Market Rankings",
+"summary": "The project achieved rapid recognition after launch.",
+"content": "A new blockchain project known as BlockDAG has surged into the top 100 cryptocurrency rankings shortly after its market debut. Supporters say the project’s architecture promises faster transaction speeds compared to traditional blockchain networks. Analysts caution however that early enthusiasm in cryptocurrency markets often requires long-term evaluation to determine sustainability and security.",
+"category": "Technology"
+},
+
+{
+"headline": "Digital Reconstruction Reveals Face of 4 Million Year Old Ancestor",
+"summary": "Scientists recreate the appearance of the famous fossil ‘Little Foot’.",
+"content": "Researchers have digitally reconstructed the face of the ancient hominin known as 'Little Foot', a fossil estimated to be nearly four million years old. Using advanced scanning technology and anatomical modelling, scientists created a detailed facial representation that offers new insight into early human evolution. The discovery contributes to ongoing research about how early hominins lived and adapted to their environments.",
+"category": "Science"
+}
+
+]
+},
+
+{
+"title": "Sports",
+"stories": [
+
+{
+"headline": "Southampton Advance to FA Cup Quarter-Finals",
+"summary": "The club defeated Fulham in a closely contested match.",
+"content": "Southampton secured a place in the FA Cup quarter-finals after defeating Fulham 1–0 in a tense match. The winning goal came in the second half following a defensive error that Southampton quickly capitalized on. The victory keeps the club’s hopes alive for one of England’s most prestigious domestic trophies.",
+"category": "Football"
+},
+
+{
+"headline": "Six Clubs Secure Spots in FA Cup Quarter-Final Stage",
+"summary": "Several teams have confirmed their advancement in the competition.",
+"content": "Six clubs have officially advanced to the FA Cup quarter-finals after a series of intense knockout matches. Football analysts say this year’s tournament has been particularly unpredictable with several lower-ranked teams challenging traditional powerhouses.",
+"category": "Football"
+},
+
+{
+"headline": "Wolfsburg Dismiss Coach Amid Relegation Concerns",
+"summary": "The Bundesliga club hopes leadership change will improve results.",
+"content": "German club Wolfsburg has dismissed its head coach following a disappointing run of league results that placed the team near the relegation zone. Club management said a change in leadership was necessary to stabilize performance and restore confidence among supporters.",
+"category": "Football"
+}
+
+]
+}
+
+]
+}

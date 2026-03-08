@@ -10,7 +10,7 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f2f2f2;
+background:#f4f4f4;
 }
 
 header{
@@ -52,7 +52,7 @@ white-space:nowrap;
 .breaking span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 45s linear infinite;
+animation:scroll 40s linear infinite;
 }
 
 @keyframes scroll{
@@ -69,7 +69,7 @@ padding:20px;
 
 .news{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
 gap:20px;
 }
 
@@ -104,7 +104,6 @@ background:#111;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:20px;
 }
 
 </style>
@@ -127,7 +126,7 @@ margin-top:20px;
 <button onclick="filterNews('Election')">Election Watch</button>
 
 <div class="search">
-<input id="search" placeholder="Search..." onkeyup="searchNews()">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
 </div>
 
 </nav>
@@ -144,7 +143,7 @@ margin-top:20px;
 
 <div class="sidebar">
 
-<h3>Trending</h3>
+<h3>Trending Stories</h3>
 <ul id="trending"></ul>
 
 </div>
@@ -153,104 +152,86 @@ margin-top:20px;
 
 <footer>
 
-Radiant Waves News © 2026  
+Radiant Waves Global News  
 Editor: Omotara How
 
 </footer>
 
 <script>
 
-const news=[
 
-{
-category:"Naija Pulse",
-title:"Peter Obi Calls for Electoral Reform",
-image:"images/peter-obi.jpg",
-synopsis:"Former presidential candidate urges electoral transparency.",
-details:"Peter Obi has renewed his call for stronger electoral reforms in Nigeria, stressing that transparent elections are essential for restoring public trust in democratic institutions. According to Obi, credible elections remain one of the most important pillars of democratic governance. Political observers say his comments reflect growing national conversations about institutional reform ahead of future election cycles."
-},
+/* DAILY HEADLINES — THIS IS THE ONLY PART YOU EDIT */
 
-{
-category:"Naija Pulse",
-title:"El-Rufai Remains Influential in National Politics",
-image:"images/el-rufai.jpg",
-synopsis:"Former Kaduna governor continues shaping debate.",
-details:"Nasir El-Rufai continues to influence national political discussions even after leaving office. Analysts say his views on governance, economic policy and security issues still resonate across political circles. Observers believe his political experience and strong opinions make him an important voice in Nigeria's evolving political environment."
-},
+const headlines=[
 
-{
-category:"Naija Pulse",
-title:"Sunday Igboho Calls for Yoruba Unity",
-image:"images/sunday-igboho.jpg",
-synopsis:"Activist encourages cooperation in the southwest.",
-details:"Yoruba activist Sunday Igboho has once again emphasized unity among Yoruba communities. Supporters say his message highlights cooperation, cultural identity and peaceful dialogue as communities across southwestern Nigeria discuss development and security concerns."
-},
+"Peter Obi Calls for Electoral Reform in Nigeria",
 
-{
-category:"World",
-title:"Global Leaders Monitor Middle East Tensions",
-image:"https://picsum.photos/600/400?world",
-synopsis:"Diplomatic efforts continue worldwide.",
-details:"International leaders are closely watching developments in the Middle East as diplomatic efforts continue to prevent escalation. Governments across multiple continents have urged calm while humanitarian organizations prepare contingency plans."
-},
+"El-Rufai Speaks on Future of Nigerian Politics",
 
-{
-category:"World",
-title:"United Nations Appeals for Humanitarian Support",
-image:"https://picsum.photos/600/400?un",
-synopsis:"Aid groups warn of growing needs.",
-details:"The United Nations has appealed for expanded humanitarian assistance in several regions experiencing conflict and economic hardship. Aid agencies warn that millions of civilians depend on continued international support."
-},
+"Sunday Igboho Calls for Unity in Southwest Nigeria",
 
-{
-category:"Technology",
-title:"Artificial Intelligence Investment Expands Globally",
-image:"https://picsum.photos/600/400?technology",
-synopsis:"Tech companies accelerate AI development.",
-details:"Major technology companies are rapidly increasing investment in artificial intelligence systems designed to improve automation and data analysis. Experts say AI innovation could transform industries from healthcare to finance."
-},
+"Tinubu Economic Reform Debate Continues",
 
-{
-category:"Technology",
-title:"Cybersecurity Experts Warn of Digital Threats",
-image:"https://picsum.photos/600/400?cyber",
-synopsis:"Governments urged to strengthen systems.",
-details:"Cybersecurity specialists are warning governments and companies about rising cyber threats as digital infrastructure becomes increasingly important to national economies."
-},
+"Global Leaders Monitor Middle East Tensions",
 
-{
-category:"Sports",
-title:"European Football Clubs Prepare for Major Tournaments",
-image:"https://picsum.photos/600/400?sports",
-synopsis:"Teams intensify training for competitions.",
-details:"Top European football clubs are intensifying preparations for upcoming continental tournaments. Coaches say the coming weeks will determine qualification for major championships."
-},
+"Artificial Intelligence Investment Expands Worldwide",
 
-{
-category:"Sports",
-title:"Athletics Qualifiers Begin Across Continents",
-image:"https://picsum.photos/600/400?athletics",
-synopsis:"Athletes aim for world championships.",
-details:"Athletes from several countries have begun qualification events ahead of global athletics championships. Organizers say the competitions will determine the strongest contenders for international titles."
-},
+"Cybersecurity Experts Warn of Rising Digital Threats",
 
-{
-category:"Election",
-title:"United States Campaign Season Intensifies",
-image:"https://picsum.photos/600/400?election",
-synopsis:"Candidates expand campaign activities.",
-details:"Political campaigns across the United States are intensifying as candidates increase travel, speeches and policy announcements ahead of the upcoming election season."
-},
+"European Football Clubs Prepare for Major Tournament",
 
-{
-category:"Election",
-title:"UK Parties Prepare for Future Elections",
-image:"https://picsum.photos/600/400?uk",
-synopsis:"Political parties outline strategies.",
-details:"Major political parties in the United Kingdom are beginning preparations for the next election cycle, outlining policy priorities and campaign strategies."
-}
+"US Election Campaign Season Intensifies",
+
+"UK Political Parties Prepare for Future Election"
 
 ]
+
+
+
+function getCategory(title){
+
+let t=title.toLowerCase()
+
+if(t.includes("obi")||t.includes("igboho")||t.includes("tinubu")||t.includes("rufai"))
+return "Naija Pulse"
+
+if(t.includes("election"))
+return "Election"
+
+if(t.includes("ai")||t.includes("cyber")||t.includes("technology"))
+return "Technology"
+
+if(t.includes("football")||t.includes("sports")||t.includes("tournament"))
+return "Sports"
+
+return "World"
+
+}
+
+
+function createNews(){
+
+return headlines.map(title=>({
+
+title:title,
+
+category:getCategory(title),
+
+image:"https://picsum.photos/600/400?random="+Math.random(),
+
+synopsis:"Developing report from Radiant Waves News.",
+
+details:"Radiant Waves News is monitoring this developing story. Analysts say the issue is attracting attention across political and international circles. More detailed reporting will follow as additional verified information becomes available.",
+
+editor:"Omotara How"
+
+}))
+
+}
+
+
+const news=createNews()
+
 
 function render(list){
 
@@ -278,7 +259,7 @@ container.innerHTML+=`
 
 <p>${n.details}</p>
 
-<p><b>Editor:</b> Omotara How</p>
+<p><b>Editor:</b> ${n.editor}</p>
 
 </div>
 
@@ -292,6 +273,7 @@ container.innerHTML+=`
 
 }
 
+
 function toggle(i){
 
 let d=document.getElementById("d"+i)
@@ -299,6 +281,7 @@ let d=document.getElementById("d"+i)
 d.style.display=d.style.display==="block"?"none":"block"
 
 }
+
 
 function filterNews(cat){
 
@@ -308,6 +291,7 @@ else render(news.filter(n=>n.category===cat))
 
 }
 
+
 function searchNews(){
 
 let q=document.getElementById("search").value.toLowerCase()
@@ -316,19 +300,21 @@ render(news.filter(n=>n.title.toLowerCase().includes(q)))
 
 }
 
-document.getElementById("breaking").innerText=
 
-news.map(n=>n.title).join("  •  ")
+document.getElementById("breaking").innerText=headlines.join("  •  ")
+
 
 let trending=document.getElementById("trending")
 
-news.slice(0,6).forEach(n=>{
+headlines.slice(0,6).forEach(h=>{
 
-trending.innerHTML+=`<li>${n.title}</li>`
+trending.innerHTML+=`<li>${h}</li>`
 
 })
 
+
 render(news)
+
 
 </script>
 

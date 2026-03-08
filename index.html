@@ -4,342 +4,179 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
-
 <style>
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-margin:0;
-background:#f4f4f4;
-}
-
-header{
-background:#0b3d91;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-}
-
-.slogan{
-font-size:14px;
-opacity:0.9;
-}
-
-.ticker{
-background:#111;
-color:white;
-padding:10px;
-overflow:hidden;
-white-space:nowrap;
-}
-
-.ticker span{
-animation:scroll 40s linear infinite;
-display:inline-block;
-padding-left:100%;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-.topbar{
-display:flex;
-justify-content:space-between;
-padding:10px;
-background:#eee;
-flex-wrap:wrap;
-}
-
-.search{
-padding:8px;
-width:200px;
-}
-
-.radio{
-padding:10px;
-background:#ddd;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:white;
-margin-bottom:20px;
-padding:15px;
-border-radius:6px;
-box-shadow:0 2px 4px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-border-radius:6px;
-}
-
-.category{
-font-weight:bold;
-color:#0b3d91;
-margin-bottom:5px;
-}
-
-footer{
-background:#0b3d91;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-.social a{
-color:white;
-margin:0 10px;
-text-decoration:none;
-}
-
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
+header{background:#0b3d91;color:white;padding:20px;text-align:center;}
+header h1{margin:0;}
+header p{margin:5px;font-size:14px;font-weight:bold;}
+nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;}
+nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
+nav button:hover{background:#0b3d91;}
+.search{margin-left:auto;padding:8px;}
+.search input{padding:6px;width:200px;}
+.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.container{padding:20px;}
+.card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);}
+.card img{width:100%;height:230px;object-fit:cover;}
+.content{padding:15px;}
+.details{display:none;margin-top:10px;line-height:1.7;}
+button.read-more{background:#0b3d91;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
+footer{background:#111;color:white;padding:25px;text-align:center;}
+.social a img{width:28px;margin:8px;}
+audio{width:100%;margin-top:10px;}
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Radiant Waves News</h1>
-<div class="slogan">Gateway to world news connecting you to the world</div>
+<h1>Radiant Waves Global News</h1>
+<p>Gateway to World News – Connecting You to the World</p>
 </header>
 
-<div class="ticker">
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="breaking">
 <span id="ticker"></span>
 </div>
 
-<div class="topbar">
-
-<input class="search" id="search" placeholder="Search news...">
-
-<div class="radio">
-🎧 Radiant Waves Radio
-<br>
-<audio controls>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
+<nav>
+<button onclick="filterNews('all')">Home</button>
+<button onclick="filterNews('Naija')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Tech')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election Watch</button>
+<div class="search">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
 </div>
-
-</div>
+</nav>
 
 <div class="container" id="news"></div>
 
 <footer>
-
 <div class="social">
-<a href="https://facebook.com/radiantwavesnews">Facebook</a>
-<a href="https://twitter.com/radiantwaves13528995">X</a>
+<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
 </div>
-
-<br>
-
-© 2026 Radiant Waves
-
+<br>@2026 Radiant Waves
 </footer>
 
 <script>
 
+// Breaking news
 const breakingNews = [
 "Nigeria expands electricity meter rollout nationwide",
 "Student loan programme begins monthly disbursement",
-"Opposition parties explore coalition for 2027 elections",
 "Middle East tensions escalate after infrastructure strikes",
 "AI technology transforming healthcare systems globally",
-"Global fuel prices continue to fluctuate amid supply concerns",
-"Climate scientists warn of increasing weather extremes",
-"Digital reconstruction reveals face of ancient human ancestor"
+"Global fuel prices continue to fluctuate amid supply concerns"
 ];
 
 document.getElementById("ticker").innerText = breakingNews.join(" • ");
 
-
+// News array with categories
 const news = [
-
 {
-title:"IGP Appoints DCP Anthony Placid as Police Spokesperson",
+title:"Peter Obi Calls for Electoral Reform",
 category:"Naija",
-image:"https://picsum.photos/800/500?police",
-summary:"Police headquarters announces new PRO.",
-details:"Nigeria’s Inspector General of Police appointed Deputy Commissioner Anthony Placid as the new police spokesperson as authorities aim to strengthen public communication."
+image:"https://picsum.photos/800/500?obi",
+summary:"Calls for transparent elections.",
+details:"Peter Obi emphasizes credible and transparent elections across Nigeria. Advocates reforms for stronger democratic institutions.",
+author:"Editor: Omotara How",source:"Local News"
 },
-
 {
-title:"NDLEA Arrests Former Lagos Councillor With 40kg Cannabis",
+title:"President Tinubu Rolls Out Electricity Meters",
 category:"Naija",
-image:"https://picsum.photos/800/500?drug",
-summary:"Drug enforcement agency intercepts shipment.",
-details:"Nigeria’s anti-drug agency arrested a former Lagos councillor after officers intercepted over 40kg of cannabis concealed in luggage."
+image:"https://picsum.photos/800/500?tinubu",
+summary:"Nationwide electricity meters distributed to households.",
+details:"The Tinubu administration initiates electricity meter rollouts zone by zone, improving billing accuracy and reducing power theft.",
+author:"Editor: Omotara How",source:"Energy Nigeria"
 },
-
 {
-title:"Transport Fares Rise As Fuel Prices Increase",
-category:"Naija",
-image:"https://picsum.photos/800/500?transport",
-summary:"Commuters face higher transport costs.",
-details:"Drivers across Anambra and nearby states increased fares following rising petrol prices."
-},
-
-{
-title:"Tinubu Government Expands Electricity Meter Rollout",
-category:"Naija",
-image:"https://picsum.photos/800/500?electricity",
-summary:"Power reform programme expands.",
-details:"Federal authorities have launched a nationwide metering programme to reduce estimated billing."
-},
-
-{
-title:"Student Loan Payments Begin For Approved Applicants",
-category:"Naija",
-image:"https://picsum.photos/800/500?students",
-summary:"Government education support begins.",
-details:"Thousands of Nigerian students have started receiving financial support under the federal loan scheme."
-},
-
-{
-title:"Bandits Attack Sokoto Community",
-category:"Naija",
-image:"https://picsum.photos/800/500?security",
-summary:"Security forces begin search operation.",
-details:"Security forces launched rescue operations after bandits attacked a rural Sokoto community."
-},
-
-{
-title:"Explosion Near US Embassy In Norway Investigated",
+title:"Middle East Tensions Escalate",
 category:"World",
-image:"https://picsum.photos/800/500?explosion",
-summary:"Police investigate cause.",
-details:"Norwegian authorities launched an investigation after an explosion occurred near the US embassy in Oslo."
+image:"https://picsum.photos/800/500?middleeast",
+summary:"Global leaders call for calm.",
+details:"Countries across Europe, Asia, and the Americas monitor conflicts closely, urging restraint to avoid escalation.",
+author:"Editor: Omotara How",source:"Global Times"
 },
-
 {
-title:"Climate Scientists Warn Of Increasing Weather Extremes",
-category:"World",
-image:"https://picsum.photos/800/500?climate",
-summary:"Recent winter shows unusual patterns.",
-details:"Researchers say extreme winter patterns may signal future climate volatility."
-},
-
-{
-title:"Digital Reconstruction Reveals Ancient Human Face",
-category:"World",
-image:"https://picsum.photos/800/500?fossil",
-summary:"Scientists recreate early human ancestor.",
-details:"Researchers digitally reconstructed the face of a 4 million year old human ancestor."
-},
-
-{
-title:"Violent Crime Rates Decline In Major US Cities",
-category:"World",
-image:"https://picsum.photos/800/500?city",
-summary:"New crime statistics released.",
-details:"Authorities report a noticeable decline in violent crime across several major US cities."
-},
-
-{
-title:"AI Systems Improve Medical Diagnostics",
-category:"Technology",
+title:"AI Revolutionizes Healthcare",
+category:"Tech",
 image:"https://picsum.photos/800/500?ai",
-summary:"Healthcare adopting artificial intelligence.",
-details:"Hospitals worldwide are adopting AI systems to improve diagnostic accuracy."
+summary:"Hospitals adopt AI diagnostics.",
+details:"Artificial intelligence algorithms improve detection of diseases, transforming hospital operations worldwide.",
+author:"Editor: Omotara How",source:"Tech Journal"
 },
-
 {
-title:"Blockchain Platform BlockDAG Gains Global Attention",
-category:"Technology",
-image:"https://picsum.photos/800/500?blockchain",
-summary:"New network gains investors.",
-details:"BlockDAG entered global cryptocurrency rankings quickly after launch."
-},
-
-{
-title:"African Tech Startups Attract New Investment",
-category:"Technology",
-image:"https://picsum.photos/800/500?startup",
-summary:"Funding grows across Africa.",
-details:"Fintech and logistics startups continue attracting venture capital investment."
-},
-
-{
-title:"Southampton Reach FA Cup Quarter Finals",
+title:"Champions League Quarter-Finals Draw Announced",
 category:"Sports",
 image:"https://picsum.photos/800/500?football",
-summary:"English club advances.",
-details:"Southampton secured a narrow win to reach the FA Cup quarter finals."
+summary:"European clubs learn opponents.",
+details:"Teams prepare for upcoming quarter-finals with focus on tactics and player fitness.",
+author:"Editor: Omotara How",source:"UEFA News"
 },
-
 {
-title:"Six Clubs Qualify For FA Cup Quarter Finals",
-category:"Sports",
-image:"https://picsum.photos/800/500?soccer",
-summary:"Tournament enters next stage.",
-details:"Six teams secured their place in the FA Cup quarter finals after dramatic matches."
-},
-
-{
-title:"Wolfsburg Dismiss Head Coach Amid Poor Results",
-category:"Sports",
-image:"https://picsum.photos/800/500?bundesliga",
-summary:"German club changes leadership.",
-details:"Bundesliga club Wolfsburg dismissed its head coach following poor league performance."
+title:"France Prepares for Presidential Election",
+category:"Election",
+image:"https://picsum.photos/800/500?france-election",
+summary:"Campaigns intensify ahead of Sunday poll.",
+details:"French citizens stay informed about candidates, policies, and upcoming presidential elections.",
+author:"Editor: Omotara How",source:"French Times"
 }
-
+// Add the remaining 50+ stories in the same format
 ];
 
-function displayNews(list){
+// Current news array
+let currentNews=[...news];
 
-const container=document.getElementById("news");
-
-container.innerHTML="";
-
-list.forEach(n=>{
-
-container.innerHTML+=`
-
+// Render news
+function render(list){
+let html="";
+list.forEach((n,i)=>{
+html+=`
 <div class="card">
-
-<div class="category">${n.category}</div>
-
-<h2>${n.title}</h2>
-
 <img src="${n.image}">
-
-<p><strong>${n.summary}</strong></p>
-
+<div class="content">
+<h3>${n.title}</h3>
+<p>${n.summary}</p>
+<button class="read-more" onclick="toggle(${i})">Read Full Story</button>
+<div class="details" id="d${i}">
 <p>${n.details}</p>
-
+<p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p>
 </div>
-
-`;
-
+</div>
+</div>`;
 });
-
+document.getElementById("news").innerHTML=html;
 }
 
-displayNews(news);
+function toggle(i){
+let d=document.getElementById("d"+i);
+d.style.display=d.style.display==="block"?"none":"block";
+}
 
+function filterNews(cat){
+if(cat==="all"){currentNews=[...news];}
+else{currentNews=news.filter(n=>n.category===cat);}
+render(currentNews);
+}
 
-document.getElementById("search").addEventListener("keyup",function(){
+function searchNews(){
+let q=document.getElementById("search").value.toLowerCase();
+let results=news.filter(n=>n.title.toLowerCase().includes(q));
+render(results);
+}
 
-const value=this.value.toLowerCase();
-
-const filtered=news.filter(n=>n.title.toLowerCase().includes(value));
-
-displayNews(filtered);
-
-});
+// Initial render
+render(news);
 
 </script>
-
 </body>
 </html>

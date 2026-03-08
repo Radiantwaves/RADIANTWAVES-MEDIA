@@ -21,7 +21,7 @@ margin:0;
 }
 
 header p{
-margin:5px;
+margin:6px;
 font-size:14px;
 }
 
@@ -58,7 +58,6 @@ color:white;
 padding:8px;
 overflow:hidden;
 white-space:nowrap;
-font-weight:bold;
 }
 
 .breaking span{
@@ -100,6 +99,11 @@ margin-top:10px;
 line-height:1.7;
 }
 
+audio{
+margin-top:10px;
+width:100%;
+}
+
 footer{
 background:#111;
 color:white;
@@ -112,8 +116,8 @@ width:28px;
 margin:8px;
 }
 
-</style></head><body><header><h1>Radiant Waves Global News</h1><p><b>Gateway to World News – Connecting You to the World</b></p></header><div class="breaking"><span id="ticker"></span>
-
+</style></head><body><header><h1>Radiant Waves Global News</h1><p><b>Gateway to World News – Connecting You to the World</b></p></header><div class="breaking">
+<span id="ticker"></span>
 </div><nav><button onclick="filter('all')">Home</button>
 <button onclick="filter('Naija')">Naija Pulse</button>
 <button onclick="filter('World')">World</button>
@@ -130,8 +134,7 @@ margin:8px;
 <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
 </a><a href="https://twitter.com/radiantwaves13528995">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
-</a></div><br>@ 2026 Radiant Waves
-Editor: Omotara How
+</a></div><br>@2026Radiant Waves
 
 </footer><script>
 
@@ -141,40 +144,27 @@ const news=[
 title:"Peter Obi Calls for Electoral Reform in Nigeria",
 category:"Naija",
 image:"https://picsum.photos/800/500?politics",
-summary:"The former presidential candidate has again emphasized the need for transparent elections.",
-details:"Peter Obi has renewed calls for comprehensive electoral reforms in Nigeria, arguing that credible elections remain the cornerstone of democratic governance. Speaking during a civic engagement forum attended by youth leaders and policy analysts, Obi stressed that electoral institutions must remain independent and transparent in order to build public trust in democratic processes. He noted that many Nigerians, particularly young voters, are increasingly demanding accountability from political leaders. Obi also encouraged civil society organizations to continue advocating for reforms that would strengthen voter participation and improve the credibility of election results. Analysts say the renewed debate could influence preparations for Nigeria's future electoral cycles."
+summary:"The former presidential candidate calls for stronger electoral transparency.",
+details:"Peter Obi has renewed his call for electoral reforms across Nigeria, emphasizing that democratic systems can only thrive when citizens trust the electoral process. During a public engagement with youth leaders and policy experts, Obi stressed that electoral institutions must remain transparent, independent, and accountable. According to analysts, the discussion reflects wider debates about governance and democratic development in Nigeria.",
+audio:""
 },
 
 {
 title:"Nasir El-Rufai Speaks on Future of Nigerian Politics",
 category:"Naija",
 image:"https://picsum.photos/800/500?nigeria",
-summary:"The former Kaduna State governor shared his views on governance and national development.",
-details:"Nasir El-Rufai has reentered national political discussions by commenting on Nigeria's evolving political environment and the importance of long-term institutional reforms. In recent remarks during a policy dialogue, the former governor highlighted economic restructuring, education reform, and improved governance as priorities for national development. El-Rufai also emphasized that political leaders must focus on policies that address unemployment, infrastructure gaps, and national security challenges. Observers say his comments reflect broader conversations among political stakeholders about the direction of governance in Nigeria and the policies that could shape the country's political future."
-},
-
-{
-title:"Sunday Igboho Calls for Unity in Southwest Nigeria",
-category:"Naija",
-image:"https://picsum.photos/800/500?africa",
-summary:"The Yoruba activist urged communities to prioritize peace and cooperation.",
-details:"Yoruba activist Sunday Igboho has called on leaders and residents across southwestern Nigeria to prioritize unity and peaceful cooperation. In a statement circulated among community groups, Igboho stressed that regional stability depends on constructive dialogue and collaboration between local leaders, traditional authorities, and youth organizations. He noted that economic growth and social development can only occur when communities work together to address security concerns and promote regional development. Analysts say the appeal for unity reflects growing efforts by community leaders to maintain stability and encourage constructive civic participation."
+summary:"The former Kaduna governor discusses policy and governance challenges.",
+details:"Nasir El-Rufai has once again drawn attention within Nigeria's political landscape after discussing governance challenges and economic development strategies. The former governor emphasized the need for stronger institutions, improved infrastructure planning, and consistent economic policies that support long-term growth.",
+audio:""
 },
 
 {
 title:"Global Leaders Monitor Middle East Tensions",
 category:"World",
 image:"https://picsum.photos/800/500?middleeast",
-summary:"International leaders continue diplomatic efforts amid rising tensions.",
-details:"World leaders are closely monitoring developments in the Middle East as diplomatic negotiations intensify to prevent further escalation. International organizations and regional partners have urged restraint while exploring diplomatic channels aimed at reducing tensions. Analysts note that developments in the region have significant geopolitical implications, particularly for global energy markets and international security cooperation. Governments across Europe, Asia, and North America have called for dialogue and peaceful resolution of disputes."
-},
-
-{
-title:"Artificial Intelligence Expands Across Global Markets",
-category:"Tech",
-image:"https://picsum.photos/800/500?ai",
-summary:"Technology companies accelerate AI investment worldwide.",
-details:"Artificial intelligence technologies are rapidly expanding across global markets as major technology firms increase investment in automation and data analysis systems. Industry experts believe AI could significantly transform sectors such as healthcare, finance, logistics, and education. Governments are also examining regulatory frameworks to ensure ethical and responsible use of advanced AI technologies. Analysts say the rapid pace of innovation is creating both economic opportunities and policy challenges for countries around the world."
+summary:"Diplomatic talks continue amid regional tensions.",
+details:"International leaders are closely monitoring developments in the Middle East as diplomatic discussions continue to reduce tensions. Governments and global institutions are urging dialogue and restraint while exploring diplomatic solutions that could stabilize the region and prevent further escalation.",
+audio:""
 }
 
 ]
@@ -203,7 +193,7 @@ html+=`
 
 <p>${n.details}</p>
 
-<p><b>Editor:</b> Omotara How</p>
+<audio controls src="${n.audio}"></audio>
 
 </div>
 

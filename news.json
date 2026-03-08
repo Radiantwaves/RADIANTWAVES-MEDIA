@@ -1,125 +1,62 @@
-{
-"news":[
+const news = [
+  // --- Naija Pulse Stories ---
+  {title:"Peter Obi Advocates for Electoral Reform",category:"Naija",image:"https://picsum.photos/800/500?politics1",summary:"Obi calls for reforms to strengthen democracy in Nigeria.",details:"Peter Obi emphasized the need for credible elections, highlighting past irregularities and proposing reforms to the electoral process. He stressed that democratic systems thrive when institutions are transparent and accountable.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
+  
+  {title:"Nasir El-Rufai Discusses Governance Reforms",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor talks about policy changes.",details:"El-Rufai discussed economic and governance reforms, highlighting the importance of public-private partnerships and accountability in state projects.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist addresses local security concerns.",details:"Sunday Igboho emphasized community protection and collaboration with authorities in Southwest Nigeria to prevent violence, calling for unity among residents.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
+  
+  {title:"Tinubu Promises Electricity Fix",category:"Naija",image:"https://picsum.photos/800/500?electricity",summary:"President updates Nigerians on electricity rollout.",details:"President Bola Tinubu assured Nigerians that electricity issues are being addressed. Meters are being installed zone by zone, and households are being prioritized for steady supply.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"Student Loan Disbursement Update",category:"Naija",image:"https://picsum.photos/800/500?studentloan",summary:"Students receive monthly allowances.",details:"The government confirmed that students who applied for loans are now receiving monthly allowances. This is part of the national education support program aimed at reducing financial barriers.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
+  
+  {title:"Buhari Foundation Launches Health Initiative",category:"Naija",image:"https://picsum.photos/800/500?health",summary:"New health initiative targets rural areas.",details:"The Buhari Foundation launched a new health program targeting rural communities, providing access to basic healthcare services and awareness campaigns.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
+  
+  {title:"Lagos Traffic Management System Expands",category:"Naija",image:"https://picsum.photos/800/500?traffic",summary:"New roads and monitoring to reduce congestion.",details:"The Lagos State government has expanded its traffic management systems, including new roads, sensors, and live monitoring to reduce congestion during peak hours.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
+  
+  {title:"Nigeria Banks Adopt Digital Payment Methods",category:"Naija",image:"https://picsum.photos/800/500?finance",summary:"Digital finance continues to grow.",details:"Major banks are increasing digital payment adoption across the country, encouraging cashless transactions and providing mobile banking apps to rural and urban customers.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
+  
+  {title:"Kaduna State Launches Agricultural Program",category:"Naija",image:"https://picsum.photos/800/500?agriculture",summary:"Farmers receive new support packages.",details:"Kaduna State initiated a program to support local farmers with seeds, fertilizers, and training on modern farming techniques to boost agricultural output.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
+  
+  {title:"Abuja Real Estate Market Trends",category:"Naija",image:"https://picsum.photos/800/500?realestate",summary:"Property prices continue to rise.",details:"Real estate experts note an increase in property values in Abuja due to growing demand and government infrastructure projects improving access.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
+  
+  {title:"Niger Delta Environmental Cleanup Efforts",category:"Naija",image:"https://picsum.photos/800/500?environment",summary:"Cleanup programs tackle pollution.",details:"Government and private initiatives focus on cleaning oil spill areas in the Niger Delta, restoring ecosystems and providing new jobs to locals.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"Tech Startups Receive Funding Boost",category:"Naija",image:"https://picsum.photos/800/500?startup",summary:"Investors back Nigerian tech startups.",details:"Several startups in Lagos and Abuja received funding from private investors and international partners, supporting growth in fintech, AI, and e-commerce sectors.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
+  
+  {title:"University Strikes End in Lagos",category:"Naija",image:"https://picsum.photos/800/500?education",summary:"Students return to classrooms.",details:"After weeks of negotiation, university staff reached an agreement with administration, ending strikes and allowing students to resume academic activities.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
+  
+  {title:"Nigerian Film Industry Growth",category:"Naija",image:"https://picsum.photos/800/500?nollywood",summary:"Box office revenue rises.",details:"Nollywood sees increased box office revenue and international collaborations, reflecting the growing global influence of Nigerian cinema.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
+  
+  {title:"Healthcare Workers Strike Ends",category:"Naija",image:"https://picsum.photos/800/500?healthcare",summary:"Agreement reached between government and unions.",details:"Healthcare unions reached a new agreement with the government, improving salaries and working conditions for nurses and medical staff.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"Electric Vehicle Adoption Expands in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?ev",summary:"EV charging stations set up.",details:"The government supports EV adoption by installing charging stations in major cities and offering incentives to buyers, boosting sustainable transport.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
+  
+  {title:"Lagos Carnival Attracts International Tourists",category:"Naija",image:"https://picsum.photos/800/500?festival",summary:"Tourism boost for Lagos.",details:"The Lagos Carnival welcomed thousands of international visitors, showcasing Nigerian culture, arts, and music.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
+  
+  {title:"Nigeria Launches Digital ID Program",category:"Naija",image:"https://picsum.photos/800/500?id",summary:"National identification system expands.",details:"The digital ID program aims to provide every citizen with secure identification to access government services efficiently.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
+  
+  {title:"Renewable Energy Projects in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?renewable",summary:"Solar and wind initiatives grow.",details:"Nigeria invests in solar and wind energy projects to diversify power sources and reduce reliance on fossil fuels.",author:"Editor: Omotara How",source:"Premium Times, March 8, 2026"},
+  
+  {title:"Youth Entrepreneurship Programs Expand",category:"Naija",image:"https://picsum.photos/800/500?youth",summary:"Young entrepreneurs receive mentorship.",details:"Programs to train and mentor young entrepreneurs continue across Lagos, Abuja, and Port Harcourt, focusing on fintech, agriculture, and creative industries.",author:"Editor: Omotara How",source:"The Nation, March 8, 2026"},
+  
+  {title:"Nigeria's Transportation Upgrade",category:"Naija",image:"https://picsum.photos/800/500?transport",summary:"Rail and road projects underway.",details:"Major rail and highway projects are progressing to improve connectivity between states, reducing travel time and boosting commerce.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"COVID-19 Updates and Health Guidelines",category:"Naija",image:"https://picsum.photos/800/500?covid",summary:"Vaccination campaigns continue.",details:"The government urges citizens to continue vaccination and follow safety protocols, monitoring case numbers and providing updated health guidance.",author:"Editor: Omotara How",source:"Vanguard, March 8, 2026"},
+  
+  {title:"Agricultural Export Boost",category:"Naija",image:"https://picsum.photos/800/500?export",summary:"Nigeria increases crop exports.",details:"The export of cocoa, sesame seeds, and palm oil rises due to government incentives, improving revenue for farmers and the national economy.",author:"Editor: Omotara How",source:"Business Day, March 8, 2026"},
+  
+  {title:"National Sports Development Program",category:"Naija",image:"https://picsum.photos/800/500?sportsdev",summary:"Youth sports receive funding.",details:"The government launched programs to fund youth sports initiatives nationwide, focusing on talent development and sports infrastructure.",author:"Editor: Omotara How",source:"Daily Trust, March 8, 2026"},
 
-{
-"category":"Naija Pulse",
-"title":"Peter Obi Calls for Electoral Reforms",
-"image":"images/peter-obi.jpg",
-"synopsis":"Former presidential candidate urges stronger democratic institutions.",
-"details":"Peter Obi has renewed his call for comprehensive electoral reforms across Nigeria, saying that transparent elections are essential for restoring trust in democratic institutions. Speaking during a political forum, Obi emphasized that electoral transparency, voter protection, and accountability must become priorities if Nigeria hopes to strengthen its democracy before the next national elections.",
-"source":"Radiant Waves Political Desk",
-"editor":"Omotara How"
-},
+  // --- Election Watch Stories ---
+  {title:"Nigeria Election Updates",category:"Election",image:"https://picsum.photos/800/500?nigelection",summary:"Latest updates from Nigeria elections.",details:"Full details on candidates, campaigns, and electoral process in Nigeria. Tinubu's campaign focus includes electricity, student loans, and economic reforms.",author:"Editor: Omotara How",source:"Channels TV, March 8, 2026"},
+  
+  {title:"France Election Updates",category:"Election",image:"https://picsum.photos/800/500?france",summary:"France presidential election coverage.",details:"Details on campaigns, candidates, political debates, and projections for the upcoming French election.",author:"Editor: Omotara How",source:"Le Monde, March 8, 2026"},
+  
+  {title:"UK Election Updates",category:"Election",image:"https://picsum.photos/800/500?uk",summary:"General elections coverage.",details:"Full reporting on UK election candidates, parties, polls, and voting procedures.",author:"Editor: Omotara How",source:"BBC, March 8, 2026"},
+  
+  {title:"USA Election Updates",category:"Election",image:"https://picsum.photos/800/500?usa",summary:"US elections and political updates.",details:"Coverage includes Senate, House, and Presidential campaigns, candidate statements, and official results.",author:"Editor: Omotara How",source:"CNN, March 8, 2026"},
+  
+  {title:"India Election Updates",category:"Election",image:"https://picsum.photos/800/500?india",summary:"Indian elections ongoing coverage.",details:"Coverage includes state elections, candidate campaigns, voting procedures, and election forecasts across India.",author:"Editor: Omotara How",source:"The Times of India, March 8, 2026"}
+];
 
-{
-"category":"Naija Pulse",
-"title":"El-Rufai Remains Influential Voice in Nigerian Politics",
-"image":"images/el-rufai.jpg",
-"synopsis":"Political analysts discuss the former governor’s role.",
-"details":"Former Kaduna State governor Nasir El-Rufai continues to influence political debate in Nigeria. Analysts say his comments on governance and economic reforms continue to shape national political conversations as parties begin to reposition themselves ahead of future elections.",
-"source":"Radiant Waves Political Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Naija Pulse",
-"title":"Sunday Igboho Calls for Unity in Southwest Nigeria",
-"image":"images/sunday-igboho.jpg",
-"synopsis":"Yoruba activist emphasizes community cooperation.",
-"details":"Yoruba activist Sunday Igboho has called for stronger unity among communities in southwestern Nigeria. Supporters say the activist continues to advocate cultural identity and cooperation while encouraging peaceful dialogue on regional issues.",
-"source":"Radiant Waves Regional Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Naija Pulse",
-"title":"Economic Concerns Dominate Public Debate in Nigeria",
-"image":"https://picsum.photos/600/400?nigeria",
-"synopsis":"Citizens debate rising prices and economic reforms.",
-"details":"Economic reforms and inflation remain central issues in Nigeria as citizens and policy experts debate the long-term impact of current fiscal policies. Government officials say the reforms are necessary to stabilize the economy, while many households are still feeling the pressure of rising costs.",
-"source":"Radiant Waves Economic Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"World",
-"title":"Global Leaders Monitor Middle East Tensions",
-"image":"https://picsum.photos/600/400?world",
-"synopsis":"Diplomatic efforts intensify to prevent escalation.",
-"details":"International leaders are closely monitoring developments in the Middle East as diplomatic efforts intensify to prevent further escalation. Governments across Europe, Asia and North America have urged restraint while humanitarian agencies prepare for possible consequences of continued instability.",
-"source":"Radiant Waves Global Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"World",
-"title":"United Nations Calls for Humanitarian Access in Conflict Zones",
-"image":"https://picsum.photos/600/400?un",
-"synopsis":"Aid agencies warn of worsening humanitarian conditions.",
-"details":"The United Nations has called for expanded humanitarian access in several conflict-affected regions around the world. Aid organizations say millions of civilians depend on emergency support as diplomatic negotiations continue.",
-"source":"Radiant Waves Global Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Technology",
-"title":"Artificial Intelligence Development Accelerates Worldwide",
-"image":"https://picsum.photos/600/400?technology",
-"synopsis":"Tech companies expand investment in AI systems.",
-"details":"Technology companies across the world are rapidly expanding investment in artificial intelligence systems. Experts say AI will reshape industries ranging from healthcare to finance, though concerns remain about regulation and ethical use.",
-"source":"Radiant Waves Technology Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Technology",
-"title":"Cybersecurity Experts Warn of Rising Digital Threats",
-"image":"https://picsum.photos/600/400?cyber",
-"synopsis":"Governments urged to strengthen security systems.",
-"details":"Cybersecurity experts say governments and businesses must improve digital defenses as cyber attacks become more sophisticated. The warnings come as global dependence on digital infrastructure continues to grow.",
-"source":"Radiant Waves Technology Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Sports",
-"title":"European Football Clubs Prepare for Major Tournaments",
-"image":"https://picsum.photos/600/400?sports",
-"synopsis":"Teams intensify training ahead of key competitions.",
-"details":"Several European football clubs are intensifying preparations ahead of major continental competitions. Coaches say the coming weeks will be decisive as teams fight for qualification and championship titles.",
-"source":"Radiant Waves Sports Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Sports",
-"title":"Athletics Events Begin Ahead of Global Championships",
-"image":"https://picsum.photos/600/400?athletics",
-"synopsis":"Athletes compete in qualification events.",
-"details":"Athletes across multiple continents are participating in qualification events ahead of upcoming international championships. Organizers say the competitions will determine which athletes advance to global tournaments later this year.",
-"source":"Radiant Waves Sports Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Election",
-"title":"United States Election Campaign Intensifies",
-"image":"https://picsum.photos/600/400?election",
-"synopsis":"Candidates expand campaigns nationwide.",
-"details":"Political candidates in the United States are expanding campaign activities as the election season intensifies. Campaign strategists say voter turnout and economic issues will likely dominate the political debate.",
-"source":"Radiant Waves Election Desk",
-"editor":"Omotara How"
-},
-
-{
-"category":"Election",
-"title":"UK Political Parties Prepare for Future General Election",
-"image":"https://picsum.photos/600/400?uk",
-"synopsis":"Parties begin outlining policies and strategies.",
-"details":"Major political parties in the United Kingdom have begun outlining their policy agendas and campaign strategies as preparations begin for the next national election cycle.",
-"source":"Radiant Waves Election Desk",
-"editor":"Omotara How"
-}
-
-]
-}

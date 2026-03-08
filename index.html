@@ -36,6 +36,7 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
 <p><b>Gateway to World News – Connecting You to the World</b></p>
 </header>
 
+<!-- RADIO BAR -->
 <div class="radio-bar">
   <span>🎧 Radiant Waves Radio — Listen Live</span>
   <audio id="player" controls loop>
@@ -45,23 +46,28 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
   <button onclick="changeTrack('news-music3.mp3')">Track 3</button>
 </div>
 
+<!-- BREAKING NEWS -->
 <div class="breaking">
 <span id="ticker"></span>
 </div>
 
+<!-- NAVIGATION -->
 <nav>
   <button onclick="filterNews('all')">Home</button>
   <button onclick="filterNews('Naija')">Naija Pulse</button>
   <button onclick="filterNews('World')">World</button>
   <button onclick="filterNews('Tech')">Technology</button>
   <button onclick="filterNews('Sports')">Sports</button>
+  <button onclick="filterNews('Election')">Election Watch</button>
   <div class="search">
     <input id="search" placeholder="Search news..." onkeyup="searchNews()">
   </div>
 </nav>
 
+<!-- NEWS CONTAINER -->
 <div class="container" id="news"></div>
 
+<!-- FOOTER -->
 <footer>
 <div class="social">
 <a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
@@ -73,20 +79,32 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
 </footer>
 
 <script>
-// Local JSON news for stability
+// Local JSON news
 const news=[
-{title:"Peter Obi Calls for Electoral Reform in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?politics",summary:"Former presidential candidate calls for transparent elections.",details:"Peter Obi renewed calls for electoral reforms in Nigeria, emphasizing credible elections and transparent institutions."},
-{title:"Nasir El-Rufai Discusses Future of Nigerian Politics",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor comments on governance reforms.",details:"Nasir El-Rufai discussed economic reforms and national policy priorities during a recent forum."},
-{title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist comments on local security issues.",details:"Sunday Igboho addressed security concerns in Southwest Nigeria, emphasizing community protection and collaboration with authorities."},
-{title:"Middle East Tensions Draw Global Attention",category:"World",image:"https://picsum.photos/800/500?middleeast",summary:"International leaders urge restraint.",details:"Governments across Europe, Asia, and North America are monitoring developments in the Middle East as diplomatic discussions continue."},
-{title:"AI Expands Across Global Technology Sector",category:"Tech",image:"https://picsum.photos/800/500?ai",summary:"AI investment increases worldwide.",details:"Major tech companies are investing heavily in artificial intelligence systems designed to automate industries and improve productivity."},
-{title:"Cybersecurity Experts Warn of Increasing Global Cyber Attacks",category:"Tech",image:"https://picsum.photos/800/500?cybersecurity",summary:"Digital security becomes global priority.",details:"Security analysts warn that cyber attacks targeting financial institutions and infrastructure are becoming more sophisticated."},
-{title:"European Football Clubs Prepare for Major Tournament",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Teams intensify training ahead of competition.",details:"Clubs across Europe are preparing for upcoming tournaments with focus on player fitness and tactical discipline."}
+  {title:"Peter Obi Calls for Electoral Reform in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?politics",summary:"Former presidential candidate calls for transparent elections.",details:"Peter Obi renewed calls for electoral reforms in Nigeria, emphasizing credible elections and transparent institutions."},
+  {title:"Nasir El-Rufai Discusses Future of Nigerian Politics",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor comments on governance reforms.",details:"Nasir El-Rufai discussed economic reforms and national policy priorities during a recent forum."},
+  {title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist comments on local security issues.",details:"Sunday Igboho addressed security concerns in Southwest Nigeria, emphasizing community protection and collaboration with authorities."},
+  
+  {title:"Middle East Tensions Draw Global Attention",category:"World",image:"https://picsum.photos/800/500?middleeast",summary:"International leaders urge restraint.",details:"Governments across Europe, Asia, and North America are monitoring developments in the Middle East as diplomatic discussions continue."},
+  {title:"Global Markets React to Oil Price Surge",category:"World",image:"https://picsum.photos/800/500?oil",summary:"Energy markets fluctuate due to geopolitical tensions.",details:"Analysts note that oil price surges in the Middle East affect global markets, trade agreements, and national energy policies."},
+  
+  {title:"AI Expands Across Global Technology Sector",category:"Tech",image:"https://picsum.photos/800/500?ai",summary:"AI investment increases worldwide.",details:"Major tech companies are investing heavily in artificial intelligence systems designed to automate industries and improve productivity."},
+  {title:"Cybersecurity Experts Warn of Increasing Global Cyber Attacks",category:"Tech",image:"https://picsum.photos/800/500?cybersecurity",summary:"Digital security becomes global priority.",details:"Security analysts warn that cyber attacks targeting financial institutions and infrastructure are becoming more sophisticated."},
+  
+  {title:"European Football Clubs Prepare for Major Tournament",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Teams intensify training ahead of competition.",details:"Clubs across Europe are preparing for upcoming tournaments with focus on player fitness and tactical discipline."},
+  {title:"Champions League Quarter-Finals Announced",category:"Sports",image:"https://picsum.photos/800/500?football2",summary:"Draw completed for the quarter-finals.",details:"UEFA conducted the draw for the Champions League quarter-finals; teams are preparing for matches across Europe."},
+  
+  // Election Watch
+  {title:"Nigeria Election Updates",category:"Election",image:"https://picsum.photos/800/500?nigelection",summary:"Latest updates from Nigeria elections.",details:"Full details on candidates, campaigns, and electoral process in Nigeria."},
+  {title:"France Election Updates",category:"Election",image:"https://picsum.photos/800/500?france",summary:"France presidential election coverage.",details:"Details on campaigns, candidates, political debates, and projections for the upcoming French election."},
+  {title:"UK Election Updates",category:"Election",image:"https://picsum.photos/800/500?uk",summary:"General elections coverage.",details:"Full reporting on UK election candidates, parties, polls, and voting procedures."},
+  {title:"USA Election Updates",category:"Election",image:"https://picsum.photos/800/500?usa",summary:"US elections and political updates.",details:"Details on Senate, House, and Presidential campaigns, including candidate statements and official results."},
+  {title:"India Election Updates",category:"Election",image:"https://picsum.photos/800/500?india",summary:"Indian elections ongoing coverage.",details:"Coverage includes state elections, candidate campaigns, voting procedures, and election forecasts."}
 ];
 
 let currentNews=[...news];
 
-// Render news
+// Render function
 function render(list){
   currentNews=[...list];
   let html="";

@@ -4,195 +4,342 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:20px;text-align:center;}
-header h1{margin:0;}
-header p{margin:5px;font-size:14px;font-weight:bold;}
-nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;padding:5px;}
-nav button{background:none;border:none;color:white;padding:10px 15px;cursor:pointer;}
-nav button:hover{background:#c40000;}
-.search{margin-left:auto;padding:5px;}
-.search input{padding:6px;}
-.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
-.container{padding:15px;}
-.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;cursor:pointer;}
-.card img{width:100%;height:250px;object-fit:cover;}
-.content{padding:12px;}
-.details{display:none;margin-top:10px;line-height:1.7;}
-button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
-footer{background:#111;color:white;padding:20px;text-align:center;}
-.social a img{width:28px;margin:0 8px;}
-audio{width:100%;margin-top:10px;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0b3d91;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+}
+
+.slogan{
+font-size:14px;
+opacity:0.9;
+}
+
+.ticker{
+background:#111;
+color:white;
+padding:10px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.ticker span{
+animation:scroll 40s linear infinite;
+display:inline-block;
+padding-left:100%;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+padding:10px;
+background:#eee;
+flex-wrap:wrap;
+}
+
+.search{
+padding:8px;
+width:200px;
+}
+
+.radio{
+padding:10px;
+background:#ddd;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+padding:15px;
+border-radius:6px;
+box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:6px;
+}
+
+.category{
+font-weight:bold;
+color:#0b3d91;
+margin-bottom:5px;
+}
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.social a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Radiant Waves Global News</h1>
-<p>Gateway to World News – Connecting You to the World</p>
+<h1>Radiant Waves News</h1>
+<div class="slogan">Gateway to world news connecting you to the world</div>
 </header>
 
-<!-- Radio player -->
-<audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Breaking news ticker -->
-<div class="breaking">
+<div class="ticker">
 <span id="ticker"></span>
 </div>
 
-<!-- Navigation -->
-<nav>
-<button onclick="filterNews('all')">Home</button>
-<button onclick="filterNews('Naija')">Naija Pulse</button>
-<button onclick="filterNews('World')">World</button>
-<button onclick="filterNews('Tech')">Technology</button>
-<button onclick="filterNews('Sports')">Sports</button>
-<button onclick="filterNews('Election')">Election Watch</button>
-<div class="search">
-<input id="search" placeholder="Search news..." onkeyup="searchNews()">
-</div>
-</nav>
+<div class="topbar">
 
-<!-- News container -->
+<input class="search" id="search" placeholder="Search news...">
+
+<div class="radio">
+🎧 Radiant Waves Radio
+<br>
+<audio controls>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+</div>
+
 <div class="container" id="news"></div>
 
-<!-- Footer -->
 <footer>
+
 <div class="social">
-<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
-<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
-<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
-<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+<a href="https://facebook.com/radiantwavesnews">Facebook</a>
+<a href="https://twitter.com/radiantwaves13528995">X</a>
 </div>
-<br>@2026 Radiant Waves
+
+<br>
+
+© 2026 Radiant Waves
+
 </footer>
 
 <script>
-// ==== Full News JSON ====
 
-// 20 Naija Pulse stories
-  const NaijapulseNews=[
-{title:"IGP Appoints DCP Anthony Placid as New Police Spokesperson",category:"Naija",image:"https://picsum.photos/800/500?police",summary:"Police headquarters announces new PRO.",details:"Nigeria’s Inspector-General of Police has appointed Deputy Commissioner of Police Anthony Placid as the new Force Public Relations Officer. He replaces Olumuyiwa Adejobi’s media team structure while Lagos spokesperson Benjamin Hundeyin returns to operational duties. Police authorities say the appointment aims to strengthen communication between law enforcement and the public as security reforms continue across the country.",author:"Radiant Waves News Desk",source:"Security Correspondent"},
-
-{title:"NDLEA Arrests Former Lagos Councillor With 40kg of Cannabis",category:"Naija",image:"https://picsum.photos/800/500?drug",summary:"Drug enforcement agency intercepts large shipment.",details:"Nigeria’s National Drug Law Enforcement Agency confirmed the arrest of a former Lagos councillor after operatives intercepted over 40 kilograms of cannabis concealed in travel bags. Authorities also discovered additional narcotics hidden inside baby diapers during a separate operation at a logistics warehouse. Officials say the arrests are part of a nationwide crackdown on drug trafficking networks.",author:"Radiant Waves News Desk",source:"Crime Watch Nigeria"},
-
-{title:"Opposition Parties Consider Alliance Ahead of 2027 Elections",category:"Naija",image:"https://picsum.photos/800/500?politics",summary:"Talks begin on possible coalition.",details:"Several Nigerian opposition parties have opened discussions on forming a coalition ahead of the 2027 general elections. Party leaders say the rising cost of conducting direct primaries and the need for stronger political competition are driving the talks. Analysts say such alliances could reshape Nigeria’s political landscape.",author:"Radiant Waves News Desk",source:"Political Affairs"},
-
-{title:"Petrol Price Surge Pushes Transport Fares Higher in Southeast",category:"Naija",image:"https://picsum.photos/800/500?transport",summary:"Commuters face higher costs.",details:"Transport operators across Anambra and neighboring states have increased fares following rising petrol prices reportedly reaching ₦1,200 per litre in some areas. Drivers say operating costs have doubled in recent months, forcing them to adjust ticket prices. Passengers are calling for government intervention to stabilize fuel supply and transportation costs.",author:"Radiant Waves News Desk",source:"Economic Monitor"},
-
-{title:"Tinubu Administration Expands Electricity Meter Distribution",category:"Naija",image:"https://picsum.photos/800/500?electricity",summary:"Government accelerates metering programme.",details:"The federal government has begun a nationwide rollout of electricity meters as part of reforms aimed at improving transparency in power billing. Officials say households will gradually receive prepaid meters zone by zone. The programme is designed to reduce estimated billing and increase accountability in Nigeria’s electricity distribution system.",author:"Radiant Waves News Desk",source:"Energy Desk"},
-
-{title:"Student Loan Programme Begins Monthly Disbursement",category:"Naija",image:"https://picsum.photos/800/500?students",summary:"Approved applicants receive education funding.",details:"Thousands of Nigerian students who applied for the federal government’s student loan scheme have begun receiving their monthly stipends. The programme was created to expand access to higher education and support students from low-income households. Education authorities say additional applicants will continue to be processed.",author:"Radiant Waves News Desk",source:"Education Report"},
-
-{title:"Bandit Attack Leaves One Dead in Sokoto Community",category:"Naija",image:"https://picsum.photos/800/500?security",summary:"Security agencies launch rescue operations.",details:"Residents of a rural community in Sokoto State reported a deadly attack by armed bandits that left one person dead and several others abducted. Security forces have deployed additional patrol units to the area while search operations continue to locate the victims.",author:"Radiant Waves News Desk",source:"Security Monitor"},
-
-{title:"Lagos Road Accident Leaves Several Injured",category:"Naija",image:"https://picsum.photos/800/500?road",summary:"Emergency services respond quickly.",details:"A major road accident involving a commercial bus and two private vehicles left several commuters injured in Lagos. Emergency response teams transported victims to nearby hospitals while authorities launched an investigation into the cause of the crash.",author:"Radiant Waves News Desk",source:"Metro News"},
-
-{title:"Fire Destroys Residential Building in Anambra",category:"Naija",image:"https://picsum.photos/800/500?fire",summary:"Residents displaced after blaze.",details:"Firefighters battled a large blaze that destroyed a one-storey residential building in Anambra State. Witnesses say the fire may have started from an electrical fault. No fatalities were reported, but several families lost property and belongings.",author:"Radiant Waves News Desk",source:"Emergency Desk"},
-
-{title:"Diaspora Nigerians Driving Global Innovation",category:"Naija",image:"https://picsum.photos/800/500?innovation",summary:"Young professionals gaining recognition abroad.",details:"A new report highlights the growing influence of Nigerian professionals in global industries ranging from technology to finance. Analysts say young diaspora entrepreneurs are contributing significantly to international research, digital innovation and cultural influence.",author:"Radiant Waves News Desk",source:"Diaspora Affairs"},
-
-// 20 World news
-  const worldNews=[
-{title:"Middle East Tensions Escalate After Strategic Infrastructure Strikes",category:"World",image:"https://picsum.photos/800/500?war",summary:"New phase of conflict raises global concern.",details:"Regional tensions intensified after reports that critical infrastructure facilities were targeted in the latest phase of the conflict involving Iran and allied forces. Analysts say the strikes could significantly impact regional stability and energy markets if the situation continues to escalate.",author:"Radiant Waves News Desk",source:"Global Affairs"},
-
-{title:"Explosion Near U.S. Embassy in Norway Under Investigation",category:"World",image:"https://picsum.photos/800/500?explosion",summary:"Authorities examine possible causes.",details:"Norwegian police are investigating an explosion that occurred near the United States Embassy in Oslo. Officials say it is too early to determine whether the incident is linked to terrorism. Security around diplomatic facilities has been increased while forensic teams analyze evidence.",author:"Radiant Waves News Desk",source:"International Security"},
-
-{title:"NYC Investigators Say Device Near Mayor’s Residence Was IED",category:"World",image:"https://picsum.photos/800/500?investigation",summary:"Police say device could have caused serious harm.",details:"New York authorities confirmed that a suspicious device discovered near the mayor’s official residence was an improvised explosive device. Bomb disposal experts safely neutralized the device and launched a full investigation.",author:"Radiant Waves News Desk",source:"US Security Desk"},
-
-{title:"Climate Scientists Warn of Increasing Weather Extremes",category:"World",image:"https://picsum.photos/800/500?climate",summary:"Recent winter patterns show unusual fluctuations.",details:"Climate researchers say the past winter season included some of the warmest and coldest extremes recorded simultaneously across different regions. Scientists say such volatility could become more common as global climate patterns continue shifting.",author:"Radiant Waves News Desk",source:"Climate Research"},
-
-{title:"Digital Reconstruction Reveals Face of Ancient Human Ancestor",category:"World",image:"https://picsum.photos/800/500?fossil",summary:"Scientists recreate appearance of early hominin.",details:"Researchers have digitally reconstructed the face of a 4-million-year-old human ancestor known as ‘Little Foot.’ Using advanced imaging technology, scientists produced a detailed visualization that could help better understand early human evolution.",author:"Radiant Waves News Desk",source:"Science Report"},
-
-{title:"Violent Crime Declines Across Major U.S. Cities",category:"World",image:"https://picsum.photos/800/500?city",summary:"New data shows crime reduction.",details:"Recent crime statistics show a notable decline in homicide and violent crime rates across several major American cities. Experts attribute the drop to improved policing strategies, community engagement and post-pandemic social stabilization.",author:"Radiant Waves News Desk",source:"Urban Security Analysis"}
-
-// 10 Tech stories
-{title:"AI Tools Transform Medical Diagnostics",category:"Technology",image:"https://picsum.photos/800/500?ai",summary:"Artificial intelligence improves disease detection.",details:"Hospitals worldwide are increasingly adopting artificial intelligence systems capable of analyzing medical scans faster than traditional methods. Experts believe AI could significantly improve early detection of diseases such as cancer and heart conditions.",author:"Radiant Waves Tech Desk",source:"Global Tech Monitor"},
-
-{title:"Blockchain Startup BlockDAG Surges in Crypto Rankings",category:"Technology",image:"https://picsum.photos/800/500?blockchain",summary:"New platform attracts global attention.",details:"BlockDAG entered CoinMarketCap’s top rankings within hours of its launch, drawing attention from investors and technology enthusiasts. Developers claim the network offers faster transaction speeds and improved scalability.",author:"Radiant Waves Tech Desk",source:"Digital Economy Review"},
-
-{title:"African Tech Startups Attract Record Investment",category:"Technology",image:"https://picsum.photos/800/500?startup",summary:"Funding rises across the continent.",details:"Technology startups across Africa attracted significant venture capital investment this year, particularly in fintech, logistics and health technology sectors.",author:"Radiant Waves Tech Desk",source:"Startup Africa"}
-
-// 10 Sports stories
-  const sportsNews=[
-  {title:"Southampton Defeat Fulham to Reach FA Cup Quarter-Finals",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Premier League side advances.",details:"Southampton secured a narrow 1-0 victory over Fulham to advance to the quarter-final stage of the FA Cup. The decisive goal came in the second half after a tight defensive contest.",author:"Radiant Waves Sports Desk",source:"Football Europe"},
-
-{title:"Six Clubs Qualify for FA Cup Quarter-Final Round",category:"Sports",image:"https://picsum.photos/800/500?soccer",summary:"Competition intensifies.",details:"Six teams have officially secured their place in the FA Cup quarter-finals following dramatic knockout matches across England. Football fans now anticipate the next stage of the tournament.",author:"Radiant Waves Sports Desk",source:"Sports Network"},
-
-{title:"Bundesliga Club Wolfsburg Dismisses Head Coach",category:"Sports",image:"https://picsum.photos/800/500?bundesliga",summary:"Club attempts to avoid relegation.",details:"German Bundesliga club Wolfsburg has dismissed head coach Niko Kovac amid growing pressure from poor league results. Management hopes leadership changes will improve performance before the season concludes.",author:"Radiant Waves Sports Desk",source:"European Football Desk"}
-{title:"Southampton Defeat Fulham to Reach FA Cup Quarter-Finals",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Premier League side advances.",details:"Southampton secured a narrow 1-0 victory over Fulham to advance to the quarter-final stage of the FA Cup. The decisive goal came in the second half after a tight defensive contest.",author:"Radiant Waves Sports Desk",source:"Football Europe"},
-
-{title:"Six Clubs Qualify for FA Cup Quarter-Final Round",category:"Sports",image:"https://picsum.photos/800/500?soccer",summary:"Competition intensifies.",details:"Six teams have officially secured their place in the FA Cup quarter-finals following dramatic knockout matches across England. Football fans now anticipate the next stage of the tournament.",author:"Radiant Waves Sports Desk",source:"Sports Network"},
-
-{title:"Bundesliga Club Wolfsburg Dismisses Head Coach",category:"Sports",image:"https://picsum.photos/800/500?bundesliga",summary:"Club attempts to avoid relegation.",details:"German Bundesliga club Wolfsburg has dismissed head coach Niko Kovac amid growing pressure from poor league results. Management hopes leadership changes will improve performance before the season concludes.",author:"Radiant Waves Sports Desk",source:"European Football Desk"}
-{title:"Southampton Defeat Fulham to Reach FA Cup Quarter-Finals",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Premier League side advances.",details:"Southampton secured a narrow 1-0 victory over Fulham to advance to the quarter-final stage of the FA Cup. The decisive goal came in the second half after a tight defensive contest.",author:"Radiant Waves Sports Desk",source:"Football Europe"},
-
-{title:"Six Clubs Qualify for FA Cup Quarter-Final Round",category:"Sports",image:"https://picsum.photos/800/500?soccer",summary:"Competition intensifies.",details:"Six teams have officially secured their place in the FA Cup quarter-finals following dramatic knockout matches across England. Football fans now anticipate the next stage of the tournament.",author:"Radiant Waves Sports Desk",source:"Sports Network"},
-
-{title:"Bundesliga Club Wolfsburg Dismisses Head Coach",category:"Sports",image:"https://picsum.photos/800/500?bundesliga",summary:"Club attempts to avoid relegation.",details:"German Bundesliga club Wolfsburg has dismissed head coach Niko Kovac amid growing pressure from poor league results. Management hopes leadership changes will improve performance before the season concludes.",author:"Radiant Waves Sports Desk",source:"European Football Desk"}
-
-// 5 Election Watch
-const electionNews=[
-{title:"France Prepares for Presidential Election",category:"Election",image:"https://picsum.photos/800/500?france-election",summary:"Campaigns intensify ahead of Sunday poll.",details:"France holds its presidential election next week. Citizens encouraged to stay informed about candidates and policies.",author:"Editor: Omotara How",source:"French Times"},
-{title:"Nigeria’s Voter Roll Updates Ahead of Local Elections",category:"Election",image:"https://picsum.photos/800/500?nigeria-election",summary:"INEC ensures eligible voters are registered.",details:"INEC updated voter rolls and distributed smart card readers nationwide. Citizens should confirm registration ahead of elections.",author:"Editor: Omotara How",source:"Nigeria Observer"},
-{title:"UK Prepares for General Elections",category:"Election",image:"https://picsum.photos/800/500?uk-election",summary:"Parties intensify campaigns.",details:"The UK approaches general elections, with parties outlining policies on healthcare, economy, and education.",author:"Editor: Omotara How",source:"BBC UK"},
-{title:"US Election Campaigns Heat Up",category:"Election",image:"https://picsum.photos/800/500?us-election",summary:"Candidates tour key states.",details:"US presidential election campaigns focus on swing states, policy debates, and voter turnout strategies.",author:"Editor: Omotara How",source:"CNN US"},
-{title:"India Prepares for State Assembly Elections",category:"Election",image:"https://picsum.photos/800/500?india-election",summary:"Local elections set to begin.",details:"India's state assembly elections approach, with parties outlining development and infrastructure agendas.",author:"Editor: Omotara How",source:"Times of India"}
+const breakingNews = [
+"Nigeria expands electricity meter rollout nationwide",
+"Student loan programme begins monthly disbursement",
+"Opposition parties explore coalition for 2027 elections",
+"Middle East tensions escalate after infrastructure strikes",
+"AI technology transforming healthcare systems globally",
+"Global fuel prices continue to fluctuate amid supply concerns",
+"Climate scientists warn of increasing weather extremes",
+"Digital reconstruction reveals face of ancient human ancestor"
 ];
 
-// Merge all news into single array
-const news=[...naijaNews,...worldNews,...techNews,...sportsNews,...electionNews];
+document.getElementById("ticker").innerText = breakingNews.join(" • ");
 
-let currentNews=[...news];
 
-function render(list){
-  let html="";
-  list.forEach((n,i)=>{
-    html+=`
-    <div class="card">
-    <img src="${n.image}">
-    <div class="content">
-    <h3>${n.title}</h3>
-    <p>${n.summary}</p>
-    <button class="read-more" onclick="toggle(${i})">Read Full Story</button>
-    <div class="details" id="d${i}">
-    <p>${n.details}</p>
-    <p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p>
-    </div>
-    </div>
-    </div>`;
-  });
-  document.getElementById("news").innerHTML=html;
+const news = [
+
+{
+title:"IGP Appoints DCP Anthony Placid as Police Spokesperson",
+category:"Naija",
+image:"https://picsum.photos/800/500?police",
+summary:"Police headquarters announces new PRO.",
+details:"Nigeria’s Inspector General of Police appointed Deputy Commissioner Anthony Placid as the new police spokesperson as authorities aim to strengthen public communication."
+},
+
+{
+title:"NDLEA Arrests Former Lagos Councillor With 40kg Cannabis",
+category:"Naija",
+image:"https://picsum.photos/800/500?drug",
+summary:"Drug enforcement agency intercepts shipment.",
+details:"Nigeria’s anti-drug agency arrested a former Lagos councillor after officers intercepted over 40kg of cannabis concealed in luggage."
+},
+
+{
+title:"Transport Fares Rise As Fuel Prices Increase",
+category:"Naija",
+image:"https://picsum.photos/800/500?transport",
+summary:"Commuters face higher transport costs.",
+details:"Drivers across Anambra and nearby states increased fares following rising petrol prices."
+},
+
+{
+title:"Tinubu Government Expands Electricity Meter Rollout",
+category:"Naija",
+image:"https://picsum.photos/800/500?electricity",
+summary:"Power reform programme expands.",
+details:"Federal authorities have launched a nationwide metering programme to reduce estimated billing."
+},
+
+{
+title:"Student Loan Payments Begin For Approved Applicants",
+category:"Naija",
+image:"https://picsum.photos/800/500?students",
+summary:"Government education support begins.",
+details:"Thousands of Nigerian students have started receiving financial support under the federal loan scheme."
+},
+
+{
+title:"Bandits Attack Sokoto Community",
+category:"Naija",
+image:"https://picsum.photos/800/500?security",
+summary:"Security forces begin search operation.",
+details:"Security forces launched rescue operations after bandits attacked a rural Sokoto community."
+},
+
+{
+title:"Explosion Near US Embassy In Norway Investigated",
+category:"World",
+image:"https://picsum.photos/800/500?explosion",
+summary:"Police investigate cause.",
+details:"Norwegian authorities launched an investigation after an explosion occurred near the US embassy in Oslo."
+},
+
+{
+title:"Climate Scientists Warn Of Increasing Weather Extremes",
+category:"World",
+image:"https://picsum.photos/800/500?climate",
+summary:"Recent winter shows unusual patterns.",
+details:"Researchers say extreme winter patterns may signal future climate volatility."
+},
+
+{
+title:"Digital Reconstruction Reveals Ancient Human Face",
+category:"World",
+image:"https://picsum.photos/800/500?fossil",
+summary:"Scientists recreate early human ancestor.",
+details:"Researchers digitally reconstructed the face of a 4 million year old human ancestor."
+},
+
+{
+title:"Violent Crime Rates Decline In Major US Cities",
+category:"World",
+image:"https://picsum.photos/800/500?city",
+summary:"New crime statistics released.",
+details:"Authorities report a noticeable decline in violent crime across several major US cities."
+},
+
+{
+title:"AI Systems Improve Medical Diagnostics",
+category:"Technology",
+image:"https://picsum.photos/800/500?ai",
+summary:"Healthcare adopting artificial intelligence.",
+details:"Hospitals worldwide are adopting AI systems to improve diagnostic accuracy."
+},
+
+{
+title:"Blockchain Platform BlockDAG Gains Global Attention",
+category:"Technology",
+image:"https://picsum.photos/800/500?blockchain",
+summary:"New network gains investors.",
+details:"BlockDAG entered global cryptocurrency rankings quickly after launch."
+},
+
+{
+title:"African Tech Startups Attract New Investment",
+category:"Technology",
+image:"https://picsum.photos/800/500?startup",
+summary:"Funding grows across Africa.",
+details:"Fintech and logistics startups continue attracting venture capital investment."
+},
+
+{
+title:"Southampton Reach FA Cup Quarter Finals",
+category:"Sports",
+image:"https://picsum.photos/800/500?football",
+summary:"English club advances.",
+details:"Southampton secured a narrow win to reach the FA Cup quarter finals."
+},
+
+{
+title:"Six Clubs Qualify For FA Cup Quarter Finals",
+category:"Sports",
+image:"https://picsum.photos/800/500?soccer",
+summary:"Tournament enters next stage.",
+details:"Six teams secured their place in the FA Cup quarter finals after dramatic matches."
+},
+
+{
+title:"Wolfsburg Dismiss Head Coach Amid Poor Results",
+category:"Sports",
+image:"https://picsum.photos/800/500?bundesliga",
+summary:"German club changes leadership.",
+details:"Bundesliga club Wolfsburg dismissed its head coach following poor league performance."
 }
 
-function toggle(i){
-  let d=document.getElementById("d"+i);
-  d.style.display=d.style.display==="block"?"none":"block";
+];
+
+function displayNews(list){
+
+const container=document.getElementById("news");
+
+container.innerHTML="";
+
+list.forEach(n=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<div class="category">${n.category}</div>
+
+<h2>${n.title}</h2>
+
+<img src="${n.image}">
+
+<p><strong>${n.summary}</strong></p>
+
+<p>${n.details}</p>
+
+</div>
+
+`;
+
+});
+
 }
 
-function filterNews(cat){
-  if(cat==="all"){currentNews=[...news];}
-  else{currentNews=news.filter(n=>n.category===cat);}
-  render(currentNews);
-}
+displayNews(news);
 
-function searchNews(){
-  let q=document.getElementById("search").value.toLowerCase();
-  let results=news.filter(n=>n.title.toLowerCase().includes(q));
-  render(results);
-}
 
-// Breaking news ticker
-document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
+document.getElementById("search").addEventListener("keyup",function(){
 
-// Initial render
-render(news);
+const value=this.value.toLowerCase();
+
+const filtered=news.filter(n=>n.title.toLowerCase().includes(value));
+
+displayNews(filtered);
+
+});
+
 </script>
+
 </body>
 </html>
-

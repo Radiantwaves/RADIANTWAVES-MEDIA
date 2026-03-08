@@ -8,35 +8,23 @@
 body{margin:0;font-family:Arial;background:#f4f4f4;}
 header{background:#c40000;color:white;padding:20px;text-align:center;}
 header p{margin:5px;font-size:14px;}
-
-/* RADIO BAR */
-.radio-bar{
-  background:#222;color:white;padding:10px;display:flex;align-items:center;justify-content:center;gap:15px;font-weight:bold;
-}
+.radio-bar{background:#222;color:white;padding:10px;display:flex;align-items:center;justify-content:center;gap:15px;font-weight:bold;}
 .radio-bar audio{width:220px;}
 .radio-bar button{padding:5px 10px;cursor:pointer;background:#c40000;color:white;border:none;border-radius:4px;}
 .radio-bar button:hover{background:#a30000;}
-
-/* NAVIGATION */
 nav{background:#111;display:flex;flex-wrap:wrap;}
 nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
 nav button:hover{background:#c40000;}
 .search{margin-left:auto;padding:8px;}
 .search input{padding:6px;width:150px;}
-
-/* BREAKING NEWS */
 .breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
 .breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-
-/* NEWS CARDS */
 .container{padding:20px;}
 .card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);overflow:hidden;}
 .card img{width:100%;height:230px;object-fit:cover;}
 .content{padding:15px;}
 .details{display:none;margin-top:10px;line-height:1.7;}
-
-/* FOOTER */
 footer{background:#111;color:white;padding:25px;text-align:center;}
 .social img{width:28px;margin:8px;}
 </style>
@@ -48,23 +36,19 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
 <p><b>Gateway to World News – Connecting You to the World</b></p>
 </header>
 
-<!-- RADIO BAR -->
 <div class="radio-bar">
   <span>🎧 Radiant Waves Radio — Listen Live</span>
   <audio id="player" controls loop>
     <source src="news-music.mp3" type="audio/mpeg">
   </audio>
-  <!-- Add buttons for more tracks -->
   <button onclick="changeTrack('news-music2.mp3')">Track 2</button>
   <button onclick="changeTrack('news-music3.mp3')">Track 3</button>
 </div>
 
-<!-- BREAKING NEWS -->
 <div class="breaking">
 <span id="ticker"></span>
 </div>
 
-<!-- NAVIGATION -->
 <nav>
   <button onclick="filterNews('all')">Home</button>
   <button onclick="filterNews('Naija')">Naija Pulse</button>
@@ -76,59 +60,33 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
   </div>
 </nav>
 
-<!-- NEWS CONTAINER -->
 <div class="container" id="news"></div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="social">
-    <a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
-    <a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
-    <a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
-    <a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
-  </div>
-  <br>@2026Radiant Waves
+<div class="social">
+<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+<br>@2026Radiant Waves
 </footer>
 
 <script>
-// API KEY
-const API_KEY = "10618a434f80cc4ffe52717ea1bf2401";
-let news = [];
+// Local JSON news for stability
+const news=[
+{title:"Peter Obi Calls for Electoral Reform in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?politics",summary:"Former presidential candidate calls for transparent elections.",details:"Peter Obi renewed calls for electoral reforms in Nigeria, emphasizing credible elections and transparent institutions."},
+{title:"Nasir El-Rufai Discusses Future of Nigerian Politics",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor comments on governance reforms.",details:"Nasir El-Rufai discussed economic reforms and national policy priorities during a recent forum."},
+{title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist comments on local security issues.",details:"Sunday Igboho addressed security concerns in Southwest Nigeria, emphasizing community protection and collaboration with authorities."},
+{title:"Middle East Tensions Draw Global Attention",category:"World",image:"https://picsum.photos/800/500?middleeast",summary:"International leaders urge restraint.",details:"Governments across Europe, Asia, and North America are monitoring developments in the Middle East as diplomatic discussions continue."},
+{title:"AI Expands Across Global Technology Sector",category:"Tech",image:"https://picsum.photos/800/500?ai",summary:"AI investment increases worldwide.",details:"Major tech companies are investing heavily in artificial intelligence systems designed to automate industries and improve productivity."},
+{title:"Cybersecurity Experts Warn of Increasing Global Cyber Attacks",category:"Tech",image:"https://picsum.photos/800/500?cybersecurity",summary:"Digital security becomes global priority.",details:"Security analysts warn that cyber attacks targeting financial institutions and infrastructure are becoming more sophisticated."},
+{title:"European Football Clubs Prepare for Major Tournament",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Teams intensify training ahead of competition.",details:"Clubs across Europe are preparing for upcoming tournaments with focus on player fitness and tactical discipline."}
+];
 
-// Fetch news from API
-async function fetchNews(){
-  try{
-    const categories = [
-      {cat:"Naija", url:`https://newsapi.org/v2/top-headlines?country=ng&apiKey=${API_KEY}`},
-      {cat:"World", url:`https://newsapi.org/v2/top-headlines?category=general&apiKey=${API_KEY}`},
-      {cat:"Tech", url:`https://newsapi.org/v2/top-headlines?category=technology&apiKey=${API_KEY}`},
-      {cat:"Sports", url:`https://newsapi.org/v2/top-headlines?category=sports&apiKey=${API_KEY}`}
-    ];
+let currentNews=[...news];
 
-    for(const c of categories){
-      const res = await fetch(c.url);
-      const data = await res.json();
-      data.articles.forEach(a=>{
-        news.push({
-          title: a.title || "No Title",
-          category: c.cat,
-          image: a.urlToImage || "https://picsum.photos/800/500",
-          summary: a.description || "",
-          details: a.content || "Full article at source: " + a.url
-        });
-      });
-    }
-
-    // Render all
-    render(news);
-    document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
-  }catch(err){
-    console.error("Error fetching news:", err);
-  }
-}
-
-// Render news cards
-let currentNews=[];
+// Render news
 function render(list){
   currentNews=[...list];
   let html="";
@@ -149,30 +107,39 @@ function render(list){
   document.getElementById("news").innerHTML=html;
 }
 
+// Toggle details
 function toggle(i){
   let d=document.getElementById("d"+i);
   d.style.display=d.style.display==="block"?"none":"block";
 }
 
+// Filter by category
 function filterNews(cat){
-  if(cat==="all"){render(news);}
-  else{render(news.filter(n=>n.category===cat));}
+  if(cat==="all"){render(news);}else{render(news.filter(n=>n.category===cat));}
 }
 
+// Search
 function searchNews(){
   let q=document.getElementById("search").value.toLowerCase();
   render(news.filter(n=>n.title.toLowerCase().includes(q)));
 }
 
+// Ticker
+function updateTicker(){
+  document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
+}
+updateTicker();
+
 // Radio track change
 function changeTrack(file){
   let player=document.getElementById("player");
   player.src=file;
+  player.load();
   player.play();
 }
 
-// Initialize
-fetchNews();
+// Initial render
+render(news);
 </script>
 
 </body>

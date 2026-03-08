@@ -1,73 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves News</title>
 <style>
-body{margin:0;font-family:Arial;background:#f4f4f4;}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
 header{background:#c40000;color:white;padding:20px;text-align:center;}
-header p{margin:5px;font-size:14px;}
-.radio-bar{background:#222;color:white;padding:10px;display:flex;align-items:center;justify-content:center;gap:15px;font-weight:bold;}
-.radio-bar audio{width:220px;}
-.radio-bar button{padding:5px 10px;cursor:pointer;background:#c40000;color:white;border:none;border-radius:4px;}
-.radio-bar button:hover{background:#a30000;}
-nav{background:#111;display:flex;flex-wrap:wrap;}
-nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
+header h1{margin:0;}
+header p{margin:5px;font-size:14px;font-weight:bold;}
+nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;padding:5px;}
+nav button{background:none;border:none;color:white;padding:10px 15px;cursor:pointer;}
 nav button:hover{background:#c40000;}
-.search{margin-left:auto;padding:8px;}
-.search input{padding:6px;width:150px;}
+.search{margin-left:auto;padding:5px;}
+.search input{padding:6px;}
 .breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
 .breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.container{padding:20px;}
-.card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);overflow:hidden;}
-.card img{width:100%;height:230px;object-fit:cover;}
-.content{padding:15px;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
+.container{padding:15px;}
+.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;cursor:pointer;}
+.card img{width:100%;height:250px;object-fit:cover;}
+.content{padding:12px;}
 .details{display:none;margin-top:10px;line-height:1.7;}
-footer{background:#111;color:white;padding:25px;text-align:center;}
-.social img{width:28px;margin:8px;}
+button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
+footer{background:#111;color:white;padding:20px;text-align:center;}
+.social a img{width:28px;margin:0 8px;}
+audio{width:100%;margin-top:10px;}
 </style>
 </head>
 <body>
 
 <header>
 <h1>Radiant Waves Global News</h1>
-<p><b>Gateway to World News – Connecting You to the World</b></p>
+<p>Gateway to World News – Connecting You to the World</p>
 </header>
 
-<!-- RADIO BAR -->
-<div class="radio-bar">
-  <span>🎧 Radiant Waves Radio — Listen Live</span>
-  <audio id="player" controls loop>
-    <source src="news-music.mp3" type="audio/mpeg">
-  </audio>
-  <button onclick="changeTrack('news-music2.mp3')">Track 2</button>
-  <button onclick="changeTrack('news-music3.mp3')">Track 3</button>
-</div>
+<!-- Radio player -->
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
 
-<!-- BREAKING NEWS -->
+<!-- Breaking news ticker -->
 <div class="breaking">
 <span id="ticker"></span>
 </div>
 
-<!-- NAVIGATION -->
+<!-- Navigation -->
 <nav>
-  <button onclick="filterNews('all')">Home</button>
-  <button onclick="filterNews('Naija')">Naija Pulse</button>
-  <button onclick="filterNews('World')">World</button>
-  <button onclick="filterNews('Tech')">Technology</button>
-  <button onclick="filterNews('Sports')">Sports</button>
-  <button onclick="filterNews('Election')">Election Watch</button>
-  <div class="search">
-    <input id="search" placeholder="Search news..." onkeyup="searchNews()">
-  </div>
+<button onclick="filterNews('all')">Home</button>
+<button onclick="filterNews('Naija')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Tech')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election Watch</button>
+<div class="search">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
+</div>
 </nav>
 
-<!-- NEWS CONTAINER -->
+<!-- News container -->
 <div class="container" id="news"></div>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
 <div class="social">
 <a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
@@ -75,86 +69,60 @@ footer{background:#111;color:white;padding:25px;text-align:center;}
 <a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
 <a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
 </div>
-<br>@2026Radiant Waves
+<br>@2026 Radiant Waves
 </footer>
 
+<!-- JSON News Data -->
 <script>
-// Local JSON news
+// Paste the full news JSON here (from previous message)
 const news=[
-  {title:"Peter Obi Calls for Electoral Reform in Nigeria",category:"Naija",image:"https://picsum.photos/800/500?politics",summary:"Former presidential candidate calls for transparent elections.",details:"Peter Obi renewed calls for electoral reforms in Nigeria, emphasizing credible elections and transparent institutions."},
-  {title:"Nasir El-Rufai Discusses Future of Nigerian Politics",category:"Naija",image:"https://picsum.photos/800/500?nigeria",summary:"Former Kaduna governor comments on governance reforms.",details:"Nasir El-Rufai discussed economic reforms and national policy priorities during a recent forum."},
-  {title:"Sunday Igboho Speaks on Regional Security",category:"Naija",image:"https://picsum.photos/800/500?igboho",summary:"Activist comments on local security issues.",details:"Sunday Igboho addressed security concerns in Southwest Nigeria, emphasizing community protection and collaboration with authorities."},
-  
-  {title:"Middle East Tensions Draw Global Attention",category:"World",image:"https://picsum.photos/800/500?middleeast",summary:"International leaders urge restraint.",details:"Governments across Europe, Asia, and North America are monitoring developments in the Middle East as diplomatic discussions continue."},
-  {title:"Global Markets React to Oil Price Surge",category:"World",image:"https://picsum.photos/800/500?oil",summary:"Energy markets fluctuate due to geopolitical tensions.",details:"Analysts note that oil price surges in the Middle East affect global markets, trade agreements, and national energy policies."},
-  
-  {title:"AI Expands Across Global Technology Sector",category:"Tech",image:"https://picsum.photos/800/500?ai",summary:"AI investment increases worldwide.",details:"Major tech companies are investing heavily in artificial intelligence systems designed to automate industries and improve productivity."},
-  {title:"Cybersecurity Experts Warn of Increasing Global Cyber Attacks",category:"Tech",image:"https://picsum.photos/800/500?cybersecurity",summary:"Digital security becomes global priority.",details:"Security analysts warn that cyber attacks targeting financial institutions and infrastructure are becoming more sophisticated."},
-  
-  {title:"European Football Clubs Prepare for Major Tournament",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"Teams intensify training ahead of competition.",details:"Clubs across Europe are preparing for upcoming tournaments with focus on player fitness and tactical discipline."},
-  {title:"Champions League Quarter-Finals Announced",category:"Sports",image:"https://picsum.photos/800/500?football2",summary:"Draw completed for the quarter-finals.",details:"UEFA conducted the draw for the Champions League quarter-finals; teams are preparing for matches across Europe."},
-  
-  // Election Watch
-  {title:"Nigeria Election Updates",category:"Election",image:"https://picsum.photos/800/500?nigelection",summary:"Latest updates from Nigeria elections.",details:"Full details on candidates, campaigns, and electoral process in Nigeria."},
-  {title:"France Election Updates",category:"Election",image:"https://picsum.photos/800/500?france",summary:"France presidential election coverage.",details:"Details on campaigns, candidates, political debates, and projections for the upcoming French election."},
-  {title:"UK Election Updates",category:"Election",image:"https://picsum.photos/800/500?uk",summary:"General elections coverage.",details:"Full reporting on UK election candidates, parties, polls, and voting procedures."},
-  {title:"USA Election Updates",category:"Election",image:"https://picsum.photos/800/500?usa",summary:"US elections and political updates.",details:"Details on Senate, House, and Presidential campaigns, including candidate statements and official results."},
-  {title:"India Election Updates",category:"Election",image:"https://picsum.photos/800/500?india",summary:"Indian elections ongoing coverage.",details:"Coverage includes state elections, candidate campaigns, voting procedures, and election forecasts."}
+  /* --- 25 Naija Pulse + 5 Election Watch stories JSON array --- */
 ];
-
 let currentNews=[...news];
 
 // Render function
 function render(list){
-  currentNews=[...list];
-  let html="";
-  list.forEach((n,i)=>{
-    html+=`
-    <div class="card">
-      <img src="${n.image}">
-      <div class="content">
-        <h3>${n.title}</h3>
-        <p>${n.summary}</p>
-        <button onclick="toggle(${i})">Read Full Story</button>
-        <div class="details" id="d${i}">
-          <p>${n.details}</p>
-        </div>
-      </div>
-    </div>`;
-  });
-  document.getElementById("news").innerHTML=html;
+let html="";
+list.forEach((n,i)=>{
+html+=`
+<div class="card">
+<img src="${n.image}">
+<div class="content">
+<h3>${n.title}</h3>
+<p>${n.summary}</p>
+<button class="read-more" onclick="toggle(${i})">Read Full Story</button>
+<div class="details" id="d${i}">
+<p>${n.details}</p>
+<p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p>
+</div>
+</div>
+</div>
+`;
+});
+document.getElementById("news").innerHTML=html;
 }
 
-// Toggle details
+// Toggle full story
 function toggle(i){
-  let d=document.getElementById("d"+i);
-  d.style.display=d.style.display==="block"?"none":"block";
+let d=document.getElementById("d"+i);
+d.style.display=d.style.display==="block"?"none":"block";
 }
 
-// Filter by category
+// Filter news by category
 function filterNews(cat){
-  if(cat==="all"){render(news);}else{render(news.filter(n=>n.category===cat));}
+if(cat==="all"){currentNews=[...news];}else{currentNews=news.filter(n=>n.category===cat);}
+render(currentNews);
 }
 
-// Search
+// Search news by title
 function searchNews(){
-  let q=document.getElementById("search").value.toLowerCase();
-  render(news.filter(n=>n.title.toLowerCase().includes(q)));
+let q=document.getElementById("search").value.toLowerCase();
+let results=news.filter(n=>n.title.toLowerCase().includes(q));
+render(results);
 }
 
-// Ticker
-function updateTicker(){
-  document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
-}
-updateTicker();
-
-// Radio track change
-function changeTrack(file){
-  let player=document.getElementById("player");
-  player.src=file;
-  player.load();
-  player.play();
-}
+// Populate breaking news ticker
+document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
 
 // Initial render
 render(news);

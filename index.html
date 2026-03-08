@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Radiant Waves News</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Radiant Waves News</title><style>
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f4f4f4;
 }
 
@@ -18,9 +13,9 @@ header{
 background:#c40000;
 color:white;
 padding:18px;
-font-size:26px;
-font-weight:bold;
 text-align:center;
+font-size:28px;
+font-weight:bold;
 }
 
 nav{
@@ -75,7 +70,7 @@ padding:18px;
 
 .card{
 background:white;
-margin-bottom:18px;
+margin-bottom:20px;
 border-radius:6px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
 overflow:hidden;
@@ -83,43 +78,39 @@ overflow:hidden;
 
 .card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
 }
 
 .content{
-padding:14px;
+padding:15px;
 }
 
 .details{
 display:none;
 margin-top:10px;
+line-height:1.6;
 }
 
 footer{
 background:#111;
 color:white;
+padding:25px;
 text-align:center;
-padding:20px;
-margin-top:20px;
+margin-top:30px;
 }
 
-</style>
-</head>
+.social a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
 
-<body>
-
-<header>
+</style></head><body><header>
 Radiant Waves Global News
-</header>
-
-<div class="breaking">
+</header><div class="breaking">
 <span id="ticker"></span>
-</div>
-
-<nav>
-
-<button onclick="filter('all')">Home</button>
+</div><nav><button onclick="filter('all')">Home</button>
 <button onclick="filter('Naija')">Naija Pulse</button>
 <button onclick="filter('World')">World</button>
 <button onclick="filter('Tech')">Technology</button>
@@ -127,101 +118,70 @@ Radiant Waves Global News
 
 <div class="search">
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
-</div>
+</div></nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1">Instagram</a>
 
-</nav>
+<a href="https://tiktok.com/@radiantwavesmedia">TikTok</a>
 
-<div class="container" id="news"></div>
+<a href="https://facebook.com/radiantwavesnews">Facebook</a>
 
-<footer>
+<a href="https://twitter.com/radiantwaves13528995">X</a>
 
-Radiant Waves News  
+</div><br>© 2026 Radiant Waves News
 Editor: Omotara How
 
-</footer>
+</footer><script>
 
-<script>
+const news=[
 
-/* ONLY EDIT THIS PART */
+{
+title:"Peter Obi Calls for Electoral Reform in Nigeria",
+category:"Naija",
+image:"https://picsum.photos/800/500?politics",
+summary:"Former presidential candidate renews call for transparent elections.",
+details:"Peter Obi has renewed calls for electoral reforms across Nigeria, urging political leaders and institutions to strengthen transparency and credibility within the voting system. Speaking during a civic engagement event, Obi emphasized that democratic trust depends heavily on free and fair elections. Analysts believe his remarks are part of broader conversations ahead of Nigeria’s future political cycles."
+},
 
-const headlines=[
+{
+title:"Nasir El Rufai Speaks on Future of Nigerian Politics",
+category:"Naija",
+image:"https://picsum.photos/800/500?nigeria",
+summary:"Former Kaduna governor comments on national political direction.",
+details:"Nasir El-Rufai has again entered the national political conversation, discussing governance challenges and economic reforms needed across Nigeria. The former governor argued that long-term development requires stronger institutional frameworks and transparent leadership. Political analysts say his comments continue to shape debates within the country’s political landscape."
+},
 
-"Peter Obi Calls for Electoral Reform in Nigeria",
+{
+title:"Sunday Igboho Calls for Unity in Southwest Nigeria",
+category:"Naija",
+image:"https://picsum.photos/800/500?africa",
+summary:"Yoruba activist encourages dialogue and regional stability.",
+details:"Yoruba activist Sunday Igboho has called for unity among communities in southwestern Nigeria, encouraging peaceful dialogue and collaboration among regional leaders. Igboho emphasized the importance of maintaining cultural identity while also promoting stability and development across the region."
+},
 
-"Nasir El Rufai Speaks on Future of Nigerian Politics",
+{
+title:"Global Leaders Monitor Middle East Tensions",
+category:"World",
+image:"https://picsum.photos/800/500?middleeast",
+summary:"Diplomatic discussions continue amid regional tensions.",
+details:"World leaders are closely monitoring developments in the Middle East as diplomatic negotiations continue to reduce escalating tensions. International organizations are urging restraint while exploring diplomatic solutions that could stabilize the region."
+},
 
-"Sunday Igboho Calls for Unity in Southwest Nigeria",
+{
+title:"Artificial Intelligence Expands Across Global Markets",
+category:"Tech",
+image:"https://picsum.photos/800/500?ai",
+summary:"Technology firms increase investment in AI innovation.",
+details:"Major technology companies worldwide are accelerating investments in artificial intelligence systems designed to improve productivity, automation, and data analysis. Industry experts believe AI will significantly reshape sectors including healthcare, finance, and education."
+},
 
-"Nigeria Economic Debate Intensifies",
-
-"Global Leaders Monitor Middle East Tensions",
-
-"Artificial Intelligence Expands Across Global Markets",
-
-"Cybersecurity Experts Warn of Rising Digital Threats",
-
-"European Football Clubs Prepare for Major Tournament",
-
-"US Election Campaign Season Intensifies",
-
-"UK Political Parties Prepare for Future Election",
-
-"China Economic Growth Signals Mixed Outlook",
-
-"UN Warns About Climate Crisis Impact Worldwide"
+{
+title:"European Football Clubs Prepare for Major Tournament",
+category:"Sports",
+image:"https://picsum.photos/800/500?football",
+summary:"Teams begin preparations ahead of continental competitions.",
+details:"European football clubs are intensifying preparations ahead of major continental tournaments scheduled later this year. Coaches say pre-season performance and player fitness will determine which teams can compete at the highest level."
+}
 
 ]
-
-/* AUTOMATIC SYSTEM */
-
-function category(title){
-
-let t=title.toLowerCase()
-
-if(t.includes("obi")||t.includes("igboho")||t.includes("rufai")||t.includes("nigeria"))
-return "Naija"
-
-if(t.includes("ai")||t.includes("cyber")||t.includes("technology"))
-return "Tech"
-
-if(t.includes("football")||t.includes("sports")||t.includes("tournament"))
-return "Sports"
-
-return "World"
-
-}
-
-function details(title){
-
-return `Radiant Waves News — ${title}.
-
-Analysts say this development is drawing significant attention among political observers and international stakeholders. Experts note that the issue reflects broader discussions around governance, economic direction, and global cooperation.
-
-Observers believe the situation could influence future policy decisions and public debate. More updates are expected as officials, analysts, and community leaders respond to the evolving situation.
-
-Radiant Waves News will continue monitoring developments and provide further verified updates as more information becomes available.`
-
-}
-
-function generate(){
-
-return headlines.map(h=>({
-
-title:h,
-
-category:category(h),
-
-image:"https://picsum.photos/800/500?random="+Math.random(),
-
-summary:"Breaking development reported by Radiant Waves News.",
-
-details:details(h)
-
-}))
-
-}
-
-const news=generate()
 
 function render(list){
 
@@ -267,15 +227,15 @@ function toggle(i){
 
 let d=document.getElementById("d"+i)
 
-d.style.display=d.style.display=="block"?"none":"block"
+d.style.display=d.style.display==="block"?"none":"block"
 
 }
 
 function filter(cat){
 
-if(cat=="all") render(news)
+if(cat==="all") render(news)
 
-else render(news.filter(n=>n.category==cat))
+else render(news.filter(n=>n.category===cat))
 
 }
 
@@ -287,11 +247,9 @@ render(news.filter(n=>n.title.toLowerCase().includes(q)))
 
 }
 
-document.getElementById("ticker").innerText=headlines.join(" • ")
+document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ")
 
 render(news)
 
-</script>
-
-</body>
+</script></body>
 </html>

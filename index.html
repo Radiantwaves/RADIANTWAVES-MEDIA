@@ -5,12 +5,12 @@
 <title>Radiant Waves News</title>
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#0b3d91;color:white;padding:20px;text-align:center;}
+header{background:#c40000;color:white;padding:20px;text-align:center;}
 header h1{margin:0;}
 header p{margin:5px;font-size:14px;font-weight:bold;}
 nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;}
 nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
-nav button:hover{background:#0b3d91;}
+nav button:hover{background:#c40000;}
 .search{margin-left:auto;padding:8px;}
 .search input{padding:6px;width:220px;}
 .breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
@@ -21,19 +21,73 @@ nav button:hover{background:#0b3d91;}
 .card img{width:100%;height:230px;object-fit:cover;}
 .content{padding:15px;}
 .details{display:none;margin-top:10px;line-height:1.7;}
-button.read-more{background:#0b3d91;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
+button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
 footer{background:#111;color:white;padding:25px;text-align:center;}
 .social a img{width:28px;margin:8px;}
 audio{width:100%;margin-top:10px;}
 </style>
 </head>
-<body><header>
+<body>
+<header>
 <h1>Radiant Waves Global News</h1>
 <p>Gateway to World News – Connecting You to the World</p>
-</header><audio controls autoplay loop>
+</header>
+<audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
-</audio><div class="breaking">
+</audio>
+<div class="breaking">
 <span id="ticker"></span>
-</div><nav>
+</div>
+<nav>
 <button onclick="filterNews('all')">Home</button>
-<button onclick="filterNews('Naija')">Naija Pulse</
+<button onclick="filterNews('Naija')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Tech')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election Watch</button>
+<div class="search">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
+</div>
+</nav>
+<div class="container" id="news"></div>
+<footer>
+<div class="social">
+<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+<br>@2026 Radiant Waves
+</footer>
+<script>
+// ==== Breaking News ==== 
+const breakingNews=[
+"Peter Obi Calls for Electoral Reform",
+"Tinubu Rolls Out Electricity Meters",
+"Sunday Igboho Legal Challenges",
+"Middle East Tensions Escalate",
+"Global AI Revolutionizes Healthcare",
+"Champions League Quarter-Finals Draw",
+"US Fed Adjusts Interest Rates",
+"Global Oil Prices Surge",
+"Student Loan Disbursements Continue",
+"Election Campaigns Heat Up Worldwide"
+];
+document.getElementById("ticker").innerText=breakingNews.join(" • ");// ==== Full News JSON ==== const news=[ // --- 25 Naija Pulse stories --- // (examples, fill up to 25) {title:"Peter Obi Calls for Electoral Reform",category:"Naija",image:"https://picsum.photos/800/500?obi",summary:"Calls for transparent elections.",details:"Peter Obi emphasizes credible elections across Nigeria with reforms to strengthen democracy.",author:"Editor: Omotara How",source:"Local News"}, {title:"President Tinubu Rolls Out Electricity Meters",category:"Naija",image:"https://picsum.photos/800/500?tinubu",summary:"Nationwide electricity meters distributed.",details:"The Tinubu administration initiates electricity meter rollouts zone by zone, improving billing accuracy and reducing theft.",author:"Editor: Omotara How",source:"Energy Nigeria"}, // ... add 23 more Naija Pulse stories
+
+// --- 20 World news --- {title:"Middle East Tensions Escalate",category:"World",image:"https://picsum.photos/800/500?middleeast",summary:"Global leaders call for calm.",details:"Countries across Europe, Asia, and Americas monitor conflicts and urge restraint.",author:"Editor: Omotara How",source:"Global Times"}, // ... add remaining 19 World stories
+
+// --- 10 Technology stories --- {title:"AI Revolutionizes Healthcare",category:"Tech",image:"https://picsum.photos/800/500?ai",summary:"Hospitals adopt AI diagnostics.",details:"AI algorithms improve disease detection and treatment globally.",author:"Editor: Omotara How",source:"Tech Journal"}, // ... add remaining 9 Tech stories
+
+// --- 10 Sports stories --- {title:"Champions League Quarter-Finals Draw Announced",category:"Sports",image:"https://picsum.photos/800/500?football",summary:"European clubs learn opponents.",details:"Teams prepare for quarter-finals with tactical focus and player readiness.",author:"Editor: Omotara How",source:"UEFA News"}, // ... add remaining 9 Sports stories
+
+// --- 5 Election Watch --- {title:"France Prepares for Presidential Election",category:"Election",image:"https://picsum.photos/800/500?france-election",summary:"Campaigns intensify ahead of Sunday poll.",details:"French citizens stay informed about candidates and upcoming presidential elections.",author:"Editor: Omotara How",source:"French Times"}, {title:"Nigeria Voter Roll Updates Ahead of Local Elections",category:"Election",image:"https://picsum.photos/800/500?nigeria-election",summary:"INEC ensures voters registered.",details:"INEC updated voter rolls and distributed card readers nationwide.",author:"Editor: Omotara How",source:"Nigeria Observer"}, {title:"UK Prepares for General Elections",category:"Election",image:"https://picsum.photos/800/500?uk-election",summary:"Parties intensify campaigns.",details:"UK approaches general elections, parties outlining policies on healthcare, economy, education.",author:"Editor: Omotara How",source:"BBC UK"}, {title:"US Election Campaigns Heat Up",category:"Election",image:"https://picsum.photos/800/500?us-election",summary:"Candidates tour key states.",details:"US presidential campaigns focus on swing states, debates, voter turnout.",author:"Editor: Omotara How",source:"CNN US"}, {title:"India Prepares for State Assembly Elections",category:"Election",image:"https://picsum.photos/800/500?india-election",summary:"Local elections set to begin.",details:"India's state assembly elections approach, parties outline development and infrastructure agendas.",author:"Editor: Omotara How",source:"Times of India"} ];
+
+let currentNews=[...news];
+
+function render(list){ let html=""; list.forEach((n,i)=>{ html+=<div class="card"><img src="${n.image}"><div class="content"><h3>${n.title}</h3><p>${n.summary}</p><button class="read-more" onclick="toggle(${i})">Read Full Story</button><div class="details" id="d${i}"><p>${n.details}</p><p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p></div></div></div>; }); document.getElementById("news").innerHTML=html; }
+
+function toggle(i){let d=document.getElementById("d"+i);d.style.display=d.style.display==="block"?"none":"block";} function filterNews(cat){if(cat==="all"){currentNews=[...news];}else{currentNews=news.filter(n=>n.category===cat);}render(currentNews);} function searchNews(){let q=document.getElementById("search").value.toLowerCase();let results=news.filter(n=>n.title.toLowerCase().includes(q));render(results);} render(news); </script>
+
+</body>
+</html>

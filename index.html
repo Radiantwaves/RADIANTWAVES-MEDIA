@@ -2,70 +2,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News - 8 March 2026</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:20px;text-align:center;}
-header h1{margin:0;}
-header p{margin:5px;font-size:14px;font-weight:bold;}
-nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;}
-nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
-nav button:hover{background:#c40000;}
-.search{margin-left:auto;padding:8px;}
-.search input{padding:6px;width:220px;}
-.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.container{padding:20px;}
-.card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);}
-.card img{width:100%;height:230px;object-fit:cover;}
-.content{padding:15px;}
-.details{display:none;margin-top:10px;line-height:1.7;}
-button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
-footer{background:#111;color:white;padding:25px;text-align:center;}
-.social a img{width:28px;margin:8px;}
-audio{width:100%;margin-top:10px;}
-</style>
-</head>
-<body>
-<header>
+<title>Radiant Waves Global News</title><style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f2f2f2;
+}
+
+header{
+background:#c40000;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#111;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:14px 18px;
+cursor:pointer;
+font-size:14px;
+}
+
+nav button:hover{
+background:#c40000;
+}
+
+.search{
+margin-left:auto;
+padding:8px;
+}
+
+.search input{
+padding:6px;
+width:200px;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+font-weight:bold;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 60s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.content{
+padding:15px;
+}
+
+.details{
+display:none;
+margin-top:10px;
+line-height:1.6;
+}
+
+.read{
+background:#c40000;
+border:none;
+color:white;
+padding:6px 10px;
+cursor:pointer;
+margin-top:8px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.social img{
+width:28px;
+margin:6px;
+}
+
+audio{
+width:100%;
+margin-top:10px;
+}
+
+</style></head><body><header>
 <h1>Radiant Waves Global News</h1>
 <p>Gateway to World News – Connecting You to the World</p>
-</header>
-<audio controls autoplay loop>
+</header><audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
-</audio>
-<div class="breaking">
+</audio><div class="breaking">
 <span id="ticker"></span>
-</div>
-<nav>
+</div><nav>
 <button onclick="filterNews('all')">Home</button>
 <button onclick="filterNews('Naija')">Naija Pulse</button>
 <button onclick="filterNews('World')">World</button>
 <button onclick="filterNews('Tech')">Technology</button>
 <button onclick="filterNews('Sports')">Sports</button>
-<button onclick="filterNews('Election')">Election Watch</button>
-<div class="search">
+<button onclick="filterNews('Election')">Election Watch</button><div class="search">
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
 </div>
-</nav>
-<div class="container" id="news"></div>
-<footer>
-<div class="social">
-<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
-<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
-<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
-<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
-</div>
-<br>@2026 Radiant Waves
-</footer>
-<script>
-// ==== Full News JSON (Technology Section Rewritten) ====
+</nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a><a href="https://tiktok.com/@radiantwavesmedia">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+</a><a href="https://facebook.com/radiantwavesnews">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a><a href="https://twitter.com/radiantwaves13528995">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</a></div><br>
+© 2026 Radiant Waves Media</footer><script>
+
 const news=[
-  {title:"AI Revolutionizes Healthcare",category:"Tech",image:"https://picsum.photos/800/500?ai-health",summary:"AI systems improving diagnostics and patient care.",details:"Artificial intelligence now assists doctors with diagnostics, patient monitoring, and predictive analysis, significantly improving healthcare efficiency worldwide.",author:"Editor: Omotara How",source:"Tech Health Journal"},
-  {title:"Cybersecurity Threats Escalate Globally",category:"Tech",image:"https://picsum.photos/800/500?cybersecurity",summary:"Organizations face advanced cyberattacks.",details:"New AI-driven cyberattacks are targeting financial and critical infrastructures, requiring advanced cybersecurity protocols.",author:"Editor: Omotara How",source:"Cyber Defense Weekly"},
-  {title:"Blockchain Adoption Grows in Africa",category:"Tech",image:"https://picsum.photos/800/500?blockchain",summary:"Tech startups leverage blockchain for finance.",details:"Blockchain technology is increasingly integrated for secure transactions and logistics in African fintech startups.",author:"Editor: Omotara How",source:"FinTech Africa"},
-  {title:"Quantum Computing Breakthrough",category:"Tech",image:"https://picsum.photos/800/500?quantum",summary:"New quantum chip achieves record performance.",details:"Researchers announce quantum processors that drastically reduce computation time for complex simulations.",author:"Editor: Omotara How",source:"Science Tech Daily"},
-  {title:"Global 5G Expansion Accelerates",category:"Tech",image:"https://picsum.photos/800/500?5g",summary:"Countries expand 5G networks.",details:"Telecom companies in multiple countries roll out 5G coverage, enhancing connectivity and enabling advanced IoT solutions.",author:"Editor: Omotara How",source:"Tech World"},
-  {title:"Renewable Energy Tech Advances",category:"Tech",image:"https://picsum.photos/800/500?renewable",summary:"Solar and wind technology innovation.",details:"New solar panels and wind turbines increase energy efficiency, supporting global sustainable energy goals.",author:"Editor: Omotara How",source:"Green Tech Report"},
-  {title:"Augmented Reality in Education",category:"Tech",image:"https://picsum.photos/800/500?ar",summary:"AR used to enhance learning experiences.",details:"Schools and universities integrate AR technology for interactive lessons and immersive educational content.",author:"Editor: Omotara How",source:"Ed
+
+{
+title:"Tinubu Announces New Power Policy",
+category:"Naija",
+image:"https://picsum.photos/800/500?1",
+summary:"Federal government plans electricity reform.",
+details:"Nigeria’s government announced a national electricity restructuring plan aimed at improving supply and reducing power outages.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Lagos Introduces Smart Traffic System",
+category:"Naija",
+image:"https://picsum.photos/800/500?2",
+summary:"New digital traffic lights launched.",
+details:"The Lagos State government deployed AI-powered traffic lights designed to reduce congestion and improve commuter experience.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Nigeria Tech Startups Attract Investors",
+category:"Naija",
+image:"https://picsum.photos/800/500?3",
+summary:"Foreign investors funding startups.",
+details:"Several Nigerian fintech startups secured international funding this week, strengthening the country’s tech ecosystem.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Global Oil Prices Rise",
+category:"World",
+image:"https://picsum.photos/800/500?4",
+summary:"Energy markets react to tensions.",
+details:"Oil prices surged globally due to geopolitical developments affecting supply routes and refinery operations.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"UN Climate Meeting Begins",
+category:"World",
+image:"https://picsum.photos/800/500?5",
+summary:"Leaders discuss climate policy.",
+details:"Global leaders gathered to negotiate emissions targets and sustainable energy investments.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"AI Healthcare Tools Expand",
+category:"Tech",
+image:"https://picsum.photos/800/500?6",
+summary:"Hospitals adopt AI diagnostics.",
+details:"Artificial intelligence tools are helping doctors detect diseases faster and improve treatment planning.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Quantum Computing Breakthrough",
+category:"Tech",
+image:"https://picsum.photos/800/500?7",
+summary:"New processor unveiled.",
+details:"Scientists announced a quantum processor capable of solving complex problems significantly faster than classical computers.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Champions League Quarterfinal Draw",
+category:"Sports",
+image:"https://picsum.photos/800/500?8",
+summary:"Top clubs learn opponents.",
+details:"European football giants prepare for intense quarterfinal clashes following the latest Champions League draw.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Olympic Preparations Accelerate",
+category:"Sports",
+image:"https://picsum.photos/800/500?9",
+summary:"Host city completes stadium upgrades.",
+details:"Infrastructure projects are nearing completion ahead of the upcoming Olympic Games.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"France Presidential Election Campaign Intensifies",
+category:"Election",
+image:"https://picsum.photos/800/500?10",
+summary:"Candidates debate economic plans.",
+details:"France’s presidential candidates held televised debates focusing on economic reform and immigration policy.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+}
+
+];
+
+let current=[...news];
+
+function render(list){
+
+let html="";
+
+list.forEach((n,i)=>{
+
+html+=`
+<div class="card">
+
+<img src="${n.image}">
+
+<div class="content">
+
+<h3>${n.title}</h3>
+
+<p>${n.summary}</p>
+
+<button class="read" onclick="toggle(${i})">Read Full Story</button>
+
+<div class="details" id="d${i}">
+<p>${n.details}</p>
+<p><em>${n.author}</em> | Source: ${n.source}</p>
+</div>
+
+</div>
+</div>
+`;
+
+});
+
+document.getElementById("news").innerHTML=html;
+
+}
+
+function toggle(i){
+
+let d=document.getElementById("d"+i);
+
+d.style.display=d.style.display==="block"?"none":"block";
+
+}
+
+function filterNews(cat){
+
+current=(cat==="all")?news:news.filter(n=>n.category===cat);
+
+render(current);
+
+}
+
+function searchNews(){
+
+let q=document.getElementById("search").value.toLowerCase();
+
+let r=news.filter(n=>n.title.toLowerCase().includes(q));
+
+render(r);
+
+}
+
+document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
+
+render(news);
+
+</script></body>
+</html>

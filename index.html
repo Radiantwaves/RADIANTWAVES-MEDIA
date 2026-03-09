@@ -1,549 +1,72 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves Global News</title><style>
+<title>Radiant Waves News - Add News Helper</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
+h1 { color: #c40000; }
+label { display: block; margin-top: 10px; font-weight: bold; }
+input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; }
+textarea { resize: vertical; height: 100px; }
+button { background: #c40000; color: white; border: none; padding: 10px 15px; margin-top: 15px; cursor: pointer; border-radius: 4px; }
+button:hover { background: #a30000; }
+pre { background: #eee; padding: 10px; margin-top: 15px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Radiant Waves News - Add News Helper</h1>
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f2f2f2;
+<label>Title:</label>
+<input type="text" id="title">
+
+<label>Category:</label>
+<select id="category">
+  <option value="Naija">Naija Pulse</option>
+  <option value="World">World</option>
+  <option value="Tech">Technology</option>
+  <option value="Sports">Sports</option>
+  <option value="Election">Election Watch</option>
+</select>
+
+<label>Image URL:</label>
+<input type="text" id="image" placeholder="https://example.com/image.jpg">
+
+<label>Summary:</label>
+<textarea id="summary"></textarea>
+
+<label>Full Details:</label>
+<textarea id="details"></textarea>
+
+<label>Author:</label>
+<input type="text" id="author" value="Editor: Omotara How">
+
+<label>Source:</label>
+<input type="text" id="source" value="Radiant Waves News">
+
+<button onclick="generateJSON()">Generate JSON</button>
+
+<h2>JSON Output:</h2>
+<pre id="output">Your JSON will appear here...</pre>
+
+<script>
+function generateJSON() {
+  const newsItem = {
+    title: document.getElementById("title").value,
+    category: document.getElementById("category").value,
+    image: document.getElementById("image").value,
+    summary: document.getElementById("summary").value,
+    details: document.getElementById("details").value,
+    author: document.getElementById("author").value,
+    source: document.getElementById("source").value
+  };
+  
+  // Pretty print JSON
+  const jsonOutput = JSON.stringify(newsItem, null, 2);
+  
+  document.getElementById("output").textContent = jsonOutput;
 }
-
-header{
-background:#c40000;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-nav{
-background:#111;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-}
-
-nav button{
-background:none;
-border:none;
-color:white;
-padding:14px 18px;
-cursor:pointer;
-font-size:14px;
-}
-
-nav button:hover{
-background:#c40000;
-}
-
-.search{
-margin-left:auto;
-padding:8px;
-}
-
-.search input{
-padding:6px;
-width:200px;
-}
-
-.breaking{
-background:black;
-color:white;
-padding:8px;
-overflow:hidden;
-white-space:nowrap;
-font-weight:bold;
-}
-
-.breaking span{
-display:inline-block;
-padding-left:100%;
-animation:scroll 60s linear infinite;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-.container{
-padding:20px;
-}
-
-.card{
-background:white;
-margin-bottom:20px;
-border-radius:6px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.content{
-padding:15px;
-}
-
-.details{
-display:none;
-margin-top:10px;
-line-height:1.6;
-}
-
-.read{
-background:#c40000;
-border:none;
-color:white;
-padding:6px 10px;
-cursor:pointer;
-margin-top:8px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-.social img{
-width:28px;
-margin:6px;
-}
-
-audio{
-width:100%;
-margin-top:10px;
-}
-
-</style></head><body><header>
-<h1>Radiant Waves Global News</h1>
-<p>Gateway to World News – Connecting You to the World</p>
-</header><audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio><div class="breaking">
-<span id="ticker"></span>
-</div><nav>
-<button onclick="filterNews('all')">Home</button>
-<button onclick="filterNews('Naija')">Naija Pulse</button>
-<button onclick="filterNews('World')">World</button>
-<button onclick="filterNews('Tech')">Technology</button>
-<button onclick="filterNews('Sports')">Sports</button>
-<button onclick="filterNews('Election')">Election Watch</button><div class="search">
-<input id="search" placeholder="Search news..." onkeyup="searchNews()">
-</div>
-</nav><div class="container" id="news"></div><footer><div class="social"><a href="https://instagram.com/radiantwaves1">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-</a><a href="https://tiktok.com/@radiantwavesmedia">
-<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-</a><a href="https://facebook.com/radiantwavesnews">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-</a><a href="https://twitter.com/radiantwaves13528995">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
-</a></div><br>
-© 2026 Radiant Waves Media</footer><script>
-
-const news=[
-
-{
-title:"Tinubu Expands Electricity Meter Rollout Nationwide",
-category:"Naija",
-image:"https://picsum.photos/800/500?electricity",
-summary:"Federal government continues nationwide electricity meter distribution.",
-details:"The Nigerian government has intensified the distribution of electricity meters across states in a phased rollout. Officials say the initiative aims to eliminate estimated billing and improve transparency in the power sector. The policy is part of broader electricity reforms promised during President Tinubu’s campaign.",
-author:"Radiant Waves Editorial",
-source:"Energy Desk"
-},
-
-{
-title:"Student Loan Scheme Begins Monthly Payments",
-category:"Naija",
-image:"https://picsum.photos/800/500?students",
-summary:"Students confirm receiving federal loan allowances.",
-details:"Thousands of Nigerian students have started receiving monthly payments under the national student loan programme. The scheme is designed to support tuition and living costs for students in tertiary institutions across the country.",
-author:"Radiant Waves Editorial",
-source:"Education Desk"
-},
-
-{
-title:"Transport Fares Rise in Southeast as Petrol Prices Climb",
-category:"Naija",
-image:"https://picsum.photos/800/500?fuel",
-summary:"Public transport costs increase across several cities.",
-details:"Transport operators in Anambra and surrounding states have increased fares following higher petrol prices. Commuters say daily travel costs have doubled in some areas, placing pressure on household budgets.",
-author:"Radiant Waves Editorial",
-source:"Economy Desk"
-},
-
-{
-title:"Police Appoint DCP Anthony Placid as New Public Relations Officer",
-category:"Naija",
-image:"https://picsum.photos/800/500?police",
-summary:"New spokesperson replaces previous PRO.",
-details:"Nigeria Police Force has appointed Deputy Commissioner Anthony Placid as the new Public Relations Officer. The appointment follows a leadership reshuffle aimed at improving communication between the police and the public.",
-author:"Radiant Waves Editorial",
-source:"Security Desk"
-},
-
-{
-title:"NDLEA Arrests Former Councillor with 40kg of Illegal Drugs",
-category:"Naija",
-image:"https://picsum.photos/800/500?drug",
-summary:"Drug agency reports major narcotics seizure.",
-details:"The National Drug Law Enforcement Agency arrested a former local councillor in Lagos after seizing approximately forty kilograms of cannabis. Officials say the operation followed weeks of surveillance.",
-author:"Radiant Waves Editorial",
-source:"Crime Desk"
-},
-
-{
-title:"Opposition Parties Consider Alliance Ahead of 2027 Elections",
-category:"Naija",
-image:"https://picsum.photos/800/500?politics",
-summary:"Political groups discuss consensus strategy.",
-details:"Several opposition political parties are exploring the possibility of forming a coalition ahead of the 2027 general elections. Analysts say the move could reshape Nigeria’s political landscape.",
-author:"Radiant Waves Editorial",
-source:"Politics Desk"
-},
-
-{
-title:"Fire Damages Residential Building in Anambra",
-category:"Naija",
-image:"https://picsum.photos/800/500?fire",
-summary:"Emergency responders contain major fire.",
-details:"A one-storey residential building in Anambra was severely damaged by fire overnight. Firefighters managed to prevent the flames from spreading to nearby homes.",
-author:"Radiant Waves Editorial",
-source:"Metro Desk"
-},
-
-{
-title:"Bandits Attack Sokoto Community, Kidnap Residents",
-category:"Naija",
-image:"https://picsum.photos/800/500?security",
-summary:"Security agencies launch search operations.",
-details:"Armed bandits attacked a community in Sokoto State, killing one resident and abducting several others. Security forces say rescue operations are underway.",
-author:"Radiant Waves Editorial",
-source:"Security Desk"
-},
-
-{
-title:"Adamawa Communal Crisis Leaves Casualties",
-category:"Naija",
-image:"https://picsum.photos/800/500?conflict",
-summary:"Authorities call for calm after clashes.",
-details:"At least two people were feared killed following a communal clash in Adamawa State. Local authorities have deployed security personnel to prevent further violence.",
-author:"Radiant Waves Editorial",
-source:"National Desk"
-},
-
-{
-title:"Lagos Road Accident Leaves Several Injured",
-category:"Naija",
-image:"https://picsum.photos/800/500?accident",
-summary:"Emergency services respond quickly.",
-details:"A road accident involving multiple vehicles in Lagos left several passengers injured. Rescue teams transported victims to nearby hospitals for treatment.",
-author:"Radiant Waves Editorial",
-source:"Metro Desk"
-},
-
-{
-title:"Young Nigerian Diaspora Professionals Gain Global Influence",
-category:"Naija",
-image:"https://picsum.photos/800/500?diaspora",
-summary:"Nigerians abroad making impact in business and technology.",
-details:"Young Nigerian professionals living abroad are gaining recognition in global technology, finance and research sectors, contributing to international innovation.",
-author:"Radiant Waves Editorial",
-source:"Global Nigerians"
-},
-
-{
-title:"Nollywood Actress Sarah Martins Issues Public Apology",
-category:"Naija",
-image:"https://picsum.photos/800/500?nollywood",
-summary:"Actress responds to social media criticism.",
-details:"Nollywood actress Sarah Martins apologised after a viral video sparked debate online. She said her actions were misunderstood and thanked fans for their continued support.",
-author:"Radiant Waves Editorial",
-source:"Entertainment Desk"
-},
-
-{
-title:"Singer Asake Gifts Luxury Cars to Parents",
-category:"Naija",
-image:"https://picsum.photos/800/500?music",
-summary:"Fans react to musician’s family gesture.",
-details:"Popular Nigerian musician Asake surprised his parents with luxury vehicles, a gesture that generated widespread praise from fans on social media.",
-author:"Radiant Waves Editorial",
-source:"Entertainment Desk"
-},
-
-{
-title:"Portable Controversy Sparks Debate Online",
-category:"Naija",
-image:"https://picsum.photos/800/500?celebrity",
-summary:"Celebrity bodyguard clarifies incident.",
-details:"A celebrity bodyguard linked to singer Portable said a recent viral video involving the artist was actually a paid advertisement rather than a real altercation.",
-author:"Radiant Waves Editorial",
-source:"Entertainment Desk"
-},
-
-{
-title:"Kwara Governor Praised for Infrastructure Development",
-category:"Naija",
-image:"https://picsum.photos/800/500?infrastructure",
-summary:"Cleric commends state development projects.",
-details:"A prominent cleric praised the Kwara State government for ongoing infrastructure improvements including road rehabilitation and public facility upgrades.",
-author:"Radiant Waves Editorial",
-source:"Politics Desk"
-},
-
-// WORLD
-
-{
-title:"Middle East Conflict Raises Global Concerns",
-category:"World",
-image:"https://picsum.photos/800/500?middleeast",
-summary:"International leaders call for restraint.",
-details:"Rising tensions in the Middle East continue to worry global leaders as diplomatic efforts attempt to prevent further escalation.",
-author:"Radiant Waves Editorial",
-source:"International Desk"
-},
-
-{
-title:"Explosion Near US Embassy in Norway Under Investigation",
-category:"World",
-image:"https://picsum.photos/800/500?embassy",
-summary:"Police examining possible causes.",
-details:"Authorities in Norway are investigating an explosion near the US embassy compound. Police say it is too early to determine whether the incident was accidental or intentional.",
-author:"Radiant Waves Editorial",
-source:"Security Desk"
-},
-
-{
-title:"New York Security Tightened After Device Incident",
-category:"World",
-image:"https://picsum.photos/800/500?nyc",
-summary:"Authorities confirm explosive device discovery.",
-details:"Security officials in New York confirmed that a device discovered near the mayor’s residence was capable of causing serious injury if detonated.",
-author:"Radiant Waves Editorial",
-source:"US News"
-},
-
-{
-title:"Climate Scientists Warn of Extreme Weather Patterns",
-category:"World",
-image:"https://picsum.photos/800/500?climate",
-summary:"Recent winter season shows unusual extremes.",
-details:"Climate researchers say the past winter season recorded both unusually warm and unusually cold conditions, highlighting the growing unpredictability of global weather patterns.",
-author:"Radiant Waves Editorial",
-source:"Science Desk"
-},
-
-{
-title:"Global Crime Rates Show Decline in Major Cities",
-category:"World",
-image:"https://picsum.photos/800/500?crime",
-summary:"New data suggests homicide rates falling.",
-details:"Several major cities across the United States reported significant declines in violent crime during the past year.",
-author:"Radiant Waves Editorial",
-source:"US News"
-},
-
-{
-title:"Former New Zealand Leader Jacinda Ardern Leaves Public Office",
-category:"World",
-image:"https://picsum.photos/800/500?leader",
-summary:"Former prime minister begins new global role.",
-details:"Jacinda Ardern has stepped away from domestic politics and is now focusing on international policy initiatives.",
-author:"Radiant Waves Editorial",
-source:"World Politics"
-},
-
-// TECHNOLOGY
-
-{
-title:"BlockDAG Cryptocurrency Surges in Market Rankings",
-category:"Tech",
-image:"https://picsum.photos/800/500?crypto",
-summary:"Digital asset enters top market listings.",
-details:"The BlockDAG cryptocurrency project gained attention after quickly climbing into the top rankings on global cryptocurrency tracking platforms.",
-author:"Radiant Waves Editorial",
-source:"Tech Desk"
-},
-
-{
-title:"Artificial Intelligence Expands Role in Healthcare",
-category:"Tech",
-image:"https://picsum.photos/800/500?ai",
-summary:"Hospitals adopt advanced diagnostic tools.",
-details:"Hospitals worldwide are adopting AI systems capable of assisting doctors in diagnosing diseases earlier and improving treatment planning.",
-author:"Radiant Waves Editorial",
-source:"Tech Desk"
-},
-
-{
-title:"Cybersecurity Experts Warn of Rising Digital Threats",
-category:"Tech",
-image:"https://picsum.photos/800/500?cyber",
-summary:"Businesses urged to strengthen security.",
-details:"Cybersecurity analysts say ransomware and data breaches remain major threats to organizations worldwide.",
-author:"Radiant Waves Editorial",
-source:"Tech Desk"
-},
-
-// SPORTS
-
-{
-title:"FA Cup Quarter Finalists Confirmed",
-category:"Sports",
-image:"https://picsum.photos/800/500?football",
-summary:"Six teams secure places in next round.",
-details:"Several top football clubs have qualified for the FA Cup quarter finals after intense knockout matches.",
-author:"Radiant Waves Editorial",
-source:"Sports Desk"
-},
-
-{
-title:"Southampton Defeats Fulham to Reach FA Cup Quarter Finals",
-category:"Sports",
-image:"https://picsum.photos/800/500?match",
-summary:"Club secures narrow victory.",
-details:"Southampton defeated Fulham 1-0 in a tightly contested FA Cup match to advance to the next stage of the competition.",
-author:"Radiant Waves Editorial",
-source:"Sports Desk"
-},
-
-{
-title:"Bundesliga Club Wolfsburg Dismisses Coach",
-category:"Sports",
-image:"https://picsum.photos/800/500?bundesliga",
-summary:"Manager removed amid relegation fears.",
-details:"German Bundesliga club Wolfsburg has parted ways with its head coach as the team struggles near the bottom of the league table.",
-author:"Radiant Waves Editorial",
-source:"Sports Desk"
-},
-
-// ELECTION
-
-{
-title:"United States Election Debate Intensifies",
-category:"Election",
-image:"https://picsum.photos/800/500?us-election",
-summary:"Candidates sharpen campaign messages.",
-details:"Political candidates across the United States are intensifying campaign activities as the next presidential election approaches.",
-author:"Radiant Waves Editorial",
-source:"Election Watch"
-},
-
-{
-title:"France Election Campaign Enters Final Stage",
-category:"Election",
-image:"https://picsum.photos/800/500?france-election",
-summary:"Candidates focus on economic policies.",
-details:"French presidential candidates are presenting competing economic recovery strategies ahead of the upcoming national vote.",
-author:"Radiant Waves Editorial",
-source:"Election Watch"
-},
-
-{
-title:"United Kingdom Local Elections Approach",
-category:"Election",
-image:"https://picsum.photos/800/500?uk-election",
-summary:"Political parties compete for council seats.",
-details:"British political parties are preparing for nationwide local elections expected to shape future national policy debates.",
-author:"Radiant Waves Editorial",
-source:"Election Watch"
-},
-
-{
-title:"India Prepares for Massive National Election",
-category:"Election",
-image:"https://picsum.photos/800/500?india-election",
-summary:"Millions expected to vote.",
-details:"India is preparing for the world’s largest democratic election with millions of voters expected to participate.",
-author:"Radiant Waves Editorial",
-source:"Election Watch"
-},
-
-{
-title:"South Africa Political Parties Prepare for Elections",
-category:"Election",
-image:"https://picsum.photos/800/500?southafrica-election",
-summary:"Campaigns focus on economic reforms.",
-details:"South African political parties are focusing their campaigns on economic recovery and job creation.",
-author:"Radiant Waves Editorial",
-source:"Election Watch"
-}
-
-];
-let current=[...news];
-
-function render(list){
-
-let html="";
-
-list.forEach((n,i)=>{
-
-html+=`
-<div class="card">
-
-<img src="${n.image}">
-
-<div class="content">
-
-<h3>${n.title}</h3>
-
-<p>${n.summary}</p>
-
-<button class="read" onclick="toggle(${i})">Read Full Story</button>
-
-<div class="details" id="d${i}">
-<p>${n.details}</p>
-<p><em>${n.author}</em> | Source: ${n.source}</p>
-</div>
-
-</div>
-</div>
-`;
-
-});
-
-document.getElementById("news").innerHTML=html;
-
-}
-
-function toggle(i){
-
-let d=document.getElementById("d"+i);
-
-d.style.display=d.style.display==="block"?"none":"block";
-
-}
-
-function filterNews(cat){
-
-current=(cat==="all")?news:news.filter(n=>n.category===cat);
-
-render(current);
-
-}
-
-function searchNews(){
-
-let q=document.getElementById("search").value.toLowerCase();
-
-let r=news.filter(n=>n.title.toLowerCase().includes(q));
-
-render(r);
-
-}
-
-document.getElementById("ticker").innerText=news.map(n=>n.title).join(" • ");
-
-render(news);
-
-</script></body>
+</script>
+</body>
 </html>
-

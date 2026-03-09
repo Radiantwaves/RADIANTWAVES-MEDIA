@@ -4,152 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiant Waves Global News</title>
-
 <style>
-
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f4f4;
-}
-
-/* HEADER */
-
-header{
-background:#cc0000;
-color:white;
-padding:15px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:28px;
-}
-
-/* NAV */
-
-nav{
-background:#111;
-display:flex;
-flex-wrap:wrap;
-}
-
-nav button{
-background:none;
-border:none;
-color:white;
-padding:12px 15px;
-cursor:pointer;
-font-weight:bold;
-}
-
-nav button:hover{
-background:#cc0000;
-}
-
-.search{
-margin-left:auto;
-padding:8px;
-}
-
-.search input{
-padding:6px;
-width:200px;
-}
-
-/* BREAKING NEWS */
-
-.breaking{
-background:#cc0000;
-color:white;
-padding:8px;
-font-weight:bold;
-overflow:hidden;
-white-space:nowrap;
-}
-
-.breaking span{
-display:inline-block;
-padding-left:100%;
-animation:scroll 40s linear infinite;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-/* NEWS CARDS */
-
-.container{
-padding:20px;
-max-width:1000px;
-margin:auto;
-}
-
-.card{
-background:white;
-margin-bottom:20px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
-border-radius:4px;
-}
-
-.card img{
-width:100%;
-height:230px;
-object-fit:cover;
-}
-
-.content{
-padding:15px;
-}
-
-.details{
-display:none;
-margin-top:10px;
-line-height:1.6;
-}
-
-.read{
-background:#cc0000;
-color:white;
-border:none;
-padding:6px 10px;
-margin-top:10px;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.social img{
-width:26px;
-margin:6px;
-}
-
-audio{
-width:100%;
-margin-top:10px;
-}
-
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
+header{background:#c40000;color:white;padding:20px;text-align:center;}
+header h1{margin:0;}
+header p{margin:5px;font-size:14px;font-weight:bold;}
+nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;padding:5px;}
+nav button{background:none;border:none;color:white;padding:10px 15px;cursor:pointer;}
+nav button:hover{background:#c40000;}
+.search{margin-left:auto;padding:5px;}
+.search input{padding:6px;width:200px;}
+.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
+.container{padding:15px;}
+.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;cursor:pointer;}
+.card img{width:100%;height:250px;object-fit:cover;}
+.content{padding:12px;}
+.details{display:none;margin-top:10px;line-height:1.7;}
+button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
+footer{background:#111;color:white;padding:20px;text-align:center;}
+.social a img{width:28px;margin:0 8px;}
+audio{width:100%;margin-top:10px;}
 </style>
 </head>
-
 <body>
 
 <header>
-
 <h1>Radiant Waves Global News</h1>
-
 <p>Gateway to World News – Connecting You to the World</p>
-
 </header>
 
 <audio controls autoplay loop>
@@ -161,471 +44,86 @@ margin-top:10px;
 </div>
 
 <nav>
-
 <button onclick="filterNews('all')">Home</button>
-
 <button onclick="filterNews('Naija')">Naija Pulse</button>
-
-<button onclick="filterNews('Africa')">Africa</button>
-
 <button onclick="filterNews('World')">World</button>
-
 <button onclick="filterNews('Tech')">Technology</button>
-
-<button onclick="filterNews('Economy')">Economy</button>
-
 <button onclick="filterNews('Sports')">Sports</button>
-
-<button onclick="filterNews('Election')">Election</button>
-
+<button onclick="filterNews('Election')">Election Watch</button>
 <div class="search">
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
 </div>
-
 </nav>
 
 <div class="container" id="news"></div>
 
 <footer>
-
 <div class="social">
-
-<a href="https://instagram.com/radiantwaves1">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-</a>
-
-<a href="https://tiktok.com/@radiantwavesmedia">
-<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-</a>
-
-<a href="https://facebook.com/radiantwavesnews">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-</a>
-
-<a href="https://twitter.com/radiantwaves13528995">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
-</a>
-
+<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
 </div>
-
-<p>© 2026 Radiant Waves Global News</p>
-
+<br>@2026 Radiant Waves
 </footer>
 
 <script>
+// Fetch news from JSON file
+let news = [];
+let currentNews = [];
 
-/* BREAKING NEWS */
+fetch('news.json')
+  .then(response => response.json())
+  .then(data => {
+    news = data;
+    currentNews = [...news];
 
-const breakingNews=[
+    // Set breaking news ticker
+    const tickerTitles = news.slice(0,5).map(n => n.title); // first 5 as breaking news
+    document.getElementById("ticker").innerText = tickerTitles.join(" • ");
 
-"Nigeria expands electricity meter rollout",
-
-"African tech startups attract global investors",
-
-"Global oil prices fluctuate amid supply pressure",
-
-"AI technology transforming healthcare worldwide",
-
-"Champions League teams prepare for quarter finals"
-
-];
-
-document.getElementById("ticker").innerText=breakingNews.join(" • ");
-
-
-/* NEWS STORIES */
-
-const news=[
-
-{
-title:"Middle East Conflict Intensifies as Diplomats Seek Ceasefire",
-category:"World",
-image:"https://picsum.photos/400/250?1",
-summary:"Regional tensions escalate as global leaders push for diplomacy.",
-details:"Military exchanges across parts of the Middle East intensified this week as international diplomats pushed for emergency ceasefire negotiations. Analysts warn that further escalation could affect global trade routes and energy markets.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Global Desk"
-},
-
-{
-title:"Global Oil Markets React to Middle East Tensions",
-category:"Economy",
-image:"https://picsum.photos/400/250?2",
-summary:"Energy markets show volatility amid geopolitical risks.",
-details:"Oil prices fluctuated in international markets as investors monitored the impact of Middle East tensions on supply routes. Analysts say disruptions could affect global energy costs and transportation sectors.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Energy Desk"
-},
-
-{
-title:"Nigeria Expands Electricity Meter Distribution Programme",
-category:"Naija",
-image:"https://picsum.photos/400/250?3",
-summary:"Government aims to reduce estimated electricity billing.",
-details:"Nigeria’s power authorities announced an expansion of the national electricity meter distribution programme aimed at improving transparency in electricity billing and strengthening power sector reforms.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Nigeria Bureau"
-},
-
-{
-title:"Kenya Launches Major Regional Technology Innovation Hub",
-category:"Africa",
-image:"https://picsum.photos/400/250?4",
-summary:"East African startups gain new investment opportunities.",
-details:"Kenya introduced a major regional innovation hub designed to support technology startups across East Africa. Officials say the project will boost digital entrepreneurship and job creation.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"Artificial Intelligence Expands Role in Healthcare Diagnostics",
-category:"Tech",
-image:"https://picsum.photos/400/250?5",
-summary:"Hospitals adopt advanced AI systems for disease detection.",
-details:"Medical researchers say artificial intelligence technologies are helping doctors detect complex diseases earlier and improve treatment planning through advanced data analysis.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Technology Desk"
-},
-
-{
-title:"Global Climate Summit Focuses on Renewable Energy Transition",
-category:"World",
-image:"https://picsum.photos/400/250?6",
-summary:"Countries commit to reducing carbon emissions.",
-details:"Leaders from multiple countries gathered at an international climate summit to discuss renewable energy investments and strategies to reduce greenhouse gas emissions.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Climate Desk"
-},
-
-{
-title:"African Leaders Discuss Regional Security Cooperation",
-category:"Africa",
-image:"https://picsum.photos/400/250?7",
-summary:"Governments aim to strengthen cross-border security.",
-details:"African leaders are exploring stronger security partnerships to address regional challenges including terrorism, border conflicts, and economic instability.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"Global Technology Firms Invest in New Data Centers",
-category:"Tech",
-image:"https://picsum.photos/400/250?8",
-summary:"Digital infrastructure expansion continues worldwide.",
-details:"Major technology companies announced plans to invest billions of dollars in new data centers to support cloud computing, artificial intelligence, and global digital services.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Technology Desk"
-},
-
-{
-title:"International Aid Groups Warn of Humanitarian Crisis",
-category:"World",
-image:"https://picsum.photos/400/250?9",
-summary:"Millions of civilians may require emergency assistance.",
-details:"Humanitarian agencies say conflicts and climate challenges are creating growing humanitarian needs across several regions of the world.",
-author:"Editor: Omotara How",
-source:"Radiant Waves International Desk"
-},
-
-{
-title:"Global Markets Watch Inflation and Interest Rate Policies",
-category:"Economy",
-image:"https://picsum.photos/400/250?10",
-summary:"Central banks monitor economic stability.",
-details:"Economists say central banks around the world continue to monitor inflation trends and may adjust interest rates to maintain economic stability.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Financial Desk"
-},
-
-{
-title:"Nigeria Startup Sector Attracts Global Investors",
-category:"Naija",
-image:"https://picsum.photos/400/250?11",
-summary:"Tech entrepreneurs gain international funding.",
-details:"Nigeria’s growing technology ecosystem continues to attract venture capital investors interested in fintech, health technology, and digital commerce platforms.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Nigeria Bureau"
-},
-
-{
-title:"South Africa Expands Renewable Energy Projects",
-category:"Africa",
-image:"https://picsum.photos/400/250?12",
-summary:"Solar and wind energy investments increase.",
-details:"South Africa announced new renewable energy projects aimed at reducing electricity shortages and strengthening long-term energy security.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"Champions League Quarter-Final Matches Draw Global Attention",
-category:"Sports",
-image:"https://picsum.photos/400/250?13",
-summary:"Top European football clubs prepare for major clashes.",
-details:"Football fans worldwide are preparing for the Champions League quarter-final matches as elite European clubs compete for continental glory.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Sports Desk"
-},
-
-{
-title:"Global Education Technology Expands Online Learning",
-category:"Tech",
-image:"https://picsum.photos/400/250?14",
-summary:"Digital classrooms transform modern education.",
-details:"Education experts say digital platforms and virtual learning technologies are transforming how students access education worldwide.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Education Desk"
-},
-
-{
-title:"International Diplomats Continue Middle East Peace Negotiations",
-category:"World",
-image:"https://picsum.photos/400/250?15",
-summary:"Diplomatic talks aim to prevent wider regional conflict.",
-details:"Diplomats from several countries continue negotiations aimed at reducing tensions in the Middle East conflict and preventing further escalation.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Global Affairs Desk"
-},
-  {
-title:"Gulf Region Security Talks Intensify Amid Rising Tensions",
-category:"World",
-image:"https://picsum.photos/400/250?16",
-summary:"Regional leaders meet to address security concerns.",
-details:"Leaders from several Gulf countries held emergency consultations to address regional security concerns and prevent the escalation of armed conflict. Analysts say cooperation between neighboring states will be critical to stabilizing the region and protecting global energy supply routes.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Global Affairs Desk"
-},
-
-{
-title:"Global Shipping Routes Monitored as Conflict Threatens Trade",
-category:"Economy",
-image:"https://picsum.photos/400/250?17",
-summary:"Maritime trade faces uncertainty.",
-details:"International shipping companies are monitoring developments in key maritime corridors as tensions in the Middle East raise concerns about disruptions to global trade routes linking Asia, Europe, and Africa.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Trade Desk"
-},
-
-{
-title:"Nigeria Launches New Agricultural Support Programme",
-category:"Naija",
-image:"https://picsum.photos/400/250?18",
-summary:"Farmers receive assistance to boost food production.",
-details:"Nigeria’s agriculture ministry introduced a new programme aimed at improving food security through farmer training, fertilizer distribution, and irrigation support.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Nigeria Bureau"
-},
-
-{
-title:"Ghana Expands Digital Education Access for Rural Schools",
-category:"Africa",
-image:"https://picsum.photos/400/250?19",
-summary:"Technology improves learning opportunities.",
-details:"Ghana launched a digital learning programme providing tablets and online educational resources to rural schools in an effort to improve access to quality education.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"Cybersecurity Experts Warn of Rising Global Digital Threats",
-category:"Tech",
-image:"https://picsum.photos/400/250?20",
-summary:"Companies strengthen online protection systems.",
-details:"Cybersecurity researchers say global cyber threats are increasing, prompting governments and corporations to invest more in digital protection and advanced monitoring systems.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Technology Desk"
-},
-
-{
-title:"United Nations Calls for Increased Climate Action",
-category:"World",
-image:"https://picsum.photos/400/250?21",
-summary:"Countries urged to accelerate environmental reforms.",
-details:"United Nations officials urged governments to accelerate climate action and expand renewable energy investments to address rising environmental challenges.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Climate Desk"
-},
-
-{
-title:"African Infrastructure Projects Attract International Investment",
-category:"Africa",
-image:"https://picsum.photos/400/250?22",
-summary:"Transport and energy sectors expand.",
-details:"Infrastructure projects across Africa are attracting international investment as governments focus on building highways, railways, and renewable energy facilities.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"Global Financial Institutions Discuss Economic Stability",
-category:"Economy",
-image:"https://picsum.photos/400/250?23",
-summary:"Economists assess global financial outlook.",
-details:"Leading financial institutions met to evaluate the global economic outlook and discuss policies aimed at maintaining financial stability amid geopolitical tensions.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Financial Desk"
-},
-
-{
-title:"Nigeria Improves Rail Transportation Network",
-category:"Naija",
-image:"https://picsum.photos/400/250?24",
-summary:"New railway upgrades planned.",
-details:"Transportation authorities announced new rail network improvements designed to enhance passenger and cargo movement between major Nigerian cities.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Nigeria Bureau"
-},
-
-{
-title:"Middle East Humanitarian Aid Efforts Expand",
-category:"World",
-image:"https://picsum.photos/400/250?25",
-summary:"Relief agencies increase support for civilians.",
-details:"International humanitarian organizations are expanding relief operations in areas affected by conflict, providing food, shelter, and medical supplies to displaced families.",
-author:"Editor: Omotara How",
-source:"Radiant Waves International Desk"
-},
-
-{
-title:"Global Artificial Intelligence Regulations Discussed",
-category:"Tech",
-image:"https://picsum.photos/400/250?26",
-summary:"Governments debate ethical AI policies.",
-details:"International policymakers are discussing frameworks to regulate artificial intelligence technologies while encouraging innovation and protecting public safety.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Technology Desk"
-},
-
-{
-title:"African Renewable Energy Investments Grow",
-category:"Africa",
-image:"https://picsum.photos/400/250?27",
-summary:"Solar and wind projects increase across the continent.",
-details:"African countries are expanding renewable energy infrastructure through solar and wind projects aimed at improving electricity access and reducing reliance on fossil fuels.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Africa Bureau"
-},
-
-{
-title:"International Sports Federations Plan Major Tournaments",
-category:"Sports",
-image:"https://picsum.photos/400/250?28",
-summary:"Athletes prepare for upcoming competitions.",
-details:"Global sports organizations are preparing for several major tournaments scheduled later this year, bringing together athletes from around the world.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Sports Desk"
-},
-
-{
-title:"Nigeria Electoral Commission Begins Voter Registration Review",
-category:"Election",
-image:"https://picsum.photos/400/250?29",
-summary:"Preparations begin for future elections.",
-details:"Nigeria’s electoral commission announced a nationwide review of voter registration data to ensure transparency and accuracy in upcoming elections.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Political Desk"
-},
-
-{
-title:"European Leaders Debate Energy Security Strategy",
-category:"World",
-image:"https://picsum.photos/400/250?30",
-summary:"Energy supply remains key global issue.",
-details:"European leaders are discussing strategies to strengthen energy security and diversify energy sources amid global market uncertainties.",
-author:"Editor: Omotara How",
-source:"Radiant Waves Global Affairs Desk"
-}
-];
-
-
-/* RENDER NEWS */
+    // Initial render
+    render(currentNews);
+  })
+  .catch(err => console.error('Error loading news.json:', err));
 
 function render(list){
-
-let html="";
-
-list.forEach((n,i)=>{
-
-html+=`
-
-<div class="card">
-
-<img src="${n.image}">
-
-<div class="content">
-
-<h3>${n.title}</h3>
-
-<p><b>${n.category}</b></p>
-
-<p>${n.summary}</p>
-
-<div id="d${i}" class="details">
-
-<p>${n.details}</p>
-
-<p><b>${n.author}</b></p>
-
-<p><i>${n.source}</i></p>
-
-</div>
-
-<button class="read" onclick="toggle(${i})">Read More</button>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-document.getElementById("news").innerHTML=html;
-
+  let html = "";
+  list.forEach((n,i)=>{
+    html += `
+    <div class="card">
+      <img src="${n.image}">
+      <div class="content">
+        <h3>${n.title}</h3>
+        <p>${n.summary}</p>
+        <button class="read-more" onclick="toggle(${i})">Read Full Story</button>
+        <div class="details" id="d${i}">
+          <p>${n.details}</p>
+          <p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p>
+        </div>
+      </div>
+    </div>`;
+  });
+  document.getElementById("news").innerHTML = html;
 }
-
-
-/* READ MORE */
 
 function toggle(i){
-
-let d=document.getElementById("d"+i);
-
-d.style.display=d.style.display==="block"?"none":"block";
-
+  const d = document.getElementById("d"+i);
+  d.style.display = d.style.display === "block" ? "none" : "block";
 }
-
-
-/* FILTER */
 
 function filterNews(cat){
-
-if(cat==="all"){
-render(news);
+  if(cat === "all") currentNews = [...news];
+  else currentNews = news.filter(n => n.category === cat);
+  render(currentNews);
 }
-
-else{
-render(news.filter(n=>n.category===cat));
-}
-
-}
-
-
-/* SEARCH */
 
 function searchNews(){
-
-let q=document.getElementById("search").value.toLowerCase();
-
-render(news.filter(n=>n.title.toLowerCase().includes(q)));
-
+  const q = document.getElementById("search").value.toLowerCase();
+  const results = news.filter(n => n.title.toLowerCase().includes(q));
+  render(results);
 }
-
-
-render(news);
-
 </script>
 
 </body>
 </html>
-

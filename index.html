@@ -9,16 +9,25 @@
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial,Helvetica,sans-serif;
 background:#f4f4f4;
 }
 
+/* HEADER */
+
 header{
-background:#0b3d91;
+background:#cc0000;
 color:white;
+padding:15px;
 text-align:center;
-padding:20px;
 }
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+/* NAV */
 
 nav{
 background:#111;
@@ -32,10 +41,11 @@ border:none;
 color:white;
 padding:12px 15px;
 cursor:pointer;
+font-weight:bold;
 }
 
 nav button:hover{
-background:#0b3d91;
+background:#cc0000;
 }
 
 .search{
@@ -48,10 +58,13 @@ padding:6px;
 width:200px;
 }
 
+/* BREAKING NEWS */
+
 .breaking{
-background:black;
+background:#cc0000;
 color:white;
 padding:8px;
+font-weight:bold;
 overflow:hidden;
 white-space:nowrap;
 }
@@ -59,7 +72,7 @@ white-space:nowrap;
 .breaking span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 60s linear infinite;
+animation:scroll 40s linear infinite;
 }
 
 @keyframes scroll{
@@ -67,15 +80,19 @@ animation:scroll 60s linear infinite;
 100%{transform:translateX(-100%)}
 }
 
+/* NEWS CARDS */
+
 .container{
 padding:20px;
+max-width:1000px;
+margin:auto;
 }
 
 .card{
 background:white;
 margin-bottom:20px;
-border-radius:6px;
 box-shadow:0 2px 6px rgba(0,0,0,0.2);
+border-radius:4px;
 }
 
 .card img{
@@ -91,16 +108,19 @@ padding:15px;
 .details{
 display:none;
 margin-top:10px;
+line-height:1.6;
 }
 
 .read{
-background:#0b3d91;
+background:#cc0000;
 color:white;
 border:none;
 padding:6px 10px;
-margin-top:8px;
+margin-top:10px;
 cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
 background:#111;
@@ -114,8 +134,12 @@ width:26px;
 margin:6px;
 }
 
-</style>
+audio{
+width:100%;
+margin-top:10px;
+}
 
+</style>
 </head>
 
 <body>
@@ -128,13 +152,13 @@ margin:6px;
 
 </header>
 
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
 
 <div class="breaking">
-
 <span id="ticker"></span>
-
 </div>
-
 
 <nav>
 
@@ -148,35 +172,39 @@ margin:6px;
 
 <button onclick="filterNews('Tech')">Technology</button>
 
-<button onclick="filterNews('Business')">Business</button>
+<button onclick="filterNews('Economy')">Economy</button>
 
 <button onclick="filterNews('Sports')">Sports</button>
 
-<button onclick="filterNews('Election')">Election Watch</button>
+<button onclick="filterNews('Election')">Election</button>
 
 <div class="search">
-
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
-
 </div>
 
 </nav>
 
-
 <div class="container" id="news"></div>
-
 
 <footer>
 
 <div class="social">
 
-<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://instagram.com/radiantwaves1">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
 
-<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+</a>
 
-<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://facebook.com/radiantwavesnews">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
 
-<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+<a href="https://twitter.com/radiantwaves13528995">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</a>
 
 </div>
 
@@ -184,28 +212,28 @@ margin:6px;
 
 </footer>
 
-
 <script>
 
+/* BREAKING NEWS */
 
 const breakingNews=[
 
 "Nigeria expands electricity meter rollout",
 
-"Kenya launches regional tech hub",
+"African tech startups attract global investors",
 
 "Global oil prices fluctuate amid supply pressure",
 
-"Artificial intelligence transforming global healthcare",
+"AI technology transforming healthcare worldwide",
 
-"European leaders meet to discuss economic recovery"
+"Champions League teams prepare for quarter finals"
 
 ];
 
 document.getElementById("ticker").innerText=breakingNews.join(" • ");
 
 
-// SAMPLE NEWS (you will add more later)
+/* NEWS STORIES */
 
 const news=[
 
@@ -214,7 +242,7 @@ title:"Nigeria Expands Electricity Meter Rollout",
 category:"Naija",
 image:"https://picsum.photos/400/250?1",
 summary:"Government expands national electricity metering.",
-details:"Nigeria continues its nationwide electricity meter rollout to reduce estimated billing and improve transparency in power distribution.",
+details:"The federal government says electricity meters are being distributed across the country to reduce estimated billing.",
 author:"Editor: Omotara How",
 source:"Radiant Waves"
 },
@@ -223,8 +251,8 @@ source:"Radiant Waves"
 title:"Kenya Launches New Technology Hub",
 category:"Africa",
 image:"https://picsum.photos/400/250?2",
-summary:"East Africa boosts startup innovation.",
-details:"Kenya opened a new technology innovation hub aimed at supporting startups across East Africa and expanding digital entrepreneurship.",
+summary:"Innovation hub supports startups.",
+details:"Kenya opened a regional technology hub designed to help young entrepreneurs build digital startups.",
 author:"Editor: Omotara How",
 source:"Radiant Waves"
 },
@@ -233,28 +261,48 @@ source:"Radiant Waves"
 title:"Global Climate Talks Focus on Renewable Energy",
 category:"World",
 image:"https://picsum.photos/400/250?3",
-summary:"Countries push renewable energy plans.",
-details:"Leaders at global climate talks emphasized renewable energy investments to accelerate the transition away from fossil fuels.",
+summary:"Countries push clean energy investment.",
+details:"International leaders are discussing renewable energy projects aimed at reducing global emissions.",
 author:"Editor: Omotara How",
 source:"Radiant Waves"
 },
 
 {
-title:"Artificial Intelligence Expands Healthcare Diagnostics",
+title:"Artificial Intelligence Improves Medical Diagnosis",
 category:"Tech",
 image:"https://picsum.photos/400/250?4",
-summary:"AI tools help doctors detect disease faster.",
-details:"Healthcare providers worldwide are adopting artificial intelligence technologies to improve disease detection and patient care.",
+summary:"Hospitals adopt AI tools.",
+details:"Medical researchers say AI systems are helping doctors detect diseases earlier and improve treatment.",
 author:"Editor: Omotara How",
 source:"Radiant Waves"
 },
 
 {
-title:"Champions League Quarter Final Draw Announced",
-category:"Sports",
+title:"Global Markets React to Oil Price Changes",
+category:"Economy",
 image:"https://picsum.photos/400/250?5",
-summary:"European clubs prepare for knockout battles.",
-details:"Major European clubs learned their Champions League quarter final opponents in a draw held this week.",
+summary:"Investors monitor energy sector.",
+details:"Financial markets reacted to oil price changes amid concerns about supply and global demand.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Champions League Quarter Final Fixtures Announced",
+category:"Sports",
+image:"https://picsum.photos/400/250?6",
+summary:"Top European clubs prepare for clashes.",
+details:"Major clubs across Europe are preparing for the next stage of the Champions League tournament.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Nigeria Electoral Commission Updates Voter Register",
+category:"Election",
+image:"https://picsum.photos/400/250?7",
+summary:"INEC prepares for upcoming elections.",
+details:"Election officials have started updating voter records ahead of future national elections.",
 author:"Editor: Omotara How",
 source:"Radiant Waves"
 }
@@ -262,6 +310,7 @@ source:"Radiant Waves"
 ];
 
 
+/* RENDER NEWS */
 
 function render(list){
 
@@ -308,6 +357,8 @@ document.getElementById("news").innerHTML=html;
 }
 
 
+/* READ MORE */
+
 function toggle(i){
 
 let d=document.getElementById("d"+i);
@@ -317,22 +368,22 @@ d.style.display=d.style.display==="block"?"none":"block";
 }
 
 
+/* FILTER */
+
 function filterNews(cat){
 
 if(cat==="all"){
-
 render(news);
-
 }
 
 else{
-
 render(news.filter(n=>n.category===cat));
-
 }
 
 }
 
+
+/* SEARCH */
 
 function searchNews(){
 
@@ -347,7 +398,5 @@ render(news);
 
 </script>
 
-
 </body>
-
 </html>

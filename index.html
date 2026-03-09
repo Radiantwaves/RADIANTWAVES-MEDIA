@@ -77,38 +77,198 @@ audio{width:100%;margin-top:10px;}
 <script>
 // ==== All 60+ Stories ====
 // For brevity, showing first 15 Naija stories. You can expand all 25+ World, Tech, Sports, Election stories similarly
-const news = [<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#c40000;color:white;padding:20px;text-align:center;}
-header h1{margin:0;}
-header p{margin:5px;font-size:14px;font-weight:bold;}
-nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;padding:5px;}
-nav button{background:none;border:none;color:white;padding:10px 15px;cursor:pointer;}
-nav button:hover{background:#c40000;}
-.search{margin-left:auto;padding:5px;}
-.search input{padding:6px;}
-.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
-.container{padding:15px;}
-.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;cursor:pointer;}
-.card img{width:100%;height:250px;object-fit:cover;}
-.content{padding:12px;}
-.details{display:none;margin-top:10px;line-height:1.7;}
-button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
-footer{background:#111;color:white;padding:20px;text-align:center;}
-.social a img{width:28px;margin:0 8px;}
-audio{width:100%;margin-top:10px;}
-.load-more-btn{padding:10px 20px;background:#c40000;color:white;border:none;cursor:pointer;border-radius:4px;margin:20px auto;display:block;}
-</style>
-</head>
-<body>
+const news = 
+  [<const news = [
+
+/* NAIJA PULSE */
+
+{
+title:"Tinubu Electricity Meter Rollout Expands Nationwide",
+category:"Naija",
+image:"https://picsum.photos/400/250?1",
+summary:"Federal government expands electricity meter distribution.",
+details:"The Tinubu administration has expanded the national electricity metering program to reduce estimated billing. Officials say households across several states have begun receiving meters zone by zone while power sector reforms continue.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Student Loan Scheme Begins Monthly Payments",
+category:"Naija",
+image:"https://picsum.photos/400/250?2",
+summary:"Students confirm receiving allowances.",
+details:"Thousands of Nigerian students have confirmed receiving their first monthly allowances through the federal student loan scheme designed to support higher education across the country.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Transport Fares Rise in Southeast Nigeria",
+category:"Naija",
+image:"https://picsum.photos/400/250?3",
+summary:"Fuel prices continue affecting commuters.",
+details:"Public transport fares increased across several southeastern states as petrol prices fluctuated this week, placing pressure on daily commuters.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"NDLEA Arrests Suspect With Large Drug Shipment",
+category:"Naija",
+image:"https://picsum.photos/400/250?4",
+summary:"Drug enforcement intensifies nationwide.",
+details:"Nigeria’s drug enforcement agency intercepted a large shipment of illegal drugs in Lagos during an anti-trafficking operation targeting distribution networks.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Lagos Smart Traffic System Improves Commutes",
+category:"Naija",
+image:"https://picsum.photos/400/250?5",
+summary:"Digital signals reduce congestion.",
+details:"New smart traffic signals and monitoring systems are being installed in Lagos to improve traffic flow and reduce travel time for commuters.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+/* WORLD NEWS */
+
+{
+title:"Global Oil Prices Rise Amid Supply Concerns",
+category:"World",
+image:"https://picsum.photos/400/250?6",
+summary:"Energy markets respond to geopolitical tensions.",
+details:"International oil prices rose sharply this week as markets reacted to supply disruptions and rising geopolitical tensions in major producing regions.",
+author:"Editor: Omotara How",
+source:"Global Desk"
+},
+
+{
+title:"UN Warns of Growing Food Insecurity",
+category:"World",
+image:"https://picsum.photos/400/250?7",
+summary:"Millions may face shortages.",
+details:"The United Nations has warned that climate change and economic pressures could push millions more people into food insecurity across vulnerable regions.",
+author:"Editor: Omotara How",
+source:"UN Brief"
+},
+
+{
+title:"European Leaders Meet for Economic Summit",
+category:"World",
+image:"https://picsum.photos/400/250?8",
+summary:"Focus on inflation and trade.",
+details:"European leaders gathered for a summit to discuss economic stability, inflation control, and strategies to strengthen trade cooperation.",
+author:"Editor: Omotara How",
+source:"World Report"
+},
+
+{
+title:"Global Climate Talks Push Renewable Energy",
+category:"World",
+image:"https://picsum.photos/400/250?9",
+summary:"Countries commit to greener energy.",
+details:"International climate discussions are focusing on renewable energy investments as governments attempt to meet emissions targets.",
+author:"Editor: Omotara How",
+source:"Climate Watch"
+},
+
+{
+title:"Asian Markets Rally After Tech Growth",
+category:"World",
+image:"https://picsum.photos/400/250?10",
+summary:"Technology companies drive gains.",
+details:"Stock markets across Asia posted gains after strong performances from major technology companies and improved investor confidence.",
+author:"Editor: Omotara How",
+source:"Market Review"
+},
+
+/* TECHNOLOGY */
+
+{
+title:"Artificial Intelligence Expands in Healthcare",
+category:"Tech",
+image:"https://picsum.photos/400/250?11",
+summary:"Hospitals adopt AI diagnostics.",
+details:"Healthcare providers worldwide are adopting artificial intelligence tools to detect diseases earlier and assist doctors in medical analysis.",
+author:"Editor: Omotara How",
+source:"Tech Journal"
+},
+
+{
+title:"Cybersecurity Threats Increase Globally",
+category:"Tech",
+image:"https://picsum.photos/400/250?12",
+summary:"Experts warn of new attack methods.",
+details:"Security experts warn that cybercriminals are using more advanced phishing and ransomware attacks targeting businesses and governments.",
+author:"Editor: Omotara How",
+source:"Cyber Weekly"
+},
+
+{
+title:"African Startups Attract Global Investors",
+category:"Tech",
+image:"https://picsum.photos/400/250?13",
+summary:"Investment in fintech continues.",
+details:"African technology startups are receiving increasing global investment as fintech innovation expands across the continent.",
+author:"Editor: Omotara How",
+source:"Startup Africa"
+},
+
+{
+title:"Blockchain Technology Expands Financial Services",
+category:"Tech",
+image:"https://picsum.photos/400/250?14",
+summary:"Secure digital transactions grow.",
+details:"Financial institutions are exploring blockchain systems to improve transaction transparency and security.",
+author:"Editor: Omotara How",
+source:"FinTech Review"
+},
+
+/* SPORTS */
+
+{
+title:"Champions League Quarter Final Fixtures Announced",
+category:"Sports",
+image:"https://picsum.photos/400/250?15",
+summary:"Top European clubs prepare for clashes.",
+details:"The Champions League quarter-final draw has been announced with major clubs preparing for highly anticipated matches.",
+author:"Editor: Omotara How",
+source:"Sports Desk"
+},
+
+{
+title:"Nigeria Wins Medals at African Athletics Event",
+category:"Sports",
+image:"https://picsum.photos/400/250?16",
+summary:"Athletes deliver strong performance.",
+details:"Team Nigeria secured multiple medals at the continental athletics competition, strengthening their regional sporting reputation.",
+author:"Editor: Omotara How",
+source:"Sports Africa"
+},
+
+{
+title:"Tokyo Marathon Sees Record Participation",
+category:"Sports",
+image:"https://picsum.photos/400/250?17",
+summary:"Thousands compete in annual race.",
+details:"Professional athletes and amateur runners joined thousands of participants in the annual Tokyo Marathon event.",
+author:"Editor: Omotara How",
+source:"Global Sports"
+},
+
+{
+title:"NBA Teams Prepare for Playoff Push",
+category:"Sports",
+image:"https://picsum.photos/400/250?18",
+summary:"Regular season enters final stage.",
+details:"Basketball teams are intensifying their preparations as the NBA regular season approaches the playoffs.",
+author:"Editor: Omotara How",
+source:"Sports Network"
+}
+
+];
 
 <header>
 <h1>Radiant Waves Global News</h1>
@@ -312,4 +472,5 @@ renderBatch();
 </script>
 </body>
 </html>
+
 

@@ -3,149 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radiant Waves News</title>
+<title>Radiant Waves Global News</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-header{background:#0b3d91;color:white;padding:20px;text-align:center;}
-header h1{margin:0;}
-header p{margin:5px;font-size:14px;font-weight:bold;}
-nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;}
-nav button{background:none;border:none;color:white;padding:12px 16px;cursor:pointer;}
-nav button:hover{background:#0b3d91;}
-.search{margin-left:auto;padding:8px;}
-.search input{padding:6px;width:200px;}
-.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
-.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.container{padding:20px;}
-.card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.15);}
-.card img{width:100%;height:230px;object-fit:cover;}
-.content{padding:15px;}
-.details{display:none;margin-top:10px;line-height:1.7;}
-button.read-more{background:#0b3d91;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
-footer{background:#111;color:white;padding:25px;text-align:center;}
-.social a img{width:28px;margin:8px;}
-audio{width:100%;margin-top:10px;}
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+header{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#111;
+display:flex;
+flex-wrap:wrap;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:12px 15px;
+cursor:pointer;
+}
+
+nav button:hover{
+background:#0b3d91;
+}
+
+.search{
+margin-left:auto;
+padding:8px;
+}
+
+.search input{
+padding:6px;
+width:200px;
+}
+
+.breaking{
+background:black;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 60s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:white;
+margin-bottom:20px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.content{
+padding:15px;
+}
+
+.details{
+display:none;
+margin-top:10px;
+}
+
+.read{
+background:#0b3d91;
+color:white;
+border:none;
+padding:6px 10px;
+margin-top:8px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.social img{
+width:26px;
+margin:6px;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
+
 <h1>Radiant Waves Global News</h1>
+
 <p>Gateway to World News – Connecting You to the World</p>
+
 </header>
 
-<audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
 
 <div class="breaking">
+
 <span id="ticker"></span>
+
 </div>
 
+
 <nav>
+
 <button onclick="filterNews('all')">Home</button>
+
 <button onclick="filterNews('Naija')">Naija Pulse</button>
+
+<button onclick="filterNews('Africa')">Africa</button>
+
 <button onclick="filterNews('World')">World</button>
+
 <button onclick="filterNews('Tech')">Technology</button>
+
+<button onclick="filterNews('Business')">Business</button>
+
 <button onclick="filterNews('Sports')">Sports</button>
+
 <button onclick="filterNews('Election')">Election Watch</button>
+
 <div class="search">
+
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
+
 </div>
+
 </nav>
+
 
 <div class="container" id="news"></div>
 
+
 <footer>
+
 <div class="social">
+
 <a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+
 <a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+
 <a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+
 <a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+
 </div>
-<br>@2026 Radiant Waves
+
+<p>© 2026 Radiant Waves Global News</p>
+
 </footer>
+
 
 <script>
 
-// Breaking news
-const breakingNews = [
-"Nigeria expands electricity meter rollout nationwide",
-"Student loan programme begins monthly disbursement",
-"Middle East tensions escalate after infrastructure strikes",
-"AI technology transforming healthcare systems globally",
-"Global fuel prices continue to fluctuate amid supply concerns"
+
+const breakingNews=[
+
+"Nigeria expands electricity meter rollout",
+
+"Kenya launches regional tech hub",
+
+"Global oil prices fluctuate amid supply pressure",
+
+"Artificial intelligence transforming global healthcare",
+
+"European leaders meet to discuss economic recovery"
+
 ];
 
-document.getElementById("ticker").innerText = breakingNews.join(" • ");
+document.getElementById("ticker").innerText=breakingNews.join(" • ");
 
-// News array with categories
-const news = [
-  // ===== Naija Pulse (25) =====
-  {title:"Peter Obi Reacts to INEC Voter Guidelines",category:"Naija",image:"https://picsum.photos/400/250?1",summary:"Obi comments on new voter registration updates.",details:"Peter Obi urges citizens to check voter registration status and emphasizes transparency in upcoming local elections.",author:"Editor: Omotara How",source:"Local News Network"},
-  {title:"Tinubu Administration Evaluates Meter Rollout",category:"Naija",image:"https://picsum.photos/400/250?2",summary:"Electricity meters installed in 50% of states.",details:"The Federal Government reports that electricity meter installations are on track, aiming for full coverage by Q3 2026.",author:"Editor: Omotara How",source:"Energy Nigeria"},
-  {title:"Sunday Igboho Court Hearing Postponed",category:"Naija",image:"https://picsum.photos/400/250?3",summary:"Hearing rescheduled amid security concerns.",details:"Legal proceedings involving activist Sunday Igboho have been postponed; supporters call for peaceful resolution.",author:"Editor: Omotara How",source:"Nigeria Tribune"},
-  {title:"Nasir El-Rufai Advocates Education Reforms",category:"Naija",image:"https://picsum.photos/400/250?4",summary:"Governor stresses education policy.",details:"El-Rufai highlights curriculum reform and digital education initiatives in a recent policy forum.",author:"Editor: Omotara How",source:"National Daily"},
-  {title:"Student Loan Disbursement Reaches Universities",category:"Naija",image:"https://picsum.photos/400/250?5",summary:"Students receive monthly allowances.",details:"Registered students across 36 states confirmed receipt of their monthly student loans, supporting academic programs.",author:"Editor: Omotara How",source:"Education Today"},
-  {title:"Kwara Gov Receives Cleric’s Praise for Roads",category:"Naija",image:"https://picsum.photos/400/250?6",summary:"Infrastructure projects highlighted.",details:"Religious leaders commend infrastructure improvements in Kwara State including schools and road networks.",author:"Editor: Omotara How",source:"State News Network"},
-  {title:"NDLEA Arrests Ex-Lagos Councillor With 40kg Skunk",category:"Naija",image:"https://picsum.photos/400/250?7",summary:"Illegal drugs recovered.",details:"Authorities intercepted 40kg of skunk hidden in diapers and arrested a former Lagos councillor.",author:"Editor: Omotara How",source:"Nigeria Daily"},
-  {title:"Transport Fares Soar in Anambra",category:"Naija",image:"https://picsum.photos/400/250?8",summary:"Petrol hits ₦1,200 per liter.",details:"Petrol price surge impacts transport fares across Anambra State, creating public concern.",author:"Editor: Omotara How",source:"Anambra Tribune"},
-  {title:"One Dies, Six Injured in Lagos Accident",category:"Naija",image:"https://picsum.photos/400/250?9",summary:"Highway accident reported.",details:"A highway accident in Lagos left one dead and six injured; authorities urge safer driving.",author:"Editor: Omotara How",source:"Lagos Times"},
-  {title:"Bandits Kill One, Abduct Five in Sokoto",category:"Naija",image:"https://picsum.photos/400/250?10",summary:"Security concerns escalate.",details:"Sokoto village attacked by gunmen; local authorities investigate and work to rescue abducted citizens.",author:"Editor: Omotara How",source:"Northern Watch"},
-  {title:"Police Arrest Nigerien, Two Others for Kidnapping in Edo",category:"Naija",image:"https://picsum.photos/400/250?11",summary:"Criminal network disrupted.",details:"Three suspects, including a foreign national, were arrested for kidnapping operations.",author:"Editor: Omotara How",source:"Edo Police Reports"},
-  {title:"Fire Guts Building in Anambra",category:"Naija",image:"https://picsum.photos/400/250?12",summary:"One-storey building destroyed.",details:"Anambra State emergency services contained fire at residential building; investigation ongoing.",author:"Editor: Omotara How",source:"State Emergency News"},
-  {title:"Two Feared Dead in Adamawa Communal Crisis",category:"Naija",image:"https://picsum.photos/400/250?13",summary:"Ethnic violence reported.",details:"Clashes leave two missing and several injured; government mediators intervene.",author:"Editor: Omotara How",source:"Adamawa Times"},
-  {title:"Nigerian Tech Startups Attract Funding",category:"Naija",image:"https://picsum.photos/400/250?14",summary:"Investment hits record levels.",details:"Startups in fintech and health tech secure international investors, boosting innovation and jobs.",author:"Editor: Omotara How",source:"Tech Nigeria"},
-  {title:"Lagos Traffic System Gets Smart Upgrade",category:"Naija",image:"https://picsum.photos/400/250?15",summary:"Smart lights ease congestion.",details:"Lagos installs intelligent traffic lights and real-time monitoring to improve commuting experience.",author:"Editor: Omotara How",source:"Lagos Today"},
-  // 10 more Naija Pulse stories
-  // ===== World News (20) =====
-  {title:"Middle East Tensions Escalate",category:"World",image:"https://picsum.photos/400/250?16",summary:"Global leaders call for calm.",details:"Countries across Europe, Asia, and Americas monitor Middle East conflicts closely, urging restraint to avoid escalation.",author:"Editor: Omotara How",source:"Global Times"},
-  {title:"Global Oil Prices Hit 5-Year High",category:"World",image:"https://picsum.photos/400/250?17",summary:"Energy markets surge.",details:"International oil prices rise due to geopolitical instability, affecting global markets.",author:"Editor: Omotara How",source:"Energy Daily"},
-  {title:"UN Warns of Humanitarian Crisis in Africa",category:"World",image:"https://picsum.photos/400/250?18",summary:"Millions at risk.",details:"UN estimates over 20 million people face food insecurity across several African nations.",author:"Editor: Omotara How",source:"UN Reports"},
-  {title:"Global Climate Summit Focuses on Renewable Energy",category:"World",image:"https://picsum.photos/400/250?19",summary:"Leaders commit to emission cuts.",details:"195 countries meet to discuss renewable energy transitions and carbon reduction strategies.",author:"Editor: Omotara How",source:"Climate Today"},
-  {title:"US Federal Reserve Adjusts Interest Rates",category:"World",image:"https://picsum.photos/400/250?20",summary:"Rate hike targets inflation.",details:"Fed announces rate increase to control inflation while supporting economic growth.",author:"Editor: Omotara How",source:"Financial Times"},
-  // 15 more World stories
-  // ===== Technology (10) =====
-  {title:"AI Revolutionizes Healthcare",category:"Tech",image:"https://picsum.photos/400/250?21",summary:"Improved diagnostics.",details:"AI algorithms detect complex diseases with high accuracy, transforming healthcare.",author:"Editor: Omotara How",source:"Tech Health Journal"},
-  {title:"Cybersecurity Threats on the Rise",category:"Tech",image:"https://picsum.photos/400/250?22",summary:"Sophisticated attacks increase.",details:"Organizations face advanced phishing and AI-driven cyber attacks, requiring stronger defense strategies.",author:"Editor: Omotara How",source:"Cyber Defense Weekly"},
-  {title:"Blockchain Adoption Expands in Africa",category:"Tech",image:"https://picsum.photos/400/250?23",summary:"Secure financial transactions.",details:"Blockchain integrated in finance and logistics to improve transparency.",author:"Editor: Omotara How",source:"FinTech Africa"},
-  // 7 more Tech stories
-  // ===== Sports (10) =====
-  {title:"Champions League Quarter-Finals Draw Announced",category:"Sports",image:"https://picsum.photos/400/250?24",summary:"Clubs learn opponents.",details:"Teams prepare with tactical focus and player readiness.",author:"Editor: Omotara How",source:"UEFA News"},
-  {title:"Tokyo Marathon Sees Record Participation",category:"Sports",image:"https://picsum.photos/400/250?25",summary:"Thousands join.",details:"Elite and amateur runners participate in the Tokyo Marathon.",author:"Editor: Omotara How",source:"Sports Global"},
-  // 8 more Sports stories
-  // ===== Election Watch (5) =====
-  {title:"France Prepares for Presidential Election",category:"Election",image:"https://picsum.photos/400/250?26",summary:"Campaigns intensify ahead of Sunday poll.",details:"France holds presidential elections; citizens encouraged to review candidate policies.",author:"Editor: Omotara How",source:"French Times"},
-  {title:"Nigeria’s Voter Roll Updates",category:"Election",image:"https://picsum.photos/400/250?27",summary:"INEC updates eligible voters.",details:"Voter rolls updated; smart card readers distributed nationwide. Citizens urged to confirm registration.",author:"Editor: Omotara How",source:"Nigeria Observer"},
-  {title:"UK Prepares for General Elections",category:"Election",image:"https://picsum.photos/400/250?28",summary:"Campaigns heat up.",details:"Parties outline policies on healthcare, economy, and education.",author:"Editor: Omotara How",source:"BBC UK"},
-  {title:"US Election Campaigns Heat Up",category:"Election",image:"https://picsum.photos/400/250?29",summary:"Focus on swing states.",details:"Candidates tour key states and debate policies ahead of elections.",author:"Editor: Omotara How",source:"CNN US"},
-  {title:"India State Assembly Elections Begin",category:"Election",image:"https://picsum.photos/400/250?30",summary:"Local elections set to start.",details:"Parties outline development and infrastructure agendas.",author:"Editor: Omotara How",source:"Times of India"}
-];
-document.getElementById("news").innerHTML=html;
+
+// SAMPLE NEWS (you will add more later)
+
+const news=[
+
+{
+title:"Nigeria Expands Electricity Meter Rollout",
+category:"Naija",
+image:"https://picsum.photos/400/250?1",
+summary:"Government expands national electricity metering.",
+details:"Nigeria continues its nationwide electricity meter rollout to reduce estimated billing and improve transparency in power distribution.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Kenya Launches New Technology Hub",
+category:"Africa",
+image:"https://picsum.photos/400/250?2",
+summary:"East Africa boosts startup innovation.",
+details:"Kenya opened a new technology innovation hub aimed at supporting startups across East Africa and expanding digital entrepreneurship.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Global Climate Talks Focus on Renewable Energy",
+category:"World",
+image:"https://picsum.photos/400/250?3",
+summary:"Countries push renewable energy plans.",
+details:"Leaders at global climate talks emphasized renewable energy investments to accelerate the transition away from fossil fuels.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Artificial Intelligence Expands Healthcare Diagnostics",
+category:"Tech",
+image:"https://picsum.photos/400/250?4",
+summary:"AI tools help doctors detect disease faster.",
+details:"Healthcare providers worldwide are adopting artificial intelligence technologies to improve disease detection and patient care.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
+},
+
+{
+title:"Champions League Quarter Final Draw Announced",
+category:"Sports",
+image:"https://picsum.photos/400/250?5",
+summary:"European clubs prepare for knockout battles.",
+details:"Major European clubs learned their Champions League quarter final opponents in a draw held this week.",
+author:"Editor: Omotara How",
+source:"Radiant Waves"
 }
+
+];
+
+
+
+function render(list){
+
+let html="";
+
+list.forEach((n,i)=>{
+
+html+=`
+
+<div class="card">
+
+<img src="${n.image}">
+
+<div class="content">
+
+<h3>${n.title}</h3>
+
+<p><b>${n.category}</b></p>
+
+<p>${n.summary}</p>
+
+<div id="d${i}" class="details">
+
+<p>${n.details}</p>
+
+<p><b>${n.author}</b></p>
+
+<p><i>${n.source}</i></p>
+
+</div>
+
+<button class="read" onclick="toggle(${i})">Read More</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("news").innerHTML=html;
+
+}
+
 
 function toggle(i){
+
 let d=document.getElementById("d"+i);
+
 d.style.display=d.style.display==="block"?"none":"block";
+
 }
+
 
 function filterNews(cat){
-if(cat==="all"){currentNews=[...news];}
-else{currentNews=news.filter(n=>n.category===cat);}
-render(currentNews);
+
+if(cat==="all"){
+
+render(news);
+
 }
+
+else{
+
+render(news.filter(n=>n.category===cat));
+
+}
+
+}
+
 
 function searchNews(){
+
 let q=document.getElementById("search").value.toLowerCase();
-let results=news.filter(n=>n.title.toLowerCase().includes(q));
-render(results);
+
+render(news.filter(n=>n.title.toLowerCase().includes(q)));
+
 }
 
-// Initial render
+
 render(news);
 
 </script>
-</body>
-</html>
 
+
+</body>
+
+</html>

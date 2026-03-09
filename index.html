@@ -77,6 +77,85 @@ audio{width:100%;margin-top:10px;}
 <script>
 // ==== All 60+ Stories ====
 // For brevity, showing first 15 Naija stories. You can expand all 25+ World, Tech, Sports, Election stories similarly
+const news = [<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiant Waves News</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
+header{background:#c40000;color:white;padding:20px;text-align:center;}
+header h1{margin:0;}
+header p{margin:5px;font-size:14px;font-weight:bold;}
+nav{background:#111;display:flex;flex-wrap:wrap;align-items:center;padding:5px;}
+nav button{background:none;border:none;color:white;padding:10px 15px;cursor:pointer;}
+nav button:hover{background:#c40000;}
+.search{margin-left:auto;padding:5px;}
+.search input{padding:6px;}
+.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}} 
+.container{padding:15px;}
+.card{background:white;margin-bottom:18px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;cursor:pointer;}
+.card img{width:100%;height:250px;object-fit:cover;}
+.content{padding:12px;}
+.details{display:none;margin-top:10px;line-height:1.7;}
+button.read-more{background:#c40000;color:white;border:none;padding:6px 10px;margin-top:8px;cursor:pointer;border-radius:3px;}
+footer{background:#111;color:white;padding:20px;text-align:center;}
+.social a img{width:28px;margin:0 8px;}
+audio{width:100%;margin-top:10px;}
+.load-more-btn{padding:10px 20px;background:#c40000;color:white;border:none;cursor:pointer;border-radius:4px;margin:20px auto;display:block;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Radiant Waves Global News</h1>
+<p>Gateway to World News – Connecting You to the World</p>
+</header>
+
+<!-- Radio player -->
+<audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Breaking news ticker -->
+<div class="breaking">
+<span id="ticker"></span>
+</div>
+
+<!-- Navigation -->
+<nav>
+<button onclick="filterNews('all')">Home</button>
+<button onclick="filterNews('Naija')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Tech')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election Watch</button>
+<div class="search">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
+</div>
+</nav>
+
+<!-- News container -->
+<div class="container" id="news"></div>
+<button class="load-more-btn" id="loadMoreBtn">Load More News</button>
+
+<!-- Footer -->
+<footer>
+<div class="social">
+<a href="https://instagram.com/radiantwaves1"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://tiktok.com/@radiantwavesmedia"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+<a href="https://facebook.com/radiantwavesnews"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://twitter.com/radiantwaves13528995"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+<br>@2026 Radiant Waves
+</footer>
+
+<script>
+// ==== All 60+ Stories ====
+// For brevity, showing first 15 Naija stories. You can expand all 25+ World, Tech, Sports, Election stories similarly
 const news = [
   {"title":"Peter Obi Calls for Electoral Reform in Nigeria","category":"Naija","image":"https://picsum.photos/400/250?obi","summary":"Former presidential candidate urges transparent elections.","details":"Peter Obi emphasizes the need for credible and transparent elections across Nigeria, calling for reforms to strengthen democratic institutions and voter confidence.","author":"Editor: Omotara How","source":"Local News Network"},
   {"title":"President Tinubu Rolls Out Electricity Meters","category":"Naija","image":"https://picsum.photos/400/250?tinubu","summary":"Nationwide electricity meters distributed to households.","details":"The Tinubu administration initiates electricity meter rollouts zone by zone, improving billing accuracy, reducing power theft, and enhancing national electricity distribution.","author":"Editor: Omotara How","source":"Energy Nigeria"},
@@ -162,4 +241,75 @@ document.getElementById("ticker").innerText = news.map(n=>n.title).join(" • ")
 renderBatch();
 </script>
 </body>
+</html>-Finals Draw Announced","category":"Sports","image":"https://picsum.photos/400/250?sports-football","summary":"European clubs learn opponents.","details":"Clubs prepare for quarter-finals with tactical focus and player readiness.","author":"Editor: Omotara How","source":"UEFA News"}
+  // Add remaining World, Tech, Sports, Election stories similarly...
+];
+
+let currentNews = [...news];
+let index = 0;
+const batch = 10;
+
+function renderBatch() {
+  const html = currentNews.slice(index, index+batch).map((n,i)=>{
+    const globalIndex = index+i;
+    return `
+      <div class="card">
+        <img src="${n.image}">
+        <div class="content">
+          <h3>${n.title}</h3>
+          <p>${n.summary}</p>
+          <button class="read-more" onclick="toggle(${globalIndex})">Read Full Story</button>
+          <div class="details" id="d${globalIndex}">
+            <p>${n.details}</p>
+            <p><em>${n.author}</em> | <strong>Source:</strong> ${n.source}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  if(index === 0){
+    document.getElementById("news").innerHTML = html;
+  } else {
+    document.getElementById("news").innerHTML += html;
+  }
+  
+  index += batch;
+  
+  if(index >= currentNews.length){
+    document.getElementById("loadMoreBtn").style.display = 'none';
+  }
+}
+
+document.getElementById("loadMoreBtn").onclick = renderBatch;
+
+function toggle(i){
+  let d = document.getElementById("d"+i);
+  d.style.display = d.style.display==="block"?"none":"block";
+}
+
+function filterNews(cat){
+  if(cat==="all"){currentNews=[...news];}
+  else{currentNews=news.filter(n=>n.category===cat);}
+  index=0;
+  document.getElementById("loadMoreBtn").style.display='block';
+  renderBatch();
+}
+
+function searchNews(){
+  let q = document.getElementById("search").value.toLowerCase();
+  currentNews = news.filter(n=>n.title.toLowerCase().includes(q));
+  index=0;
+  document.getElementById("loadMoreBtn").style.display='block';
+  renderBatch();
+}
+
+// Breaking news ticker
+document.getElementById("ticker").innerText = news.map(n=>n.title).join(" • ");
+
+// Initial render
+renderBatch();
+</script>
+</body>
 </html>
+

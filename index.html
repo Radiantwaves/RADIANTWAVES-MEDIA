@@ -53,14 +53,125 @@ pre { background: #eee; padding: 10px; margin-top: 15px; overflow-x: auto; }
 <script>
 function generateJSON() {
   const newsItem = {
-    title: document.getElementById("title").value,
-    category: document.getElementById("category").value,
-    image: document.getElementById("image").value,
-    summary: document.getElementById("summary").value,
-    details: document.getElementById("details").value,
-    author: document.getElementById("author").value,
-    source: document.getElementById("source").value
-  };
+    [
+  {
+    "title": "Peter Obi Calls for Electoral Reform in Nigeria",
+    "category": "Naija",
+    "image": "https://picsum.photos/800/500?obi",
+    "summary": "Former presidential candidate urges transparent elections.",
+    "details": "Peter Obi emphasizes the need for credible and transparent elections across Nigeria, calling for reforms to strengthen democratic institutions and voter confidence.",
+    "author": "Editor: Omotara How",
+    "source": "Local News Network"
+  },
+  {
+    "title": "President Tinubu Rolls Out Electricity Meters",
+    "category": "Naija",
+    "image": "https://picsum.photos/800/500?tinubu",
+    "summary": "Nationwide electricity meters distributed to households.",
+    "details": "The Tinubu administration initiates electricity meter rollouts zone by zone, improving billing accuracy, reducing power theft, and enhancing national electricity distribution.",
+    "author": "Editor: Omotara How",
+    "source": "Energy Nigeria"
+  },
+  {
+    "title": "Sunday Igboho Faces Legal Challenges",
+    "category": "Naija",
+    "image": "https://picsum.photos/800/500?igboho",
+    "summary": "Activist involved in regional disputes.",
+    "details": "Sunday Igboho remains a key figure in regional activism, with ongoing legal proceedings drawing national attention and highlighting local governance challenges.",
+    "author": "Editor: Omotara How",
+    "source": "Nigeria Tribune"
+  },
+  {
+    "title": "Nasir El-Rufai Discusses Governance Reforms",
+    "category": "Naija",
+    "image": "https://picsum.photos/800/500?rufai",
+    "summary": "Former Kaduna governor shares political insights.",
+    "details": "El-Rufai addressed policy forums emphasizing economic reforms, education initiatives, and public service improvements, influencing contemporary political discourse.",
+    "author": "Editor: Omotara How",
+    "source": "National Daily"
+  },
+  {
+    "title": "Student Loan Disbursement Reaches Universities",
+    "category": "Naija",
+    "image": "https://picsum.photos/800/500?students",
+    "summary": "Monthly allowances for registered students.",
+    "details": "The student loan program continues with monthly disbursements, ensuring students receive their allowances to support education across states.",
+    "author": "Editor: Omotara How",
+    "source": "Education Today"
+  },
+  {
+    "title": "Middle East Tensions Escalate",
+    "category": "World",
+    "image": "https://picsum.photos/800/500?middleeast",
+    "summary": "Global leaders call for calm.",
+    "details": "Countries across Europe, Asia, and the Americas monitor Middle East conflicts closely, urging restraint to avoid escalation.",
+    "author": "Editor: Omotara How",
+    "source": "Global Times"
+  },
+  {
+    "title": "Global Oil Prices Hit 5-Year High",
+    "category": "World",
+    "image": "https://picsum.photos/800/500?oil-market",
+    "summary": "Energy markets surge.",
+    "details": "International oil prices surged due to geopolitical instability, affecting markets worldwide.",
+    "author": "Editor: Omotara How",
+    "source": "Energy Daily"
+  },
+  {
+    "title": "AI Revolutionizes Healthcare",
+    "category": "Tech",
+    "image": "https://picsum.photos/800/500?ai",
+    "summary": "Improved diagnostics.",
+    "details": "AI algorithms detect complex diseases from imaging scans with high accuracy, transforming healthcare delivery.",
+    "author": "Editor: Omotara How",
+    "source": "Tech Health Journal"
+  },
+  {
+    "title": "Cybersecurity Threats on the Rise",
+    "category": "Tech",
+    "image": "https://picsum.photos/800/500?cybersecurity",
+    "summary": "Organizations face sophisticated attacks.",
+    "details": "Cybercriminals use advanced phishing and AI-driven methods, requiring stronger defense strategies.",
+    "author": "Editor: Omotara How",
+    "source": "Cyber Defense Weekly"
+  },
+  {
+    "title": "Champions League Quarter-Finals Draw Announced",
+    "category": "Sports",
+    "image": "https://picsum.photos/800/500?sports-football",
+    "summary": "European clubs learn opponents.",
+    "details": "Clubs prepare for quarter-finals with tactical focus and player readiness.",
+    "author": "Editor: Omotara How",
+    "source": "UEFA News"
+  },
+  {
+    "title": "Tokyo Marathon Sees Record Participation",
+    "category": "Sports",
+    "image": "https://picsum.photos/800/500?marathon",
+    "summary": "Thousands of runners join.",
+    "details": "The Tokyo Marathon attracted record participation, including elite international athletes.",
+    "author": "Editor: Omotara How",
+    "source": "Sports Global"
+  },
+  {
+    "title": "France Prepares for Presidential Election",
+    "category": "Election",
+    "image": "https://picsum.photos/800/500?france-election",
+    "summary": "Campaigns intensify ahead of Sunday poll.",
+    "details": "France holds its presidential election next week. Citizens encouraged to stay informed about candidates and policies.",
+    "author": "Editor: Omotara How",
+    "source": "French Times"
+  },
+  {
+    "title": "Nigeria’s Voter Roll Updates Ahead of Local Elections",
+    "category": "Election",
+    "image": "https://picsum.photos/800/500?nigeria-election",
+    "summary": "INEC ensures eligible voters are registered.",
+    "details": "INEC updated voter rolls and distributed smart card readers nationwide. Citizens should confirm registration ahead of elections.",
+    "author": "Editor: Omotara How",
+    "source": "Nigeria Observer"
+  }
+]
   
   // Pretty print JSON
   const jsonOutput = JSON.stringify(newsItem, null, 2);
@@ -70,3 +181,4 @@ function generateJSON() {
 </script>
 </body>
 </html>
+

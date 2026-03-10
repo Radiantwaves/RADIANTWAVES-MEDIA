@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Radiant Waves News</title>
+<title>Radiant Waves Global News</title>
 
 <style>
 
@@ -15,8 +15,6 @@ margin:0;
 background:#f4f4f4;
 }
 
-/* HEADER */
-
 header{
 background:#c40000;
 color:white;
@@ -25,8 +23,6 @@ text-align:center;
 font-size:30px;
 font-weight:bold;
 }
-
-/* NAVIGATION */
 
 nav{
 background:#111;
@@ -43,16 +39,12 @@ margin:4px;
 cursor:pointer;
 }
 
-/* BREAKING NEWS */
-
 .breaking{
 background:#c40000;
 color:white;
 padding:8px;
 font-weight:bold;
 }
-
-/* SEARCH */
 
 #searchBar{
 width:90%;
@@ -61,41 +53,12 @@ margin:15px;
 font-size:16px;
 }
 
-/* TOP STORY */
-
-.topStory{
-background:white;
-margin:20px;
-border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
-overflow:hidden;
-}
-
-.topStory img{
-width:100%;
-height:320px;
-object-fit:cover;
-}
-
-.topStory h2{
-padding:15px;
-margin:0;
-}
-
-.topStory p{
-padding:0 15px 15px 15px;
-}
-
-/* NEWS GRID */
-
 .container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 padding:20px;
 }
-
-/* CARD */
 
 .card{
 background:white;
@@ -113,6 +76,7 @@ object-fit:cover;
 .card h3{
 padding:10px;
 margin:0;
+cursor:pointer;
 }
 
 .card p{
@@ -128,8 +92,6 @@ margin:10px;
 cursor:pointer;
 }
 
-/* FOOTER */
-
 footer{
 background:#111;
 color:white;
@@ -140,6 +102,20 @@ margin-top:20px;
 
 footer img{
 margin:5px;
+}
+
+.article{
+padding:30px;
+max-width:900px;
+margin:auto;
+background:white;
+}
+
+.article img{
+width:100%;
+max-height:400px;
+object-fit:cover;
+margin-bottom:20px;
 }
 
 </style>
@@ -173,29 +149,13 @@ BREAKING: Middle East tensions escalate • Global oil prices surge • Nigeria 
 <input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()">
 </center>
 
-<!-- TOP STORY -->
-
-<div class="topStory">
-
-<img src="https://picsum.photos/1200/400">
-
-<h2>Global Leaders Urge Peace Talks Amid Rising Middle East Tensions</h2>
-
-<p>
-International leaders are calling for urgent diplomatic negotiations as tensions rise across several Middle East regions. Analysts warn that prolonged instability could impact global energy markets and international trade routes.
-</p>
-
-</div>
-
-<!-- NEWS CONTAINER -->
-
 <div class="container" id="newsContainer"></div>
 
 <footer>
 
 <p>© 2026 Radiant Waves News Network</p>
 
-<div style="margin-top:15px;">
+<div>
 
 <a href="https://facebook.com">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="30">
@@ -215,11 +175,10 @@ International leaders are calling for urgent diplomatic negotiations as tensions
 
 </div>
 
-<div style="margin-top:15px;">
+<div style="margin-top:15px">
 
 <audio controls>
 <source src="news.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
 </audio>
 
 </div>
@@ -253,11 +212,15 @@ container.innerHTML += `
 
 <img src="${n.image}">
 
-<h3>${n.title}</h3>
+<h3 onclick="openArticle('${n.title}','${n.details}','${n.image}','${n.author}','${n.source}')">
+${n.title}
+</h3>
 
 <p>${n.summary}</p>
 
-<button class="readMore" onclick="alert('${n.details}')">Read More</button>
+<button class="readMore" onclick="openArticle('${n.title}','${n.details}','${n.image}','${n.author}','${n.source}')">
+Read More
+</button>
 
 <p style="font-size:12px;padding:10px;">
 ${n.author} | Source: ${n.source}
@@ -280,6 +243,7 @@ displayNews(allNews);
 }else{
 
 const filtered = allNews.filter(n=>n.category===category);
+
 displayNews(filtered);
 
 }
@@ -295,6 +259,30 @@ n.title.toLowerCase().includes(search)
 );
 
 displayNews(filtered);
+
+}
+
+function openArticle(title,details,image,author,source){
+
+document.body.innerHTML = `
+
+<div class="article">
+
+<h1>${title}</h1>
+
+<img src="${image}">
+
+<p>${details}</p>
+
+<p><strong>${author}</strong> | Source: ${source}</p>
+
+<br>
+
+<button onclick="location.reload()">⬅ Back to Homepage</button>
+
+</div>
+
+`;
 
 }
 

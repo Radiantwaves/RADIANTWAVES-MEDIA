@@ -7,6 +7,9 @@
 <style>
 body{font-family:Arial;margin:0;background:#f4f4f4;}
 header{background:#c40000;color:white;padding:15px;text-align:center;font-size:28px;font-weight:bold;}
+.breaking{background:black;color:white;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 60s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 nav{background:#111;padding:10px;text-align:center;}
 nav button{background:#c40000;color:white;border:none;padding:10px 14px;margin:4px;cursor:pointer;}
 #searchBar{width:90%;padding:10px;margin:15px;font-size:16px;}
@@ -25,6 +28,8 @@ audio{width:90%;margin-top:10px;}
 
 <header>Radiant Waves News</header>
 
+<div class="breaking"><span id="ticker"></span></div>
+
 <nav>
 <button onclick="filterNews('All')">Home</button>
 <button onclick="filterNews('Naija')">Naija Pulse</button>
@@ -40,7 +45,7 @@ audio{width:90%;margin-top:10px;}
 
 <div class="container" id="newsContainer"></div>
 
-<footer style="background:#111;color:white;text-align:center;padding:20px;margin-top:40px;">
+<footer>
 <p>© 2026 Radiant Waves</p>
 <div class="social">
 <a href="https://facebook.com"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
@@ -60,77 +65,87 @@ Your browser does not support the audio element.
 let allNews = [];
 const API_KEY = "688936c0efcb471d8120682cea255d20";
 
-/* LOAD LOCAL NEWS FIRST */
+// Load local news first
 fetch("news.json")
 .then(res => res.json())
 .then(localNews => {
-allNews = localNews;
+  allNews = localNews;
 
-/* LOAD GLOBAL NEWS */
-const countries = ["fr","us","gb","ng"];
-const promises = countries.map(c =>
-fetch(`https://gnews.io/api/v4/top-headlines?lang=en&country=${c}&max=10&token=${API_KEY}`)
-.then(r => r.json())
-.then(data => data.articles.map(a => ({
-title: a.title,
-summary: a.description || "Latest international news update.",
-details: a.content || a.description,
-image: a.image || "https://picsum.photos/400/250",
-author: a.source.name,
-source: a.source.name,
-category: "World"
-})))
-.catch(()=>[])
-);
+  // Load global news via API
+  const countries = ["fr","us","gb","ng"];
+  const promises = countries.map(c =>
+    fetch(`https://gnews.io/api/v4/top-headlines?lang=en&country=${c}&max=10&token=${API_KEY}`)
+    .then(r => r.json())
+    .then(data => data.articles.map(a => ({
+      title: a.title,
+      summary: a.description || "Latest international news update.",
+      details: a.content || a.description,
+      image: a.image || "https://picsum.photos/400/250",
+      author: a.source.name,
+      source: a.source.name,
+      category: "World"
+    })))
+    .catch(()=>[])
+  );
 
-Promise.all(promises).then(results=>{
-const apiNews = results.flat();
-allNews = [...apiNews, ...allNews];
-displayNews(allNews);
+  Promise.all(promises).then(results=>{
+    const apiNews = results.flat();
+    allNews = [...apiNews, ...allNews];
+    displayNews(allNews);
+    updateTicker();
+  });
 });
 
-});
-
-/* DISPLAY NEWS */
+// Display news cards
 function displayNews(news){
-const container = document.getElementById("newsContainer");
-container.innerHTML="";
-news.forEach(n=>{
-container.innerHTML += `
-<div class="card">
-<img src="${n.image}">
-<h3 onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">${n.title}</h3>
-<p>${n.summary}</p>
-<button class="readMore" onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">Read More</button>
-<p style="font-size:12px;padding:10px;">${n.author} | Source: ${n.source}</p>
-</div>`;
-});
+  const container = document.getElementById("newsContainer");
+  container.innerHTML="";
+  news.forEach(n=>{
+    container.innerHTML += `
+    <div class="card">
+      <img src="${n.image}">
+      <h3 onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">${n.title}</h3>
+      <p>${n.summary}</p>
+      <button class="readMore" onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">Read More</button>
+      <p style="font-size:12px;padding:10px;">${n.author} | Source: ${n.source}</p>
+    </div>`;
+  });
 }
 
-/* FILTER */
+// Filter news
 function filterNews(category){
-if(category==="All"){displayNews(allNews);}
-else{displayNews(allNews.filter(n=>n.category===category));}
+  if(category==="All"){ displayNews(allNews); }
+  else{ displayNews(allNews.filter(n=>n.category===category)); }
 }
 
-/* SEARCH */
+// Search news
 function searchNews(){
-const search = document.getElementById("searchBar").value.toLowerCase();
-displayNews(allNews.filter(n=>n.title.toLowerCase().includes(search)));
+  const search = document.getElementById("searchBar").value.toLowerCase();
+  displayNews(allNews.filter(n=>n.title.toLowerCase().includes(search)));
 }
 
-/* OPEN ARTICLE */
+// Open full article
 function openArticle(title,details,image,author,source){
-document.body.innerHTML = `
-<div class="article" style="padding:20px;">
-<h1>${title}</h1>
-<img src="${image}" style="width:80%;max-width:600px;">
-<p>${details}</p>
-<p><strong>${author}</strong> | Source: ${source}</p>
-<br>
-<button onclick="location.reload()">⬅ Back to Homepage</button>
-</div>`;
+  document.body.innerHTML = `
+    <div class="article" style="padding:20px;">
+      <h1>${title}</h1>
+      <img src="${image}" style="width:80%;max-width:600px;">
+      <p>${details}</p>
+      <p><strong>${author}</strong> | Source: ${source}</p>
+      <br>
+      <button onclick="location.reload()">⬅ Back to Homepage</button>
+    </div>`;
 }
+
+// Update breaking news ticker
+function updateTicker(){
+  const ticker = document.getElementById("ticker");
+  const latestTitles = allNews.slice(0,10).map(n => n.title);
+  ticker.innerText = latestTitles.join(" • ");
+}
+
+// Refresh ticker every 30s
+setInterval(updateTicker,30000);
 </script>
 
 </body>

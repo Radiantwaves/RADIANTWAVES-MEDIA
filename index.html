@@ -67,17 +67,34 @@ fetch("news.json")
 .then(res => res.json())
 .then(data => {
     allNews = data;
-    // Show top 5 as breaking news
-    const ticker = document.getElementById("ticker");
-    ticker.innerText = allNews.slice(0,5).map(n=>n.title).join(" • ");
+    updateBreakingTicker(allNews);
     displayNews(allNews);
 });
 
-// --- Display news function ---
+// --- Fetch API breaking news (optional) ---
+const apiKey = "688936c0efcb471d8120682cea255d20";
+fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=5&apiKey=${apiKey}`)
+.then(res => res.json())
+.then(data => {
+    if(data.articles){
+        const titles = data.articles.map(a=>a.title);
+        if(titles.length) document.getElementById("ticker").innerText = titles.join(" • ");
+    }
+})
+.catch(err => console.warn("API fetch failed, using local JSON:", err));
+
+// --- Breaking news ticker from JSON ---
+function updateBreakingTicker(news){
+    const ticker = document.getElementById("ticker");
+    const top5 = news.slice(0,5).map(n=>n.title);
+    ticker.innerText = top5.join(" • ");
+}
+
+// --- Display news ---
 function displayNews(news){
     const container = document.getElementById("newsContainer");
     container.innerHTML = "";
-    news.forEach((n,i)=>{
+    news.forEach(n=>{
         container.innerHTML += `
         <div class="card">
             <img src="${n.image}">
@@ -90,7 +107,7 @@ function displayNews(news){
     });
 }
 
-// --- Filter by category ---
+// --- Filter ---
 function filterNews(category){
     if(category==="All") displayNews(allNews);
     else displayNews(allNews.filter(n=>n.category===category));
@@ -102,6 +119,5 @@ function searchNews(){
     displayNews(allNews.filter(n=>n.title.toLowerCase().includes(query)));
 }
 </script>
-
 </body>
 </html>

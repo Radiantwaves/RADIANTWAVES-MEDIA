@@ -22,6 +22,9 @@ nav button{background:#c40000;color:white;border:none;padding:10px 14px;margin:4
 footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
 .social img{width:30px;margin:0 5px;}
 audio{width:90%;margin-top:10px;}
+.region-section{margin-top:20px;}
+.region-section h2{margin-left:10px;color:#c40000;}
+.country-section h3{margin-left:15px;color:#111;}
 </style>
 </head>
 <body>
@@ -65,88 +68,147 @@ Your browser does not support the audio element.
 let allNews = [];
 const API_KEY = "688936c0efcb471d8120682cea255d20";
 
-// Load local news first
+// Load local news
 fetch("news.json")
-.then(res => res.json())
-.then(localNews => {
-  allNews = localNews;
-
-  // Load global news via API
-  const countries = ["fr","us","gb","ng"];
-  const promises = countries.map(c =>
-    fetch(`https://gnews.io/api/v4/top-headlines?lang=en&country=${c}&max=10&token=${API_KEY}`)
-    .then(r => r.json())
-    .then(data => data.articles.map(a => ({
-      title: a.title,
-      summary: a.description || "Latest international news update.",
-      details: a.content || a.description,
-      image: a.image || "https://picsum.photos/400/250",
-      author: a.source.name,
-      source: a.source.name,
-      category: "World"
-    })))
-    .catch(()=>[])
-  );
-
-  Promise.all(promises).then(results=>{
-    const apiNews = results.flat();
-    allNews = [...apiNews, ...allNews];
-    displayNews(allNews);
-    updateTicker();
-  });
+.then(res=>res.json())
+.then(localNews=>{
+    allNews = localNews;
+    fetchGlobalNews().then(apiNews=>{
+        allNews = [...apiNews, ...allNews];
+        displayNews(allNews);
+        updateTicker();
+    });
 });
+
+// Fetch global news by countries
+async function fetchGlobalNews(){
+    const countries = ["fr","us","gb","ng","in"];
+    let newsArr = [];
+    for(const c of countries){
+        try{
+            let res = await fetch(`https://gnews.io/api/v4/top-headlines?lang=en&country=${c}&max=5&token=${API_KEY}`);
+            let data = await res.json();
+            if(data.articles){
+                let articles = data.articles.map(a=>({
+                    title:a.title,
+                    summary:a.description||"Latest news update.",
+                    details:a.content||a.description,
+                    image:a.image||"https://picsum.photos/400/250",
+                    author:a.source.name,
+                    source:a.source.name,
+                    category:"World",
+                    region:getRegionByCountry(c),
+                    country:getCountryName(c)
+                }));
+                newsArr.push(...articles);
+            }
+        }catch(e){}
+    }
+    return newsArr;
+}
+
+// Map country codes to region and country names
+function getRegionByCountry(code){
+    switch(code){
+        case "fr": return "Europe";
+        case "gb": return "Europe";
+        case "us": return "Americas";
+        case "ng": return "Africa";
+        case "in": return "Asia";
+        default: return "World";
+    }
+}
+function getCountryName(code){
+    switch(code){
+        case "fr": return "France";
+        case "gb": return "UK";
+        case "us": return "USA";
+        case "ng": return "Nigeria";
+        case "in": return "India";
+        default: return "Global";
+    }
+}
 
 // Display news cards
 function displayNews(news){
-  const container = document.getElementById("newsContainer");
-  container.innerHTML="";
-  news.forEach(n=>{
-    container.innerHTML += `
+    const container = document.getElementById("newsContainer");
+    container.innerHTML="";
+
+    let regions = {};
+    news.forEach(n=>{
+        if(n.region) regions[n.region] = regions[n.region]||[];
+        if(n.region) regions[n.region].push(n);
+    });
+
+    if(currentCategory==="Election"){
+        // Show Election Watch by country
+        ["France","USA","UK","Nigeria","India"].forEach(c=>{
+            const countryNews = news.filter(n=>n.country===c || (n.category==="Election" && n.country===c));
+            if(countryNews.length){
+                container.innerHTML += `<div class="region-section"><h2>Election Watch: ${c}</h2></div>`;
+                countryNews.forEach(n=>{
+                    container.innerHTML += cardHTML(n);
+                });
+            }
+        });
+    } else if(currentCategory==="World"){
+        // Show World by region
+        for(const r in regions){
+            container.innerHTML += `<div class="region-section"><h2>${r}</h2></div>`;
+            regions[r].forEach(n=>{
+                container.innerHTML += cardHTML(n);
+            });
+        }
+    } else {
+        // Other categories
+        news.forEach(n=>{
+            container.innerHTML += cardHTML(n);
+        });
+    }
+}
+
+// Generate card HTML
+function cardHTML(n){
+    return `
     <div class="card">
-      <img src="${n.image}">
-      <h3 onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">${n.title}</h3>
-      <p>${n.summary}</p>
-      <button class="readMore" onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">Read More</button>
-      <p style="font-size:12px;padding:10px;">${n.author} | Source: ${n.source}</p>
+        <img src="${n.image}">
+        <h3 onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">${n.title}</h3>
+        <p>${n.summary}</p>
+        <button class="readMore" onclick="openArticle('${n.title.replace(/'/g,"\\'")}','${(n.details||"").replace(/'/g,"\\'")}','${n.image}','${n.author}','${n.source}')">Read More</button>
+        <p style="font-size:12px;padding:10px;">${n.author} | Source: ${n.source}</p>
     </div>`;
-  });
 }
 
-// Filter news
+let currentCategory = "All";
 function filterNews(category){
-  if(category==="All"){ displayNews(allNews); }
-  else{ displayNews(allNews.filter(n=>n.category===category)); }
+    currentCategory = category;
+    if(category==="All"){ displayNews(allNews); }
+    else{ displayNews(allNews.filter(n=>n.category===category)); }
 }
 
-// Search news
 function searchNews(){
-  const search = document.getElementById("searchBar").value.toLowerCase();
-  displayNews(allNews.filter(n=>n.title.toLowerCase().includes(search)));
+    const search = document.getElementById("searchBar").value.toLowerCase();
+    displayNews(allNews.filter(n=>n.title.toLowerCase().includes(search)));
 }
 
-// Open full article
 function openArticle(title,details,image,author,source){
-  document.body.innerHTML = `
-    <div class="article" style="padding:20px;">
-      <h1>${title}</h1>
-      <img src="${image}" style="width:80%;max-width:600px;">
-      <p>${details}</p>
-      <p><strong>${author}</strong> | Source: ${source}</p>
-      <br>
-      <button onclick="location.reload()">⬅ Back to Homepage</button>
+    document.body.innerHTML = `
+    <div style="padding:20px;">
+        <h1>${title}</h1>
+        <img src="${image}" style="width:80%;max-width:600px;">
+        <p>${details}</p>
+        <p><strong>${author}</strong> | Source: ${source}</p>
+        <br>
+        <button onclick="location.reload()">⬅ Back to Homepage</button>
     </div>`;
 }
 
-// Update breaking news ticker
 function updateTicker(){
-  const ticker = document.getElementById("ticker");
-  const latestTitles = allNews.slice(0,10).map(n => n.title);
-  ticker.innerText = latestTitles.join(" • ");
+    const ticker = document.getElementById("ticker");
+    const latestTitles = allNews.slice(0,10).map(n=>n.title);
+    ticker.innerText = latestTitles.join(" • ");
 }
-
-// Refresh ticker every 30s
 setInterval(updateTicker,30000);
 </script>
-
 </body>
 </html>

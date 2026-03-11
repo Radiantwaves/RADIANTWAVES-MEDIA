@@ -1,88 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves News Network</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiantWaves News Network</title>
+    <link rel="icon" href="icon-192.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="logo">
-    <img src="main-story.jpg" alt="RadiantWaves Logo" height="80">
-    <h1>RadiantWaves</h1>
-    <p class="slogan">Gateway to World News, connecting you to the World</p>
-  </div>
-  <div class="breaking-news">
-    <span>Breaking News:</span>
-    <marquee id="breaking-news-ticker">Loading global headlines...</marquee>
-  </div>
-</header>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="world.html">World</a></li>
-    <li><a href="politics.html">Politics</a></li>
-    <li><a href="business.html">Business</a></li>
-    <li><a href="technology.html">Technology</a></li>
-    <li><a href="sports.html">Sports</a></li>
-    <li><a href="election.html">Election</a></li>
-  </ul>
-</nav>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="main-story.jpg" alt="RadiantWaves Logo">
+        </div>
+        <div class="slogan">Gateway to World News, connecting you to the World</div>
+    </header>
 
-<main>
-  <section class="music-player">
-    <audio controls autoplay loop>
-      <source src="news-music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-  <section id="news-summaries">
-    <h2>Latest Headlines</h2>
-    <div id="headlines-container">
-      <p>No news available at this time.</p>
+    <!-- BREAKING NEWS -->
+    <div class="breaking-news" id="breaking-news">
+        <marquee behavior="scroll" direction="left" scrollamount="6" id="breaking-text">
+            Global headline updating soon...
+        </marquee>
     </div>
-  </section>
-</main>
 
-<footer>
-  <p>&copy; 2026 RadiantWaves News Network</p>
-  <p class="slogan">Truth. Insight. Global Perspective.</p>
-  <div class="social-handles">
-    <a href="https://www.facebook.com/radiantwaves"><img src="facebook.png" alt="Facebook" height="30"></a>
-    <a href="https://www.instagram.com/radiantwaves"><img src="instagram.png" alt="Instagram" height="30"></a>
-  </div>
-</footer>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('world')">World</a></li>
+            <li><a href="#" onclick="showSection('politics')">Politics</a></li>
+            <li><a href="#" onclick="showSection('business')">Business</a></li>
+            <li><a href="#" onclick="showSection('tech')">Technology</a></li>
+            <li><a href="#" onclick="showSection('sports')">Sports</a></li>
+            <li><a href="#" onclick="showSection('entertainment')">Entertainment</a></li>
+        </ul>
+    </nav>
 
-<script>
-fetch('news.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('headlines-container');
-    container.innerHTML = '';
-    for (const category in data) {
-      const firstNews = data[category][0];
-      if (firstNews) {
-        const div = document.createElement('div');
-        div.classList.add('headline');
-        div.innerHTML = `<h3>${category}: ${firstNews.title}</h3><p>${firstNews.description}</p>`;
-        container.appendChild(div);
-      }
-    }
+    <!-- MUSIC PLAYER -->
+    <div class="music-player">
+        <audio controls autoplay loop>
+            <source src="news-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
-    // Update breaking news ticker with first headline of each category
-    const ticker = document.getElementById('breaking-news-ticker');
-    const tickerTexts = [];
-    for (const category in data) {
-      if (data[category][0]) {
-        tickerTexts.push(`${category}: ${data[category][0].title}`);
-      }
-    }
-    ticker.textContent = tickerTexts.join(' | ');
-  })
-  .catch(err => console.error('Error loading news:', err));
-</script>
+    <!-- MAIN CONTENT -->
+    <main id="news-container">
+        <div id="home-section">
+            <h2>Latest Global News</h2>
+            <p>Details of global news will appear here once loaded from our network or JSON/API feed.</p>
+        </div>
+        <div id="world-section" class="hidden">
+            <h2>World</h2>
+            <div id="world-news"></div>
+        </div>
+        <div id="politics-section" class="hidden">
+            <h2>Politics</h2>
+            <div id="politics-news"></div>
+        </div>
+        <div id="business-section" class="hidden">
+            <h2>Business</h2>
+            <div id="business-news"></div>
+        </div>
+        <div id="tech-section" class="hidden">
+            <h2>Technology</h2>
+            <div id="tech-news"></div>
+        </div>
+        <div id="sports-section" class="hidden">
+            <h2>Sports</h2>
+            <div id="sports-news"></div>
+        </div>
+        <div id="entertainment-section" class="hidden">
+            <h2>Entertainment</h2>
+            <div id="entertainment-news"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>&copy; 2026 RadiantWaves News Network</div>
+        <div class="slogan">Truth. Insight. Global Perspective.</div>
+        <div class="social-handles">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Toggle sections
+        function showSection(section) {
+            const sections = ['home','world','politics','business','tech','sports','entertainment'];
+            sections.forEach(s => {
+                const el = document.getElementById(s + '-section');
+                if(el) el.classList.add('hidden');
+            });
+            const active = document.getElementById(section + '-section');
+            if(active) active.classList.remove('hidden');
+        }
+
+        // Load JSON news
+        async function loadNews() {
+            try {
+                const response = await fetch('news.json');
+                const data = await response.json();
+
+                // Breaking news
+                if(data.breaking && data.breaking.length > 0){
+                    document.getElementById('breaking-text').innerText = data.breaking.join(' • ');
+                }
+
+                // Populate news by category
+                const categories = ['world','politics','business','tech','sports','entertainment'];
+                categories.forEach(cat => {
+                    const container = document.getElementById(cat + '-news');
+                    if(container) {
+                        container.innerHTML = '';
+                        const newsItems = data[cat] || [];
+                        if(newsItems.length === 0){
+                            container.innerHTML = '<p>No news available at this time.</p>';
+                        } else {
+                            newsItems.forEach(item => {
+                                const card = document.createElement('div');
+                                card.className = 'news-card';
+                                card.innerHTML = `
+                                    <h3>${item.title}</h3>
+                                    ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ''}
+                                    <p>${item.summary}</p>
+                                    <small>Published: ${item.time}</small>
+                                `;
+                                container.appendChild(card);
+                            });
+                        }
+                    }
+                });
+
+            } catch(e){
+                console.error('Error loading news:', e);
+            }
+        }
+
+        loadNews();
+    </script>
+
 </body>
 </html>

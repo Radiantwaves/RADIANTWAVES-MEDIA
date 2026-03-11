@@ -3,9 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves | World</title>
-<link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css">
+<title>RadiantWaves | Gateway to World News</title>
+<link rel="icon" href="icon-192.png" type="image/png">
+<style>
+body, html { margin:0; padding:0; font-family: Arial, sans-serif; }
+header { position: relative; z-index:10; background: #1e3a5f; color:#fff; padding:10px 20px; }
+header .logo { font-size:2em; font-weight:bold; }
+header .slogan { font-size:0.9em; margin-top:5px; }
+
+/* Navigation */
+nav ul { display:flex; list-style:none; margin:10px 0 0 0; padding:0; }
+nav ul li { margin-right:20px; }
+nav ul li a { color:#fff; text-decoration:none; }
+nav ul li a.active { text-decoration:underline; }
+
+/* Hero */
+.hero { position:relative; width:100%; max-height:400px; overflow:hidden; margin-top:10px; }
+.hero-image { width:100%; height:auto; display:block; }
+.hero-overlay { position:absolute; bottom:20px; left:20px; color:#fff; background:rgba(0,0,0,0.5); padding:10px 15px; border-radius:5px; }
+
+/* Breaking Ticker */
+.breaking-ticker { background:#c53030; color:#fff; padding:8px 20px; font-weight:bold; white-space:nowrap; overflow:hidden; margin-top:10px; }
+.ticker-content { display:inline-block; animation: marquee 25s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+/* Content */
+#news { padding:20px; }
+.news-card { background:#f7fafc; padding:15px; margin-bottom:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.news-card h3 { margin:0 0 5px 0; font-size:1.1em; color:#1e3a5f; }
+.news-card p { margin:0; font-size:0.9em; color:#555; }
+
+/* Footer */
+footer { background:#1e3a5f; color:#fff; text-align:center; padding:20px; margin-top:20px; }
+footer .social-icons img { width:32px; height:32px; margin:0 5px; vertical-align:middle; }
+footer .slogan { margin-top:10px; font-size:0.9em; font-style:italic; }
+audio { width:100%; margin:15px 0; display:block; }
+</style>
 </head>
 <body>
 
@@ -14,8 +47,8 @@
   <div class="slogan">Gateway to World News, connecting you to the World</div>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="world.html" class="active">World</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="world.html">World</a></li>
       <li><a href="politics.html">Politics</a></li>
       <li><a href="business.html">Business</a></li>
       <li><a href="technology.html">Tech</a></li>
@@ -26,35 +59,46 @@
   </nav>
 </header>
 
-<section class="breaking-ticker">
-  <div id="ticker">Loading global headlines...</div>
-</section>
-
-<section class="hero">
-  <img src="world-hero.jpg" alt="World News" class="hero-image">
+<div class="hero">
+  <img src="main-story.jpg" alt="RadiantWaves Global" class="hero-image">
   <div class="hero-overlay">
-    <h1>World News</h1>
-    <p>Updates from international networks</p>
+    <h1>Breaking News</h1>
+    <p>Global headlines updating soon</p>
   </div>
-</section>
+</div>
 
-<section id="news">
-  <p>No news available at this time.</p>
-</section>
+<div class="breaking-ticker">
+  <div class="ticker-content">
+    <span>Loading global headlines...</span>
+  </div>
+</div>
 
 <audio controls autoplay loop>
   <source src="news-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
+<section id="news">
+  <div class="news-card">
+    <h3>No news available at this time</h3>
+    <p>Global news will appear here once loaded from our network or JSON/API feed.</p>
+  </div>
+</section>
+
 <footer>
-  <p>@2026 RadiantWaves News Network</p>
-  <p>Truth. Insight. Global Perspective</p>
+  <div>@2026 RadiantWaves News Network</div>
+  <div class="slogan">Truth. Insight. Global Perspective</div>
   <div class="social-icons">
-    <a href="#"><img src="facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+    <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+// Simple ticker example
+const ticker = document.querySelector('.ticker-content');
+ticker.innerHTML = 'RadiantWaves Global News | Updates every 15 minutes | Stay informed with our network';
+</script>
+
 </body>
 </html>

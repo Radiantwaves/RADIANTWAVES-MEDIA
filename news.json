@@ -1,22 +1,63 @@
-[
-  {
-    "title": "Nigeria Introduces New Tech Reforms",
-    "summary": "Government plans major investment in digital economy.",
-    "details": "Full article text here...",
-    "image": "images/nigeria-tech.jpg",
-    "author": "John Doe",
-    "source": "Radiant Waves",
-    "category": "Technology",
-    "subcategory": "Digital economy"
-  },
-  {
-    "title": "US Campaign Heats Up Ahead of 2026 Election",
-    "summary": "Candidates hold rallies across swing states.",
-    "details": "Full article text here...",
-    "image": "images/us-election.jpg",
-    "author": "Jane Smith",
-    "source": "Global News",
-    "category": "Election",
-    "subcategory": "US campaign"
-  }
-]
+{
+  "World": [
+    {
+      "title": "Global Summit on Climate Change Concludes",
+      "description": "Leaders agree on new carbon reduction targets to combat climate change.",
+      "url": "#"
+    },
+    {
+      "title": "Tensions Rise in Middle East",
+      "description": "Regional diplomacy efforts are underway to prevent escalation.",
+      "url": "#"
+    }
+  ],
+  "US Politics": [
+    {
+      "title": "Congress Debates Infrastructure Bill",
+      "description": "Lawmakers discuss updates to major infrastructure projects.",
+      "url": "#"
+    }
+  ],
+  "Europe Economy": [
+    {
+      "title": "Eurozone Reports Unexpected Growth",
+      "description": "Economic indicators show a stronger-than-expected recovery.",
+      "url": "#"
+    }
+  ],
+  "Asia Trade": [
+    {
+      "title": "China and India Sign Trade Pact",
+      "description": "The agreement aims to boost regional trade and investment.",
+      "url": "#"
+    }
+  ],
+  "Africa": [
+    {
+      "title": "Nigeria Introduces New Reforms",
+      "description": "Government rolls out measures to strengthen local governance.",
+      "url": "#"
+    }
+  ],
+  "Technology": [
+    {
+      "title": "AI Startups Secure $2B Funding",
+      "description": "Venture capital flows into next-generation AI innovations.",
+      "url": "#"
+    }
+  ],
+  "Sports": [
+    {
+      "title": "Olympics 2026 Preparations Underway",
+      "description": "Host cities prepare venues and infrastructure for athletes.",
+      "url": "#"
+    }
+  ],
+  "Election": [
+    {
+      "title": "France Municipal Elections Begin",
+      "description": "Voters head to the polls across the country.",
+      "url": "#"
+    }
+  ]
+}

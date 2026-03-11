@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,15 +19,15 @@ header{
 background:#c40000;
 color:white;
 padding:18px;
-font-size:30px;
-font-weight:bold;
 text-align:center;
+font-size:28px;
+font-weight:bold;
 }
 
 nav{
 background:#111;
-text-align:center;
 padding:10px;
+text-align:center;
 }
 
 nav button{
@@ -40,7 +40,7 @@ cursor:pointer;
 }
 
 nav button:hover{
-background:#ff0000;
+background:red;
 }
 
 #ticker{
@@ -49,34 +49,6 @@ color:white;
 padding:8px;
 overflow:hidden;
 white-space:nowrap;
-}
-
-#ticker span{
-display:inline-block;
-padding-left:100%;
-animation: ticker 25s linear infinite;
-}
-
-@keyframes ticker{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-.featured{
-background:white;
-margin:20px;
-padding:20px;
-box-shadow:0 0 6px rgba(0,0,0,0.2);
-}
-
-.featured img{
-width:100%;
-max-height:350px;
-object-fit:cover;
-}
-
-.featured h2{
-margin:10px 0;
 }
 
 .container{
@@ -89,7 +61,7 @@ padding:20px;
 .card{
 background:white;
 border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
+box-shadow:0 0 6px rgba(0,0,0,0.2);
 overflow:hidden;
 }
 
@@ -122,15 +94,15 @@ background:#111;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:20px;
 }
 
 .social img{
 width:30px;
-margin:5px;
+margin:6px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -151,10 +123,8 @@ Radiant Waves Global News
 </nav>
 
 <div id="ticker">
-<span id="breakingNews">Loading breaking news...</span>
+Breaking News Loading...
 </div>
-
-<div class="featured" id="featuredNews"></div>
 
 <center>
 <input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()" style="width:90%;padding:10px;margin:15px;">
@@ -186,44 +156,32 @@ Radiant Waves Global News
 
 </div>
 
-<div style="margin-top:15px">
+<br>
 
 <audio controls autoplay loop>
 <source src="news.mp3" type="audio/mpeg">
 </audio>
 
-</div>
-
 </footer>
 
 <script>
 
-let allNews = [];
+let allNews=[];
 
-fetch("news.json")
-.then(response => response.json())
-.then(data => {
+/* LOAD LOCAL NEWS */
 
-allNews = data;
+fetch("news.json?"+Date.now())
 
-displayFeatured(data[0]);
+.then(response=>response.json())
+
+.then(data=>{
+
+allNews=data;
 
 displayNews(data);
 
 });
 
-function displayFeatured(news){
-
-document.getElementById("featuredNews").innerHTML=`
-
-<img src="${news.image}">
-<h2>${news.title}</h2>
-<p>${news.summary}</p>
-<p>${news.details}</p>
-
-`;
-
-}
 
 function displayNews(news){
 
@@ -243,7 +201,7 @@ container.innerHTML+=`
 
 <p>${n.summary}</p>
 
-<button class="readMore" onclick="openStory('${n.details}')">Read More</button>
+<button class="readMore" onclick="alert('${n.details}')">Read More</button>
 
 <p style="font-size:12px;padding:10px;">
 ${n.author} | Source: ${n.source}
@@ -254,12 +212,6 @@ ${n.author} | Source: ${n.source}
 `;
 
 });
-
-}
-
-function openStory(text){
-
-alert(text);
 
 }
 
@@ -290,7 +242,7 @@ displayNews(filtered);
 }
 
 
-/* LIVE BREAKING NEWS API */
+/* LIVE NEWS API */
 
 fetch("https://newsdata.io/api/1/news?apikey=688936c0efcb471d8120682cea255d20&language=en")
 
@@ -302,17 +254,17 @@ let headlines="";
 
 data.results.slice(0,10).forEach(n=>{
 
-headlines += n.title + " • ";
+headlines+=n.title+"   •   ";
 
 });
 
-document.getElementById("breakingNews").innerText=headlines;
+document.getElementById("ticker").innerText=headlines;
 
 })
 
 .catch(()=>{
 
-document.getElementById("breakingNews").innerText="Global news updates will appear here.";
+document.getElementById("ticker").innerText="Global news updates will appear here.";
 
 });
 

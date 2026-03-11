@@ -8,7 +8,7 @@
 
 <title>Radiant Waves Global News</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="manifest" href="manifest.json">
 
 <style>
 
@@ -21,29 +21,43 @@ background:#f4f4f4;
 header{
 background:#c40000;
 color:white;
-padding:15px;
+padding:20px;
 text-align:center;
-font-size:28px;
+font-size:30px;
 font-weight:bold;
+}
+
+.slogan{
+font-size:14px;
+margin-top:5px;
 }
 
 nav{
 background:#111;
-padding:10px;
 text-align:center;
+padding:10px;
 }
 
 nav button{
 background:#c40000;
 color:white;
 border:none;
-padding:10px 14px;
+padding:10px 15px;
 margin:4px;
 cursor:pointer;
 }
 
-nav button:hover{
-background:red;
+.breaking{
+background:black;
+color:white;
+padding:8px;
+font-size:14px;
+}
+
+.banner img{
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
 #searchBar{
@@ -63,7 +77,7 @@ padding:20px;
 .card{
 background:white;
 border-radius:6px;
-box-shadow:0 0 6px rgba(0,0,0,0.2);
+box-shadow:0 0 5px rgba(0,0,0,0.2);
 overflow:hidden;
 }
 
@@ -96,25 +110,10 @@ background:#111;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
 }
 
 .social img{
-width:30px;
 margin:5px;
-}
-
-.ticker{
-background:black;
-color:white;
-padding:8px;
-font-size:14px;
-white-space:nowrap;
-overflow:hidden;
-}
-
-audio{
-margin-top:15px;
 }
 
 </style>
@@ -124,8 +123,18 @@ margin-top:15px;
 <body>
 
 <header>
+
 Radiant Waves Global News
+
+<div class="slogan">
+Truth • Insight • Global Perspective
+</div>
+
 </header>
+
+<div class="banner">
+<img src="main-story.jpg">
+</div>
 
 <nav>
 
@@ -138,12 +147,12 @@ Radiant Waves Global News
 
 </nav>
 
-<div class="ticker" id="ticker">
-Loading breaking global news...
+<div class="breaking">
+<b>Breaking:</b> Global headlines updating across Europe, Africa, Asia and the Americas
 </div>
 
 <center>
-<input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()">
+<input type="text" id="searchBar" placeholder="Search global news..." onkeyup="searchNews()">
 </center>
 
 <div class="container" id="newsContainer"></div>
@@ -155,26 +164,22 @@ Loading breaking global news...
 <div class="social">
 
 <a href="https://facebook.com">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-</a>
-
-<a href="https://twitter.com">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+<img src="facebook.png" width="30">
 </a>
 
 <a href="https://instagram.com">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-</a>
-
-<a href="https://youtube.com">
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+<img src="instagram.png" width="30">
 </a>
 
 </div>
 
+<div style="margin-top:15px;">
+
 <audio controls>
-<source src="news.mp3" type="audio/mpeg">
+<source src="news-music.mp3" type="audio/mpeg">
 </audio>
+
+</div>
 
 </footer>
 
@@ -182,16 +187,11 @@ Loading breaking global news...
 
 let allNews=[];
 
-fetch("news.json?"+Date.now())
-
+fetch("news.json")
 .then(response=>response.json())
-
 .then(data=>{
-
 allNews=data;
-
 displayNews(data);
-
 });
 
 function displayNews(news){
@@ -212,7 +212,7 @@ container.innerHTML+=`
 
 <p>${n.summary}</p>
 
-<button class="readMore" onclick="openNews('${n.title}','${n.details}')">Read More</button>
+<button class="readMore" onclick="alert('${n.details}')">Read More</button>
 
 <p style="font-size:12px;padding:10px;">
 ${n.author} | Source: ${n.source}
@@ -226,19 +226,13 @@ ${n.author} | Source: ${n.source}
 
 }
 
-function openNews(title,details){
-
-alert(title + "\n\n" + details);
-
-}
-
 function filterNews(category){
 
 if(category==="All"){
-
 displayNews(allNews);
+}
 
-}else{
+else{
 
 const filtered=allNews.filter(n=>n.category===category);
 
@@ -252,40 +246,15 @@ function searchNews(){
 
 const search=document.getElementById("searchBar").value.toLowerCase();
 
-const filtered=allNews.filter(n=>n.title.toLowerCase().includes(search));
+const filtered=allNews.filter(n=>
+n.title.toLowerCase().includes(search)
+);
 
 displayNews(filtered);
 
 }
 
-const API_KEY="688936c0efcb471d8120682cea255d20";
-
-fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=6&apiKey=${API_KEY}`)
-
-.then(res=>res.json())
-
-.then(data=>{
-
-let text="";
-
-data.articles.forEach(a=>{
-
-text+=a.title+" • ";
-
-});
-
-document.getElementById("ticker").innerText=text;
-
-})
-
-.catch(()=>{
-
-document.getElementById("ticker").innerText="Global headlines updating soon.";
-
-});
-
 </script>
 
 </body>
-
 </html>

@@ -1,164 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RadiantWaves News Network</title>
-    <link rel="icon" href="icon-192.png">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RadiantWaves Media - Gateway to World News, connecting you to the World">
+<title>RadiantWaves Media | Gateway to World News</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #1e3a5f;
+    --accent: #c53030;
+    --text-dark: #1a202c;
+    --text-light: #718096;
+    --bg-light: #f7fafc;
+    --bg-white: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; background: var(--bg-light); color: var(--text-dark); }
+
+/* Header */
+.header { background: var(--bg-white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top:0; z-index:999; }
+.header-top { background: var(--primary); color: white; padding: 8px 0; text-align:center; font-size:0.85rem; }
+.header-main { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:15px; }
+.logo { display:flex; align-items:center; gap:15px; }
+.logo img { width: 80px; height: 80px; object-fit:cover; border-radius:10px; }
+.logo-text h1 { font-family:'Merriweather', serif; font-size:1.8rem; color: var(--primary); }
+.logo-text p { font-size:0.85rem; color: var(--text-light); font-style:italic; }
+
+/* Music player */
+.music-player { margin-top:10px; text-align:center; }
+.music-player audio { width:100%; max-width:400px; outline:none; }
+
+/* Breaking News */
+.breaking-ticker { background: var(--accent); color:white; padding:10px 0; overflow:hidden; }
+.ticker-wrapper { max-width:1200px; margin:0 auto; padding:0 20px; display:flex; align-items:center; }
+.ticker-label { font-weight:700; margin-right:15px; flex-shrink:0; }
+.ticker-marquee { display:inline-block; white-space:nowrap; animation: marquee 30s linear infinite; }
+@keyframes marquee { 0%{transform:translateX(100%);} 100%{transform:translateX(-100%);} }
+.ticker-item { display:inline-block; padding:0 30px; }
+
+/* Main Content */
+.main { max-width:1200px; margin:20px auto; padding:0 20px; }
+.news-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap:20px; }
+.news-card { background:var(--bg-white); border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08); overflow:hidden; transition:transform 0.3s; }
+.news-card:hover { transform:translateY(-3px); }
+.news-card img { width:100%; height:140px; object-fit:cover; }
+.news-card-content { padding:15px; }
+.news-card-category { color:var(--accent); font-size:0.75rem; font-weight:700; text-transform:uppercase; margin-bottom:5px; }
+.news-card-title { font-family:'Merriweather', serif; font-size:1rem; font-weight:700; margin-bottom:8px; }
+.news-card-excerpt { font-size:0.85rem; color: var(--text-light); }
+
+/* Footer */
+.footer { background: var(--primary); color:white; padding:40px 20px; text-align:center; }
+.footer p { margin-bottom:10px; font-size:0.9rem; }
+.social-links { display:flex; justify-content:center; gap:15px; margin-top:15px; }
+.social-links a { display:flex; align-items:center; justify-content:center; width:40px; height:40px; background:rgba(255,255,255,0.1); border-radius:50%; color:white; font-size:1.2rem; transition: all 0.3s; }
+.social-links a:hover { background: var(--accent); }
+
+/* Responsive */
+@media(max-width:768px){ .header-main{flex-direction:column;gap:10px;text-align:center;} .news-grid{grid-template-columns:1fr;} }
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-top">Gateway to World News, connecting you to the World</div>
+    <div class="header-main">
         <div class="logo">
-            <img src="main-story.jpg" alt="RadiantWaves Logo">
-        </div>
-        <div class="slogan">Gateway to World News, connecting you to the World</div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('world')">World</a></li>
-            <li><a href="#" onclick="showSection('politics')">Politics</a></li>
-            <li><a href="#" onclick="showSection('business')">Business</a></li>
-            <li><a href="#" onclick="showSection('tech')">Technology</a></li>
-            <li><a href="#" onclick="showSection('sports')">Sports</a></li>
-            <li><a href="#" onclick="showSection('entertainment')">Entertainment</a></li>
-        </ul>
-    </nav>
-
-    <!-- Breaking News -->
-    <div class="breaking-news">
-        <span id="breaking-news-text">RadiantWaves Global Headline updating soon...</span>
-    </div>
-
-    <!-- Music Player -->
-    <div class="music-player">
-        <audio controls autoplay loop>
-            <source src="news-music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Sections -->
-        <div id="home" class="section">
-            <h2>Home</h2>
-            <p>No news available at this time. Global news will appear here once loaded from our network or JSON/API feed.</p>
-        </div>
-
-        <div id="world" class="section hidden">
-            <h2>World</h2>
-            <div id="world-news" class="news-container">
-                <!-- News cards will appear here -->
+            <img src="main-story.jpg" alt="RadiantWaves">
+            <div class="logo-text">
+                <h1>RadiantWaves</h1>
+                <p>Truth. Insight. Global Perspective</p>
             </div>
         </div>
-
-        <div id="politics" class="section hidden">
-            <h2>Politics</h2>
-            <div id="politics-news" class="news-container"></div>
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="news-music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
+    </div>
+</header>
 
-        <div id="business" class="section hidden">
-            <h2>Business</h2>
-            <div id="business-news" class="news-container"></div>
+<!-- Breaking News -->
+<div class="breaking-ticker">
+    <div class="ticker-wrapper">
+        <span class="ticker-label">Breaking</span>
+        <div class="ticker-marquee" id="breaking-news">
+            <span class="ticker-item">Loading global headlines...</span>
         </div>
+    </div>
+</div>
 
-        <div id="tech" class="section hidden">
-            <h2>Technology</h2>
-            <div id="tech-news" class="news-container"></div>
-        </div>
+<!-- Main Content -->
+<main class="main">
+    <div class="news-grid" id="news-grid">
+        <!-- News cards will be loaded here from JSON/API -->
+        <p>No news available at this time</p>
+    </div>
+</main>
 
-        <div id="sports" class="section hidden">
-            <h2>Sports</h2>
-            <div id="sports-news" class="news-container"></div>
-        </div>
+<!-- Footer -->
+<footer class="footer">
+    <p>@2026 RadiantWaves News Network</p>
+    <p>Truth. Insight. Global Perspective</p>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
 
-        <div id="entertainment" class="section hidden">
-            <h2>Entertainment</h2>
-            <div id="entertainment-news" class="news-container"></div>
-        </div>
-    </main>
+<script>
+// Breaking News Placeholder
+const breakingNews = [
+    "RadiantWaves Global News • 12 March 2026 • 21:30:00",
+    "France Municipal Election Updates",
+    "US Campaign Headlines",
+    "Olympics 2026: Highlights"
+];
+const ticker = document.getElementById("breaking-news");
+ticker.innerHTML = breakingNews.map(item => `<span class="ticker-item">${item}</span>`).join("");
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 RadiantWaves News Network</p>
-        <p class="slogan">Truth. Insight. Global Perspective.</p>
-        <div class="social-handles">
-            <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-        </div>
-    </footer>
+// Load news from JSON (example)
+fetch("news.json")
+.then(res => res.json())
+.then(data => {
+    const grid = document.getElementById("news-grid");
+    if(data.articles && data.articles.length > 0){
+        grid.innerHTML = data.articles.map(article => `
+            <div class="news-card">
+                <img src="${article.image || 'main-story.jpg'}" alt="${article.title}">
+                <div class="news-card-content">
+                    <span class="news-card-category">${article.category}</span>
+                    <h3 class="news-card-title">${article.title}</h3>
+                    <p class="news-card-excerpt">${article.excerpt}</p>
+                </div>
+            </div>
+        `).join("");
+    } else {
+        grid.innerHTML = "<p>No news available at this time</p>";
+    }
+})
+.catch(err => console.log("Error loading news:", err));
+</script>
 
-    <!-- Scripts -->
-    <script>
-        // Show/Hide sections
-        function showSection(id) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(sec => sec.classList.add('hidden'));
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        // Sample breaking news update every 15 sec
-        const headlines = [
-            "RadiantWaves Global News: New tech breakthrough in AI",
-            "RadiantWaves Global News: France municipal elections underway",
-            "RadiantWaves Global News: Olympics 2026 preparations continue",
-            "RadiantWaves Global News: Global trade talks resume"
-        ];
-        let idx = 0;
-        setInterval(() => {
-            document.getElementById('breaking-news-text').textContent = headlines[idx];
-            idx = (idx + 1) % headlines.length;
-        }, 15000);
-
-        // Load JSON news (example)
-        const newsData = {
-            world: [
-                {title:"Global economy trends", summary:"An overview of global markets today.", img:"main-story.jpg"},
-                {title:"UN summit highlights", summary:"Key points from the UN assembly.", img:"main-story.jpg"}
-            ],
-            politics: [
-                {title:"US Campaign update", summary:"Latest from the US political scene.", img:"main-story.jpg"},
-                {title:"India reforms", summary:"New policies under consideration.", img:"main-story.jpg"}
-            ],
-            sports: [
-                {title:"Olympics 2026", summary:"Preparations are on schedule.", img:"main-story.jpg"}
-            ],
-            tech: [
-                {title:"AI breakthroughs", summary:"Innovations in artificial intelligence.", img:"main-story.jpg"}
-            ],
-            business: [],
-            entertainment: []
-        };
-
-        function renderNews(section, containerId) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = '';
-            if(newsData[section].length === 0) {
-                container.innerHTML = "<p>No news available at this time.</p>";
-            } else {
-                newsData[section].forEach(news => {
-                    const card = document.createElement('div');
-                    card.className = "news-card";
-                    card.innerHTML = `<img src="${news.img}" alt="${news.title}">
-                                      <h3>${news.title}</h3>
-                                      <p>${news.summary}</p>`;
-                    container.appendChild(card);
-                });
-            }
-        }
-
-        // Render news for all sections
-        renderNews('world','world-news');
-        renderNews('politics','politics-news');
-        renderNews('business','business-news');
-        renderNews('tech','tech-news');
-        renderNews('sports','sports-news');
-        renderNews('entertainment','entertainment-news');
-    </script>
 </body>
 </html>

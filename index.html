@@ -1,123 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radiant Waves Global News</title>
+
 <style>
-body { font-family: Arial,sans-serif; margin:0; background:#f4f4f4; }
-header { background:#c40000; color:white; padding:20px; text-align:center; font-size:28px; font-weight:bold; }
-nav { background:#111; padding:10px; text-align:center; }
-nav button { background:#c40000; color:white; border:none; padding:10px 14px; margin:4px; cursor:pointer; }
-#searchBar { width:90%; padding:10px; margin:15px auto; font-size:16px; display:block; }
-.container { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding:20px; }
-.card { background:white; border-radius:6px; box-shadow:0 0 5px rgba(0,0,0,0.2); overflow:hidden; }
-.card img { width:100%; height:180px; object-fit:cover; }
-.card h3 { padding:10px; margin:0; }
-.card p { padding:0 10px 10px 10px; }
-.readMore { background:#c40000; color:white; border:none; padding:8px 12px; margin:10px; cursor:pointer; }
-footer { background:#111; color:white; text-align:center; padding:20px; margin-top:20px; }
-.social a img { width:30px; margin:0 8px; vertical-align:middle; }
-.breaking { background:black; color:white; padding:8px; overflow:hidden; white-space:nowrap; font-weight:bold; }
-.breaking span { display:inline-block; padding-left:100%; animation:scroll 60s linear infinite; }
-@keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-100%)} }
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#c40000;
+color:white;
+padding:18px;
+font-size:30px;
+font-weight:bold;
+text-align:center;
+}
+
+nav{
+background:#111;
+text-align:center;
+padding:10px;
+}
+
+nav button{
+background:#c40000;
+color:white;
+border:none;
+padding:10px 14px;
+margin:4px;
+cursor:pointer;
+}
+
+nav button:hover{
+background:#ff0000;
+}
+
+#ticker{
+background:black;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+#ticker span{
+display:inline-block;
+padding-left:100%;
+animation: ticker 25s linear infinite;
+}
+
+@keyframes ticker{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.featured{
+background:white;
+margin:20px;
+padding:20px;
+box-shadow:0 0 6px rgba(0,0,0,0.2);
+}
+
+.featured img{
+width:100%;
+max-height:350px;
+object-fit:cover;
+}
+
+.featured h2{
+margin:10px 0;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+border-radius:6px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+margin:0;
+}
+
+.card p{
+padding:0 10px 10px 10px;
+}
+
+.readMore{
+background:#c40000;
+color:white;
+border:none;
+padding:8px 12px;
+margin:10px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+
+.social img{
+width:30px;
+margin:5px;
+}
+
 </style>
 </head>
+
 <body>
 
-<header>Radiant Waves Global News</header>
-
-<div class="breaking">
-<span id="ticker">Loading breaking news...</span>
-</div>
+<header>
+Radiant Waves Global News
+</header>
 
 <nav>
+
 <button onclick="filterNews('All')">Home</button>
 <button onclick="filterNews('Naija')">Naija Pulse</button>
 <button onclick="filterNews('World')">World</button>
 <button onclick="filterNews('Technology')">Technology</button>
 <button onclick="filterNews('Sports')">Sports</button>
 <button onclick="filterNews('Election')">Election</button>
+
 </nav>
 
-<input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()">
+<div id="ticker">
+<span id="breakingNews">Loading breaking news...</span>
+</div>
+
+<div class="featured" id="featuredNews"></div>
+
+<center>
+<input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()" style="width:90%;padding:10px;margin:15px;">
+</center>
 
 <div class="container" id="newsContainer"></div>
 
 <footer>
-<p>© 2026 Radiant Waves</p>
+
+<p>© 2026 Radiant Waves News Network</p>
+
 <div class="social">
-<a href="https://facebook.com"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
-<a href="https://twitter.com"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
-<a href="https://instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
-<a href="https://youtube.com"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+
+<a href="https://facebook.com">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://twitter.com">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</a>
+
+<a href="https://instagram.com">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a href="https://youtube.com">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
 </div>
+
+<div style="margin-top:15px">
+
 <audio controls autoplay loop>
 <source src="news.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
 </audio>
+
+</div>
+
 </footer>
 
 <script>
-// --- Global variables ---
+
 let allNews = [];
 
-// --- Fetch JSON ---
 fetch("news.json")
-.then(res => res.json())
+.then(response => response.json())
 .then(data => {
-    allNews = data;
-    updateBreakingTicker(allNews);
-    displayNews(allNews);
+
+allNews = data;
+
+displayFeatured(data[0]);
+
+displayNews(data);
+
 });
 
-// --- Fetch API breaking news (optional) ---
-const apiKey = "688936c0efcb471d8120682cea255d20";
-fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=5&apiKey=${apiKey}`)
-.then(res => res.json())
-.then(data => {
-    if(data.articles){
-        const titles = data.articles.map(a=>a.title);
-        if(titles.length) document.getElementById("ticker").innerText = titles.join(" • ");
-    }
-})
-.catch(err => console.warn("API fetch failed, using local JSON:", err));
+function displayFeatured(news){
 
-// --- Breaking news ticker from JSON ---
-function updateBreakingTicker(news){
-    const ticker = document.getElementById("ticker");
-    const top5 = news.slice(0,5).map(n=>n.title);
-    ticker.innerText = top5.join(" • ");
+document.getElementById("featuredNews").innerHTML=`
+
+<img src="${news.image}">
+<h2>${news.title}</h2>
+<p>${news.summary}</p>
+<p>${news.details}</p>
+
+`;
+
 }
 
-// --- Display news ---
 function displayNews(news){
-    const container = document.getElementById("newsContainer");
-    container.innerHTML = "";
-    news.forEach(n=>{
-        container.innerHTML += `
-        <div class="card">
-            <img src="${n.image}">
-            <h3>${n.title}</h3>
-            <p>${n.summary}</p>
-            <button class="readMore" onclick="alert('${n.details}')">Read More</button>
-            <p style="font-size:12px;padding:10px;">${n.author} | Source: ${n.source}</p>
-        </div>
-        `;
-    });
+
+const container=document.getElementById("newsContainer");
+
+container.innerHTML="";
+
+news.forEach(n=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<img src="${n.image}">
+
+<h3>${n.title}</h3>
+
+<p>${n.summary}</p>
+
+<button class="readMore" onclick="openStory('${n.details}')">Read More</button>
+
+<p style="font-size:12px;padding:10px;">
+${n.author} | Source: ${n.source}
+</p>
+
+</div>
+
+`;
+
+});
+
 }
 
-// --- Filter ---
+function openStory(text){
+
+alert(text);
+
+}
+
 function filterNews(category){
-    if(category==="All") displayNews(allNews);
-    else displayNews(allNews.filter(n=>n.category===category));
+
+if(category==="All"){
+
+displayNews(allNews);
+
+}else{
+
+const filtered=allNews.filter(n=>n.category===category);
+
+displayNews(filtered);
+
 }
 
-// --- Search ---
-function searchNews(){
-    const query = document.getElementById("searchBar").value.toLowerCase();
-    displayNews(allNews.filter(n=>n.title.toLowerCase().includes(query)));
 }
+
+function searchNews(){
+
+const search=document.getElementById("searchBar").value.toLowerCase();
+
+const filtered=allNews.filter(n=>n.title.toLowerCase().includes(search));
+
+displayNews(filtered);
+
+}
+
+
+/* LIVE BREAKING NEWS API */
+
+fetch("https://newsdata.io/api/1/news?apikey=688936c0efcb471d8120682cea255d20&language=en")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let headlines="";
+
+data.results.slice(0,10).forEach(n=>{
+
+headlines += n.title + " • ";
+
+});
+
+document.getElementById("breakingNews").innerText=headlines;
+
+})
+
+.catch(()=>{
+
+document.getElementById("breakingNews").innerText="Global news updates will appear here.";
+
+});
+
 </script>
+
 </body>
 </html>

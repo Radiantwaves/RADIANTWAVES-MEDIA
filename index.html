@@ -3,101 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves | Gateway to World News</title>
-<link rel="icon" href="icon-192.png" type="image/png">
+<title>RadiantWaves Media | Home</title>
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body, html { margin:0; padding:0; font-family: Arial, sans-serif; }
-header { position: relative; z-index:10; background: #1e3a5f; color:#fff; padding:10px 20px; }
-header .logo { font-size:2em; font-weight:bold; }
-header .slogan { font-size:0.9em; margin-top:5px; }
-
-/* Navigation */
-nav ul { display:flex; list-style:none; margin:10px 0 0 0; padding:0; }
-nav ul li { margin-right:20px; }
-nav ul li a { color:#fff; text-decoration:none; }
-nav ul li a.active { text-decoration:underline; }
-
-/* Hero */
-.hero { position:relative; width:100%; max-height:400px; overflow:hidden; margin-top:10px; }
-.hero-image { width:100%; height:auto; display:block; }
-.hero-overlay { position:absolute; bottom:20px; left:20px; color:#fff; background:rgba(0,0,0,0.5); padding:10px 15px; border-radius:5px; }
-
-/* Breaking Ticker */
-.breaking-ticker { background:#c53030; color:#fff; padding:8px 20px; font-weight:bold; white-space:nowrap; overflow:hidden; margin-top:10px; }
-.ticker-content { display:inline-block; animation: marquee 25s linear infinite; }
-@keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-
-/* Content */
-#news { padding:20px; }
-.news-card { background:#f7fafc; padding:15px; margin-bottom:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-.news-card h3 { margin:0 0 5px 0; font-size:1.1em; color:#1e3a5f; }
-.news-card p { margin:0; font-size:0.9em; color:#555; }
-
-/* Footer */
-footer { background:#1e3a5f; color:#fff; text-align:center; padding:20px; margin-top:20px; }
-footer .social-icons img { width:32px; height:32px; margin:0 5px; vertical-align:middle; }
-footer .slogan { margin-top:10px; font-size:0.9em; font-style:italic; }
-audio { width:100%; margin:15px 0; display:block; }
+body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; background:#f7fafc; color:#1a202c; }
+a { text-decoration:none; color:inherit; }
+.header, .footer { width:100%; text-align:center; }
+.header { background:#1e3a5f; color:white; padding:10px 0; position:sticky; top:0; z-index:999; }
+.logo h1 { margin:0; font-family:'Merriweather', serif; font-size:1.8rem; }
+.slogan { font-size:0.85rem; font-style:italic; }
+.breaking-ticker { background:#c53030; color:white; padding:8px; overflow:hidden; white-space:nowrap; }
+.ticker-marquee { display:inline-block; animation:marquee 30s linear infinite; }
+@keyframes marquee { 0%{transform:translateX(100%);} 100%{transform:translateX(-100%);} }
+nav { display:flex; justify-content:center; margin:20px 0; flex-wrap:wrap; }
+nav a { margin:0 15px; padding:10px 20px; background:#e2e8f0; border-radius:5px; transition:0.2s; }
+nav a:hover { background:#cbd5e0; }
+.hero img { width:100%; max-height:400px; object-fit:cover; border-radius:10px; }
+.main { max-width:1200px; margin:20px auto; padding:0 15px; }
+.news-placeholder { text-align:center; margin:40px 0; font-size:1.1rem; color:#718096; }
+.news-item { border-bottom:1px solid #e2e8f0; padding:15px 0; }
+.news-item h3 { margin:0 0 5px 0; }
+.news-item p { margin:0; color:#4a5568; }
+.audio-player { margin:20px 0; display:flex; justify-content:center; }
+.footer { background:#1e3a5f; color:white; padding:40px 15px; }
+.social-icons img { width:40px; margin:0 10px; vertical-align:middle; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">RadiantWaves</div>
-  <div class="slogan">Gateway to World News, connecting you to the World</div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="world.html">World</a></li>
-      <li><a href="politics.html">Politics</a></li>
-      <li><a href="business.html">Business</a></li>
-      <li><a href="technology.html">Tech</a></li>
-      <li><a href="science.html">Science</a></li>
-      <li><a href="sports.html">Sports</a></li>
-      <li><a href="entertainment.html">Entertainment</a></li>
-    </ul>
-  </nav>
+<header class="header">
+  <div class="logo">
+    <h1>RadiantWaves</h1>
+    <div class="slogan">Truth. Insight. Global Perspective.</div>
+  </div>
 </header>
 
-<div class="hero">
-  <img src="main-story.jpg" alt="RadiantWaves Global" class="hero-image">
-  <div class="hero-overlay">
-    <h1>Breaking News</h1>
-    <p>Global headlines updating soon</p>
-  </div>
-</div>
-
+<!-- Breaking News -->
 <div class="breaking-ticker">
-  <div class="ticker-content">
-    <span>Loading global headlines...</span>
+  <div class="ticker-marquee" id="breaking-news">
+    Loading global headlines...
   </div>
 </div>
 
-<audio controls autoplay loop>
-  <source src="news-music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+<!-- Navigation -->
+<nav>
+  <a href="world.html">World</a>
+  <a href="politics.html">Politics</a>
+  <a href="business.html">Business</a>
+  <a href="technology.html">Technology</a>
+  <a href="sports.html">Sports</a>
+  <a href="science.html">Science</a>
+  <a href="entertainment.html">Entertainment</a>
+  <a href="election.html">Election</a>
+</nav>
 
-<section id="news">
-  <div class="news-card">
-    <h3>No news available at this time</h3>
-    <p>Global news will appear here once loaded from our network or JSON/API feed.</p>
+<!-- Hero Image -->
+<div class="hero">
+  <img src="main-story.jpg" alt="RadiantWaves Global News">
+</div>
+
+<!-- Audio Player -->
+<div class="audio-player">
+  <audio controls autoplay loop>
+    <source src="news-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<!-- Main News Section -->
+<div class="main" id="news-section">
+  <div class="news-placeholder">
+    No news available at this time.
   </div>
-</section>
+</div>
 
-<footer>
+<footer class="footer">
   <div>@2026 RadiantWaves News Network</div>
-  <div class="slogan">Truth. Insight. Global Perspective</div>
+  <div>Truth. Insight. Global Perspective.</div>
   <div class="social-icons">
-    <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-    <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="instagram.png" alt="Instagram"></a>
   </div>
 </footer>
 
 <script>
-// Simple ticker example
-const ticker = document.querySelector('.ticker-content');
-ticker.innerHTML = 'RadiantWaves Global News | Updates every 15 minutes | Stay informed with our network';
+const gnewsApiKey = "10618a434f80cc4ffe52717ea1bf2401"; // Your GNews.io API key
+const newsSection = document.getElementById('news-section');
+const breakingTicker = document.getElementById('breaking-news');
+
+// Load local JSON first
+fetch('news.json')
+.then(response => response.json())
+.then(localNews => {
+  displayNews(localNews.articles);
+})
+.catch(err => console.log('Local JSON error:', err));
+
+// Fetch from GNews API
+fetch(`https://gnews.io/api/v4/top-headlines?lang=en&token=${gnewsApiKey}&max=5`)
+.then(response => response.json())
+.then(data => {
+  if(data.articles && data.articles.length > 0) {
+    displayNews(data.articles);
+    updateBreakingTicker(data.articles);
+  }
+})
+.catch(err => console.log('GNews API error:', err));
+
+// Function to display news
+function displayNews(articles) {
+  if(!articles || articles.length === 0) return;
+  newsSection.innerHTML = '';
+  articles.forEach(article => {
+    const newsItem = document.createElement('div');
+    newsItem.className = 'news-item';
+    newsItem.innerHTML = `<h3>${article.title}</h3>
+                          <p>${article.description || ''}</p>
+                          <a href="${article.url}" target="_blank">Read more</a>`;
+    newsSection.appendChild(newsItem);
+  });
+}
+
+// Function to update breaking ticker
+function updateBreakingTicker(articles) {
+  if(!articles || articles.length === 0) return;
+  const tickerText = articles.map(a => a.title).join(' • ');
+  breakingTicker.textContent = tickerText;
+}
 </script>
 
 </body>

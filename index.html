@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
         <div class="logo">
             <img src="main-story.jpg" alt="RadiantWaves Logo">
@@ -17,14 +16,7 @@
         <div class="slogan">Gateway to World News, connecting you to the World</div>
     </header>
 
-    <!-- BREAKING NEWS -->
-    <div class="breaking-news" id="breaking-news">
-        <marquee behavior="scroll" direction="left" scrollamount="6" id="breaking-text">
-            Global headline updating soon...
-        </marquee>
-    </div>
-
-    <!-- NAVIGATION -->
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -37,7 +29,12 @@
         </ul>
     </nav>
 
-    <!-- MUSIC PLAYER -->
+    <!-- Breaking News -->
+    <div class="breaking-news">
+        <span id="breaking-news-text">RadiantWaves Global Headline updating soon...</span>
+    </div>
+
+    <!-- Music Player -->
     <div class="music-player">
         <audio controls autoplay loop>
             <source src="news-music.mp3" type="audio/mpeg">
@@ -45,104 +42,123 @@
         </audio>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <main id="news-container">
-        <div id="home-section">
-            <h2>Latest Global News</h2>
-            <p>Details of global news will appear here once loaded from our network or JSON/API feed.</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Sections -->
+        <div id="home" class="section">
+            <h2>Home</h2>
+            <p>No news available at this time. Global news will appear here once loaded from our network or JSON/API feed.</p>
         </div>
-        <div id="world-section" class="hidden">
+
+        <div id="world" class="section hidden">
             <h2>World</h2>
-            <div id="world-news"></div>
+            <div id="world-news" class="news-container">
+                <!-- News cards will appear here -->
+            </div>
         </div>
-        <div id="politics-section" class="hidden">
+
+        <div id="politics" class="section hidden">
             <h2>Politics</h2>
-            <div id="politics-news"></div>
+            <div id="politics-news" class="news-container"></div>
         </div>
-        <div id="business-section" class="hidden">
+
+        <div id="business" class="section hidden">
             <h2>Business</h2>
-            <div id="business-news"></div>
+            <div id="business-news" class="news-container"></div>
         </div>
-        <div id="tech-section" class="hidden">
+
+        <div id="tech" class="section hidden">
             <h2>Technology</h2>
-            <div id="tech-news"></div>
+            <div id="tech-news" class="news-container"></div>
         </div>
-        <div id="sports-section" class="hidden">
+
+        <div id="sports" class="section hidden">
             <h2>Sports</h2>
-            <div id="sports-news"></div>
+            <div id="sports-news" class="news-container"></div>
         </div>
-        <div id="entertainment-section" class="hidden">
+
+        <div id="entertainment" class="section hidden">
             <h2>Entertainment</h2>
-            <div id="entertainment-news"></div>
+            <div id="entertainment-news" class="news-container"></div>
         </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div>&copy; 2026 RadiantWaves News Network</div>
-        <div class="slogan">Truth. Insight. Global Perspective.</div>
+        <p>&copy; 2026 RadiantWaves News Network</p>
+        <p class="slogan">Truth. Insight. Global Perspective.</p>
         <div class="social-handles">
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- Scripts -->
     <script>
-        // Toggle sections
-        function showSection(section) {
-            const sections = ['home','world','politics','business','tech','sports','entertainment'];
-            sections.forEach(s => {
-                const el = document.getElementById(s + '-section');
-                if(el) el.classList.add('hidden');
-            });
-            const active = document.getElementById(section + '-section');
-            if(active) active.classList.remove('hidden');
+        // Show/Hide sections
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
         }
 
-        // Load JSON news
-        async function loadNews() {
-            try {
-                const response = await fetch('news.json');
-                const data = await response.json();
+        // Sample breaking news update every 15 sec
+        const headlines = [
+            "RadiantWaves Global News: New tech breakthrough in AI",
+            "RadiantWaves Global News: France municipal elections underway",
+            "RadiantWaves Global News: Olympics 2026 preparations continue",
+            "RadiantWaves Global News: Global trade talks resume"
+        ];
+        let idx = 0;
+        setInterval(() => {
+            document.getElementById('breaking-news-text').textContent = headlines[idx];
+            idx = (idx + 1) % headlines.length;
+        }, 15000);
 
-                // Breaking news
-                if(data.breaking && data.breaking.length > 0){
-                    document.getElementById('breaking-text').innerText = data.breaking.join(' • ');
-                }
+        // Load JSON news (example)
+        const newsData = {
+            world: [
+                {title:"Global economy trends", summary:"An overview of global markets today.", img:"main-story.jpg"},
+                {title:"UN summit highlights", summary:"Key points from the UN assembly.", img:"main-story.jpg"}
+            ],
+            politics: [
+                {title:"US Campaign update", summary:"Latest from the US political scene.", img:"main-story.jpg"},
+                {title:"India reforms", summary:"New policies under consideration.", img:"main-story.jpg"}
+            ],
+            sports: [
+                {title:"Olympics 2026", summary:"Preparations are on schedule.", img:"main-story.jpg"}
+            ],
+            tech: [
+                {title:"AI breakthroughs", summary:"Innovations in artificial intelligence.", img:"main-story.jpg"}
+            ],
+            business: [],
+            entertainment: []
+        };
 
-                // Populate news by category
-                const categories = ['world','politics','business','tech','sports','entertainment'];
-                categories.forEach(cat => {
-                    const container = document.getElementById(cat + '-news');
-                    if(container) {
-                        container.innerHTML = '';
-                        const newsItems = data[cat] || [];
-                        if(newsItems.length === 0){
-                            container.innerHTML = '<p>No news available at this time.</p>';
-                        } else {
-                            newsItems.forEach(item => {
-                                const card = document.createElement('div');
-                                card.className = 'news-card';
-                                card.innerHTML = `
-                                    <h3>${item.title}</h3>
-                                    ${item.image ? `<img src="${item.image}" alt="${item.title}">` : ''}
-                                    <p>${item.summary}</p>
-                                    <small>Published: ${item.time}</small>
-                                `;
-                                container.appendChild(card);
-                            });
-                        }
-                    }
+        function renderNews(section, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            if(newsData[section].length === 0) {
+                container.innerHTML = "<p>No news available at this time.</p>";
+            } else {
+                newsData[section].forEach(news => {
+                    const card = document.createElement('div');
+                    card.className = "news-card";
+                    card.innerHTML = `<img src="${news.img}" alt="${news.title}">
+                                      <h3>${news.title}</h3>
+                                      <p>${news.summary}</p>`;
+                    container.appendChild(card);
                 });
-
-            } catch(e){
-                console.error('Error loading news:', e);
             }
         }
 
-        loadNews();
+        // Render news for all sections
+        renderNews('world','world-news');
+        renderNews('politics','politics-news');
+        renderNews('business','business-news');
+        renderNews('tech','tech-news');
+        renderNews('sports','sports-news');
+        renderNews('entertainment','entertainment-news');
     </script>
-
 </body>
 </html>

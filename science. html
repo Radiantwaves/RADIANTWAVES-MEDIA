@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadiantWaves | Science</title>
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">RadiantWaves</div>
+  <div class="slogan">Gateway to World News, connecting you to the World</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="world.html">World</a></li>
+      <li><a href="politics.html">Politics</a></li>
+      <li><a href="business.html">Business</a></li>
+      <li><a href="technology.html">Tech</a></li>
+      <li><a href="science.html" class="active">Science</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="entertainment.html">Entertainment</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="breaking-ticker">
+  <div id="ticker">Loading global headlines...</div>
+</section>
+
+<section class="hero">
+  <img src="science-hero.jpg" alt="Science News" class="hero-image">
+  <div class="hero-overlay">
+    <h1>Science</h1>
+    <p>Research, space, and technology updates</p>
+  </div>
+</section>
+
+<section id="news">
+  <p>No news available at this time.</p>
+</section>
+
+<audio controls autoplay loop>
+  <source src="news-music.mp3" type="audio/mpeg">
+</audio>
+
+<footer>
+  <p>@2026 RadiantWaves News Network</p>
+  <p>Truth. Insight. Global Perspective</p>
+  <div class="social-icons">
+    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,139 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Media | Home</title>
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-192.png">
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; background:#f7fafc; color:#1a202c; }
-a { text-decoration:none; color:inherit; }
-.header, .footer { width:100%; text-align:center; }
-.header { background:#1e3a5f; color:white; padding:10px 0; position:sticky; top:0; z-index:999; }
-.logo h1 { margin:0; font-family:'Merriweather', serif; font-size:1.8rem; }
-.slogan { font-size:0.85rem; font-style:italic; }
-.breaking-ticker { background:#c53030; color:white; padding:8px; overflow:hidden; white-space:nowrap; }
-.ticker-marquee { display:inline-block; animation:marquee 30s linear infinite; }
-@keyframes marquee { 0%{transform:translateX(100%);} 100%{transform:translateX(-100%);} }
-nav { display:flex; justify-content:center; margin:20px 0; flex-wrap:wrap; }
-nav a { margin:0 15px; padding:10px 20px; background:#e2e8f0; border-radius:5px; transition:0.2s; }
-nav a:hover { background:#cbd5e0; }
-.hero img { width:100%; max-height:400px; object-fit:cover; border-radius:10px; }
-.main { max-width:1200px; margin:20px auto; padding:0 15px; }
-.news-placeholder { text-align:center; margin:40px 0; font-size:1.1rem; color:#718096; }
-.news-item { border-bottom:1px solid #e2e8f0; padding:15px 0; }
-.news-item h3 { margin:0 0 5px 0; }
-.news-item p { margin:0; color:#4a5568; }
-.audio-player { margin:20px 0; display:flex; justify-content:center; }
-.footer { background:#1e3a5f; color:white; padding:40px 15px; }
-.social-icons img { width:40px; margin:0 10px; vertical-align:middle; }
-</style>
+<title>RadiantWaves News Network</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="header">
+<header>
   <div class="logo">
+    <img src="main-story.jpg" alt="RadiantWaves Logo" height="80">
     <h1>RadiantWaves</h1>
-    <div class="slogan">Truth. Insight. Global Perspective.</div>
+    <p class="slogan">Gateway to World News, connecting you to the World</p>
+  </div>
+  <div class="breaking-news">
+    <span>Breaking News:</span>
+    <marquee id="breaking-news-ticker">Loading global headlines...</marquee>
   </div>
 </header>
 
-<!-- Breaking News -->
-<div class="breaking-ticker">
-  <div class="ticker-marquee" id="breaking-news">
-    Loading global headlines...
-  </div>
-</div>
-
-<!-- Navigation -->
 <nav>
-  <a href="world.html">World</a>
-  <a href="politics.html">Politics</a>
-  <a href="business.html">Business</a>
-  <a href="technology.html">Technology</a>
-  <a href="sports.html">Sports</a>
-  <a href="science.html">Science</a>
-  <a href="entertainment.html">Entertainment</a>
-  <a href="election.html">Election</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="world.html">World</a></li>
+    <li><a href="politics.html">Politics</a></li>
+    <li><a href="business.html">Business</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="sports.html">Sports</a></li>
+    <li><a href="election.html">Election</a></li>
+  </ul>
 </nav>
 
-<!-- Hero Image -->
-<div class="hero">
-  <img src="main-story.jpg" alt="RadiantWaves Global News">
-</div>
+<main>
+  <section class="music-player">
+    <audio controls autoplay loop>
+      <source src="news-music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
 
-<!-- Audio Player -->
-<div class="audio-player">
-  <audio controls autoplay loop>
-    <source src="news-music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+  <section id="news-summaries">
+    <h2>Latest Headlines</h2>
+    <div id="headlines-container">
+      <p>No news available at this time.</p>
+    </div>
+  </section>
+</main>
 
-<!-- Main News Section -->
-<div class="main" id="news-section">
-  <div class="news-placeholder">
-    No news available at this time.
-  </div>
-</div>
-
-<footer class="footer">
-  <div>@2026 RadiantWaves News Network</div>
-  <div>Truth. Insight. Global Perspective.</div>
-  <div class="social-icons">
-    <a href="#"><img src="facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+<footer>
+  <p>&copy; 2026 RadiantWaves News Network</p>
+  <p class="slogan">Truth. Insight. Global Perspective.</p>
+  <div class="social-handles">
+    <a href="https://www.facebook.com/radiantwaves"><img src="facebook.png" alt="Facebook" height="30"></a>
+    <a href="https://www.instagram.com/radiantwaves"><img src="instagram.png" alt="Instagram" height="30"></a>
   </div>
 </footer>
 
 <script>
-const gnewsApiKey = "10618a434f80cc4ffe52717ea1bf2401"; // Your GNews.io API key
-const newsSection = document.getElementById('news-section');
-const breakingTicker = document.getElementById('breaking-news');
-
-// Load local JSON first
 fetch('news.json')
-.then(response => response.json())
-.then(localNews => {
-  displayNews(localNews.articles);
-})
-.catch(err => console.log('Local JSON error:', err));
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('headlines-container');
+    container.innerHTML = '';
+    for (const category in data) {
+      const firstNews = data[category][0];
+      if (firstNews) {
+        const div = document.createElement('div');
+        div.classList.add('headline');
+        div.innerHTML = `<h3>${category}: ${firstNews.title}</h3><p>${firstNews.description}</p>`;
+        container.appendChild(div);
+      }
+    }
 
-// Fetch from GNews API
-fetch(`https://gnews.io/api/v4/top-headlines?lang=en&token=${gnewsApiKey}&max=5`)
-.then(response => response.json())
-.then(data => {
-  if(data.articles && data.articles.length > 0) {
-    displayNews(data.articles);
-    updateBreakingTicker(data.articles);
-  }
-})
-.catch(err => console.log('GNews API error:', err));
-
-// Function to display news
-function displayNews(articles) {
-  if(!articles || articles.length === 0) return;
-  newsSection.innerHTML = '';
-  articles.forEach(article => {
-    const newsItem = document.createElement('div');
-    newsItem.className = 'news-item';
-    newsItem.innerHTML = `<h3>${article.title}</h3>
-                          <p>${article.description || ''}</p>
-                          <a href="${article.url}" target="_blank">Read more</a>`;
-    newsSection.appendChild(newsItem);
-  });
-}
-
-// Function to update breaking ticker
-function updateBreakingTicker(articles) {
-  if(!articles || articles.length === 0) return;
-  const tickerText = articles.map(a => a.title).join(' • ');
-  breakingTicker.textContent = tickerText;
-}
+    // Update breaking news ticker with first headline of each category
+    const ticker = document.getElementById('breaking-news-ticker');
+    const tickerTexts = [];
+    for (const category in data) {
+      if (data[category][0]) {
+        tickerTexts.push(`${category}: ${data[category][0].title}`);
+      }
+    }
+    ticker.textContent = tickerTexts.join(' | ');
+  })
+  .catch(err => console.error('Error loading news:', err));
 </script>
-
 </body>
 </html>

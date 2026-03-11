@@ -29,8 +29,8 @@ font-weight:bold;
 
 nav{
 background:#111;
-text-align:center;
 padding:10px;
+text-align:center;
 }
 
 nav button{
@@ -44,15 +44,6 @@ cursor:pointer;
 
 nav button:hover{
 background:red;
-}
-
-.ticker{
-background:black;
-color:white;
-padding:8px;
-font-size:14px;
-overflow:hidden;
-white-space:nowrap;
 }
 
 #searchBar{
@@ -113,6 +104,15 @@ width:30px;
 margin:5px;
 }
 
+.ticker{
+background:black;
+color:white;
+padding:8px;
+font-size:14px;
+white-space:nowrap;
+overflow:hidden;
+}
+
 audio{
 margin-top:15px;
 }
@@ -139,7 +139,7 @@ Radiant Waves Global News
 </nav>
 
 <div class="ticker" id="ticker">
-Loading global breaking news...
+Loading breaking global news...
 </div>
 
 <center>
@@ -212,7 +212,7 @@ container.innerHTML+=`
 
 <p>${n.summary}</p>
 
-<button class="readMore" onclick="alert('${n.details}')">Read More</button>
+<button class="readMore" onclick="openNews('${n.title}','${n.details}')">Read More</button>
 
 <p style="font-size:12px;padding:10px;">
 ${n.author} | Source: ${n.source}
@@ -223,6 +223,12 @@ ${n.author} | Source: ${n.source}
 `;
 
 });
+
+}
+
+function openNews(title,details){
+
+alert(title + "\n\n" + details);
 
 }
 
@@ -254,27 +260,27 @@ displayNews(filtered);
 
 const API_KEY="688936c0efcb471d8120682cea255d20";
 
-fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=5&apiKey=${API_KEY}`)
+fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=6&apiKey=${API_KEY}`)
 
 .then(res=>res.json())
 
 .then(data=>{
 
-let headlines="";
+let text="";
 
 data.articles.forEach(a=>{
 
-headlines+=a.title+"  •  ";
+text+=a.title+" • ";
 
 });
 
-document.getElementById("ticker").innerText=headlines;
+document.getElementById("ticker").innerText=text;
 
 })
 
 .catch(()=>{
 
-document.getElementById("ticker").innerText="Global headlines updating soon on Radiant Waves.";
+document.getElementById("ticker").innerText="Global headlines updating soon.";
 
 });
 

@@ -1,1543 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RadiantWaves Media - Gateway to your world news, connecting you to the world">
-    <meta name="theme-color" content="#1e3a5f">
-    <title>RadiantWaves Media | Gateway to Your World News</title>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="pwa-icons/icon-192x192.png">
-    <link rel="apple-touch-icon" href="pwa-icons/icon-192x192.png">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-dark: #1e3a5f;
-            --primary-medium: #2c5282;
-            --accent-red: #c53030;
-            --accent-red-dark: #9b2c2c;
-            --text-dark: #1a202c;
-            --text-medium: #4a5568;
-            --text-light: #718096;
-            --bg-light: #f7fafc;
-            --bg-white: #ffffff;
-            --border-color: #e2e8f0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        /* Breaking News Ticker */
-        .breaking-ticker {
-            background: linear-gradient(90deg, var(--accent-red) 0%, var(--accent-red-dark) 100%);
-            color: white;
-            padding: 10px 0;
-            overflow: hidden;
-            position: relative;
-            z-index: 1000;
-        }
-        
-        .ticker-wrapper {
-            display: flex;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .ticker-label {
-            background: white;
-            color: var(--accent-red);
-            font-weight: 700;
-            font-size: 0.75rem;
-            padding: 4px 12px;
-            border-radius: 3px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-        
-        .ticker-content {
-            flex: 1;
-            overflow: hidden;
-        }
-        
-        .ticker-marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 30s linear infinite;
-        }
-        
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        .ticker-item {
-            display: inline-block;
-            padding: 0 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-right: 1px solid rgba(255,255,255,0.3);
-        }
-        
-        .ticker-item:last-child {
-            border-right: none;
-        }
-        
-        /* Header */
-        .header {
-            background: var(--bg-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-        
-        .header-top {
-            background: var(--primary-dark);
-            color: white;
-            padding: 8px 0;
-        }
-        
-        .header-top-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-        }
-        
-        .date-display {
-            font-weight: 500;
-        }
-        
-        .header-actions {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        
-        .header-actions a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .header-actions a:hover {
-            opacity: 0.8;
-        }
-        
-        .header-main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .logo-text h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary-dark);
-            line-height: 1.2;
-        }
-        
-        .logo-text p {
-            font-size: 0.85rem;
-            color: var(--text-medium);
-            font-style: italic;
-        }
-        
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .search-box {
-            position: relative;
-        }
-        
-        .search-box input {
-            padding: 10px 40px 10px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 25px;
-            width: 250px;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--primary-medium);
-            width: 300px;
-        }
-        
-        .search-box button {
-            position: absolute;
-            right: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: var(--text-light);
-            cursor: pointer;
-            padding: 8px;
-        }
-        
-        .subscribe-btn {
-            background: var(--accent-red);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .subscribe-btn:hover {
-            background: var(--accent-red-dark);
-        }
-        
-        /* Navigation */
-        .nav {
-            background: var(--primary-dark);
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .nav-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .nav-list {
-            display: flex;
-            list-style: none;
-            gap: 0;
-        }
-        
-        .nav-list li {
-            position: relative;
-        }
-        
-        .nav-list a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.3s;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .nav-list a:hover,
-        .nav-list a.active {
-            background: var(--primary-medium);
-            border-bottom-color: var(--accent-red);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 15px;
-        }
-        
-        /* Main Content */
-        .main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        
-        .hero-main {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .hero-image {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
-            padding: 40px;
-            color: white;
-        }
-        
-        .hero-category {
-            display: inline-block;
-            background: var(--accent-red);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 3px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        
-        .hero-title {
-            font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 15px;
-        }
-        
-        .hero-meta {
-            display: flex;
-            gap: 20px;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .hero-meta span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .hero-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .sidebar-card {
-            background: var(--bg-white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .sidebar-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-        
-        .sidebar-card-image {
-            width: 100%;
-            height: 140px;
-            object-fit: cover;
-        }
-        
-        .sidebar-card-content {
-            padding: 15px;
-        }
-        
-        .sidebar-card-category {
-            color: var(--accent-red);
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        
-        .sidebar-card-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.4;
-            color: var(--text-dark);
-        }
-        
-        /* Section Headers */
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .section-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section-title i {
-            color: var(--accent-red);
-        }
-        
-        .view-all {
-            color: var(--primary-medium);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
-        }
-        
-        .view-all:hover {
-            color: var(--accent-red);
-        }
-        
-        /* News Grid */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        
-        .news-card {
-            background: var(--bg-white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .news-card-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        
-        .news-card-content {
-            padding: 20px;
-        }
-        
-        .news-card-category {
-            color: var(--accent-red);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        
-        .news-card-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.4;
-            color: var(--text-dark);
-            margin-bottom: 12px;
-        }
-        
-        .news-card-excerpt {
-            font-size: 0.9rem;
-            color: var(--text-medium);
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .news-card-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        
-        .news-card-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        /* Politics Focus Section */
-        .politics-focus {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 50px;
-            color: white;
-        }
-        
-        .politics-focus-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .politics-focus-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .politics-focus-title i {
-            color: var(--accent-red);
-        }
-        
-        .politics-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        
-        .politics-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 25px;
-            transition: background 0.3s;
-        }
-        
-        .politics-card:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .politics-card-tag {
-            display: inline-block;
-            background: var(--accent-red);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 3px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        
-        .politics-card-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-        
-        .politics-card-excerpt {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .politics-card-meta {
-            margin-top: 15px;
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-        
-        /* Market Ticker */
-        .market-ticker {
-            background: var(--bg-white);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-        
-        .market-ticker-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-        
-        .market-ticker-content {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
-        
-        .market-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 10px 20px;
-            background: var(--bg-light);
-            border-radius: 8px;
-            min-width: 180px;
-        }
-        
-        .market-name {
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        
-        .market-value {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        
-        .market-change {
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .market-change.up {
-            color: #38a169;
-        }
-        
-        .market-change.down {
-            color: var(--accent-red);
-        }
-        
-        /* Two Column Layout */
-        .two-column {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .latest-news-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .list-item {
-            display: flex;
-            gap: 20px;
-            background: var(--bg-white);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .list-item:hover {
-            transform: translateX(5px);
-        }
-        
-        .list-item-image {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        
-        .list-item-content {
-            flex: 1;
-        }
-        
-        .list-item-category {
-            color: var(--accent-red);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        
-        .list-item-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 8px;
-        }
-        
-        .list-item-meta {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-        
-        /* Sidebar Widgets */
-        .sidebar-widget {
-            background: var(--bg-white);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-        
-        .widget-title {
-            font-family: 'Merriweather', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .trending-list {
-            list-style: none;
-        }
-        
-        .trending-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-        
-        .trending-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .trending-number {
-            width: 30px;
-            height: 30px;
-            background: var(--primary-dark);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-        
-        .trending-content h4 {
-            font-family: 'Merriweather', serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 5px;
-        }
-        
-        .trending-content span {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        
-        /* Newsletter Widget */
-        .newsletter-widget {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
-            color: white;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .newsletter-widget h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .newsletter-widget p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .newsletter-form input {
-            padding: 12px 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        
-        .newsletter-form button {
-            background: var(--accent-red);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .newsletter-form button:hover {
-            background: var(--accent-red-dark);
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--primary-dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
-        
-        .footer-section h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .footer-section p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section ul li a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .footer-section ul li a:hover {
-            color: white;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--accent-red);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 30px 20px 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-        
-        /* PWA Install Banner */
-        .pwa-install-banner {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--bg-white);
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            display: none;
-            align-items: center;
-            gap: 20px;
-            z-index: 1001;
-        }
-        
-        .pwa-install-banner.show {
-            display: flex;
-        }
-        
-        .pwa-install-banner p {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-        
-        .pwa-install-banner button {
-            background: var(--accent-red);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .pwa-install-banner .close-btn {
-            background: none;
-            color: var(--text-light);
-            padding: 5px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .news-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-image {
-                height: 350px;
-            }
-            
-            .hero-title {
-                font-size: 1.6rem;
-            }
-            
-            .news-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .politics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-top-content {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-            
-            .header-main {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            
-            .search-box input {
-                width: 200px;
-            }
-            
-            .search-box input:focus {
-                width: 220px;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-list {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--primary-dark);
-            }
-            
-            .nav-list.show {
-                display: flex;
-            }
-            
-            .nav-list a {
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .hero-image {
-                height: 250px;
-            }
-            
-            .hero-overlay {
-                padding: 20px;
-            }
-            
-            .hero-title {
-                font-size: 1.3rem;
-            }
-            
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .politics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .list-item {
-                flex-direction: column;
-            }
-            
-            .list-item-image {
-                width: 100%;
-                height: 150px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
-            
-            .footer-bottom {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-        }
-    </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Radiant Waves Global News</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#c40000;
+color:white;
+padding:15px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+nav{
+background:#111;
+text-align:center;
+padding:10px;
+}
+
+nav button{
+background:#c40000;
+color:white;
+border:none;
+padding:10px 14px;
+margin:4px;
+cursor:pointer;
+}
+
+nav button:hover{
+background:red;
+}
+
+.ticker{
+background:black;
+color:white;
+padding:8px;
+font-size:14px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+#searchBar{
+width:90%;
+padding:10px;
+margin:15px;
+font-size:16px;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+border-radius:6px;
+box-shadow:0 0 6px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+margin:0;
+}
+
+.card p{
+padding:0 10px 10px 10px;
+}
+
+.readMore{
+background:#c40000;
+color:white;
+border:none;
+padding:8px 12px;
+margin:10px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+.social img{
+width:30px;
+margin:5px;
+}
+
+audio{
+margin-top:15px;
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- Breaking News Ticker -->
-    <div class="breaking-ticker">
-        <div class="ticker-wrapper">
-            <span class="ticker-label">Breaking</span>
-            <div class="ticker-content">
-                <div class="ticker-marquee">
-                    <span class="ticker-item">BREAKING: Former Kaduna Governor El-Rufai detained by EFCC for questioning</span>
-                    <span class="ticker-item">Nigeria 2027: Political alignments shift as election preparations begin</span>
-                    <span class="ticker-item">LIVE: Updates on El-Rufai investigation and legal proceedings</span>
-                    <span class="ticker-item">APC, PDP, LP begin early campaigns for 2027 presidential election</span>
-                    <span class="ticker-item">Tinubu administration announces new economic reforms</span>
-                    <span class="ticker-item">Naira stabilizes against dollar as CBN introduces new policies</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="header-top-content">
-                <span class="date-display"><i class="far fa-calendar-alt"></i> <span id="current-date"></span></span>
-                <div class="header-actions">
-                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-                    <a href="#"><i class="fas fa-user"></i> Sign In</a>
-                </div>
-            </div>
-        </div>
-        <div class="header-main">
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-broadcast-tower"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>RadiantWaves</h1>
-                    <p>Gateway to your world news, connecting you to the world</p>
-                </div>
-            </div>
-            <div class="header-right">
-                <div class="search-box">
-                    <input type="text" placeholder="Search news...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <button class="subscribe-btn">Subscribe</button>
-            </div>
-        </div>
-        <nav class="nav">
-            <div class="nav-content">
-                <button class="mobile-menu-btn" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-list" id="navList">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="world.html">World</a></li>
-                    <li><a href="politics.html">Politics</a></li>
-                    <li><a href="business.html">Business</a></li>
-                    <li><a href="technology.html">Tech</a></li>
-                    <li><a href="science.html">Science</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="entertainment.html">Entertainment</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <article class="hero-main">
-                <img src="images/nigeria-politics-hero.jpg" alt="Nigerian Politics" class="hero-image">
-                <div class="hero-overlay">
-                    <span class="hero-category">Breaking News</span>
-                    <h2 class="hero-title">Former Kaduna Governor El-Rufai Detained by EFCC Over Alleged Financial Misconduct</h2>
-                    <div class="hero-meta">
-                        <span><i class="far fa-clock"></i> February 20, 2025</span>
-                        <span><i class="far fa-user"></i> Nigeria Bureau Chief</span>
-                        <span><i class="far fa-comment"></i> 1,847 Comments</span>
-                    </div>
-                </div>
-            </article>
-            <aside class="hero-sidebar">
-                <article class="sidebar-card">
-                    <img src="images/nigeria-election-2027.jpg" alt="Nigeria Election 2027" class="sidebar-card-image">
-                    <div class="sidebar-card-content">
-                        <span class="sidebar-card-category">Politics</span>
-                        <h3 class="sidebar-card-title">Nigeria 2027: Political Parties Begin Early Election Preparations</h3>
-                    </div>
-                </article>
-                <article class="sidebar-card">
-                    <img src="images/nigeria-court.jpg" alt="Nigerian Court" class="sidebar-card-image">
-                    <div class="sidebar-card-content">
-                        <span class="sidebar-card-category">Legal</span>
-                        <h3 class="sidebar-card-title">El-Rufai Case: Legal Team Responds to EFCC Allegations</h3>
-                    </div>
-                </article>
-                <article class="sidebar-card">
-                    <img src="https://images.unsplash.com/photo-1526304640152-d4619684e484?w=400&h=200&fit=crop" alt="Naira" class="sidebar-card-image">
-                    <div class="sidebar-card-content">
-                        <span class="sidebar-card-category">Business</span>
-                        <h3 class="sidebar-card-title">Naira Stabilizes as CBN Unveils New Forex Policies</h3>
-                    </div>
-                </article>
-            </aside>
-        </section>
-        
-        <!-- Market Ticker -->
-        <section class="market-ticker">
-            <div class="market-ticker-header">
-                <i class="fas fa-chart-line"></i>
-                <span>Market Updates</span>
-            </div>
-            <div class="market-ticker-content">
-                <div class="market-item">
-                    <span class="market-name">S&P 500</span>
-                    <span class="market-value">4,783.45</span>
-                    <span class="market-change up"><i class="fas fa-arrow-up"></i> 1.2%</span>
-                </div>
-                <div class="market-item">
-                    <span class="market-name">NASDAQ</span>
-                    <span class="market-value">15,234.67</span>
-                    <span class="market-change up"><i class="fas fa-arrow-up"></i> 1.8%</span>
-                </div>
-                <div class="market-item">
-                    <span class="market-name">DOW</span>
-                    <span class="market-value">37,845.23</span>
-                    <span class="market-change down"><i class="fas fa-arrow-down"></i> 0.3%</span>
-                </div>
-                <div class="market-item">
-                    <span class="market-name">FTSE 100</span>
-                    <span class="market-value">7,654.32</span>
-                    <span class="market-change up"><i class="fas fa-arrow-up"></i> 0.7%</span>
-                </div>
-                <div class="market-item">
-                    <span class="market-name">NIKKEI</span>
-                    <span class="market-value">33,456.78</span>
-                    <span class="market-change up"><i class="fas fa-arrow-up"></i> 2.1%</span>
-                </div>
-                <div class="market-item">
-                    <span class="market-name">Bitcoin</span>
-                    <span class="market-value">$52,340</span>
-                    <span class="market-change up"><i class="fas fa-arrow-up"></i> 3.5%</span>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Politics Focus Section -->
-        <section class="politics-focus">
-            <div class="politics-focus-header">
-                <h2 class="politics-focus-title">
-                    <i class="fas fa-landmark"></i>
-                    Nigeria Politics Focus
-                </h2>
-                <a href="politics.html" class="view-all" style="color: white;">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="politics-grid">
-                <article class="politics-card">
-                    <span class="politics-card-tag">Breaking News</span>
-                    <h3 class="politics-card-title">El-Rufai Detained: EFCC Investigates Former Governor Over N423B Allegations</h3>
-                    <p class="politics-card-excerpt">The Economic and Financial Crimes Commission questions former Kaduna State governor Nasir El-Rufai over alleged financial misconduct during his tenure.</p>
-                    <div class="politics-card-meta">February 20, 2025 • 8 min read</div>
-                </article>
-                <article class="politics-card">
-                    <span class="politics-card-tag">2027 Election</span>
-                    <h3 class="politics-card-title">Nigeria 2027: APC, PDP, LP Begin Early Presidential Campaigns</h3>
-                    <p class="politics-card-excerpt">Political parties are already positioning candidates as analysts predict a highly competitive presidential race with shifting alliances.</p>
-                    <div class="politics-card-meta">February 19, 2025 • 6 min read</div>
-                </article>
-                <article class="politics-card">
-                    <span class="politics-card-tag">Governance</span>
-                    <h3 class="politics-card-title">Tinubu Administration Unveils New Economic Reforms for 2025</h3>
-                    <p class="politics-card-excerpt">President Bola Tinubu announces comprehensive economic measures aimed at stabilizing the naira and boosting foreign investment.</p>
-                    <div class="politics-card-meta">February 18, 2025 • 5 min read</div>
-                </article>
-            </div>
-        </section>
-        
-        <!-- Latest News Grid -->
-        <section>
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-newspaper"></i>
-                    Latest News
-                </h2>
-                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="news-grid">
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=200&fit=crop" alt="Tech" class="news-card-image">
-                    <div class="news-card-content">
-                        <span class="news-card-category">Technology</span>
-                        <h3 class="news-card-title">Revolutionary Chip Design Promises 10x Performance Boost</h3>
-                        <p class="news-card-excerpt">New semiconductor architecture could transform computing across all devices.</p>
-                        <div class="news-card-meta">
-                            <span><i class="far fa-clock"></i> Jan 15, 2025</span>
-                            <span><i class="far fa-eye"></i> 12.5K</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=200&fit=crop" alt="Business" class="news-card-image">
-                    <div class="news-card-content">
-                        <span class="news-card-category">Business</span>
-                        <h3 class="news-card-title">Global Markets Rally on Strong Economic Data</h3>
-                        <p class="news-card-excerpt">Major indices reach new highs as inflation concerns ease worldwide.</p>
-                        <div class="news-card-meta">
-                            <span><i class="far fa-clock"></i> Jan 15, 2025</span>
-                            <span><i class="far fa-eye"></i> 8.3K</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1461896836934- voices?w=400&h=200&fit=crop" alt="Sports" class="news-card-image">
-                    <div class="news-card-content">
-                        <span class="news-card-category">Sports</span>
-                        <h3 class="news-card-title">Underdog Victory Shocks Tennis World at Grand Slam</h3>
-                        <p class="news-card-excerpt">Unseeded player defeats world number one in historic five-set thriller.</p>
-                        <div class="news-card-meta">
-                            <span><i class="far fa-clock"></i> Jan 14, 2025</span>
-                            <span><i class="far fa-eye"></i> 15.2K</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=200&fit=crop" alt="Science" class="news-card-image">
-                    <div class="news-card-content">
-                        <span class="news-card-category">Science</span>
-                        <h3 class="news-card-title">NASA Discovers Potentially Habitable Exoplanet</h3>
-                        <p class="news-card-excerpt">New telescope data reveals Earth-like conditions 40 light-years away.</p>
-                        <div class="news-card-meta">
-                            <span><i class="far fa-clock"></i> Jan 14, 2025</span>
-                            <span><i class="far fa-eye"></i> 22.1K</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        
-        <!-- Two Column Layout -->
-        <section class="two-column">
-            <div class="main-column">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="fas fa-clock"></i>
-                        Most Recent
-                    </h2>
-                </div>
-                <div class="latest-news-list">
-                    <article class="list-item">
-                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" alt="News" class="list-item-image">
-                        <div class="list-item-content">
-                            <span class="list-item-category">World</span>
-                            <h3 class="list-item-title">Historic Peace Agreement Signed in Middle East After Decades of Negotiations</h3>
-                            <div class="list-item-meta"><i class="far fa-clock"></i> 2 hours ago • <i class="far fa-user"></i> James Wilson</div>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=200&fit=crop" alt="Tech" class="list-item-image">
-                        <div class="list-item-content">
-                            <span class="list-item-category">Technology</span>
-                            <h3 class="list-item-title">AI Assistant Passes Bar Exam with Highest Score Ever Recorded</h3>
-                            <div class="list-item-meta"><i class="far fa-clock"></i> 3 hours ago • <i class="far fa-user"></i> Emily Chen</div>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=200&fit=crop" alt="Sports" class="list-item-image">
-                        <div class="list-item-content">
-                            <span class="list-item-category">Sports</span>
-                            <h3 class="list-item-title">Olympic Committee Announces New Sports for 2028 Games</h3>
-                            <div class="list-item-meta"><i class="far fa-clock"></i> 4 hours ago • <i class="far fa-user"></i> Michael Torres</div>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=300&h=200&fit=crop" alt="Entertainment" class="list-item-image">
-                        <div class="list-item-content">
-                            <span class="list-item-category">Entertainment</span>
-                            <h3 class="list-item-title">Indie Film Sweeps Awards Season with Groundbreaking Storytelling</h3>
-                            <div class="list-item-meta"><i class="far fa-clock"></i> 5 hours ago • <i class="far fa-user"></i> Lisa Anderson</div>
-                        </div>
-                    </article>
-                    <article class="list-item">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=300&h=200&fit=crop" alt="Science" class="list-item-image">
-                        <div class="list-item-content">
-                            <span class="list-item-category">Science</span>
-                            <h3 class="list-item-title">Breakthrough in Fusion Energy Brings Clean Power Closer to Reality</h3>
-                            <div class="list-item-meta"><i class="far fa-clock"></i> 6 hours ago • <i class="far fa-user"></i> Dr. Robert Chang</div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Trending Now</h3>
-                    <ul class="trending-list">
-                        <li>
-                            <span class="trending-number">1</span>
-                            <div class="trending-content">
-                                <h4>Global Climate Summit 2025</h4>
-                                <span>45.2K views</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="trending-number">2</span>
-                            <div class="trending-content">
-                                <h4>Quantum Computing Breakthrough</h4>
-                                <span>38.7K views</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="trending-number">3</span>
-                            <div class="trending-content">
-                                <h4>Election Results 2025</h4>
-                                <span>32.1K views</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="trending-number">4</span>
-                            <div class="trending-content">
-                                <h4>AI Ethics Framework</h4>
-                                <span>28.9K views</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="trending-number">5</span>
-                            <div class="trending-content">
-                                <h4>New Exoplanet Discovery</h4>
-                                <span>24.5K views</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="newsletter-widget">
-                    <h3><i class="fas fa-paper-plane"></i> Stay Informed</h3>
-                    <p>Get breaking news and top stories delivered to your inbox daily.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit">Subscribe Now</button>
-                    </form>
-                </div>
-            </aside>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About RadiantWaves</h3>
-                <p>RadiantWaves Media is your gateway to world news, delivering accurate, timely, and comprehensive coverage of global events 24/7.</p>
-                <div class="social-links">
-                    <a href="https://twitter.com/RadiantWavesMedia" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://instagram.com/radiantwavesmedia" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com/RadiantWavesMedia" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://youtube.com/@RadiantWavesMedia" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Sections</h3>
-                <ul>
-                    <li><a href="world.html">World News</a></li>
-                    <li><a href="politics.html">Politics</a></li>
-                    <li><a href="business.html">Business</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="science.html">Science</a></li>
-                    <li><a href="sports.html">Sports</a></li>
-                    <li><a href="entertainment.html">Entertainment</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Advertise</a></li>
-                    <li><a href="#">Press Room</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                    <li><a href="#">Code of Ethics</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 RadiantWaves Media. All rights reserved.</p>
-            <p>Gateway to your world news, connecting you to the world</p>
-        </div>
-    </footer>
-    
-    <!-- PWA Install Banner -->
-    <div class="pwa-install-banner" id="pwaBanner">
-        <p><i class="fas fa-download"></i> Install RadiantWaves for offline reading</p>
-        <button onclick="installPWA()">Install</button>
-        <button class="close-btn" onclick="closePWA()"><i class="fas fa-times"></i></button>
-    </div>
-    
-    <script>
-        // Set current date
-        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', dateOptions);
-        
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('navList').classList.toggle('show');
-        }
-        
-        // PWA Install
-        let deferredPrompt;
-        const pwaBanner = document.getElementById('pwaBanner');
-        
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            pwaBanner.classList.add('show');
-        });
-        
-        function installPWA() {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('User accepted PWA install');
-                    }
-                    deferredPrompt = null;
-                    pwaBanner.classList.remove('show');
-                });
-            }
-        }
-        
-        function closePWA() {
-            pwaBanner.classList.remove('show');
-        }
-        
-        // Register Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then((registration) => {
-                    console.log('SW registered:', registration);
-                })
-                .catch((error) => {
-                    console.log('SW registration failed:', error);
-                });
-        }
-    </script>
+
+<header>
+Radiant Waves Global News
+</header>
+
+<nav>
+
+<button onclick="filterNews('All')">Home</button>
+<button onclick="filterNews('Naija')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Technology')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election</button>
+
+</nav>
+
+<div class="ticker" id="ticker">
+Loading global breaking news...
+</div>
+
+<center>
+<input type="text" id="searchBar" placeholder="Search news..." onkeyup="searchNews()">
+</center>
+
+<div class="container" id="newsContainer"></div>
+
+<footer>
+
+<p>© 2026 Radiant Waves News Network</p>
+
+<div class="social">
+
+<a href="https://facebook.com">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://twitter.com">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+</a>
+
+<a href="https://instagram.com">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a href="https://youtube.com">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+</a>
+
+</div>
+
+<audio controls>
+<source src="news.mp3" type="audio/mpeg">
+</audio>
+
+</footer>
+
+<script>
+
+let allNews=[];
+
+fetch("news.json?"+Date.now())
+
+.then(response=>response.json())
+
+.then(data=>{
+
+allNews=data;
+
+displayNews(data);
+
+});
+
+function displayNews(news){
+
+const container=document.getElementById("newsContainer");
+
+container.innerHTML="";
+
+news.forEach(n=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<img src="${n.image}">
+
+<h3>${n.title}</h3>
+
+<p>${n.summary}</p>
+
+<button class="readMore" onclick="alert('${n.details}')">Read More</button>
+
+<p style="font-size:12px;padding:10px;">
+${n.author} | Source: ${n.source}
+</p>
+
+</div>
+
+`;
+
+});
+
+}
+
+function filterNews(category){
+
+if(category==="All"){
+
+displayNews(allNews);
+
+}else{
+
+const filtered=allNews.filter(n=>n.category===category);
+
+displayNews(filtered);
+
+}
+
+}
+
+function searchNews(){
+
+const search=document.getElementById("searchBar").value.toLowerCase();
+
+const filtered=allNews.filter(n=>n.title.toLowerCase().includes(search));
+
+displayNews(filtered);
+
+}
+
+const API_KEY="688936c0efcb471d8120682cea255d20";
+
+fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=5&apiKey=${API_KEY}`)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let headlines="";
+
+data.articles.forEach(a=>{
+
+headlines+=a.title+"  •  ";
+
+});
+
+document.getElementById("ticker").innerText=headlines;
+
+})
+
+.catch(()=>{
+
+document.getElementById("ticker").innerText="Global headlines updating soon on Radiant Waves.";
+
+});
+
+</script>
+
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -38,15 +37,15 @@ object-fit:cover;
 
 nav{
 background:#111;
-text-align:center;
 padding:10px;
+text-align:center;
 }
 
 nav button{
 background:#c40000;
 color:white;
 border:none;
-padding:10px 15px;
+padding:10px 14px;
 margin:4px;
 cursor:pointer;
 }
@@ -55,7 +54,6 @@ cursor:pointer;
 background:black;
 color:white;
 padding:8px;
-font-size:14px;
 overflow:hidden;
 white-space:nowrap;
 }
@@ -128,19 +126,15 @@ margin:5px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 Radiant Waves Global News
-
 <div class="slogan">
 Truth • Insight • Global Perspective
 </div>
-
 </header>
 
 <div class="banner">
@@ -194,7 +188,7 @@ Loading global headlines...
 
 </div>
 
-<div style="margin-top:15px;">
+<div style="margin-top:15px">
 
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
@@ -208,12 +202,24 @@ Loading global headlines...
 
 let allNews=[];
 
+/* Load local newsroom stories */
+
 fetch("news.json")
 .then(response=>response.json())
 .then(data=>{
+
 allNews=data;
 displayNews(data);
+
+})
+.catch(error=>{
+
+document.getElementById("newsContainer").innerHTML =
+"<p style='padding:20px'>News loading error.</p>";
+
 });
+
+/* Display news */
 
 function displayNews(news){
 
@@ -235,7 +241,7 @@ container.innerHTML+=`
 
 <button class="readMore" onclick="alert('${n.details}')">Read More</button>
 
-<p style="font-size:12px;padding:10px;">
+<p style="font-size:12px;padding:10px">
 ${n.author} | Source: ${n.source}
 </p>
 
@@ -247,13 +253,14 @@ ${n.author} | Source: ${n.source}
 
 }
 
+/* Category filter */
+
 function filterNews(category){
 
 if(category==="All"){
 displayNews(allNews);
+return;
 }
-
-else{
 
 const filtered=allNews.filter(n=>n.category===category);
 
@@ -261,7 +268,7 @@ displayNews(filtered);
 
 }
 
-}
+/* Search */
 
 function searchNews(){
 
@@ -275,19 +282,35 @@ displayNews(filtered);
 
 }
 
-fetch("https://gnews.io/api/v4/top-headlines?lang=en&token=10618a434f80cc4ffe52717ea1bf2401")
+/* GLOBAL BREAKING NEWS (API) */
+
+fetch("https://gnews.io/api/v4/top-headlines?lang=en&max=10&token=10618a434f80cc4ffe52717ea1bf2401")
 .then(response=>response.json())
 .then(data=>{
 
 let headlines="";
 
-data.articles.slice(0,10).forEach(article=>{
+if(data.articles){
 
-headlines+=article.title+" ♦ ";
+data.articles.forEach(article=>{
+
+headlines += article.title + " ♦ ";
 
 });
 
+}else{
+
+headlines="Global news updates ♦ Europe politics ♦ US economy ♦ Asia technology ♦ Africa development";
+
+}
+
 document.getElementById("breakingNews").innerText=headlines;
+
+})
+.catch(error=>{
+
+document.getElementById("breakingNews").innerText =
+"Radiant Waves newsroom bringing global headlines";
 
 });
 

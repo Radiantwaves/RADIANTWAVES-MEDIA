@@ -37,7 +37,7 @@ audio{margin-top:10px;width:250px;}
 <body>
 
 <header>
-<img src="images/logo.png" class="logo" alt="RadiantWaves Logo">
+<img src="images/icon-512.png" class="logo" alt="RadiantWaves Logo">
 <h1>RadiantWaves</h1>
 <p class="tagline">Gateway to World News</p>
 <audio controls autoplay loop>
@@ -101,7 +101,7 @@ function renderNews(){
     let top = filtered[0];
     main.innerHTML += `
       <div class="top-headline">
-        <img src="${top.image}" alt="${top.title}">
+        <img src="${top.image || 'images/icon-512.png'}" alt="${top.title}">
         <h2>${top.title}</h2>
       </div>
     `;
@@ -110,7 +110,7 @@ function renderNews(){
   filtered.slice(1).forEach(article=>{
     main.innerHTML += `
       <div class="card">
-        <img src="${article.image}" alt="${article.title}">
+        <img src="${article.image || 'images/icon-512.png'}" alt="${article.title}">
         <h3>${article.title}</h3>
         <p>${article.story}</p>
       </div>
@@ -129,25 +129,25 @@ function renderNews(){
   if(filtered.length>0) document.getElementById("breaking").innerHTML = filtered[0].title;
 }
 
-// Fetch live news from API
+// Fetch live news using your API key
 async function fetchNews(){
   try{
     const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=10618a434f80cc4ffe52717ea1bf2401`);
     const data = await res.json();
     articles = data.articles.map(a=>{
       return {
-        title: a.title,
+        title: a.title || "No title",
         story: a.description || a.content || "Read more...",
-        image: a.urlToImage || "images/placeholder.jpg",
-        category: "world" // You can classify later based on source or keywords
+        image: a.urlToImage || "images/icon-512.png",
+        category: "world" // fallback: all live news as world
       };
     });
     renderNews();
   }catch(err){
     console.error("Failed to fetch news:", err);
-    // Fallback to local news if API fails
+    // fallback local news
     articles = [
-      {title:"Local News Sample", story:"Example story content", image:"images/placeholder.jpg", category:"world"}
+      {title:"Local News Example", story:"This is placeholder story.", image:"images/icon-512.png", category:"world"}
     ];
     renderNews();
   }

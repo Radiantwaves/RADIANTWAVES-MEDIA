@@ -13,8 +13,8 @@
   }
 
   header {
-    background: #000; /* Black header */
-    color: #ff0000;   /* Red text for RadiantWaves */
+    background: #000; /* black header */
+    color: #ff0000;   /* RadiantWaves in red */
     padding: 20px;
     text-align: center;
     position: relative;
@@ -32,12 +32,13 @@
 
   nav {
     display: flex;
-    justify-content: center; /* center the menu */
+    justify-content: center; 
     background: #222;
+    flex-wrap: wrap; /* wrap on small screens */
   }
   nav a {
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     text-decoration: none;
     text-align: center;
   }
@@ -68,6 +69,8 @@
   }
   .article {
     margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
   }
 
   footer {
@@ -81,6 +84,7 @@
     margin: 0 10px;
     vertical-align: middle;
     display: inline-block;
+    filter: brightness(0) invert(1); /* make dark logos visible on black footer */
   }
 </style>
 </head>
@@ -147,13 +151,14 @@
 
   loadNews();
 
-  // Update breaking news every 15 seconds
+  // Breaking news rotation
   const breakingNews = document.querySelector('#breaking-news span');
   const headlines = [
     "RadiantWaves Global News Update 12 March 2026",
-    "Middle East tensions rise amid new clashes",
+    "UK dual passport citizens face challenges in France",
     "Asia Tech sector advances AI innovations",
-    "India hosts Global Agri-Food Women Conference"
+    "India hosts Global Agri-Food Women Conference",
+    "Olympics 2026 updates: Opening ceremony highlights"
   ];
   let i = 0;
   setInterval(() => {

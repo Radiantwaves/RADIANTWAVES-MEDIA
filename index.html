@@ -38,12 +38,12 @@ audio{margin-top:10px;width:250px;}
 
 <header>
 <!-- Inline Base64 logo -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==" alt="RadiantWaves Logo">
+<img src="data:image/png;base64,INSERT_LOGO_BASE64_HERE" alt="RadiantWaves Logo">
 <h1>RadiantWaves</h1>
 <p class="tagline">Gateway to World News</p>
 <audio controls autoplay loop>
-  <source src="audio/news-music.mp3" type="audio/mpeg">
-  Your browser does not support audio
+<source src="data:audio/mpeg;base64,INSERT_AUDIO_BASE64_HERE" type="audio/mpeg">
+Your browser does not support audio.
 </audio>
 </header>
 
@@ -74,10 +74,10 @@ audio{margin-top:10px;width:250px;}
 <p>Truth • Insight • Global Perspective</p>
 <div class="social">
 <!-- Inline Base64 social icons -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABKElEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Facebook">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABMklEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Instagram">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABNklEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Twitter">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABK0lEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="TikTok">
+<img src="data:image/png;base64,INSERT_FACEBOOK_BASE64" alt="Facebook">
+<img src="data:image/png;base64,INSERT_INSTAGRAM_BASE64" alt="Instagram">
+<img src="data:image/png;base64,INSERT_TWITTER_BASE64" alt="Twitter">
+<img src="data:image/png;base64,INSERT_TIKTOK_BASE64" alt="TikTok">
 </div>
 </footer>
 
@@ -139,7 +139,7 @@ async function fetchNews(){
       return {
         title: a.title || "No title",
         story: a.description || a.content || "Read more...",
-        image: a.urlToImage || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==",
+        image: a.urlToImage || "data:image/png;base64,INSERT_LOGO_BASE64_HERE",
         category: "world"
       };
     });
@@ -147,7 +147,7 @@ async function fetchNews(){
   }catch(err){
     console.error("Failed to fetch news:", err);
     articles = [
-      {title:"Local News Example", story:"This is placeholder story.", image:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==", category:"world"}
+      {title:"Local News Example", story:"This is placeholder story.", image:"data:image/png;base64,INSERT_LOGO_BASE64_HERE", category:"world"}
     ];
     renderNews();
   }

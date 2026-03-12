@@ -6,7 +6,6 @@
 <title>RadiantWaves Global News</title>
 <style>
 body{margin:0;font-family:Arial;background:#f4f4f4;color:#333;}
-a{text-decoration:none;}
 header{text-align:center;background:white;padding:15px;border-bottom:3px solid #c00;}
 header img{width:120px;}
 h1{color:#c00;margin:10px 0;}
@@ -37,13 +36,11 @@ audio{margin-top:10px;width:250px;}
 <body>
 
 <header>
-<!-- RadiantWaves Logo Base64 -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==" alt="RadiantWaves Logo">
+<img src="icon-512.png" alt="RadiantWaves Logo">
 <h1>RadiantWaves</h1>
 <p class="tagline">Gateway to World News</p>
-<!-- Short MP3 Base64 -->
 <audio controls autoplay loop>
-<source src="data:audio/mpeg;base64,//uQxAAADhJREFUeJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==" type="audio/mpeg">
+<source src="news-music.mp3" type="audio/mpeg">
 Your browser does not support audio.
 </audio>
 </header>
@@ -74,11 +71,10 @@ Your browser does not support audio.
 <p>© 2026 RadiantWaves News Network</p>
 <p>Truth • Insight • Global Perspective</p>
 <div class="social">
-<!-- Social icons Base64 -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABKElEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Facebook">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABMklEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Instagram">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABNklEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="Twitter">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABK0lEQVR4nO3SsQnAIAwE0fD/NV7iIzIiRUlPTyq/kIhQ9mBrnOAbAAAQAAAAAAAAAAAAAAAAAAAJ0Pkkb6v+lIjv6tWta5yWl8hn2d5N5xe0Vb+6y53e1Xvm+q1X+XsvlVt+qjqlq/+89AAAAAAAAAAAAAID+F+IPAAAAAAAAAAAAAAAgf4X4g8AAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAAAAAACB/hfiDwAAAAAAAABP+H1tMfx4e1lIAAAAAElFTkSuQmCC" alt="TikTok">
+<img src="facebook.png" alt="Facebook">
+<img src="instagram.png" alt="Instagram">
+<img src="twitter.png" alt="Twitter">
+<img src="tiktok.png" alt="TikTok">
 </div>
 </footer>
 
@@ -131,6 +127,7 @@ function renderNews(){
   if(filtered.length>0) document.getElementById("breaking").innerHTML = filtered[0].title;
 }
 
+// Try fetching live API, fallback to local news.json
 async function fetchNews(){
   try{
     const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=10618a434f80cc4ffe52717ea1bf2401`);
@@ -139,20 +136,24 @@ async function fetchNews(){
       return {
         title: a.title || "No title",
         story: a.description || a.content || "Read more...",
-        image: a.urlToImage || "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==",
+        image: a.urlToImage || "icon-512.png",
         category: "world"
       };
     });
     renderNews();
   }catch(err){
-    console.error("Failed to fetch news:", err);
-    articles = [{title:"Local News Example", story:"This is placeholder story.", image:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABG0lEQVR4nO3RMQ0AAAgDINc/9K3hBBCAk0FrlIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL8CTxIAAFxBzJgAAAABJRU5ErkJggg==", category:"world"}];
-    renderNews();
+    console.error("API failed, loading local news.json", err);
+    // fallback JSON
+    fetch("news.json")
+      .then(res=>res.json())
+      .then(data=>{
+        articles = data.articles;
+        renderNews();
+      });
   }
 }
 
 fetchNews();
 </script>
-
 </body>
 </html>

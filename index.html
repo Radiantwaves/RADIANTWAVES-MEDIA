@@ -37,7 +37,8 @@ audio{margin-top:10px;width:250px;}
 <body>
 
 <header>
-<img src="images/icon-512.png" class="logo" alt="RadiantWaves Logo">
+<!-- Inline Base64 logo -->
+<img src="data:image/png;base64,INSERT_BASE64_LOGO_HERE" alt="RadiantWaves Logo">
 <h1>RadiantWaves</h1>
 <p class="tagline">Gateway to World News</p>
 <audio controls autoplay loop>
@@ -72,10 +73,11 @@ audio{margin-top:10px;width:250px;}
 <p>© 2026 RadiantWaves News Network</p>
 <p>Truth • Insight • Global Perspective</p>
 <div class="social">
-<img src="social/facebook.png" alt="Facebook">
-<img src="social/instagram.png" alt="Instagram">
-<img src="social/twitter.png" alt="Twitter">
-<img src="social/tiktok.png" alt="TikTok">
+<!-- Inline Base64 social icons -->
+<img src="data:image/png;base64,INSERT_FACEBOOK_BASE64" alt="Facebook">
+<img src="data:image/png;base64,INSERT_INSTAGRAM_BASE64" alt="Instagram">
+<img src="data:image/png;base64,INSERT_TWITTER_BASE64" alt="Twitter">
+<img src="data:image/png;base64,INSERT_TIKTOK_BASE64" alt="TikTok">
 </div>
 </footer>
 
@@ -97,11 +99,10 @@ function renderNews(){
   let filtered = (currentCategory==='all') ? articles : articles.filter(a=>a.category===currentCategory);
 
   if(filtered.length>0){
-    // Top headline
     let top = filtered[0];
     main.innerHTML += `
       <div class="top-headline">
-        <img src="${top.image || 'images/icon-512.png'}" alt="${top.title}">
+        <img src="${top.image || 'data:image/png;base64,INSERT_BASE64_LOGO_HERE'}" alt="${top.title}">
         <h2>${top.title}</h2>
       </div>
     `;
@@ -110,7 +111,7 @@ function renderNews(){
   filtered.slice(1).forEach(article=>{
     main.innerHTML += `
       <div class="card">
-        <img src="${article.image || 'images/icon-512.png'}" alt="${article.title}">
+        <img src="${article.image || 'data:image/png;base64,INSERT_BASE64_LOGO_HERE'}" alt="${article.title}">
         <h3>${article.title}</h3>
         <p>${article.story}</p>
       </div>
@@ -138,16 +139,15 @@ async function fetchNews(){
       return {
         title: a.title || "No title",
         story: a.description || a.content || "Read more...",
-        image: a.urlToImage || "images/icon-512.png",
-        category: "world" // fallback: all live news as world
+        image: a.urlToImage || 'data:image/png;base64,INSERT_BASE64_LOGO_HERE',
+        category: "world"
       };
     });
     renderNews();
   }catch(err){
     console.error("Failed to fetch news:", err);
-    // fallback local news
     articles = [
-      {title:"Local News Example", story:"This is placeholder story.", image:"images/icon-512.png", category:"world"}
+      {title:"Local News Example", story:"This is placeholder story.", image:'data:image/png;base64,INSERT_BASE64_LOGO_HERE', category:"world"}
     ];
     renderNews();
   }

@@ -1,198 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RadiantWaves News Network</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-    }
-
-    /* Header */
-    header {
-      background-color: #000000;
-      color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    header h1 {
-      color: #ff0000; /* RadiantWaves logo in red */
-      margin: 0;
-    }
-    header .slogan {
-      font-size: 0.9em;
-      color: #ffffff;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: #333333;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin: 0;
-    }
-    nav a {
-      display: block;
-      padding: 10px 20px;
-      color: #ffffff;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #555555;
-    }
-
-    /* Breaking news ticker */
-    .breaking-news-container {
-      background-color: #ff0000;
-      color: #ffffff;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px;
-      font-weight: bold;
-    }
-    .breaking-news {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll 20s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* Main content */
-    main {
-      padding: 20px;
-    }
-    .news-card {
-      border: 1px solid #ddd;
-      margin-bottom: 15px;
-      padding: 15px;
-      display: flex;
-      gap: 15px;
-    }
-    .news-card img {
-      width: 150px;
-      height: 100px;
-      object-fit: cover;
-    }
-    .news-card h3 {
-      margin: 0 0 10px 0;
-      color: #003366; /* Dark blue for headlines */
-    }
-    .news-card p {
-      margin: 0;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #222222;
-      color: #ffffff;
-      text-align: center;
-      padding: 15px;
-    }
-    footer .socials img {
-      width: 30px;
-      margin: 0 5px;
-      vertical-align: middle;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadiantWaves News Network</title>
+<style>
+  body { margin:0; font-family: Arial,sans-serif; background:#fff; color:#000; }
+  header { background:#000; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; }
+  header h1 { color:#ff0000; margin:0; }
+  header .slogan { font-size:0.9em; color:#fff; }
+  nav { background:#333; }
+  nav ul { display:flex; list-style:none; margin:0; padding:0; }
+  nav li { margin:0; }
+  nav a { display:block; padding:10px 20px; color:#fff; text-decoration:none; }
+  nav a:hover { background:#555; }
+  .breaking-news-container { background:#ff0000; color:#fff; overflow:hidden; white-space:nowrap; padding:10px; font-weight:bold; }
+  .breaking-news { display:inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
+  @keyframes scroll { 0%{transform:translateX(0);} 100%{transform:translateX(-100%);} }
+  main { padding:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .news-card { border:1px solid #ddd; padding:10px; display:flex; flex-direction:column; gap:10px; }
+  .news-card img { width:100%; height:150px; object-fit:cover; }
+  .news-card h3 { margin:0; color:#1E3A8A; font-size:18px; }
+  .news-card p { margin:0; }
+  .news-card small { color:#555; }
+  footer { background:#222; color:#fff; text-align:center; padding:15px; }
+  footer .socials img { width:30px; margin:0 5px; vertical-align:middle; }
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>RadiantWaves</h1>
-    <div class="slogan">Truth. Insight. Global Perspective.</div>
-  </header>
+<header>
+  <h1>RadiantWaves</h1>
+  <div class="slogan">Truth. Insight. Global Perspective.</div>
+</header>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="world.html">World</a></li>
-      <li><a href="politics.html">Politics</a></li>
-      <li><a href="business.html">Business</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li><a href="sports.html">Sports</a></li>
-      <li><a href="science.html">Science</a></li>
-      <li><a href="entertainment.html">Entertainment</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="world.html">World</a></li>
+    <li><a href="politics.html">Politics</a></li>
+    <li><a href="business.html">Business</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="sports.html">Sports</a></li>
+    <li><a href="science.html">Science</a></li>
+    <li><a href="entertainment.html">Entertainment</a></li>
+  </ul>
+</nav>
 
-  <!-- Breaking News -->
-  <div class="breaking-news-container">
-    <div class="breaking-news" id="breaking-news">Loading global headlines...</div>
+<div class="breaking-news-container">
+  <div class="breaking-news" id="breaking-news">Loading global headlines...</div>
+</div>
+
+<main id="news-container">
+  <!-- News cards will load here -->
+</main>
+
+<footer>
+  <div>&copy; 2026 RadiantWaves News Network</div>
+  <div class="slogan">Truth. Insight. Global Perspective.</div>
+  <div class="socials">
+    <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
+    <a href="https://www.tiktok.com/"><img src="tiktok.png" alt="TikTok"></a>
+    <a href="https://twitter.com/"><img src="twitter.png" alt="Twitter"></a>
   </div>
+</footer>
 
-  <!-- Main content -->
-  <main id="news-container">
-    <!-- News cards will be injected here -->
-  </main>
+<script>
+async function loadNews() {
+  try {
+    const response = await fetch('news.json');
+    const newsData = await response.json();
 
-  <!-- Footer -->
-  <footer>
-    <div>&copy; 2026 RadiantWaves News Network</div>
-    <div class="slogan">Truth. Insight. Global Perspective.</div>
-    <div class="socials">
-      <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
-      <a href="https://www.tiktok.com/"><img src="tiktok.png" alt="TikTok"></a>
-      <a href="https://twitter.com/"><img src="twitter.png" alt="Twitter"></a>
-    </div>
-  </footer>
+    const newsContainer = document.getElementById('news-container');
+    const breakingNews = document.getElementById('breaking-news');
 
-  <!-- Scripts -->
-  <script>
-    // Load news from JSON
-    async function loadNews() {
-      try {
-        const response = await fetch('news.json');
-        const newsData = await response.json();
-
-        const newsContainer = document.getElementById('news-container');
-        const breakingNews = document.getElementById('breaking-news');
-
-        if(newsData.length === 0) {
-          newsContainer.innerHTML = '<p>No news available at this time.</p>';
-          breakingNews.textContent = 'No breaking news at this time.';
-          return;
-        }
-
-        // Populate breaking news ticker
-        breakingNews.textContent = newsData.map(item => item.title).join(' *** ');
-
-        // Populate news cards
-        newsContainer.innerHTML = newsData.map(article => `
-          <div class="news-card">
-            <img src="${article.image || 'news-placeholder.jpg'}" alt="News Image">
-            <div>
-              <h3>${article.title}</h3>
-              <p>${article.summary}</p>
-              <small>${article.date}</small>
-            </div>
-          </div>
-        `).join('');
-      } catch (error) {
-        console.error('Error loading news:', error);
-        document.getElementById('news-container').innerHTML = '<p>Error loading news.</p>';
-      }
+    if(newsData.length === 0){
+      newsContainer.innerHTML = '<p>No news available at this time.</p>';
+      breakingNews.textContent = 'No breaking news at this time.';
+      return;
     }
 
-    loadNews();
-  </script>
+    breakingNews.textContent = newsData.map(n => n.title).join(' *** ');
+
+    newsContainer.innerHTML = newsData.map((article,i) => `
+      <div class="news-card">
+        <img src="${article.image || 'main-story.jpg'}" alt="News ${i+1}">
+        <h3>${article.title}</h3>
+        <p>${article.summary}</p>
+        <small>${article.date}</small>
+      </div>
+    `).join('');
+
+  } catch(e){
+    console.error(e);
+    document.getElementById('news-container').innerHTML = '<p>Error loading news.</p>';
+  }
+}
+
+loadNews();
+</script>
 
 </body>
 </html>

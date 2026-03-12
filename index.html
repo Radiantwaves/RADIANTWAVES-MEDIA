@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RadiantWaves News Network</title>
 
 <style>
+
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f2f2f2;
 }
 
+/* HEADER */
+
 header{
-background:#002b45;
+background:#08364b;
 color:white;
-padding:15px;
 text-align:center;
+padding:25px;
 }
 
-.logo img{
-width:120px;
+header img{
+width:150px;
+border-radius:5px;
 }
+
+h1{
+margin:10px 0;
+font-size:36px;
+}
+
+.slogan{
+font-size:18px;
+opacity:0.9;
+}
+
+/* MUSIC */
+
+audio{
+margin-top:15px;
+width:260px;
+}
+
+/* BREAKING NEWS */
+
+.breaking{
+background:red;
+color:white;
+padding:10px;
+font-weight:bold;
+}
+
+/* NAVIGATION */
 
 nav{
-background:#111;
-padding:10px;
+background:black;
 text-align:center;
+padding:12px;
 }
 
 nav a{
@@ -34,60 +68,60 @@ color:white;
 margin:0 10px;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
 }
 
-.breaking{
-background:red;
-color:white;
-padding:8px;
-font-weight:bold;
-overflow:hidden;
-}
+/* NEWS */
 
-main{
-max-width:1000px;
+#news{
+max-width:900px;
 margin:auto;
 padding:20px;
 }
 
 .news-card{
 background:white;
-margin-bottom:15px;
 padding:15px;
+margin-bottom:15px;
 border-radius:6px;
 box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 
 .news-card img{
 width:100%;
-max-height:200px;
-object-fit:cover;
 border-radius:4px;
+margin-bottom:10px;
 }
 
+/* FOOTER */
+
 footer{
-background:#002b45;
+background:#08364b;
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
 }
 
 .social img{
 width:35px;
-margin:5px;
+margin:8px;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
 <img src="main-story.jpg">
+
 <h1>RadiantWaves</h1>
-<p>Gateway to World News, connecting you to the World</p>
-</div>
+
+<p class="slogan">
+Gateway to World News, connecting you to the World
+</p>
 
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
@@ -96,79 +130,79 @@ margin:5px;
 </header>
 
 <div class="breaking" id="breaking">
-Loading global headlines...
+RadiantWaves Global News Update
 </div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#">World</a>
 <a href="#">Politics</a>
 <a href="#">Business</a>
 <a href="#">Technology</a>
 <a href="#">Sports</a>
+
 </nav>
 
-<main>
+<div id="news">
 
-<div id="news"></div>
-
-</main>
+</div>
 
 <footer>
 
 <p>© 2026 RadiantWaves News Network</p>
+
 <p>Truth. Insight. Global Perspective</p>
 
 <div class="social">
+
 <img src="facebook.png">
 <img src="instagram.png">
+<img src="twitter.png">
+<img src="tiktok.png">
+
 </div>
 
 </footer>
 
 <script>
 
-const apiKey="10618a434f80cc4ffe52717ea1bf2401";
+/* LOAD NEWS FROM JSON */
 
-const url=`https://gnews.io/api/v4/top-headlines?lang=en&max=10&apikey=${apiKey}`;
+fetch("news.json")
+.then(response => response.json())
+.then(data => {
 
-fetch(url)
-.then(res=>res.json())
-.then(data=>{
+let newsContainer = document.getElementById("news");
 
-const newsContainer=document.getElementById("news");
-const breaking=document.getElementById("breaking");
+data.articles.forEach(article => {
 
-if(data.articles){
+newsContainer.innerHTML += `
 
-breaking.innerHTML=data.articles[0].title;
+<div class="news-card">
 
-data.articles.forEach(article=>{
-
-let card=document.createElement("div");
-card.className="news-card";
-
-card.innerHTML=`
-
-<img src="${article.image || 'main-story.jpg'}">
+<img src="${article.image}">
 
 <h3>${article.title}</h3>
 
-<p>${article.description || ''}</p>
+<p>${article.summary}</p>
 
-<a href="${article.url}" target="_blank">Read full story</a>
+</div>
 
 `;
 
-newsContainer.appendChild(card);
-
 });
+
+/* BREAKING NEWS */
+
+let breaking = document.getElementById("breaking");
+
+if(data.articles.length > 0){
+
+breaking.innerHTML = data.articles[0].title;
 
 }
 
-})
-.catch(err=>{
-document.getElementById("breaking").innerHTML="Global headlines updating soon";
 });
 
 </script>

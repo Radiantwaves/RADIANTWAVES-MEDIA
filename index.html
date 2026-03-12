@@ -1,102 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RadiantWaves News Network</title>
-    <link rel="icon" href="icon-192.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #FFD700;
-            padding: 15px 20px;
-            text-align: center;
-            position: relative;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 0.9em;
-            color: #333;
-        }
-        nav {
-            background: #333;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: #fff;
-            padding: 12px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background: #555;
-        }
-        #breaking-news {
-            background: #fff;
-            color: #c00;
-            padding: 10px 20px;
-            font-weight: bold;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        #breaking-news span {
-            display: inline-block;
-            padding-right: 50px;
-            animation: scroll 15s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        #news {
-            padding: 20px;
-        }
-        .article {
-            background: #fff;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .article h3 {
-            margin: 0 0 10px;
-        }
-        .article p {
-            margin: 0;
-        }
-        footer {
-            background: #222;
-            color: #fff;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        .social-icons img {
-            width: 32px;
-            margin: 0 10px;
-            vertical-align: middle;
-        }
-        #music {
-            display: flex;
-            justify-content: center;
-            margin: 10px 0;
-        }
-        #music audio {
-            outline: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadiantWaves News Network</title>
+<link rel="icon" href="icon-192.png">
+<style>
+body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4;}
+header { background:#FFD700; padding:10px 20px; display:flex; align-items:center; justify-content:space-between;}
+header img { height:50px; }
+header .slogan { text-align:right; font-size:0.9em; color:#333; }
+nav { background:#333; display:flex; justify-content:center; }
+nav a { color:#fff; padding:12px 20px; text-decoration:none; }
+nav a:hover { background:#555; }
+#breaking-news { background:#fff; color:#c00; padding:10px 20px; font-weight:bold; overflow:hidden; white-space:nowrap; }
+#breaking-news span { display:inline-block; padding-right:50px; animation:scroll 15s linear infinite; }
+@keyframes scroll { 0% { transform:translateX(100%);} 100% { transform:translateX(-100%); } }
+#news { padding:20px; }
+.article { background:#fff; margin-bottom:15px; padding:15px; border-radius:8px; }
+.article h3 { margin:0 0 10px; }
+footer { background:#222; color:#fff; padding:15px 20px; text-align:center; }
+footer .social-icons img { width:32px; margin:0 5px; vertical-align:middle; }
+#music { display:flex; justify-content:center; margin:10px 0; }
+</style>
 </head>
 <body>
 
 <header>
-    <h1>RadiantWaves News Network</h1>
-    <p>Gateway to World News, connecting you to the World</p>
-    <p>Truth. Insight. Global Perspective.</p>
+    <img src="main-story.jpg" alt="RadiantWaves Logo">
+    <div class="slogan">
+        <p>Gateway to World News, connecting you to the World</p>
+        <p>Truth. Insight. Global Perspective.</p>
+    </div>
 </header>
 
 <nav>
@@ -116,63 +51,50 @@
 <div id="music">
     <audio controls autoplay loop>
         <source src="news-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        Your browser does not support audio.
     </audio>
 </div>
 
 <div id="news">
-    <!-- News articles will appear here -->
+    <!-- News articles from JSON -->
 </div>
 
 <footer>
     <p>&copy; 2026 RadiantWaves News Network</p>
     <div class="social-icons">
-        <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
     </div>
 </footer>
 
 <script>
 let newsData = [];
-let breakingIndex = 0;
-
-// Load news from JSON
+// Load news JSON
 fetch('news.json')
-    .then(response => response.json())
-    .then(data => {
-        newsData = data;
-        displayBreakingNews();
-        displayNews('home');
-    })
-    .catch(err => console.error('Error loading news:', err));
+.then(res => res.json())
+.then(data => { newsData = data; displayBreakingNews(); displayNews('home'); })
+.catch(err => console.error('News load error:', err));
 
 function displayBreakingNews() {
-    const breaking = newsData.map(article => article.title).join(' • ');
-    const breakingText = document.getElementById('breaking-text');
-    breakingText.textContent = breaking || "No news available at this time";
+    const text = newsData.map(a => a.title).join(' • ');
+    document.getElementById('breaking-text').textContent = text || 'No news available at this time';
 }
 
 function displayNews(category) {
-    const newsContainer = document.getElementById('news');
-    newsContainer.innerHTML = '';
-    const filtered = category === 'home' ? newsData : newsData.filter(a => a.category === category);
-    
-    if(filtered.length === 0){
-        newsContainer.innerHTML = '<p>No news available at this time.</p>';
-        return;
-    }
-    
-    filtered.forEach(article => {
-        const div = document.createElement('div');
-        div.classList.add('article');
-        div.innerHTML = `<h3>${article.title}</h3><p>${article.summary}</p>`;
-        newsContainer.appendChild(div);
+    const container = document.getElementById('news');
+    container.innerHTML = '';
+    const filtered = category==='home'? newsData : newsData.filter(a => a.category===category);
+    if(filtered.length===0){ container.innerHTML='<p>No news available at this time.</p>'; return; }
+    filtered.forEach(a=>{
+        const div=document.createElement('div'); div.className='article';
+        div.innerHTML=`<h3>${a.title}</h3><p>${a.summary}</p>`;
+        container.appendChild(div);
     });
 }
 
-function showCategory(category){
-    displayNews(category);
-}
+function showCategory(category){ displayNews(category); }
 </script>
 
 </body>

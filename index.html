@@ -1,230 +1,197 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves News Network</title><style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RadiantWaves Global News</title>
+
+<style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#f2f2f2;
+background:#f4f4f4;
 }
 
 /* HEADER */
 
 header{
-background:#08364b;
-color:white;
+background:white;
 text-align:center;
-padding:25px;
+padding:20px;
+border-bottom:3px solid #c40000;
 }
 
 header img{
-width:150px;
-border-radius:6px;
+width:140px;
 }
 
 h1{
+color:#c40000;
 margin:10px 0;
-font-size:36px;
 }
 
 .slogan{
-font-size:18px;
-opacity:0.9;
+color:#333;
+font-size:16px;
 }
 
-/* MUSIC */
-
-audio{
-margin-top:15px;
-width:260px;
-}
-
-/* BREAKING NEWS */
+/* BREAKING */
 
 .breaking{
-background:red;
+background:#c40000;
 color:white;
 padding:10px;
 font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
-background:black;
-text-align:center;
+background:#111;
 padding:12px;
+text-align:center;
 }
 
 nav a{
 color:white;
-margin:0 10px;
+margin:0 12px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
-cursor:pointer;
 }
 
 nav a:hover{
-color:#ff0000;
+color:#ffcc00;
 }
 
-/* NEWS SECTION */
+/* NEWS AREA */
 
 #news{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:20px;
 }
 
+/* CARD */
+
 .news-card{
 background:white;
+margin-bottom:20px;
 padding:15px;
-margin-bottom:15px;
 border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
 
 .news-card img{
 width:100%;
-border-radius:4px;
+border-radius:5px;
 margin-bottom:10px;
 }
 
 .news-card h3{
-color:#08364b;
-cursor:pointer;
+color:#c40000;
+}
+
+.news-card p{
+color:#333;
 }
 
 /* FOOTER */
 
 footer{
-background:#08364b;
+background:#111;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
+margin-top:40px;
 }
 
 .social img{
-width:35px;
-margin:8px;
+width:32px;
+margin:10px;
 }
 
-</style></head><body><header><img src="main-story.jpg"><h1>RadiantWaves</h1><p class="slogan">
-Gateway to World News, connecting you to the World
-</p><audio controls autoplay loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio></header><div class="breaking"><marquee id="breaking" scrollamount="6">RadiantWaves Global News Update
+</style>
 
-</marquee></div><nav><a onclick="loadNews(null)">Home</a>
-<a onclick="loadNews('World')">World</a>
-<a onclick="loadNews('Politics')">Politics</a>
-<a onclick="loadNews('Business')">Business</a>
-<a onclick="loadNews('Technology')">Technology</a>
-<a onclick="loadNews('Sports')">Sports</a>
-<a onclick="loadNews('Science')">Science</a>
-<a onclick="loadNews('Entertainment')">Entertainment</a>
+</head>
 
-</nav><div id="news"></div><footer><p>© 2026 RadiantWaves News Network</p><p>Truth. Insight. Global Perspective</p><div class="social"><a href="#"><img src="facebook.png"></a>
-<a href="#"><img src="instagram.png"></a>
-<a href="#"><img src="twitter.png"></a>
-<a href="#"><img src="tiktok.png"></a>
+<body>
 
-</div></footer><script>
+<header>
 
-let allArticles = [];
+<img src="icon-512.png">
 
+<h1>RadiantWaves</h1>
 
-/* API KEY */
+<p class="slogan">Gateway to World News</p>
 
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
+<audio controls autoplay loop>
+<source src="audio/news-music.mp3" type="audio/mpeg">
+</audio>
 
+</header>
 
-const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=20&apiKey=${apiKey}`;
+<div class="breaking" id="breaking">
+Loading breaking news...
+</div>
 
+<nav>
 
-/* TRY API FIRST */
+<a href="index.html">Home</a>
+<a href="world.html">World</a>
+<a href="politics.html">Politics</a>
+<a href="business.html">Business</a>
+<a href="technology.html">Technology</a>
+<a href="sports.html">Sports</a>
+<a href="entertainment.html">Entertainment</a>
 
-fetch(apiURL)
+</nav>
 
-.then(res => res.json())
+<div id="news"></div>
 
-.then(data => {
+<footer>
 
-if(data.articles && data.articles.length > 0){
+<p>© 2026 RadiantWaves Global News</p>
 
-allArticles = data.articles.map(article => ({
+<p>Truth • Insight • Global Perspective</p>
 
-title: article.title || "No title",
+<div class="social">
 
-summary: article.description || "No summary available",
+<a href="#"><img src="social/facebook.png"></a>
+<a href="#"><img src="social/instagram.png"></a>
+<a href="#"><img src="social/twitter.png"></a>
+<a href="#"><img src="social/tiktok.png"></a>
 
-category: "World",
+</div>
 
-image: article.urlToImage || "icon-512.png"
+</footer>
 
-}));
-
-loadNews(null);
-
-}else{
-
-throw new Error("API returned empty");
-
-}
-
-})
-
-
-.catch(err => {
-
-/* FALLBACK TO JSON */
+<script>
 
 fetch("news.json")
 
-.then(res => res.json())
+.then(response => response.json())
 
 .then(data => {
 
-allArticles = data.articles;
-
-loadNews(null);
-
-});
-
-});
-
-
-/* LOAD NEWS FUNCTION */
-
-function loadNews(category){
-
 let container = document.getElementById("news");
 
-container.innerHTML = "";
-
-
-let filtered = category ? allArticles.filter(a => a.category === category) : allArticles;
-
-
-filtered.forEach((article,i)=>{
+data.articles.forEach(article => {
 
 container.innerHTML += `
 
 <div class="news-card">
 
-<img src="${article.image || 'icon-512.png'}">
+<img src="${article.image}">
 
-<h3 onclick="toggleSummary(${i})">
+<h3>${article.title}</h3>
 
-${article.title}
-
-</h3>
-
-<p id="summary-${i}" style="display:none">
-
-${article.summary}
-
-</p>
+<p>${article.story}</p>
 
 </div>
 
@@ -232,37 +199,17 @@ ${article.summary}
 
 });
 
+document.getElementById("breaking").innerHTML = data.articles[0].title;
 
-let breaking = document.getElementById("breaking");
+})
 
+.catch(error => {
 
-if(filtered.length>0){
+document.getElementById("breaking").innerHTML = "RadiantWaves Global News Update";
 
-breaking.innerHTML = filtered.map(a=>a.title).join(" • ");
+});
 
-}
+</script>
 
-}
-
-
-/* SHOW SUMMARY */
-
-function toggleSummary(id){
-
-let summary = document.getElementById("summary-"+id);
-
-
-if(summary.style.display==="none"){
-
-summary.style.display="block";
-
-}else{
-
-summary.style.display="none";
-
-}
-
-}
-
-</script></body>
+</body>
 </html>

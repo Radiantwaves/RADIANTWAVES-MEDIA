@@ -1,240 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves News Network</title>
-
-<style>
-
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background:white;
-color:black;
-}
-
-/* HEADER */
-
-header{
-padding:20px;
-border-bottom:3px solid #c40000;
-}
-
-header h1{
-margin:0;
-color:#c40000;
-}
-
-header p{
-margin:3px 0 0 0;
-font-size:14px;
-}
-
-/* NAVIGATION */
-
-nav{
-background:#111;
-padding:10px;
-}
-
-nav a{
-color:white;
-margin-right:18px;
-text-decoration:none;
-font-size:14px;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#ff4d4d;
-}
-
-/* BREAKING NEWS */
-
-.breaking{
-background:#c40000;
-color:white;
-padding:10px;
-}
-
-.ticker{
-white-space:nowrap;
-overflow:hidden;
-}
-
-.ticker span{
-display:inline-block;
-padding-left:100%;
-animation:ticker 25s linear infinite;
-}
-
-@keyframes ticker{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
-/* MAIN STORY */
-
-.main-story{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
-
-.main-story img{
-width:100%;
-border-radius:5px;
-}
-
-.main-story h2{
-color:#c40000;
-}
-
-/* NEWS GRID */
-
-.news-grid{
-max-width:1100px;
-margin:auto;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.news-card img{
-width:100%;
-border-radius:5px;
-}
-
-.news-card h3{
-color:#c40000;
-font-size:18px;
-}
-
-/* AUDIO */
-
-.audio{
-text-align:center;
-margin:20px;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-padding:25px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.social img{
-width:28px;
-margin-right:10px;
-filter:invert(1);
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiantWaves News Network</title>
+    <link rel="icon" href="icon-192.png" sizes="192x192">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000;
+        }
+        header {
+            background-color: #000000;
+            color: #ff0000; /* RadiantWaves logo red */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .breaking-news {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .breaking-news span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .main-story {
+            padding: 20px;
+        }
+        .main-story img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .main-story h2 {
+            color: #1E3A8A; /* Royal Blue headlines */
+        }
+        .news-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .news-card {
+            width: calc(33% - 20px);
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .news-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        .news-card h3 {
+            color: #1E3A8A; /* Royal Blue headlines */
+            margin: 0 0 5px 0;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>RadiantWaves</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="world.html">World</a>
+            <a href="politics.html">Politics</a>
+            <a href="business.html">Business</a>
+            <a href="tech.html">Technology</a>
+            <a href="sports.html">Sports</a>
+            <a href="entertainment.html">Entertainment</a>
+        </nav>
+    </header>
 
-<header>
-<h1>RadiantWaves News Network</h1>
-<p>Gateway to World News — Connecting You to the World</p>
-</header>
+    <div class="breaking-news">
+        <span>Breaking News: Global headlines updating soon ...</span>
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="world.html">World</a>
-<a href="politics.html">Politics</a>
-<a href="business.html">Business</a>
-<a href="technology.html">Technology</a>
-<a href="sports.html">Sports</a>
-</nav>
+    <div class="main-story">
+        <img src="main-feature.jpg" alt="Main Feature">
+        <h2>Today's Headlines</h2>
+        <p>No news available at this time. Once the JSON or API feed loads, stories will appear here.</p>
+    </div>
 
-<div class="breaking">
-<div class="ticker">
-<span id="breakingText">Loading global headlines...</span>
-</div>
-</div>
+    <div class="news-grid" id="newsGrid">
+        <!-- News cards loaded dynamically -->
+    </div>
 
-<section class="main-story" id="mainStory"></section>
+    <div class="footer">
+        <p>&copy; 2026 RadiantWaves News Network</p>
+        <p>Truth. Insight. Global Perspective.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://tiktok.com"><img src="tiktok.png" alt="TikTok"></a>
+        </div>
+    </div>
 
-<section class="news-grid" id="newsGrid"></section>
+    <script>
+        // Example JSON feed
+        const newsArticles = [
+            {
+                "title": "Global Economy Updates",
+                "summary": "Markets saw mixed results today across Europe and Asia...",
+                "image": "news-placeholder.jpg"
+            },
+            {
+                "title": "Nigeria Political Reforms",
+                "summary": "New reforms are being discussed by the National Assembly...",
+                "image": "news-placeholder.jpg"
+            },
+            {
+                "title": "AI Breakthroughs 2026",
+                "summary": "Researchers unveil a new AI system capable of predicting trends...",
+                "image": "news-placeholder.jpg"
+            }
+        ];
 
-<div class="audio">
-<p>RadiantWaves News Brief</p>
-<audio controls>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<footer>
-
-<div>
-<b>About RadiantWaves</b><br><br>
-RadiantWaves News Network delivers international news,
-analysis and insight from across the globe.<br><br>
-Truth. Insight. Global Perspective.
-</div>
-
-<div class="social">
-<b>Follow Us</b><br><br>
-<a href="#"><img src="facebook.png"></a>
-<a href="#"><img src="instagram.png"></a>
-<a href="#"><img src="twitter.png"></a>
-<a href="#"><img src="tiktok.png"></a>
-</div>
-
-</footer>
-
-<script>
-
-fetch("news.json")
-.then(response => response.json())
-.then(data => {
-
-let main = data[0]
-
-document.getElementById("mainStory").innerHTML = `
-<img src="${main.image || 'main-story.jpg'}">
-<h2>${main.title}</h2>
-<p>${main.summary}</p>
-`
-
-let grid=""
-
-data.slice(1).forEach(article =>{
-
-grid += `
-<div class="news-card">
-<img src="${article.image || 'main-story.jpg'}">
-<h3>${article.title}</h3>
-<p>${article.summary}</p>
-</div>
-`
-
-})
-
-document.getElementById("newsGrid").innerHTML=grid
-
-let headlines = data.map(n=>n.title).join(" — ")
-
-document.getElementById("breakingText").innerText=headlines
-
-})
-
-.catch(error=>{
-
-document.getElementById("breakingText").innerText =
-"RadiantWaves Global News — Updates coming soon."
-
-})
-
-</script>
-
+        const newsGrid = document.getElementById('newsGrid');
+        newsArticles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'news-card';
+            card.innerHTML = `
+                <img src="${article.image}" alt="News">
+                <h3>${article.title}</h3>
+                <p>${article.summary}</p>
+            `;
+            newsGrid.appendChild(card);
+        });
+    </script>
 </body>
 </html>

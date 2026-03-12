@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,41 +11,32 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f2f2f2;
+background:#f3f3f3;
 }
 
-/* HEADER */
-
 header{
-background:#08364b;
+background:#0b3c5d;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
 }
 
 header img{
-width:150px;
-border-radius:5px;
+width:140px;
+border-radius:6px;
 }
 
 h1{
 margin:10px 0;
-font-size:36px;
 }
 
 .slogan{
-font-size:18px;
-opacity:0.9;
+font-size:16px;
 }
-
-/* MUSIC */
 
 audio{
-margin-top:15px;
-width:260px;
+margin-top:10px;
 }
-
-/* BREAKING NEWS */
 
 .breaking{
 background:red;
@@ -54,8 +44,6 @@ color:white;
 padding:10px;
 font-weight:bold;
 }
-
-/* NAVIGATION */
 
 nav{
 background:black;
@@ -68,10 +56,7 @@ color:white;
 margin:0 10px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
 }
-
-/* NEWS */
 
 #news{
 max-width:900px;
@@ -82,24 +67,22 @@ padding:20px;
 .news-card{
 background:white;
 padding:15px;
-margin-bottom:15px;
+margin-bottom:20px;
 border-radius:6px;
 box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 
 .news-card img{
 width:100%;
-border-radius:4px;
+border-radius:5px;
 margin-bottom:10px;
 }
 
-/* FOOTER */
-
 footer{
-background:#08364b;
+background:#0b3c5d;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
 }
 
 .social img{
@@ -119,9 +102,7 @@ margin:8px;
 
 <h1>RadiantWaves</h1>
 
-<p class="slogan">
-Gateway to World News, connecting you to the World
-</p>
+<p class="slogan">Gateway to World News, connecting you to the World</p>
 
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
@@ -129,8 +110,8 @@ Gateway to World News, connecting you to the World
 
 </header>
 
-<div class="breaking" id="breaking">
-RadiantWaves Global News Update
+<div class="breaking">
+<marquee id="breaking">Loading global headlines...</marquee>
 </div>
 
 <nav>
@@ -144,15 +125,13 @@ RadiantWaves Global News Update
 
 </nav>
 
-<div id="news">
-
-</div>
+<div id="news"></div>
 
 <footer>
 
 <p>© 2026 RadiantWaves News Network</p>
 
-<p>Truth. Insight. Global Perspective</p>
+<p>Truth • Insight • Global Perspective</p>
 
 <div class="social">
 
@@ -167,21 +146,22 @@ RadiantWaves Global News Update
 
 <script>
 
-/* LOAD NEWS FROM JSON */
-
 fetch("news.json")
-.then(response => response.json())
+.then(res => res.json())
 .then(data => {
 
-let newsContainer = document.getElementById("news");
+let newsContainer=document.getElementById("news");
+let breaking=document.getElementById("breaking");
 
-data.articles.forEach(article => {
+breaking.innerHTML=data.articles.map(a=>a.title).join(" • ");
 
-newsContainer.innerHTML += `
+data.articles.forEach(article=>{
+
+newsContainer.innerHTML+=`
 
 <div class="news-card">
 
-<img src="${article.image}">
+<img src="${article.image || 'main-story.jpg'}">
 
 <h3>${article.title}</h3>
 
@@ -192,16 +172,6 @@ newsContainer.innerHTML += `
 `;
 
 });
-
-/* BREAKING NEWS */
-
-let breaking = document.getElementById("breaking");
-
-if(data.articles.length > 0){
-
-breaking.innerHTML = data.articles[0].title;
-
-}
 
 });
 

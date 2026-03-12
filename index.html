@@ -1,198 +1,268 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves News Network</title>
-<style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves News Network</title><style>
+
 body{
-  margin:0;
-  font-family:Arial;
-  background:#f2f2f2;
+margin:0;
+font-family:Arial;
+background:#f2f2f2;
 }
 
 /* HEADER */
+
 header{
-  background:#08364b;
-  color:white;
-  text-align:center;
-  padding:25px;
+background:#08364b;
+color:white;
+text-align:center;
+padding:25px;
 }
+
 header img{
-  width:150px;
-  border-radius:5px;
+width:150px;
+border-radius:6px;
 }
+
 h1{
-  margin:10px 0;
-  font-size:36px;
+margin:10px 0;
+font-size:36px;
 }
+
 .slogan{
-  font-size:18px;
-  opacity:0.9;
+font-size:18px;
+opacity:0.9;
 }
 
 /* MUSIC */
+
 audio{
-  margin-top:15px;
-  width:260px;
+margin-top:15px;
+width:260px;
 }
 
 /* BREAKING NEWS */
+
 .breaking{
-  background:red;
-  color:white;
-  padding:10px;
-  font-weight:bold;
+background:red;
+color:white;
+padding:10px;
+font-weight:bold;
 }
 
 /* NAVIGATION */
+
 nav{
-  background:black;
-  text-align:center;
-  padding:12px;
-}
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
-}
-nav a:hover{
-  color:#ff0000;
+background:black;
+text-align:center;
+padding:12px;
 }
 
-/* NEWS */
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#ff0000;
+}
+
+/* NEWS SECTION */
+
 #news{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+max-width:900px;
+margin:auto;
+padding:20px;
 }
+
 .news-card{
-  background:white;
-  padding:15px;
-  margin-bottom:15px;
-  border-radius:6px;
-  box-shadow:0 0 5px rgba(0,0,0,0.2);
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:6px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
+
 .news-card img{
-  width:100%;
-  border-radius:4px;
-  margin-bottom:10px;
+width:100%;
+border-radius:4px;
+margin-bottom:10px;
+}
+
+.news-card h3{
+color:#08364b;
+cursor:pointer;
 }
 
 /* FOOTER */
+
 footer{
-  background:#08364b;
-  color:white;
-  text-align:center;
-  padding:25px;
+background:#08364b;
+color:white;
+text-align:center;
+padding:25px;
 }
+
 .social img{
-  width:35px;
-  margin:8px;
+width:35px;
+margin:8px;
 }
-</style>
-</head>
-<body>
 
-<header>
-  <img src="main-story.jpg">
-  <h1>RadiantWaves</h1>
-  <p class="slogan">Gateway to World News, connecting you to the World</p>
-  <audio controls autoplay loop>
-    <source src="news-music.mp3" type="audio/mpeg">
-  </audio>
-</header>
+</style></head><body><header><img src="main-story.jpg"><h1>RadiantWaves</h1><p class="slogan">
+Gateway to World News, connecting you to the World
+</p><audio controls autoplay loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio></header><div class="breaking"><marquee id="breaking" scrollamount="6">RadiantWaves Global News Update
 
-<div class="breaking" id="breaking">
-  RadiantWaves Global News Update
-</div>
+</marquee></div><nav><a onclick="loadNews(null)">Home</a>
+<a onclick="loadNews('World')">World</a>
+<a onclick="loadNews('Politics')">Politics</a>
+<a onclick="loadNews('Business')">Business</a>
+<a onclick="loadNews('Technology')">Technology</a>
+<a onclick="loadNews('Sports')">Sports</a>
+<a onclick="loadNews('Science')">Science</a>
+<a onclick="loadNews('Entertainment')">Entertainment</a>
 
-<nav>
-  <a onclick="loadNews(null)">Home</a>
-  <a onclick="loadNews('World')">World</a>
-  <a onclick="loadNews('Politics')">Politics</a>
-  <a onclick="loadNews('Business')">Business</a>
-  <a onclick="loadNews('Technology')">Technology</a>
-  <a onclick="loadNews('Sports')">Sports</a>
-  <a onclick="loadNews('Science')">Science</a>
-  <a onclick="loadNews('Entertainment')">Entertainment</a>
-</nav>
+</nav><div id="news"></div><footer><p>© 2026 RadiantWaves News Network</p><p>Truth. Insight. Global Perspective</p><div class="social"><a href="#"><img src="facebook.png"></a>
+<a href="#"><img src="instagram.png"></a>
+<a href="#"><img src="twitter.png"></a>
+<a href="#"><img src="tiktok.png"></a>
 
-<div id="news"></div>
+</div></footer><script>
 
-<footer>
-  <p>© 2026 RadiantWaves News Network</p>
-  <p>Truth. Insight. Global Perspective</p>
-  <div class="social">
-    <a href="#"><img src="facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="instagram.png" alt="Instagram"></a>
-    <a href="#"><img src="twitter.png" alt="Twitter"></a>
-    <a href="#"><img src="tiktok.png" alt="TikTok"></a>
-  </div>
-</footer>
-
-<script>
 let allArticles = [];
 
-// First try to load from API
+
+/* API KEY */
+
 const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
-const apiUrl = `https://newsapi.org/v2/top-headlines?country=fr&pageSize=20&apiKey=${apiKey}`;
 
-fetch(apiUrl)
-  .then(res => res.json())
-  .then(data => {
-    if(data.articles && data.articles.length > 0){
-      allArticles = data.articles.map(article => ({
-        title: article.title || "No title",
-        summary: article.description || "No summary available",
-        date: article.publishedAt || "",
-        category: "World", // assign default World category; later can map dynamically
-        image: article.urlToImage || 'icon-512.png'
-      }));
-      loadNews(null);
-    } else {
-      throw new Error("API returned no articles");
-    }
-  })
-  .catch(err => {
-    console.warn("API failed, loading local JSON:", err);
-    // fallback to local news.json
-    fetch("news.json")
-      .then(res => res.json())
-      .then(data => {
-        allArticles = data.articles;
-        loadNews(null);
-      })
-      .catch(err => console.error("Error loading local JSON:", err));
-  });
 
-function loadNews(category) {
-  let newsContainer = document.getElementById("news");
-  newsContainer.innerHTML = "";
+const apiURL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=20&apiKey=${apiKey}`;
 
-  let filtered = category ? allArticles.filter(a => a.category === category) : allArticles;
 
-  filtered.forEach((article, i) => {
-    newsContainer.innerHTML += `
-      <div class="news-card">
-        <img src="${article.image || 'icon-512.png'}" alt="News ${i+1}">
-        <h3>${article.title}</h3>
-        <p>${article.summary}</p>
-      </div>
-    `;
-  });
+/* TRY API FIRST */
 
-  let breaking = document.getElementById("breaking");
-  if(filtered.length > 0){
-    breaking.innerHTML = filtered[0].title;
-  } else {
-    breaking.innerHTML = "No news available at this time";
-  }
+fetch(apiURL)
+
+.then(res => res.json())
+
+.then(data => {
+
+if(data.articles && data.articles.length > 0){
+
+allArticles = data.articles.map(article => ({
+
+title: article.title || "No title",
+
+summary: article.description || "No summary available",
+
+category: "World",
+
+image: article.urlToImage || "icon-512.png"
+
+}));
+
+loadNews(null);
+
+}else{
+
+throw new Error("API returned empty");
+
 }
-</script>
 
-</body>
+})
+
+
+.catch(err => {
+
+/* FALLBACK TO JSON */
+
+fetch("news.json")
+
+.then(res => res.json())
+
+.then(data => {
+
+allArticles = data.articles;
+
+loadNews(null);
+
+});
+
+});
+
+
+/* LOAD NEWS FUNCTION */
+
+function loadNews(category){
+
+let container = document.getElementById("news");
+
+container.innerHTML = "";
+
+
+let filtered = category ? allArticles.filter(a => a.category === category) : allArticles;
+
+
+filtered.forEach((article,i)=>{
+
+container.innerHTML += `
+
+<div class="news-card">
+
+<img src="${article.image || 'icon-512.png'}">
+
+<h3 onclick="toggleSummary(${i})">
+
+${article.title}
+
+</h3>
+
+<p id="summary-${i}" style="display:none">
+
+${article.summary}
+
+</p>
+
+</div>
+
+`;
+
+});
+
+
+let breaking = document.getElementById("breaking");
+
+
+if(filtered.length>0){
+
+breaking.innerHTML = filtered.map(a=>a.title).join(" • ");
+
+}
+
+}
+
+
+/* SHOW SUMMARY */
+
+function toggleSummary(id){
+
+let summary = document.getElementById("summary-"+id);
+
+
+if(summary.style.display==="none"){
+
+summary.style.display="block";
+
+}else{
+
+summary.style.display="none";
+
+}
+
+}
+
+</script></body>
 </html>

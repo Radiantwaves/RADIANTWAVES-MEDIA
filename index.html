@@ -144,25 +144,27 @@ margin:8px;
 
 </footer>
 
-<script>
+<<script>
 
 fetch("news.json")
 .then(res => res.json())
 .then(data => {
 
-let newsContainer=document.getElementById("news");
-let breaking=document.getElementById("breaking");
+let newsContainer = document.getElementById("news");
+let breaking = document.getElementById("breaking");
 
-breaking.innerHTML=data.articles.map(a=>a.title).join(" • ");
+/* Breaking News Scrolling */
 
-data.articles.forEach(article=>{
+breaking.innerHTML = data.articles.map(a => a.title).join(" • ");
 
-newsContainer.innerHTML+=`
+/* Load News */
+
+data.articles.forEach(article => {
+
+newsContainer.innerHTML += `
 
 <div class="news-card">
 
-<<h3>${article.title}</h3>
-<p>${article.summary}</p>
 <h3>${article.title}</h3>
 
 <p>${article.summary}</p>
@@ -173,10 +175,16 @@ newsContainer.innerHTML+=`
 
 });
 
+})
+.catch(error => {
+
+document.getElementById("news").innerHTML = "News loading...";
+
 });
 
 </script>
 
 </body>
 </html>
+
 

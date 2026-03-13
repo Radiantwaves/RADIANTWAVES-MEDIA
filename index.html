@@ -1,159 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Global News</title>
+
+<title>RadiantWaves News Network</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f4f4f4;color:#333;}
-header{text-align:center;background:white;padding:15px;border-bottom:3px solid #c00;}
-header img{width:120px;}
-h1{color:#c00;margin:10px 0;}
-.tagline{color:#333;font-size:16px;}
-.breaking{background:#c00;color:white;padding:10px;font-weight:bold;overflow:hidden;white-space:nowrap;}
-nav{background:#111;text-align:center;padding:12px;}
-nav a{color:white;margin:0 12px;font-weight:bold;cursor:pointer;}
-nav a:hover{color:#ffd700;}
-.container{display:flex;max-width:1200px;margin:auto;padding:20px;gap:20px;}
-.main{flex:3;}
-.sidebar{flex:1;}
-.card{background:white;margin-bottom:20px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);overflow:hidden;}
-.card img{width:100%;display:block;}
-.card h3{color:#c00;margin:10px;}
-.card p{margin:10px;color:#333;line-height:1.5;}
-.top-headline{position:relative;margin-bottom:20px;}
-.top-headline img{width:100%;height:400px;object-fit:cover;}
-.top-headline h2{position:absolute;bottom:20px;left:20px;color:white;background:rgba(0,0,0,0.6);padding:10px;font-size:28px;max-width:80%;border-radius:5px;}
-.sidebar h3{color:#c00;margin-bottom:10px;}
-.sidebar .trending{background:white;padding:10px;margin-bottom:15px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-.sidebar .trending h4{margin:5px 0;color:#c00;font-size:16px;}
-.sidebar .trending p{font-size:14px;line-height:1.4;}
-footer{background:#111;color:white;text-align:center;padding:30px;margin-top:20px;}
-footer .social img{width:30px;margin:8px;}
-audio{margin-top:10px;width:250px;}
+
+body{
+margin:0;
+font-family:Arial;
+background:#f2f2f2;
+}
+
+/* HEADER */
+
+header{
+background:white;
+color:#0b3d91;
+text-align:center;
+padding:20px;
+border-bottom:3px solid #0b3d91;
+}
+
+header img{
+width:120px;
+}
+
+h1{
+margin:10px 0;
+font-size:34px;
+color:#0b3d91;
+}
+
+.slogan{
+font-size:17px;
+color:#333;
+}
+
+/* BREAKING NEWS */
+
+.breaking{
+background:#0b3d91;
+color:white;
+padding:10px;
+font-weight:bold;
+text-align:center;
+}
+
+/* NAVIGATION */
+
+nav{
+background:black;
+text-align:center;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#f4c542;
+}
+
+/* NEWS AREA */
+
+#news{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* NEWS CARD */
+
+.news-card{
+background:white;
+padding:15px;
+margin-bottom:20px;
+border-radius:6px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.news-card img{
+width:100%;
+border-radius:4px;
+margin-bottom:10px;
+}
+
+.news-card h3{
+color:#0b3d91;
+margin:10px 0;
+}
+
+.news-card p{
+color:#333;
+line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.social img{
+width:32px;
+margin:8px;
+transition:0.3s;
+}
+
+.social img:hover{
+transform:scale(1.2);
+}
+
+/* AUDIO */
+
+audio{
+margin-top:10px;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
-<img src="icon-512.png" alt="RadiantWaves Logo">
+
+<img src="icon-512.png">
+
 <h1>RadiantWaves</h1>
-<p class="tagline">Gateway to World News</p>
+
+<p class="slogan">
+Gateway to World News – Connecting You to the World
+</p>
+
 <audio controls autoplay loop>
 <source src="news-music.mp3" type="audio/mpeg">
-Your browser does not support audio.
 </audio>
+
 </header>
 
-<div class="breaking">
-<marquee id="breaking">Loading breaking news...</marquee>
+<div class="breaking" id="breaking">
+Loading Breaking News...
 </div>
 
 <nav>
-<a onclick="showCategory('all')">Home</a>
-<a onclick="showCategory('world')">World</a>
-<a onclick="showCategory('politics')">Politics</a>
-<a onclick="showCategory('business')">Business</a>
-<a onclick="showCategory('technology')">Technology</a>
-<a onclick="showCategory('sports')">Sports</a>
-<a onclick="showCategory('entertainment')">Entertainment</a>
+
+<a onclick="filterNews('all')">Home</a>
+<a onclick="filterNews('world')">World</a>
+<a onclick="filterNews('politics')">Politics</a>
+<a onclick="filterNews('business')">Business</a>
+<a onclick="filterNews('technology')">Technology</a>
+<a onclick="filterNews('sports')">Sports</a>
+<a onclick="filterNews('entertainment')">Entertainment</a>
+
 </nav>
 
-<div class="container">
-  <div class="main" id="main-news"></div>
-  <div class="sidebar">
-    <h3>Trending</h3>
-    <div id="trending"></div>
-  </div>
-</div>
+<div id="news"></div>
 
 <footer>
+
 <p>© 2026 RadiantWaves News Network</p>
+
 <p>Truth • Insight • Global Perspective</p>
+
 <div class="social">
-<img src="facebook.png" alt="Facebook">
-<img src="instagram.png" alt="Instagram">
-<img src="twitter.png" alt="Twitter">
-<img src="tiktok.png" alt="TikTok">
+
+<a href="https://facebook.com/RadiantWavesMedia" target="_blank">
+<img src="facebook.png">
+</a>
+
+<a href="https://instagram.com/RadiantWavesMedia" target="_blank">
+<img src="instagram.png">
+</a>
+
+<a href="https://twitter.com/RadiantWavesNews" target="_blank">
+<img src="twitter.png">
+</a>
+
+<a href="https://tiktok.com/@RadiantWavesMedia" target="_blank">
+<img src="tiktok.png">
+</a>
+
 </div>
+
 </footer>
 
 <script>
-let articles = [];
-let currentCategory = 'all';
 
-function showCategory(category){
-  currentCategory = category;
-  renderNews();
+let allNews = []
+
+/* LOAD NEWS */
+
+fetch("news.json")
+.then(response => response.json())
+.then(data => {
+
+allNews = data.articles
+
+displayNews("all")
+
+if(allNews.length > 0){
+document.getElementById("breaking").innerText = allNews[0].title
 }
 
-function renderNews(){
-  const main = document.getElementById("main-news");
-  const trending = document.getElementById("trending");
-  main.innerHTML = '';
-  trending.innerHTML = '';
+})
 
-  let filtered = (currentCategory==='all') ? articles : articles.filter(a=>a.category===currentCategory);
+/* DISPLAY NEWS */
 
-  if(filtered.length>0){
-    let top = filtered[0];
-    main.innerHTML += `
-      <div class="top-headline">
-        <img src="${top.image}" alt="${top.title}">
-        <h2>${top.title}</h2>
-      </div>
-    `;
-  }
+function displayNews(category){
 
-  filtered.slice(1).forEach(article=>{
-    main.innerHTML += `
-      <div class="card">
-        <img src="${article.image}" alt="${article.title}">
-        <h3>${article.title}</h3>
-        <p>${article.story}</p>
-      </div>
-    `;
-  });
+let container = document.getElementById("news")
 
-  filtered.slice(0,3).forEach(article=>{
-    trending.innerHTML += `
-      <div class="trending">
-        <h4>${article.title}</h4>
-        <p>${article.story.substring(0,60)}...</p>
-      </div>
-    `;
-  });
+container.innerHTML=""
 
-  if(filtered.length>0) document.getElementById("breaking").innerHTML = filtered[0].title;
+let filtered = category === "all" ? allNews :
+allNews.filter(n => n.category === category)
+
+filtered.forEach(article => {
+
+container.innerHTML += `
+
+<div class="news-card">
+
+<img src="${article.image}">
+
+<h3>${article.title}</h3>
+
+<p>${article.story}</p>
+
+</div>
+
+`
+
+})
+
 }
 
-// Try fetching live API, fallback to local news.json
-async function fetchNews(){
-  try{
-    const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=10618a434f80cc4ffe52717ea1bf2401`);
-    const data = await res.json();
-    articles = data.articles.map(a=>{
-      return {
-        title: a.title || "No title",
-        story: a.description || a.content || "Read more...",
-        image: a.urlToImage || "icon-512.png",
-        category: "world"
-      };
-    });
-    renderNews();
-  }catch(err){
-    console.error("API failed, loading local news.json", err);
-    // fallback JSON
-    fetch("news.json")
-      .then(res=>res.json())
-      .then(data=>{
-        articles = data.articles;
-        renderNews();
-      });
-  }
+/* FILTER */
+
+function filterNews(cat){
+displayNews(cat)
 }
 
-fetchNews();
 </script>
+
 </body>
 </html>

@@ -46,7 +46,6 @@ background:#0b3d91;
 color:white;
 padding:10px;
 font-weight:bold;
-font-size:16px;
 }
 
 /* NAVIGATION */
@@ -70,22 +69,46 @@ nav a:hover{
 color:#f4c542;
 }
 
-/* NEWS AREA */
+/* MAIN CONTAINER */
 
-#news{
-max-width:900px;
+.container{
+max-width:1000px;
 margin:auto;
 padding:20px;
 }
 
-/* NEWS CARD */
+/* TOP STORY */
 
-.news-card{
+.top-story{
 background:white;
 padding:15px;
 margin-bottom:20px;
 border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
+box-shadow:0 0 6px rgba(0,0,0,0.2);
+}
+
+.top-story img{
+width:100%;
+border-radius:4px;
+}
+
+.top-story h2{
+color:#0b3d91;
+}
+
+/* OTHER NEWS */
+
+.news-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.news-card{
+background:white;
+padding:15px;
+border-radius:6px;
+box-shadow:0 0 6px rgba(0,0,0,0.2);
 }
 
 .news-card img{
@@ -96,12 +119,6 @@ margin-bottom:10px;
 
 .news-card h3{
 color:#0b3d91;
-margin:10px 0;
-}
-
-.news-card p{
-color:#333;
-line-height:1.5;
 }
 
 /* FOOTER */
@@ -111,19 +128,13 @@ background:#0b3d91;
 color:white;
 text-align:center;
 padding:25px;
+margin-top:30px;
 }
 
 .social img{
 width:32px;
 margin:8px;
-transition:0.3s;
 }
-
-.social img:hover{
-transform:scale(1.2);
-}
-
-/* AUDIO */
 
 audio{
 margin-top:10px;
@@ -167,7 +178,13 @@ Gateway to World News – Connecting You to the World
 
 </nav>
 
-<div id="news"></div>
+<div class="container">
+
+<div id="topNews"></div>
+
+<div class="news-grid" id="news"></div>
+
+</div>
 
 <footer>
 
@@ -201,14 +218,14 @@ Gateway to World News – Connecting You to the World
 let allNews = []
 
 fetch("news.json")
-.then(response => response.json())
+.then(res => res.json())
 .then(data => {
 
 allNews = data.articles
 
 displayNews("all")
 
-if(allNews.length > 0){
+if(allNews.length>0){
 document.getElementById("breaking").innerText = allNews[0].title
 }
 
@@ -216,16 +233,30 @@ document.getElementById("breaking").innerText = allNews[0].title
 
 function displayNews(category){
 
-let container = document.getElementById("news")
+let filtered = category==="all" ? allNews : allNews.filter(n=>n.category===category)
+
+let top = filtered[0]
+
+document.getElementById("topNews").innerHTML=`
+
+<div class="top-story">
+
+<img src="${top.image}">
+
+<h2>${top.title}</h2>
+
+<p>${top.story}</p>
+
+</div>
+`
+
+let container=document.getElementById("news")
 
 container.innerHTML=""
 
-let filtered = category === "all" ? allNews :
-allNews.filter(n => n.category === category)
+filtered.slice(1).forEach(article=>{
 
-filtered.forEach(article => {
-
-container.innerHTML += `
+container.innerHTML+=`
 
 <div class="news-card">
 

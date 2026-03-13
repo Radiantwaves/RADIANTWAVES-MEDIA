@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -12,16 +13,16 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f2f2f2;
+background:#f4f4f4;
 }
 
 /* HEADER */
 
 header{
-background:white;
+background:#08364b;
+color:white;
 text-align:center;
-padding:20px;
-border-bottom:3px solid #0b3d91;
+padding:25px;
 }
 
 header img{
@@ -29,23 +30,34 @@ width:120px;
 }
 
 h1{
-margin:10px 0;
-font-size:34px;
-color:#0b3d91;
+margin:10px;
 }
 
 .slogan{
-font-size:17px;
-color:#444;
+color:#cfe8ff;
+font-size:18px;
 }
 
 /* BREAKING NEWS */
 
 .breaking{
-background:#0b3d91;
+background:#c62828;
 color:white;
 padding:10px;
 font-weight:bold;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
 
 /* NAVIGATION */
@@ -61,54 +73,19 @@ color:white;
 margin:0 12px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
-cursor:pointer;
 }
 
-nav a:hover{
-color:#f4c542;
-}
+/* NEWS SECTION */
 
-/* MAIN LAYOUT */
-
-.main{
-max-width:1200px;
+#news{
+max-width:900px;
 margin:auto;
-display:grid;
-grid-template-columns:3fr 1fr;
-gap:25px;
 padding:20px;
-}
-
-/* TOP STORY */
-
-.top-story{
-background:white;
-padding:15px;
-border-radius:6px;
-box-shadow:0 0 6px rgba(0,0,0,0.2);
-margin-bottom:20px;
-}
-
-.top-story img{
-width:100%;
-border-radius:4px;
-}
-
-.top-story h2{
-color:#0b3d91;
-}
-
-/* NEWS GRID */
-
-.news-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
 }
 
 .news-card{
 background:white;
+margin-bottom:20px;
 padding:15px;
 border-radius:6px;
 box-shadow:0 0 6px rgba(0,0,0,0.2);
@@ -120,61 +97,18 @@ border-radius:4px;
 margin-bottom:10px;
 }
 
-.news-card h3{
-color:#0b3d91;
-}
-
-.news-card h3 a{
-text-decoration:none;
-color:#0b3d91;
-}
-
-.news-card h3 a:hover{
-color:#f4c542;
-}
-
-/* TRENDING */
-
-.trending{
-background:white;
-padding:15px;
-border-radius:6px;
-box-shadow:0 0 6px rgba(0,0,0,0.2);
-}
-
-.trending h3{
-color:#0b3d91;
-border-bottom:2px solid #0b3d91;
-padding-bottom:8px;
-}
-
-.trending p{
-font-size:14px;
-margin:10px 0;
-cursor:pointer;
-}
-
-.trending p:hover{
-color:#0b3d91;
-}
-
 /* FOOTER */
 
 footer{
-background:#0b3d91;
+background:#08364b;
 color:white;
 text-align:center;
-padding:25px;
-margin-top:30px;
+padding:20px;
 }
 
 .social img{
-width:32px;
+width:35px;
 margin:8px;
-}
-
-audio{
-margin-top:10px;
 }
 
 </style>
@@ -185,12 +119,12 @@ margin-top:10px;
 
 <header>
 
-<img src="icon-512.png">
+<img src="images/icon-512.png">
 
 <h1>RadiantWaves</h1>
 
 <p class="slogan">
-Gateway to World News – Connecting You to the World
+Gateway to World News, connecting you to the world
 </p>
 
 <audio controls autoplay loop>
@@ -200,45 +134,28 @@ Gateway to World News – Connecting You to the World
 </header>
 
 <div class="breaking">
-<marquee id="breaking">Loading Breaking News...</marquee>
+<span id="breaking-news">Loading global headlines...</span>
 </div>
 
 <nav>
 
-<a onclick="filterNews('all')">Home</a>
-<a onclick="filterNews('world')">World</a>
-<a onclick="filterNews('politics')">Politics</a>
-<a onclick="filterNews('business')">Business</a>
-<a onclick="filterNews('technology')">Technology</a>
-<a onclick="filterNews('sports')">Sports</a>
-<a onclick="filterNews('entertainment')">Entertainment</a>
+<a href="index.html">Home</a>
+<a href="world.html">World</a>
+<a href="politics.html">Politics</a>
+<a href="business.html">Business</a>
+<a href="technology.html">Technology</a>
+<a href="science.html">Science</a>
+<a href="sports.html">Sports</a>
+<a href="entertainment.html">Entertainment</a>
 
 </nav>
 
-<div class="main">
-
-<div>
-
-<div id="topNews"></div>
-
-<div class="news-grid" id="news"></div>
-
-</div>
-
-<div class="trending">
-
-<h3>Trending / Most Read</h3>
-
-<div id="trending"></div>
-
-</div>
-
-</div>
+<div id="news"></div>
 
 <footer>
 
 <p>© 2026 RadiantWaves News Network</p>
-<p>Truth. Insight. Global Perspective</p>
+<p>Truth • Insight • Global Perspective</p>
 
 <div class="social">
 
@@ -264,92 +181,94 @@ Gateway to World News – Connecting You to the World
 
 <script>
 
-let allNews=[]
+/* NEWS API */
 
-fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
+const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
 
-allNews=data.articles
+fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=${apiKey}`)
+.then(response => response.json())
+.then(data => {
 
-displayNews("all")
+let newsContainer = document.getElementById("news");
+let breaking = document.getElementById("breaking-news");
 
-if(allNews.length>0){
-document.getElementById("breaking").innerText=allNews[0].title
+let headlines = [];
+
+data.articles.forEach(article => {
+
+if(article.urlToImage){
+
+let story = article.description || "Click to read the full story.";
+
+newsContainer.innerHTML += `
+
+<div class="news-card">
+
+<img src="${article.urlToImage}">
+
+<h3>${article.title}</h3>
+
+<p>${story}</p>
+
+</div>
+
+`;
+
+headlines.push(article.title);
+
 }
 
-loadTrending()
+});
+
+/* BREAKING NEWS */
+
+breaking.innerHTML = headlines.join(" • ");
 
 })
 
-function displayNews(category){
+.catch(error => {
 
-let filtered=category==="all"?allNews:allNews.filter(n=>n.category===category)
+console.log("API not loading, using local news");
 
-let top=filtered[0]
+/* LOAD LOCAL JSON NEWS */
 
-document.getElementById("topNews").innerHTML=`
+fetch("news.json")
+.then(res => res.json())
+.then(data => {
 
-<div class="top-story">
+let newsContainer = document.getElementById("news");
+let breaking = document.getElementById("breaking-news");
 
-<img src="${top.image}">
+let headlines = [];
 
-<h2>
-<a href="article.html?title=${encodeURIComponent(top.title)}&story=${encodeURIComponent(top.story)}&image=${encodeURIComponent(top.image)}">
-${top.title}
-</a>
-</h2>
+data.articles.forEach(article => {
 
-<p>${top.story}</p>
-
-</div>
-`
-
-let container=document.getElementById("news")
-
-container.innerHTML=""
-
-filtered.slice(1).forEach(article=>{
-
-container.innerHTML+=`
+newsContainer.innerHTML += `
 
 <div class="news-card">
 
 <img src="${article.image}">
 
-<h3>
-<a href="article.html?title=${encodeURIComponent(article.title)}&story=${encodeURIComponent(article.story)}&image=${encodeURIComponent(article.image)}">
-${article.title}
-</a>
-</h3>
+<h3>${article.title}</h3>
 
 <p>${article.story}</p>
 
 </div>
 
-`
+`;
 
-})
+headlines.push(article.title);
 
-}
+});
 
-function loadTrending(){
+breaking.innerHTML = headlines.join(" • ");
 
-let t=document.getElementById("trending")
+});
 
-allNews.slice(0,5).forEach(n=>{
-
-t.innerHTML+=`<p>${n.title}</p>`
-
-})
-
-}
-
-function filterNews(cat){
-displayNews(cat)
-}
+});
 
 </script>
 
 </body>
+
 </html>

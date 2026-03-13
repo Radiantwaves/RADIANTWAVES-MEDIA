@@ -69,11 +69,14 @@ nav a:hover{
 color:#f4c542;
 }
 
-/* MAIN CONTAINER */
+/* MAIN LAYOUT */
 
-.container{
-max-width:1000px;
+.main{
+max-width:1200px;
 margin:auto;
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:25px;
 padding:20px;
 }
 
@@ -82,9 +85,9 @@ padding:20px;
 .top-story{
 background:white;
 padding:15px;
-margin-bottom:20px;
 border-radius:6px;
 box-shadow:0 0 6px rgba(0,0,0,0.2);
+margin-bottom:20px;
 }
 
 .top-story img{
@@ -96,7 +99,7 @@ border-radius:4px;
 color:#0b3d91;
 }
 
-/* OTHER NEWS */
+/* NEWS GRID */
 
 .news-grid{
 display:grid;
@@ -118,6 +121,31 @@ margin-bottom:10px;
 }
 
 .news-card h3{
+color:#0b3d91;
+}
+
+/* TRENDING */
+
+.trending{
+background:white;
+padding:15px;
+border-radius:6px;
+box-shadow:0 0 6px rgba(0,0,0,0.2);
+}
+
+.trending h3{
+color:#0b3d91;
+border-bottom:2px solid #0b3d91;
+padding-bottom:8px;
+}
+
+.trending p{
+font-size:14px;
+margin:10px 0;
+cursor:pointer;
+}
+
+.trending p:hover{
 color:#0b3d91;
 }
 
@@ -178,11 +206,23 @@ Gateway to World News – Connecting You to the World
 
 </nav>
 
-<div class="container">
+<div class="main">
+
+<div>
 
 <div id="topNews"></div>
 
 <div class="news-grid" id="news"></div>
+
+</div>
+
+<div class="trending">
+
+<h3>Trending / Most Read</h3>
+
+<div id="trending"></div>
+
+</div>
 
 </div>
 
@@ -215,27 +255,29 @@ Gateway to World News – Connecting You to the World
 
 <script>
 
-let allNews = []
+let allNews=[]
 
 fetch("news.json")
-.then(res => res.json())
-.then(data => {
+.then(res=>res.json())
+.then(data=>{
 
-allNews = data.articles
+allNews=data.articles
 
 displayNews("all")
 
 if(allNews.length>0){
-document.getElementById("breaking").innerText = allNews[0].title
+document.getElementById("breaking").innerText=allNews[0].title
 }
+
+loadTrending()
 
 })
 
 function displayNews(category){
 
-let filtered = category==="all" ? allNews : allNews.filter(n=>n.category===category)
+let filtered=category==="all"?allNews:allNews.filter(n=>n.category===category)
 
-let top = filtered[0]
+let top=filtered[0]
 
 document.getElementById("topNews").innerHTML=`
 
@@ -269,6 +311,18 @@ container.innerHTML+=`
 </div>
 
 `
+
+})
+
+}
+
+function loadTrending(){
+
+let t=document.getElementById("trending")
+
+allNews.slice(0,5).forEach(n=>{
+
+t.innerHTML+=`<p>${n.title}</p>`
 
 })
 

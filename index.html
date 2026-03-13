@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en">
-<head><meta charset="UTF-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves News Network</title><style>
 
 body{
@@ -108,31 +107,28 @@ margin:8px;
 Gateway to World News – Connecting You to the World
 </p></header><div class="breaking">
 <span id="breaking-news">RadiantWaves Global News Update</span>
-</div><nav><a href="index.html?cat=general">Home</a>
-<a href="index.html?cat=general">World</a>
-<a href="index.html?cat=politics">Politics</a>
-<a href="index.html?cat=business">Business</a>
-<a href="index.html?cat=technology">Technology</a>
-<a href="index.html?cat=science">Science</a>
-<a href="index.html?cat=sports">Sports</a>
-<a href="index.html?cat=entertainment">Entertainment</a>
+</div><nav><a href="index.html">Home</a>
+<a href="index.html">World</a>
+<a href="index.html">Politics</a>
+<a href="index.html">Business</a>
+<a href="index.html">Technology</a>
+<a href="index.html">Science</a>
+<a href="index.html">Sports</a>
+<a href="index.html">Entertainment</a>
 
 </nav><div id="news"></div><footer><p>© 2026 RadiantWaves News Network</p><p>Truth • Insight • Global Perspective</p><div class="social"><a href="https://facebook.com/radiantwavesnews">
-<img src="images/facebook.png" alt="Facebook">
+<img src="images/facebook.png">
 </a><a href="https://instagram.com/radiantwaves1">
-<img src="images/instagram.png" alt="Instagram">
+<img src="images/instagram.png">
 </a><a href="https://twitter.com/radiant13528995">
-<img src="images/twitter.png" alt="Twitter">
+<img src="images/twitter.png">
 </a><a href="https://tiktok.com/@radiantwavesmedia">
-<img src="images/tiktok.png" alt="TikTok">
+<img src="images/tiktok.png">
 </a></div></footer><script>
 
-const apiKey="10618a434f80cc4ffe52717ea1bf2401";
+/* NEWS DATA API */
 
-/* detect category */
-
-const params=new URLSearchParams(window.location.search);
-const category=params.get("cat") || "general";
+const apiKey="4183020c-43aa-40db-bebc-d1389f09d3cb";
 
 /* AI rewrite */
 
@@ -146,7 +142,7 @@ return text + " RadiantWaves analysis suggests this development could have wider
 
 }
 
-/* display news */
+/* DISPLAY NEWS */
 
 function showNews(articles){
 
@@ -154,14 +150,13 @@ let container=document.getElementById("news");
 let breaking=document.getElementById("breaking-news");
 
 container.innerHTML="";
-
 let headlines=[];
 
 articles.forEach(article=>{
 
-let image=article.urlToImage || article.image || "images/world-1.jpg";
+let image=article.image_url || "images/world-1.jpg";
 
-let story=rewriteStory(article.title,article.description || article.story);
+let story=rewriteStory(article.title,article.description);
 
 container.innerHTML+=`
 
@@ -185,15 +180,17 @@ breaking.innerHTML=headlines.join(" • ");
 
 }
 
-/* load live news */
+/* LOAD LIVE NEWS */
 
-fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=25&category=${category}&apiKey=${apiKey}`)
+fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&language=en`)
+
 .then(res=>res.json())
+
 .then(data=>{
 
-if(data.articles && data.articles.length>0){
+if(data.results){
 
-showNews(data.articles);
+showNews(data.results);
 
 }else{
 
@@ -205,15 +202,16 @@ loadLocalNews();
 
 .catch(()=>loadLocalNews());
 
-/* fallback to json */
+/* JSON BACKUP */
 
 function loadLocalNews(){
 
 fetch("news.json")
+
 .then(res=>res.json())
+
 .then(data=>showNews(data.articles));
 
 }
 
-</script></body>
-</html>
+</script></body></html>

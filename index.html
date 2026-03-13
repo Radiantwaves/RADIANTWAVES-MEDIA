@@ -124,6 +124,15 @@ margin-bottom:10px;
 color:#0b3d91;
 }
 
+.news-card h3 a{
+text-decoration:none;
+color:#0b3d91;
+}
+
+.news-card h3 a:hover{
+color:#f4c542;
+}
+
 /* TRENDING */
 
 .trending{
@@ -285,7 +294,11 @@ document.getElementById("topNews").innerHTML=`
 
 <img src="${top.image}">
 
-<h2>${top.title}</h2>
+<h2>
+<a href="article.html?title=${encodeURIComponent(top.title)}&story=${encodeURIComponent(top.story)}&image=${encodeURIComponent(top.image)}">
+${top.title}
+</a>
+</h2>
 
 <p>${top.story}</p>
 
@@ -304,7 +317,11 @@ container.innerHTML+=`
 
 <img src="${article.image}">
 
-<h3>${article.title}</h3>
+<h3>
+<a href="article.html?title=${encodeURIComponent(article.title)}&story=${encodeURIComponent(article.story)}&image=${encodeURIComponent(article.image)}">
+${article.title}
+</a>
+</h3>
 
 <p>${article.story}</p>
 

@@ -131,33 +131,31 @@ function loadNews(articles){
   let headlines = [];
 
   articles.forEach(article => {
-    if(article.urlToImage || article.image){
-      const image = article.urlToImage || article.image;
-      const story = article.description || article.story || "Click to read more.";
-      container.innerHTML += `
-        <div class="news-card">
-          <img src="${image}" alt="News Image">
-          <h3>${article.title}</h3>
-          <p>${story}</p>
-        </div>
-      `;
-      headlines.push(article.title);
-    }
+    const imgSrc = article.urlToImage || article.image || "images/main-story.jpg";
+    const storyText = article.description || article.story || "Click to read more.";
+    container.innerHTML += `
+      <div class="news-card">
+        <img src="${imgSrc}" alt="News Image">
+        <h3>${article.title}</h3>
+        <p>${storyText}</p>
+      </div>
+    `;
+    headlines.push(article.title);
   });
 
   breaking.innerHTML = headlines.length > 0 ? headlines.join(" • ") : "RadiantWaves Global News Update";
 }
 
-// Attempt API first
+// Try API first
 fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=10&apiKey=${apiKey}`)
-.then(res => res.json())
-.then(data => loadNews(data.articles))
-.catch(err => {
-  console.log("API failed, loading local news.json");
-  fetch("news.json")
-    .then(res => res.json())
-    .then(data => loadNews(data.articles));
-});
+  .then(res => res.json())
+  .then(data => loadNews(data.articles))
+  .catch(err => {
+    console.log("API failed, using local news.json");
+    fetch("news.json")
+      .then(res => res.json())
+      .then(data => loadNews(data.articles));
+  });
 </script>
 
 </body>

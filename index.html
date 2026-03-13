@@ -19,7 +19,6 @@ background:#f2f2f2;
 
 header{
 background:white;
-color:#0b3d91;
 text-align:center;
 padding:20px;
 border-bottom:3px solid #0b3d91;
@@ -37,7 +36,7 @@ color:#0b3d91;
 
 .slogan{
 font-size:17px;
-color:#333;
+color:#444;
 }
 
 /* BREAKING NEWS */
@@ -47,7 +46,7 @@ background:#0b3d91;
 color:white;
 padding:10px;
 font-weight:bold;
-text-align:center;
+font-size:16px;
 }
 
 /* NAVIGATION */
@@ -152,8 +151,8 @@ Gateway to World News – Connecting You to the World
 
 </header>
 
-<div class="breaking" id="breaking">
-Loading Breaking News...
+<div class="breaking">
+<marquee id="breaking">Loading Breaking News...</marquee>
 </div>
 
 <nav>
@@ -173,7 +172,6 @@ Loading Breaking News...
 <footer>
 
 <p>© 2026 RadiantWaves News Network</p>
-
 <p>Truth • Insight • Global Perspective</p>
 
 <div class="social">
@@ -202,8 +200,6 @@ Loading Breaking News...
 
 let allNews = []
 
-/* LOAD NEWS */
-
 fetch("news.json")
 .then(response => response.json())
 .then(data => {
@@ -217,8 +213,6 @@ document.getElementById("breaking").innerText = allNews[0].title
 }
 
 })
-
-/* DISPLAY NEWS */
 
 function displayNews(category){
 
@@ -248,8 +242,6 @@ container.innerHTML += `
 })
 
 }
-
-/* FILTER */
 
 function filterNews(cat){
 displayNews(cat)

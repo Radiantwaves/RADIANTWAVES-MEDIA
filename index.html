@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
+<head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves News Network</title><style>
 
 body{
@@ -109,14 +108,14 @@ margin:8px;
 Gateway to World News – Connecting You to the World
 </p></header><div class="breaking">
 <span id="breaking-news">RadiantWaves Global News Update</span>
-</div><nav><a href="index.html">Home</a>
-<a href="index.html">World</a>
-<a href="index.html">Politics</a>
-<a href="index.html">Business</a>
-<a href="index.html">Technology</a>
-<a href="index.html">Science</a>
-<a href="index.html">Sports</a>
-<a href="index.html">Entertainment</a>
+</div><nav><a href="index.html?cat=general">Home</a>
+<a href="index.html?cat=general">World</a>
+<a href="index.html?cat=politics">Politics</a>
+<a href="index.html?cat=business">Business</a>
+<a href="index.html?cat=technology">Technology</a>
+<a href="index.html?cat=science">Science</a>
+<a href="index.html?cat=sports">Sports</a>
+<a href="index.html?cat=entertainment">Entertainment</a>
 
 </nav><div id="news"></div><footer><p>© 2026 RadiantWaves News Network</p><p>Truth • Insight • Global Perspective</p><div class="social"><a href="https://facebook.com/radiantwavesnews">
 <img src="images/facebook.png" alt="Facebook">
@@ -128,22 +127,33 @@ Gateway to World News – Connecting You to the World
 <img src="images/tiktok.png" alt="TikTok">
 </a></div></footer><script>
 
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
+const apiKey="10618a434f80cc4ffe52717ea1bf2401";
 
-/* AI rewriting */
+/* detect category */
+
+const params=new URLSearchParams(window.location.search);
+const category=params.get("cat") || "general";
+
+/* AI rewrite */
 
 function rewriteStory(title,text){
+
+if(!text){
+text="Global developments continue to unfold.";
+}
 
 return text + " RadiantWaves analysis suggests this development could have wider global implications.";
 
 }
 
-/* Display news */
+/* display news */
 
-function loadNews(articles){
+function showNews(articles){
 
 let container=document.getElementById("news");
 let breaking=document.getElementById("breaking-news");
+
+container.innerHTML="";
 
 let headlines=[];
 
@@ -151,7 +161,7 @@ articles.forEach(article=>{
 
 let image=article.urlToImage || article.image || "images/world-1.jpg";
 
-let story=rewriteStory(article.title,article.description || article.story || "");
+let story=rewriteStory(article.title,article.description || article.story);
 
 container.innerHTML+=`
 
@@ -175,21 +185,35 @@ breaking.innerHTML=headlines.join(" • ");
 
 }
 
-/* Load live news */
+/* load live news */
 
-fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=25&apiKey=${apiKey}`)
+fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=25&category=${category}&apiKey=${apiKey}`)
 .then(res=>res.json())
-.then(data=>loadNews(data.articles))
+.then(data=>{
 
-/* If API fails use local news */
+if(data.articles && data.articles.length>0){
 
-.catch(()=>{
+showNews(data.articles);
+
+}else{
+
+loadLocalNews();
+
+}
+
+})
+
+.catch(()=>loadLocalNews());
+
+/* fallback to json */
+
+function loadLocalNews(){
 
 fetch("news.json")
 .then(res=>res.json())
-.then(data=>loadNews(data.articles));
+.then(data=>showNews(data.articles));
 
-});
+}
 
 </script></body>
 </html>

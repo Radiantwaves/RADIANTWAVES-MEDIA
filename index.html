@@ -16,7 +16,7 @@
   
   /* Header slogan */
   .slogan { width:100%; text-align:center; background:#222; color:#00aaff; font-size:16px; font-weight:bold; padding:5px 0; }
-  
+
   /* Breaking news ticker */
   .breaking-news { background:#00aaff; color:#fff; padding:5px 10px; white-space:nowrap; overflow:hidden; font-weight:bold; }
   #breaking-ticker a { display:inline-block; color:#fff; margin-right:50px; text-decoration:none; }
@@ -48,6 +48,7 @@
   <div class="logo">
     <img src="images/icon-512.png" alt="Radiant Waves Global News" width="60" height="60">
     <span>Radiant Waves Global News</span>
+    <!-- Keep MP3 listen button if it exists here -->
   </div>
   <nav class="nav">
     <a href="index.html">Home</a>
@@ -60,7 +61,7 @@
     <a href="entertainment.html">Entertainment</a>
   </nav>
   <div class="slogan">
-    <p>Gateway to World News – Connecting You to the World</p>
+    Gateway to World News – Connecting You to the World
   </div>
 </header>
 
@@ -98,12 +99,13 @@
 </footer>
 
 <script>
-// Fetch news.json and populate main articles, breaking news and trending
+// Fetch news.json and populate main articles, breaking news, trending
 fetch('news.json')
   .then(res => res.json())
   .then(data => {
     // Main articles
     const container = document.getElementById('articles-container');
+    container.innerHTML = '';
     data.articles.forEach(a => {
       const articleDiv = document.createElement('div');
       articleDiv.className = 'article';
@@ -116,8 +118,9 @@ fetch('news.json')
       container.appendChild(articleDiv);
     });
 
-    // Breaking news ticker - scroll smoothly
+    // Breaking news ticker
     const ticker = document.getElementById('breaking-ticker');
+    ticker.innerHTML = '';
     data.articles.slice(0,5).forEach(a => {
       const link = document.createElement('a');
       link.href = `article.html?id=${encodeURIComponent(a.title)}`;
@@ -126,8 +129,9 @@ fetch('news.json')
       ticker.appendChild(document.createTextNode("  |  "));
     });
 
-    // Trending news - 10 articles
+    // Trending news: 10 articles
     const trendingList = document.getElementById('trending-list');
+    trendingList.innerHTML = '';
     data.articles.slice(0,10).forEach(a => {
       const li = document.createElement('li');
       const link = document.createElement('a');
@@ -137,7 +141,7 @@ fetch('news.json')
       trendingList.appendChild(li);
     });
 
-    // Simple horizontal scroll effect for breaking news
+    // Smooth horizontal scroll for breaking news
     let pos = ticker.offsetWidth;
     function scrollTicker() {
       pos--;

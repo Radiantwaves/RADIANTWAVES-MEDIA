@@ -1,35 +1,33 @@
-name: Update RadiantWaves News
+name: Daily News Update
 
+# Run daily at 8:00 UTC, and allow manual triggers
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
   update-news:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '20'
 
-      - name: Install dependencies
+      - name: Install Dependencies
+        run: npm install node-fetch@2
+
+      - name: Generate news.json
+        run: node generate-news.js
+
+      - name: Commit and Push news.json
         run: |
-          npm init -y
-          npm install node-fetch@2
-
-      - name: Run news engine
-        run: node news-engine.js
-
-      - name: Commit updated news
-        run: |
-          git config user.name "RadiantWaves Bot"
-          git config user.email "bot@radiantwaves.com"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add news.json
-          git commit -m "Auto update news" || echo "No changes"
+          git commit -m "Daily news update" || echo "No changes to commit"
           git push

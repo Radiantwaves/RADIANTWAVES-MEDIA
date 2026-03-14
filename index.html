@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RadiantWaves News Network</title>
-
 <style>
-body { margin:0; font-family:Arial; background:#f2f2f2; }
-header{ background:#08364b; color:white; text-align:center; padding:25px; }
-header img{ width:120px; }
-h1{ margin:10px 0; font-size:36px; }
-.slogan{ color:#cfe8ff; font-size:18px; }
-.breaking{ background:#0d47a1; color:white; padding:10px; font-weight:bold; overflow:hidden; white-space:nowrap; }
-.breaking span{ display:inline-block; padding-left:100%; animation:scroll 45s linear infinite; }
+body{margin:0;font-family:Arial;background:#f2f2f2;}
+header{background:#08364b;color:white;text-align:center;padding:25px;}
+header img{width:120px;}
+h1{margin:10px 0;font-size:36px;}
+.slogan{color:#cfe8ff;font-size:18px;}
+.breaking{background:#0d47a1;color:white;padding:10px;font-weight:bold;overflow:hidden;white-space:nowrap;}
+.breaking span{display:inline-block;padding-left:100%;animation:scroll 45s linear infinite;}
 @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-nav{ background:black; text-align:center; padding:12px; }
-nav a{ color:white; margin:0 12px; text-decoration:none; font-weight:bold; }
-#news{ max-width:900px; margin:auto; padding:20px; }
-.news-card{ background:white; padding:15px; margin-bottom:20px; border-radius:6px; box-shadow:0 0 5px rgba(0,0,0,0.2);}
-.news-card img{ width:100%; border-radius:4px; margin-bottom:10px; }
-footer{ background:#08364b; color:white; text-align:center; padding:25px; }
-.social img{ width:35px; margin:8px; }
+nav{background:black;text-align:center;padding:12px;}
+nav a{color:white;margin:0 12px;text-decoration:none;font-weight:bold;}
+#news{max-width:900px;margin:auto;padding:20px;}
+.news-card{background:white;padding:15px;margin-bottom:20px;border-radius:6px;box-shadow:0 0 5px rgba(0,0,0,0.2);}
+.news-card img{width:100%;border-radius:4px;margin-bottom:10px;}
+footer{background:#08364b;color:white;text-align:center;padding:25px;}
+.social img{width:35px;margin:8px;}
 </style>
-
 </head>
-
 <body>
 
 <header>
@@ -35,7 +31,7 @@ footer{ background:#08364b; color:white; text-align:center; padding:25px; }
 </header>
 
 <div class="breaking">
-<span id="breaking-news">RadiantWaves Global News Update</span>
+<span id="breaking-news">Loading breaking news...</span>
 </div>
 
 <nav>
@@ -64,49 +60,83 @@ footer{ background:#08364b; color:white; text-align:center; padding:25px; }
 
 <script>
 const apiKey = "4183020c-43aa-40db-bebc-d1389f09d3cb";
-const categories = ["world","business","politics","technology","science","sports","entertainment"];
-
-// Detect category from URL
 const params = new URLSearchParams(window.location.search);
 const category = params.get("cat") || "general";
 
-// Category-specific default images
+// Default images
 const defaultImages = {
-    world: "images/world-1.jpg",
-    business: "images/business-1.jpg",
-    politics: "images/politics-1.jpg",
-    technology: "images/tech-1.jpg",
-    science: "images/science-1.jpg",
-    sports: "images/sports-1.jpg",
-    entertainment: "images/entertainment-1.jpg"
+    world:"images/world-1.jpg",
+    business:"images/business-1.jpg",
+    politics:"images/politics-1.jpg",
+    technology:"images/tech-1.jpg",
+    science:"images/science-1.jpg",
+    sports:"images/sports-1.jpg",
+    entertainment:"images/entertainment-1.jpg",
+    general:"images/world-1.jpg"
 };
 
-// AI rewriting function
-function rewriteStory(title, text, category){
+// Improved AI rewrite
+function rewriteStory(title,text,category){
     if(!text) text="Global developments continue to unfold.";
-
     const endings = {
-        world: ["RadiantWaves brings you the latest international perspective.","Stay informed with global developments from RadiantWaves."],
-        politics: ["RadiantWaves insight: political dynamics are shifting rapidly.","Our analysts highlight key political developments."],
-        business: ["RadiantWaves financial insight: market reactions analyzed.","Our experts provide context on economic developments."],
-        technology: ["RadiantWaves tech focus: innovations shaping the future.","AI and tech trends analyzed by RadiantWaves."],
-        sports: ["RadiantWaves sports update: latest scores and highlights.","Stay on top of the action with RadiantWaves."],
-        entertainment: ["RadiantWaves entertainment spotlight: stories that matter.","Our coverage brings the latest celebrity and film news."],
-        science: ["RadiantWaves science insight: discoveries explained.","Explore new developments with RadiantWaves."],
-        general: ["RadiantWaves keeps you informed on global events.","Stay updated with RadiantWaves insights."]
+        world:["RadiantWaves brings you the latest international perspective.","Stay informed with global developments from RadiantWaves."],
+        politics:["RadiantWaves insight: political dynamics are shifting rapidly.","Our analysts highlight key political developments."],
+        business:["RadiantWaves financial insight: market reactions analyzed.","Our experts provide context on economic developments."],
+        technology:["RadiantWaves tech focus: innovations shaping the future.","AI and tech trends analyzed by RadiantWaves."],
+        sports:["RadiantWaves sports update: latest scores and highlights.","Stay on top of the action with RadiantWaves."],
+        entertainment:["RadiantWaves entertainment spotlight: stories that matter.","Our coverage brings the latest celebrity and film news."],
+        science:["RadiantWaves science insight: discoveries explained.","Explore new developments with RadiantWaves."],
+        general:["RadiantWaves keeps you informed on global events.","Stay updated with RadiantWaves insights."]
     };
-
     const categoryEndings = endings[category] || endings["general"];
-    const ending = categoryEndings[Math.floor(Math.random() * categoryEndings.length)];
+    const ending = categoryEndings[Math.floor(Math.random()*categoryEndings.length)];
     return `${text} ${ending}`;
 }
 
 // Display news
 function showNews(articles){
-    let container = document.getElementById("news");
-    let breaking = document.getElementById("breaking-news");
+    const container = document.getElementById("news");
+    const breaking = document.getElementById("breaking-news");
     container.innerHTML = "";
-    let headlines = [];
+    const headlines = [];
     articles.forEach(article=>{
-        let image = article.image_url || article.image || defaultImages[category] || defaultImages["world"];
-        let story = rewriteStory
+        const image = article.image_url || article.image || defaultImages[article.category] || defaultImages["general"];
+        const story = rewriteStory(article.title,article.description,article.category || category);
+        container.innerHTML += `
+        <div class="news-card">
+            <img src="${image}" alt="${article.title}">
+            <h3>${article.title}</h3>
+            <p>${story}</p>
+        </div>`;
+        headlines.push(article.title);
+    });
+    breaking.innerHTML = headlines.length ? headlines.join(" • ") : "No news available right now.";
+}
+
+// Load news (API first, fallback to JSON)
+function loadNews(){
+    fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&language=en&category=${category}`)
+    .then(res=>res.json())
+    .then(data=>{
+        if(data.results && data.results.length) showNews(data.results);
+        else loadLocalNews();
+    })
+    .catch(loadLocalNews);
+}
+
+// Fallback
+function loadLocalNews(){
+    fetch("news.json")
+    .then(res=>res.json())
+    .then(data=>{
+        const filtered = data.articles.filter(a=>a.category===category || category==="general");
+        showNews(filtered.length ? filtered : data.articles);
+    })
+    .catch(()=>document.getElementById("breaking-news").innerHTML="No news available.");
+}
+
+loadNews();
+</script>
+
+</body>
+</html>

@@ -1,51 +1,165 @@
 {
   "articles": [
-    {"title":"Manchester United Secures Comeback Win","description":"In the Premier League, Manchester United defeated Arsenal 3-2 in a thrilling match with last-minute goals from Rashford and Bruno Fernandes.","category":"sports","image":"images/sports-2.jpg","date":"2026-03-14"},
-    {"title":"Real Madrid Dominates Barcelona in El Clasico","description":"Real Madrid won 4-1 at Santiago Bernabeu, with Benzema scoring a hat-trick and Vinicius Jr. adding the fourth goal.","category":"sports","image":"images/sports-1.jpg","date":"2026-03-14"},
-    {"title":"Liverpool Beats Chelsea in FA Cup Thriller","description":"Liverpool staged a dramatic comeback, winning 3-2 over Chelsea with late goals by Salah and Jota.","category":"sports","image":"images/sports-2.jpg","date":"2026-03-14"},
-    {"title":"Premier League Teams Gear Up for Champions League","description":"Top European clubs are preparing for crucial Champions League fixtures this week, with Manchester City, Bayern Munich, and PSG among favorites.","category":"sports","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Super Eagles Prepare for FIFA Qualifiers","description":"Nigeria’s national football team has started intensive training sessions ahead of the upcoming FIFA World Cup qualifying matches.","category":"sports","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Global Climate Summit Concludes","description":"World leaders have finalized agreements on carbon reduction targets and renewable energy investments, aiming to limit global warming below 1.5°C.","category":"world","image":"images/world-1.jpg","date":"2026-03-14"},
-    {"title":"Middle East Diplomatic Talks Resume","description":"Leaders from Saudi Arabia, UAE, and Israel met in a series of sessions to discuss regional trade and security agreements.","category":"world","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"UK Approves Advanced Renewable Energy Projects","description":"New offshore wind farms and solar energy initiatives have been approved to meet carbon reduction goals and create thousands of new jobs.","category":"world","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Nigeria Presidential Debate Highlights","description":"Candidates for Nigeria's presidency debated economic reforms, security, and foreign policy in a live broadcast from Abuja.","category":"politics","image":"images/politics-1.jpg","date":"2026-03-14"},
-    {"title":"European Elections Round-Up","description":"Multiple EU countries head to polls this week, with key focus on climate policies and economic recovery plans.","category":"politics","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"US Congress Approves Infrastructure Spending Bill","description":"A $500 billion infrastructure package has been passed to upgrade roads, bridges, and public transportation across the United States.","category":"politics","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Nigeria Business Confidence Rises","description":"Recent surveys indicate higher confidence in retail and manufacturing sectors, suggesting economic recovery is underway.","category":"business","image":"images/business-1.jpg","date":"2026-03-14"},
-    {"title":"European Markets React to Oil Prices","description":"Stock exchanges in London, Frankfurt, and Paris saw fluctuations as crude oil prices rose unexpectedly.","category":"business","image":"images/business-2.jpg","date":"2026-03-14"},
-    {"title":"Global Tech Firms Expand AI Research","description":"Companies including Google, Microsoft, and OpenAI announce new investments into AI and machine learning research hubs worldwide.","category":"technology","image":"images/tech-1.jpg","date":"2026-03-14"},
-    {"title":"Canada Introduces AI Research Funding","description":"Government announces grants to support AI startups in healthcare, agriculture, and renewable energy.","category":"technology","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Tech Startups in Lagos Raise $15M Funding","description":"Several Nigerian AI and fintech startups secured international investments at the Lagos Innovation Summit.","category":"technology","image":"images/tech-1.jpg","date":"2026-03-14"},
-    {"title":"New Vaccination Drive Launched Across Nigeria","description":"Government introduces nationwide immunization campaign targeting preventable diseases to protect vulnerable populations.","category":"science","image":"images/science-1.jpg","date":"2026-03-14"},
-    {"title":"NASA Plans Mars Rover Launch","description":"NASA prepares for a new rover mission to Mars, focused on geological studies and searching for signs of past life.","category":"science","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"EU Launches Environmental Research Initiative","description":"A multi-nation EU project aims to monitor climate change effects and biodiversity across Europe.","category":"science","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Nigerian Film Festival Celebrates Local Talent","description":"Top Nollywood films were recognized at Lagos premiere events with awards for acting, directing, and screenplay.","category":"entertainment","image":"images/entertainment-1.jpg","date":"2026-03-14"},
-    {"title":"Hollywood Releases Anticipated Nigerian-Themed Film","description":"The movie explores African history and modern culture, receiving early positive reviews from critics.","category":"entertainment","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Grammy Awards Highlights Global Music Talent","description":"International artists from Europe, USA, and Africa were recognized in categories spanning pop, rap, and classical music.","category":"entertainment","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Apple Unveils Next-Gen iPhone","description":"The new iPhone 16 includes advanced AI features, improved battery life, and a foldable display.","category":"technology","image":"images/tech-2.jpg","date":"2026-03-14"},
-    {"title":"Tesla Announces Electric Truck Expansion","description":"Tesla plans to open new factories in Germany and USA to expand production of its Cybertruck line.","category":"business","image":"images/business-3.jpg","date":"2026-03-14"},
-    {"title":"Manchester City Clinches Premier League Lead","description":"Manchester City beats Tottenham 2-0 to take the top spot in the Premier League table with 20 games remaining.","category":"sports","image":"images/sports-1.jpg","date":"2026-03-14"},
-    {"title":"Champions League Round of 16 Kick-Off","description":"UEFA Champions League round of 16 fixtures start this week, with PSG, Real Madrid, Bayern Munich, and Chelsea playing.","category":"sports","image":"images/sports-2.jpg","date":"2026-03-14"},
-    {"title":"SpaceX Successfully Launches Starship Prototype","description":"Starship lifted off from Boca Chica, Texas, carrying experimental payloads for space exploration testing.","category":"science","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"UN Warns of Rising Sea Levels","description":"United Nations report emphasizes urgent action as global sea levels continue to rise due to climate change.","category":"world","image":"images/world-2.jpg","date":"2026-03-14"},
-    {"title":"Netflix Announces New European Series","description":"Streaming giant Netflix is launching a historical drama series set in Paris, starring international actors.","category":"entertainment","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"UK Prime Minister Visits India","description":"Official visit focuses on trade agreements, climate cooperation, and cultural exchange programs.","category":"world","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"French Open Preparations Begin","description":"Roland Garros organizers prepare stadiums and player facilities ahead of the tennis Grand Slam tournament.","category":"sports","image":"images/sports-2.jpg","date":"2026-03-14"},
-    {"title":"Germany Approves Hydrogen Energy Initiative","description":"Government invests in hydrogen fuel projects to support sustainable energy and reduce carbon emissions.","category":"business","image":"images/business-2.jpg","date":"2026-03-14"},
-    {"title":"Microsoft AI Model Breakthrough","description":"Microsoft announces new AI model capable of advanced natural language understanding and real-time translation.","category":"technology","image":"images/tech-1.jpg","date":"2026-03-14"},
-    {"title":"US Federal Reserve Raises Interest Rates","description":"To curb inflation, the Fed increased interest rates by 0.25%, impacting global markets and lending.","category":"business","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"European Space Agency Launches Satellite","description":"ESA launches environmental monitoring satellite to study climate change and pollution patterns in Europe.","category":"science","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Bayern Munich Clinches Bundesliga Lead","description":"Bayern Munich wins 2-1 against Dortmund, maintaining their lead in the Bundesliga title race.","category":"sports","image":"images/sports-1.jpg","date":"2026-03-14"},
-    {"title":"New AI Startups in Africa Gain International Funding","description":"Tech entrepreneurs from Nigeria, Kenya, and South Africa are attracting global investors for innovative AI solutions.","category":"technology","image":"images/tech-2.jpg","date":"2026-03-14"},
-    {"title":"European Union Passes Cybersecurity Law","description":"New legislation strengthens protection for data privacy, infrastructure, and critical systems across the EU.","category":"world","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"UK Scientists Develop New Cancer Therapy","description":"Breakthrough treatment targets aggressive tumors with minimal side effects, currently in clinical trials.","category":"science","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Italy Wins International Film Festival Awards","description":"Italian filmmakers received top honors at the Venice Film Festival for outstanding directing and cinematography.","category":"entertainment","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Arsenal Faces Manchester United in Premier League Clash","description":"Arsenal will host Manchester United this weekend in a key fixture that could determine top-four standings.","category":"sports","image":"images/sports-2.jpg","date":"2026-03-14"},
-    {"title":"Spotify Expands Podcast Network to Europe","description":"Spotify is launching new localized podcasts in multiple European languages targeting tech, finance, and entertainment topics.","category":"entertainment","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"France Strengthens Renewable Energy Investment","description":"The French government approves subsidies for solar and wind power projects to accelerate energy transition.","category":"business","image":"images/business-3.jpg","date":"2026-03-14"},
-    {"title":"US & Canada Sign Trade Agreement","description":"New trade pact focuses on technology, automotive, and energy sectors, aiming to boost cross-border commerce.","category":"business","image":"images/icon-512.png","date":"2026-03-14"},
-    {"title":"Barcelona Signs New Midfielder for Champions League Campaign","description":"Spanish club Barcelona added a young midfielder to strengthen their squad for the upcoming Champions League matches.","category":"sports","image":"images/sports-1.jpg","date":"2026-03-14"},
-    {"title":"Nigeria Health Sector Introduces New Vaccination Drive","description":"Government pushes for nationwide immunization to curb disease outbreaks and improve public health.","category":"science","image":"images/science-2.jpg","date":"2026-03-14"},
-    {"title":"UK Launches National AI Strategy","description":"Government unveils strategy to integrate artificial intelligence across healthcare, transport, and finance sectors.","category":"technology","image":"images/tech-2.jpg","date":"2026-03-14"}
+    {
+      "title": "Global Climate Summit Concludes with Landmark Agreements",
+      "description": "World leaders finalized agreements on carbon reduction targets, renewable energy investments, and sustainable development goals, aiming to limit global warming below 1.5°C.",
+      "category": "world",
+      "image": "images/world-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "UK Prime Minister Visits India for Trade and Climate Talks",
+      "description": "The UK PM's official visit focused on trade agreements, climate cooperation, and cultural exchange programs between the two nations.",
+      "category": "world",
+      "image": "images/world-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Middle East Diplomatic Talks Resume",
+      "description": "Saudi Arabia, UAE, and Israel resumed high-level diplomatic discussions, focusing on regional trade and security agreements.",
+      "category": "world",
+      "image": "images/icon-512.png",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Nigeria Presidential Debate Highlights",
+      "description": "Candidates for Nigeria's presidency debated economic reforms, security, and foreign policy in a live broadcast from Abuja, with millions watching nationwide.",
+      "category": "politics",
+      "image": "images/politics-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "European Elections Round-Up",
+      "description": "Multiple EU countries head to polls this week, with key focus on climate policies, immigration, and economic recovery plans.",
+      "category": "politics",
+      "image": "images/icon-512.png",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "US Congress Approves $500B Infrastructure Bill",
+      "description": "The bill will upgrade roads, bridges, and public transportation across the United States, creating jobs and modernizing infrastructure.",
+      "category": "politics",
+      "image": "images/icon-512.png",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Nigeria Business Confidence Rises",
+      "description": "Surveys indicate higher confidence in retail and manufacturing sectors, suggesting the Nigerian economy is gradually recovering.",
+      "category": "business",
+      "image": "images/business-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Global Markets React to Oil Price Fluctuations",
+      "description": "Stock exchanges in London, Frankfurt, and Paris saw fluctuations as crude oil prices rose unexpectedly, affecting energy and transport sectors.",
+      "category": "business",
+      "image": "images/business-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Tesla Expands Electric Truck Production",
+      "description": "Tesla will open new factories in Germany and the USA to produce more Cybertrucks, aiming to meet rising demand for electric vehicles.",
+      "category": "business",
+      "image": "images/business-3.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Microsoft AI Model Breakthrough",
+      "description": "Microsoft announces a new AI model capable of advanced natural language understanding, real-time translation, and creative content generation.",
+      "category": "technology",
+      "image": "images/tech-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Tech Startups in Lagos Raise $15M Funding",
+      "description": "Several Nigerian AI and fintech startups secured international investments at the Lagos Innovation Summit, attracting global investors.",
+      "category": "technology",
+      "image": "images/tech-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Apple Unveils iPhone 16 with AI Features",
+      "description": "Apple's new iPhone 16 includes advanced AI features, improved battery life, foldable display, and enhanced photography tools.",
+      "category": "technology",
+      "image": "images/tech-3.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "NASA Plans Mars Rover Launch",
+      "description": "NASA prepares for a new rover mission to Mars, focusing on geological studies and searching for signs of past life on the Red Planet.",
+      "category": "science",
+      "image": "images/science-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "UK Scientists Develop New Cancer Therapy",
+      "description": "Breakthrough treatment targets aggressive tumors with minimal side effects, currently undergoing clinical trials.",
+      "category": "science",
+      "image": "images/science-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "EU Environmental Research Initiative Launches",
+      "description": "A multi-nation EU project will monitor climate change effects, biodiversity, and sustainable practices across Europe.",
+      "category": "science",
+      "image": "images/icon-512.png",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Super Eagles Prepare for FIFA Qualifiers",
+      "description": "Nigeria’s national football team has started intensive training sessions ahead of the upcoming FIFA World Cup qualifying matches.",
+      "category": "sports",
+      "image": "images/sports-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Manchester United Secures Comeback Win",
+      "description": "In the Premier League, Manchester United defeated Arsenal 3-2 in a thrilling match with last-minute goals from Rashford and Bruno Fernandes.",
+      "category": "sports",
+      "image": "images/sports-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Real Madrid Dominates Barcelona in El Clasico",
+      "description": "Real Madrid won 4-1 at Santiago Bernabeu, with Benzema scoring a hat-trick and Vinicius Jr. adding the fourth goal.",
+      "category": "sports",
+      "image": "images/sports-3.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Liverpool Beats Chelsea in FA Cup Thriller",
+      "description": "Liverpool staged a dramatic comeback, winning 3-2 over Chelsea with late goals by Salah and Jota.",
+      "category": "sports",
+      "image": "images/sports-4.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Nigerian Film Festival Celebrates Local Talent",
+      "description": "Top Nollywood films were recognized at Lagos premiere events with awards for acting, directing, and screenplay.",
+      "category": "entertainment",
+      "image": "images/entertainment-1.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Netflix Announces New European Series",
+      "description": "Streaming giant Netflix is launching a historical drama series set in Paris, starring international actors, to premiere this summer.",
+      "category": "entertainment",
+      "image": "images/entertainment-2.jpg",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Spotify Expands Podcast Network to Europe",
+      "description": "Spotify is launching new localized podcasts in multiple European languages targeting tech, finance, and entertainment topics.",
+      "category": "entertainment",
+      "image": "images/icon-512.png",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "Apple Announces Next-Gen MacBook Pro",
+      "description": "The new MacBook Pro comes with advanced AI-assisted productivity tools and improved battery life for professionals.",
+      "category": "technology",
+      "image": "images/tech-4.jpg",
+      "date": "2026-03-14"
+    }
   ]
 }

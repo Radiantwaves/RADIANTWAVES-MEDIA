@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business - RadiantWaves</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radiant Waves - Business News</title>
+<link rel="icon" href="icon-512.png">
 <style>
-body{margin:0;font-family:Arial;background:#f2f2f2;}
-header{background:#08364b;color:white;text-align:center;padding:20px;}
-header h1{margin:10px;}
-#news{max-width:900px;margin:auto;padding:20px;}
-.news-card{background:white;padding:15px;margin-bottom:20px;border-radius:6px;box-shadow:0 0 5px rgba(0,0,0,0.2);}
-.news-card img{width:100%;border-radius:4px;margin-bottom:10px;}
-nav{background:black;text-align:center;padding:12px;}
-nav a{color:white;margin:0 12px;text-decoration:none;font-weight:bold;}
+body{font-family:Arial;margin:0;background:#f4f4f4;}
+header{background:#0b3d91;color:white;padding:15px;text-align:center;}
+header img{width:60px;}
+nav{background:#222;padding:10px;text-align:center;}
+nav a{color:white;margin:10px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#00bfff;}
+.breaking{background:#1a4fd8;color:white;padding:8px;font-weight:bold;overflow:hidden;}
+.ticker{white-space:nowrap;display:inline-block;animation:scroll 80s linear infinite;}
+@keyframes scroll{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.container{display:flex;max-width:1200px;margin:auto;padding:20px;}
+.news{flex:3;}
+.trending{flex:1;background:white;margin-left:20px;padding:15px;border-radius:6px;}
+.article{background:white;margin-bottom:20px;padding:15px;border-radius:6px;}
+.article img{width:100%;border-radius:4px;}
+.article h2 a{text-decoration:none;color:#0b3d91;}
+.article h2 a:hover{color:#00bfff;}
+footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Business News</h1>
+<img src="icon-512.png" alt="Radiant Waves Logo">
+<h1>Radiant Waves</h1>
+<p>Gateway to World News</p>
 </header>
+
+<div style="text-align:center;margin:10px;">
+<button id="playNews">🔊 Listen to RadiantWaves</button>
+<audio id="newsAudio" loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
+</div>
 
 <nav>
 <a href="index.html">Home</a>
@@ -32,45 +53,61 @@ nav a{color:white;margin:0 12px;text-decoration:none;font-weight:bold;}
 <a href="entertainment.html">Entertainment</a>
 </nav>
 
-<div id="news"></div>
+<div class="breaking">
+<span>Breaking News:</span>
+<span class="ticker" id="ticker"></span>
+</div>
+
+<div class="container">
+<div class="news" id="news"></div>
+<div class="trending">
+<h3>Trending News</h3>
+<ul id="trending"></ul>
+</div>
+</div>
+
+<footer>
+<p>Radiant Waves Media © 2026</p>
+</footer>
 
 <script>
-const apiKey = "10618a434f80cc4ffe52717ea1bf2401";
-
-function loadCategoryNews(articles){
-  const container = document.getElementById("news");
-  let hasNews = false;
-
-  articles.forEach(article => {
-    if(article.category === "business" || article.source?.name?.toLowerCase().includes("business")){
-      const image = article.urlToImage || article.image || "images/business-1.jpg";
-      const story = article.description || article.story || "Click to read more.";
-      container.innerHTML += `
-        <div class="news-card">
-          <img src="${image}" alt="Business News Image">
-          <h3>${article.title}</h3>
-          <p>${story}</p>
-        </div>
-      `;
-      hasNews = true;
-    }
-  });
-
-  if(!hasNews){
-    container.innerHTML = "<p>No business news available at the moment.</p>";
-  }
+// MP3 Player
+const playButton=document.getElementById("playNews");
+const audio=document.getElementById("newsAudio");
+playButton.onclick=function(){
+  if(audio.paused){audio.play();playButton.innerHTML="⏸ Pause RadiantWaves";}
+  else{audio.pause();playButton.innerHTML="🔊 Listen to RadiantWaves";}
 }
 
-// Try API first
-fetch(`https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=10&apiKey=${apiKey}`)
-.then(res => res.json())
-.then(data => loadCategoryNews(data.articles))
-.catch(err => {
-  console.log("API failed, loading local news.json");
-  fetch("news.json")
-    .then(res => res.json())
-    .then(data => loadCategoryNews(data.articles));
-});
+// Current page category
+const currentCategory="business"; // CHANGE this per page
+
+// Load News
+fetch("news.json")
+.then(res=>res.json())
+.then(data=>{
+  let newsHTML="";
+  let ticker="";
+  let trendingHTML="";
+  data.articles.forEach((article,i)=>{
+    if(article.category===currentCategory){
+      let img=article.image?article.image:"icon-512.png";
+      newsHTML+=`<div class="article">
+        <img src="${img}" alt="News Image">
+        <h2><a href="article.html?id=${i}">${article.title}</a></h2>
+        <p>${article.description}</p>
+        <small>${article.date} | ${article.category}</small>
+      </div>`;
+    }
+    ticker+=article.title+" • ";
+    if(i<10){
+      trendingHTML+=`<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`;
+    }
+  });
+  document.getElementById("news").innerHTML=newsHTML;
+  document.getElementById("ticker").innerText=ticker;
+  document.getElementById("trending").innerHTML=trendingHTML;
+})
 </script>
 
 </body>

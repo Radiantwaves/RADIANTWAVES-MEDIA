@@ -54,6 +54,7 @@ nav a:hover {
     color: #00bfff;
 }
 
+/* Breaking News Ticker */
 .breaking {
     background: #1a4fd8;
     color: white;
@@ -65,7 +66,7 @@ nav a:hover {
 .ticker {
     white-space: nowrap;
     display: inline-block;
-    animation: scroll 40s linear infinite;
+    animation: scroll 80s linear infinite; /* slower scroll */
 }
 
 @keyframes scroll {
@@ -194,6 +195,7 @@ fetch("news.json")
     data.articles.forEach((article, i) => {
         let img = article.image ? article.image : "icon-512.png"
 
+        // Main news feed
         newsHTML += `
         <div class="article">
             <img src="${img}" alt="News Image">
@@ -203,8 +205,10 @@ fetch("news.json")
         </div>
         `
 
+        // Breaking news ticker
         ticker += article.title + " • "
 
+        // Trending News (10 items, clickable)
         if(i < 10){
             trendingHTML += `<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`
         }

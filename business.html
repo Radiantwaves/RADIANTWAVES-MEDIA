@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radiant Waves - Business News</title>
+<title>Radiant Waves - business News</title>
 <link rel="icon" href="icon-512.png">
 <style>
 body{font-family:Arial;margin:0;background:#f4f4f4;}
@@ -26,7 +25,6 @@ nav a:hover{color:#00bfff;}
 footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -79,16 +77,20 @@ playButton.onclick=function(){
   else{audio.pause();playButton.innerHTML="🔊 Listen to RadiantWaves";}
 }
 
-// Current page category
-const currentCategory="business"; // CHANGE this per page
+// API Key
+const API_KEY="4183020c-43aa-40db-bebc-d1389f09d3cb";
 
-// Load News
+// Current category
+const currentCategory="world";
+
+// Load news
 fetch("news.json")
 .then(res=>res.json())
 .then(data=>{
   let newsHTML="";
   let ticker="";
   let trendingHTML="";
+  
   data.articles.forEach((article,i)=>{
     if(article.category===currentCategory){
       let img=article.image?article.image:"icon-512.png";
@@ -107,7 +109,7 @@ fetch("news.json")
   document.getElementById("news").innerHTML=newsHTML;
   document.getElementById("ticker").innerText=ticker;
   document.getElementById("trending").innerHTML=trendingHTML;
-})
+});
 </script>
 
 </body>

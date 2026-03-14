@@ -1,116 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radiant Waves - Home</title>
-<link rel="icon" href="icon-512.png">
-<style>
-body{font-family:Arial;margin:0;background:#f4f4f4;}
-header{background:#0b3d91;color:white;padding:15px;text-align:center;}
-header img{width:60px;}
-nav{background:#222;padding:10px;text-align:center;}
-nav a{color:white;margin:10px;text-decoration:none;font-weight:bold;}
-nav a:hover{color:#00bfff;}
-.breaking{background:#1a4fd8;color:white;padding:8px;font-weight:bold;overflow:hidden;}
-.ticker{white-space:nowrap;display:inline-block;animation:scroll 80s linear infinite;}
-@keyframes scroll{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
-.container{display:flex;max-width:1200px;margin:auto;padding:20px;}
-.news{flex:3;}
-.trending{flex:1;background:white;margin-left:20px;padding:15px;border-radius:6px;}
-.article{background:white;margin-bottom:20px;padding:15px;border-radius:6px;}
-.article img{width:100%;border-radius:4px;}
-.article h2 a{text-decoration:none;color:#0b3d91;}
-.article h2 a:hover{color:#00bfff;}
-footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiant Waves Global News</title>
+  <link rel="icon" href="images/icon-512.png">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
+    header { background:#003366; color:white; padding:10px; display:flex; align-items:center; }
+    header img { width:50px; margin-right:10px; }
+    nav a { color:white; margin:0 10px; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    .breaking { background:#007bff; color:white; padding:5px; overflow:hidden; white-space:nowrap; }
+    .breaking span { display:inline-block; padding-right:50px; animation:scroll 20s linear infinite; }
+    @keyframes scroll { 0% { transform:translateX(100%); } 100% { transform:translateX(-100%); } }
+    .container { display:flex; margin:20px; }
+    .main { flex:3; margin-right:20px; }
+    .sidebar { flex:1; background:#fff; padding:10px; }
+    article { background:white; margin-bottom:20px; padding:10px; }
+    article img { max-width:100%; }
+    h2 { margin-top:0; }
+    .footer { background:#003366; color:white; text-align:center; padding:10px; margin-top:20px; }
+  </style>
 </head>
-
 <body>
 
 <header>
-<img src="icon-512.png" alt="Radiant Waves Logo">
-<h1>Radiant Waves</h1>
-<p>Gateway to World News</p>
+  <img src="images/icon-512.png" alt="Radiant Waves Logo">
+  <h1>Radiant Waves Global News</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="world.html">World</a>
+    <a href="politics.html">Politics</a>
+    <a href="business.html">Business</a>
+    <a href="technology.html">Technology</a>
+    <a href="science.html">Science</a>
+    <a href="sports.html">Sports</a>
+    <a href="entertainment.html">Entertainment</a>
+  </nav>
 </header>
 
-<div style="text-align:center;margin:10px;">
-<button id="playNews">🔊 Listen to RadiantWaves</button>
-<audio id="newsAudio" loop>
-<source src="news-music.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="world.html">World</a>
-<a href="politics.html">Politics</a>
-<a href="business.html">Business</a>
-<a href="technology.html">Technology</a>
-<a href="science.html">Science</a>
-<a href="sports.html">Sports</a>
-<a href="entertainment.html">Entertainment</a>
-</nav>
-
-<div class="breaking">
-<span>Breaking News:</span>
-<span class="ticker" id="ticker"></span>
+<div class="breaking" id="breaking-news">
+  <!-- Breaking news ticker -->
 </div>
 
 <div class="container">
-<div class="news" id="news"></div>
-<div class="trending">
-<h3>Trending News</h3>
-<ul id="trending"></ul>
-</div>
+  <div class="main" id="main-content">
+    <!-- Main articles -->
+  </div>
+  <div class="sidebar" id="trending-news">
+    <h3>Trending News</h3>
+    <!-- Trending articles -->
+  </div>
 </div>
 
-<footer>
-<p>Radiant Waves Media © 2026</p>
-</footer>
+<div class="footer">
+  <p>Follow us: 
+    <a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a> | 
+    <a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a> | 
+    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a> | 
+    <a href="https://twitter.com/radiant13528995" target="_blank">Twitter</a>
+  </p>
+</div>
 
 <script>
-// MP3 Player
-const playButton=document.getElementById("playNews");
-const audio=document.getElementById("newsAudio");
-playButton.onclick=function(){
-  if(audio.paused){audio.play();playButton.innerHTML="⏸ Pause RadiantWaves";}
-  else{audio.pause();playButton.innerHTML="🔊 Listen to RadiantWaves";}
-}
+  // Set current category for each page
+  const currentCategory = "all"; // Change to "world", "politics", etc. for category pages
 
-// API Key
-const API_KEY="4183020c-43aa-40db-bebc-d1389f09d3cb";
+  // Fetch news JSON
+  fetch('news.json')
+    .then(response => response.json())
+    .then(news => {
+      let filteredArticles = currentCategory === "all" 
+        ? news.articles 
+        : news.articles.filter(a => a.category === currentCategory);
 
-// Current category for Home: show all news
-const currentCategory="all";
+      // Sort by date descending
+      filteredArticles.sort((a,b) => new Date(b.date) - new Date(a.date));
 
-// Load news
-fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
-  let newsHTML="";
-  let ticker="";
-  let trendingHTML="";
-  
-  data.articles.forEach((article,i)=>{
-    let img=article.image?article.image:"icon-512.png";
-    newsHTML+=`<div class="article">
-      <img src="${img}" alt="News Image">
-      <h2><a href="article.html?id=${i}">${article.title}</a></h2>
-      <p>${article.description}</p>
-      <small>${article.date} | ${article.category}</small>
-    </div>`;
-    
-    ticker+=article.title+" • ";
-    if(i<10){
-      trendingHTML+=`<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`;
-    }
-  });
+      // Main content - first 5 articles
+      const mainDiv = document.getElementById('main-content');
+      filteredArticles.slice(0,5).forEach(article => {
+        const art = document.createElement('article');
+        art.innerHTML = `
+          <h2>${article.title}</h2>
+          <img src="${article.image || 'images/icon-512.png'}" alt="${article.title}">
+          <p>${article.description}</p>
+          <p><em>${article.date}</em></p>
+        `;
+        mainDiv.appendChild(art);
+      });
 
-  document.getElementById("news").innerHTML=newsHTML;
-  document.getElementById("ticker").innerText=ticker;
-  document.getElementById("trending").innerHTML=trendingHTML;
-});
+      // Trending news - next 5 articles
+      const trendingDiv = document.getElementById('trending-news');
+      filteredArticles.slice(0,5).forEach(article => {
+        const li = document.createElement('div');
+        li.innerHTML = `<a href="#">${article.title}</a>`;
+        trendingDiv.appendChild(li);
+      });
+
+      // Breaking news ticker - only latest 5
+      const breakingDiv = document.getElementById('breaking-news');
+      const ticker = filteredArticles.slice(0,5).map(a => `<span>${a.title}</span>`).join('');
+      breakingDiv.innerHTML = ticker;
+    })
+    .catch(err => console.error("Failed to load news.json:", err));
 </script>
 
 </body>

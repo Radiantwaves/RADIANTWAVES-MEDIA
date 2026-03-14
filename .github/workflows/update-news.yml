@@ -1,1 +1,36 @@
 
+name: Update RadiantWaves News
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          npm init -y
+          npm install node-fetch@2
+
+      - name: Run news engine
+        run: node news-engine.js
+
+      - name: Commit updated news
+        run: |
+          git config user.name "RadiantWaves Bot"
+          git config user.email "bot@radiantwaves.com"
+          git add news.json
+          git commit -m "Auto update news" || echo "No changes"
+          git push

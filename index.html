@@ -1,128 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Radiant Waves Global News</title>
-
-<meta name="description" content="Radiant Waves delivers breaking global news, politics, technology, science and business updates.">
-<meta name="keywords" content="world news, global news, politics, technology, business, science">
-<meta name="author" content="Radiant Waves Media">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="Radiant Waves Global News">
-<meta property="og:description" content="Breaking global news from Radiant Waves Media">
-<meta property="og:image" content="icon-512.png">
-
+<title>Radiant Waves - Home</title>
 <link rel="icon" href="icon-512.png">
-
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-}
-
-header {
-    background: #0b3d91;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-header img {
-    width: 60px;
-}
-
-nav {
-    background: #222;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #00bfff;
-}
-
-/* Breaking News Ticker */
-.breaking {
-    background: #1a4fd8;
-    color: white;
-    padding: 8px;
-    font-weight: bold;
-    overflow: hidden;
-}
-
-.ticker {
-    white-space: nowrap;
-    display: inline-block;
-    animation: scroll 80s linear infinite; /* slower scroll */
-}
-
-@keyframes scroll {
-    0% { transform: translateX(100%) }
-    100% { transform: translateX(-100%) }
-}
-
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.news {
-    flex: 3;
-}
-
-.trending {
-    flex: 1;
-    background: white;
-    margin-left: 20px;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.article {
-    background: white;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.article img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.article h2 a {
-    text-decoration: none;
-    color: #0b3d91;
-}
-
-.article h2 a:hover {
-    color: #00bfff;
-}
-
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
+body{font-family:Arial;margin:0;background:#f4f4f4;}
+header{background:#0b3d91;color:white;padding:15px;text-align:center;}
+header img{width:60px;}
+nav{background:#222;padding:10px;text-align:center;}
+nav a{color:white;margin:10px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#00bfff;}
+.breaking{background:#1a4fd8;color:white;padding:8px;font-weight:bold;overflow:hidden;}
+.ticker{white-space:nowrap;display:inline-block;animation:scroll 80s linear infinite;}
+@keyframes scroll{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.container{display:flex;max-width:1200px;margin:auto;padding:20px;}
+.news{flex:3;}
+.trending{flex:1;background:white;margin-left:20px;padding:15px;border-radius:6px;}
+.article{background:white;margin-bottom:20px;padding:15px;border-radius:6px;}
+.article img{width:100%;border-radius:4px;}
+.article h2 a{text-decoration:none;color:#0b3d91;}
+.article h2 a:hover{color:#00bfff;}
+footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
 </style>
-
 </head>
 
 <body>
@@ -158,7 +59,6 @@ footer {
 
 <div class="container">
 <div class="news" id="news"></div>
-
 <div class="trending">
 <h3>Trending News</h3>
 <ul id="trending"></ul>
@@ -171,53 +71,46 @@ footer {
 
 <script>
 // MP3 Player
-const playButton = document.getElementById("playNews")
-const audio = document.getElementById("newsAudio")
-
-playButton.onclick = function() {
-    if(audio.paused){
-        audio.play()
-        playButton.innerHTML="⏸ Pause RadiantWaves"
-    } else {
-        audio.pause()
-        playButton.innerHTML="🔊 Listen to RadiantWaves"
-    }
+const playButton=document.getElementById("playNews");
+const audio=document.getElementById("newsAudio");
+playButton.onclick=function(){
+  if(audio.paused){audio.play();playButton.innerHTML="⏸ Pause RadiantWaves";}
+  else{audio.pause();playButton.innerHTML="🔊 Listen to RadiantWaves";}
 }
 
-// Load News
+// API Key
+const API_KEY="4183020c-43aa-40db-bebc-d1389f09d3cb";
+
+// Current category for Home: show all news
+const currentCategory="all";
+
+// Load news
 fetch("news.json")
-.then(res => res.json())
-.then(data => {
-    let newsHTML = ""
-    let ticker = ""
-    let trendingHTML = ""
+.then(res=>res.json())
+.then(data=>{
+  let newsHTML="";
+  let ticker="";
+  let trendingHTML="";
+  
+  data.articles.forEach((article,i)=>{
+    let img=article.image?article.image:"icon-512.png";
+    newsHTML+=`<div class="article">
+      <img src="${img}" alt="News Image">
+      <h2><a href="article.html?id=${i}">${article.title}</a></h2>
+      <p>${article.description}</p>
+      <small>${article.date} | ${article.category}</small>
+    </div>`;
+    
+    ticker+=article.title+" • ";
+    if(i<10){
+      trendingHTML+=`<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`;
+    }
+  });
 
-    data.articles.forEach((article, i) => {
-        let img = article.image ? article.image : "icon-512.png"
-
-        // Main news feed
-        newsHTML += `
-        <div class="article">
-            <img src="${img}" alt="News Image">
-            <h2><a href="article.html?id=${i}">${article.title}</a></h2>
-            <p>${article.description}</p>
-            <small>${article.date} | ${article.category}</small>
-        </div>
-        `
-
-        // Breaking news ticker
-        ticker += article.title + " • "
-
-        // Trending News (10 items, clickable)
-        if(i < 10){
-            trendingHTML += `<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`
-        }
-    })
-
-    document.getElementById("news").innerHTML = newsHTML
-    document.getElementById("ticker").innerText = ticker
-    document.getElementById("trending").innerHTML = trendingHTML
-})
+  document.getElementById("news").innerHTML=newsHTML;
+  document.getElementById("ticker").innerText=ticker;
+  document.getElementById("trending").innerHTML=trendingHTML;
+});
 </script>
 
 </body>

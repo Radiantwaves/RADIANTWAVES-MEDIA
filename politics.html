@@ -2,59 +2,115 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves | Politics</title>
-<link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radiant Waves - politics News</title>
+<link rel="icon" href="icon-512.png">
+<style>
+body{font-family:Arial;margin:0;background:#f4f4f4;}
+header{background:#0b3d91;color:white;padding:15px;text-align:center;}
+header img{width:60px;}
+nav{background:#222;padding:10px;text-align:center;}
+nav a{color:white;margin:10px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#00bfff;}
+.breaking{background:#1a4fd8;color:white;padding:8px;font-weight:bold;overflow:hidden;}
+.ticker{white-space:nowrap;display:inline-block;animation:scroll 80s linear infinite;}
+@keyframes scroll{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.container{display:flex;max-width:1200px;margin:auto;padding:20px;}
+.news{flex:3;}
+.trending{flex:1;background:white;margin-left:20px;padding:15px;border-radius:6px;}
+.article{background:white;margin-bottom:20px;padding:15px;border-radius:6px;}
+.article img{width:100%;border-radius:4px;}
+.article h2 a{text-decoration:none;color:#0b3d91;}
+.article h2 a:hover{color:#00bfff;}
+footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;}
+</style>
 </head>
 <body>
 
 <header>
-  <div class="logo">RadiantWaves</div>
-  <div class="slogan">Gateway to World News, connecting you to the World</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="world.html">World</a></li>
-      <li><a href="politics.html" class="active">Politics</a></li>
-      <li><a href="business.html">Business</a></li>
-      <li><a href="technology.html">Tech</a></li>
-      <li><a href="science.html">Science</a></li>
-      <li><a href="sports.html">Sports</a></li>
-      <li><a href="entertainment.html">Entertainment</a></li>
-    </ul>
-  </nav>
+<img src="icon-512.png" alt="Radiant Waves Logo">
+<h1>Radiant Waves</h1>
+<p>Gateway to World News</p>
 </header>
 
-<section class="breaking-ticker">
-  <div id="ticker">Loading global headlines...</div>
-</section>
-
-<section class="hero">
-  <img src="politics-hero.jpg" alt="Politics News" class="hero-image">
-  <div class="hero-overlay">
-    <h1>Politics</h1>
-    <p>National and international political updates</p>
-  </div>
-</section>
-
-<section id="news">
-  <p>No news available at this time.</p>
-</section>
-
-<audio controls autoplay loop>
-  <source src="news-music.mp3" type="audio/mpeg">
+<div style="text-align:center;margin:10px;">
+<button id="playNews">🔊 Listen to RadiantWaves</button>
+<audio id="newsAudio" loop>
+<source src="news-music.mp3" type="audio/mpeg">
 </audio>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="world.html">World</a>
+<a href="politics.html">Politics</a>
+<a href="business.html">Business</a>
+<a href="technology.html">Technology</a>
+<a href="science.html">Science</a>
+<a href="sports.html">Sports</a>
+<a href="entertainment.html">Entertainment</a>
+</nav>
+
+<div class="breaking">
+<span>Breaking News:</span>
+<span class="ticker" id="ticker"></span>
+</div>
+
+<div class="container">
+<div class="news" id="news"></div>
+<div class="trending">
+<h3>Trending News</h3>
+<ul id="trending"></ul>
+</div>
+</div>
 
 <footer>
-  <p>@2026 RadiantWaves News Network</p>
-  <p>Truth. Insight. Global Perspective</p>
-  <div class="social-icons">
-    <a href="#"><img src="facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="instagram.png" alt="Instagram"></a>
-  </div>
+<p>Radiant Waves Media © 2026</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+// MP3 Player
+const playButton=document.getElementById("playNews");
+const audio=document.getElementById("newsAudio");
+playButton.onclick=function(){
+  if(audio.paused){audio.play();playButton.innerHTML="⏸ Pause RadiantWaves";}
+  else{audio.pause();playButton.innerHTML="🔊 Listen to RadiantWaves";}
+}
+
+// API Key
+const API_KEY="4183020c-43aa-40db-bebc-d1389f09d3cb";
+
+// Current category
+const currentCategory="world";
+
+// Load news
+fetch("news.json")
+.then(res=>res.json())
+.then(data=>{
+  let newsHTML="";
+  let ticker="";
+  let trendingHTML="";
+  
+  data.articles.forEach((article,i)=>{
+    if(article.category===currentCategory){
+      let img=article.image?article.image:"icon-512.png";
+      newsHTML+=`<div class="article">
+        <img src="${img}" alt="News Image">
+        <h2><a href="article.html?id=${i}">${article.title}</a></h2>
+        <p>${article.description}</p>
+        <small>${article.date} | ${article.category}</small>
+      </div>`;
+    }
+    ticker+=article.title+" • ";
+    if(i<10){
+      trendingHTML+=`<li><a href="article.html?id=${i}">${article.title}</a> (${article.category} - ${article.date})</li>`;
+    }
+  });
+  document.getElementById("news").innerHTML=newsHTML;
+  document.getElementById("ticker").innerText=ticker;
+  document.getElementById("trending").innerHTML=trendingHTML;
+});
+</script>
+
 </body>
 </html>

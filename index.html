@@ -1,311 +1,207 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves News Network</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Radiant Waves Global News</title>
+
+<meta name="description" content="Radiant Waves delivers breaking global news, politics, technology, science and business updates.">
+<meta name="keywords" content="world news, global news, politics, technology, business, science">
+<meta name="author" content="Radiant Waves Media">
+
+<meta property="og:title" content="Radiant Waves Global News">
+<meta property="og:description" content="Breaking global news from Radiant Waves Media">
+<meta property="og:image" content="icon-512.png">
+
+<link rel="icon" href="icon-512.png">
+
+<style>
 
 body{
+font-family: Arial, sans-serif;
 margin:0;
-font-family:Arial;
-background:#f2f2f2;
+background:#f4f4f4;
 }
 
-/* HEADER */
-
 header{
-background:#08364b;
+background:#0b3d91;
 color:white;
+padding:15px;
 text-align:center;
-padding:25px;
 }
 
 header img{
-width:120px;
+width:60px;
 }
-
-h1{
-margin:10px 0;
-font-size:36px;
-}
-
-.slogan{
-color:#cfe8ff;
-font-size:18px;
-}
-
-/* AUDIO BUTTON */
-
-#audioBox{
-text-align:center;
-margin:10px;
-}
-
-#audioBox button{
-padding:8px 15px;
-font-weight:bold;
-background:#0d47a1;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* BREAKING NEWS */
-
-.breaking{
-background:#0d47a1;
-color:white;
-padding:10px;
-font-weight:bold;
-overflow:hidden;
-white-space:nowrap;
-}
-
-.breaking span{
-display:inline-block;
-padding-left:100%;
-animation:scroll 45s linear infinite;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
-}
-
-/* NAV */
 
 nav{
-background:black;
+background:#222;
+padding:10px;
 text-align:center;
-padding:12px;
 }
 
 nav a{
 color:white;
-margin:0 12px;
+margin:10px;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* MAIN STORY */
+nav a:hover{
+color:#00bfff;
+}
 
-#main-story{
-max-width:1000px;
+.breaking{
+background:#1a4fd8;
+color:white;
+padding:8px;
+font-weight:bold;
+overflow:hidden;
+}
+
+.ticker{
+white-space:nowrap;
+display:inline-block;
+animation:scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(100%)}
+100%{transform:translateX(-100%)}
+}
+
+.container{
+display:flex;
+max-width:1200px;
 margin:auto;
 padding:20px;
 }
 
-/* NEWS LIST */
-
-#news{
-max-width:900px;
-margin:auto;
-padding:20px;
+.news{
+flex:3;
 }
 
-.news-card{
+.trending{
+flex:1;
 background:white;
+margin-left:20px;
 padding:15px;
-margin-bottom:20px;
 border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 
-.news-card img{
+.article{
+background:white;
+margin-bottom:20px;
+padding:15px;
+border-radius:6px;
+}
+
+.article img{
 width:100%;
 border-radius:4px;
-margin-bottom:10px;
 }
-
-/* FOOTER */
 
 footer{
-background:#08364b;
+background:#111;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
+margin-top:20px;
 }
 
-.social img{
-width:35px;
-margin:8px;
-}
+</style>
 
-</style></head><body><header><img src="images/icon-512.png" alt="RadiantWaves Logo"><h1>RadiantWaves</h1><p class="slogan">
-Gateway to World News – Connecting You to the World
-</p></header><!-- AUDIO --><div id="audioBox"><button id="playNews">🔊 Listen to RadiantWaves</button>
+</head>
 
-<audio id="newsAudio" loop><source src="news-music.mp3" type="audio/mpeg"></audio></div><!-- BREAKING --><div class="breaking"><span id="breaking-news">Loading global headlines...</span>
+<body>
 
-</div><!-- NAVIGATION --><nav><a href="index.html?cat=general">Home</a>
+<header>
 
-<a href="index.html?cat=world">World</a>
+<img src="icon-512.png">
 
-<a href="index.html?cat=politics">Politics</a>
+<h1>Radiant Waves</h1>
 
-<a href="index.html?cat=business">Business</a>
+<p>Gateway to World News</p>
 
-<a href="index.html?cat=technology">Technology</a>
+</header>
 
-<a href="index.html?cat=science">Science</a>
 
-<a href="index.html?cat=sports">Sports</a>
+<div style="text-align:center;margin:10px;">
 
-<a href="index.html?cat=entertainment">Entertainment</a>
+<button id="playNews">🔊 Listen to RadiantWaves</button>
 
-</nav><!-- MAIN STORY --><div id="main-story"></div><!-- NEWS --><div id="news"></div><footer><p>© 2026 RadiantWaves News Network</p><p>Truth • Insight • Global Perspective</p><div class="social"><a href="https://facebook.com/radiantwavesnews">
-<img src="images/facebook.png">
-</a><a href="https://instagram.com/radiantwaves1">
-<img src="images/instagram.png">
-</a><a href="https://twitter.com/radiant13528995">
-<img src="images/twitter.png">
-</a><a href="https://tiktok.com/@radiantwavesmedia">
-<img src="images/tiktok.png">
-</a></div></footer><script>
+<audio id="newsAudio" loop>
+<source src="news-music.mp3" type="audio/mpeg">
+</audio>
 
-/* AUDIO CONTROL */
+</div>
 
-const playButton=document.getElementById("playNews");
 
-const audio=document.getElementById("newsAudio");
+<nav>
+
+<a href="#">Home</a>
+<a href="#">World</a>
+<a href="#">Politics</a>
+<a href="#">Business</a>
+<a href="#">Technology</a>
+<a href="#">Science</a>
+<a href="#">Sports</a>
+<a href="#">Entertainment</a>
+
+</nav>
+
+
+<div class="breaking">
+
+<span>Breaking News:</span>
+
+<span class="ticker" id="ticker"></span>
+
+</div>
+
+
+<div class="container">
+
+<div class="news" id="news"></div>
+
+<div class="trending">
+
+<h3>Trending News</h3>
+
+<ul id="trending"></ul>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>Radiant Waves Media © 2026</p>
+
+</footer>
+
+
+<script>
+
+const playButton=document.getElementById("playNews")
+const audio=document.getElementById("newsAudio")
 
 playButton.onclick=function(){
 
 if(audio.paused){
-
-audio.play();
-
-playButton.innerHTML="⏸ Pause RadiantWaves";
-
+audio.play()
+playButton.innerHTML="⏸ Pause RadiantWaves"
 }else{
-
-audio.pause();
-
-playButton.innerHTML="🔊 Listen to RadiantWaves";
-
+audio.pause()
+playButton.innerHTML="🔊 Listen to RadiantWaves"
 }
 
 }
 
-/* CATEGORY */
-
-const params=new URLSearchParams(window.location.search);
-
-const category=params.get("cat")||"general";
-
-/* DEFAULT IMAGES */
-
-const defaultImages={
-
-world:"images/world-1.jpg",
-
-business:"images/business-1.jpg",
-
-politics:"images/politics-1.jpg",
-
-technology:"images/tech-1.jpg",
-
-science:"images/science-1.jpg",
-
-sports:"images/sports-1.jpg",
-
-entertainment:"images/entertainment-1.jpg",
-
-general:"images/world-1.jpg"
-
-};
-
-/* AI STORY */
-
-function rewriteStory(title,text,category){
-
-if(!text) text="Global developments continue to unfold.";
-
-const endings=[
-
-"RadiantWaves brings you the latest global perspective.",
-
-"Our newsroom continues monitoring the situation.",
-
-"More updates will follow as events develop.",
-
-"RadiantWaves correspondents are tracking the story."
-
-];
-
-const ending=endings[Math.floor(Math.random()*endings.length)];
-
-return text+" "+ending;
-
-}
-
-/* SHOW NEWS */
-
-function showNews(articles){
-
-const container=document.getElementById("news");
-
-const mainStory=document.getElementById("main-story");
-
-const breaking=document.getElementById("breaking-news");
-
-container.innerHTML="";
-
-mainStory.innerHTML="";
-
-let headlines=[];
-
-/* MAIN STORY */
-
-const first=articles[0];
-
-const mainImage=first.image||defaultImages[first.category]||defaultImages.general;
-
-mainStory.innerHTML=`
-
-<div style="background:white;padding:20px;border-radius:8px;margin-bottom:20px;">
-
-<img src="${mainImage}" style="width:100%;border-radius:6px;">
-
-<h2 style="font-size:28px;margin-top:15px;">${first.title}</h2>
-
-<p>${rewriteStory(first.title,first.description,first.category)}</p>
-
-</div>
-
-`;
-
-/* OTHER STORIES */
-
-articles.slice(1).forEach(article=>{
-
-const image=article.image||defaultImages[article.category]||defaultImages.general;
-
-const story=rewriteStory(article.title,article.description,article.category);
-
-container.innerHTML+=`
-
-<div class="news-card">
-
-<img src="${image}">
-
-<h3>${article.title}</h3>
-
-<p>${story}</p>
-
-</div>
-
-`;
-
-headlines.push(article.title);
-
-});
-
-/* BREAKING */
-
-breaking.innerHTML=headlines.join(" • ");
-
-}
-
-/* LOAD JSON NEWS */
 
 fetch("news.json")
 
@@ -313,10 +209,47 @@ fetch("news.json")
 
 .then(data=>{
 
-const filtered=data.articles.filter(a=>a.category===category||category==="general");
+let newsHTML=""
+let ticker=""
+let trendingHTML=""
 
-showNews(filtered.length?filtered:data.articles);
+data.articles.forEach((article,i)=>{
 
-});
+let img=article.image?article.image:"icon-512.png"
 
-</script></body></html>
+newsHTML+=`
+
+<div class="article">
+
+<img src="${img}">
+
+<h2>${article.title}</h2>
+
+<p>${article.description}</p>
+
+<small>${article.date}</small>
+
+</div>
+
+`
+
+ticker+=article.title+" • "
+
+if(i<5){
+
+trendingHTML+=`<li>${article.title}</li>`
+
+}
+
+})
+
+document.getElementById("news").innerHTML=newsHTML
+document.getElementById("ticker").innerText=ticker
+document.getElementById("trending").innerHTML=trendingHTML
+
+})
+
+</script>
+
+</body>
+</html>

@@ -14,27 +14,28 @@
   .nav a { margin:0 10px; color:#fff; text-decoration:none; }
   .nav a:hover { text-decoration:underline; }
   
-  /* Slogan */
-  .slogan { width:100%; text-align:center; background:#444; color:#fff; font-size:16px; font-weight:bold; padding:5px 0; }
+  /* Header slogan */
+  .slogan { width:100%; text-align:center; background:#222; color:#00aaff; font-size:16px; font-weight:bold; padding:5px 0; }
   
-  /* Breaking news */
-  .breaking-news { background:#ff0000; color:#fff; padding:5px 10px; white-space:nowrap; overflow:hidden; font-weight:bold; }
-  #breaking-ticker a { color:#fff; margin-right:20px; text-decoration:none; }
+  /* Breaking news ticker */
+  .breaking-news { background:#00aaff; color:#fff; padding:5px 10px; white-space:nowrap; overflow:hidden; font-weight:bold; }
+  #breaking-ticker a { display:inline-block; color:#fff; margin-right:50px; text-decoration:none; }
   #breaking-ticker a:hover { text-decoration:underline; }
-  
+
   /* Main content */
   .main-content { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
   .article { flex:1 1 300px; border:1px solid #ccc; padding:10px; background:#fff; }
   .article img { width:100%; height:auto; }
-  
+
   /* Trending sidebar */
   .trending { position:fixed; right:0; top:170px; width:250px; background:#f5f5f5; padding:10px; max-height:80vh; overflow-y:auto; }
   .trending h3 { margin-top:0; }
-  
-  /* Footer & social media icons */
-  footer { background:#222; color:#fff; padding:10px 20px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; }
-  footer a img { margin-right:10px; vertical-align:middle; transition: transform 0.2s; }
-  footer a img:hover { transform: scale(1.2); }
+
+  /* Footer */
+  footer { display:flex; flex-direction:column; align-items:center; justify-content:center; background:#222; color:#fff; padding:10px 20px; gap:5px; }
+  footer .social a img { margin-right:10px; vertical-align:middle; transition: transform 0.2s; }
+  footer .social a img:hover { transform: scale(1.2); }
+  footer p { margin:2px 0; color:#00aaff; font-weight:bold; text-align:center; }
 
   @media(max-width:800px){
     .trending { position:static; width:100%; max-height:none; margin-top:20px; }
@@ -59,7 +60,7 @@
     <a href="entertainment.html">Entertainment</a>
   </nav>
   <div class="slogan">
-    <p>Your Daily Dose of Accurate & Breaking Global News</p>
+    <p>Gateway to World News – Connecting You to the World</p>
   </div>
 </header>
 
@@ -78,18 +79,30 @@
 </aside>
 
 <footer>
-  <p>Follow us:</p>
-  <a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="images/facebook.png" alt="Facebook" width="24" height="24"></a>
-  <a href="https://instagram.com/radiantwaves1" target="_blank"><img src="images/instagram.png" alt="Instagram" width="24" height="24"></a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="images/tiktok.png" alt="TikTok" width="24" height="24"></a>
-  <a href="https://twitter.com/radiant13528995" target="_blank"><img src="images/twitter.png" alt="Twitter" width="24" height="24"></a>
+  <div class="social">
+    <a href="https://facebook.com/radiantwavesnews" target="_blank">
+      <img src="images/facebook.png" alt="Facebook" width="24" height="24">
+    </a>
+    <a href="https://instagram.com/radiantwaves1" target="_blank">
+      <img src="images/instagram.png" alt="Instagram" width="24" height="24">
+    </a>
+    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
+      <img src="images/tiktok.png" alt="TikTok" width="24" height="24">
+    </a>
+    <a href="https://twitter.com/radiant13528995" target="_blank">
+      <img src="images/twitter.png" alt="Twitter" width="24" height="24">
+    </a>
+  </div>
+  <p>@2026 Radiant Waves Global News</p>
+  <p>Truth. Insight. Global Perspective.</p>
 </footer>
 
 <script>
-// Fetch news.json and populate main articles
+// Fetch news.json and populate main articles, breaking news and trending
 fetch('news.json')
   .then(res => res.json())
   .then(data => {
+    // Main articles
     const container = document.getElementById('articles-container');
     data.articles.forEach(a => {
       const articleDiv = document.createElement('div');
@@ -103,7 +116,7 @@ fetch('news.json')
       container.appendChild(articleDiv);
     });
 
-    // Populate breaking news ticker
+    // Breaking news ticker - scroll smoothly
     const ticker = document.getElementById('breaking-ticker');
     data.articles.slice(0,5).forEach(a => {
       const link = document.createElement('a');
@@ -113,9 +126,9 @@ fetch('news.json')
       ticker.appendChild(document.createTextNode("  |  "));
     });
 
-    // Populate trending news
+    // Trending news - 10 articles
     const trendingList = document.getElementById('trending-list');
-    data.articles.slice(0,5).forEach(a => {
+    data.articles.slice(0,10).forEach(a => {
       const li = document.createElement('li');
       const link = document.createElement('a');
       link.href = `article.html?id=${encodeURIComponent(a.title)}`;
@@ -123,6 +136,16 @@ fetch('news.json')
       li.appendChild(link);
       trendingList.appendChild(li);
     });
+
+    // Simple horizontal scroll effect for breaking news
+    let pos = ticker.offsetWidth;
+    function scrollTicker() {
+      pos--;
+      if(pos < -ticker.scrollWidth) pos = window.innerWidth;
+      ticker.style.transform = `translateX(${pos}px)`;
+      requestAnimationFrame(scrollTicker);
+    }
+    requestAnimationFrame(scrollTicker);
   });
 </script>
 

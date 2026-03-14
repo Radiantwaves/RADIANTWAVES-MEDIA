@@ -1,81 +1,79 @@
-const fs = require("fs");
-const fetch = require("node-fetch");
+const fs = require("fs")
 
-const API_KEY = "4183020c-43aa-40db-bebc-d1389f09d3cb";
+function generateNews(){
 
-// Categories including new regional coverage
-const categories = [
-  "world",
-  "politics",
-  "business",
-  "technology",
-  "science",
-  "sports",
-  "entertainment",
-  "nigeria",
-  "africa"
-];
+const articles = [
 
-// Default images for each category
-const defaultImages = {
-  world:"images/world-1.jpg",
-  politics:"images/politics-1.jpg",
-  business:"images/business-1.jpg",
-  technology:"images/tech-1.jpg",
-  science:"images/science-1.jpg",
-  sports:"images/sports-1.jpg",
-  entertainment:"images/entertainment-1.jpg",
-  nigeria:"images/nigeria-1.jpg",
-  africa:"images/africa-1.jpg"
-};
+{
+title: "United States Expands Technology Investment to Strengthen AI Industry",
+description: "Officials in Washington announced expanded funding initiatives designed to strengthen the country's artificial intelligence industry. The program focuses on research partnerships between universities, private technology companies and national laboratories. Policy experts say the initiative reflects growing global competition in advanced computing technologies.",
+category: "technology",
+image: "icon-512.png",
+date: new Date().toISOString().split("T")[0]
+},
 
-// Simple AI-style story rewrite
-function rewriteStory(title, description){
-  if(!description) description="Major developments continue to unfold.";
-  const endings=[
-    "RadiantWaves newsroom continues monitoring the story.",
-    "Our correspondents are following developments closely.",
-    "More updates will follow as the situation evolves.",
-    "RadiantWaves will provide further analysis."
-  ];
-  const ending=endings[Math.floor(Math.random()*endings.length)];
-  return description + " " + ending;
+{
+title: "Nigeria Infrastructure Projects Expected to Boost Regional Trade",
+description: "Economic analysts say Nigeria's planned expansion of highways and rail connections could significantly improve trade routes across West Africa. The projects aim to reduce transportation delays affecting agricultural exports and manufactured goods moving between major commercial centers.",
+category: "business",
+image: "images/business-1.jpg",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "European Governments Strengthen Energy Cooperation",
+description: "Several European governments are working on expanded energy cooperation programs designed to improve electricity stability and renewable energy development across the region. Officials say long-term collaboration could reduce supply risks and improve regional energy security.",
+category: "world",
+image: "images/world-1.jpg",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "Global Financial Markets Monitor Inflation Trends",
+description: "Investors across global financial markets are closely monitoring new inflation data released by several major economies. Analysts say interest rate decisions from central banks will likely shape global market conditions over the coming months.",
+category: "business",
+image: "images/business-2.jpg",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "African Tech Startups Continue Rapid Growth",
+description: "Technology startups across Africa continue to attract venture capital investment as mobile banking, digital commerce and software development expand across the continent. Entrepreneurs say increasing internet access is helping create new digital opportunities.",
+category: "technology",
+image: "images/tech-1.jpg",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "Climate Researchers Warn of Rising Global Temperatures",
+description: "International climate scientists say global temperature patterns continue to show long-term warming trends. Researchers emphasize the importance of global environmental policies designed to reduce emissions and support sustainable development strategies.",
+category: "science",
+image: "icon-512.png",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "Middle East Diplomats Continue Regional Dialogue",
+description: "Diplomatic representatives from several Middle Eastern countries are continuing negotiations aimed at strengthening political dialogue and improving regional stability. International observers say the discussions remain important for long-term security cooperation.",
+category: "politics",
+image: "icon-512.png",
+date: new Date().toISOString().split("T")[0]
+},
+
+{
+title: "Global Entertainment Industry Expands Streaming Partnerships",
+description: "Film studios and streaming platforms are forming new international partnerships to distribute entertainment content across multiple regions. Industry analysts say digital streaming continues to reshape global media consumption.",
+category: "entertainment",
+image: "images/entertainment-1.jpg",
+date: new Date().toISOString().split("T")[0]
 }
 
-// Fetch news from API
-async function fetchNews(){
-  let articles=[];
+]
 
-  for(const category of categories){
-    let url;
-    if(category==="nigeria"){
-      url=`https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en&country=ng&category=general`;
-    } else if(category==="africa"){
-      url=`https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en&region=af&category=general`;
-    } else {
-      url=`https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en&category=${category}`;
-    }
+const newsData = { articles }
 
-    try{
-      const res=await fetch(url);
-      const data=await res.json();
-      if(data.results){
-        data.results.slice(0,5).forEach(article=>{
-          articles.push({
-            title: article.title,
-            description: rewriteStory(article.title, article.description),
-            category: category,
-            image: article.image_url || defaultImages[category]
-          });
-        });
-      }
-    }catch(err){
-      console.log("Error loading", category);
-    }
-  }
+fs.writeFileSync("news.json", JSON.stringify(newsData, null, 2))
 
-  fs.writeFileSync("news.json", JSON.stringify({articles:articles}, null, 2));
-  console.log("RadiantWaves news updated with Nigeria & Africa coverage.");
 }
 
-fetchNews();
+generateNews()

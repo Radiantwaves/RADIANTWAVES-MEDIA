@@ -1,224 +1,226 @@
 <!DOCTYPE html><html lang="en">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadiantWaves</title><style>
-
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadiantWaves</title><style>
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f4f4;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
 }
 
 /* HEADER */
-
 header{
-text-align:center;
-background:#111;
-color:white;
-padding:15px;
+  text-align:center;
+  background:#111;
+  color:white;
+  padding:15px;
 }
 
 .logo{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 .logo img{
-width:60px;
-height:60px;
+  width:60px;
+  height:60px;
 }
 
 .slogan{
-color:#00aaff;
-font-weight:bold;
-margin-top:5px;
+  color:#00aaff;
+  font-weight:bold;
+  margin-top:5px;
 }
 
 /* AUDIO */
-
 .audio-player{
-margin-top:10px;
+  margin-top:10px;
 }
 
 /* BREAKING NEWS */
-
 .breaking{
-background:#0066cc;
-color:white;
-padding:8px;
-font-weight:bold;
+  background:#0066cc;
+  color:white;
+  padding:8px;
+  font-weight:bold;
 }
 
-/* NAV */
-
+/* NAVIGATION */
 nav{
-background:#222;
-text-align:center;
-padding:10px;
+  background:#222;
+  text-align:center;
+  padding:10px;
 }
 
 nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 nav a:hover{
-color:#00aaff;
+  color:#00aaff;
 }
 
-/* MAIN */
-
+/* MAIN CONTENT */
 .container{
-display:flex;
-flex-wrap:wrap;
-padding:20px;
+  display:flex;
+  flex-wrap:wrap;
+  padding:20px;
 }
 
 .news{
-flex:3;
+  flex:3;
 }
 
 .article{
-background:white;
-padding:15px;
-margin-bottom:20px;
-border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.1);
+  background:white;
+  padding:15px;
+  margin-bottom:20px;
+  border-radius:6px;
+  box-shadow:0 0 5px rgba(0,0,0,0.1);
 }
 
 .article img{
-width:100%;
-border-radius:6px;
+  width:100%;
+  border-radius:6px;
 }
 
 /* TRENDING */
-
 .trending{
-flex:1;
-margin-left:20px;
-background:white;
-padding:15px;
-border-radius:6px;
-box-shadow:0 0 5px rgba(0,0,0,0.1);
+  flex:1;
+  margin-left:20px;
+  background:white;
+  padding:15px;
+  border-radius:6px;
+  box-shadow:0 0 5px rgba(0,0,0,0.1);
 }
 
 .trending h3{
-margin-top:0;
+  margin-top:0;
 }
 
 .trending a{
-text-decoration:none;
-color:#333;
+  text-decoration:none;
+  color:#333;
 }
 
 .trending a:hover{
-color:#0066cc;
+  color:#0066cc;
 }
 
 /* FOOTER */
-
 footer{
-text-align:center;
-background:#111;
-color:white;
-padding:20px;
-margin-top:20px;
+  text-align:center;
+  background:#111;
+  color:white;
+  padding:20px;
+  margin-top:20px;
 }
 
 footer img{
-margin:5px;
-filter:invert(1);
+  margin:5px;
+  filter:invert(1);
 }
-
-</style></head><body><header><div class="logo"><img src="images/icon-512.png" alt="RadiantWaves Logo"><h1>RadiantWaves</h1></div><div class="slogan">
-Gateway to World News – Connecting You to the World
-</div><div class="audio-player"><audio controls>
-<source src="news-music.mp3" type="audio/mpeg">
-Your browser does not support audio
-</audio></div></header><div class="breaking"><strong>Breaking News:</strong>
-
-<marquee id="ticker"></marquee>
-
-</div><nav><a href="index.html">Home</a>
-<a href="world.html">World</a>
-<a href="politics.html">Politics</a>
-<a href="business.html">Business</a>
-<a href="technology.html">Technology</a>
-<a href="science.html">Science</a>
-<a href="sports.html">Sport</a>
-<a href="entertainment.html">Entertainment</a>
-
-</nav><div class="container"><div class="news" id="news-container"></div><div class="trending"><h3>Trending News</h3><ul id="trending"></ul></div></div><footer><div><a href="https://facebook.com/radiantwavesnews">
-<img src="images/facebook.png" width="24">
-</a><a href="https://instagram.com/radiantwaves1">
-<img src="images/instagram.png" width="24">
-</a><a href="https://tiktok.com/@radiantwavesmedia">
-<img src="images/tiktok.png" width="24">
-</a><a href="https://twitter.com/radiant13528995">
-<img src="images/twitter.png" width="24">
-</a></div><p>@2026 Radiant Waves Global News</p><p style="color:#00aaff">
-Truth. Insight. Global Perspective.
-</p></footer><script>
-
+</style></head><body><header>
+  <div class="logo">
+    <img src="images/icon-512.png" alt="RadiantWaves Logo">
+    <h1>RadiantWaves</h1>
+  </div>  <div class="slogan">
+    Gateway to World News – Connecting You to the World
+  </div>  <div class="audio-player">
+    <audio controls>
+      <source src="news-music.mp3" type="audio/mpeg">
+      Your browser does not support audio
+    </audio>
+  </div>
+</header><div class="breaking">
+  <strong>Breaking News:</strong>
+  <marquee id="ticker"></marquee>
+</div><nav>
+  <a href="index.html">Home</a>
+  <a href="world.html">World</a>
+  <a href="politics.html">Politics</a>
+  <a href="business.html">Business</a>
+  <a href="technology.html">Technology</a>
+  <a href="science.html">Science</a>
+  <a href="sports.html">Sport</a>
+  <a href="entertainment.html">Entertainment</a>
+</nav><div class="container">  <div class="news" id="news-container"></div>  <div class="trending">
+    <h3>Trending News</h3>
+    <ul id="trending"></ul>
+  </div></div><footer>
+  <div>
+    <a href="https://facebook.com/radiantwavesnews">
+      <img src="images/facebook.png" width="24">
+    </a>
+    <a href="https://instagram.com/radiantwaves1">
+      <img src="images/instagram.png" width="24">
+    </a>
+    <a href="https://tiktok.com/@radiantwavesmedia">
+      <img src="images/tiktok.png" width="24">
+    </a>
+    <a href="https://twitter.com/radiant13528995">
+      <img src="images/twitter.png" width="24">
+    </a>
+  </div>  <p>@2026 Radiant Waves Global News</p>
+  <p style="color:#00aaff">Truth. Insight. Global Perspective.</p>
+</footer><script>
 fetch("news.json")
-
 .then(res=>res.json())
-
 .then(data=>{
+  const container=document.getElementById("news-container");
+  const trending=document.getElementById("trending");
+  const ticker=document.getElementById("ticker");
 
-const container=document.getElementById("news-container");
-const trending=document.getElementById("trending");
-const ticker=document.getElementById("ticker");
+  // Top Global Story
+  if(data.articles.length>0){
+    const topArticle = data.articles[0];
+    const topDiv = document.createElement("div");
+    topDiv.className = "article";
+    topDiv.style.border="2px solid #0066cc";
+    topDiv.style.padding="20px";
+    topDiv.style.marginBottom="20px";
+    topDiv.style.background="#fff";
+    topDiv.style.borderRadius="8px";
+    topDiv.innerHTML=`
+      <img src="${topArticle.image}" alt="" style="width:100%; border-radius:8px;">
+      <h1 style="color:#0066cc;">${topArticle.title}</h1>
+      <p>${topArticle.description}</p>
+      <a href="article.html?id=0">Read more</a>
+    `;
+    container.appendChild(topDiv);
+  }
 
-/* ARTICLES */
+  // Other Articles
+  data.articles.slice(1).forEach((a,i)=>{
+    const div=document.createElement("div");
+    div.className="article";
+    div.innerHTML=`
+      <img src="${a.image}" alt="">
+      <h2>${a.title}</h2>
+      <p>${a.description}</p>
+      <a href="article.html?id=${i+1}">Read more</a>
+    `;
+    container.appendChild(div);
+  });
 
-data.articles.forEach((a,i)=>{
+  // Trending
+  data.articles.slice(0,10).forEach((a,i)=>{
+    const li=document.createElement("li");
+    li.innerHTML=`<a href="article.html?id=${i}">${a.title}</a>`;
+    trending.appendChild(li);
+  });
 
-const div=document.createElement("div");
-
-div.className="article";
-
-div.innerHTML=`
-
-<img src="${a.image}" alt="">
-
-<h2>${a.title}</h2>
-
-<p>${a.description}</p>
-
-<a href="article.html?id=${i}">Read more</a>
-
-`;
-
-container.appendChild(div);
-
+  // Breaking
+  data.articles.slice(0,5).forEach(a=>{
+    ticker.innerHTML+=a.title+" | ";
+  });
 });
-
-/* TRENDING */
-
-data.articles.slice(0,10).forEach((a,i)=>{
-
-const li=document.createElement("li");
-
-li.innerHTML=`<a href="article.html?id=${i}">${a.title}</a>`;
-
-trending.appendChild(li);
-
-});
-
-/* BREAKING */
-
-data.articles.slice(0,5).forEach(a=>{
-
-ticker.innerHTML+=a.title+" | ";
-
-});
-
-});
-
 </script></body>
 </html>

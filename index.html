@@ -1,110 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radiant Waves Global News</title>
-  <link rel="icon" href="images/icon-512.png">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
-    header { background:#003366; color:white; padding:10px; display:flex; align-items:center; }
-    header img { width:50px; margin-right:10px; }
-    nav a { color:white; margin:0 10px; text-decoration:none; }
-    nav a:hover { text-decoration:underline; }
-    .breaking { background:#007bff; color:white; padding:5px; overflow:hidden; white-space:nowrap; }
-    .breaking span { display:inline-block; padding-right:50px; animation:scroll 20s linear infinite; }
-    @keyframes scroll { 0% { transform:translateX(100%); } 100% { transform:translateX(-100%); } }
-    .container { display:flex; margin:20px; }
-    .main { flex:3; margin-right:20px; }
-    .sidebar { flex:1; background:#fff; padding:10px; }
-    article { background:white; margin-bottom:20px; padding:10px; }
-    article img { max-width:100%; }
-    h2 { margin-top:0; }
-    .footer { background:#003366; color:white; text-align:center; padding:10px; margin-top:20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiant Waves Global News</title>
+<style>
+  body { margin:0; font-family: Arial, sans-serif; background:#f8f8f8; }
+  
+  /* Header */
+  .header { display:flex; align-items:center; justify-content:space-between; padding:10px 20px; background:#222; color:#fff; flex-wrap:wrap; }
+  .logo { display:flex; align-items:center; }
+  .logo img { margin-right:10px; }
+  .nav a { margin:0 10px; color:#fff; text-decoration:none; }
+  .nav a:hover { text-decoration:underline; }
+  
+  /* Slogan */
+  .slogan { width:100%; text-align:center; background:#444; color:#fff; font-size:16px; font-weight:bold; padding:5px 0; }
+  
+  /* Breaking news */
+  .breaking-news { background:#ff0000; color:#fff; padding:5px 10px; white-space:nowrap; overflow:hidden; font-weight:bold; }
+  #breaking-ticker a { color:#fff; margin-right:20px; text-decoration:none; }
+  #breaking-ticker a:hover { text-decoration:underline; }
+  
+  /* Main content */
+  .main-content { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
+  .article { flex:1 1 300px; border:1px solid #ccc; padding:10px; background:#fff; }
+  .article img { width:100%; height:auto; }
+  
+  /* Trending sidebar */
+  .trending { position:fixed; right:0; top:170px; width:250px; background:#f5f5f5; padding:10px; max-height:80vh; overflow-y:auto; }
+  .trending h3 { margin-top:0; }
+  
+  /* Footer & social media icons */
+  footer { background:#222; color:#fff; padding:10px 20px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; }
+  footer a img { margin-right:10px; vertical-align:middle; transition: transform 0.2s; }
+  footer a img:hover { transform: scale(1.2); }
+
+  @media(max-width:800px){
+    .trending { position:static; width:100%; max-height:none; margin-top:20px; }
+  }
+</style>
 </head>
 <body>
 
-<header>
-  <img src="images/icon-512.png" alt="Radiant Waves Logo">
-  <h1>Radiant Waves Global News</h1>
-  <nav>
+<header class="header">
+  <div class="logo">
+    <img src="images/icon-512.png" alt="Radiant Waves Global News" width="60" height="60">
+    <span>Radiant Waves Global News</span>
+  </div>
+  <nav class="nav">
     <a href="index.html">Home</a>
     <a href="world.html">World</a>
     <a href="politics.html">Politics</a>
     <a href="business.html">Business</a>
     <a href="technology.html">Technology</a>
     <a href="science.html">Science</a>
-    <a href="sports.html">Sports</a>
+    <a href="sports.html">Sport</a>
     <a href="entertainment.html">Entertainment</a>
   </nav>
+  <div class="slogan">
+    <p>Your Daily Dose of Accurate & Breaking Global News</p>
+  </div>
 </header>
 
-<div class="breaking" id="breaking-news">
-  <!-- Breaking news ticker -->
+<div class="breaking-news">
+  <strong>Breaking News:</strong>
+  <div id="breaking-ticker"></div>
 </div>
 
-<div class="container">
-  <div class="main" id="main-content">
-    <!-- Main articles -->
-  </div>
-  <div class="sidebar" id="trending-news">
-    <h3>Trending News</h3>
-    <!-- Trending articles -->
-  </div>
-</div>
+<main class="main-content">
+  <div id="articles-container"></div>
+</main>
 
-<div class="footer">
-  <p>Follow us: 
-    <a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a> | 
-    <a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a> | 
-    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a> | 
-    <a href="https://twitter.com/radiant13528995" target="_blank">Twitter</a>
-  </p>
-</div>
+<aside class="trending">
+  <h3>Trending News</h3>
+  <ul id="trending-list"></ul>
+</aside>
+
+<footer>
+  <p>Follow us:</p>
+  <a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="images/facebook.png" alt="Facebook" width="24" height="24"></a>
+  <a href="https://instagram.com/radiantwaves1" target="_blank"><img src="images/instagram.png" alt="Instagram" width="24" height="24"></a>
+  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="images/tiktok.png" alt="TikTok" width="24" height="24"></a>
+  <a href="https://twitter.com/radiant13528995" target="_blank"><img src="images/twitter.png" alt="Twitter" width="24" height="24"></a>
+</footer>
 
 <script>
-  // Set current category for each page
-  const currentCategory = "all"; // Change to "world", "politics", etc. for category pages
+// Fetch news.json and populate main articles
+fetch('news.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('articles-container');
+    data.articles.forEach(a => {
+      const articleDiv = document.createElement('div');
+      articleDiv.className = 'article';
+      articleDiv.innerHTML = `
+        <img src="${a.image}" alt="${a.title}">
+        <h2>${a.title}</h2>
+        <p>${a.description}</p>
+        <a href="article.html?id=${encodeURIComponent(a.title)}">Read more</a>
+      `;
+      container.appendChild(articleDiv);
+    });
 
-  // Fetch news JSON
-  fetch('news.json')
-    .then(response => response.json())
-    .then(news => {
-      let filteredArticles = currentCategory === "all" 
-        ? news.articles 
-        : news.articles.filter(a => a.category === currentCategory);
+    // Populate breaking news ticker
+    const ticker = document.getElementById('breaking-ticker');
+    data.articles.slice(0,5).forEach(a => {
+      const link = document.createElement('a');
+      link.href = `article.html?id=${encodeURIComponent(a.title)}`;
+      link.textContent = a.title;
+      ticker.appendChild(link);
+      ticker.appendChild(document.createTextNode("  |  "));
+    });
 
-      // Sort by date descending
-      filteredArticles.sort((a,b) => new Date(b.date) - new Date(a.date));
-
-      // Main content - first 5 articles
-      const mainDiv = document.getElementById('main-content');
-      filteredArticles.slice(0,5).forEach(article => {
-        const art = document.createElement('article');
-        art.innerHTML = `
-          <h2>${article.title}</h2>
-          <img src="${article.image || 'images/icon-512.png'}" alt="${article.title}">
-          <p>${article.description}</p>
-          <p><em>${article.date}</em></p>
-        `;
-        mainDiv.appendChild(art);
-      });
-
-      // Trending news - next 5 articles
-      const trendingDiv = document.getElementById('trending-news');
-      filteredArticles.slice(0,5).forEach(article => {
-        const li = document.createElement('div');
-        li.innerHTML = `<a href="#">${article.title}</a>`;
-        trendingDiv.appendChild(li);
-      });
-
-      // Breaking news ticker - only latest 5
-      const breakingDiv = document.getElementById('breaking-news');
-      const ticker = filteredArticles.slice(0,5).map(a => `<span>${a.title}</span>`).join('');
-      breakingDiv.innerHTML = ticker;
-    })
-    .catch(err => console.error("Failed to load news.json:", err));
+    // Populate trending news
+    const trendingList = document.getElementById('trending-list');
+    data.articles.slice(0,5).forEach(a => {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `article.html?id=${encodeURIComponent(a.title)}`;
+      link.textContent = a.title;
+      li.appendChild(link);
+      trendingList.appendChild(li);
+    });
+  });
 </script>
 
 </body>

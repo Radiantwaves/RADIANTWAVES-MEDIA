@@ -102,8 +102,11 @@ document.getElementById("article").innerHTML=`
 `
 
 })
-
+  
+<script>
+if(article.link){
+document.getElementById("externalLink").href = article.link;
+}
 </script>
-
 </body>
 </html>

@@ -11,7 +11,7 @@ main { flex: 3; }
 aside { flex: 1; background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
 h1 { font-size: 24px; margin-top: 0; }
 .live { background: red; color: white; font-size: 12px; padding: 4px 8px; border-radius: 3px; margin-left: 10px; }
-p { font-size: 16px; line-height: 1.5; }
+p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; }
 a { text-decoration: none; color: #0047AB; }
 a:hover { text-decoration: underline; }
 button { margin-top: 20px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
@@ -55,10 +55,14 @@ function loadArticle() {
       document.getElementById('title').innerHTML = article.title + (article.live ? '<span class="live">LIVE</span>' : '');
       document.getElementById('description').textContent = article.description;
 
-      // Populate trending news (top 5)
+      // Populate trending news (top 5, LIVE first)
       const trendingDiv = document.getElementById('trending');
       trendingDiv.innerHTML = '';
-      data.articles.slice(0,5).forEach((a,i) => {
+
+      // Sort: LIVE articles first
+      const sortedArticles = data.articles.slice().sort((a,b) => (b.live ? 1 : 0) - (a.live ? 1 : 0));
+
+      sortedArticles.slice(0,5).forEach((a,i) => {
         const div = document.createElement('div');
         div.className = 'trend-item';
         div.innerHTML = `<a href="article.html?id=${i}">${a.title}</a>${a.live ? ' <span class="live">LIVE</span>' : ''}`;

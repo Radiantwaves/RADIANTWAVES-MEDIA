@@ -103,10 +103,23 @@ document.getElementById("article").innerHTML=`
 
 })
   
-<script>
-if(article.link){
-document.getElementById("externalLink").href = article.link;
+<<script>
+fetch('news.json')
+.then(response => response.json())
+.then(data => {
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const article = data.articles[id];
+
+if(article && article.link){
+const link = document.getElementById("externalLink");
+link.href = article.link;
+link.style.display = "inline";
 }
+
+});
 </script>
 </body>
 </html>

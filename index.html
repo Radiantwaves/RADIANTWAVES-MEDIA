@@ -125,31 +125,53 @@ fetch("news.json")
     const news = document.getElementById("news");
     const trending = document.getElementById("trending");
 
-    function createArticleHTML(article, index) {
-      const live = article.live ? '<span class="live">LIVE</span>' : '';
-      return `
-        <div class="article">
-          <h3><a href="article.html?id=${index}">${live}${article.title}</a></h3>
-          <p>${article.description}</p>
-          <a class="readmore" href="article.html?id=${index}">Read more</a>
-        </div>
-      `;
-    }
+    // Clear previous content
+    news.innerHTML = '';
+    trending.innerHTML = '';
 
-    // MAIN NEWS
     articles.forEach((a, i) => {
-      news.innerHTML += createArticleHTML(a, i);
+      const articleDiv = document.createElement('div');
+      articleDiv.className = 'article';
+
+      // Clickable headline
+      const h3 = document.createElement('h3');
+      const link = document.createElement('a');
+      link.href = `article.html?id=${i}`;
+      link.innerHTML = (a.live ? '<span class="live">LIVE</span> ' : '') + a.title;
+      link.style.textDecoration = 'none';
+      link.style.color = 'black';
+      link.onmouseover = () => { link.style.color = '#0047AB'; };
+      link.onmouseout = () => { link.style.color = 'black'; };
+      h3.appendChild(link);
+      articleDiv.appendChild(h3);
+
+      // Description
+      const p = document.createElement('p');
+      p.textContent = a.description;
+      articleDiv.appendChild(p);
+
+      // Read more
+      const readMore = document.createElement('a');
+      readMore.href = `article.html?id=${i}`;
+      readMore.className = 'readmore';
+      readMore.textContent = 'Read more';
+      articleDiv.appendChild(readMore);
+
+      news.appendChild(articleDiv);
     });
 
-    // TRENDING
-    articles.slice(0, 10).forEach((a, i) => {
-      trending.innerHTML += `<a href="article.html?id=${i}">${a.title}</a>`;
+    // Trending
+    articles.slice(0,10).forEach((a, i) => {
+      const tlink = document.createElement('a');
+      tlink.href = `article.html?id=${i}`;
+      tlink.textContent = a.title;
+      trending.appendChild(tlink);
     });
 
-    // BREAKING NEWS
+    // Breaking news
     let breaking = articles.find(a => a.live) || articles[0];
     const breakingIndex = articles.indexOf(breaking);
-    document.getElementById("breakingNews").innerHTML =
+    document.getElementById('breakingNews').innerHTML =
       `<a href="article.html?id=${breakingIndex}" style="color:white;text-decoration:none;">${breaking.title}</a>`;
   });
 </script>

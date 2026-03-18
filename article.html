@@ -1,86 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Article</title>
+<title>Article</title>
+
 <style>
-body { font-family: Arial; margin: 0; padding: 20px; background: #f5f5f5; display: flex; flex-direction: row; gap: 20px; }
-main { flex: 3; }
-aside { flex: 1; background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-h1 { font-size: 24px; margin-top: 0; }
-.live { background: red; color: white; font-size: 12px; padding: 4px 8px; border-radius: 3px; margin-left: 10px; }
-p { font-size: 16px; line-height: 1.5; margin-bottom: 15px; }
-a { text-decoration: none; color: #0047AB; }
-a:hover { text-decoration: underline; }
-button { margin-top: 20px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
-h3 { font-size: 18px; margin-bottom: 10px; }
-.trend-item { margin-bottom: 10px; }
-.trend-item a { color: #000; }
-.trend-item a:hover { color: #0047AB; }
+body { font-family: Arial; margin: 0; padding: 20px; background: #f5f5f5; }
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 { margin-top: 0; }
+
+.back {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #0047AB;
+  text-decoration: none;
+  font-weight: bold;
+}
 </style>
 </head>
 
 <body>
-<main>
-  <h1 id="title"></h1>
-  <p id="description"></p>
-  <button onclick="window.location.href='index.html'">← Back to Home</button>
-</main>
 
-<aside>
-  <h3>Trending News</h3>
-  <div id="trending"></div>
-</aside>
+<div class="container">
+
+<a href="index.html" class="back">← Back to Home</a>
+
+<h1 id="title">Loading...</h1>
+<p id="content"></p>
+
+</div>
 
 <script>
-// Get article ID from URL
+// GET ID FROM URL
 const params = new URLSearchParams(window.location.search);
-const articleId = parseInt(params.get('id'));
+const id = params.get("id");
 
-// Function to load the article
-function loadArticle() {
-  fetch('news.json')
-    .then(res => res.json())
-    .then(data => {
-      const article = data.articles[articleId];
-      if (!article) {
-        document.getElementById('title').textContent = "Article not found";
-        document.getElementById('description').textContent = "";
-        return;
-      }
+// LOAD JSON
+fetch("news.json")
+.then(res => res.json())
+.then(data => {
 
-      // Show LIVE badge if live
-      document.getElementById('title').innerHTML = article.title + (article.live ? '<span class="live">LIVE</span>' : '');
-      document.getElementById('description').textContent = article.description;
+  const articles = data; // ✅ FIXED
 
-      // Populate trending news (top 5, LIVE first)
-      const trendingDiv = document.getElementById('trending');
-      trendingDiv.innerHTML = '';
+  if (!articles[id]) {
+    document.getElementById("title").textContent = "Article not found";
+    return;
+  }
 
-      // Sort: LIVE articles first
-      const sortedArticles = data.articles.slice().sort((a,b) => (b.live ? 1 : 0) - (a.live ? 1 : 0));
+  const article = articles[id];
 
-      sortedArticles.slice(0,5).forEach((a,i) => {
-        const div = document.createElement('div');
-        div.className = 'trend-item';
-        div.innerHTML = `<a href="article.html?id=${i}">${a.title}</a>${a.live ? ' <span class="live">LIVE</span>' : ''}`;
-        trendingDiv.appendChild(div);
-      });
-    })
-    .catch(err => {
-      console.error("Error loading article:", err);
-      document.getElementById('title').textContent = "Error loading article";
-      document.getElementById('description').textContent = "";
-    });
-}
+  document.getElementById("title").textContent = article.title;
+  document.getElementById("content").innerHTML =
+    article.content.replace(/\n/g, "<br><br>");
 
-// Initial load
-loadArticle();
-
-// Auto-refresh every 30 seconds
-setInterval(loadArticle, 30000);
+})
+.catch(() => {
+  document.getElementById("title").textContent = "Error loading article";
+});
 </script>
 
 </body>

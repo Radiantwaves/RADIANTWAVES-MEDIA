@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RadiantWaves Global News</title>
-
 <style>
 body { font-family: Arial; margin: 0; background: #f5f5f5; }
+
 /* HEADER */
 .header { text-align: center; background: white; padding: 15px; }
 .header img { width: 70px; cursor:pointer; }
@@ -15,35 +14,44 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 .title a { text-decoration: none; color: black; }
 .title a:hover { color: #0047AB; }
 .slogan { color: #666; font-size: 14px; }
+
 /* AUDIO */
 .audio-player { margin-top: 10px; }
+
 /* BREAKING NEWS */
 .breaking { background: #0047AB; color: white; padding: 8px; overflow: hidden; white-space: nowrap; }
 .breaking span { display: inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
 /* NAV */
 nav { background: #111; text-align: center; padding: 10px; }
 nav a { color: white; margin: 0 12px; text-decoration: none; font-size: 14px; cursor:pointer; }
 nav a:hover { text-decoration: underline; }
+
 /* LAYOUT */
 .container { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; padding: 20px; }
 .main { flex: 3; min-width: 600px; }
 .sidebar { flex: 1; padding-left: 20px; min-width: 250px; }
+
 /* ARTICLES */
 .article { background: white; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
 .article h3 { margin-top: 0; }
 .article h3 a { text-decoration: none; color: black; }
 .article h3 a:hover { color: #0047AB; }
 .readmore { color: #0047AB; font-weight: bold; text-decoration: none; }
+
 /* LIVE BADGE */
 .live { background: red; color: white; font-size: 10px; padding: 3px 6px; margin-right: 5px; border-radius: 3px; }
+
 /* TRENDING */
 .sidebar h3 { border-bottom: 2px solid #ddd; }
 .sidebar a { display: block; margin: 8px 0; text-decoration: none; color: #222; }
 .sidebar a:hover { color: #0047AB; }
+
 /* SOCIAL MEDIA */
 .social { text-align: center; margin-top: 20px; }
 .social a img { width: 28px; margin: 5px; cursor:pointer; }
+
 /* FOOTER */
 footer { background: #111; color: white; text-align: center; padding: 20px; margin-top: 20px; }
 footer a { color: white; margin: 0 8px; text-decoration: none; }
@@ -109,7 +117,8 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
 <script>
 fetch("news.json")
   .then(res => res.json())
-  .then(articles => {
+  .then(data => {
+    const articles = data;
     const news = document.getElementById("news");
     const trending = document.getElementById("trending");
 
@@ -117,9 +126,9 @@ fetch("news.json")
       news.innerHTML = '';
       trending.innerHTML = '';
 
-      const filtered = filterCategory && filterCategory !== 'All'
-        ? articles.filter(a => a.category === filterCategory)
-        : articles;
+      const filtered = (!filterCategory || filterCategory === 'All')
+        ? articles
+        : articles.filter(a => a.category === filterCategory);
 
       filtered.forEach((a, i) => {
         const articleDiv = document.createElement('div');
@@ -149,15 +158,15 @@ fetch("news.json")
         news.appendChild(articleDiv);
       });
 
-      // Trending (top 10)
-      filtered.slice(0, 10).forEach((a, i) => {
+      // Trending
+      filtered.slice(0,10).forEach((a, i) => {
         const tlink = document.createElement('a');
         tlink.href = `article.html?id=${i}`;
         tlink.textContent = a.title;
         trending.appendChild(tlink);
       });
 
-      // Breaking news (first live or first article)
+      // Breaking news
       let breaking = filtered.find(a => a.live) || filtered[0];
       const breakingIndex = articles.indexOf(breaking);
       document.getElementById('breakingNews').innerHTML =

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,13 +50,12 @@ nav a:hover { text-decoration: underline; }
 .sidebar a { display: block; margin: 8px 0; text-decoration: none; color: #222; }
 .sidebar a:hover { color: #0047AB; }
 
-/* SOCIAL MEDIA */
+/* SOCIAL */
 .social { text-align: center; margin-top: 20px; }
-.social a img { width: 28px; margin: 5px; cursor:pointer; }
+.social img { width: 28px; margin: 5px; }
 
 /* FOOTER */
 footer { background: #111; color: white; text-align: center; padding: 20px; margin-top: 20px; }
-footer a { color: white; margin: 0 8px; text-decoration: none; }
 </style>
 </head>
 
@@ -65,9 +63,10 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
 
 <!-- HEADER -->
 <div class="header">
-  <a href="index.html"><img src="images/icon-512.png" alt="RadiantWaves Logo"></a>
+  <a href="index.html"><img src="images/icon-512.png"></a>
   <div class="title"><a href="index.html">RadiantWaves</a></div>
   <div class="slogan">Gateway to World News – Connecting You to the World</div>
+
   <div class="audio-player">
     <audio controls autoplay loop>
       <source src="news-music.mp3" type="audio/mpeg">
@@ -75,39 +74,47 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
   </div>
 </div>
 
-<!-- BREAKING NEWS -->
+<!-- BREAKING -->
 <div class="breaking">
-  <span id="breakingNews">Loading breaking news...</span>
+  <span id="breakingNews">Loading...</span>
 </div>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
   <a data-category="All">Home</a>
-  <a data-category="World">World</a>
-  <a data-category="Politics">Politics</a>
-  <a data-category="Business">Business</a>
-  <a data-category="Technology">Technology</a>
-  <a data-category="Science">Science</a>
-  <a data-category="Sport">Sport</a>
-  <a data-category="Entertainment">Entertainment</a>
 </nav>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <div class="container">
   <div class="main" id="news"></div>
+
   <div class="sidebar">
     <h3>Trending News</h3>
     <div id="trending"></div>
   </div>
 </div>
 
-<!-- SOCIAL MEDIA -->
+<!-- SOCIAL -->
 <div class="social">
-  <a href="https://facebook.com//radiantwavesnews" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-  <a href="https://twitter.com//@radiant13528995" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-  <a href="https://instagram.com//radiantwaves1" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-  <a href="https://tiktok.com//@radiantwavesmedia" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
-  <a href="https://youtube.com//@radiantwave-wv6rg" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+  <a href="https://facebook.com/radiantwavesnews" target="_blank">
+    <img src="images/facebook.png">
+  </a>
+
+  <a href="https://twitter.com/radiant13528995" target="_blank">
+    <img src="images/twitter.png">
+  </a>
+
+  <a href="https://instagram.com/radiantwaves1" target="_blank">
+    <img src="images/instagram.png">
+  </a>
+
+  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
+    <img src="images/tiktok.png">
+  </a>
+
+  <a href="https://youtube.com/@radiantwave-wv6rg" target="_blank">
+    <img src="images/youtube.png">
+  </a>
 </div>
 
 <!-- FOOTER -->
@@ -119,75 +126,49 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
 <!-- SCRIPT -->
 <script>
 fetch("news.json")
-  .then(res => res.json())
-  .then(data => {
-    const articles = data.articles;
-    const news = document.getElementById("news");
-    const trending = document.getElementById("trending");
+.then(res => res.json())
+.then(data => {
 
-    function renderArticles(filterCategory) {
-      news.innerHTML = '';
-      trending.innerHTML = '';
+  const articles = data; // ✅ FIXED
 
-      const filtered = filterCategory && filterCategory !== 'All'
-        ? articles.filter(a => a.category === filterCategory)
-        : articles;
+  const news = document.getElementById("news");
+  const trending = document.getElementById("trending");
 
-      filtered.forEach((a, i) => {
-        const articleDiv = document.createElement('div');
-        articleDiv.className = 'article';
+  news.innerHTML = '';
+  trending.innerHTML = '';
 
-        const h3 = document.createElement('h3');
-        const link = document.createElement('a');
-        link.href = `article.html?id=${i}`;
-        link.innerHTML = (a.live ? '<span class="live">LIVE</span> ' : '') + a.title;
-        link.style.textDecoration = 'none';
-        link.style.color = 'black';
-        link.onmouseover = () => { link.style.color = '#0047AB'; };
-        link.onmouseout = () => { link.style.color = 'black'; };
-        h3.appendChild(link);
-        articleDiv.appendChild(h3);
+  articles.forEach((a, i) => {
 
-        const p = document.createElement('p');
-        p.textContent = a.description;
-        articleDiv.appendChild(p);
+    const articleDiv = document.createElement('div');
+    articleDiv.className = 'article';
 
-        const readMore = document.createElement('a');
-        readMore.href = `article.html?id=${i}`;
-        readMore.className = 'readmore';
-        readMore.textContent = 'Read more';
-        articleDiv.appendChild(readMore);
+    articleDiv.innerHTML = `
+      <h3>
+        <a href="article.html?id=${i}">
+          🔴 ${a.title}
+        </a>
+      </h3>
+      <p>${a.summary}</p>
+      <a href="article.html?id=${i}" class="readmore">Read more</a>
+    `;
 
-        news.appendChild(articleDiv);
-      });
-
-      // Trending
-      filtered.slice(0,10).forEach((a, i) => {
-        const tlink = document.createElement('a');
-        tlink.href = `article.html?id=${i}`;
-        tlink.textContent = a.title;
-        trending.appendChild(tlink);
-      });
-
-      // Breaking news
-      let breaking = filtered.find(a => a.live) || filtered[0];
-      const breakingIndex = articles.indexOf(breaking);
-      document.getElementById('breakingNews').innerHTML =
-        `<a href="article.html?id=${breakingIndex}" style="color:white;text-decoration:none;">${breaking.title}</a>`;
-    }
-
-    // Initial render
-    renderArticles('All');
-
-    // Nav click events
-    document.querySelectorAll('nav a').forEach(navLink => {
-      navLink.addEventListener('click', e => {
-        e.preventDefault();
-        const category = navLink.getAttribute('data-category');
-        renderArticles(category);
-      });
-    });
+    news.appendChild(articleDiv);
   });
+
+  // TRENDING
+  articles.slice(0,10).forEach((a,i)=>{
+    const t = document.createElement('a');
+    t.href = `article.html?id=${i}`;
+    t.textContent = a.title;
+    trending.appendChild(t);
+  });
+
+  // BREAKING
+  const first = articles[0];
+  document.getElementById("breakingNews").innerHTML =
+    `<a href="article.html?id=0" style="color:white;">${first.title}</a>`;
+
+});
 </script>
 
 </body>

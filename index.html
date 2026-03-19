@@ -18,11 +18,10 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 /* AUDIO */
 .audio-player { margin-top: 10px; }
 
-/* BREAKING NEWS VIDEO */
-.breaking-container { position: relative; width: 100%; height: 180px; overflow: hidden; }
-.breaking-video { width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0; z-index:0; }
-.breaking-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); display:flex; align-items:center; padding-left:10px; z-index:1; }
-.breaking span { color:white; font-weight:bold; white-space: nowrap; }
+/* BREAKING NEWS */
+.breaking { background: #0047AB; color: white; padding: 8px; overflow: hidden; white-space: nowrap; }
+.breaking span { display: inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
 /* NAV */
 nav { background: #111; text-align: center; padding: 10px; }
@@ -36,9 +35,9 @@ nav a:hover { text-decoration: underline; }
 
 /* ARTICLES */
 .article { background: white; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
-.article h3 { margin-top: 0; display:flex; align-items:center; }
-.article h3 img { width: 60px; height: 40px; object-fit: cover; margin-right: 10px; }
-.article h3 a { text-decoration: none; color: black; }
+.article h3 { margin-top: 0; }
+.article h3 a { text-decoration: none; color: black; display:flex; align-items:center; }
+.article img { width: 100px; height: 60px; object-fit: cover; margin-right:10px; border-radius:4px; }
 .article h3 a:hover { color: #0047AB; }
 .readmore { color: #0047AB; font-weight: bold; text-decoration: none; display:block; margin-top:5px; }
 
@@ -59,7 +58,6 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
 footer a { color: white; margin: 0 8px; text-decoration: none; }
 </style>
 </head>
-
 <body>
 
 <!-- HEADER -->
@@ -74,14 +72,9 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
   </div>
 </div>
 
-<!-- BREAKING NEWS VIDEO -->
-<div class="breaking-container">
-  <video class="breaking-video" autoplay loop muted>
-    <source src="video1.mp4" type="video/mp4">
-  </video>
-  <div class="breaking-overlay">
-    <span id="breakingNews">Loading breaking news...</span>
-  </div>
+<!-- BREAKING NEWS -->
+<div class="breaking">
+  <span id="breakingNews">Loading breaking news...</span>
 </div>
 
 <!-- NAVIGATION -->
@@ -102,10 +95,6 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
   <div class="sidebar">
     <h3>Trending News</h3>
     <div id="trending"></div>
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank" style="display:block;margin-top:15px;">
-      <img src="images/whatsapp.png" alt="WhatsApp" style="width:40px;">
-    </a>
   </div>
 </div>
 
@@ -126,4 +115,59 @@ footer a { color: white; margin: 0 8px; text-decoration: none; }
 
 <!-- SCRIPT -->
 <script>
-fetch
+fetch("news.json")
+  .then(res => res.json())
+  .then(articles => {
+    const news = document.getElementById("news");
+    const trending = document.getElementById("trending");
+
+    function renderArticles(filterCategory) {
+      news.innerHTML = '';
+      trending.innerHTML = '';
+
+      const filtered = (!filterCategory || filterCategory === 'All')
+        ? articles
+        : articles.filter(a => a.category === filterCategory);
+
+      filtered.forEach((a, i) => {
+        const articleDiv = document.createElement('div');
+        articleDiv.className = 'article';
+
+        const h3 = document.createElement('h3');
+        const link = document.createElement('a');
+        link.href = `article.html?id=${i}`;
+        link.innerHTML = (a.live ? '<span class="live">LIVE</span> ' : '') + a.title;
+
+        if(a.image){
+          const img = document.createElement('img');
+          img.src = a.image;
+          img.alt = a.title;
+          link.prepend(img);
+        }
+
+        link.style.textDecoration = 'none';
+        link.style.color = 'black';
+        link.onmouseover = () => { link.style.color = '#0047AB'; };
+        link.onmouseout = () => { link.style.color = 'black'; };
+        h3.appendChild(link);
+        articleDiv.appendChild(h3);
+
+        const p = document.createElement('p');
+        p.textContent = a.summary;
+        articleDiv.appendChild(p);
+
+        const readMore = document.createElement('a');
+        readMore.href = `article.html?id=${i}`;
+        readMore.className = 'readmore';
+        readMore.textContent = 'Read more';
+        articleDiv.appendChild(readMore);
+
+        news.appendChild(articleDiv);
+      });
+
+      // Trending
+      filtered.slice(0,10).forEach((a,i)=>{
+        const tlink = document.createElement('a');
+        tlink.href = `article.html?id=${i}`;
+        tlink.textContent = a.title;
+        trending

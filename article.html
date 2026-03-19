@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Article</title>
+<title>News Article</title>
 
 <style>
-body { font-family: Arial; margin: 0; padding: 20px; background: #f5f5f5; }
+body { font-family: Arial; margin: 0; background: #f5f5f5; }
 
 .container {
   max-width: 800px;
   margin: auto;
   background: white;
   padding: 20px;
+}
+
+img {
+  width: 100%;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 h1 { margin-top: 0; }
@@ -35,7 +40,10 @@ h1 { margin-top: 0; }
 <a href="index.html" class="back">← Back to Home</a>
 
 <h1 id="title">Loading...</h1>
-<p id="content"></p>
+
+<img id="image" style="display:none;">
+
+<p id="content">Loading article...</p>
 
 </div>
 
@@ -44,27 +52,31 @@ h1 { margin-top: 0; }
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-// LOAD JSON
+// LOAD NEWS
 fetch("news.json")
 .then(res => res.json())
 .then(data => {
 
-  const articles = data; // ✅ FIXED
+  const article = data[id];
 
-  if (!articles[id]) {
+  if(!article){
     document.getElementById("title").textContent = "Article not found";
     return;
   }
 
-  const article = articles[id];
-
   document.getElementById("title").textContent = article.title;
-  document.getElementById("content").innerHTML =
-    article.content.replace(/\n/g, "<br><br>");
+  document.getElementById("content").textContent = article.content;
+
+  // IMAGE
+  if(article.image){
+    const img = document.getElementById("image");
+    img.src = article.image;
+    img.style.display = "block";
+  }
 
 })
-.catch(() => {
-  document.getElementById("title").textContent = "Error loading article";
+.catch(()=>{
+  document.getElementById("content").textContent = "Error loading article.";
 });
 </script>
 

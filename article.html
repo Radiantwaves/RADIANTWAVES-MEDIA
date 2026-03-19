@@ -3,50 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Article - RadiantWaves</title>
+<title>RadiantWaves Article</title>
 <style>
-body { font-family: Arial; margin: 0; background: #f5f5f5; padding: 20px; }
-h1 { font-size: 28px; }
-p { line-height: 1.6; }
-img.article-image { max-width: 100%; margin: 15px 0; border-radius: 5px; }
-.back-link { display: inline-block; margin-top: 20px; text-decoration: none; color: #0047AB; }
-.back-link:hover { text-decoration: underline; }
+body { font-family: Arial; margin:0; background:#f5f5f5; }
+.header { text-align:center; background:white; padding:15px; }
+.header img { width:70px; cursor:pointer; }
+.title { font-size:28px; font-weight:bold; margin:5px; }
+.title a { text-decoration:none; color:black; }
+.title a:hover { color:#0047AB; }
+.slogan { color:#666; font-size:14px; margin-bottom:10px; }
+
+/* ARTICLE */
+.container { max-width:900px; margin:auto; padding:20px; background:white; border-radius:5px; }
+.container img { max-width:100%; border-radius:4px; margin-bottom:15px; }
+h1 { font-size:24px; }
+p { font-size:16px; line-height:1.6; }
+
+/* FOOTER */
+footer { background:#111; color:white; text-align:center; padding:20px; margin-top:20px; }
+footer a { color:white; margin:0 8px; text-decoration:none; }
 </style>
 </head>
 <body>
 
-<div id="article">
-  <p>Loading article...</p>
+<div class="header">
+  <a href="index.html"><img src="images/icon-512.png" alt="RadiantWaves Logo"></a>
+  <div class="title"><a href="index.html">RadiantWaves</a></div>
+  <div class="slogan">Gateway to World News – Connecting You to the World</div>
 </div>
 
-<a href="index.html" class="back-link">← Back to Home</a>
-
-<script>
-// Get the ID from URL
-const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
-
-fetch('news.json')
-  .then(res => res.json())
-  .then(articles => {
-    const articleDiv = document.getElementById('article');
-    if(id !== null && articles[id]) {
-      const a = articles[id];
-
-      articleDiv.innerHTML = `
-        <h1>${a.title} ${a.live ? '<span style="color:red;font-size:14px;">LIVE</span>' : ''}</h1>
-        ${a.image ? `<img class="article-image" src="${a.image}" alt="${a.title}">` : ''}
-        <p>${a.content}</p>
-      `;
-    } else {
-      articleDiv.innerHTML = '<p>Article not found.</p>';
-    }
-  })
-  .catch(err => {
-    document.getElementById('article').innerHTML = '<p>Error loading article.</p>';
-    console.error(err);
-  });
-</script>
-
-</body>
-</html>
+<div class

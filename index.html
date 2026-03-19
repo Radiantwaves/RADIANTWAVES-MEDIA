@@ -10,58 +10,91 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 
 /* HEADER */
 .header { text-align: center; background: white; padding: 15px; }
-.header img { width: 70px; cursor:pointer; }
-.title { font-size: 32px; font-weight: bold; margin: 5px; }
+.header img { width: 70px; }
+.title { font-size: 32px; font-weight: bold; }
 .title a { text-decoration: none; color: black; }
-.title a:hover { color: #0047AB; }
 .slogan { color: #666; font-size: 14px; }
 
 /* AUDIO */
 .audio-player { margin-top: 10px; }
 
-/* BREAKING NEWS */
-.breaking { background: #0047AB; color: white; padding: 8px; overflow: hidden; white-space: nowrap; }
-.breaking span { display: inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+/* VIDEO BREAKING */
+.breaking-video {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+
+.breaking-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.breaking-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.breaking-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 /* NAV */
 nav { background: #111; text-align: center; padding: 10px; }
-nav a { color: white; margin: 0 12px; text-decoration: none; font-size: 14px; cursor:pointer; }
-nav a:hover { text-decoration: underline; }
+nav a { color: white; margin: 0 12px; text-decoration: none; cursor:pointer; }
 
 /* LAYOUT */
 .container { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; padding: 20px; }
 .main { flex: 3; min-width: 600px; }
-.sidebar { flex: 1; padding-left: 20px; min-width: 250px; }
+.sidebar { flex: 1; padding-left: 20px; }
 
 /* ARTICLES */
 .article { background: white; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
-.article h3 { margin-top: 0; }
-.article h3 a { text-decoration: none; color: black; }
-.article h3 a:hover { color: #0047AB; }
+.article img { width:100%; border-radius:4px; margin-bottom:10px; }
+.article h3 a { text-decoration:none; color:black; }
+.article h3 a:hover { color:#0047AB; }
 
-.article img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.readmore { color: #0047AB; font-weight: bold; text-decoration: none; }
+.readmore { color:#0047AB; font-weight:bold; }
 
 /* LIVE */
-.live { background: red; color: white; font-size: 10px; padding: 3px 6px; margin-right: 5px; border-radius: 3px; }
+.live { background:red; color:white; font-size:10px; padding:3px 6px; border-radius:3px; }
 
 /* TRENDING */
-.sidebar h3 { border-bottom: 2px solid #ddd; }
-.sidebar a { display: block; margin: 8px 0; text-decoration: none; color: #222; }
-.sidebar a:hover { color: #0047AB; }
+.sidebar a { display:block; margin:8px 0; text-decoration:none; }
 
 /* SOCIAL */
-.social { text-align: center; margin-top: 20px; }
-.social a img { width: 28px; margin: 5px; cursor:pointer; }
+.social { text-align:center; margin-top:20px; }
+.social img { width:28px; margin:5px; }
+
+/* WHATSAPP BUTTON */
+#whatsappBtn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:12px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
 
 /* FOOTER */
-footer { background: #111; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+footer { background:#111; color:white; text-align:center; padding:20px; }
 </style>
 </head>
 
@@ -71,7 +104,7 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
 <div class="header">
   <a href="index.html"><img src="images/icon-512.png"></a>
   <div class="title"><a href="index.html">RadiantWaves</a></div>
-  <div class="slogan">Gateway to World News – Connecting You to the World</div>
+  <div class="slogan">Gateway to World News</div>
 
   <div class="audio-player">
     <audio controls autoplay loop>
@@ -80,9 +113,15 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
   </div>
 </div>
 
-<!-- BREAKING -->
-<div class="breaking">
-  <span id="breakingNews">Loading breaking news...</span>
+<!-- VIDEO BREAKING -->
+<div class="breaking-video">
+  <video id="bgVideo" autoplay muted loop>
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+
+  <div class="breaking-text">
+    <span id="breakingNews">Loading...</span>
+  </div>
 </div>
 
 <!-- NAV -->
@@ -109,21 +148,39 @@ footer { background: #111; color: white; text-align: center; padding: 20px; marg
 
 <!-- SOCIAL -->
 <div class="social">
-  <a href="https://facebook.com/radiantwavesnews" target="_blank"><img src="images/facebook.png"></a>
-  <a href="https://twitter.com/radiant13528995" target="_blank"><img src="images/twitter.png"></a>
-  <a href="https://instagram.com/radiantwaves1" target="_blank"><img src="images/instagram.png"></a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><img src="images/tiktok.png"></a>
-  <a href="https://youtube.com/@radiantwave-wv6rg" target="_blank"><img src="images/youtube.png"></a>
+  <a href="https://facebook.com/radiantwavesnews"><img src="images/facebook.png"></a>
+  <a href="https://twitter.com/radiant13528995"><img src="images/twitter.png"></a>
+  <a href="https://instagram.com/radiantwaves1"><img src="images/instagram.png"></a>
+  <a href="https://tiktok.com/@radiantwavesmedia"><img src="images/tiktok.png"></a>
+  <a href="https://youtube.com/@radiantwave-wv6rg"><img src="images/youtube.png"></a>
 </div>
+
+<!-- WHATSAPP -->
+<a id="whatsappBtn" target="_blank">💬</a>
 
 <!-- FOOTER -->
 <footer>
-  <p>Truth. Insight. Global Perspective.</p>
   <p>© 2026 RadiantWaves Global News</p>
 </footer>
 
 <!-- SCRIPT -->
 <script>
+
+// VIDEO AUTO SWITCH
+const videos = ["video1.mp4","video2.mp4","video3.mp4"];
+let vIndex = 0;
+const video = document.getElementById("bgVideo");
+
+setInterval(() => {
+  vIndex = (vIndex + 1) % videos.length;
+  video.src = videos[vIndex];
+}, 10000);
+
+// WHATSAPP SHARE
+document.getElementById("whatsappBtn").href =
+  "https://wa.me/?text=" + encodeURIComponent(window.location.href);
+
+// NEWS LOAD
 fetch("news.json")
 .then(res => res.json())
 .then(articles => {
@@ -131,83 +188,32 @@ fetch("news.json")
   const news = document.getElementById("news");
   const trending = document.getElementById("trending");
 
-  function render(category) {
+  function render(cat){
 
     news.innerHTML = "";
     trending.innerHTML = "";
 
-    const filtered = (!category || category === "All")
+    const filtered = (!cat || cat==="All")
       ? articles
-      : articles.filter(a => a.category === category);
+      : articles.filter(a=>a.category===cat);
 
-    if(filtered.length === 0){
-      news.innerHTML = "<p>No news available.</p>";
-      return;
-    }
-
-    filtered.forEach((a, i) => {
+    filtered.forEach((a,i)=>{
 
       const box = document.createElement("div");
-      box.className = "article";
+      box.className="article";
 
-      // IMAGE
       if(a.image){
-        const img = document.createElement("img");
-        img.src = a.image;
+        const img=document.createElement("img");
+        img.src=a.image;
         box.appendChild(img);
       }
 
-      // TITLE
-      const h3 = document.createElement("h3");
-      h3.innerHTML = `<a href="article.html?id=${i}">
+      box.innerHTML += `
+        <h3><a href="article.html?id=${i}">
         ${a.live ? '<span class="live">LIVE</span>' : ''} ${a.title}
-      </a>`;
-      box.appendChild(h3);
+        </a></h3>
+        <p>${a.summary}</p>
+        <a class="readmore" href="article.html?id=${i}">Read more</a>
+      `;
 
-      // SUMMARY
-      const p = document.createElement("p");
-      p.textContent = a.summary;
-      box.appendChild(p);
-
-      // READ MORE
-      const read = document.createElement("a");
-      read.href = `article.html?id=${i}`;
-      read.className = "readmore";
-      read.textContent = "Read more";
-      box.appendChild(read);
-
-      news.appendChild(box);
-    });
-
-    // TRENDING
-    filtered.slice(0,10).forEach((a,i)=>{
-      const t = document.createElement("a");
-      t.href = `article.html?id=${i}`;
-      t.textContent = a.title;
-      trending.appendChild(t);
-    });
-
-    // BREAKING
-    const breaking = filtered.find(a=>a.live) || filtered[0];
-    const idx = articles.indexOf(breaking);
-
-    document.getElementById("breakingNews").innerHTML =
-      `<a href="article.html?id=${idx}" style="color:white;text-decoration:none;">
-        ${breaking.title}
-      </a>`;
-  }
-
-  render("All");
-
-  document.querySelectorAll("nav a").forEach(btn=>{
-    btn.onclick = ()=> render(btn.dataset.category);
-  });
-
-})
-.catch(()=>{
-  document.getElementById("news").innerHTML = "<p>Error loading news</p>";
-});
-</script>
-
-</body>
-</html>
+      news.append

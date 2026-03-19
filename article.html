@@ -3,33 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Article</title>
+<title>Article - RadiantWaves Global News</title>
 <style>
-body { font-family: Arial; margin:0; background:#f5f5f5; }
+body { font-family: Arial; margin: 0; background: #f5f5f5; }
 .header { text-align:center; background:white; padding:15px; }
 .header img { width:70px; cursor:pointer; }
-.title { font-size:28px; font-weight:bold; margin:5px; }
+.title { font-size:32px; font-weight:bold; margin:5px; }
 .title a { text-decoration:none; color:black; }
 .title a:hover { color:#0047AB; }
-.slogan { color:#666; font-size:14px; margin-bottom:10px; }
-
-/* ARTICLE */
-.container { max-width:900px; margin:auto; padding:20px; background:white; border-radius:5px; }
-.container img { max-width:100%; border-radius:4px; margin-bottom:15px; }
-h1 { font-size:24px; }
-p { font-size:16px; line-height:1.6; }
-
-/* FOOTER */
-footer { background:#111; color:white; text-align:center; padding:20px; margin-top:20px; }
-footer a { color:white; margin:0 8px; text-decoration:none; }
+.slogan { color:#666; font-size:14px; }
+.article-container { max-width:800px; margin:20px auto; background:white; padding:20px; border-radius:6px; }
+.article-container img { width:100%; max-height:400px; object-fit:cover; margin-bottom:15px; }
+.live { background:red; color:white; font-size:12px; padding:3px 6px; margin-right:5px; border-radius:3px; }
+.back { display:inline-block; margin-bottom:15px; text-decoration:none; color:#0047AB; }
+.back:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <a href="index.html"><img src="images/icon-512.png" alt="RadiantWaves Logo"></a>
+  <a href="index.html"><img src="images/icon-512.png" alt="Logo"></a>
   <div class="title"><a href="index.html">RadiantWaves</a></div>
   <div class="slogan">Gateway to World News – Connecting You to the World</div>
 </div>
 
-<div class
+<div class="article-container" id="article"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get('id'),10);
+
+fetch('news.json')
+.then(res=>res.json())
+.then(articles=>{
+  const article = articles[id];
+  const container = document.getElementById('article');
+  if(!article){
+    container.innerHTML='<p>Article not found.</p>';
+    return;
+  }
+
+  container.innerHTML = `
+    <a class="back" href="index.html">&larr; Back to Home</a>
+    <h1>${article.live?'<span class="live">LIVE</span>':''}${article.title}</h1>
+    ${article.image?`<img src="${article.image}" alt="${article.title}">`:''}
+    <p>${article.content}</p>
+  `;
+});
+</script>
+</body>
+</html>

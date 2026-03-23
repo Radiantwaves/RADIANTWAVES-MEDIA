@@ -10,7 +10,7 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 
 /* HEADER */
 .header { text-align: center; background: white; padding: 15px; }
-.header img { width: 70px; cursor:pointer; }
+.header img { width: 70px; }
 .title { font-size: 32px; font-weight: bold; margin: 5px; }
 .title a { text-decoration: none; color: black; }
 .title a:hover { color: #0047AB; }
@@ -28,6 +28,7 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 /* NAV */
 nav { background: #111; text-align: center; padding: 10px; }
 nav a { color: white; margin: 0 12px; text-decoration: none; cursor:pointer; }
+nav a:hover { text-decoration: underline; }
 
 /* LAYOUT */
 .container { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; padding: 20px; }
@@ -36,8 +37,6 @@ nav a { color: white; margin: 0 12px; text-decoration: none; cursor:pointer; }
 
 /* ARTICLE */
 .article { background: white; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
-.article h3 { display: flex; align-items: center; }
-.article img { width: 70px; height: 50px; object-fit: cover; margin-right: 10px; }
 .readmore { color: #0047AB; font-weight: bold; text-decoration:none; }
 
 /* LIVE */
@@ -58,19 +57,19 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
 <div class="header">
   <a href="index.html"><img src="images/icon-512.png"></a>
   <div class="title"><a href="index.html">RadiantWaves</a></div>
-  <div class="slogan">Gateway to World News</div>
+  <div class="slogan">Gateway to World News – Connecting You to the World</div>
 </div>
 
 <!-- VIDEO -->
 <div class="video-bg">
-  <video id="bgVideo" autoplay muted loop>
+  <video id="bgVideo" autoplay muted loop playsinline>
     <source src="video1.mp4" type="video/mp4">
   </video>
 </div>
 
 <!-- BREAKING -->
 <div class="breaking">
-  <span id="breakingNews">Loading...</span>
+  <span id="breakingNews">Loading breaking news...</span>
 </div>
 
 <!-- NAV -->
@@ -103,7 +102,10 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
   <a href="https://youtube.com/@radiantwave-wv6rg"><img src="images/youtube.png"></a>
 </div>
 
+<!-- FOOTER -->
 <footer>
+  <p><strong>RadiantWaves Global News</strong></p>
+  <p>Truth. Insight. Global Perspective.</p>
   <p>© 2026 RadiantWaves</p>
 </footer>
 
@@ -128,47 +130,30 @@ fetch("news.json")
       const div = document.createElement('div');
       div.className = 'article';
 
-      const h3 = document.createElement('h3');
+      div.innerHTML = `
+        <h3>${a.live ? '<span class="live">LIVE</span>' : ''} ${a.title}</h3>
+        <p>${a.summary}</p>
+        <a href="article.html?id=${i}" class="readmore">Read more</a>
+      `;
 
-      if(a.image){
-        const img = document.createElement('img');
-        img.src = a.image;
-        h3.appendChild(img);
-      }
-
-      const link = document.createElement('a');
-      link.href = `article.html?id=${i}`;
-      link.innerHTML = (a.live ? '<span class="live">LIVE</span>' : '') + a.title;
-
-      h3.appendChild(link);
-      div.appendChild(h3);
-
-      const p = document.createElement('p');
-      p.textContent = a.summary;
-      div.appendChild(p);
-
-      const read = document.createElement('a');
-      read.href = `article.html?id=${i}`;
-      read.textContent = "Read more";
-      read.className = "readmore";
-
-      div.appendChild(read);
       news.appendChild(div);
     });
 
-    // trending
+    // Trending
     articles.slice(0,5).forEach((a,i)=>{
       const t = document.createElement('a');
       t.href = `article.html?id=${i}`;
       t.textContent = a.title;
+      t.style.display = "block";
+      t.style.marginBottom = "8px";
       trending.appendChild(t);
     });
 
-    // breaking
+    // Breaking
     const breaking = articles.find(a => a.live) || articles[0];
     const index = articles.indexOf(breaking);
     document.getElementById("breakingNews").innerHTML =
-      `<a href="article.html?id=${index}" style="color:white;">${breaking.title}</a>`;
+      `<a href="article.html?id=${index}" style="color:white;text-decoration:none;">${breaking.title}</a>`;
   }
 
   render('All');
@@ -177,6 +162,10 @@ fetch("news.json")
     btn.onclick = () => render(btn.dataset.category);
   });
 
+})
+.catch(err => {
+  document.getElementById("news").innerHTML = "<p style='color:red;'>Error loading news</p>";
+  console.error(err);
 });
 
 // VIDEO ROTATION
@@ -187,6 +176,15 @@ setInterval(()=>{
   v = (v+1) % vids.length;
   document.getElementById("bgVideo").src = vids[v];
 }, 12000);
+
+// CLICK TO ENABLE SOUND
+window.addEventListener("click", function () {
+  const video = document.getElementById("bgVideo");
+  if(video){
+    video.muted = false;
+    video.play();
+  }
+}, { once: true });
 
 </script>
 

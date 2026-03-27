@@ -58,18 +58,15 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
 
 <body>
 
-<!-- TV INTRO -->
+<!-- INTRO -->
 <div id="introScreen">
-
-  <video id="introVideo" autoplay muted playsinline
+  <video id="introVideo" muted playsinline
     style="position:absolute;width:100%;height:100%;object-fit:cover;">
     <source src="video1.mp4" type="video/mp4">
   </video>
 
-  <!-- overlay -->
   <div style="position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);"></div>
 
-  <!-- button -->
   <button onclick="startIntro()" style="
     position:relative;
     z-index:10;
@@ -81,7 +78,6 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
     border-radius:6px;">
     ▶ Tap to Watch News
   </button>
-
 </div>
 
 <!-- HEADER -->
@@ -131,24 +127,18 @@ footer { background: #111; color: white; text-align: center; padding: 20px; }
   <p>© 2026 RadiantWaves</p>
 </footer>
 
-<!-- SCRIPT -->
 <script>
 
-// INTRO
+// INTRO FIX
 function startIntro(){
   const video = document.getElementById("introVideo");
   video.muted = false;
   video.play();
 
-  setTimeout(() => {
+  setTimeout(()=>{
     document.getElementById("introScreen").style.display = "none";
   }, 4000);
 }
-
-// auto skip if no click
-setTimeout(() => {
-  document.getElementById("introScreen").style.display = "none";
-}, 3000);
 
 // NEWS
 fetch("news.json")
@@ -189,6 +179,7 @@ fetch("news.json")
 
     const breaking = articles.find(a => a.live) || articles[0];
     const index = articles.indexOf(breaking);
+
     document.getElementById("breakingNews").innerHTML =
       `<a href="article.html?id=${index}" style="color:white;text-decoration:none;">${breaking.title}</a>`;
   }
@@ -201,7 +192,7 @@ fetch("news.json")
 
 })
 .catch(()=>{
-  document.getElementById("news").innerHTML = "<p>Error loading news</p>";
+  document.getElementById("news").innerHTML = "<p style='padding:20px;'>News failed to load. Refresh page.</p>";
 });
 
 // VIDEO ROTATION

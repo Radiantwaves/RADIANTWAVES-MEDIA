@@ -3,41 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Global News</title>
+<title>RadiantWaves</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body { margin:0; font-family: Arial; background:#0b0f1a; color:white; }
+body { margin:0; font-family:Arial; background:#0b0f1a; color:white; }
 
 /* HEADER */
 .header { text-align:center; padding:20px; background:#111; }
-.title { font-size:32px; font-weight:bold; }
-.slogan { color:#aaa; font-size:14px; margin-top:5px; }
-
-/* VIDEO */
-.video-bg { height:220px; overflow:hidden; }
-.video-bg video { width:100%; height:100%; object-fit:cover; }
+.title { font-size:34px; font-weight:bold; }
+.slogan { color:#aaa; font-size:14px; }
 
 /* BREAKING */
 .breaking { background:red; padding:10px; overflow:hidden; }
-.breaking span { display:inline-block; white-space:nowrap; animation:scroll 15s linear infinite; }
-@keyframes scroll { from {transform:translateX(100%);} to {transform:translateX(-100%);} }
+.breaking span {
+  display:inline-block;
+  white-space:nowrap;
+  animation:scroll 12s linear infinite;
+}
+@keyframes scroll {
+  from { transform:translateX(100%); }
+  to { transform:translateX(-100%); }
+}
 
 /* NAV */
 nav { background:#000; text-align:center; padding:10px; }
-nav a { color:white; margin:0 10px; cursor:pointer; }
+nav a { color:white; margin:0 10px; }
 
 /* LAYOUT */
-.container { max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
-.main { flex:3; min-width:300px; }
+.container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
+.main { flex:3; }
 .sidebar { flex:1; padding-left:15px; }
 
 /* ARTICLE */
 .article { background:#111; margin-bottom:15px; padding:12px; border-radius:6px; }
 .article img { width:100%; height:180px; object-fit:cover; }
 .article h3 { margin:10px 0; }
-.readmore { color:#00bfff; text-decoration:none; }
+
+/* SIDEBAR */
+.sidebar h3 { margin-top:0; }
+.sidebar a { display:block; color:#ccc; margin:8px 0; text-decoration:none; }
+
+/* SOCIAL */
+.social { text-align:center; margin-top:20px; }
+.social i { margin:10px; font-size:20px; }
 
 /* FOOTER */
 footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
@@ -47,118 +57,63 @@ footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
 <body>
 
 <div class="header">
-  <div class="title">RadiantWaves</div>
+  <div class="title">🌐 RadiantWaves</div>
   <div class="slogan">Gateway to World News – Connecting You to the World</div>
 </div>
 
-<div class="video-bg">
-  <video autoplay muted loop>
-    <source src="video1.mp4" type="video/mp4">
-  </video>
-</div>
-
 <div class="breaking">
-  <span id="breakingNews">Loading breaking news...</span>
+  <span>Breaking: Global updates • Technology shifts • Markets move • World headlines live</span>
 </div>
 
 <nav>
   <a>Home</a>
   <a>World</a>
-  <a>Tech</a>
+  <a>Politics</a>
+  <a>Business</a>
+  <a>Technology</a>
+  <a>Science</a>
+  <a>Sport</a>
+  <a>Entertainment</a>
 </nav>
 
 <div class="container">
-  <div class="main" id="newsContainer"></div>
+
+  <div class="main">
+
+    <div class="article">
+      <img src="https://source.unsplash.com/800x400/?world">
+      <h3>Global Headline</h3>
+      <p>Live global news updates will appear here soon.</p>
+    </div>
+
+    <div class="article">
+      <img src="https://source.unsplash.com/800x400/?technology">
+      <h3>Technology Update</h3>
+      <p>Latest tech developments from around the world.</p>
+    </div>
+
+  </div>
 
   <div class="sidebar">
     <h3>Trending</h3>
-    <p>Live updates coming soon...</p>
+    <a href="#">World events unfolding</a>
+    <a href="#">Tech innovation rising</a>
+    <a href="#">Market trends today</a>
+
+    <div class="social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
   </div>
+
 </div>
 
 <footer>
-  © 2026 RadiantWaves Global News
+  © 2026 RadiantWaves Global News<br>
+  Gateway to World News – Connecting You to the World
 </footer>
-
-<script>
-
-// 🔥 BREAKING NEWS ROTATION
-const breaking = [
-  "Global markets surge today",
-  "Tech breakthrough shocks world",
-  "Major political update",
-  "Sports event trending worldwide"
-];
-
-let b = 0;
-setInterval(() => {
-  document.getElementById("breakingNews").textContent = breaking[b];
-  b = (b + 1) % breaking.length;
-}, 3000);
-
-
-// 📰 LOAD NEWS (WORKING FIX)
-async function loadNews() {
-  const container = document.getElementById("newsContainer");
-
-  try {
-    // ⚠️ Replace YOUR_API_KEY
-    const res = await fetch("https://newsapi.org/v2/top-headlines?country=us&pageSize=6&apiKey=YOUR_API_KEY");
-    const data = await res.json();
-
-    if (!data.articles) throw "API error";
-
-    displayNews(data.articles);
-
-  } catch (error) {
-    console.log("Using fallback news");
-
-    // ✅ FALLBACK DATA (ALWAYS SHOWS)
-    const fallback = [
-      {
-        title: "Sample Headline 1",
-        description: "This is fallback news content.",
-        urlToImage: "https://source.unsplash.com/800x400/?world",
-        url: "#"
-      },
-      {
-        title: "Sample Headline 2",
-        description: "Another fallback article.",
-        urlToImage: "https://source.unsplash.com/800x400/?technology",
-        url: "#"
-      }
-    ];
-
-    displayNews(fallback);
-  }
-}
-
-
-// 🧠 RENDER NEWS
-function displayNews(articles) {
-  const container = document.getElementById("newsContainer");
-  container.innerHTML = "";
-
-  articles.forEach(article => {
-    const div = document.createElement("div");
-    div.className = "article";
-
-    div.innerHTML = `
-      <img src="${article.urlToImage || 'https://via.placeholder.com/800x400'}">
-      <h3>${article.title}</h3>
-      <p>${article.description || ''}</p>
-      <a href="${article.url}" target="_blank" class="readmore">Read more</a>
-    `;
-
-    container.appendChild(div);
-  });
-}
-
-
-// 🚀 INIT
-loadNews();
-
-</script>
 
 </body>
 </html>

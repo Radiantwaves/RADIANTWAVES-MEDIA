@@ -101,42 +101,71 @@ footer { background:#000; text-align:center; padding:20px; margin-top:30px; }
   <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
 </footer><script>
 
-// STATIC PROFESSIONAL NEWS (NO API BREAK)
-const articles = [
-  {
-    title: "Global Leaders Meet to Address Economic Shifts",
-    desc: "World leaders gather to discuss financial stability and global cooperation.",
-    img: "https://source.unsplash.com/800x400/?politics"
-  },
-  {
-    title: "AI Revolution Accelerates Across Industries",
-    desc: "Technology continues to reshape business, healthcare, and society.",
-    img: "https://source.unsplash.com/800x400/?technology"
-  },
-  {
-    title: "Climate Developments Raise Global Attention",
-    desc: "Scientists highlight urgent environmental challenges worldwide.",
-    img: "https://source.unsplash.com/800x400/?climate"
-  }
-];
+// 🔑 PUT YOUR API KEY HERE
+const API_KEY = "e0f95eae70444428b2564fcce9c954f6";
 
 const container = document.getElementById("newsContainer");
 
-articles.forEach(a => {
-  const div = document.createElement("div");
-  div.className = "article";
+// 📰 LOAD REAL NEWS SAFELY
+async function loadNews() {
+  try {
+    const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=6&apiKey=${API_KEY}`);
+    const data = await res.json();
 
-  div.innerHTML = `
-    <img src="${a.img}">
-    <div class="article-content">
-      <h3>${a.title}</h3>
-      <p>${a.desc}</p>
-      <a href="#" class="readmore">Read more</a>
-    </div>
-  `;
+    if (!data.articles || data.articles.length === 0) {
+      throw "No news";
+    }
 
-  container.appendChild(div);
-});
+    displayNews(data.articles);
+
+  } catch (error) {
+    console.log("Using fallback news");
+
+    // ✅ FALLBACK (never breaks)
+    const fallback = [
+      {
+        title: "Global Leaders Meet to Address Economic Shifts",
+        description: "World leaders gather to discuss financial stability.",
+        urlToImage: "https://source.unsplash.com/800x400/?politics",
+        url: "#"
+      },
+      {
+        title: "AI Revolution Accelerates Across Industries",
+        description: "Technology reshaping the global economy.",
+        urlToImage: "https://source.unsplash.com/800x400/?technology",
+        url: "#"
+      }
+    ];
+
+    displayNews(fallback);
+  }
+}
+
+
+// 🧠 DISPLAY FUNCTION
+function displayNews(articles) {
+  container.innerHTML = "";
+
+  articles.forEach(article => {
+    const div = document.createElement("div");
+    div.className = "article";
+
+    div.innerHTML = `
+      <img src="${article.urlToImage || 'https://via.placeholder.com/800x400'}">
+      <div class="article-content">
+        <h3>${article.title}</h3>
+        <p>${article.description || ""}</p>
+        <a href="${article.url}" target="_blank" class="readmore">Read more</a>
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+
+// 🚀 START
+loadNews();
 
 </script></body>
 </html>

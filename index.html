@@ -15,46 +15,36 @@ body { font-family: Arial; margin: 0; background: #f5f5f5; }
 .slogan { color: #666; font-size: 14px; }
 
 /* VIDEO */
-.video-bg { width: 100%; height: 250px; overflow: hidden; position: relative; }
+.video-bg { width: 100%; height: 250px; overflow: hidden; }
 .video-bg video { width: 100%; height: 100%; object-fit: cover; }
 
-/* SOUND BUTTON */
-.sound-btn {
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  background:black;
-  color:white;
-  border:none;
-  padding:5px 10px;
-  cursor:pointer;
-}
-
 /* BREAKING */
-.breaking { background:#0047AB; color:white; padding:8px; overflow:hidden; white-space:nowrap; }
-.breaking span { display:inline-block; padding-left:100%; animation:scroll 20s linear infinite; }
-@keyframes scroll { 100% { transform:translateX(-100%);} }
+.breaking { background: #0047AB; color: white; padding: 8px; }
 
 /* NAV */
-nav { background:#111; text-align:center; padding:10px; }
-nav a { color:white; margin:0 12px; cursor:pointer; }
+nav { background: #111; text-align: center; padding: 10px; }
+nav a { color: white; margin: 0 12px; cursor:pointer; text-decoration:none; }
 
 /* LAYOUT */
-.container { max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; padding:20px; }
-.main { flex:3; min-width:600px; }
-.sidebar { flex:1; padding-left:20px; }
+.container { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; padding: 20px; }
+.main { flex: 3; min-width: 600px; }
+.sidebar { flex: 1; padding-left: 20px; }
 
 /* ARTICLE */
-.article { background:white; padding:15px; margin-bottom:20px; }
-.article img { width:80px; height:60px; object-fit:cover; margin-right:10px; }
-.article h3 { display:flex; align-items:center; }
+.article { background: white; padding: 15px; margin-bottom: 20px; }
+.article h3 { display: flex; align-items: center; }
+.article img { width: 80px; height: 60px; object-fit: cover; margin-right: 10px; }
+.readmore { color: #0047AB; font-weight: bold; text-decoration:none; }
+
+/* LIVE */
+.live { background: red; color: white; font-size: 10px; padding: 3px 6px; margin-right: 5px; }
 
 /* SOCIAL */
-.social { text-align:center; padding:20px; }
-.social img { width:28px; margin:5px; }
+.social { text-align: center; margin-top: 20px; }
+.social a { color: #0047AB; margin: 0 8px; text-decoration:none; }
 
 /* FOOTER */
-footer { background:#111; color:white; text-align:center; padding:20px; }
+footer { background: #111; color: white; text-align: center; padding: 20px; margin-top:20px; }
 </style>
 </head>
 
@@ -69,15 +59,14 @@ footer { background:#111; color:white; text-align:center; padding:20px; }
 
 <!-- VIDEO -->
 <div class="video-bg">
-  <video id="bgVideo" autoplay loop playsinline>
+  <video id="bgVideo" autoplay muted loop>
     <source src="video1.mp4" type="video/mp4">
   </video>
-  <button class="sound-btn" onclick="toggleSound()">🔊 Sound</button>
 </div>
 
 <!-- BREAKING -->
 <div class="breaking">
-  <span id="breakingNews">Loading...</span>
+  <span id="breakingNews">🔴 Loading breaking news...</span>
 </div>
 
 <!-- NAV -->
@@ -101,23 +90,13 @@ footer { background:#111; color:white; text-align:center; padding:20px; }
   </div>
 </div>
 
-<!-- SOCIAL MEDIA (WORKING ICONS ONLINE) -->
+<!-- SOCIAL (SAFE TEXT VERSION) -->
 <div class="social">
-  <a href="https://facebook.com/radiantwavesnews" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
-  </a>
-  <a href="https://twitter.com/radiant13528995" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png">
-  </a>
-  <a href="https://instagram.com/radiantwaves1" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-  </a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-  </a>
-  <a href="https://youtube.com/@radiantwave-wv6rg" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-  </a>
+  <a href="https://facebook.com/radiantwavesnews" target="_blank">Facebook</a> |
+  <a href="https://twitter.com/radiant13528995" target="_blank">Twitter</a> |
+  <a href="https://instagram.com/radiantwaves1" target="_blank">Instagram</a> |
+  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">TikTok</a> |
+  <a href="https://youtube.com/@radiantwave-wv6rg" target="_blank">YouTube</a>
 </div>
 
 <footer>
@@ -125,71 +104,92 @@ footer { background:#111; color:white; text-align:center; padding:20px; }
   <p>© 2026 RadiantWaves Global News</p>
 </footer>
 
+<!-- SCRIPT -->
 <script>
-// VIDEO SOUND FIX
-function toggleSound(){
-  const v = document.getElementById("bgVideo");
-  v.muted = !v.muted;
-}
-
-// LOAD NEWS
 fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
+.then(res => res.json())
+.then(articles => {
+
   const news = document.getElementById("news");
   const trending = document.getElementById("trending");
+  const breakingBar = document.getElementById("breakingNews");
 
-  function render(cat){
-    news.innerHTML="";
-    trending.innerHTML="";
+  function render(category){
+    news.innerHTML = '';
+    trending.innerHTML = '';
 
-    const filtered = cat==="All" ? data : data.filter(a=>a.category===cat);
+    const filtered = category === 'All'
+      ? articles
+      : articles.filter(a => a.category === category);
 
     filtered.forEach((a,i)=>{
-      const div=document.createElement("div");
-      div.className="article";
+      const div = document.createElement('div');
+      div.className = 'article';
 
-      const h3=document.createElement("h3");
+      const h3 = document.createElement('h3');
 
       if(a.image){
-        const img=document.createElement("img");
-        img.src=a.image;
+        const img = document.createElement('img');
+        img.src = a.image;
         h3.appendChild(img);
       }
 
-      const link=document.createElement("a");
-      link.href=`article.html?id=${i}`;
-      link.innerHTML=(a.live?'<span style="background:red;color:white;font-size:10px;padding:2px;">LIVE</span> ':'')+a.title;
+      const link = document.createElement('a');
+      link.href = `article.html?id=${i}`;
+      link.innerHTML = (a.live ? '<span class="live">LIVE</span> ' : '') + a.title;
 
       h3.appendChild(link);
       div.appendChild(h3);
 
-      const p=document.createElement("p");
-      p.textContent=a.summary;
-
+      const p = document.createElement('p');
+      p.textContent = a.summary;
       div.appendChild(p);
+
+      const read = document.createElement('a');
+      read.href = `article.html?id=${i}`;
+      read.textContent = "Read more";
+      read.className = "readmore";
+
+      div.appendChild(read);
       news.appendChild(div);
     });
 
-    data.slice(0,5).forEach((a,i)=>{
-      const t=document.createElement("a");
-      t.href=`article.html?id=${i}`;
-      t.textContent=a.title;
+    // Trending
+    articles.slice(0,5).forEach((a,i)=>{
+      const t = document.createElement('a');
+      t.href = `article.html?id=${i}`;
+      t.textContent = a.title;
       trending.appendChild(t);
     });
-
-    const b=data.find(a=>a.live)||data[0];
-    const index=data.indexOf(b);
-    document.getElementById("breakingNews").innerHTML =
-      `<a href="article.html?id=${index}" style="color:white;">${b.title}</a>`;
   }
 
-  render("All");
+  render('All');
 
   document.querySelectorAll("nav a").forEach(btn=>{
-    btn.onclick=()=>render(btn.dataset.category);
+    btn.onclick = () => render(btn.dataset.category);
   });
+
+  // 🔴 BREAKING NEWS ROTATION
+  let i = 0;
+  setInterval(() => {
+    const a = articles[i % articles.length];
+    breakingBar.innerHTML =
+      `<a href="article.html?id=${i % articles.length}" style="color:white;text-decoration:none;">
+        🔴 ${a.title}
+      </a>`;
+    i++;
+  }, 4000);
+
 });
+
+// VIDEO ROTATION
+const vids = ["video1.mp4","video2.mp4","video3.mp4"];
+let v = 0;
+
+setInterval(()=>{
+  v = (v+1) % vids.length;
+  document.getElementById("bgVideo").src = vids[v];
+}, 12000);
 </script>
 
 </body>

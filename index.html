@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body { margin:0; font-family:Arial; background:#0b0f1a; color:white; }
+<title>RadiantWavesMedia</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+body { margin:0; font-family:Arial, sans-serif; background:#0b0f1a; color:white; }
 
 /* HEADER */
-.header { text-align:center; padding:20px; background:#111; }
-.title { font-size:34px; font-weight:bold; }
-.slogan { color:#aaa; font-size:14px; }
+.header { background:#111; padding:20px; text-align:center; }
+.logo { font-size:34px; font-weight:bold; }
+.header-slogan { color:#aaa; font-size:14px; }
+
+/* VIDEO HERO */
+.hero { position:relative; height:300px; overflow:hidden; }
+.hero video { width:100%; height:100%; object-fit:cover; }
+.hero-overlay {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.4);
+}
+.hero-text {
+  position:absolute; bottom:20px; left:20px;
+  font-size:24px; font-weight:bold;
+}
 
 /* BREAKING */
 .breaking { background:red; padding:10px; overflow:hidden; }
 .breaking span {
-  display:inline-block;
-  white-space:nowrap;
-  animation:scroll 12s linear infinite;
+  display:inline-block; white-space:nowrap;
+  animation:scroll 15s linear infinite;
 }
 @keyframes scroll {
   from { transform:translateX(100%); }
@@ -28,44 +34,48 @@ body { margin:0; font-family:Arial; background:#0b0f1a; color:white; }
 }
 
 /* NAV */
-nav { background:#000; text-align:center; padding:10px; }
-nav a { color:white; margin:0 10px; }
+nav { background:#000; padding:10px; text-align:center; }
+nav a { color:white; margin:0 12px; cursor:pointer; text-decoration:none; }
+nav a:hover { color:#00bfff; }
 
 /* LAYOUT */
-.container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
-.main { flex:3; }
-.sidebar { flex:1; padding-left:15px; }
+.container { max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; padding:20px; }
+.main { flex:3; min-width:300px; }
+.sidebar { flex:1; padding-left:20px; }
 
-/* ARTICLE */
-.article { background:#111; margin-bottom:15px; padding:12px; border-radius:6px; }
-.article img { width:100%; height:180px; object-fit:cover; }
-.article h3 { margin:10px 0; }
+/* ARTICLES */
+.article { background:#111; margin-bottom:20px; border-radius:6px; overflow:hidden; }
+.article img { width:100%; height:200px; object-fit:cover; }
+.article-content { padding:12px; }
+.article h3 { margin:0 0 10px; }
+.article p { color:#ccc; }
+.readmore { color:#00bfff; text-decoration:none; }
 
 /* SIDEBAR */
 .sidebar h3 { margin-top:0; }
 .sidebar a { display:block; color:#ccc; margin:8px 0; text-decoration:none; }
+.sidebar a:hover { color:white; }
 
 /* SOCIAL */
 .social { text-align:center; margin-top:20px; }
-.social i { margin:10px; font-size:20px; }
+.social a { margin:10px; color:white; font-size:22px; }
+.social a:hover { color:#00bfff; }
 
 /* FOOTER */
-footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
-</style>
-</head>
-
-<body>
-
-<div class="header">
-  <div class="title">🌐 RadiantWaves</div>
-  <div class="slogan">Gateway to World News – Connecting You to the World</div>
-</div>
-
-<div class="breaking">
-  <span>Breaking: Global updates • Technology shifts • Markets move • World headlines live</span>
-</div>
-
-<nav>
+footer { background:#000; text-align:center; padding:20px; margin-top:30px; }
+.footer-slogan { color:#aaa; font-size:13px; margin-top:5px; }
+</style></head><body><div class="header">
+  <div class="logo">RadiantWavesMedia</div>
+  <div class="header-slogan">Real-Time Global Intelligence & Breaking News Network</div>
+</div><div class="hero">
+  <video autoplay muted loop>
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-text">Top Stories Around the World</div>
+</div><div class="breaking">
+  <span>Breaking: Global markets shift • Political tensions rise • Tech innovations accelerate • Stay informed with RadiantWavesMedia</span>
+</div><nav>
   <a>Home</a>
   <a>World</a>
   <a>Politics</a>
@@ -74,46 +84,59 @@ footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
   <a>Science</a>
   <a>Sport</a>
   <a>Entertainment</a>
-</nav>
-
-<div class="container">
-
-  <div class="main">
-
-    <div class="article">
-      <img src="https://source.unsplash.com/800x400/?world">
-      <h3>Global Headline</h3>
-      <p>Live global news updates will appear here soon.</p>
-    </div>
-
-    <div class="article">
-      <img src="https://source.unsplash.com/800x400/?technology">
-      <h3>Technology Update</h3>
-      <p>Latest tech developments from around the world.</p>
-    </div>
-
-  </div>
-
-  <div class="sidebar">
+</nav><div class="container">  <div class="main" id="newsContainer"></div>  <div class="sidebar">
     <h3>Trending</h3>
-    <a href="#">World events unfolding</a>
-    <a href="#">Tech innovation rising</a>
-    <a href="#">Market trends today</a>
-
-    <div class="social">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-x-twitter"></i>
-      <i class="fab fa-youtube"></i>
-      <i class="fab fa-instagram"></i>
-    </div>
-  </div>
-
+    <a href="#">Global summit updates</a>
+    <a href="#">AI transforming industries</a>
+    <a href="#">Economic outlook 2026</a>
+    <a href="#">Major sports headlines</a><div class="social">
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-x-twitter"></i></a>
+  <a href="#"><i class="fab fa-youtube"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
 </div>
 
-<footer>
-  © 2026 RadiantWaves Global News<br>
-  Gateway to World News – Connecting You to the World
-</footer>
+  </div></div><footer>
+  © 2026 RadiantWavesMedia
+  <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
+</footer><script>
 
-</body>
+// STATIC PROFESSIONAL NEWS (NO API BREAK)
+const articles = [
+  {
+    title: "Global Leaders Meet to Address Economic Shifts",
+    desc: "World leaders gather to discuss financial stability and global cooperation.",
+    img: "https://source.unsplash.com/800x400/?politics"
+  },
+  {
+    title: "AI Revolution Accelerates Across Industries",
+    desc: "Technology continues to reshape business, healthcare, and society.",
+    img: "https://source.unsplash.com/800x400/?technology"
+  },
+  {
+    title: "Climate Developments Raise Global Attention",
+    desc: "Scientists highlight urgent environmental challenges worldwide.",
+    img: "https://source.unsplash.com/800x400/?climate"
+  }
+];
+
+const container = document.getElementById("newsContainer");
+
+articles.forEach(a => {
+  const div = document.createElement("div");
+  div.className = "article";
+
+  div.innerHTML = `
+    <img src="${a.img}">
+    <div class="article-content">
+      <h3>${a.title}</h3>
+      <p>${a.desc}</p>
+      <a href="#" class="readmore">Read more</a>
+    </div>
+  `;
+
+  container.appendChild(div);
+});
+
+</script></body>
 </html>

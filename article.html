@@ -1,107 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves News</title>
-
+<title>Article</title>
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
-}
-
-/* HEADER */
-.header {
-  text-align: center;
-  background: white;
-  padding: 15px;
-}
-.header img {
-  width: 70px;
-}
-.title {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-/* ARTICLE */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-.article {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.article img {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.article h1 {
-  margin-top: 0;
-}
-
-.back {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: #0047AB;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
+body { font-family: Arial; max-width:800px; margin:auto; padding:20px; }
+img { width:100%; margin-bottom:20px; }
 </style>
 </head>
 
 <body>
 
-<div class="header">
-  <img src="images/icon-512.png">
-  <div class="title">RadiantWaves</div>
-</div>
-
-<div class="container">
-  <a href="index.html" class="back">← Back to Home</a>
-
-  <div class="article" id="article"></div>
-</div>
-
-<footer>
-  <p>Truth. Insight. Global Perspective.</p>
-  <p>© 2026 RadiantWaves</p>
-</footer>
+<h1 id="title"></h1>
+<img id="image">
+<p id="content"></p>
 
 <script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
 fetch("news.json")
-.then(res => res.json())
-.then(data => {
-
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-
+.then(res=>res.json())
+.then(data=>{
   const article = data[id];
 
-  const container = document.getElementById("article");
+  document.getElementById("title").textContent = article.title;
+  document.getElementById("content").textContent = article.content;
 
-  container.innerHTML = `
-    <h1>${article.title}</h1>
-    ${article.image ? `<img src="${article.image}">` : ""}
-    <p>${article.content.replace(/\\n/g, "<br><br>")}</p>
-  `;
+  if(article.image){
+    document.getElementById("image").src = article.image;
+  }
 });
 </script>
 

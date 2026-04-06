@@ -1,143 +1,104 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWavesMedia</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
-body { margin:0; font-family:Arial; background:#0b0f1a; color:white; }
+<title>RadiantWavesMedia</title>
 
-.header { background:#111; text-align:center; padding:20px; }
-.logo img { height:50px; }
-.header-slogan { color:#aaa; font-size:14px; }
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.hero { height:250px; position:relative; overflow:hidden; }
-.hero video { width:100%; height:100%; object-fit:cover; }
-.overlay { position:absolute; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
-.hero-text { position:absolute; bottom:20px; left:20px; font-size:22px; }
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+  header { background: #111; color: #fff; padding: 20px; text-align: center; }
+  nav a { color: #fff; margin: 0 10px; text-decoration: none; }
+  .trending, .news-container { padding: 20px; max-width: 900px; margin: auto; }
+  .news-item { display: flex; gap: 15px; margin-bottom: 20px; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  .news-item img { width: 150px; height: 100px; object-fit: cover; border-radius: 6px; }
+  .social i { font-size: 24px; margin: 0 8px; color: #111; cursor: pointer; }
+  audio { display: none; }
+</style>
+</head>
+<body>
 
-.breaking { background:red; padding:10px; overflow:hidden; }
-.breaking span { display:inline-block; white-space:nowrap; animation:scroll 15s linear infinite; }
-@keyframes scroll { from {transform:translateX(100%);} to {transform:translateX(-100%);} }
+<header>
+  <h1>RadiantWavesMedia</h1>
+  <p>Real-Time Global Intelligence & Breaking News Network</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">World</a>
+    <a href="#">Politics</a>
+    <a href="#">Business</a>
+    <a href="#">Technology</a>
+    <a href="#">Science</a>
+    <a href="#">Sport</a>
+    <a href="#">Entertainment</a>
+  </nav>
+</header>
 
-nav { background:#000; text-align:center; padding:10px; }
-nav a { color:white; margin:0 10px; text-decoration:none; }
-
-.container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
-.main { flex:3; }
-.sidebar { flex:1; padding-left:15px; }
-
-.article { background:#111; margin-bottom:15px; border-radius:6px; overflow:hidden; }
-.article img { width:100%; height:180px; object-fit:cover; }
-.article-content { padding:10px; }
-
-.sidebar a { display:block; color:#ccc; margin:8px 0; text-decoration:none; }
-
-.social { text-align:center; margin-top:20px; }
-.social i { margin:10px; font-size:20px; }
-
-footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
-.footer-slogan { color:#aaa; font-size:13px; }
-</style></head><body><div class="header">
-  <div class="logo">
-    <img src="logo.png" alt="RadiantWavesMedia">
+<div class="trending">
+  <h2>Trending</h2>
+  <ul>
+    <li>Global summit updates</li>
+    <li>AI transforming industries</li>
+    <li>Economic outlook</li>
+  </ul>
+  <div class="social">
+    <i class="fab fa-facebook" onclick="window.open('https://facebook.com')"></i>
+    <i class="fab fa-twitter" onclick="window.open('https://twitter.com')"></i>
+    <i class="fab fa-youtube" onclick="window.open('https://youtube.com')"></i>
+    <i class="fab fa-instagram" onclick="window.open('https://instagram.com')"></i>
   </div>
-  <div class="header-slogan">Real-Time Global Intelligence & Breaking News Network</div>
-</div><div class="hero">
-  <video id="bgVideo" autoplay muted loop>
-    <source src="video1.mp4" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
-  <div class="hero-text">Top Stories Around the World</div>
-  <button onclick="toggleSound()" style="position:absolute;top:10px;right:10px;z-index:10;">🔊</button>
-</div><div class="breaking">
-  <span>Breaking: Global markets • Tech revolution • Political updates • Stay informed with RadiantWavesMedia</span>
-</div><nav>
-  <a>Home</a>
-  <a>World</a>
-  <a>Politics</a>
-  <a>Business</a>
-  <a>Technology</a>
-  <a>Science</a>
-  <a>Sport</a>
-  <a>Entertainment</a>
-</nav><div class="container">  <div class="main" id="newsContainer"></div>  <div class="sidebar">
-    <h3>Trending</h3>
-    <a href="#">Global summit updates</a>
-    <a href="#">AI transforming industries</a>
-    <a href="#">Economic outlook</a><div class="social">
-  <i class="fab fa-facebook"></i>
-  <i class="fab fa-x-twitter"></i>
-  <i class="fab fa-youtube"></i>
-  <i class="fab fa-instagram"></i>
 </div>
 
-  </div></div><footer>
-  © 2026 RadiantWavesMedia
-  <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
-</footer><script>
+<div class="news-container" id="news">
+  <h2>Breaking News</h2>
+  <!-- News items will be loaded here -->
+</div>
 
-const API_KEY = "e0f95eae70444428b2564fcce9c954f6";
+<!-- Audio alert for breaking news -->
+<audio id="newsAudio" src="news-alert.mp3"></audio>
 
-// JSON FALLBACK (ALWAYS WORKS)
-const localNews = [
-  {
-    title: "Global Leaders Meet to Address Economic Shifts",
-    description: "World leaders gather to discuss global stability.",
-    urlToImage: "https://source.unsplash.com/800x400/?politics",
-    url: "#"
-  },
-  {
-    title: "AI Revolution Accelerates Across Industries",
-    description: "Technology reshaping global economy.",
-    urlToImage: "https://source.unsplash.com/800x400/?technology",
-    url: "#"
-  },
-  {
-    title: "Climate Developments Raise Global Attention",
-    description: "Environmental challenges gaining urgency.",
-    urlToImage: "https://source.unsplash.com/800x400/?climate",
-    url: "#"
+<footer style="text-align:center; padding:15px; background:#111; color:#fff;">
+  © 2026 RadiantWavesMedia - Connecting You Deeper to the World's Most Important Stories
+</footer>
+
+<script>
+  const API_KEY = 'e0f95eae70444428b2564fcce9c954f6'; // Replace with your real news API key
+  const NEWS_CONTAINER = document.getElementById('news');
+  const audio = document.getElementById('newsAudio');
+
+  async function fetchNews() {
+    try {
+      const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=5&apiKey=${API_KEY}`);
+      const data = await res.json();
+      NEWS_CONTAINER.innerHTML = '<h2>Breaking News</h2>';
+      data.articles.forEach(article => {
+        const newsItem = document.createElement('div');
+        newsItem.classList.add('news-item');
+        newsItem.innerHTML = `
+          <img src="${article.urlToImage || 'https://via.placeholder.com/150'}" alt="News Image">
+          <div>
+            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+            <p>${article.description || ''}</p>
+          </div>
+        `;
+        NEWS_CONTAINER.appendChild(newsItem);
+      });
+
+      // Play sound if there are new articles
+      if(data.articles.length > 0) audio.play();
+
+    } catch (error) {
+      console.error('Error fetching news:', error);
+      NEWS_CONTAINER.innerHTML = '<p>Unable to load news at this time.</p>';
+    }
   }
-];
 
-function displayNews(articles) {
-  const container = document.getElementById("newsContainer");
-  container.innerHTML = "";
+  // Fetch news immediately and refresh every 5 minutes
+  fetchNews();
+  setInterval(fetchNews, 5 * 60 * 1000);
+</script>
 
-  articles.forEach(a => {
-    container.innerHTML += `
-      <div class="article">
-        <img src="${a.urlToImage || 'https://via.placeholder.com/800x400'}">
-        <div class="article-content">
-          <h3>${a.title}</h3>
-          <p>${a.description || ""}</p>
-          <a href="${a.url}" target="_blank">Read more</a>
-        </div>
-      </div>
-    `;
-  });
-}
-
-async function loadNews() {
-  try {
-    const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=6&apiKey=${API_KEY}`);
-    const data = await res.json();
-
-    if (!data.articles) throw "API failed";
-
-    displayNews(data.articles);
-
-  } catch (e) {
-    console.log("Using JSON fallback");
-    displayNews(localNews);
-  }
-}
-
-function toggleSound() {
-  const video = document.getElementById("bgVideo");
-  video.muted = !video.muted;
-}
-
-loadNews();
-
-</script></body>
+</body>
 </html>

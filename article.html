@@ -3,86 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWaves Article</title>
+<title>RadiantWaves News</title>
 
 <style>
-body { font-family: Arial; margin: 0; background: #f5f5f5; }
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+}
 
-.header { text-align:center; background:white; padding:15px; }
-.header a { text-decoration:none; color:black; font-size:24px; font-weight:bold; }
+/* HEADER */
+.header {
+  text-align: center;
+  background: white;
+  padding: 15px;
+}
+.header img {
+  width: 70px;
+}
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
 
-.container { max-width:800px; margin:auto; padding:20px; }
+/* ARTICLE */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
 .article {
-  background:white;
-  padding:20px;
-  border-radius:5px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .article img {
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  margin-bottom:15px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.title { font-size:26px; font-weight:bold; margin-bottom:10px; }
-
-.content { line-height:1.6; color:#333; }
+.article h1 {
+  margin-top: 0;
+}
 
 .back {
-  display:inline-block;
-  margin-top:20px;
-  text-decoration:none;
-  color:#0047AB;
-  font-weight:bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #0047AB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
-  <a href="index.html">← RadiantWaves</a>
+  <img src="images/icon-512.png">
+  <div class="title">RadiantWaves</div>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
+  <a href="index.html" class="back">← Back to Home</a>
+
   <div class="article" id="article"></div>
 </div>
 
-<!-- SCRIPT -->
+<footer>
+  <p>Truth. Insight. Global Perspective.</p>
+  <p>© 2026 RadiantWaves</p>
+</footer>
+
 <script>
-
-// GET ID FROM URL
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-
-// LOAD JSON
 fetch("news.json")
 .then(res => res.json())
 .then(data => {
 
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
   const article = data[id];
 
-  if(!article){
-    document.getElementById("article").innerHTML = "<h2>Article not found</h2>";
-    return;
-  }
+  const container = document.getElementById("article");
 
-  document.getElementById("article").innerHTML = `
+  container.innerHTML = `
+    <h1>${article.title}</h1>
     ${article.image ? `<img src="${article.image}">` : ""}
-    <div class="title">${article.title}</div>
-    <div class="content">${article.content.replace(/\n/g, "<br><br>")}</div>
-    <a href="index.html" class="back">← Back to Home</a>
+    <p>${article.content.replace(/\\n/g, "<br><br>")}</p>
   `;
-
-})
-.catch(()=>{
-  document.getElementById("article").innerHTML = "<h2>Error loading article</h2>";
 });
-
 </script>
 
 </body>

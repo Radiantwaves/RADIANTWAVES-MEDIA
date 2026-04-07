@@ -1,119 +1,162 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWavesMedia</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+<title>RadiantWavesMedia</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
 body { margin:0; font-family:Arial; background:#0b0f1a; color:white; }
 
+/* HEADER */
 .header { background:#111; text-align:center; padding:20px; }
 .logo img { height:50px; }
-.header-slogan { color:#aaa; font-size:14px; }
+.header-slogan { color:#aaa; }
 
+/* HERO */
 .hero { position:relative; height:260px; overflow:hidden; }
 .hero video { width:100%; height:100%; object-fit:cover; }
 .overlay { position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.5); }
-.hero-text { position:absolute; bottom:20px; left:20px; font-size:24px; font-weight:bold; }
+.hero-text { position:absolute; bottom:20px; left:20px; font-size:24px; }
 
-.breaking { background:red; padding:10px; overflow:hidden; font-weight:bold; }
+/* BREAKING */
+.breaking { background:red; padding:10px; font-weight:bold; }
 
+/* NAV */
 nav { background:#000; text-align:center; padding:10px; }
-nav a { color:white; margin:0 10px; text-decoration:none; }
+nav a { color:white; margin:0 10px; cursor:pointer; }
 nav a:hover { color:#00bfff; }
 
+/* LAYOUT */
 .container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
 .main { flex:3; display:grid; grid-template-columns:1fr 1fr; gap:15px; }
 .sidebar { flex:1; padding-left:15px; }
 
+/* ARTICLES */
 .article { background:#111; border-radius:6px; overflow:hidden; transition:0.3s; }
 .article:hover { transform:scale(1.02); box-shadow:0 0 10px #00bfff; }
 .article img { width:100%; height:180px; object-fit:cover; }
 .article-content { padding:10px; }
-.article h2 { margin:0 0 10px; }
-.article h3 { margin:0 0 10px; }
-.article p { color:#ccc; }
 
 .featured { grid-column:1 / -1; }
 .featured img { height:300px; }
 
-.readmore { color:#00bfff; text-decoration:none; font-weight:bold; }
-.readmore:hover { text-decoration:underline; }
+/* SIDEBAR */
+.sidebar a { display:block; color:#ccc; margin:8px 0; }
 
-.sidebar a { display:block; color:#ccc; margin:8px 0; text-decoration:none; }
-.sidebar a:hover { color:white; }
-
+/* SOCIAL */
 .social { text-align:center; margin-top:20px; }
-.social i { font-size:20px; margin:10px; cursor:pointer; }
-.social i:hover { color:#00bfff; }
+.social i { margin:10px; font-size:20px; }
 
-footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
-.footer-slogan { color:#aaa; font-size:13px; }
+/* FOOTER */
+footer { background:#000; text-align:center; padding:20px; }
+.footer-slogan { color:#aaa; }
 
+/* MOBILE */
 @media(max-width:768px){
   .main { grid-template-columns:1fr; }
 }
-</style></head><body><div class="header">
+</style>
+</head>
+
+<body>
+
+<div class="header">
   <div class="logo"><img src="logo.png"></div>
   <div class="header-slogan">Real-Time Global Intelligence & Breaking News Network</div>
-</div><div class="hero">
+</div>
+
+<div class="hero">
   <video id="bgVideo" autoplay muted loop>
     <source src="video1.mp4" type="video/mp4">
   </video>
   <div class="overlay"></div>
   <div class="hero-text">Top Stories Around the World</div>
-</div><div class="breaking" id="breakingText"></div><nav>
-  <a onclick="loadCategory('all')">Home</a>
-  <a onclick="loadCategory('world')">World</a>
-  <a onclick="loadCategory('technology')">Technology</a>
-</nav><div class="container">
-  <div class="main" id="newsContainer"></div>  <div class="sidebar">
-    <h3>Trending</h3>
-    <a href="#">Global summit updates</a>
-    <a href="#">AI transforming industries</a><div class="social">
-  <i class="fab fa-facebook"></i>
-  <i class="fab fa-x-twitter"></i>
-  <i class="fab fa-youtube"></i>
+  <button onclick="toggleSound()" style="position:absolute;top:10px;right:10px;">🔊</button>
 </div>
 
+<div class="breaking" id="breakingText"></div>
+
+<nav>
+  <a onclick="loadCategory('all')">Home</a>
+  <a onclick="loadCategory('world')">World</a>
+  <a onclick="loadCategory('tech')">Tech</a>
+</nav>
+
+<div class="container">
+
+  <div class="main" id="newsContainer"></div>
+
+  <div class="sidebar">
+    <h3>Trending</h3>
+    <a href="#">Global summit updates</a>
+    <a href="#">AI transforming industries</a>
+
+    <div class="social">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-x-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
   </div>
-</div><footer>
+
+</div>
+
+<footer>
   © 2026 RadiantWavesMedia
   <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
-</footer><script>
+</footer>
 
-const newsDB = {
+<script>
+
+// 🔊 SOUND
+function toggleSound(){
+  const v=document.getElementById("bgVideo");
+  v.muted=!v.muted;
+}
+
+// 📰 NEWS DATABASE
+const newsDB={
   all:[
-    {title:"Global Leaders Meet",description:"Economic talks continue.",urlToImage:"https://source.unsplash.com/800x400/?economy"},
-    {title:"AI Revolution",description:"AI impacts industries.",urlToImage:"https://source.unsplash.com/800x400/?ai"}
+    {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://source.unsplash.com/800x400/?economy"},
+    {title:"AI Revolution",desc:"AI changing industries",img:"https://source.unsplash.com/800x400/?ai"},
+    {title:"Climate Alert",desc:"Urgent global warning",img:"https://source.unsplash.com/800x400/?climate"}
   ],
   world:[
-    {title:"World News Update",description:"Global events unfolding.",urlToImage:"https://source.unsplash.com/800x400/?world"}
+    {title:"World Summit",desc:"Global cooperation rising",img:"https://source.unsplash.com/800x400/?world"}
   ],
-  technology:[
-    {title:"Tech Innovation",description:"New breakthroughs emerging.",urlToImage:"https://source.unsplash.com/800x400/?technology"}
+  tech:[
+    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://source.unsplash.com/800x400/?technology"}
   ]
 };
 
+// 🧠 DISPLAY
 function displayNews(data){
   const c=document.getElementById("newsContainer");
   c.innerHTML="";
   data.forEach((a,i)=>{
     c.innerHTML+= i===0?
-    `<div class="article featured"><img src="${a.urlToImage}"><div class="article-content"><h2>${a.title}</h2><p>${a.description}</p></div></div>`:
-    `<div class="article"><img src="${a.urlToImage}"><div class="article-content"><h3>${a.title}</h3><p>${a.description}</p></div></div>`;
+    `<div class="article featured"><img src="${a.img}"><div class="article-content"><h2>${a.title}</h2><p>${a.desc}</p></div></div>`:
+    `<div class="article"><img src="${a.img}"><div class="article-content"><h3>${a.title}</h3><p>${a.desc}</p></div></div>`;
   });
 }
 
+// 🔁 CATEGORY
 function loadCategory(cat){displayNews(newsDB[cat]);}
 
-displayNews(newsDB.all);
-
-// breaking
+// 🔴 BREAKING
 const breaking=["Markets moving","AI booming","Global tensions","Sports highlights"];
-let bi=0;
+let i=0;
 setInterval(()=>{
- document.getElementById("breakingText").textContent=breaking[bi];
- bi=(bi+1)%breaking.length;
+ document.getElementById("breakingText").textContent=breaking[i];
+ i=(i+1)%breaking.length;
 },3000);
 
-</script></body>
+// 🚀 INIT
+displayNews(newsDB.all);
+
+</script>
+
+</body>
 </html>

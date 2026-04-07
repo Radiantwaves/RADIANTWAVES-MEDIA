@@ -51,7 +51,7 @@ footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
   <div class="hero-text">Top Stories Around the World</div>
   <button onclick="toggleSound()" style="position:absolute;top:10px;right:10px;z-index:10;">🔊</button>
 </div><div class="breaking">
-  <span>Breaking: Global markets • Tech revolution • Political updates • Stay informed with RadiantWavesMedia</span>
+  <span id="breakingText"></span>
 </div><nav>
   <a onclick="loadCategory('all')">Home</a>
   <a onclick="loadCategory('world')">World</a>
@@ -152,6 +152,33 @@ function displayNews(data) {
 function loadCategory(cat) {
   displayNews(newsDB[cat]);
 }
+
+// 📰 BREAKING NEWS (DYNAMIC)
+const breakingNews = [
+  "Global markets react to economic changes",
+  "AI breakthroughs reshape industries",
+  "Political tensions rise worldwide",
+  "Major sports events trending globally"
+];
+
+let bIndex = 0;
+function rotateBreaking() {
+  document.getElementById("breakingText").textContent = breakingNews[bIndex];
+  bIndex = (bIndex + 1) % breakingNews.length;
+}
+setInterval(rotateBreaking, 3000);
+rotateBreaking();
+
+// 🎥 VIDEO ROTATION
+const videos = ["video1.mp4","video2.mp4","video3.mp4"];
+let vIndex = 0;
+function rotateVideo(){
+  const video = document.getElementById("bgVideo");
+  vIndex = (vIndex + 1) % videos.length;
+  video.src = videos[vIndex];
+  video.play();
+}
+setInterval(rotateVideo, 10000);
 
 // 🚀 DEFAULT LOAD
 displayNews(newsDB.all);

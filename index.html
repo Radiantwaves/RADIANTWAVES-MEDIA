@@ -22,7 +22,9 @@ nav { background:#000; text-align:center; padding:10px; }
 nav a { color:white; margin:0 10px; text-decoration:none; }
 
 .container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
-.main { flex:3; }
+.main { flex:3; display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.featured { grid-column:1 / -1; }
+.featured img { height:300px; }
 .sidebar { flex:1; padding-left:15px; }
 
 .article { background:#111; margin-bottom:15px; border-radius:6px; overflow:hidden; }
@@ -51,14 +53,14 @@ footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
 </div><div class="breaking">
   <span>Breaking: Global markets • Tech revolution • Political updates • Stay informed with RadiantWavesMedia</span>
 </div><nav>
-  <a>Home</a>
-  <a>World</a>
-  <a>Politics</a>
-  <a>Business</a>
-  <a>Technology</a>
-  <a>Science</a>
-  <a>Sport</a>
-  <a>Entertainment</a>
+  <a onclick="loadCategory('all')">Home</a>
+  <a onclick="loadCategory('world')">World</a>
+  <a onclick="loadCategory('politics')">Politics</a>
+  <a onclick="loadCategory('business')">Business</a>
+  <a onclick="loadCategory('technology')">Technology</a>
+  <a onclick="loadCategory('science')">Science</a>
+  <a onclick="loadCategory('sport')">Sport</a>
+  <a onclick="loadCategory('entertainment')">Entertainment</a>
 </nav><div class="container">  <div class="main" id="newsContainer"></div>  <div class="sidebar">
     <h3>Trending</h3>
     <a href="#">Global summit updates</a>
@@ -75,69 +77,84 @@ footer { background:#000; text-align:center; padding:20px; margin-top:20px; }
   <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
 </footer><script>
 
-const API_KEY = "YOUR_API_KEY_HERE";
+function toggleSound() {
+  const video = document.getElementById("bgVideo");
+  video.muted = !video.muted;
+}
 
-// JSON FALLBACK (ALWAYS WORKS)
-const localNews = [
-  {
-    title: "Global Leaders Meet to Address Economic Shifts",
-    description: "World leaders gather to discuss global stability.",
-    urlToImage: "https://source.unsplash.com/800x400/?politics",
-    url: "#"
-  },
-  {
-    title: "AI Revolution Accelerates Across Industries",
-    description: "Technology reshaping global economy.",
-    urlToImage: "https://source.unsplash.com/800x400/?technology",
-    url: "#"
-  },
-  {
-    title: "Climate Developments Raise Global Attention",
-    description: "Environmental challenges gaining urgency.",
-    urlToImage: "https://source.unsplash.com/800x400/?climate",
-    url: "#"
-  }
-];
+// 🟢 CATEGORY-BASED JSON NEWS
+const newsDB = {
+  all: [
+    { title: "Global Leaders Meet Over Economic Stability", description: "World leaders gather to address global financial risks.", urlToImage: "https://source.unsplash.com/800x400/?economy" },
+    { title: "AI Reshaping Global Industries", description: "Artificial intelligence is transforming major sectors.", urlToImage: "https://source.unsplash.com/800x400/?ai" }
+  ],
+  world: [
+    { title: "International Summit Held", description: "Nations discuss global peace and cooperation.", urlToImage: "https://source.unsplash.com/800x400/?world" }
+  ],
+  politics: [
+    { title: "Election Updates Worldwide", description: "Political changes impact global relations.", urlToImage: "https://source.unsplash.com/800x400/?politics" }
+  ],
+  business: [
+    { title: "Markets Show Recovery Signs", description: "Stocks rise amid economic optimism.", urlToImage: "https://source.unsplash.com/800x400/?stocks" }
+  ],
+  technology: [
+    { title: "Tech Innovation Accelerates", description: "New breakthroughs in AI and robotics.", urlToImage: "https://source.unsplash.com/800x400/?technology" }
+  ],
+  science: [
+    { title: "Scientific Discoveries Expand", description: "New research reshaping knowledge.", urlToImage: "https://source.unsplash.com/800x400/?science" }
+  ],
+  sport: [
+    { title: "Global Sports Highlights", description: "Major events capture worldwide attention.", urlToImage: "https://source.unsplash.com/800x400/?sports" }
+  ],
+  entertainment: [
+    { title: "Entertainment Industry Trends", description: "Streaming and media evolving fast.", urlToImage: "https://source.unsplash.com/800x400/?entertainment" }
+  ]
+};
 
-function displayNews(articles) {
+function displayNews(data) {
   const container = document.getElementById("newsContainer");
   container.innerHTML = "";
 
-  articles.forEach(a => {
-    container.innerHTML += `
-      <div class="article">
-        <img src="${a.urlToImage || 'https://via.placeholder.com/800x400'}">
+  data.forEach((a, index) => {
+    if(index === 0){
+      container.innerHTML += `
+        <div class="article featured">
+          <img src="${a.urlToImage}">
+          <div class="article-content">
+            <h2>${a.title}</h2>
+            <p>${a.description}</p>
+          </div>
+        </div>
+      `;
+    } else {
+      container.innerHTML += `
+        <div class="article">
+          <img src="${a.urlToImage}">
+          <div class="article-content">
+            <h3>${a.title}</h3>
+            <p>${a.description}</p>
+          </div>
+        </div>
+      `;
+    }
+  });
+}">
         <div class="article-content">
           <h3>${a.title}</h3>
-          <p>${a.description || ""}</p>
-          <a href="${a.url}" target="_blank">Read more</a>
+          <p>${a.description}</p>
         </div>
       </div>
     `;
   });
 }
 
-async function loadNews() {
-  try {
-    const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=6&apiKey=${API_KEY}`);
-    const data = await res.json();
-
-    if (!data.articles) throw "API failed";
-
-    displayNews(data.articles);
-
-  } catch (e) {
-    console.log("Using JSON fallback");
-    displayNews(localNews);
-  }
+// 🔁 CATEGORY SWITCH
+function loadCategory(cat) {
+  displayNews(newsDB[cat]);
 }
 
-function toggleSound() {
-  const video = document.getElementById("bgVideo");
-  video.muted = !video.muted;
-}
-
-loadNews();
+// 🚀 DEFAULT LOAD
+displayNews(newsDB.all);
 
 </script></body>
 </html>

@@ -113,114 +113,131 @@ footer { background:#000; text-align:center; padding:20px; }
   <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
 </footer>
 
-<script>
+<<script>
 
-// 🔑 PUT YOUR GNEWS API KEY HERE
-const API_KEY = "e0f95eae70444428b2564fcce9c954f6";
+// 📰 FULL NEWS DATABASE (LIKE REAL SITE)
+const newsDB = {
 
-// 🟢 BACKUP JSON (NEVER FAILS)
-const fallbackNews = [
-  {
-    title:"Global Leaders Meet",
-    description:"Economic talks ongoing",
-    image:"https://picsum.photos/800/400?1",
-    url:"#"
-  },
-  {
-    title:"AI Revolution",
-    description:"AI changing industries",
-    image:"https://picsum.photos/800/400?2",
-    url:"#"
-  }
-];
+  all: [
+    {
+      title: "Global Leaders Meet at Economic Summit",
+      desc: "World leaders gather to discuss global financial recovery.",
+      img: "https://picsum.photos/800/400?1"
+    },
+    {
+      title: "AI Revolution Accelerates Worldwide",
+      desc: "Artificial intelligence reshaping industries rapidly.",
+      img: "https://picsum.photos/800/400?2"
+    },
+    {
+      title: "Climate Change Warnings Intensify",
+      desc: "Experts warn urgent action is needed globally.",
+      img: "https://picsum.photos/800/400?3"
+    },
+    {
+      title: "Global Markets Show Signs of Growth",
+      desc: "Investors respond positively to economic indicators.",
+      img: "https://picsum.photos/800/400?4"
+    },
+    {
+      title: "Major Sports Events Capture Attention",
+      desc: "Fans follow global tournaments closely.",
+      img: "https://picsum.photos/800/400?5"
+    },
+    {
+      title: "Technology Giants Release New Innovations",
+      desc: "Breakthroughs in AI and robotics dominate headlines.",
+      img: "https://picsum.photos/800/400?6"
+    }
+  ],
+
+  world: [
+    {
+      title: "International Peace Talks Begin",
+      desc: "Diplomatic efforts aim to resolve global conflicts.",
+      img: "https://picsum.photos/800/400?7"
+    },
+    {
+      title: "Global Migration Trends Shift",
+      desc: "New patterns emerging across continents.",
+      img: "https://picsum.photos/800/400?8"
+    }
+  ],
+
+  tech: [
+    {
+      title: "New AI Model Breakthrough",
+      desc: "Next-generation AI shows human-like reasoning.",
+      img: "https://picsum.photos/800/400?9"
+    },
+    {
+      title: "Cybersecurity Threats Increase",
+      desc: "Experts warn of rising global cyber attacks.",
+      img: "https://picsum.photos/800/400?10"
+    }
+  ]
+
+};
+
 
 // 🧠 DISPLAY FUNCTION
-function displayNews(articles){
-  const c = document.getElementById("newsContainer");
-  c.innerHTML = "";
+function displayNews(data){
+  const container = document.getElementById("newsContainer");
+  container.innerHTML = "";
 
-  articles.forEach((a,i)=>{
-    const img = a.image || a.urlToImage || "https://picsum.photos/800/400";
-
-    c.innerHTML += i===0 ?
+  data.forEach((a,i)=>{
+    container.innerHTML += i === 0 ?
     `<div class="article featured">
-      <img src="${img}">
-      <div class="article-content">
-        <h2>${a.title}</h2>
-        <p>${a.description || ""}</p>
-        <a href="${a.url}" target="_blank">Read more</a>
-      </div>
-    </div>`
+        <img src="${a.img}">
+        <div class="article-content">
+          <h2>${a.title}</h2>
+          <p>${a.desc}</p>
+        </div>
+     </div>`
     :
     `<div class="article">
-      <img src="${img}">
-      <div class="article-content">
-        <h3>${a.title}</h3>
-        <p>${a.description || ""}</p>
-        <a href="${a.url}" target="_blank">Read more</a>
-      </div>
-    </div>`;
+        <img src="${a.img}">
+        <div class="article-content">
+          <h3>${a.title}</h3>
+          <p>${a.desc}</p>
+        </div>
+     </div>`;
   });
-}
-
-
-// 🌍 LOAD LIVE NEWS
-async function loadNews(category="general"){
-  try{
-    const res = await fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&max=6&apikey=${API_KEY}`);
-    const data = await res.json();
-
-    if(!data.articles || data.articles.length === 0){
-      throw "No news";
-    }
-
-    displayNews(data.articles);
-
-  }catch(err){
-    console.log("Using fallback news");
-    displayNews(fallbackNews);
-  }
 }
 
 
 // 🔁 CATEGORY SWITCH
 function loadCategory(cat){
-  let map = {
-    all:"general",
-    world:"world",
-    tech:"technology"
-  };
-  loadNews(map[cat]);
+  displayNews(newsDB[cat]);
 }
 
 
-// 🔴 BREAKING NEWS
-const breaking = [
-  "Global markets moving",
-  "AI transforming industries",
-  "Political tensions rising",
-  "Major sports updates"
+// 🔴 BREAKING NEWS (MORE REAL)
+const breakingNews = [
+  "Global summit begins amid economic concerns",
+  "AI continues to dominate global headlines",
+  "Climate crisis discussions intensify worldwide",
+  "Markets react to latest financial reports",
+  "Technology sector sees rapid innovation growth"
 ];
 
-let i = 0;
+let b = 0;
 setInterval(()=>{
-  document.getElementById("breakingText").textContent = breaking[i];
-  i = (i+1)%breaking.length;
-},3000);
+  document.getElementById("breakingText").textContent = breakingNews[b];
+  b = (b+1) % breakingNews.length;
+}, 3000);
 
 
 // 🔊 VIDEO SOUND
 function toggleSound(){
-  const v = document.getElementById("bgVideo");
-  v.muted = !v.muted;
+  const video = document.getElementById("bgVideo");
+  video.muted = !video.muted;
 }
 
 
 // 🚀 START
-loadNews();
-
+displayNews(newsDB.all);
 
 </script>
-
 </body>
 </html>

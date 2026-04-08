@@ -162,11 +162,13 @@ function displayNews(data){
   container.innerHTML = "";
 
   data.forEach((a,i)=>{
+
     container.innerHTML += i===0 ?
     `<div class="article featured">
         <img src="${a.img}">
         <div class="article-content">
           <span style="color:red;font-weight:bold;">● LIVE</span>
+          <span style="color:#aaa;margin-left:10px;">${a.time}</span>
           <h2>TOP STORY: ${a.title}</h2>
           <p>${a.desc}</p>
         </div>
@@ -175,6 +177,7 @@ function displayNews(data){
     `<div class="article">
         <img src="${a.img}">
         <div class="article-content">
+          <span style="color:#aaa;font-size:12px;">${a.time}</span>
           <h3>${a.title}</h3>
           <p>${a.desc}</p>
         </div>

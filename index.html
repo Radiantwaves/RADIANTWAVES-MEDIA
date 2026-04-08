@@ -119,23 +119,48 @@ footer { background:#000; text-align:center; padding:20px; }
 
 <script>
 
-// 📰 NEWS DATABASE
 const newsDB = {
+
   all: [
     {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://picsum.photos/800/400?1"},
     {title:"AI Revolution",desc:"AI reshaping industries",img:"https://picsum.photos/800/400?2"},
     {title:"Climate Alert",desc:"Urgent global warning",img:"https://picsum.photos/800/400?3"},
     {title:"Markets Rising",desc:"Stocks gaining momentum",img:"https://picsum.photos/800/400?4"}
   ],
+
   world: [
-    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5"}
+    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5"},
+    {title:"International Talks Continue",desc:"Leaders meet globally",img:"https://picsum.photos/800/400?6"}
   ],
+
   tech: [
-    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?6"}
+    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?7"},
+    {title:"AI Expansion",desc:"New tools emerging",img:"https://picsum.photos/800/400?8"}
+  ],
+
+  business: [
+    {title:"Business Growth Rising",desc:"Markets improving globally",img:"https://picsum.photos/800/400?9"},
+    {title:"Startups Expanding",desc:"Entrepreneurs gaining traction",img:"https://picsum.photos/800/400?10"}
+  ],
+
+  politics: [
+    {title:"Political Debate Intensifies",desc:"Leaders clash on policies",img:"https://picsum.photos/800/400?11"},
+    {title:"Election Campaigns Begin",desc:"Nations prepare for voting",img:"https://picsum.photos/800/400?12"}
+  ],
+
+  health: [
+    {title:"Health Advances Emerging",desc:"Medical research progresses",img:"https://picsum.photos/800/400?13"},
+    {title:"Global Health Awareness Rises",desc:"Focus on wellbeing grows",img:"https://picsum.photos/800/400?14"}
+  ],
+
+  entertainment: [
+    {title:"Entertainment Industry Booms",desc:"Streaming dominates globally",img:"https://picsum.photos/800/400?15"},
+    {title:"Celebrity News Trending",desc:"Fans follow latest updates",img:"https://picsum.photos/800/400?16"}
   ]
+
 };
 
-
+</script>
 // 🧠 DISPLAY FUNCTION
 function displayNews(data){
   const container = document.getElementById("newsContainer");

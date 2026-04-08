@@ -119,44 +119,29 @@ footer { background:#000; text-align:center; padding:20px; }
 
 <script>
 
+// 📰 NEWS DATABASE
 const newsDB = {
-
   all: [
-    {title:"Global Leaders Meet at Economic Summit",desc:"World leaders discuss global recovery.",img:"https://picsum.photos/800/400?1"},
-    {title:"AI Revolution Expands Worldwide",desc:"AI reshaping industries rapidly.",img:"https://picsum.photos/800/400?2"},
-    {title:"Climate Crisis Urges Immediate Action",desc:"Experts warn urgent response needed.",img:"https://picsum.photos/800/400?3"},
-    {title:"Markets Show Strong Recovery",desc:"Stocks surge globally.",img:"https://picsum.photos/800/400?4"},
-    {title:"Major Sports Events Trending",desc:"Fans follow global tournaments.",img:"https://picsum.photos/800/400?5"},
-    {title:"Tech Giants Release New Devices",desc:"Innovation dominates headlines.",img:"https://picsum.photos/800/400?6"},
-    {title:"Space Exploration Advances",desc:"New missions announced.",img:"https://picsum.photos/800/400?7"},
-    {title:"Global Energy Transition Accelerates",desc:"Countries shift to renewables.",img:"https://picsum.photos/800/400?8"}
+    {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://picsum.photos/800/400?1"},
+    {title:"AI Revolution",desc:"AI reshaping industries",img:"https://picsum.photos/800/400?2"},
+    {title:"Climate Alert",desc:"Urgent global warning",img:"https://picsum.photos/800/400?3"},
+    {title:"Markets Rising",desc:"Stocks gaining momentum",img:"https://picsum.photos/800/400?4"}
   ],
-
   world: [
-    {title:"International Peace Talks Begin",desc:"Diplomatic efforts continue.",img:"https://picsum.photos/800/400?9"},
-    {title:"Global Migration Trends Shift",desc:"New patterns emerging.",img:"https://picsum.photos/800/400?10"},
-    {title:"Economic Alliances Strengthen",desc:"Nations collaborate more closely.",img:"https://picsum.photos/800/400?11"}
+    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5"}
   ],
-
   tech: [
-    {title:"AI Breakthrough Announced",desc:"New model changes the game.",img:"https://picsum.photos/800/400?12"},
-    {title:"Cybersecurity Threats Rising",desc:"Experts warn globally.",img:"https://picsum.photos/800/400?13"},
-    {title:"Robotics Industry Expands",desc:"Automation increasing rapidly.",img:"https://picsum.photos/800/400?14"}
+    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?6"}
   ]
-
 };
-
-</script>
 
 
 // 🧠 DISPLAY FUNCTION
-function displayNews(data){
 function displayNews(data){
   const container = document.getElementById("newsContainer");
   container.innerHTML = "";
 
   data.forEach((a,i)=>{
-
     container.innerHTML += i===0 ?
     `<div class="article featured">
         <img src="${a.img}">
@@ -178,19 +163,18 @@ function displayNews(data){
 }
 
 
-// 🔁 CATEGORY SWITCH
+// 🔁 CATEGORY
 function loadCategory(cat){
   displayNews(newsDB[cat]);
 }
 
 
-// 🔴 BREAKING NEWS (MORE REAL)
+// 🔴 BREAKING NEWS
 const breakingNews = [
-  "Global summit begins amid economic concerns",
-  "AI continues to dominate global headlines",
-  "Climate crisis discussions intensify worldwide",
-  "Markets react to latest financial reports",
-  "Technology sector sees rapid innovation growth"
+  "Global summit begins",
+  "AI dominates headlines",
+  "Climate discussions rise",
+  "Markets reacting"
 ];
 
 let b = 0;

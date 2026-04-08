@@ -82,10 +82,14 @@ footer { background:#000; text-align:center; padding:20px; }
 <div class="breaking" id="breakingText"></div>
 
 <!-- NAV -->
-<nav>
+<<nav>
   <a onclick="loadCategory('all')">Home</a>
   <a onclick="loadCategory('world')">World</a>
   <a onclick="loadCategory('tech')">Tech</a>
+  <a>Business</a>
+  <a>Politics</a>
+  <a>Health</a>
+  <a>Entertainment</a>
 </nav>
 
 <!-- CONTENT -->
@@ -147,15 +151,18 @@ const newsDB = {
 
 // 🧠 DISPLAY FUNCTION
 function displayNews(data){
+function displayNews(data){
   const container = document.getElementById("newsContainer");
   container.innerHTML = "";
 
   data.forEach((a,i)=>{
-    container.innerHTML += i === 0 ?
+
+    container.innerHTML += i===0 ?
     `<div class="article featured">
         <img src="${a.img}">
         <div class="article-content">
-          <h2>${a.title}</h2>
+          <span style="color:red;font-weight:bold;">● LIVE</span>
+          <h2>TOP STORY: ${a.title}</h2>
           <p>${a.desc}</p>
         </div>
      </div>`

@@ -116,49 +116,45 @@ footer { background:#000; text-align:center; padding:20px; }
   © 2026 RadiantWavesMedia
   <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
 </footer>
-
 <script>
 
 const newsDB = {
 
   all: [
-    {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://picsum.photos/800/400?1"},
-    {title:"AI Revolution",desc:"AI reshaping industries",img:"https://picsum.photos/800/400?2"},
-    {title:"Climate Alert",desc:"Urgent global warning",img:"https://picsum.photos/800/400?3"},
-    {title:"Markets Rising",desc:"Stocks gaining momentum",img:"https://picsum.photos/800/400?4"}
+    {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://picsum.photos/800/400?1",time:"5 min ago"},
+    {title:"AI Revolution",desc:"AI reshaping industries",img:"https://picsum.photos/800/400?2",time:"12 min ago"},
+    {title:"Climate Alert",desc:"Urgent global warning",img:"https://picsum.photos/800/400?3",time:"30 min ago"},
+    {title:"Markets Rising",desc:"Stocks gaining momentum",img:"https://picsum.photos/800/400?4",time:"1 hour ago"}
   ],
 
   world: [
-    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5"},
-    {title:"International Talks Continue",desc:"Leaders meet globally",img:"https://picsum.photos/800/400?6"}
+    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5",time:"10 min ago"},
+    {title:"International Talks Continue",desc:"Leaders meet globally",img:"https://picsum.photos/800/400?6",time:"25 min ago"}
   ],
 
   tech: [
-    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?7"},
-    {title:"AI Expansion",desc:"New tools emerging",img:"https://picsum.photos/800/400?8"}
+    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?7",time:"8 min ago"},
+    {title:"AI Expansion",desc:"New tools emerging",img:"https://picsum.photos/800/400?8",time:"40 min ago"}
   ],
 
   business: [
-    {title:"Business Growth Rising",desc:"Markets improving globally",img:"https://picsum.photos/800/400?9"},
-    {title:"Startups Expanding",desc:"Entrepreneurs gaining traction",img:"https://picsum.photos/800/400?10"}
+    {title:"Business Growth Rising",desc:"Markets improving globally",img:"https://picsum.photos/800/400?9",time:"15 min ago"}
   ],
 
   politics: [
-    {title:"Political Debate Intensifies",desc:"Leaders clash on policies",img:"https://picsum.photos/800/400?11"},
-    {title:"Election Campaigns Begin",desc:"Nations prepare for voting",img:"https://picsum.photos/800/400?12"}
+    {title:"Political Debate Intensifies",desc:"Leaders clash on policies",img:"https://picsum.photos/800/400?11",time:"20 min ago"}
   ],
 
   health: [
-    {title:"Health Advances Emerging",desc:"Medical research progresses",img:"https://picsum.photos/800/400?13"},
-    {title:"Global Health Awareness Rises",desc:"Focus on wellbeing grows",img:"https://picsum.photos/800/400?14"}
+    {title:"Health Advances Emerging",desc:"Medical research progresses",img:"https://picsum.photos/800/400?13",time:"35 min ago"}
   ],
 
   entertainment: [
-    {title:"Entertainment Industry Booms",desc:"Streaming dominates globally",img:"https://picsum.photos/800/400?15"},
-    {title:"Celebrity News Trending",desc:"Fans follow latest updates",img:"https://picsum.photos/800/400?16"}
+    {title:"Entertainment Industry Booms",desc:"Streaming dominates globally",img:"https://picsum.photos/800/400?15",time:"50 min ago"}
   ]
 
 };
+
 
 // 🧠 DISPLAY FUNCTION
 function displayNews(data){

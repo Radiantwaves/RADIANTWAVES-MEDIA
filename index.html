@@ -192,11 +192,11 @@ font-size:13px;
 <nav>
 
 <button onclick="filterNews('all')">Home</button>
-<button onclick="filterNews('Naija Pulse')">Naija Pulse</button>
 <button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Business')">Business</button>
 <button onclick="filterNews('Technology')">Technology</button>
+<button onclick="filterNews('Health')">Health</button>
 <button onclick="filterNews('Sports')">Sports</button>
-<button onclick="filterNews('Election')">Election Watch</button>
 
 <div class="search">
 <input id="search" placeholder="Search news..." onkeyup="searchNews()">
@@ -246,18 +246,20 @@ div class="social">
 /* HEADLINES */
 const headlines=[
 
-"Peter Obi Calls for Electoral Reform in Nigeria",
-"El-Rufai Speaks on Future of Nigerian Politics",
-"Sunday Igboho Calls for Unity in Southwest Nigeria",
-"Tinubu Economic Reform Debate Continues",
-"Global Leaders Monitor Middle East Tensions",
-"Artificial Intelligence Investment Expands Worldwide",
-"Cybersecurity Experts Warn of Rising Digital Threats",
-"European Football Clubs Prepare for Major Tournament",
-"US Election Campaign Season Intensifies",
-"UK Political Parties Prepare for Future Election"
+
+"Global Economy Shows Signs of Recovery Amid Market Shifts",
+"Breaking: Political Tensions Rise Across Key Regions",
+"Technology Giants Race to Lead AI Innovation",
+"Climate Change Concerns Intensify Worldwide",
+"International Leaders Meet for Emergency Summit",
+"Stock Markets React to New Economic Policies",
+"Major Sporting Events Capture Global Attention",
+"Cybersecurity Threats Raise Global Alarm",
+"Healthcare Systems Face New Challenges Worldwide",
+"Energy Transition Becomes Global Priority"
 
 ]
+
 
 function getCategory(title){
 
@@ -268,7 +270,11 @@ return "Naija Pulse"
 
 if(t.includes("election"))
 return "Election"
+if(t.includes("economy")||t.includes("market"))
+return "Business"
 
+if(t.includes("health"))
+return "Health"
 if(t.includes("ai")||t.includes("cyber")||t.includes("technology"))
 return "Technology"
 
@@ -341,8 +347,12 @@ let q=document.getElementById("search").value.toLowerCase()
 render(news.filter(n=>n.title.toLowerCase().includes(q)))
 }
 
-document.getElementById("breaking").innerText=headlines.join("  •  ")
-
+let i=0;
+setInterval(()=>{
+  document.getElementById("breaking").innerText = headlines[i];
+  i = (i+1) % headlines.length;
+},3000);
+ 
 let trending=document.getElementById("trending")
 headlines.slice(0,6).forEach(h=>{
 trending.innerHTML+=`<li>${h}</li>`

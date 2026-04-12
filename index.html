@@ -17,7 +17,14 @@ color:white;
 }
 
 /* HEADER */
-header{
+ </header>
+  <audio id="bgAudio" autoplay loop>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">
+🔊
+</button>{
 background:#111;
 padding:15px;
 display:flex;
@@ -57,13 +64,7 @@ padding:6px;
 border:none;
 border-radius:4px;
 }
-<audio id="bgAudio" autoplay loop>
-  <source src="audio.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">
-🔊
-</button>
+  
 /* BREAKING */
 .breaking{
 background:red;

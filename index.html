@@ -17,10 +17,11 @@ color:white;
 }
 
 /* HEADER */
- </header>
-  <audio id="bgAudio" autoplay loop>
-  <source src="audio.mp3" type="audio/mpeg">
-</audio>
+<div class="video-bg">
+  <video autoplay muted loop id="bgVideo">
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+</div>
 
 <button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">
 🔊
@@ -154,14 +155,17 @@ margin-top:20px;
 text-align:center;
 }
 
-.social i{
-font-size:20px;
+.social a{
+display:inline-block;
 margin:10px;
-cursor:pointer;
+color:white;
+font-size:22px;
+transition:0.3s;
 }
 
-.social i:hover{
+.social a:hover{
 color:#00bfff;
+transform:scale(1.2);
 }
 
 /* FOOTER */
@@ -234,7 +238,6 @@ div class="social">
   </a>
 </div>
 
-</div>
 
 <footer>
   © 2026 RadiantWavesMedia

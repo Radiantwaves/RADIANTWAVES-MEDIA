@@ -1,251 +1,328 @@
+
+Omotara How
+Sun 8 Mar, 01:10
+to me
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radiant Waves News</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; font-family:'Inter', sans-serif; background:#0b0f1a; color:white; }
 
-/* HEADER */
-.header { background:#111; text-align:center; padding:15px; }
-.logo img { height:50px; }
-.header-slogan { color:#aaa; font-size:14px; }
-
-/* HERO */
-.hero { position:relative; height:250px; overflow:hidden; }
-.hero video { width:100%; height:100%; object-fit:cover; }
-.overlay { position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.5); }
-.hero-text { position:absolute; bottom:20px; left:20px; font-size:22px; }
-
-/* BREAKING */
-.breaking { background:red; padding:10px; font-weight:bold; }
-
-/* NAV */
-nav {
-  background:#000;
-  text-align:center;
-  padding:12px;
-  border-bottom:2px solid red;
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
 }
 
-nav a {
-  color:white;
-  margin:0 12px;
-  font-weight:600;
-  font-size:14px;
-  letter-spacing:0.5px;
+header{
+background:#111;
+color:white;
+padding:15px;
 }
 
-/* LAYOUT */
-.container { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; padding:15px; }
-.main { flex:3; display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.sidebar { flex:1; padding-left:15px; }
-
-/* ARTICLES */
-.article { background:#111; border-radius:6px; overflow:hidden; }
-.article img { width:100%; height:180px; object-fit:cover; }
-.article-content { padding:12px; }
-
-.featured { grid-column:1 / -1; }
-.featured img { height:280px; }
-.article-content h2 {
-  font-size:22px;
-  line-height:1.3;
+nav{
+display:flex;
+gap:15px;
+align-items:center;
 }
 
-.article-content h3 {
-  font-size:16px;
-  line-height:1.3;
+nav button{
+background:none;
+border:none;
+color:white;
+font-size:15px;
+cursor:pointer;
 }
 
-.article-content p {
-  font-size:14px;
-  color:#ccc;
+.search{
+margin-left:auto;
 }
-.article {
-  border-bottom:1px solid #222;
-}
-.featured {
-  border-bottom:2px solid red;
-}
-/* SIDEBAR */
-.sidebar a { display:block; color:#ccc; margin:8px 0; }
 
-/* SOCIAL */
-.social { text-align:center; margin-top:20px; }
-.social i { margin:10px; font-size:20px; }
-
-/* FOOTER */
-footer { background:#000; text-align:center; padding:20px; }
-.footer-slogan { color:#aaa; }
-
-/* MOBILE */
-@media(max-width:768px){
-  .main { grid-template-columns:1fr; }
+.search input{
+padding:6px;
 }
+
+.breaking{
+background:red;
+color:white;
+padding:8px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.breaking span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 40s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+.main{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:20px;
+padding:20px;
+}
+
+.news{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.content{
+padding:15px;
+}
+
+.details{
+display:none;
+margin-top:10px;
+}
+
+.sidebar{
+background:white;
+padding:15px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="logo"><img src="logo.png"></div>
-  <div class="header-slogan">Real-Time Global Intelligence & Breaking News Network</div>
-</div>
+<header>
 
-<!-- HERO -->
-<div class="hero">
-  <video id="bgVideo" autoplay muted loop>
-    <source src="video1.mp4" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
-  <div class="hero-text">Top Stories Around the World</div>
-  <button onclick="toggleSound()" style="position:absolute;top:10px;right:10px;">🔊</button>
-</div>
+<h2>Radiant Waves News</h2>
 
-<!-- BREAKING -->
-<div class="breaking" id="breakingText"></div>
-
-<!-- NAV -->
 <nav>
-  <a onclick="loadCategory('all')">Home</a>
-  <a onclick="loadCategory('world')">World</a>
-  <a onclick="loadCategory('tech')">Tech</a>
-  <a onclick="loadCategory('business')">Business</a>
-  <a onclick="loadCategory('politics')">Politics</a>
-  <a onclick="loadCategory('health')">Health</a>
-  <a onclick="loadCategory('entertainment')">Entertainment</a>
+
+<button onclick="filterNews('all')">Home</button>
+<button onclick="filterNews('Naija Pulse')">Naija Pulse</button>
+<button onclick="filterNews('World')">World</button>
+<button onclick="filterNews('Technology')">Technology</button>
+<button onclick="filterNews('Sports')">Sports</button>
+<button onclick="filterNews('Election')">Election Watch</button>
+
+<div class="search">
+<input id="search" placeholder="Search news..." onkeyup="searchNews()">
+</div>
+
 </nav>
 
-<!-- CONTENT -->
-<div class="container">
+</header>
 
-  <div class="main" id="newsContainer"></div>
+<div class="breaking">
+<span id="breaking"></span>
+</div>
 
-  <div class="sidebar">
-    <h3>Trending</h3>
-    <a href="#">Global summit updates</a>
-    <a href="#">AI transforming industries</a>
+<div class="main">
 
-    <div class="social">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-x-twitter"></i>
-      <i class="fab fa-youtube"></i>
-    </div>
-  </div>
+<div class="news" id="news"></div>
+
+<div class="sidebar">
+
+<h3>Trending Stories</h3>
+<ul id="trending"></ul>
 
 </div>
 
-<!-- FOOTER -->
+</div>
+
 <footer>
-  © 2026 RadiantWavesMedia
-  <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
+
+Radiant Waves Global News  
+Editor: Omotara How
+
 </footer>
+
 <script>
 
-const newsDB = {
 
-  all: [
-    {title:"Global Leaders Meet",desc:"Economic talks ongoing",img:"https://picsum.photos/800/400?1",time:"5 min ago"},
-    {title:"AI Revolution",desc:"AI reshaping industries",img:"https://picsum.photos/800/400?2",time:"12 min ago"},
-    {title:"Climate Alert",desc:"Urgent global warning",img:"https://picsum.photos/800/400?3",time:"30 min ago"},
-    {title:"Markets Rising",desc:"Stocks gaining momentum",img:"https://picsum.photos/800/400?4",time:"1 hour ago"}
-  ],
+/* DAILY HEADLINES — THIS IS THE ONLY PART YOU EDIT */
 
-  world: [
-    {title:"World Summit",desc:"Global cooperation rising",img:"https://picsum.photos/800/400?5",time:"10 min ago"},
-    {title:"International Talks Continue",desc:"Leaders meet globally",img:"https://picsum.photos/800/400?6",time:"25 min ago"}
-  ],
+const headlines=[
 
-  tech: [
-    {title:"Tech Breakthrough",desc:"Innovation accelerating",img:"https://picsum.photos/800/400?7",time:"8 min ago"},
-    {title:"AI Expansion",desc:"New tools emerging",img:"https://picsum.photos/800/400?8",time:"40 min ago"}
-  ],
+"Peter Obi Calls for Electoral Reform in Nigeria",
 
-  business: [
-    {title:"Business Growth Rising",desc:"Markets improving globally",img:"https://picsum.photos/800/400?9",time:"15 min ago"}
-  ],
+"El-Rufai Speaks on Future of Nigerian Politics",
 
-  politics: [
-    {title:"Political Debate Intensifies",desc:"Leaders clash on policies",img:"https://picsum.photos/800/400?11",time:"20 min ago"}
-  ],
+"Sunday Igboho Calls for Unity in Southwest Nigeria",
 
-  health: [
-    {title:"Health Advances Emerging",desc:"Medical research progresses",img:"https://picsum.photos/800/400?13",time:"35 min ago"}
-  ],
+"Tinubu Economic Reform Debate Continues",
 
-  entertainment: [
-    {title:"Entertainment Industry Booms",desc:"Streaming dominates globally",img:"https://picsum.photos/800/400?15",time:"50 min ago"}
-  ]
+"Global Leaders Monitor Middle East Tensions",
 
-};
+"Artificial Intelligence Investment Expands Worldwide",
+
+"Cybersecurity Experts Warn of Rising Digital Threats",
+
+"European Football Clubs Prepare for Major Tournament",
+
+"US Election Campaign Season Intensifies",
+
+"UK Political Parties Prepare for Future Election"
+
+]
 
 
-// 🧠 DISPLAY FUNCTION
-function displayNews(data){
-  const container = document.getElementById("newsContainer");
-  container.innerHTML = "";
 
-  data.forEach((a,i)=>{
+function getCategory(title){
 
-    container.innerHTML += i===0 ?
-    `<div class="article featured">
-        <img src="${a.img}">
-        <div class="article-content">
-          <span style="color:red;font-weight:bold;">● LIVE</span>
-          <span style="color:#aaa;margin-left:10px;">${a.time}</span>
-          <h2>TOP STORY: ${a.title}</h2>
-          <p>${a.desc}</p>
-        </div>
-     </div>`
-    :
-    `<div class="article">
-        <img src="${a.img}">
-        <div class="article-content">
-          <span style="color:#aaa;font-size:12px;">${a.time}</span>
-          <h3>${a.title}</h3>
-          <p>${a.desc}</p>
-        </div>
-     </div>`;
-  });
+let t=title.toLowerCase()
+
+if(t.includes("obi")||t.includes("igboho")||t.includes("tinubu")||t.includes("rufai"))
+return "Naija Pulse"
+
+if(t.includes("election"))
+return "Election"
+
+if(t.includes("ai")||t.includes("cyber")||t.includes("technology"))
+return "Technology"
+
+if(t.includes("football")||t.includes("sports")||t.includes("tournament"))
+return "Sports"
+
+return "World"
+
 }
 
 
-// 🔁 CATEGORY
-function loadCategory(cat){
-  displayNews(newsDB[cat]);
+function createNews(){
+
+return headlines.map(title=>({
+
+title:title,
+
+category:getCategory(title),
+
+image:"https://picsum.photos/600/400?random="+Math.random(),
+
+synopsis:"Developing report from Radiant Waves News.",
+
+details:"Radiant Waves News is monitoring this developing story. Analysts say the issue is attracting attention across political and international circles. More detailed reporting will follow as additional verified information becomes available.",
+
+editor:"Omotara How"
+
+}))
+
 }
 
 
-// 🔴 BREAKING NEWS
-const breakingNews = [
-  "Global summit begins",
-  "AI dominates headlines",
-  "Climate discussions rise",
-  "Markets reacting"
-];
-
-let b = 0;
-setInterval(()=>{
-  document.getElementById("breakingText").textContent = breakingNews[b];
-  b = (b+1) % breakingNews.length;
-}, 3000);
+const news=createNews()
 
 
-// 🔊 VIDEO SOUND
-function toggleSound(){
-  const video = document.getElementById("bgVideo");
-  video.muted = !video.muted;
+function render(list){
+
+let container=document.getElementById("news")
+
+container.innerHTML=""
+
+list.forEach((n,i)=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<img src="${n.image}">
+
+<div class="content">
+
+<h3>${n.title}</h3>
+
+<p>${n.synopsis}</p>
+
+<button onclick="toggle(${i})">Read More</button>
+
+<div class="details" id="d${i}">
+
+<p>${n.details}</p>
+
+<p><b>Editor:</b> ${n.editor}</p>
+
+</div>
+
+</div>
+
+</div>
+
+`
+
+})
+
 }
 
 
-// 🚀 START
-displayNews(newsDB.all);
+function toggle(i){
+
+let d=document.getElementById("d"+i)
+
+d.style.display=d.style.display==="block"?"none":"block"
+
+}
+
+
+function filterNews(cat){
+
+if(cat==="all") render(news)
+
+else render(news.filter(n=>n.category===cat))
+
+}
+
+
+function searchNews(){
+
+let q=document.getElementById("search").value.toLowerCase()
+
+render(news.filter(n=>n.title.toLowerCase().includes(q)))
+
+}
+
+
+document.getElementById("breaking").innerText=headlines.join("  •  ")
+
+
+let trending=document.getElementById("trending")
+
+headlines.slice(0,6).forEach(h=>{
+
+trending.innerHTML+=`<li>${h}</li>`
+
+})
+
+
+render(news)
+
 
 </script>
+
 </body>
+
 </html>

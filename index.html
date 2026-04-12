@@ -17,15 +17,7 @@ color:white;
 }
 
 /* HEADER */
-<div class="video-bg">
-  <video autoplay muted loop id="bgVideo">
-    <source src="video1.mp4" type="video/mp4">
-  </video>
-</div>
-
-<button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">
-🔊
-</button>{
+header{
 background:#111;
 padding:15px;
 display:flex;
@@ -48,42 +40,29 @@ nav button{
 background:none;
 border:none;
 color:white;
-font-size:14px;
 cursor:pointer;
-}
-
-nav button:hover{
-color:#00bfff;
 }
 
 .search{
 margin-left:auto;
 }
 
-.search input{
-padding:6px;
-border:none;
-border-radius:4px;
+/* VIDEO */
+.video-bg{
+height:250px;
+overflow:hidden;
 }
-  
+
+.video-bg video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
 /* BREAKING */
 .breaking{
 background:red;
-color:white;
 padding:8px;
-overflow:hidden;
-white-space:nowrap;
-}
-
-.breaking span{
-display:inline-block;
-padding-left:100%;
-animation:scroll 25s linear infinite;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
 }
 
 /* MAIN */
@@ -94,24 +73,16 @@ gap:20px;
 padding:20px;
 }
 
-/* NEWS GRID */
 .news{
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
 gap:20px;
 }
 
-/* CARD */
 .card{
 background:#111;
-box-shadow:0 0 8px rgba(0,0,0,0.5);
 border-radius:6px;
 overflow:hidden;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.02);
 }
 
 .card img{
@@ -124,48 +95,25 @@ object-fit:cover;
 padding:15px;
 }
 
-.content h3{
-margin:0 0 10px;
-}
-
-.content p{
-color:#ccc;
-font-size:14px;
-}
-
-.details{
-display:none;
-margin-top:10px;
-}
-
-/* SIDEBAR */
 .sidebar{
 background:#111;
 padding:15px;
-box-shadow:0 0 8px rgba(0,0,0,0.5);
-}
-
-.sidebar h3{
-margin-top:0;
 }
 
 /* SOCIAL */
 .social{
-margin-top:20px;
 text-align:center;
+margin-top:20px;
 }
 
 .social a{
-display:inline-block;
 margin:10px;
-color:white;
 font-size:22px;
-transition:0.3s;
+color:white;
 }
 
 .social a:hover{
 color:#00bfff;
-transform:scale(1.2);
 }
 
 /* FOOTER */
@@ -173,12 +121,6 @@ footer{
 background:#000;
 text-align:center;
 padding:20px;
-margin-top:20px;
-}
-
-.footer-slogan{
-color:#aaa;
-font-size:13px;
 }
 
 </style>
@@ -188,13 +130,11 @@ font-size:13px;
 <body>
 
 <header>
-
 <div class="logo">
 <img src="logo.png">
 </div>
 
 <nav>
-
 <button onclick="filterNews('all')">Home</button>
 <button onclick="filterNews('World')">World</button>
 <button onclick="filterNews('Business')">Business</button>
@@ -203,16 +143,27 @@ font-size:13px;
 <button onclick="filterNews('Sports')">Sports</button>
 
 <div class="search">
-<input id="search" placeholder="Search news..." onkeyup="searchNews()">
+<input id="search" placeholder="Search..." onkeyup="searchNews()">
 </div>
 
 </nav>
-
 </header>
 
-<div class="breaking">
-<span id="breaking"></span>
+<!-- ✅ VIDEO -->
+<div class="video-bg">
+<video autoplay muted loop>
+<source src="video1.mp4" type="video/mp4">
+</video>
 </div>
+
+<!-- ✅ AUDIO -->
+<audio id="bgAudio" loop>
+<source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">🔊</button>
+
+<div class="breaking" id="breaking"></div>
 
 <div class="main">
 
@@ -220,124 +171,61 @@ font-size:13px;
 
 <div class="sidebar">
 
-<h3>Trending Stories</h3>
+<h3>Trending</h3>
 <ul id="trending"></ul>
 
-div class="social">
-  <a href="https://facebook.com/radiantwavesnews" target="_blank">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://twitter.com/@radiant13528995" target="_blank">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://youtube.com/@radiantwave-wv6rj" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-tiktok"></i></a>
 </div>
 
+</div>
+
+</div>
 
 <footer>
-  © 2026 RadiantWavesMedia
-  <div class="footer-slogan">Connecting You Deeper to the World's Most Important Stories</div>
+© 2026 RadiantWavesMedia
 </footer>
 
 <script>
 
-/* HEADLINES */
 const headlines=[
-
-
-"Global Economy Shows Signs of Recovery Amid Market Shifts",
-"Breaking: Political Tensions Rise Across Key Regions",
-"Technology Giants Race to Lead AI Innovation",
-"Climate Change Concerns Intensify Worldwide",
-"International Leaders Meet for Emergency Summit",
-"Stock Markets React to New Economic Policies",
-"Major Sporting Events Capture Global Attention",
-"Cybersecurity Threats Raise Global Alarm",
-"Healthcare Systems Face New Challenges Worldwide",
-"Energy Transition Becomes Global Priority"
-
-]
-
+"Global Economy Shows Signs of Recovery",
+"Political Tensions Rise Across Regions",
+"AI Innovation Expands Worldwide",
+"Climate Crisis Discussions Intensify",
+"Markets React to Economic Policies"
+];
 
 function getCategory(title){
-
 let t=title.toLowerCase()
-
-if(t.includes("obi")||t.includes("igboho")||t.includes("tinubu")||t.includes("rufai"))
-return "Naija Pulse"
-
-if(t.includes("election"))
-return "Election"
-if(t.includes("economy")||t.includes("market"))
-return "Business"
-
-if(t.includes("health"))
-return "Health"
-if(t.includes("ai")||t.includes("cyber")||t.includes("technology"))
-return "Technology"
-
-if(t.includes("football")||t.includes("sports")||t.includes("tournament"))
-return "Sports"
-
+if(t.includes("economy")||t.includes("market")) return "Business"
+if(t.includes("ai")) return "Technology"
 return "World"
-
 }
 
-function createNews(){
-
-return headlines.map(title=>({
-
-title:title,
-category:getCategory(title),
+const news=headlines.map(t=>({
+title:t,
+category:getCategory(t),
 image:"https://picsum.photos/600/400?random="+Math.random(),
-synopsis:"Developing report from Radiant Waves News.",
-details:"Radiant Waves News is monitoring this developing story. More updates coming.",
-editor:"RadiantWaves Desk"
-
-}))
-
-}
-
-const news=createNews()
+synopsis:"Developing story..."
+}));
 
 function render(list){
-
-let container=document.getElementById("news")
-container.innerHTML=""
-
+let c=document.getElementById("news");
+c.innerHTML="";
 list.forEach((n,i)=>{
-
-container.innerHTML+=`
+c.innerHTML+=`
 <div class="card">
 <img src="${n.image}">
 <div class="content">
 <h3>${n.title}</h3>
 <p>${n.synopsis}</p>
-<button onclick="toggle(${i})">Read More</button>
-<div class="details" id="d${i}">
-<p>${n.details}</p>
-<p><b>Editor:</b> ${n.editor}</p>
 </div>
-</div>
-</div>
-`
-
-})
-
-}
-
-function toggle(i){
-let d=document.getElementById("d"+i)
-d.style.display=d.style.display==="block"?"none":"block"
-}
- function toggleAudio(){
-  const a = document.getElementById("bgAudio");
-  a.muted = !a.muted;
+</div>`;
+});
 }
 
 function filterNews(cat){
@@ -346,22 +234,22 @@ else render(news.filter(n=>n.category===cat))
 }
 
 function searchNews(){
-let q=document.getElementById("search").value.toLowerCase()
+let q=document.getElementById("search").value.toLowerCase();
 render(news.filter(n=>n.title.toLowerCase().includes(q)))
+}
+
+function toggleAudio(){
+let a=document.getElementById("bgAudio");
+a.paused ? a.play() : a.pause();
 }
 
 let i=0;
 setInterval(()=>{
-  document.getElementById("breaking").innerText = headlines[i];
-  i = (i+1) % headlines.length;
+document.getElementById("breaking").innerText=headlines[i];
+i=(i+1)%headlines.length;
 },3000);
- 
-let trending=document.getElementById("trending")
-headlines.slice(0,6).forEach(h=>{
-trending.innerHTML+=`<li>${h}</li>`
-})
 
-render(news)
+render(news);
 
 </script>
 

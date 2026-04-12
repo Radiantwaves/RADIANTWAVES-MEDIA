@@ -326,6 +326,10 @@ function toggle(i){
 let d=document.getElementById("d"+i)
 d.style.display=d.style.display==="block"?"none":"block"
 }
+ function toggleAudio(){
+  const a = document.getElementById("bgAudio");
+  a.muted = !a.muted;
+}
 
 function filterNews(cat){
 if(cat==="all") render(news)

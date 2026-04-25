@@ -2,33 +2,54 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Panel</title>
-<link rel="stylesheet" href="style.css">
+<title>RadiantWaves Admin</title>
+
+<style>
+body { font-family:Arial; padding:20px; background:#f4f4f4; }
+
+input, textarea {
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+}
+
+button {
+  padding:10px;
+  background:#cc0000;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+</style>
+
 </head>
 
 <body>
 
-<header class="topbar">
-  <h2>Admin Dashboard</h2>
-</header>
+<h2>News Admin Panel</h2>
 
-<div style="padding:20px; max-width:600px; margin:auto;">
+<input id="title" placeholder="Title">
+<input id="image" placeholder="Image URL">
+<textarea id="desc" placeholder="Description"></textarea>
 
-<h3>Create News Post</h3>
+<button onclick="publish()">Publish News</button>
 
-<input id="title" placeholder="Title" style="width:100%; margin:5px 0;">
-<input id="image" placeholder="Image URL" style="width:100%; margin:5px 0;">
-<textarea id="desc" placeholder="Description" style="width:100%; margin:5px 0;"></textarea>
+<script>
+function publish() {
+  const news = {
+    title: document.getElementById("title").value,
+    image: document.getElementById("image").value,
+    description: document.getElementById("desc").value
+  };
 
-<button onclick="addNews()">Publish</button>
+  let existing = JSON.parse(localStorage.getItem("news")) || [];
+  existing.unshift(news);
 
-<h3>Top Stories</h3>
-<input id="topStory" placeholder="Add headline">
-<button onclick="addTop()">Add</button>
+  localStorage.setItem("news", JSON.stringify(existing));
 
-</div>
-
-<script src="admin.js"></script>
+  alert("News Published!");
+}
+</script>
 
 </body>
 </html>

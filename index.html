@@ -1,265 +1,49 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadiantWavesMedia</title>
 
-<title>Radiant Waves News</title>
+<link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#0b0f1a;
-color:white;
-}
-
-/* HEADER */
-header{
-background:#111;
-padding:15px;
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-height:40px;
-}
-
-nav{
-display:flex;
-gap:15px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-nav button{
-background:none;
-border:none;
-color:white;
-cursor:pointer;
-}
-
-.search{
-margin-left:auto;
-}
-
-/* VIDEO */
-.video-bg{
-height:250px;
-overflow:hidden;
-}
-
-.video-bg video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* BREAKING */
-.breaking{
-background:red;
-padding:8px;
-}
-
-/* MAIN */
-.main{
-display:grid;
-grid-template-columns:3fr 1fr;
-gap:20px;
-padding:20px;
-}
-
-.news{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-border-radius:6px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.content{
-padding:15px;
-}
-
-.sidebar{
-background:#111;
-padding:15px;
-}
-
-/* SOCIAL */
-.social{
-text-align:center;
-margin-top:20px;
-}
-
-.social a{
-margin:10px;
-font-size:22px;
-color:white;
-}
-
-.social a:hover{
-color:#00bfff;
-}
-
-/* FOOTER */
-footer{
-background:#000;
-text-align:center;
-padding:20px;
-}
-
-</style>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
-
 <body>
 
-<header>
-<div class="logo">
-<img src="logo.png">
-</div>
-
-<nav>
-<button onclick="filterNews('all')">Home</button>
-<button onclick="filterNews('World')">World</button>
-<button onclick="filterNews('Business')">Business</button>
-<button onclick="filterNews('Technology')">Technology</button>
-<button onclick="filterNews('Health')">Health</button>
-<button onclick="filterNews('Sports')">Sports</button>
-
-<div class="search">
-<input id="search" placeholder="Search..." onkeyup="searchNews()">
-</div>
-
-</nav>
+<header class="topbar">
+  <h1>RadiantWavesMedia</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">World</a>
+    <a href="#">Politics</a>
+    <a href="#">Business</a>
+    <a href="#">Tech</a>
+  </nav>
 </header>
 
-<!-- ✅ VIDEO -->
-<div class="video-bg">
-<video autoplay muted loop>
-<source src="video1.mp4" type="video/mp4">
-</video>
+<!-- Breaking News -->
+<div class="breaking">
+  🔴 LIVE: <span id="breaking-text">Loading latest headlines...</span>
 </div>
 
-<!-- ✅ AUDIO -->
-<audio id="bgAudio" loop>
-<source src="audio.mp3" type="audio/mpeg">
-</audio>
+<!-- Main Layout -->
+<main class="container">
 
-<button onclick="toggleAudio()" style="position:fixed;bottom:20px;right:20px;">🔊</button>
+  <!-- Left: Main Story -->
+  <section class="main-news" id="main-news"></section>
 
-<div class="breaking" id="breaking"></div>
+  <!-- Right: Sidebar -->
+  <aside class="sidebar" id="sidebar-news"></aside>
 
-<div class="main">
-
-<div class="news" id="news"></div>
-
-<div class="sidebar">
-
-<h3>Trending</h3>
-<ul id="trending"></ul>
-
-<div class="social">
-  <a href="https://facebook.com/radiantwavenews" target="_blank">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://twitter.com/@radiant13528995" target="_blank">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://youtube.com/@radiantwave-wv6rj" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
-</div>
-
-</div>
-
-</div>
+</main>
 
 <footer>
-© 2026 RadiantWavesMedia
+  © 2026 RadiantWavesMedia
 </footer>
 
-<script>
-
-const headlines=[
-"Global Economy Shows Signs of Recovery",
-"Political Tensions Rise Across Regions",
-"AI Innovation Expands Worldwide",
-"Climate Crisis Discussions Intensify",
-"Markets React to Economic Policies"
-];
-
-function getCategory(title){
-let t=title.toLowerCase()
-if(t.includes("economy")||t.includes("market")) return "Business"
-if(t.includes("ai")) return "Technology"
-return "World"
-}
-
-const news=headlines.map(t=>({
-title:t,
-category:getCategory(t),
-image:"https://picsum.photos/600/400?random="+Math.random(),
-synopsis:"Developing story..."
-}));
-
-function render(list){
-let c=document.getElementById("news");
-c.innerHTML="";
-list.forEach((n,i)=>{
-c.innerHTML+=`
-<div class="card">
-<img src="${n.image}">
-<div class="content">
-<h3>${n.title}</h3>
-<p>${n.synopsis}</p>
-</div>
-</div>`;
-});
-}
-
-function filterNews(cat){
-if(cat==="all") render(news)
-else render(news.filter(n=>n.category===cat))
-}
-
-function searchNews(){
-let q=document.getElementById("search").value.toLowerCase();
-render(news.filter(n=>n.title.toLowerCase().includes(q)))
-}
-
-function toggleAudio(){
-let a=document.getElementById("bgAudio");
-a.paused ? a.play() : a.pause();
-}
-
-let i=0;
-setInterval(()=>{
-document.getElementById("breaking").innerText=headlines[i];
-i=(i+1)%headlines.length;
-},3000);
-
-render(news);
-
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

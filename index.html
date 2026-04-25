@@ -5,12 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RadiantWavesMedia</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+body { margin:0; font-family: Arial; background:#f4f4f4; }
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+.topbar {
+  background:#cc0000;
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+}
 
+.topbar a { color:white; margin:0 10px; text-decoration:none; }
+
+.breaking {
+  background:black;
+  color:yellow;
+  padding:10px;
+  font-weight:bold;
+}
+
+.container {
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+  padding:20px;
+}
+
+.main-news img { width:100%; border-radius:6px; }
+
+.sidebar article {
+  background:white;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+footer {
+  text-align:center;
+  padding:15px;
+  background:#111;
+  color:white;
+}
+</style>
 </head>
+
 <body>
 
 <header class="topbar">
@@ -20,30 +58,32 @@
     <a href="#">World</a>
     <a href="#">Politics</a>
     <a href="#">Business</a>
-    <a href="#">Tech</a>
   </nav>
 </header>
 
-<!-- Breaking News -->
 <div class="breaking">
-  🔴 LIVE: <span id="breaking-text">Loading latest headlines...</span>
+🔴 LIVE: Global markets react to AI boom
 </div>
 
-<!-- Main Layout -->
 <main class="container">
 
-  <!-- Left: Main Story -->
-  <section class="main-news" id="main-news"></section>
+<section class="main-news">
+  <h2>AI is Transforming Global Industries</h2>
+  <img src="https://picsum.photos/800/400">
+  <p>Artificial intelligence continues to reshape economies, businesses, and everyday life across the globe.</p>
+</section>
 
-  <!-- Right: Sidebar -->
-  <aside class="sidebar" id="sidebar-news"></aside>
+<aside class="sidebar">
+  <article><h4>Global summit leaders meet this week</h4></article>
+  <article><h4>Stock markets surge worldwide</h4></article>
+  <article><h4>New tech revolution emerging</h4></article>
+</aside>
 
 </main>
 
 <footer>
-  © 2026 RadiantWavesMedia
+© 2026 RadiantWavesMedia
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

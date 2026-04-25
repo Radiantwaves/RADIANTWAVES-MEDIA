@@ -1,42 +1,36 @@
-const API_KEY = "YOUR_API_KEY_HERE";
-
-const mainNews = document.getElementById("main-news");
-const sidebar = document.getElementById("sidebar-news");
-const breaking = document.getElementById("breaking-text");
-
 async function loadNews() {
-  try {
-    const res = await fetch(`https://newsapi.org/v2/top-headlines?language=en&pageSize=6&apiKey=${API_KEY}`);
-    const data = await res.json();
+  const res = await fetch("news.json");
+  const data = await res.json();
 
-    if (!data.articles) throw new Error("No data");
+  // HERO
+  document.getElementById("hero-title").textContent = data.main.title;
 
-    // MAIN ARTICLE
-    const first = data.articles[0];
-    mainNews.innerHTML = `
-      <h2>${first.title}</h2>
-      <img src="${first.urlToImage || 'assets/placeholder.jpg'}">
-      <p>${first.description || ''}</p>
+  // BREAKING
+  document.getElementById("breaking-text").textContent = data.breaking;
+
+  // MAIN ARTICLE
+  document.getElementById("main-news").innerHTML = `
+    <h2>${data.main.title}</h2>
+    <img src="${data.main.image}">
+    <p>${data.main.description}</p>
+  `;
+
+  // SIDEBAR
+  const sidebar = document.getElementById("sidebar-news");
+  sidebar.innerHTML = "";
+
+  data.topStories.forEach(story => {
+    sidebar.innerHTML += `<article><h4>${story.title}</h4></article>`;
+  });
+
+  // VIDEO
+  const videoSection = document.getElementById("video-section");
+  data.videos.forEach(video => {
+    videoSection.innerHTML += `
+      <h3>${video.title}</h3>
+      <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
     `;
-
-    // BREAKING TEXT
-    breaking.textContent = first.title;
-
-    // SIDEBAR
-    sidebar.innerHTML = "";
-    data.articles.slice(1).forEach(article => {
-      const el = document.createElement("article");
-      el.innerHTML = `
-        <h4>${article.title}</h4>
-      `;
-      sidebar.appendChild(el);
-    });
-
-  } catch (err) {
-    console.error(err);
-    breaking.textContent = "Error loading news";
-  }
+  });
 }
 
 loadNews();
-setInterval(loadNews, 300000); // refresh every 5 min

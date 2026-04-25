@@ -5,50 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RadiantWavesMedia</title>
 
-<style>
-body { margin:0; font-family: Arial; background:#f4f4f4; }
+<link rel="stylesheet" href="style.css">
 
-.topbar {
-  background:#cc0000;
-  color:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.topbar a { color:white; margin:0 10px; text-decoration:none; }
-
-.breaking {
-  background:black;
-  color:yellow;
-  padding:10px;
-  font-weight:bold;
-}
-
-.container {
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:20px;
-  padding:20px;
-}
-
-.main-news img { width:100%; border-radius:6px; }
-
-.sidebar article {
-  background:white;
-  padding:10px;
-  margin-bottom:10px;
-}
-
-footer {
-  text-align:center;
-  padding:15px;
-  background:#111;
-  color:white;
-}
-</style>
 </head>
-
 <body>
 
 <header class="topbar">
@@ -58,32 +19,51 @@ footer {
     <a href="#">World</a>
     <a href="#">Politics</a>
     <a href="#">Business</a>
+    <a href="#">Tech</a>
   </nav>
 </header>
 
-<div class="breaking">
-🔴 LIVE: Global markets react to AI boom
-</div>
-
-<main class="container">
-
-<section class="main-news">
-  <h2>AI is Transforming Global Industries</h2>
-  <img src="https://picsum.photos/800/400">
-  <p>Artificial intelligence continues to reshape economies, businesses, and everyday life across the globe.</p>
+<!-- HERO / VIDEO BACKGROUND -->
+<section class="hero">
+  <video autoplay muted loop id="bgVideo">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h2 id="hero-title">Loading...</h2>
+  </div>
 </section>
 
-<aside class="sidebar">
-  <article><h4>Global summit leaders meet this week</h4></article>
-  <article><h4>Stock markets surge worldwide</h4></article>
-  <article><h4>New tech revolution emerging</h4></article>
-</aside>
+<!-- BREAKING -->
+<div class="breaking">
+🔴 LIVE: <span id="breaking-text"></span>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+<section class="main-news" id="main-news"></section>
+
+<aside class="sidebar" id="sidebar-news"></aside>
 
 </main>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" id="video-section">
+  <h2>Featured Video</h2>
+</section>
+
+<!-- SOCIAL -->
+<div class="social">
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-x-twitter"></i>
+  <i class="fab fa-youtube"></i>
+  <i class="fab fa-instagram"></i>
+</div>
 
 <footer>
 © 2026 RadiantWavesMedia
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

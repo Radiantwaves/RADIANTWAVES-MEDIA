@@ -21,18 +21,10 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   align-items:center;
 }
 
-.logo {
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
+.logo { display:flex; align-items:center; gap:10px; }
 .logo img { height:40px; }
 
-.slogan {
-  font-size:12px;
-  opacity:0.9;
-}
+.slogan { font-size:12px; }
 
 .topbar a {
   color:white;
@@ -42,12 +34,7 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
 }
 
 /* HERO */
-.hero {
-  position:relative;
-  height:300px;
-  overflow:hidden;
-}
-
+.hero { position:relative; height:300px; overflow:hidden; }
 #bgVideo {
   position:absolute;
   width:100%;
@@ -70,28 +57,14 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
 .breaking {
   background:black;
   color:yellow;
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-.ticker {
-  display:inline-block;
-  padding-left:100%;
-  animation: scroll 12s linear infinite;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  padding:10px;
+  font-weight:bold;
 }
 
 /* CONTENT */
 .container { padding:20px; }
 
-.featured img {
-  width:100%;
-  border-radius:6px;
-}
+.featured img { width:100%; }
 
 .grid {
   display:grid;
@@ -102,16 +75,9 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
 .card {
   background:white;
   padding:10px;
-  border-radius:6px;
 }
 
-.card img {
-  width:100%;
-  border-radius:6px;
-}
-
-/* VIDEO */
-.video-section { padding:20px; }
+.card img { width:100%; }
 
 /* SOCIAL */
 .social {
@@ -123,8 +89,7 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
 .social a {
   margin:10px;
   font-size:25px;
-  color:black;
-  text-decoration:none;
+  color:#111;
 }
 
 /* FOOTER */
@@ -133,11 +98,6 @@ footer {
   color:white;
   text-align:center;
   padding:20px;
-}
-
-.footer-slogan {
-  font-size:13px;
-  opacity:0.8;
 }
 </style>
 </head>
@@ -161,78 +121,54 @@ footer {
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <video autoplay muted loop id="bgVideo">
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    <source src="https://www.w3schools.com/howto/rain.mp4">
   </video>
   <div class="hero-text">
     <h2 id="hero-title"></h2>
   </div>
 </section>
 
-<!-- BREAKING -->
 <div class="breaking">
-  <div class="ticker">
-    🔴 LIVE: <span id="breaking-text"></span>
-  </div>
+  🔴 LIVE: <span id="breaking-text"></span>
 </div>
 
-<!-- MAIN -->
 <div class="container">
-
-  <div class="featured" id="featured"></div>
-
+  <div id="featured"></div>
   <div class="grid" id="grid-news"></div>
-
 </div>
 
-<!-- VIDEO -->
-<section class="video-section">
-  <h2>Featured Video</h2>
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-</section>
-
-<!-- SOCIAL MEDIA -->
 <div class="social">
-  <a href="https://facebook.com/radiantwavesnews" target="_blank">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://twitter.com/@radiant13528995" target="_blank">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://youtube.com/@radiantwave-wv6rj" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
+  <a href="https://facebook.com/Radiantwavesnews" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://twitter.com/radiant13528995" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  <a href="https://youtube.com/@radiantwave=wv6j" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><i class="fab fa-tiktok"></i></a>
 </div>
 
 <footer>
   © 2026 RadiantWavesMedia<br>
-  <div class="footer-slogan">
-    Connecting You Deeper to the World's Most Important Stories
-  </div>
+  Connecting You Deeper to the World's Most Important Stories
 </footer>
 
 <script>
 async function loadNews() {
   const res = await fetch("news.json");
   const data = await res.json();
+
   const articles = data.articles;
+  const breaking = data.breaking;
 
-  if(articles.length > 0){
-    document.getElementById("hero-title").textContent = articles[0].title;
-    document.getElementById("breaking-text").textContent = articles[0].title;
+  // HERO + FEATURED
+  document.getElementById("hero-title").textContent = articles[0].title;
 
-    document.getElementById("featured").innerHTML = `
-      <h2>${articles[0].title}</h2>
-      <img src="${articles[0].image}">
-      <p>${articles[0].description || ""}</p>
-    `;
-  }
+  document.getElementById("featured").innerHTML = `
+    <h2>${articles[0].title}</h2>
+    <img src="${articles[0].image}">
+    <p>${articles[0].description || ""}</p>
+  `;
 
+  // GRID
   const grid = document.getElementById("grid-news");
   grid.innerHTML = "";
 
@@ -241,10 +177,20 @@ async function loadNews() {
       <div class="card">
         <img src="${a.image}">
         <h4>${a.title}</h4>
-        <small>${a.category || ""}</small>
+        <small>${a.category}</small>
       </div>
     `;
   });
+
+  // BREAKING ROTATION
+  let i = 0;
+  function rotate() {
+    document.getElementById("breaking-text").textContent = breaking[i];
+    i = (i + 1) % breaking.length;
+  }
+
+  rotate();
+  setInterval(rotate, 4000);
 }
 
 loadNews();

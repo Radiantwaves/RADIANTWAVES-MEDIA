@@ -144,7 +144,34 @@ footer {
 }
 </style>
 </head>
+<script>
+let news = JSON.parse(localStorage.getItem("news")) || [];
 
+// HERO uses latest post
+if(news.length > 0){
+  document.getElementById("hero-title").textContent = news[0].title;
+  document.getElementById("breaking-text").textContent = news[0].title;
+
+  document.getElementById("featured").innerHTML = `
+    <h2>${news[0].title}</h2>
+    <img src="${news[0].image}">
+    <p>${news[0].description}</p>
+  `;
+}
+
+// GRID shows rest
+const grid = document.getElementById("grid-news");
+grid.innerHTML = "";
+
+news.slice(1).forEach(n => {
+  grid.innerHTML += `
+    <div class="card">
+      <img src="${n.image}">
+      <h4>${n.title}</h4>
+    </div>
+  `;
+});
+</script>
 <body>
 
 <header class="topbar">

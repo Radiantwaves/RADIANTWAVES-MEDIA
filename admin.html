@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>RadiantWaves Admin</title>
+<title>Admin Panel</title>
 
 <style>
 body { font-family:Arial; padding:20px; background:#f4f4f4; }
 
-input, textarea {
+input, textarea, select {
   width:100%;
   margin:10px 0;
   padding:10px;
@@ -20,8 +20,13 @@ button {
   border:none;
   cursor:pointer;
 }
-</style>
 
+.post {
+  background:white;
+  padding:10px;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
@@ -32,23 +37,57 @@ button {
 <input id="image" placeholder="Image URL">
 <textarea id="desc" placeholder="Description"></textarea>
 
-<button onclick="publish()">Publish News</button>
+<select id="category">
+  <option value="World">World</option>
+  <option value="Politics">Politics</option>
+  <option value="Business">Business</option>
+</select>
+
+<button onclick="publish()">Publish</button>
+
+<h3>Published News</h3>
+<div id="list"></div>
 
 <script>
+let news = JSON.parse(localStorage.getItem("news")) || [];
+
 function publish() {
-  const news = {
-    title: document.getElementById("title").value,
-    image: document.getElementById("image").value,
-    description: document.getElementById("desc").value
+  const item = {
+    title: title.value,
+    image: image.value,
+    description: desc.value,
+    category: category.value
   };
 
-  let existing = JSON.parse(localStorage.getItem("news")) || [];
-  existing.unshift(news);
-
-  localStorage.setItem("news", JSON.stringify(existing));
-
-  alert("News Published!");
+  news.unshift(item);
+  save();
 }
+
+function deletePost(index) {
+  news.splice(index, 1);
+  save();
+}
+
+function save() {
+  localStorage.setItem("news", JSON.stringify(news));
+  render();
+}
+
+function render() {
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  news.forEach((n, i) => {
+    list.innerHTML += `
+      <div class="post">
+        <strong>${n.title}</strong> (${n.category})<br>
+        <button onclick="deletePost(${i})">Delete</button>
+      </div>
+    `;
+  });
+}
+
+render();
 </script>
 
 </body>

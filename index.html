@@ -145,31 +145,38 @@ footer {
 </style>
 </head>
 <script>
-let news = JSON.parse(localStorage.getItem("news")) || [];
+async function loadNews() {
+  const res = await fetch("news.json");
+  const data = await res.json();
 
-if(news.length > 0){
-  document.getElementById("hero-title").textContent = news[0].title;
-  document.getElementById("breaking-text").textContent = news[0].title;
+  const articles = data.articles;
 
-  document.getElementById("featured").innerHTML = `
-    <h2>${news[0].title}</h2>
-    <img src="${news[0].image}">
-    <p>${news[0].description}</p>
-  `;
+  if(articles.length > 0){
+    document.getElementById("hero-title").textContent = articles[0].title;
+    document.getElementById("breaking-text").textContent = articles[0].title;
+
+    document.getElementById("featured").innerHTML = `
+      <h2>${articles[0].title}</h2>
+      <img src="${articles[0].image}">
+      <p>${articles[0].description || ""}</p>
+    `;
+  }
+
+  const grid = document.getElementById("grid-news");
+  grid.innerHTML = "";
+
+  articles.slice(1).forEach(a => {
+    grid.innerHTML += `
+      <div class="card">
+        <img src="${a.image}">
+        <h4>${a.title}</h4>
+        <small>${a.category || ""}</small>
+      </div>
+    `;
+  });
 }
 
-const grid = document.getElementById("grid-news");
-grid.innerHTML = "";
-
-news.slice(1).forEach(n => {
-  grid.innerHTML += `
-    <div class="card">
-      <img src="${n.image}">
-      <h4>${n.title}</h4>
-      <small>${n.category}</small>
-    </div>
-  `;
-});
+loadNews();
 </script>
 <body>
 

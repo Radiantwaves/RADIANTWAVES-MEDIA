@@ -147,7 +147,6 @@ footer {
 <script>
 let news = JSON.parse(localStorage.getItem("news")) || [];
 
-// HERO uses latest post
 if(news.length > 0){
   document.getElementById("hero-title").textContent = news[0].title;
   document.getElementById("breaking-text").textContent = news[0].title;
@@ -159,7 +158,6 @@ if(news.length > 0){
   `;
 }
 
-// GRID shows rest
 const grid = document.getElementById("grid-news");
 grid.innerHTML = "";
 
@@ -168,6 +166,7 @@ news.slice(1).forEach(n => {
     <div class="card">
       <img src="${n.image}">
       <h4>${n.title}</h4>
+      <small>${n.category}</small>
     </div>
   `;
 });

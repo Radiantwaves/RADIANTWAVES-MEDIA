@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-html { scroll-behavior: smooth; }
 body { margin:0; font-family:Arial; background:#f4f4f4; }
 
 /* HEADER */
@@ -31,10 +30,12 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   margin:0 10px;
   text-decoration:none;
   font-weight:bold;
+  cursor:pointer;
 }
 
 /* HERO */
 .hero { position:relative; height:300px; overflow:hidden; }
+
 #bgVideo {
   position:absolute;
   width:100%;
@@ -61,14 +62,20 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   font-weight:bold;
 }
 
-/* CONTENT */
-.container { padding:20px; }
+/* SECTION BLOCKS */
+.section {
+  padding:20px;
+}
 
-.featured img { width:100%; }
+.section h2 {
+  border-bottom:3px solid #cc0000;
+  padding-bottom:5px;
+}
 
+/* GRID */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:15px;
 }
 
@@ -114,10 +121,11 @@ footer {
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">World</a>
-    <a href="#">Politics</a>
-    <a href="#">Business</a>
+    <a onclick="filterNews('All')">Home</a>
+    <a onclick="filterNews('World')">World</a>
+    <a onclick="filterNews('Politics')">Politics</a>
+    <a onclick="filterNews('Business')">Business</a>
+    <a onclick="filterNews('Technology')">Tech</a>
   </nav>
 </header>
 
@@ -134,11 +142,28 @@ footer {
   🔴 LIVE: <span id="breaking-text"></span>
 </div>
 
-<div class="container">
+<!-- MAIN FEATURE -->
+<div class="section">
   <div id="featured"></div>
-  <div class="grid" id="grid-news"></div>
 </div>
 
+<!-- CATEGORY SECTIONS -->
+<div class="section">
+  <h2>World</h2>
+  <div class="grid" id="world-news"></div>
+</div>
+
+<div class="section">
+  <h2>Politics</h2>
+  <div class="grid" id="politics-news"></div>
+</div>
+
+<div class="section">
+  <h2>Business</h2>
+  <div class="grid" id="business-news"></div>
+</div>
+
+<!-- SOCIAL -->
 <div class="social">
   <a href="https://facebook.com/Radiantwavesnews" target="_blank"><i class="fab fa-facebook"></i></a>
   <a href="https://twitter.com/radiant13528995" target="_blank"><i class="fab fa-x-twitter"></i></a>
@@ -152,45 +177,94 @@ footer {
 </footer>
 
 <script>
+let allArticles = [];
+
 async function loadNews() {
   const res = await fetch("news.json");
   const data = await res.json();
 
-  const articles = data.articles;
-  const breaking = data.breaking;
+  allArticles = data.articles;
 
-  // HERO + FEATURED
-  document.getElementById("hero-title").textContent = articles[0].title;
+  setupBreaking(data.breaking);
+  renderAllSections();
+}
 
-  document.getElementById("featured").innerHTML = `
-    <h2>${articles[0].title}</h2>
-    <img src="${articles[0].image}">
-    <p>${articles[0].description || ""}</p>
-  `;
-
-  // GRID
-  const grid = document.getElementById("grid-news");
-  grid.innerHTML = "";
-
-  articles.slice(1).forEach(a => {
-    grid.innerHTML += `
-      <div class="card">
-        <img src="${a.image}">
-        <h4>${a.title}</h4>
-        <small>${a.category}</small>
-      </div>
-    `;
-  });
-
-  // BREAKING ROTATION
+/* BREAKING ROTATION */
+function setupBreaking(breaking) {
   let i = 0;
   function rotate() {
     document.getElementById("breaking-text").textContent = breaking[i];
     i = (i + 1) % breaking.length;
   }
-
   rotate();
   setInterval(rotate, 4000);
+}
+
+/* FEATURED */
+function renderFeatured(article) {
+  document.getElementById("hero-title").textContent = article.title;
+
+  document.getElementById("featured").innerHTML = `
+    <h2>${article.title}</h2>
+    <img src="${article.image}">
+    <p>${article.description || ""}</p>
+  `;
+}
+
+/* RENDER CATEGORY */
+function renderCategory(category, elementId) {
+  const container = document.getElementById(elementId);
+  container.innerHTML = "";
+
+  allArticles
+    .filter(a => a.category === category)
+    .slice(0, 4)
+    .forEach(a => {
+      container.innerHTML += `
+        <div class="card">
+          <img src="${a.image}">
+          <h4>${a.title}</h4>
+        </div>
+      `;
+    });
+}
+
+/* RENDER ALL */
+function renderAllSections() {
+  if(allArticles.length === 0) return;
+
+  renderFeatured(allArticles[0]);
+
+  renderCategory("World", "world-news");
+  renderCategory("Politics", "politics-news");
+  renderCategory("Business", "business-news");
+}
+
+/* FILTER VIEW */
+function filterNews(category) {
+  if(category === "All") {
+    renderAllSections();
+    return;
+  }
+
+  const filtered = allArticles.filter(a => a.category === category);
+
+  if(filtered.length === 0) return;
+
+  renderFeatured(filtered[0]);
+
+  document.getElementById("world-news").innerHTML = "";
+  document.getElementById("politics-news").innerHTML = "";
+  document.getElementById("business-news").innerHTML = "";
+
+  filtered.slice(1).forEach(a => {
+    document.getElementById("world-news").innerHTML += `
+      <div class="card">
+        <img src="${a.image}">
+        <h4>${a.title}</h4>
+      </div>
+    `;
+  });
 }
 
 loadNews();

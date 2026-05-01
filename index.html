@@ -181,26 +181,29 @@ let allArticles = [];
 
 async function loadNews() {
   const res = await fetch("news.json?v=" + new Date().getTime());
-const data = await res.json();
+  const data = await res.json();
 
   allArticles = data.articles;
 
   setupBreaking(data.breaking);
-  renderAllSections();
+  renderFeatured(allArticles[0]);
+  renderAllCategories();
 }
 
-/* BREAKING ROTATION */
+/* 🔴 BREAKING ROTATION */
 function setupBreaking(breaking) {
   let i = 0;
+
   function rotate() {
     document.getElementById("breaking-text").textContent = breaking[i];
     i = (i + 1) % breaking.length;
   }
+
   rotate();
   setInterval(rotate, 4000);
 }
 
-/* FEATURED */
+/* ⭐ FEATURED */
 function renderFeatured(article) {
   document.getElementById("hero-title").textContent = article.title;
 
@@ -211,59 +214,38 @@ function renderFeatured(article) {
   `;
 }
 
-/* RENDER CATEGORY */
-function renderCategory(category, elementId) {
-  const container = document.getElementById(elementId);
+/* 🌍 AUTO CREATE SECTIONS */
+function renderAllCategories() {
+  const container = document.getElementById("sections");
   container.innerHTML = "";
 
-  allArticles
-    .filter(a => a.category === category)
-    .slice(0, 4)
-    .forEach(a => {
-      container.innerHTML += `
-        <div class="card">
-          <img src="${a.image}">
-          <h4>${a.title}</h4>
-        </div>
-      `;
-    });
-}
+  // Get unique categories
+  const categories = [...new Set(allArticles.map(a => a.category))];
 
-/* RENDER ALL */
-function renderAllSections() {
-  if(allArticles.length === 0) return;
+  categories.forEach(category => {
+    const section = document.createElement("div");
+    section.className = "section";
 
-  renderFeatured(allArticles[0]);
-
-  renderCategory("World", "world-news");
-  renderCategory("Politics", "politics-news");
-  renderCategory("Business", "business-news");
-}
-
-/* FILTER VIEW */
-function filterNews(category) {
-  if(category === "All") {
-    renderAllSections();
-    return;
-  }
-
-  const filtered = allArticles.filter(a => a.category === category);
-
-  if(filtered.length === 0) return;
-
-  renderFeatured(filtered[0]);
-
-  document.getElementById("world-news").innerHTML = "";
-  document.getElementById("politics-news").innerHTML = "";
-  document.getElementById("business-news").innerHTML = "";
-
-  filtered.slice(1).forEach(a => {
-    document.getElementById("world-news").innerHTML += `
-      <div class="card">
-        <img src="${a.image}">
-        <h4>${a.title}</h4>
-      </div>
+    section.innerHTML = `
+      <h2>${category}</h2>
+      <div class="grid" id="section-${category}"></div>
     `;
+
+    container.appendChild(section);
+
+    const grid = document.getElementById(`section-${category}`);
+
+    allArticles
+      .filter(a => a.category === category)
+      .slice(0, 4)
+      .forEach(a => {
+        grid.innerHTML += `
+          <div class="card">
+            <img src="${a.image}">
+            <h4>${a.title}</h4>
+          </div>
+        `;
+      });
   });
 }
 

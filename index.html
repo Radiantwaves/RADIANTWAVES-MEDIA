@@ -59,6 +59,7 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
 
 /* CONTENT */
 .section { padding:20px; }
+
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
@@ -69,7 +70,12 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   background:white;
   padding:10px;
 }
+
 .card img { width:100%; }
+
+video {
+  border-radius:6px;
+}
 
 /* SOCIAL */
 .social {
@@ -77,6 +83,7 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   padding:20px;
   background:white;
 }
+
 .social a {
   margin:10px;
   font-size:24px;
@@ -176,7 +183,7 @@ function renderFeatured(article) {
   `;
 }
 
-/* AUTO SECTIONS */
+/* AUTO SECTIONS WITH VIDEO INSERT */
 function renderSections() {
   const container = document.getElementById("sections");
   container.innerHTML = "";
@@ -194,17 +201,39 @@ function renderSections() {
 
     const grid = section.querySelector(".grid");
 
+    let videos = [
+      "assets/video1.mp4",
+      "assets/video2.mp4",
+      "assets/video3.mp4"
+    ];
+
+    let count = 0;
+
     allArticles
       .filter(a => a.category === cat)
-      .slice(0,4)
       .forEach(a => {
+
         grid.innerHTML += `
           <div class="card">
             <img src="${a.image}">
             <h4>${a.title}</h4>
           </div>
         `;
-      });
+
+        count++;
+
+        if(count % 3 === 0){
+          let videoIndex = (count / 3 - 1) % videos.length;
+
+          grid.innerHTML += `
+            <div class="card">
+              <video controls width="100%">
+                <source src="${videos[videoIndex]}" type="video/mp4">
+              </video>
+            </div>
+          `;
+        }
+    });
 
     container.appendChild(section);
   });

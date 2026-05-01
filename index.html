@@ -175,13 +175,13 @@ function renderSections() {
 
   const categories = [...new Set(allArticles.map(a => a.category))];
 
-  let videoBlock = `
-    <div style="margin:20px 0;">
-      <video controls width="100%">
-        <source src="/assets/video1.mp4" type="video/mp4">
-      </video>
-    </div>
-  `;
+  let videos = [
+  "/assets/video1.mp4",
+  "/assets/video2.mp4",
+  "/assets/video3.mp4"
+];
+
+let videoIndex = 0;
 
   categories.forEach((cat, catIndex) => {
     const section = document.createElement("div");
@@ -211,8 +211,17 @@ function renderSections() {
 
     // 🔥 Insert video AFTER EACH CATEGORY (clean)
     if (catIndex % 2 === 0) {
-      container.innerHTML += videoBlock;
-    }
+
+  container.innerHTML += `
+    <div style="margin:20px 0;">
+      <video controls width="100%">
+        <source src="${videos[videoIndex]}" type="video/mp4">
+      </video>
+    </div>
+  `;
+
+  videoIndex = (videoIndex + 1) % videos.length;
+}
   });
 }
 

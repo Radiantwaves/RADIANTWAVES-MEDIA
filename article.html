@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>Article</title>
 <style>
-body { font-family: Arial; max-width:800px; margin:auto; padding:20px; }
-img { width:100%; margin-bottom:20px; }
+body { font-family:Arial; padding:20px; }
+img { width:100%; }
 </style>
 </head>
 
@@ -16,21 +15,11 @@ img { width:100%; margin-bottom:20px; }
 <p id="content"></p>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+let article = JSON.parse(localStorage.getItem("selectedArticle"));
 
-fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
-  const article = data[id];
-
-  document.getElementById("title").textContent = article.title;
-  document.getElementById("content").textContent = article.content;
-
-  if(article.image){
-    document.getElementById("image").src = article.image;
-  }
-});
+document.getElementById("title").textContent = article.title;
+document.getElementById("image").src = article.image;
+document.getElementById("content").textContent = article.content || article.description;
 </script>
 
 </body>

@@ -20,38 +20,33 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   align-items:center;
 }
 
-.logo { display:flex; align-items:center; gap:10px; }
+.logo { display:flex; gap:10px; align-items:center; }
 .logo img { height:40px; }
 
 .slogan { font-size:12px; }
 
-.topbar a {
+.topbar nav a {
   color:white;
   margin:0 10px;
   text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
 }
 
 /* HERO */
-.hero { position:relative; height:300px; overflow:hidden; }
-
-#bgVideo {
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.hero {
+  position:relative;
+  height:280px;
+  background:black;
 }
 
 .hero-text {
-  position:relative;
-  z-index:2;
+  position:absolute;
   color:white;
   text-align:center;
+  width:100%;
   top:50%;
   transform:translateY(-50%);
-  font-size:28px;
-  text-shadow:2px 2px 6px black;
+  font-size:26px;
 }
 
 /* BREAKING */
@@ -62,20 +57,11 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   font-weight:bold;
 }
 
-/* SECTION BLOCKS */
-.section {
-  padding:20px;
-}
-
-.section h2 {
-  border-bottom:3px solid #cc0000;
-  padding-bottom:5px;
-}
-
-/* GRID */
+/* CONTENT */
+.section { padding:20px; }
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
   gap:15px;
 }
 
@@ -83,7 +69,6 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   background:white;
   padding:10px;
 }
-
 .card img { width:100%; }
 
 /* SOCIAL */
@@ -92,10 +77,9 @@ body { margin:0; font-family:Arial; background:#f4f4f4; }
   padding:20px;
   background:white;
 }
-
 .social a {
   margin:10px;
-  font-size:25px;
+  font-size:24px;
   color:#111;
 }
 
@@ -121,47 +105,27 @@ footer {
   </div>
 
   <nav>
-    <a onclick="filterNews('All')">Home</a>
-    <a onclick="filterNews('World')">World</a>
-    <a onclick="filterNews('Politics')">Politics</a>
-    <a onclick="filterNews('Business')">Business</a>
-    <a onclick="filterNews('Technology')">Tech</a>
+    <a href="#">Home</a>
   </nav>
 </header>
 
-<section class="hero">
-  <video autoplay muted loop id="bgVideo">
-    <source src="https://www.w3schools.com/howto/rain.mp4">
-  </video>
+<!-- HERO -->
+<div class="hero">
   <div class="hero-text">
     <h2 id="hero-title"></h2>
   </div>
-</section>
+</div>
 
+<!-- BREAKING -->
 <div class="breaking">
   🔴 LIVE: <span id="breaking-text"></span>
 </div>
 
-<!-- MAIN FEATURE -->
-<div class="section">
-  <div id="featured"></div>
-</div>
+<!-- FEATURED -->
+<div class="section" id="featured"></div>
 
-<!-- CATEGORY SECTIONS -->
-<div class="section">
-  <h2>World</h2>
-  <div class="grid" id="world-news"></div>
-</div>
-
-<div class="section">
-  <h2>Politics</h2>
-  <div class="grid" id="politics-news"></div>
-</div>
-
-<div class="section">
-  <h2>Business</h2>
-  <div class="grid" id="business-news"></div>
-</div>
+<!-- AUTO SECTIONS -->
+<div id="sections"></div>
 
 <!-- SOCIAL -->
 <div class="social">
@@ -187,23 +151,21 @@ async function loadNews() {
 
   setupBreaking(data.breaking);
   renderFeatured(allArticles[0]);
-  renderAllCategories();
+  renderSections();
 }
 
-/* 🔴 BREAKING ROTATION */
+/* BREAKING */
 function setupBreaking(breaking) {
   let i = 0;
-
   function rotate() {
     document.getElementById("breaking-text").textContent = breaking[i];
     i = (i + 1) % breaking.length;
   }
-
   rotate();
   setInterval(rotate, 4000);
 }
 
-/* ⭐ FEATURED */
+/* FEATURED */
 function renderFeatured(article) {
   document.getElementById("hero-title").textContent = article.title;
 
@@ -214,30 +176,27 @@ function renderFeatured(article) {
   `;
 }
 
-/* 🌍 AUTO CREATE SECTIONS */
-function renderAllCategories() {
+/* AUTO SECTIONS */
+function renderSections() {
   const container = document.getElementById("sections");
   container.innerHTML = "";
 
-  // Get unique categories
   const categories = [...new Set(allArticles.map(a => a.category))];
 
-  categories.forEach(category => {
+  categories.forEach(cat => {
     const section = document.createElement("div");
     section.className = "section";
 
     section.innerHTML = `
-      <h2>${category}</h2>
-      <div class="grid" id="section-${category}"></div>
+      <h2>${cat}</h2>
+      <div class="grid"></div>
     `;
 
-    container.appendChild(section);
-
-    const grid = document.getElementById(`section-${category}`);
+    const grid = section.querySelector(".grid");
 
     allArticles
-      .filter(a => a.category === category)
-      .slice(0, 4)
+      .filter(a => a.category === cat)
+      .slice(0,4)
       .forEach(a => {
         grid.innerHTML += `
           <div class="card">
@@ -246,6 +205,8 @@ function renderAllCategories() {
           </div>
         `;
       });
+
+    container.appendChild(section);
   });
 }
 

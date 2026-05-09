@@ -1,25 +1,88 @@
-function loadNews() {
+fetch("news.json")
+.then(res => res.json())
+.then(data => {
 
-  const data = JSON.parse(localStorage.getItem("news"));
+  // BREAKING NEWS
+  document.getElementById("breaking-ticker").innerHTML =
+    data.breaking.join(" 🔴 ");
 
-  if (!data) return;
+  // HERO
+  document.getElementById("hero-title").innerText =
+    data.articles[0].title;
 
-  document.getElementById("hero-title").textContent = data.main.title || "";
+  document.getElementById("hero-desc").innerText =
+    data.articles[0].description;
 
-  document.getElementById("breaking-text").textContent = data.breaking;
+  // FEATURED
+  const featured = document.getElementById("featured-news");
 
-  document.getElementById("main-news").innerHTML = `
-    <h2>${data.main.title}</h2>
-    <img src="${data.main.image}">
-    <p>${data.main.description}</p>
+  featured.innerHTML = `
+    <div class="featured-card">
+      <img src="${data.articles[0].image}">
+      <div>
+        <h2>${data.articles[0].title}</h2>
+
+        <p>${data.articles[0].content}</p>
+      </div>
+    </div>
   `;
 
-  const sidebar = document.getElementById("sidebar-news");
-  sidebar.innerHTML = "";
+  // CATEGORY FUNCTION
+  function render(category, id){
 
-  data.topStories.forEach(story => {
-    sidebar.innerHTML += <article><h4>${story.title}</h4></article>;
-  });
-}
+    const container = document.getElementById(id);
 
-loadNews();
+    const filtered =
+      data.articles.filter(
+        a => a.category.toLowerCase() === category
+      );
+
+    filtered.forEach((news, index) => {
+
+      container.innerHTML += `
+
+        <div class="card">
+
+          <img src="${news.image}">
+
+          <div class="card-content">
+
+            <h3>${news.title}</h3>
+
+            <p>${news.description}</p>
+
+            <p>${news.content.substring(0,200)}...</p>
+
+          </div>
+
+        </div>
+
+      `;
+
+      // INSERT VIDEO AFTER EVERY 3 NEWS
+      if((index + 1) % 3 === 0){
+
+        container.innerHTML += `
+
+          <div class="video-card">
+
+            <video controls autoplay muted loop>
+              <source src="assets/video2.mp4" type="video/mp4">
+            </video>
+
+          </div>
+
+        `;
+      }
+
+    });
+  }
+
+  render("world", "world-news");
+  render("usa", "usa-news");
+  render("europe", "europe-news");
+  render("africa", "africa-news");
+  render("business", "business-news");
+  render("technology", "tech-news");
+
+});

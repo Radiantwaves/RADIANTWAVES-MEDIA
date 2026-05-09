@@ -1,232 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadiantWavesMedia</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body { margin:0; font-family:Arial; background:#f4f4f4; }
+  <title>Radiant Waves Media</title>
 
-/* HEADER */
-.topbar {
-  background:#cc0000;
-  color:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo { display:flex; gap:10px; align-items:center; }
-.logo img { height:40px; }
-.slogan { font-size:12px; }
+  <link rel="stylesheet" href="style.css">
 
-/* HERO */
-.hero {
-  position:relative;
-  height:260px;
-  background:black;
-}
-.hero-text {
-  position:absolute;
-  color:white;
-  width:100%;
-  text-align:center;
-  top:50%;
-  transform:translateY(-50%);
-}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
 
-/* BREAKING */
-.breaking {
-  background:black;
-  color:yellow;
-  padding:10px;
-  font-weight:bold;
-}
-
-/* CONTENT */
-.section { padding:20px; }
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-  gap:15px;
-}
-.card {
-  background:white;
-  padding:10px;
-}
-.card img { width:100%; }
-
-video { border-radius:6px; }
-
-/* SOCIAL */
-.social {
-  text-align:center;
-  padding:20px;
-  background:white;
-}
-.social a {
-  margin:10px;
-  font-size:24px;
-  color:#111;
-}
-
-/* FOOTER */
-footer {
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-</style>
 </head>
 
 <body>
 
-<header class="topbar">
+<!-- HEADER -->
+
+<header>
+
   <div class="logo">
-    <img src="logo.png">
+
+    <img src="assets/logo.png" alt="Radiant Waves Media">
+
     <div>
-      <strong>RadiantWavesMedia</strong><br>
-      <span class="slogan">Gateway to World News — Connecting You to the World</span>
+
+      <h1>RadiantWavesMedia</h1>
+
+      <p class="header-slogan">
+        Gateway to World News — Connecting You to the World
+      </p>
+
     </div>
+
   </div>
+
+  <nav>
+
+    <a href="#world">World</a>
+    <a href="#usa">USA</a>
+    <a href="#europe">Europe</a>
+    <a href="#africa">Africa</a>
+    <a href="#business">Business</a>
+    <a href="#technology">Technology</a>
+
+  </nav>
+
 </header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-    <h2 id="hero-title"></h2>
+<!-- BREAKING NEWS -->
+
+<div class="ticker-wrap">
+
+  <div class="ticker" id="breaking-ticker">
+
+    Loading Breaking News...
+
   </div>
+
 </div>
 
-<!-- BREAKING -->
-<div class="breaking">
-  🔴 LIVE: <span id="breaking-text"></span>
-</div>
+<!-- HERO VIDEO -->
+
+<section class="hero-video">
+
+  <video
+    id="heroVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="assets/video1.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay">
+
+    <div class="live-badge">
+
+      🔴 LIVE
+
+    </div>
+
+    <h1 id="hero-title">
+
+      Breaking News Around The Globe
+
+    </h1>
+
+    <p id="hero-desc">
+
+      Live Updates Across Continents
+
+    </p>
+
+    <div class="hero-scroll">
+
+      <marquee id="hero-marquee">
+
+        Loading Breaking News...
+
+      </marquee>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!-- FEATURED -->
-<div class="section" id="featured"></div>
 
-<!-- AUTO SECTIONS -->
-<div id="sections"></div>
+<section class="featured-news" id="featured-news">
 
-<!-- SOCIAL -->
-<div class="social">
-  <a href="https://facebook.com/Radiantwavesnews" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://twitter.com/radiant13528995" target="_blank"><i class="fab fa-x-twitter"></i></a>
-  <a href="https://youtube.com/@radiantwave=wv6j" target="_blank"><i class="fab fa-youtube"></i></a>
-  <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><i class="fab fa-tiktok"></i></a>
-</div>
+</section>
+
+<!-- WORLD -->
+
+<section id="world">
+
+  <h2 class="section-title">World News</h2>
+
+  <div class="news-grid" id="world-news"></div>
+
+</section>
+
+<!-- USA -->
+
+<section id="usa">
+
+  <h2 class="section-title">USA</h2>
+
+  <div class="news-grid" id="usa-news"></div>
+
+</section>
+
+<!-- EUROPE -->
+
+<section id="europe">
+
+  <h2 class="section-title">Europe</h2>
+
+  <div class="news-grid" id="europe-news"></div>
+
+</section>
+
+<!-- AFRICA -->
+
+<section id="africa">
+
+  <h2 class="section-title">Africa</h2>
+
+  <div class="news-grid" id="africa-news"></div>
+
+</section>
+
+<!-- BUSINESS -->
+
+<section id="business">
+
+  <h2 class="section-title">Business</h2>
+
+  <div class="news-grid" id="business-news"></div>
+
+</section>
+
+<!-- TECHNOLOGY -->
+
+<section id="technology">
+
+  <h2 class="section-title">Technology</h2>
+
+  <div class="news-grid" id="tech-news"></div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-  © 2026 RadiantWavesMedia<br>
-  Connecting You Deeper to the World's Most Important Stories
+
+  <h2>Radiant Waves Media</h2>
+
+  <p class="footer-slogan">
+
+    Connecting You Deeper to the World's Most Important Stories
+
+  </p>
+
+  <div class="social">
+
+    <a
+      href="https://facebook.com/Radiantwavesnews"
+      target="_blank"
+    >
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <a
+      href="https://twitter.com/radiant13528995"
+      target="_blank"
+    >
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a
+      href="https://youtube.com/@radiantwave=wv6j"
+      target="_blank"
+    >
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a
+      href="https://tiktok.com/@radiantwavesmedia"
+      target="_blank"
+    >
+      <i class="fab fa-tiktok"></i>
+    </a>
+
+  </div>
+
+  <p class="copyright">
+
+    © 2026 Radiant Waves Media
+
+  </p>
+
 </footer>
 
-<<script>
-let allArticles = [];
-
-async function loadNews() {
-  const res = await fetch("news.json?v=" + new Date().getTime());
-  const data = await res.json();
-
-  allArticles = data.articles;
-
-  setupBreaking(data.breaking);
-  renderFeatured(allArticles[0]);
-  renderSections();
-}
-
-/* BREAKING */
-function setupBreaking(breaking) {
-  let i = 0;
-  function rotate() {
-    document.getElementById("breaking-text").textContent = breaking[i];
-    i = (i + 1) % breaking.length;
-  }
-  rotate();
-  setInterval(rotate, 4000);
-}
-
-/* FEATURED */
-function renderFeatured(article) {
-  document.getElementById("hero-title").textContent = article.title;
-
-  document.getElementById("featured").innerHTML = `
-    <h2 onclick="openArticle(0)" style="cursor:pointer">${article.title}</h2>
-    <img src="${article.image}" onclick="openArticle(0)">
-    <p>${article.description || ""}</p>
-  `;
-}
-
-/* OPEN ARTICLE */
-function openArticle(index) {
-  localStorage.setItem("selectedArticle", JSON.stringify(allArticles[index]));
-  window.location.href = "article.html";
-}
-
-/* SECTIONS WITH CLEAN VIDEO PLACEMENT */
-function renderSections() {
-  const container = document.getElementById("sections");
-  container.innerHTML = "";
-
-  const categories = [...new Set(allArticles.map(a => a.category))];
-
-  let videos = [
-  "/assets/video1.mp4",
-  "/assets/video2.mp4",
-  "/assets/video3.mp4"
-];
-
-let videoIndex = 0;
-
-  categories.forEach((cat, catIndex) => {
-    const section = document.createElement("div");
-    section.className = "section";
-
-    section.innerHTML = `
-      <h2>${cat}</h2>
-      <div class="grid"></div>
-    `;
-
-    const grid = section.querySelector(".grid");
-
-    let filtered = allArticles.filter(a => a.category === cat);
-
-    filtered.forEach((a, index) => {
-      let globalIndex = allArticles.indexOf(a);
-
-      grid.innerHTML += `
-        <div class="card" onclick="openArticle(${globalIndex})" style="cursor:pointer">
-          <img src="${a.image}">
-          <h4>${a.title}</h4>
-        </div>
-      `;
-    });
-
-    container.appendChild(section);
-
-    // 🔥 Insert video AFTER EACH CATEGORY (clean)
-    if (catIndex % 2 === 0) {
-
-  container.innerHTML += `
-    <div style="margin:20px 0;">
-      <video controls width="100%">
-        <source src="${videos[videoIndex]}" type="video/mp4">
-      </video>
-    </div>
-  `;
-
-  videoIndex = (videoIndex + 1) % videos.length;
-}
-  });
-}
-
-loadNews();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

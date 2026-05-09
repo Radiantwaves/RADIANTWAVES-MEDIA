@@ -14,28 +14,50 @@ fetch("news.json")
   document.getElementById("hero-desc")
   .innerText = data.articles[0].description;
 
-  // FEATURED
+  // FEATURED LIVE STUDIO
 
-  const featured =
-  document.getElementById("featured-news");
+const featured =
+document.getElementById("featured-news");
 
-  featured.innerHTML = `
+featured.innerHTML = `
 
-    <div class="featured-card">
+<div class="live-studio">
 
-      <img src="${data.articles[0].image}">
+  <video autoplay muted loop playsinline>
 
-      <div>
+    <source src="assets/video1.mp4" type="video/mp4">
 
-        <h2>${data.articles[0].title}</h2>
+  </video>
 
-        <p>${data.articles[0].content}</p>
+  <div class="live-overlay">
 
-      </div>
+    <div class="live-tag">
+      🔴 LIVE
+    </div>
+
+    <h2>
+      ${data.articles[0].title}
+    </h2>
+
+    <p>
+      ${data.articles[0].content}
+    </p>
+
+    <div class="live-scroll">
+
+      <marquee behavior="scroll" direction="left">
+
+        ${data.breaking.join(" 🔴 ")}
+
+      </marquee>
 
     </div>
 
-  `;
+  </div>
+
+</div>
+
+`;
 
   // RENDER FUNCTION
 

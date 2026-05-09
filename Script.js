@@ -1,65 +1,55 @@
 fetch("news.json")
+
 .then(res => res.json())
+
 .then(data => {
 
   // BREAKING NEWS
+
   document.getElementById("breaking-ticker")
-  .innerHTML = data.breaking.join(" 🔴 ");
+  .innerHTML =
+  data.breaking.join(" 🔴 ");
 
   // HERO
 
   document.getElementById("hero-title")
-  .innerText = data.articles[0].title;
+  .innerText =
+  data.articles[0].title;
 
   document.getElementById("hero-desc")
-  .innerText = data.articles[0].description;
+  .innerText =
+  data.articles[0].description;
 
-  // FEATURED LIVE STUDIO
+  // HERO MARQUEE
 
-const featured =
-document.getElementById("featured-news");
+  document.getElementById("hero-marquee")
+  .innerHTML =
+  data.breaking.join(" 🔴 ");
 
-featured.innerHTML = `
+  // FEATURED NEWS
 
-<div class="live-studio">
+  const featured =
+  document.getElementById("featured-news");
 
-  <video autoplay muted loop playsinline>
+  featured.innerHTML = `
 
-    <source src="assets/video1.mp4" type="video/mp4">
+    <div class="featured-card">
 
-  </video>
+      <img src="${data.articles[0].image}">
 
-  <div class="live-overlay">
+      <div>
 
-    <div class="live-tag">
-      🔴 LIVE
-    </div>
+        <h2>${data.articles[0].title}</h2>
 
-    <h2>
-      ${data.articles[0].title}
-    </h2>
+        <p>${data.articles[0].content}</p>
 
-    <p>
-      ${data.articles[0].content}
-    </p>
-
-    <div class="live-scroll">
-
-      <marquee behavior="scroll" direction="left">
-
-        ${data.breaking.join(" 🔴 ")}
-
-      </marquee>
+      </div>
 
     </div>
 
-  </div>
+  `;
 
-</div>
-
-`;
-
-  // RENDER FUNCTION
+  // CATEGORY FUNCTION
 
   function render(category, id){
 
@@ -71,13 +61,7 @@ featured.innerHTML = `
       a => a.category.toLowerCase() === category
     );
 
-    let videos = [
-      "assets/video1.mp4",
-      "assets/video2.mp4",
-      "assets/video3.mp4"
-    ];
-
-    filtered.forEach((news, index) => {
+    filtered.forEach(news => {
 
       container.innerHTML += `
 
@@ -92,7 +76,9 @@ featured.innerHTML = `
             <p>${news.description}</p>
 
             <p>
-              ${news.content.substring(0,200)}...
+
+              ${news.content.substring(0,250)}...
+
             </p>
 
           </div>
@@ -100,30 +86,6 @@ featured.innerHTML = `
         </div>
 
       `;
-
-      // VIDEO AFTER EVERY 3 NEWS
-
-      if((index + 1) % 3 === 0){
-
-        let videoIndex =
-        Math.floor(index / 3) % videos.length;
-
-        container.innerHTML += `
-
-          <div class="video-card">
-
-            <video autoplay muted loop controls>
-
-              <source
-              src="${videos[videoIndex]}"
-              type="video/mp4">
-
-            </video>
-
-          </div>
-
-        `;
-      }
 
     });
 
@@ -135,5 +97,35 @@ featured.innerHTML = `
   render("africa", "africa-news");
   render("business", "business-news");
   render("technology", "tech-news");
+
+  // ROTATING HERO VIDEOS
+
+  let heroVideos = [
+
+    "assets/video1.mp4",
+    "assets/video2.mp4",
+    "assets/video3.mp4"
+
+  ];
+
+  let currentVideo = 0;
+
+  const heroVideo =
+  document.getElementById("heroVideo");
+
+  setInterval(() => {
+
+    currentVideo++;
+
+    if(currentVideo >= heroVideos.length){
+
+      currentVideo = 0;
+
+    }
+
+    heroVideo.src =
+    heroVideos[currentVideo];
+
+  }, 15000);
 
 });

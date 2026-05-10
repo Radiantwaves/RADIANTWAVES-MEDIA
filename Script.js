@@ -4,7 +4,7 @@ fetch("news.json")
 
 .then(data => {
 
-  // BREAKING NEWS
+  // BREAKING
 
   document.getElementById("breaking-ticker")
   .innerHTML =
@@ -26,7 +26,7 @@ fetch("news.json")
   .innerHTML =
   data.breaking.join(" 🔴 ");
 
-  // FEATURED NEWS
+  // FEATURED
 
   const featured =
   document.getElementById("featured-news");
@@ -49,9 +49,9 @@ fetch("news.json")
 
   `;
 
-  // CATEGORY FUNCTION
+  // RENDER NEWS
 
-  function render(category, id){
+  function render(category,id){
 
     const container =
     document.getElementById(id);
@@ -91,16 +91,16 @@ fetch("news.json")
 
   }
 
-  render("world", "world-news");
-  render("usa", "usa-news");
-  render("europe", "europe-news");
-  render("africa", "africa-news");
-  render("business", "business-news");
-  render("technology", "tech-news");
+  render("world","world-news");
+  render("usa","usa-news");
+  render("europe","europe-news");
+  render("africa","africa-news");
+  render("business","business-news");
+  render("technology","tech-news");
 
-  // ROTATING HERO VIDEOS
+  // ROTATING VIDEOS
 
-  let heroVideos = [
+  let videos = [
 
     "assets/video1.mp4",
     "assets/video2.mp4",
@@ -108,24 +108,24 @@ fetch("news.json")
 
   ];
 
-  let currentVideo = 0;
+  let current = 0;
 
   const heroVideo =
   document.getElementById("heroVideo");
 
   setInterval(() => {
 
-    currentVideo++;
+    current++;
 
-    if(currentVideo >= heroVideos.length){
+    if(current >= videos.length){
 
-      currentVideo = 0;
+      current = 0;
 
     }
 
     heroVideo.src =
-    heroVideos[currentVideo];
+    videos[current];
 
-  }, 15000);
+  },15000);
 
 });

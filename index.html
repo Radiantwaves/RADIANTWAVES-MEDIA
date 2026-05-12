@@ -2,225 +2,133 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Radiant Waves Media</title>
-
-<link rel="stylesheet" href="./style.css?v=500">
-
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiant Waves Media</title>
+  <link rel="stylesheet" href="./style.css?v=500">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-  <div class="logo">
-
-    <img src="logo.png" alt="Radiant Waves Media">
-
-    <div>
-
-      <h1>RADIANT WAVES MEDIA</h1>
-
-      <p class="header-slogan">
-        Gateway to Your World News — Connecting You to the World
-      </p>
-
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Radiant Waves Media">
+      <div>
+        <h1>RADIANT WAVES MEDIA</h1>
+        <p class="header-slogan">
+          Gateway to Your World News — Connecting You to the World
+        </p>
+      </div>
     </div>
+    <nav>
+      <a href="#world">World</a>
+      <a href="#usa">USA</a>
+      <a href="#europe">Europe</a>
+      <a href="#africa">Africa</a>
+      <a href="#business">Business</a>
+      <a href="#technology">Technology</a>
+    </nav>
+  </header>
 
+  <!-- BREAKING NEWS TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker" id="breaking-ticker">
+      Loading Breaking News...
+    </div>
   </div>
 
-  <nav>
-
-    <a href="#world">World</a>
-    <a href="#usa">USA</a>
-    <a href="#europe">Europe</a>
-    <a href="#africa">Africa</a>
-    <a href="#business">Business</a>
-    <a href="#technology">Technology</a>
-
-  </nav>
-
-</header>
-
-<!-- BREAKING -->
-
-<div class="ticker-wrap">
-
-  <div class="ticker" id="breaking-ticker">
-
-    Loading Breaking News...
-
-  </div>
-
-</div>
-
-<!-- HERO -->
-
-<section class="hero-video">
-
-  <video
-    id="heroVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-
-    <source src="assets/video1.mp4" type="video/mp4">
-
-  </video>
-
-  <div class="hero-overlay">
-
-    <div class="live-badge">
-
-      🔴 LIVE
-
+  <!-- HERO SECTION -->
+  <section class="hero-video">
+    <video id="heroVideo" autoplay loop playsinline>
+      <source src="assets/video1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="live-badge">🔴 LIVE</div>
+      <h1 id="hero-title">Global Breaking News</h1>
+      <p id="hero-desc">Live updates from around the globe</p>
+      <div class="hero-scroll">
+        <marquee id="hero-marquee">Loading headlines...</marquee>
+      </div>
     </div>
+    <button id="mute-button" class="mute-button">Unmute</button>
+  </section>
 
-    <h1 id="hero-title">
+  <!-- FEATURED NEWS -->
+  <section class="featured-news" id="featured-news">
+    <!-- Featured content will be injected by script.js -->
+  </section>
 
-      Global Breaking News
+  <!-- WORLD NEWS -->
+  <section id="world">
+    <h2 class="section-title">World News</h2>
+    <div class="news-grid" id="world-news"></div>
+  </section>
 
-    </h1>
+  <!-- USA NEWS -->
+  <section id="usa">
+    <h2 class="section-title">USA</h2>
+    <div class="news-grid" id="usa-news"></div>
+  </section>
 
-    <p id="hero-desc">
+  <!-- EUROPE NEWS -->
+  <section id="europe">
+    <h2 class="section-title">Europe</h2>
+    <div class="news-grid" id="europe-news"></div>
+  </section>
 
-      Live updates from around the globe
+  <!-- AFRICA NEWS -->
+  <section id="africa">
+    <h2 class="section-title">Africa</h2>
+    <div class="news-grid" id="africa-news"></div>
+  </section>
 
+  <!-- BUSINESS NEWS -->
+  <section id="business">
+    <h2 class="section-title">Business</h2>
+    <div class="news-grid" id="business-news"></div>
+  </section>
+
+  <!-- TECHNOLOGY NEWS -->
+  <section id="technology">
+    <h2 class="section-title">Technology</h2>
+    <div class="news-grid" id="tech-news"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>Radiant Waves Media</h2>
+    <p class="footer-slogan">
+      Connecting You Deeper to the World's Most Important Stories
     </p>
-
-    <div class="hero-scroll">
-
-      <marquee id="hero-marquee">
-
-        Loading headlines...
-
-      </marquee>
-
+    <div class="social">
+      <a href="https://facebook.com/Radiantwavesnews" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/radiant13528995" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtube.com/@radiantwave=wv6j" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com/@radiantwavesmedia" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
+    <p class="copyright">
+      © 2026 Radiant Waves Media
+    </p>
+  </footer>
 
-  </div>
+  <script src="./script.js?v=500"></script>
+  <script>
+    const video = document.getElementById('heroVideo');
+    const muteButton = document.getElementById('mute-button');
 
-</section>
-
-<!-- FEATURED -->
-
-<section class="featured-news" id="featured-news">
-
-</section>
-
-<!-- WORLD -->
-
-<section id="world">
-
-  <h2 class="section-title">World News</h2>
-
-  <div class="news-grid" id="world-news"></div>
-
-</section>
-
-<!-- USA -->
-
-<section id="usa">
-
-  <h2 class="section-title">USA</h2>
-
-  <div class="news-grid" id="usa-news"></div>
-
-</section>
-
-<!-- EUROPE -->
-
-<section id="europe">
-
-  <h2 class="section-title">Europe</h2>
-
-  <div class="news-grid" id="europe-news"></div>
-
-</section>
-
-<!-- AFRICA -->
-
-<section id="africa">
-
-  <h2 class="section-title">Africa</h2>
-
-  <div class="news-grid" id="africa-news"></div>
-
-</section>
-
-<!-- BUSINESS -->
-
-<section id="business">
-
-  <h2 class="section-title">Business</h2>
-
-  <div class="news-grid" id="business-news"></div>
-
-</section>
-
-<!-- TECHNOLOGY -->
-
-<section id="technology">
-
-  <h2 class="section-title">Technology</h2>
-
-  <div class="news-grid" id="tech-news"></div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <h2>Radiant Waves Media</h2>
-
-  <p class="footer-slogan">
-
-    Connecting You Deeper to the World's Most Important Stories
-
-  </p>
-
-  <div class="social">
-
-    <a href="https://facebook.com/Radiantwavesnews" target="_blank">
-      <i class="fab fa-facebook"></i>
-    </a>
-
-    <a href="https://twitter.com/radiant13528995" target="_blank">
-      <i class="fab fa-x-twitter"></i>
-    </a>
-
-    <a href="https://youtube.com/@radiantwave=wv6j" target="_blank">
-      <i class="fab fa-youtube"></i>
-    </a>
-
-    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
-
-  </div>
-
-  <p class="copyright">
-
-    © 2026 Radiant Waves Media
-
-  </p>
-
-</footer>
-
-<script src="./script.js?v=500"></script>
-
+    muteButton.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        muteButton.textContent = 'Mute';
+      } else {
+        video.muted = true;
+        muteButton.textContent = 'Unmute';
+      }
+    });
+  </script>
 </body>
+
 </html>

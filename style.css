@@ -298,3 +298,30 @@ footer{
   }
 
 }
+/* PUBLICITY SECTION */
+
+.publicity-section{
+  padding:40px 20px;
+}
+
+.publicity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.public-card{
+  background:#111;
+  padding:25px;
+  border-left:5px solid red;
+}
+
+.public-card h3{
+  margin-bottom:15px;
+  color:white;
+}
+
+.public-card p{
+  color:#ccc;
+  line-height:1.7;
+}

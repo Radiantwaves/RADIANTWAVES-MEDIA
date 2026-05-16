@@ -365,3 +365,88 @@ footer{
 .whatsapp-btn{
   background:#25D366;
 }
+/* FUTURE MEDIA STRUCTURE */
+
+.archive-grid,
+.birthday-grid,
+.advert-grid,
+.admin-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.archive-card,
+.birthday-card,
+.advert-card,
+.admin-card{
+  background:#111;
+  padding:25px;
+  border-left:5px solid red;
+}
+
+.archive-card h3,
+.birthday-card h3,
+.advert-card h3{
+  margin-bottom:15px;
+}
+
+.archive-card p,
+.birthday-card p,
+.advert-card p{
+  color:#ccc;
+  line-height:1.7;
+}
+
+.top-story-banner{
+  background:#111;
+  padding:60px 30px;
+  text-align:center;
+  margin:20px;
+}
+
+.top-story-banner h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.top-story-banner p{
+  color:#ccc;
+  font-size:20px;
+}
+
+.history-line{
+  padding:30px 20px;
+}
+
+.history-item{
+  background:#111;
+  padding:18px;
+  margin-bottom:15px;
+  border-left:5px solid yellow;
+}
+
+.live-tv-box{
+  background:black;
+  border:2px solid red;
+  padding:80px 30px;
+  text-align:center;
+  margin:20px;
+}
+
+.live-tv-box h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.live-tv-box p{
+  color:#ccc;
+  font-size:20px;
+}
+
+.admin-card{
+  text-align:center;
+  font-weight:bold;
+  font-size:20px;
+}

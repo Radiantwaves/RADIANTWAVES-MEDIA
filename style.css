@@ -306,8 +306,9 @@ footer{
 
 .publicity-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:20px;
+  margin-top:30px;
 }
 
 .public-card{
@@ -318,67 +319,49 @@ footer{
 
 .public-card h3{
   margin-bottom:15px;
-  color:white;
+  font-size:24px;
 }
 
 .public-card p{
   color:#ccc;
-  line-height:1.7;
+  line-height:1.8;
 }
-/* SPONSORED ADVERT */
 
-.sponsored-ad{
+/* CONTACT BOX */
+
+.advert-contact-box{
   background:#111;
-  margin:30px 20px;
-  border:2px solid red;
-}
-
-.sponsored-label{
-  background:red;
-  color:white;
-  padding:12px;
-  font-weight:bold;
+  margin-top:40px;
+  padding:35px;
   text-align:center;
 }
 
-.sponsored-content{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  padding:25px;
-  align-items:center;
-}
-
-.sponsored-content img{
-  width:100%;
-  border-radius:8px;
-}
-
-.sponsored-text h2{
-  margin-bottom:20px;
-  font-size:34px;
-}
-
-.sponsored-text p{
-  margin-bottom:15px;
-  line-height:1.8;
+.advert-intro{
   color:#ccc;
+  margin:20px 0 35px;
+  line-height:1.8;
 }
 
-.advert-btn{
-  display:inline-block;
-  background:red;
-  color:white;
-  padding:14px 25px;
+.advert-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.email-btn,
+.whatsapp-btn{
+  padding:16px 28px;
   text-decoration:none;
+  color:white;
   font-weight:bold;
-  margin-top:10px;
+  font-size:18px;
 }
 
-@media(max-width:768px){
-
-.sponsored-content{
-  grid-template-columns:1fr;
+.email-btn{
+  background:#c40000;
 }
 
+.whatsapp-btn{
+  background:#25D366;
 }

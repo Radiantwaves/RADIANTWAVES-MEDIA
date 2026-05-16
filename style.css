@@ -325,3 +325,60 @@ footer{
   color:#ccc;
   line-height:1.7;
 }
+/* SPONSORED ADVERT */
+
+.sponsored-ad{
+  background:#111;
+  margin:30px 20px;
+  border:2px solid red;
+}
+
+.sponsored-label{
+  background:red;
+  color:white;
+  padding:12px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.sponsored-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  padding:25px;
+  align-items:center;
+}
+
+.sponsored-content img{
+  width:100%;
+  border-radius:8px;
+}
+
+.sponsored-text h2{
+  margin-bottom:20px;
+  font-size:34px;
+}
+
+.sponsored-text p{
+  margin-bottom:15px;
+  line-height:1.8;
+  color:#ccc;
+}
+
+.advert-btn{
+  display:inline-block;
+  background:red;
+  color:white;
+  padding:14px 25px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+@media(max-width:768px){
+
+.sponsored-content{
+  grid-template-columns:1fr;
+}
+
+}

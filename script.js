@@ -1,193 +1,293 @@
-fetch("news.json")
+// ===============================
+// RADIANT WAVES MEDIA
+// COMPLETE SCRIPT.JS
+// ===============================
 
-.then(res => res.json())
+// LOAD JSON NEWS FILE
 
-.then(data => {
+fetch('news.json?v=' + new Date().getTime())
 
-  // BREAKING TICKER
+.then(response => response.json())
 
-  document.getElementById("breaking-ticker")
-  .innerHTML =
+.then(newsData => {
 
-  data.breaking && data.breaking.length > 0
+  // ===============================
+  // HERO SECTION
+  // ===============================
 
-  ? data.breaking.join(" 🔴 ")
+  document.getElementById('hero-title').innerText =
+  newsData.hero.title;
 
-  : "🔴 Live Breaking News Around The World";
+  document.getElementById('hero-desc').innerText =
+  newsData.hero.description;
 
+  // ===============================
+  // BREAKING NEWS TICKER
+  // ===============================
 
-  // HERO TITLE
+  const ticker =
+  document.getElementById('breaking-ticker');
 
-  document.getElementById("hero-title")
-  .innerText =
+  ticker.innerHTML =
+  newsData.breaking.map(item =>
+  ` 🔴 ${item} `
+  ).join(" • ");
 
-  data.articles[0]?.title ||
+  // ===============================
+  // HERO MARQUEE
+  // ===============================
 
-  "Global Breaking News";
+  const heroMarquee =
+  document.getElementById('hero-marquee');
 
+  heroMarquee.innerHTML =
+  newsData.breaking.map(item =>
+  ` 🔴 ${item} `
+  ).join(" • ");
 
-  // HERO DESCRIPTION
+  // ===============================
+  // FEATURED NEWS
+  // ===============================
 
-  document.getElementById("hero-desc")
-  .innerText =
+  const featuredContainer =
+  document.getElementById('featured-news');
 
-  data.articles[0]?.description ||
+  if(newsData.featured){
 
-  "Live updates from around the globe";
-
-
-  // LIVE MARQUEE
-
-  document.getElementById("hero-marquee")
-  .innerHTML =
-
-  data.breaking && data.breaking.length > 0
-
-  ? data.breaking.join(" 🔴 ")
-
-  : "🔴 Global Breaking News Updates Live Around The World";
-
-
-  // FEATURED SECTION
-
-  const featured =
-  document.getElementById("featured-news");
-
-  featured.innerHTML = `
+    featuredContainer.innerHTML = `
 
     <div class="featured-card">
 
-      <img src="${data.articles[0]?.image}">
+      <img src="${newsData.featured.image}"
+      alt="${newsData.featured.title}">
 
       <div>
 
         <h2>
-
-          ${data.articles[0]?.title}
-
+          ${newsData.featured.title}
         </h2>
 
         <p>
-
-          ${data.articles[0]?.content}
-
+          ${newsData.featured.content}
         </p>
 
       </div>
 
     </div>
 
-  `;
-
-
-  // RENDER NEWS FUNCTION
-
-  function render(category,id){
-
-    const container =
-    document.getElementById(id);
-
-    if(!container) return;
-
-    const filtered =
-    data.articles.filter(
-
-      a => a.category.toLowerCase() === category
-
-    );
-
-    container.innerHTML = "";
-
-    filtered.forEach(news => {
-
-      container.innerHTML += `
-
-        <div class="card">
-
-          <img src="${news.image}">
-
-          <div class="card-content">
-
-            <h3>
-
-              ${news.title}
-
-            </h3>
-
-            <p>
-
-              ${news.description}
-
-            </p>
-
-            <p>
-
-              ${news.content.substring(0,250)}...
-
-            </p>
-
-          </div>
-
-        </div>
-
-      `;
-
-    });
+    `;
 
   }
 
+  // ===============================
+  // GENERATE NEWS CARDS
+  // ===============================
 
-  // LOAD ALL CATEGORIES
+  function generateNews(sectionId, category){
 
-  render("world","world-news");
+    const container =
+    document.getElementById(sectionId);
 
-  render("usa","usa-news");
+    if(!container) return;
 
-  render("europe","europe-news");
+    const articles =
+    newsData.articles.filter(article =>
+    article.category === category
+    );
 
-  render("africa","africa-news");
+    container.innerHTML =
+    articles.map(article => `
 
-  render("business","business-news");
+    <div class="card">
 
-  render("technology","tech-news");
+      <img src="${article.image}"
+      alt="${article.title}">
 
+      <div class="card-content">
 
-  // ROTATING STUDIO VIDEOS
+        <h3>
+          ${article.title}
+        </h3>
 
-  let videos = [
+        <p>
+          ${article.description}
+        </p>
 
-    "assets/video1.mp4",
+      </div>
 
-    "assets/video2.mp4",
+    </div>
 
-    "assets/video3.mp4"
+    `).join("");
 
-  ];
+  }
 
-  let current = 0;
+  generateNews("world-news", "world");
+  generateNews("usa-news", "usa");
+  generateNews("europe-news", "europe");
+  generateNews("africa-news", "africa");
+  generateNews("business-news", "business");
+  generateNews("tech-news", "technology");
 
-  const heroVideo =
-  document.getElementById("heroVideo");
+  // ===============================
+  // SPONSORED ADVERTS
+  // ===============================
 
-  setInterval(() => {
+  const advertSection =
+  document.getElementById("sponsored-adverts");
 
-    current++;
+  if(newsData.sponsoredAdverts){
 
-    if(current >= videos.length){
+    advertSection.innerHTML =
+    newsData.sponsoredAdverts.map(ad => `
 
-      current = 0;
+    <div class="sponsored-ad">
 
-    }
+      <div class="sponsored-label">
+        SPONSORED ADVERT
+      </div>
 
-    heroVideo.src =
-    videos[current];
+      <div class="sponsored-content">
 
-  },15000);
+        <img src="${ad.image}"
+        alt="${ad.title}">
+
+        <div class="sponsored-text">
+
+          <h2>
+            ${ad.title}
+          </h2>
+
+          <h4>
+            ${ad.subtitle || ""}
+          </h4>
+
+          <p>
+            ${ad.description}
+          </p>
+
+          ${
+          ad.products
+          ?
+          ad.products.map(product => `
+
+          <div class="product-line">
+
+            <strong>
+              ${product.name}
+            </strong>
+
+            <br>
+
+            Big: ${product.big}
+            |
+            Small: ${product.small}
+
+          </div>
+
+          `).join("")
+          :
+          ""
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+    `).join("");
+
+  }
+
+  // ===============================
+  // BREAKING NEWS HISTORY
+  // ===============================
+
+  const historyContainer =
+  document.querySelector(".history-line");
+
+  if(historyContainer && newsData.breakingHistory){
+
+    historyContainer.innerHTML =
+
+    newsData.breakingHistory.map(item => `
+
+    <div class="history-item">
+
+      ${item}
+
+    </div>
+
+    `).join("");
+
+  }
 
 })
 
-.catch(error => {
+// ===============================
+// VIDEO UNMUTE SYSTEM
+// ===============================
 
-  console.log("News loading error:", error);
+const video =
+document.getElementById('heroVideo');
+
+const muteButton =
+document.getElementById('mute-button');
+
+if(video){
+
+video.muted = true;
+
+muteButton.addEventListener('click', () => {
+
+  if(video.muted){
+
+    video.muted = false;
+
+    video.volume = 1;
+
+    muteButton.textContent = "Mute";
+
+  }else{
+
+    video.muted = true;
+
+    muteButton.textContent = "Unmute";
+
+  }
 
 });
+
+}
+
+// ===============================
+// AUTO VIDEO ROTATION
+// ===============================
+
+const videos = [
+
+  "assets/video1.mp4",
+  "assets/video2.mp4",
+  "assets/video3.mp4"
+
+];
+
+let currentVideo = 0;
+
+setInterval(() => {
+
+  currentVideo++;
+
+  if(currentVideo >= videos.length){
+
+    currentVideo = 0;
+
+  }
+
+  if(video){
+
+    video.src = videos[currentVideo];
+
+  }
+
+}, 25000);

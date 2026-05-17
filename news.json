@@ -78,34 +78,48 @@
 
   ],
 
-  "sponsoredAdvert": {
+  "sponsoredAdverts":[
 
-    "title": "FARM TO KITCHEN 🌶️",
-    "subtitle": "Freshly Ground Spices — No Additives!",
-    "description": "Taste the difference in every bite with premium freshly ground spice blends prepared for authentic flavor and healthy cooking.",
+  {
+    "title":"Stonebreaker Bitter Spirit & Herbal Mixture",
 
-    "products": [
+    "subtitle":"Health Promotion & Therapy Support",
+
+    "description":"Stonebreaker Bitter Spirit and Herbal Mixture helps stimulate the immune system, supports the body against internal infections, assists body cleansing, supports healthy sugar levels, and helps dissolve kidney stones and gallstones naturally.",
+
+    "image":"assets/stonebreaker.jpg"
+  },
+
+  {
+    "title":"FARM TO KITCHEN 🌶️",
+
+    "subtitle":"Freshly Ground Spices — No Additives!",
+
+    "description":"Taste the difference in every bite with premium freshly ground spice blends prepared for authentic flavor and healthy cooking.",
+
+    "products":[
 
       {
-        "name": "🥩 Exotic Beef Blend",
-        "big": "4K",
-        "small": "2K"
+        "name":"🥩 Exotic Beef Blend",
+        "big":"4K",
+        "small":"2K"
       },
 
       {
-        "name": "🍛 Classic Curry",
-        "big": "3K",
-        "small": "1,500"
+        "name":"🍛 Classic Curry",
+        "big":"3K",
+        "small":"1,500"
       },
 
       {
-        "name": "✨ Gargajiya Masala",
-        "big": "3K",
-        "small": "1,500"
+        "name":"✨ Gargajiya Masala",
+        "big":"3K",
+        "small":"1,500"
       }
 
     ],
 
-    "image": "assets/spices.jpg"
+    "image":"assets/spices.jpg"
   }
-}
+
+]

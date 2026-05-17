@@ -1,125 +1,132 @@
 {
+  "hero": {
+    "title": "Morning Global News",
+    "description": "Breaking overnight developments and international updates from around the world"
+  },
+
   "breaking": [
-    "🔴 US and China continue diplomatic monitoring following recent high-level summit talks",
-    "🔴 Middle East tensions and security concerns remain under close international observation tonight",
-    "🔴 European governments continue emergency economic consultations amid inflation pressure",
-    "🔴 International health agencies sustain global hantavirus surveillance operations",
-    "🔴 Severe flooding and climate emergencies continue affecting parts of Asia and Australia",
-    "🔴 Oil prices and global markets remain volatile amid geopolitical uncertainty",
-    "🔴 Nigeria political consultations intensify ahead of election preparations",
-    "🔴 AI expansion and cybersecurity concerns continue dominating international technology discussions"
+    "🔴 International diplomatic negotiations continue amid rising geopolitical pressure",
+    "🔴 Global health agencies sustain active hantavirus surveillance operations",
+    "🔴 US, European and Middle East security developments continue dominating headlines",
+    "🔴 Oil prices and global financial markets remain volatile this morning",
+    "🔴 Severe flooding and climate emergencies continue affecting Asia and Australia",
+    "🔴 Nigeria political consultations intensify ahead of election campaigns",
+    "🔴 AI, cyber warfare and digital security remain major global concerns",
+    "🔴 International transportation and energy sectors remain under economic pressure"
   ],
+
+  "breakingHistory": [
+
+    "🌍 International Diplomacy Updates Continue Across Multiple Continents",
+
+    "🦠 Global Hantavirus Monitoring Operations Expanded",
+
+    "⚡ Rising Oil Prices Continue Affecting Global Markets",
+
+    "🗳 Election Campaign Activities Intensify Worldwide",
+
+    "🌊 Flooding And Climate Emergencies Affect Asia And Australia",
+
+    "💻 Cybersecurity And AI Competition Accelerate Globally"
+
+  ],
+
+  "featured": {
+
+    "title": "Global Leaders Continue Strategic Talks Amid Economic Uncertainty",
+
+    "content": "Governments and international organizations resumed high-level consultations early this morning as geopolitical tensions, economic instability and energy concerns continue affecting markets and public confidence around the world. Analysts say leaders are attempting to stabilize international trade and reduce risks linked to regional conflicts and inflation pressure.",
+
+    "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop"
+  },
 
   "articles": [
 
     {
       "category": "world",
-      "title": "Late-Night Diplomatic Consultations Continue As Global Tensions Affect Markets And Security",
+      "title": "Morning Diplomatic Consultations Continue Around The Globe",
       "description": "International leaders continue strategic negotiations over security and economic stability.",
-      "content": "Governments and international organizations continued high-level diplomatic consultations late tonight as geopolitical tensions remained one of the dominant concerns affecting global economic confidence and international security systems. Analysts say leaders are attempting to reduce instability capable of disrupting energy supplies, transportation routes and international trade. Financial markets remain cautious while investors continue monitoring developments linked to inflation, migration pressure and regional security concerns across multiple continents.",
+      "content": "Governments across multiple continents resumed strategic consultations this morning as global tensions continued affecting trade, transportation and international security systems.",
       "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop"
     },
 
     {
       "category": "usa",
-      "title": "US Political And Economic Pressure Continue Dominating National Discussions Tonight",
-      "description": "Immigration, inflation and cybersecurity remain central concerns across America.",
-      "content": "Political debate across the United States remained highly active late tonight as lawmakers and campaign strategists intensified discussions surrounding immigration reform, fuel prices, inflation and national security. Federal authorities also continue investigating cyberattacks targeting fuel infrastructure systems believed to involve foreign-linked hackers. Analysts say rising living costs and economic uncertainty continue shaping political narratives ahead of future election campaigns nationwide.",
+      "title": "US Political And Economic Concerns Continue Dominating National Discussions",
+      "description": "Inflation, immigration and cybersecurity remain key concerns this morning.",
+      "content": "Political debate across the United States remained highly active this morning as lawmakers intensified discussions surrounding fuel prices, economic pressure and national security.",
       "image": "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=1200&auto=format&fit=crop"
     },
 
     {
-      "category": "canada",
-      "title": "Canada Strengthens Economic And Border Monitoring Amid Global Uncertainty",
-      "description": "Canadian officials continue reviewing economic resilience and public security measures.",
-      "content": "Canadian authorities continued economic and security consultations tonight as international instability and global market volatility remain major concerns affecting trade and national preparedness. Officials are also maintaining active cooperation with international health agencies regarding ongoing hantavirus surveillance operations linked to international travel. Analysts say Canada continues focusing on economic resilience, energy security and immigration management amid growing global uncertainty.",
-      "image": "https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1200&auto=format&fit=crop"
-    },
-
-    {
-      "category": "middleeast",
-      "title": "Middle East Security Developments Continue Drawing International Attention",
-      "description": "Regional tensions remain a major focus for international diplomacy and energy markets.",
-      "content": "Middle East security developments remained under close international observation tonight as governments continued monitoring regional tensions capable of affecting global energy markets and international diplomacy. Analysts warn that instability in the region may continue influencing oil prices, transportation systems and international trade confidence. Diplomatic efforts involving multiple international actors remain ongoing as leaders attempt to prevent further escalation.",
-      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop"
-    },
-
-    {
       "category": "europe",
-      "title": "Europe And UK Continue Economic And Social Stability Discussions Tonight",
-      "description": "Inflation, energy costs and social tensions remain key concerns across the region.",
-      "content": "European and British leaders continued economic consultations tonight as inflation, energy-related costs and social pressures remained major concerns affecting households and industries throughout the region. Political discussions surrounding migration, public security and economic recovery also continue shaping national debates across several European countries. Economists warn that weak consumer confidence and rising operational costs may continue slowing economic recovery efforts in parts of Europe and the United Kingdom.",
+      "title": "Europe Continues Emergency Economic Consultations",
+      "description": "Energy costs and inflation remain major concerns across the region.",
+      "content": "European governments and financial institutions continued economic consultations this morning as inflation and operational costs remained under close review.",
       "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
     },
 
     {
       "category": "africa",
-      "title": "Nigeria Political Consultations And Economic Reforms Continue Nationwide",
-      "description": "Political momentum grows ahead of major election preparations.",
-      "content": "Political consultations across Nigeria remained highly active tonight as parties, regional stakeholders and influential political figures expanded strategic meetings ahead of major election campaigns. Public discussions continue focusing on insecurity, fuel supply, economic reforms, youth employment and infrastructure development. Analysts say coalition negotiations and shifting political alliances are becoming increasingly important as parties prepare for future nationwide contests.",
+      "title": "Nigeria Political Momentum Continues Growing Nationwide",
+      "description": "Election preparations and coalition talks remain highly active.",
+      "content": "Political consultations across Nigeria intensified this morning as parties and regional stakeholders expanded strategic meetings ahead of major campaigns.",
       "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
     },
 
     {
-      "category": "asia",
-      "title": "Flooding And Climate Emergencies Continue Affecting Parts Of Asia And Australia",
-      "description": "Authorities maintain emergency operations amid severe weather disruptions.",
-      "content": "Emergency response agencies across Asia and Australia continued managing flooding, landslides and transportation disruptions tonight following severe weather events affecting residential communities and public infrastructure. Governments are increasing disaster preparedness operations while environmental experts warn that repeated climate emergencies may continue affecting food supply chains, insurance systems and transportation networks globally.",
-      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
-    },
-
-    {
       "category": "technology",
-      "title": "Artificial Intelligence And Cybersecurity Competition Continue Accelerating Worldwide",
-      "description": "Governments and technology firms intensify investment into digital systems.",
-      "content": "Technology companies and government agencies across North America, Europe and Asia continued increasing investments into artificial intelligence systems, cloud computing and cybersecurity infrastructure tonight. Analysts say competition surrounding advanced digital innovation and cyber warfare preparedness is intensifying rapidly as nations attempt to strengthen economic competitiveness and technological influence. Policymakers also continue discussing misinformation, cybercrime and AI regulation amid growing concern about the impact of emerging technologies on global society.",
+      "title": "Artificial Intelligence And Cybersecurity Investments Continue Accelerating",
+      "description": "Global competition over digital technology continues intensifying.",
+      "content": "Technology firms and governments across North America, Europe and Asia continued increasing investment into AI and cybersecurity systems this morning.",
       "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop"
     }
 
   ],
 
-  "sponsoredAdverts":[
+  "sponsoredAdverts": [
 
-  {
-    "title":"Stonebreaker Bitter Spirit & Herbal Mixture",
+    {
+      "title":"Stonebreaker Bitter Spirit & Herbal Mixture",
 
-    "subtitle":"Health Promotion & Therapy Support",
+      "subtitle":"Health Promotion & Therapy Support",
 
-    "description":"Stonebreaker Bitter Spirit and Herbal Mixture helps stimulate the immune system, supports the body against internal infections, assists body cleansing, supports healthy sugar levels, and helps dissolve kidney stones and gallstones naturally.",
+      "description":"Stonebreaker Bitter Spirit and Herbal Mixture helps stimulate the immune system, supports the body against internal infections, assists body cleansing, supports healthy sugar levels, and helps dissolve kidney stones and gallstones naturally.",
 
-    "image":"assets/stonebreaker.jpg"
-  },
+      "image":"assets/stonebreaker.jpg"
+    },
 
-  {
-    "title":"FARM TO KITCHEN 🌶️",
+    {
+      "title":"FARM TO KITCHEN 🌶️",
 
-    "subtitle":"Freshly Ground Spices — No Additives!",
+      "subtitle":"Freshly Ground Spices — No Additives!",
 
-    "description":"Taste the difference in every bite with premium freshly ground spice blends prepared for authentic flavor and healthy cooking.",
+      "description":"Taste the difference in every bite with premium freshly ground spice blends prepared for authentic flavor and healthy cooking.",
 
-    "products":[
+      "products":[
 
-      {
-        "name":"🥩 Exotic Beef Blend",
-        "big":"4K",
-        "small":"2K"
-      },
+        {
+          "name":"🥩 Exotic Beef Blend",
+          "big":"4K",
+          "small":"2K"
+        },
 
-      {
-        "name":"🍛 Classic Curry",
-        "big":"3K",
-        "small":"1,500"
-      },
+        {
+          "name":"🍛 Classic Curry",
+          "big":"3K",
+          "small":"1,500"
+        },
 
-      {
-        "name":"✨ Gargajiya Masala",
-        "big":"3K",
-        "small":"1,500"
-      }
+        {
+          "name":"✨ Gargajiya Masala",
+          "big":"3K",
+          "small":"1,500"
+        }
 
-    ],
+      ],
 
-    "image":"assets/spices.jpg"
-  }
+      "image":"assets/spices.jpg"
+    }
 
-]
+  ]
+}

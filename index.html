@@ -13,7 +13,7 @@ Radiant Waves Media
 </title>
 
 <link rel="stylesheet"
-href="./style.css?v=1000">
+href="./style.css?v=1100">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -60,6 +60,12 @@ Gateway to Your World News — Connecting You to the World
 <a href="#business">Business</a>
 
 <a href="#technology">Technology</a>
+
+<a href="#top-stories">Top Stories</a>
+
+<a href="#archives">Archives</a>
+
+<a href="#live-tv">Live TV</a>
 
 <a href="#birthday-wall">Birthdays</a>
 
@@ -182,7 +188,7 @@ Top Stories Of The Week
 
 </section>
 
-<!-- BREAKING HISTORY -->
+<!-- BREAKING NEWS HISTORY -->
 
 <section id="breaking-history">
 
@@ -193,6 +199,95 @@ Breaking News History
 </h2>
 
 <div id="history-container">
+
+</div>
+
+</section>
+
+<!-- NEWS ARCHIVE -->
+
+<section id="archives">
+
+<h2 class="section-title">
+
+Previous News Archives
+
+</h2>
+
+<div class="archive-box">
+
+<div class="archive-card">
+
+<h3>
+Morning News
+</h3>
+
+<p>
+Daily morning global headlines and updates.
+</p>
+
+</div>
+
+<div class="archive-card">
+
+<h3>
+Midday News
+</h3>
+
+<p>
+International afternoon updates and developments.
+</p>
+
+</div>
+
+<div class="archive-card">
+
+<h3>
+Evening News
+</h3>
+
+<p>
+Prime-time worldwide reports and analyses.
+</p>
+
+</div>
+
+<div class="archive-card">
+
+<h3>
+Late Night News
+</h3>
+
+<p>
+Overnight breaking stories and global events.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LIVE TV -->
+
+<section id="live-tv">
+
+<h2 class="section-title">
+
+Radiant Waves Live TV
+
+</h2>
+
+<div class="live-tv-box">
+
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+frameborder="0"
+allowfullscreen>
+
+</iframe>
 
 </div>
 
@@ -213,12 +308,105 @@ Birthday Wall 🎂
 <div class="birthday-card">
 
 <h3>
-Happy Birthday
+
+Celebrate With Radiant Waves Media
+
 </h3>
 
 <p>
 
-Celebrate your loved ones with Radiant Waves Media Birthday Wall.
+Send birthday greetings, anniversaries, memorials and celebration messages to loved ones.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT / PUBLICITY -->
+
+<section id="contact-us">
+
+<h2 class="section-title">
+
+Contact Radiant Waves Media
+
+</h2>
+
+<div class="contact-box">
+
+<div class="contact-card">
+
+<h3>
+📢 Advert & Publicity
+</h3>
+
+<p>
+
+Promote your business, products, services, political campaigns, church programs and special events.
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+🎂 Birthday Greetings
+</h3>
+
+<p>
+
+Celebrate birthdays, anniversaries and special occasions live on our platform.
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+⚖ Legal & Official Notices
+</h3>
+
+<p>
+
+Publish legal notices, public announcements and official awareness campaigns.
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+📱 Reach Us
+</h3>
+
+<p>
+
+WhatsApp:
+
+<a href="https://wa.me/33621613149"
+target="_blank">
+
++33 6 21 61 31 49
+
+</a>
+
+</p>
+
+<p>
+
+Email:
+
+<a href="mailto:radiantwave2022@gmail.com">
+
+radiantwave2022@gmail.com
+
+</a>
 
 </p>
 
@@ -267,44 +455,47 @@ type="text"
 name="business"
 placeholder="Business Name">
 
+<select name="service">
+
+<option>
+Advert Placement
+</option>
+
+<option>
+Birthday Greeting
+</option>
+
+<option>
+Publicity
+</option>
+
+<option>
+Legal Notice
+</option>
+
+<option>
+Event Promotion
+</option>
+
+<option>
+Memorial Message
+</option>
+
+</select>
+
 <textarea
 name="message"
-placeholder="Advert Details / Birthday Greeting"
+placeholder="Write Full Details Here..."
 rows="6"
 required></textarea>
 
 <button type="submit">
 
-Submit Advert
+Submit Request
 
 </button>
 
 </form>
-
-</div>
-
-</section>
-
-<!-- LIVE TV -->
-
-<section id="live-tv">
-
-<h2 class="section-title">
-
-Radiant Waves Live TV
-
-</h2>
-
-<div class="live-tv-box">
-
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
-frameborder="0"
-allowfullscreen>
-
-</iframe>
 
 </div>
 
@@ -470,7 +661,7 @@ target="_blank">
 
 <!-- MAIN SCRIPT -->
 
-<script src="./script.js?v=1000"></script>
+<script src="./script.js?v=1100"></script>
 
 <!-- VIDEO SOUND FIX -->
 
@@ -490,7 +681,7 @@ video.volume = 1.0;
 
 video.play();
 
-/* ENABLE SOUND */
+/* SOUND BUTTON */
 
 soundButton.addEventListener(
 "click",
@@ -509,18 +700,16 @@ soundButton.innerHTML =
 
 }catch(error){
 
-alert(
-"Tap again to enable sound on this device."
-);
+console.log(error);
 
 }
 
 }
 );
 
-/* MOBILE TOUCH */
+/* AUTO ENABLE SOUND */
 
-document.addEventListener(
+document.body.addEventListener(
 "touchstart",
 async () => {
 
@@ -541,9 +730,7 @@ soundButton.innerHTML =
 { once:true }
 );
 
-/* DESKTOP CLICK */
-
-document.addEventListener(
+document.body.addEventListener(
 "click",
 async () => {
 

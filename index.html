@@ -2,282 +2,163 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radiant Waves Media</title>
-  <link rel="stylesheet" href="./style.css?v=500">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Radiant Waves Media
+</title>
+
+<link rel="stylesheet"
+href="./style.css?v=900">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Radiant Waves Media">
-      <div>
-        <h1>RADIANT WAVES MEDIA</h1>
-        <p class="header-slogan">
-          Gateway to Your World News — Connecting You to the World
-        </p>
-      </div>
-    </div>
-    <nav>
+<!-- HEADER -->
 
-  <a href="#world">World</a>
+<header>
 
-  <a href="#usa">USA</a>
+<div class="logo">
 
-  <a href="#europe">Europe</a>
+<img src="logo.png"
+alt="Radiant Waves Media">
 
-  <a href="#africa">Africa</a>
+<div>
 
-  <a href="#business">Business</a>
+<h1>
+RADIANT WAVES MEDIA
+</h1>
 
-  <a href="#technology">Technology</a>
+<p class="header-slogan">
 
-  <a href="#archives">Archives</a>
+Gateway to Your World News — Connecting You to the World
 
-  <a href="#birthday-wall">Birthdays</a>
+</p>
 
-  <a href="#top-stories">Top Stories</a>
+</div>
 
-  <a href="#live-tv">Live TV</a>
+</div>
 
-  <a href="#adverts">Adverts</a>
+<nav>
 
-  <a href="#contact">Contact</a>
+<a href="#world">World</a>
+
+<a href="#usa">USA</a>
+
+<a href="#europe">Europe</a>
+
+<a href="#africa">Africa</a>
+
+<a href="#business">Business</a>
+
+<a href="#technology">Technology</a>
 
 </nav>
-  </header>
 
-  <!-- BREAKING NEWS TICKER -->
-  <div class="ticker-wrap">
-    <div class="ticker" id="breaking-ticker">
-      Loading Breaking News...
-    </div>
-  </div>
+</header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-video">
-    <video id="heroVideo" autoplay loop playsinline>
-      <source src="assets/video1.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="live-badge">🔴 LIVE</div>
-      <h1 id="hero-title">Global Breaking News</h1>
-      <p id="hero-desc">Live updates from around the globe</p>
-      <div class="hero-scroll">
-        <marquee id="hero-marquee">Loading headlines...</marquee>
-      </div>
-    </div>
-    <button id="mute-button" class="mute-button">Unmute</button>
-  </section>
-<!-- SPONSORED ADVERT -->
+<!-- BREAKING NEWS -->
 
-<section id="sponsored-adverts"
-class="sponsored-adverts-wrap">
+<div class="ticker-wrap">
+
+<div class="ticker"
+id="breaking-ticker">
+
+Loading Breaking News...
+
+</div>
+
+</div>
+
+<!-- HERO VIDEO -->
+
+<section class="hero-video">
+
+<video
+id="heroVideo"
+autoplay
+loop
+playsinline
+webkit-playsinline
+preload="auto">
+
+<source
+src="assets/video1.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<div class="live-badge">
+
+🔴 LIVE
+
+</div>
+
+<h1 id="hero-title">
+
+Global Breaking News
+
+</h1>
+
+<p id="hero-desc">
+
+Live updates from around the globe
+
+</p>
+
+<div class="hero-scroll">
+
+<marquee id="hero-marquee">
+
+Loading headlines...
+
+</marquee>
+
+</div>
+
+<button id="sound-button"
+class="mute-button">
+
+🔊 ENABLE SOUND
+
+</button>
+
+</div>
+
+</section>
+
+<!-- FEATURED NEWS -->
+
+<section class="featured-news"
+id="featured-news">
 
 </section>
 
-  <div class="sponsored-label">
-    SPONSORED HEALTH PROMOTION
-  </div>
+<!-- SPONSORED ADVERTS -->
 
-  <div class="sponsored-content">
+<section id="sponsored-adverts-section">
 
-    <img src="assets/stonebreaker.jpg"
-    alt="Stonebreaker Bitter Spirit">
+<h2 class="section-title">
 
-    <div class="sponsored-text">
+Sponsored Adverts
 
-      <h2>
-        Stonebreaker Bitter Spirit & Herbal Mixture
-      </h2>
+</h2>
 
-      <p>
-        Stonebreaker Bitter Spirit and Herbal Mixture
-        is specially formulated for health promotion
-        and therapy support.
-      </p>
+<div id="sponsored-adverts">
 
-      <p>
-        It helps stimulate the immune system,
-        supports the body against internal infections,
-        assists body cleansing,
-        supports healthy sugar levels,
-        and helps dissolve kidney stones
-        and gallstones naturally.
-      </p>
-
-      <p>
-        Suitable for wellness support and body detoxification.
-      </p>
-
-      <a href="tel:+2349069350523"
-      class="advert-btn">
-        Contact For Orders
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-  <!-- FEATURED NEWS -->
-  <section class="featured-news" id="featured-news">
-    <!-- Featured content will be injected by script.js -->
-  </section>
-
-  <!-- WORLD NEWS -->
-  <section id="world">
-    <h2 class="section-title">World News</h2>
-    <div class="news-grid" id="world-news"></div>
-  </section>
-
-  <!-- USA NEWS -->
-  <section id="usa">
-    <h2 class="section-title">USA</h2>
-    <div class="news-grid" id="usa-news"></div>
-  </section>
-
-  <!-- EUROPE NEWS -->
-  <section id="europe">
-    <h2 class="section-title">Europe</h2>
-    <div class="news-grid" id="europe-news"></div>
-  </section>
-
-  <!-- AFRICA NEWS -->
-  <section id="africa">
-    <h2 class="section-title">Africa</h2>
-    <div class="news-grid" id="africa-news"></div>
-  </section>
-
-  <!-- BUSINESS NEWS -->
-  <section id="business">
-    <h2 class="section-title">Business</h2>
-    <div class="news-grid" id="business-news"></div>
-  </section>
-
-  <!-- TECHNOLOGY NEWS -->
-  <section id="technology">
-    <h2 class="section-title">Technology</h2>
-    <div class="news-grid" id="tech-news"></div>
-  </section>
-
-  <!-- PUBLICITY / ADVERT SECTION -->
-
-<section class="publicity-section">
-
-  <h2 class="section-title">
-    Publicity • Advert • Birthday Greetings
-  </h2>
-
-  <div class="publicity-grid">
-
-    <div class="public-card">
-      <h3>🎉 Birthday Greetings</h3>
-
-      <p>
-        Celebrate birthdays, anniversaries and
-        special occasions live on Radiant Waves Media.
-      </p>
-    </div>
-
-    <div class="public-card">
-      <h3>📢 Business Advertisement</h3>
-
-      <p>
-        Promote your products, business and services
-        to audiences around the world.
-      </p>
-    </div>
-
-    <div class="public-card">
-      <h3>⚖️ Public Notices</h3>
-
-      <p>
-        Publish awareness campaigns, announcements
-        and legal notices professionally.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- CONTACT OPTIONS -->
-
-  <div class="advert-contact-box">
-
-    <h2 class="section-title">
-      Submit Advert Request
-    </h2>
-
-    <p class="advert-intro">
-      Send your advert, birthday greetings,
-      publicity or announcements directly
-      through Email or WhatsApp.
-    </p>
-
-    <div class="advert-buttons">
-
-      <!-- EMAIL -->
-
-      <a
-      href="mailto:radiantwave2022@gmail.com?subject=Advert Request - Radiant Waves Media"
-      class="email-btn">
-
-      📧 Send Through Email
-
-      </a>
-
-      <!-- WHATSAPP -->
-
-      <a
-      href="https://wa.me/33621613149?text=Hello%20Radiant%20Waves%20Media%2C%20I%20want%20to%20place%20an%20advert."
-      target="_blank"
-      class="whatsapp-btn">
-
-      💬 Send Through WhatsApp
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-  <!-- NEWS ARCHIVE -->
-
-<section id="archives">
-
-  <h2 class="section-title">
-    Previous News Archive
-  </h2>
-
-  <div class="archive-grid">
-
-    <div class="archive-card">
-      <h3>🌅 Morning News</h3>
-      <p>Daily global morning updates and headlines.</p>
-    </div>
-
-    <div class="archive-card">
-      <h3>☀ Midday News</h3>
-      <p>Afternoon breaking developments around the world.</p>
-    </div>
-
-    <div class="archive-card">
-      <h3>🌆 Evening News</h3>
-      <p>Evening political, business and international reports.</p>
-    </div>
-
-    <div class="archive-card">
-      <h3>🌙 Night News</h3>
-      <p>Late-night global updates and special reports.</p>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -285,109 +166,31 @@ class="sponsored-adverts-wrap">
 
 <section id="top-stories">
 
-  <h2 class="section-title">
-    Top Stories Of The Week
-  </h2>
+<h2 class="section-title">
 
-  <div class="top-story-banner">
+Top Stories Of The Week
 
-    <h1>
-      🌍 Trending Global Headlines
-    </h1>
+</h2>
 
-    <p>
-      Most viewed and editor-selected stories
-      across Radiant Waves Media.
-    </p>
+<div id="top-stories-container">
 
-  </div>
+</div>
 
 </section>
 
-<!-- BIRTHDAY WALL -->
-
-<section id="birthday-wall">
-
-  <h2 class="section-title">
-    Birthday Wall
-  </h2>
-
-  <div class="birthday-grid">
-
-    <div class="birthday-card">
-      <h3>🎂 Happy Birthday</h3>
-
-      <p>
-        Celebrate your loved ones live
-        on Radiant Waves Media.
-      </p>
-    </div>
-
-    <div class="birthday-card">
-      <h3>🎉 Anniversary Wishes</h3>
-
-      <p>
-        Special celebrations and memorable moments.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ADVERT ARCHIVE -->
-
-<section id="adverts">
-
-  <h2 class="section-title">
-    Sponsored Advert Archive
-  </h2>
-
-  <div class="advert-grid">
-
-    <div class="advert-card">
-
-      <h3>
-        Stonebreaker Bitter Spirit
-      </h3>
-
-      <p>
-        Herbal health promotion and body cleansing support.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- BREAKING NEWS HISTORY -->
+<!-- BREAKING HISTORY -->
 
 <section id="breaking-history">
 
-  <h2 class="section-title">
-    Breaking News History
-  </h2>
+<h2 class="section-title">
 
-  <div class="history-line">
+Breaking News History
 
-    <div class="history-item">
-      🌍 International Diplomacy Updates
-    </div>
+</h2>
 
-    <div class="history-item">
-      🦠 Hantavirus Monitoring
-    </div>
+<div id="history-container">
 
-    <div class="history-item">
-      ⚡ Global Market Volatility
-    </div>
-
-    <div class="history-item">
-      🗳 Election Developments
-    </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -395,118 +198,283 @@ class="sponsored-adverts-wrap">
 
 <section id="live-tv">
 
-  <h2 class="section-title">
-    Radiant Waves Live TV
-  </h2>
+<h2 class="section-title">
 
-  <div class="live-tv-box">
+Radiant Waves Live TV
 
-    <h1>
-      🔴 LIVE STREAM COMING SOON
-    </h1>
+</h2>
 
-    <p>
-      Future support for:
-      YouTube Live,
-      Facebook Live,
-      TikTok Live
-      and Direct Broadcasting.
-    </p>
+<div class="live-tv-box">
 
-  </div>
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+frameborder="0"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<!-- WORLD NEWS -->
+
+<section id="world">
+
+<h2 class="section-title">
+
+World News
+
+</h2>
+
+<div class="news-grid"
+id="world-news">
+
+</div>
 
 </section>
 
-<!-- ADMIN SECTION -->
+<!-- USA -->
 
-<section id="admin-preview">
+<section id="usa">
 
-  <h2 class="section-title">
-    Newsroom Admin System
-  </h2>
+<h2 class="section-title">
 
-  <div class="admin-grid">
+USA
 
-    <div class="admin-card">
-      Publish News
-    </div>
+</h2>
 
-    <div class="admin-card">
-      Upload Adverts
-    </div>
+<div class="news-grid"
+id="usa-news">
 
-    <div class="admin-card">
-      Approve Publicity
-    </div>
-
-    <div class="admin-card">
-      Edit Breaking News
-    </div>
-
-    <div class="admin-card">
-      Manage Categories
-    </div>
-
-    <div class="admin-card">
-      Archive Stories
-    </div>
-
-  </div>
+</div>
 
 </section>
+
+<!-- EUROPE -->
+
+<section id="europe">
+
+<h2 class="section-title">
+
+Europe
+
+</h2>
+
+<div class="news-grid"
+id="europe-news">
+
+</div>
+
+</section>
+
+<!-- AFRICA -->
+
+<section id="africa">
+
+<h2 class="section-title">
+
+Africa
+
+</h2>
+
+<div class="news-grid"
+id="africa-news">
+
+</div>
+
+</section>
+
+<!-- BUSINESS -->
+
+<section id="business">
+
+<h2 class="section-title">
+
+Business
+
+</h2>
+
+<div class="news-grid"
+id="business-news">
+
+</div>
+
+</section>
+
+<!-- TECHNOLOGY -->
+
+<section id="technology">
+
+<h2 class="section-title">
+
+Technology
+
+</h2>
+
+<div class="news-grid"
+id="tech-news">
+
+</div>
+
+</section>
+
 <!-- FOOTER -->
 
 <footer>
 
-  <h2>
-    Radiant Waves Media
-  </h2>
+<h2>
 
-  <p class="footer-slogan">
-    Connecting You Deeper To The World's Most Important Stories
-  </p>
+Radiant Waves Media
 
-  <div class="social">
+</h2>
 
-    <a href="https://facebook.com/Radiantwavesnews" target="_blank">
-      <i class="fab fa-facebook"></i>
-    </a>
+<p class="footer-slogan">
 
-    <a href="https://twitter.com/radiant13528995" target="_blank">
-      <i class="fab fa-x-twitter"></i>
-    </a>
+Connecting You Deeper to the World's Most Important Stories
 
-    <a href="https://youtube.com/@radiantwave=wv6j" target="_blank">
-      <i class="fab fa-youtube"></i>
-    </a>
+</p>
 
-    <a href="https://tiktok.com/@radiantwavesmedia" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
+<div class="social">
 
-  </div>
+<a href="https://facebook.com/Radiantwavesnews"
+target="_blank">
 
-  <p class="copyright">
-    © 2026 Radiant Waves Media
-  </p>
-  </footer>
+<i class="fab fa-facebook"></i>
 
-  <script src="./script.js?v=500">
-    
-  </script>
-    const video = document.getElementById('heroVideo');
-    const muteButton = document.getElementById('mute-button');
+</a>
 
-    muteButton.addEventListener('click', () => {
-      if (video.muted) {
-        video.muted = false;
-        muteButton.textContent = 'Mute';
-      } else {
-        video.muted = true;
-        muteButton.textContent = 'Unmute';
-      }
-    });
-  </script>
+<a href="https://twitter.com/radiant13528995"
+target="_blank">
+
+<i class="fab fa-x-twitter"></i>
+
+</a>
+
+<a href="https://youtube.com/@radiantwave=wv6j"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="https://tiktok.com/@radiantwavesmedia"
+target="_blank">
+
+<i class="fab fa-tiktok"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Radiant Waves Media
+
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script src="./script.js?v=900"></script>
+
+<!-- SOUND FIX -->
+
+<script>
+
+const video =
+document.getElementById("heroVideo");
+
+const soundButton =
+document.getElementById("sound-button");
+
+/* FORCE VIDEO SETTINGS */
+
+video.muted = true;
+
+video.volume = 1.0;
+
+video.play();
+
+/* ENABLE SOUND BUTTON */
+
+soundButton.addEventListener(
+"click",
+async () => {
+
+try{
+
+video.muted = false;
+
+video.volume = 1.0;
+
+await video.play();
+
+soundButton.innerHTML =
+"🔊 SOUND ON";
+
+}catch(error){
+
+alert(
+"Your browser blocked autoplay sound. Tap again to enable audio."
+);
+
+}
+
+}
+);
+
+/* AUTO ENABLE AFTER FIRST TOUCH */
+
+document.addEventListener(
+"touchstart",
+async () => {
+
+try{
+
+video.muted = false;
+
+video.volume = 1.0;
+
+await video.play();
+
+soundButton.innerHTML =
+"🔊 SOUND ON";
+
+}catch(e){}
+
+},
+{ once:true }
+);
+
+/* DESKTOP CLICK */
+
+document.addEventListener(
+"click",
+async () => {
+
+try{
+
+video.muted = false;
+
+video.volume = 1.0;
+
+await video.play();
+
+soundButton.innerHTML =
+"🔊 SOUND ON";
+
+}catch(e){}
+
+},
+{ once:true }
+);
+
+</script>
+
 </body>
 
 </html>

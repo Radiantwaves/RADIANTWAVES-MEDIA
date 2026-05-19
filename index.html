@@ -13,7 +13,7 @@ Radiant Waves Media
 </title>
 
 <link rel="stylesheet"
-href="./style.css?v=900">
+href="./style.css?v=1000">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -60,6 +60,10 @@ Gateway to Your World News — Connecting You to the World
 <a href="#business">Business</a>
 
 <a href="#technology">Technology</a>
+
+<a href="#birthday-wall">Birthdays</a>
+
+<a href="#advert-form">Advertise</a>
 
 </nav>
 
@@ -189,6 +193,93 @@ Breaking News History
 </h2>
 
 <div id="history-container">
+
+</div>
+
+</section>
+
+<!-- BIRTHDAY WALL -->
+
+<section id="birthday-wall">
+
+<h2 class="section-title">
+
+Birthday Wall 🎂
+
+</h2>
+
+<div class="birthday-container">
+
+<div class="birthday-card">
+
+<h3>
+Happy Birthday
+</h3>
+
+<p>
+
+Celebrate your loved ones with Radiant Waves Media Birthday Wall.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADVERT FORM -->
+
+<section id="advert-form">
+
+<h2 class="section-title">
+
+Advertise With Us
+
+</h2>
+
+<div class="advert-form-box">
+
+<form
+action="mailto:radiantwave2022@gmail.com"
+method="POST"
+enctype="text/plain">
+
+<input
+type="text"
+name="fullname"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<input
+type="text"
+name="whatsapp"
+placeholder="WhatsApp Number">
+
+<input
+type="text"
+name="business"
+placeholder="Business Name">
+
+<textarea
+name="message"
+placeholder="Advert Details / Birthday Greeting"
+rows="6"
+required></textarea>
+
+<button type="submit">
+
+Submit Advert
+
+</button>
+
+</form>
 
 </div>
 
@@ -377,11 +468,11 @@ target="_blank">
 
 </footer>
 
-<!-- SCRIPT -->
+<!-- MAIN SCRIPT -->
 
-<script src="./script.js?v=900"></script>
+<script src="./script.js?v=1000"></script>
 
-<!-- SOUND FIX -->
+<!-- VIDEO SOUND FIX -->
 
 <script>
 
@@ -391,7 +482,7 @@ document.getElementById("heroVideo");
 const soundButton =
 document.getElementById("sound-button");
 
-/* FORCE VIDEO SETTINGS */
+/* START VIDEO */
 
 video.muted = true;
 
@@ -399,7 +490,7 @@ video.volume = 1.0;
 
 video.play();
 
-/* ENABLE SOUND BUTTON */
+/* ENABLE SOUND */
 
 soundButton.addEventListener(
 "click",
@@ -419,7 +510,7 @@ soundButton.innerHTML =
 }catch(error){
 
 alert(
-"Your browser blocked autoplay sound. Tap again to enable audio."
+"Tap again to enable sound on this device."
 );
 
 }
@@ -427,7 +518,7 @@ alert(
 }
 );
 
-/* AUTO ENABLE AFTER FIRST TOUCH */
+/* MOBILE TOUCH */
 
 document.addEventListener(
 "touchstart",

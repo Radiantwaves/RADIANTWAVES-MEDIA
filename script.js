@@ -239,26 +239,40 @@ if(video){
 video.muted = true;
 
 muteButton.addEventListener('click', () => {
+soundButton.addEventListener(
+"click",
 
-  if(video.muted){
+async () => {
 
-    video.muted = false;
+try{
 
-    video.volume = 1;
+video.muted = false;
 
-    muteButton.textContent = "Mute";
+video.volume = 1.0;
 
-  }else{
+await video.play();
 
-    video.muted = true;
+/* FORCE MOBILE AUDIO */
 
-    muteButton.textContent = "Unmute";
+if(video.requestFullscreen){
 
-  }
-
-});
+video.requestFullscreen();
 
 }
+
+soundButton.innerHTML =
+"🔊 SOUND ON";
+
+}catch(error){
+
+alert(
+"Tap video again to enable sound"
+);
+
+}
+
+}
+);
 
 // ===============================
 // AUTO VIDEO ROTATION

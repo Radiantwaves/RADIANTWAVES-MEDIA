@@ -92,7 +92,9 @@ Loading Breaking News...
 
 <section class="hero-video">
 
-<<video
+<!-- VIDEO PLAYER -->
+
+<video
 id="heroVideo"
 autoplay
 muted
@@ -102,17 +104,23 @@ webkit-playsinline
 preload="auto">
 
 <source
+id="video-source"
 src="assets/video1.mp4"
 type="video/mp4">
+
 </video>
 
+<!-- DARK OVERLAY -->
+
 <div class="hero-overlay"></div>
+
+<!-- CONTENT -->
 
 <div class="hero-content">
 
 <div class="live-badge">
 
-🔴 LIVE
+🔴 LIVE NEWS
 
 </div>
 
@@ -128,6 +136,42 @@ Live updates from around the globe
 
 </p>
 
+<!-- VIDEO SELECTORS -->
+
+<div class="video-controls">
+
+<button onclick="changeVideo('assets/video1.mp4')">
+
+VIDEO 1
+
+</button>
+
+<button onclick="changeVideo('assets/video2.mp4')">
+
+VIDEO 2
+
+</button>
+
+<button onclick="changeVideo('assets/video3.mp4')">
+
+VIDEO 3
+
+</button>
+
+</div>
+
+<!-- SOUND BUTTON -->
+
+<button
+id="sound-button"
+class="mute-button">
+
+🔊 TAP FOR SOUND
+
+</button>
+
+<!-- BREAKING SCROLL -->
+
 <div class="hero-scroll">
 
 <marquee id="hero-marquee">
@@ -138,17 +182,9 @@ Loading headlines...
 
 </div>
 
-<button id="sound-button"
-class="mute-button">
-
-🔊 ENABLE SOUND
-
-</button>
-
 </div>
 
 </section>
-
 <!-- FEATURED NEWS -->
 
 <section class="featured-news"
@@ -754,15 +790,18 @@ document.getElementById("heroVideo");
 const soundButton =
 document.getElementById("sound-button");
 
+const source =
+document.getElementById("video-source");
+
 /* START VIDEO */
 
 video.muted = true;
 
-video.volume = 1.0;
+video.volume = 1;
 
 video.play();
 
-/* SOUND BUTTON */
+/* ENABLE SOUND */
 
 soundButton.addEventListener(
 "click",
@@ -772,47 +811,40 @@ try{
 
 video.muted = false;
 
-video.volume = 1.0;
+video.volume = 1;
 
 await video.play();
 
 soundButton.innerHTML =
 "🔊 SOUND ON";
+
+soundButton.style.background =
+"green";
 
 }catch(error){
 
-console.log(error);
+alert(
+"Tap again to enable sound"
+);
 
 }
 
 }
 );
 
-/* AUTO ENABLE SOUND */
+/* CHANGE VIDEOS */
 
-document.body.addEventListener(
-"touchstart",
-async () => {
+function changeVideo(videoFile){
 
-try{
+source.src = videoFile;
 
-video.muted = false;
+video.load();
 
-video.volume = 1.0;
+video.play();
 
-await video.play();
+}
 
-soundButton.innerHTML =
-"🔊 SOUND ON";
-
-}catch(e){}
-
-},
-{ once:true }
-);
-
-document.body.addEventListener(
-"click",
+</script>
 async () => {
 
 try{

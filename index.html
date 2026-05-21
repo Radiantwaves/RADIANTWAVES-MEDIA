@@ -797,21 +797,22 @@ document.getElementById("video-source");
 
 video.muted = true;
 
-video.volume = 1;
+video.volume = 1.0;
 
 video.play();
 
-/* ENABLE SOUND */
+/* SOUND BUTTON */
 
 soundButton.addEventListener(
 "click",
+
 async () => {
 
 try{
 
 video.muted = false;
 
-video.volume = 1;
+video.volume = 1.0;
 
 await video.play();
 
@@ -830,9 +831,10 @@ alert(
 }
 
 }
+
 );
 
-/* CHANGE VIDEOS */
+/* VIDEO SWITCHING */
 
 function changeVideo(videoFile){
 

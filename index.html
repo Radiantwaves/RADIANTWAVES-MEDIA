@@ -782,7 +782,7 @@ target="_blank">
 
 <!-- VIDEO SOUND FIX -->
 
-<script>
+<<script>
 
 const video =
 document.getElementById("heroVideo");
@@ -824,9 +824,7 @@ soundButton.style.background =
 
 }catch(error){
 
-alert(
-"Tap again to enable sound"
-);
+alert("Tap again to enable sound");
 
 }
 
@@ -834,7 +832,7 @@ alert(
 
 );
 
-/* VIDEO SWITCHING */
+/* VIDEO SWITCHER */
 
 function changeVideo(videoFile){
 
@@ -845,26 +843,6 @@ video.load();
 video.play();
 
 }
-
-</script>
-async () => {
-
-try{
-
-video.muted = false;
-
-video.volume = 1.0;
-
-await video.play();
-
-soundButton.innerHTML =
-"🔊 SOUND ON";
-
-}catch(e){}
-
-},
-{ once:true }
-);
 
 </script>
 

@@ -515,3 +515,36 @@ footer{
 }
 
 }
+/* VIDEO CONTROLS */
+
+.video-controls{
+
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:25px;
+
+}
+
+.video-controls button{
+
+background:red;
+color:white;
+border:none;
+padding:12px 22px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+border-radius:6px;
+
+transition:0.3s;
+
+}
+
+.video-controls button:hover{
+
+background:#ff0000;
+transform:scale(1.05);
+
+}

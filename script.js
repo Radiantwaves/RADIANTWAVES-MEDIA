@@ -225,24 +225,36 @@ fetch('news.json?v=' + new Date().getTime())
 })
 
 // ===============================
-// VIDEO UNMUTE SYSTEM
+// VIDEO SYSTEM
 // ===============================
 
 const video =
-document.getElementById('heroVideo');
+document.getElementById("heroVideo");
 
 const muteButton =
-document.getElementById('mute-button');
+document.getElementById("mute-button");
+
+/* START VIDEO */
 
 if(video){
 
 video.muted = true;
 
-muteButton.addEventListener('click', () => {
-soundButton.addEventListener(
+video.volume = 1.0;
+
+video.play().catch(() => {});
+
+}
+
+/* ENABLE SOUND */
+
+if(video && muteButton){
+
+muteButton.addEventListener(
+
 "click",
 
-async () => {
+async function(){
 
 try{
 
@@ -252,37 +264,33 @@ video.volume = 1.0;
 
 await video.play();
 
-/* FORCE MOBILE AUDIO */
-
-if(video.requestFullscreen){
-
-video.requestFullscreen();
-
-}
-
-soundButton.innerHTML =
+muteButton.innerHTML =
 "🔊 SOUND ON";
+
+muteButton.style.background =
+"green";
 
 }catch(error){
 
 alert(
-"Tap video again to enable sound"
+"Tap again to enable sound"
 );
 
 }
 
 }
+
 );
 
-// ===============================
-// AUTO VIDEO ROTATION
-// ===============================
+}
+
+/* AUTO VIDEO ROTATION */
 
 const videos = [
 
-  "assets/video1.mp4",
-  "assets/video2.mp4",
-  "assets/video3.mp4"
+"assets/video1.mp4",
+"assets/video2.mp4",
+"assets/video3.mp4"
 
 ];
 
@@ -290,18 +298,20 @@ let currentVideo = 0;
 
 setInterval(() => {
 
-  currentVideo++;
+currentVideo++;
 
-  if(currentVideo >= videos.length){
+if(currentVideo >= videos.length){
 
-    currentVideo = 0;
+currentVideo = 0;
 
-  }
+}
 
-  if(video){
+if(video){
 
-    video.src = videos[currentVideo];
+video.src = videos[currentVideo];
 
-  }
+video.play().catch(() => {});
+
+}
 
 }, 25000);

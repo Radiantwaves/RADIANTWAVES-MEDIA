@@ -248,8 +248,6 @@ video.play().catch(() => {});
 
 /* ENABLE SOUND */
 
-if(video && muteButton){
-
 muteButton.addEventListener(
 
 "click",

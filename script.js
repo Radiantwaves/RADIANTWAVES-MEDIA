@@ -258,11 +258,23 @@ async function(){
 
 try{
 
+/* FORCE USER INTERACTION */
+
 video.muted = false;
 
 video.volume = 1.0;
 
+/* IMPORTANT */
+
 await video.play();
+
+/* IOS + SAMSUNG FIX */
+
+video.controls = true;
+
+/* FORCE TAP */
+
+video.click();
 
 muteButton.innerHTML =
 "🔊 SOUND ON";
@@ -273,17 +285,13 @@ muteButton.style.background =
 }catch(error){
 
 alert(
-"Tap again to enable sound"
+"Your browser blocked autoplay sound. Tap the video controls directly."
 );
 
 }
 
 }
-
 );
-
-}
-
 /* AUTO VIDEO ROTATION */
 
 const videos = [

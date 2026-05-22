@@ -788,18 +788,25 @@ document.getElementById("video-source");
 
 /* START VIDEO */
 
+if(video){
+
 video.muted = true;
 
 video.volume = 1.0;
 
-video.play();
+video.play().catch(() => {});
 
-/* SOUND BUTTON */
+}
+
+/* ENABLE SOUND */
+
+if(soundButton){
 
 soundButton.addEventListener(
+
 "click",
 
-async () => {
+async function(){
 
 try{
 
@@ -817,7 +824,7 @@ soundButton.style.background =
 
 }catch(error){
 
-alert("Tap again to enable sound");
+console.log(error);
 
 }
 
@@ -825,20 +832,25 @@ alert("Tap again to enable sound");
 
 );
 
-/* VIDEO SWITCHER */
+}
+
+/* CHANGE VIDEOS */
 
 function changeVideo(videoFile){
+
+if(source){
 
 source.src = videoFile;
 
 video.load();
 
-video.play();
+video.play().catch(() => {});
+
+}
 
 }
 
 </script>
-
 </body>
 
 </html>

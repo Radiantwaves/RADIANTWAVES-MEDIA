@@ -58,7 +58,8 @@ fetch('news.json?v=' + new Date().getTime())
 
     <div class="featured-card">
 
-      <img src="${newsData.featured.image}"
+      <img
+      src="${newsData.featured.image}"
       alt="${newsData.featured.title}">
 
       <div>
@@ -96,11 +97,13 @@ fetch('news.json?v=' + new Date().getTime())
     );
 
     container.innerHTML =
+
     articles.map(article => `
 
     <div class="card">
 
-      <img src="${article.image}"
+      <img
+      src="${article.image}"
       alt="${article.title}">
 
       <div class="card-content">
@@ -135,20 +138,24 @@ fetch('news.json?v=' + new Date().getTime())
   const advertSection =
   document.getElementById("sponsored-adverts");
 
-  if(newsData.sponsoredAdverts){
+  if(advertSection && newsData.sponsoredAdverts){
 
     advertSection.innerHTML =
+
     newsData.sponsoredAdverts.map(ad => `
 
     <div class="sponsored-ad">
 
       <div class="sponsored-label">
+
         SPONSORED ADVERT
+
       </div>
 
       <div class="sponsored-content">
 
-        <img src="${ad.image}"
+        <img
+        src="${ad.image}"
         alt="${ad.title}">
 
         <div class="sponsored-text">
@@ -166,8 +173,11 @@ fetch('news.json?v=' + new Date().getTime())
           </p>
 
           ${
+
           ad.products
+
           ?
+
           ad.products.map(product => `
 
           <div class="product-line">
@@ -179,14 +189,19 @@ fetch('news.json?v=' + new Date().getTime())
             <br>
 
             Big: ${product.big}
+
             |
+
             Small: ${product.small}
 
           </div>
 
           `).join("")
+
           :
+
           ""
+
           }
 
         </div>
@@ -224,6 +239,15 @@ fetch('news.json?v=' + new Date().getTime())
 
 })
 
+.catch(error => {
+
+  console.log(
+    "News loading error:",
+    error
+  );
+
+});
+
 // ===============================
 // VIDEO SYSTEM
 // ===============================
@@ -238,65 +262,61 @@ document.getElementById("mute-button");
 
 if(video){
 
-video.muted = true;
+  video.muted = true;
 
-video.volume = 1.0;
+  video.volume = 1.0;
 
-video.play().catch(() => {});
+  video.play().catch(() => {});
 
 }
 
 /* ENABLE SOUND */
 
-muteButton.addEventListener(
+if(video && muteButton){
 
-"click",
+  muteButton.addEventListener(
 
-async function(){
+    "click",
 
-try{
+    async function(){
 
-/* FORCE USER INTERACTION */
+      try{
 
-video.muted = false;
+        video.muted = false;
 
-video.volume = 1.0;
+        video.volume = 1.0;
 
-/* IMPORTANT */
+        video.controls = true;
 
-await video.play();
+        await video.play();
 
-/* IOS + SAMSUNG FIX */
+        muteButton.innerHTML =
+        "🔊 SOUND ON";
 
-video.controls = true;
+        muteButton.style.background =
+        "green";
 
-/* FORCE TAP */
+      }catch(error){
 
-video.click();
+        alert(
+        "Tap video controls directly to enable sound."
+        );
 
-muteButton.innerHTML =
-"🔊 SOUND ON";
+      }
 
-muteButton.style.background =
-"green";
+    }
 
-}catch(error){
-
-alert(
-"Your browser blocked autoplay sound. Tap the video controls directly."
-);
+  );
 
 }
 
-}
-);
 /* AUTO VIDEO ROTATION */
 
 const videos = [
 
-"assets/video1.mp4",
-"assets/video2.mp4",
-"assets/video3.mp4"
+  "assets/video1.mp4",
+  "assets/video2.mp4",
+  "assets/video3.mp4"
 
 ];
 
@@ -304,20 +324,20 @@ let currentVideo = 0;
 
 setInterval(() => {
 
-currentVideo++;
+  currentVideo++;
 
-if(currentVideo >= videos.length){
+  if(currentVideo >= videos.length){
 
-currentVideo = 0;
+    currentVideo = 0;
 
-}
+  }
 
-if(video){
+  if(video){
 
-video.src = videos[currentVideo];
+    video.src = videos[currentVideo];
 
-video.play().catch(() => {});
+    video.play().catch(() => {});
 
-}
+  }
 
 }, 25000);

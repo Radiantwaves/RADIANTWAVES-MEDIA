@@ -1,9 +1,11 @@
 // ===============================
 // RADIANT WAVES MEDIA
-// COMPLETE SCRIPT.JS
+// PROFESSIONAL SCRIPT.JS
 // ===============================
 
-// LOAD JSON NEWS FILE
+// ===============================
+// LOAD NEWS JSON
+// ===============================
 
 fetch('news.json?v=' + new Date().getTime())
 
@@ -15,44 +17,72 @@ fetch('news.json?v=' + new Date().getTime())
   // HERO SECTION
   // ===============================
 
-  document.getElementById('hero-title').innerText =
-  newsData.hero.title;
+  const heroTitle =
+  document.getElementById("hero-title");
 
-  document.getElementById('hero-desc').innerText =
-  newsData.hero.description;
+  const heroDesc =
+  document.getElementById("hero-desc");
+
+  if(heroTitle){
+
+    heroTitle.innerText =
+    newsData.hero.title;
+
+  }
+
+  if(heroDesc){
+
+    heroDesc.innerText =
+    newsData.hero.description;
+
+  }
 
   // ===============================
-  // BREAKING NEWS TICKER
+  // BREAKING TICKER
   // ===============================
 
   const ticker =
-  document.getElementById('breaking-ticker');
+  document.getElementById("breaking-ticker");
 
-  ticker.innerHTML =
-  newsData.breaking.map(item =>
-  ` 🔴 ${item} `
-  ).join(" • ");
+  if(ticker){
+
+    ticker.innerHTML =
+
+    newsData.breaking.map(item =>
+
+    ` 🔴 ${item} `
+
+    ).join(" • ");
+
+  }
 
   // ===============================
   // HERO MARQUEE
   // ===============================
 
   const heroMarquee =
-  document.getElementById('hero-marquee');
+  document.getElementById("hero-marquee");
 
-  heroMarquee.innerHTML =
-  newsData.breaking.map(item =>
-  ` 🔴 ${item} `
-  ).join(" • ");
+  if(heroMarquee){
+
+    heroMarquee.innerHTML =
+
+    newsData.breaking.map(item =>
+
+    ` 🔴 ${item} `
+
+    ).join(" • ");
+
+  }
 
   // ===============================
   // FEATURED NEWS
   // ===============================
 
   const featuredContainer =
-  document.getElementById('featured-news');
+  document.getElementById("featured-news");
 
-  if(newsData.featured){
+  if(featuredContainer && newsData.featured){
 
     featuredContainer.innerHTML = `
 
@@ -81,7 +111,7 @@ fetch('news.json?v=' + new Date().getTime())
   }
 
   // ===============================
-  // GENERATE NEWS CARDS
+  // GENERATE NEWS
   // ===============================
 
   function generateNews(sectionId, category){
@@ -92,8 +122,11 @@ fetch('news.json?v=' + new Date().getTime())
     if(!container) return;
 
     const articles =
+
     newsData.articles.filter(article =>
+
     article.category === category
+
     );
 
     container.innerHTML =
@@ -183,7 +216,9 @@ fetch('news.json?v=' + new Date().getTime())
           <div class="product-line">
 
             <strong>
+
               ${product.name}
+
             </strong>
 
             <br>
@@ -215,11 +250,11 @@ fetch('news.json?v=' + new Date().getTime())
   }
 
   // ===============================
-  // BREAKING NEWS HISTORY
+  // BREAKING HISTORY
   // ===============================
 
   const historyContainer =
-  document.querySelector(".history-line");
+  document.getElementById("history-container");
 
   if(historyContainer && newsData.breakingHistory){
 
@@ -242,8 +277,11 @@ fetch('news.json?v=' + new Date().getTime())
 .catch(error => {
 
   console.log(
-    "News loading error:",
+
+    "News Loading Error:",
+
     error
+
   );
 
 });
@@ -255,10 +293,15 @@ fetch('news.json?v=' + new Date().getTime())
 const video =
 document.getElementById("heroVideo");
 
-const muteButton =
-document.getElementById("mute-button");
+const soundButton =
+document.getElementById("sound-button");
 
-/* START VIDEO */
+const videoSource =
+document.getElementById("video-source");
+
+// ===============================
+// START VIDEO MUTED
+// ===============================
 
 if(video){
 
@@ -266,15 +309,21 @@ if(video){
 
   video.volume = 1.0;
 
-  video.play().catch(() => {});
+  video.play().catch(() => {
+
+    console.log("Autoplay blocked");
+
+  });
 
 }
 
-/* ENABLE SOUND */
+// ===============================
+// ENABLE SOUND
+// ===============================
 
-if(video && muteButton){
+if(video && soundButton){
 
-  muteButton.addEventListener(
+  soundButton.addEventListener(
 
     "click",
 
@@ -286,20 +335,24 @@ if(video && muteButton){
 
         video.volume = 1.0;
 
-        video.controls = true;
-
         await video.play();
 
-        muteButton.innerHTML =
+        soundButton.innerHTML =
+
         "🔊 SOUND ON";
 
-        muteButton.style.background =
+        soundButton.style.background =
+
         "green";
 
-      }catch(error){
+      }
+
+      catch(error){
 
         alert(
-        "Tap video controls directly to enable sound."
+
+        "Tap the native video controls directly to enable sound."
+
         );
 
       }
@@ -310,12 +363,40 @@ if(video && muteButton){
 
 }
 
-/* AUTO VIDEO ROTATION */
+// ===============================
+// VIDEO SWITCHER
+// ===============================
+
+function changeVideo(videoFile){
+
+  if(video && videoSource){
+
+    video.pause();
+
+    videoSource.src = videoFile;
+
+    video.load();
+
+    video.play().catch(() => {
+
+      console.log("Video switch blocked");
+
+    });
+
+  }
+
+}
+
+// ===============================
+// AUTO VIDEO ROTATION
+// ===============================
 
 const videos = [
 
   "assets/video1.mp4",
+
   "assets/video2.mp4",
+
   "assets/video3.mp4"
 
 ];
@@ -332,12 +413,6 @@ setInterval(() => {
 
   }
 
-  if(video){
+  changeVideo(videos[currentVideo]);
 
-    video.src = videos[currentVideo];
-
-    video.play().catch(() => {});
-
-  }
-
-}, 25000);
+}, 30000);

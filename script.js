@@ -365,29 +365,48 @@ function changeVideo(videoFile){
 
   if(video && source){
 
+    /* SAVE SOUND STATE */
+
+    const wasMuted =
+    video.muted;
+
+    const currentVolume =
+    video.volume;
+
+    /* CHANGE VIDEO */
+
     source.src = videoFile;
 
     video.load();
 
-    video.play().catch(() => {});
+    /* RESTORE SOUND */
+
+    video.muted = wasMuted;
+
+    video.volume = currentVolume;
+
+    video.play()
+
+    .then(() => {
+
+      console.log(
+      "Video changed successfully"
+      );
+
+    })
+
+    .catch(error => {
+
+      console.log(
+      "Video play blocked",
+      error
+      );
+
+    });
 
   }
 
 }
-
-// ======================================
-// AUTO VIDEO ROTATION
-// ======================================
-
-const videos = [
-
-  "assets/video1.mp4",
-
-  "assets/video2.mp4",
-
-  "assets/video3.mp4"
-
-];
 
 let currentVideo = 0;
 

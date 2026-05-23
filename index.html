@@ -13,7 +13,7 @@ Radiant Waves Media
 </title>
 
 <link rel="stylesheet"
-href="./style.css?v=1100">
+href="./style.css?v=2000">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -28,7 +28,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <div class="logo">
 
-<img src="logo.png"
+<img
+src="logo.png"
 alt="Radiant Waves Media">
 
 <div>
@@ -39,7 +40,7 @@ RADIANT WAVES MEDIA
 
 <p class="header-slogan">
 
-Gateway to Your World News — Connecting You to the World
+Gateway To Your World News — Connecting You To The World
 
 </p>
 
@@ -79,7 +80,8 @@ Gateway to Your World News — Connecting You to the World
 
 <div class="ticker-wrap">
 
-<div class="ticker"
+<div
+class="ticker"
 id="breaking-ticker">
 
 Loading Breaking News...
@@ -92,13 +94,11 @@ Loading Breaking News...
 
 <section class="hero-video">
 
-<!-- VIDEO PLAYER -->
-
 <video
 id="heroVideo"
 autoplay
 muted
-loop
+controls
 playsinline
 webkit-playsinline
 preload="auto">
@@ -110,11 +110,7 @@ type="video/mp4">
 
 </video>
 
-<!-- DARK OVERLAY -->
-
 <div class="hero-overlay"></div>
-
-<!-- CONTENT -->
 
 <div class="hero-content">
 
@@ -136,26 +132,34 @@ Live updates from around the globe
 
 </p>
 
-<!-- VIDEO SELECTORS -->
+<!-- VIDEO CONTROLS -->
 
-<<div class="video-controls">
+<div class="video-controls">
 
 <button onclick="changeVideo('assets/video1.mp4')">
+
 VIDEO 1
+
 </button>
 
 <button onclick="changeVideo('assets/video2.mp4')">
+
 VIDEO 2
+
 </button>
 
 <button onclick="changeVideo('assets/video3.mp4')">
+
 VIDEO 3
+
 </button>
 
 </div>
+
 <!-- SOUND BUTTON -->
 
-<<button id="mute-button"
+<button
+id="sound-button"
 class="mute-button">
 
 🔊 ENABLE SOUND
@@ -168,7 +172,7 @@ class="mute-button">
 
 <marquee id="hero-marquee">
 
-Loading headlines...
+Loading Headlines...
 
 </marquee>
 
@@ -177,9 +181,11 @@ Loading headlines...
 </div>
 
 </section>
+
 <!-- FEATURED NEWS -->
 
-<section class="featured-news"
+<section
+class="featured-news"
 id="featured-news">
 
 </section>
@@ -216,7 +222,7 @@ Top Stories Of The Week
 
 </section>
 
-<!-- BREAKING NEWS HISTORY -->
+<!-- BREAKING HISTORY -->
 
 <section id="breaking-history">
 
@@ -232,7 +238,7 @@ Breaking News History
 
 </section>
 
-<!-- NEWS ARCHIVE -->
+<!-- ARCHIVES -->
 
 <section id="archives">
 
@@ -251,7 +257,7 @@ Morning News
 </h3>
 
 <p>
-Daily morning global headlines and updates.
+Daily morning world headlines and reports.
 </p>
 
 </div>
@@ -263,7 +269,7 @@ Midday News
 </h3>
 
 <p>
-International afternoon updates and developments.
+Afternoon international updates and developments.
 </p>
 
 </div>
@@ -275,7 +281,7 @@ Evening News
 </h3>
 
 <p>
-Prime-time worldwide reports and analyses.
+Prime-time global stories and analysis.
 </p>
 
 </div>
@@ -287,7 +293,7 @@ Late Night News
 </h3>
 
 <p>
-Overnight breaking stories and global events.
+Overnight breaking stories around the world.
 </p>
 
 </div>
@@ -343,7 +349,7 @@ Celebrate With Radiant Waves Media
 
 <p>
 
-Send birthday greetings, anniversaries, memorials and celebration messages to loved ones.
+Send birthday greetings, anniversaries, memorials and celebrations worldwide.
 
 </p>
 
@@ -353,7 +359,7 @@ Send birthday greetings, anniversaries, memorials and celebration messages to lo
 
 </section>
 
-<<!-- CONTACT / PUBLICITY -->
+<!-- CONTACT SECTION -->
 
 <section id="contact-us">
 
@@ -379,7 +385,7 @@ Advert & Publicity
 
 <p>
 
-Promote your products, businesses, church programs, political campaigns, concerts and events on Radiant Waves Media worldwide platform.
+Promote businesses, products, events, campaigns and programs globally.
 
 </p>
 
@@ -407,7 +413,7 @@ Birthday Greetings
 
 <p>
 
-Celebrate birthdays, anniversaries, weddings, memorials and special family occasions live on our platform.
+Celebrate birthdays, anniversaries and memorials on our platform.
 
 </p>
 
@@ -430,12 +436,12 @@ Submit Celebration
 </div>
 
 <h3>
-Legal & Official Notices
+Legal Notices
 </h3>
 
 <p>
 
-Publish official statements, awareness campaigns, legal notices and public announcements professionally.
+Publish official announcements, legal notices and awareness campaigns.
 
 </p>
 
@@ -443,7 +449,7 @@ Publish official statements, awareness campaigns, legal notices and public annou
 href="mailto:radiantwave2022@gmail.com?subject=Legal Notice"
 class="contact-btn">
 
-Send Official Notice
+Send Notice
 
 </a>
 
@@ -463,7 +469,7 @@ Breaking News Tips
 
 <p>
 
-Send eyewitness reports, videos, breaking stories and urgent developments happening around your area.
+Send eyewitness reports, videos and urgent developments.
 
 </p>
 
@@ -489,8 +495,6 @@ Send News Tip
 📱 Direct Newsroom Contacts
 
 </h3>
-
-<div class="contact-lines">
 
 <p>
 
@@ -518,8 +522,6 @@ radiantwave2022@gmail.com
 </a>
 
 </p>
-
-</div>
 
 </div>
 
@@ -596,7 +598,9 @@ Memorial Message
 name="message"
 placeholder="Write Full Details Here..."
 rows="6"
-required></textarea>
+required>
+
+</textarea>
 
 <button type="submit">
 
@@ -620,7 +624,8 @@ World News
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="world-news">
 
 </div>
@@ -637,7 +642,8 @@ USA
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="usa-news">
 
 </div>
@@ -654,7 +660,8 @@ Europe
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="europe-news">
 
 </div>
@@ -671,7 +678,8 @@ Africa
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="africa-news">
 
 </div>
@@ -688,7 +696,8 @@ Business
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="business-news">
 
 </div>
@@ -705,7 +714,8 @@ Technology
 
 </h2>
 
-<div class="news-grid"
+<div
+class="news-grid"
 id="tech-news">
 
 </div>
@@ -724,34 +734,38 @@ Radiant Waves Media
 
 <p class="footer-slogan">
 
-Connecting You Deeper to the World's Most Important Stories
+Connecting You Deeper To The World's Most Important Stories
 
 </p>
 
 <div class="social">
 
-<a href="https://facebook.com/Radiantwavesnews"
+<a
+href="https://facebook.com/Radiantwavesnews"
 target="_blank">
 
 <i class="fab fa-facebook"></i>
 
 </a>
 
-<a href="https://twitter.com/radiant13528995"
+<a
+href="https://twitter.com/radiant13528995"
 target="_blank">
 
 <i class="fab fa-x-twitter"></i>
 
 </a>
 
-<a href="https://youtube.com/@radiantwave=wv6j"
+<a
+href="https://youtube.com/@radiantwave=wv6j"
 target="_blank">
 
 <i class="fab fa-youtube"></i>
 
 </a>
 
-<a href="https://tiktok.com/@radiantwavesmedia"
+<a
+href="https://tiktok.com/@radiantwavesmedia"
 target="_blank">
 
 <i class="fab fa-tiktok"></i>
@@ -768,13 +782,13 @@ target="_blank">
 
 </footer>
 
-<!-- MAIN SCRIPT -->
+<!-- SCRIPT -->
 
-<script src="./script.js?v=1100"></script>
+<script src="./script.js?v=2000"></script>
 
-<!-- VIDEO SOUND FIX -->
+<!-- VIDEO SYSTEM -->
 
-<<script>
+<script>
 
 const video =
 document.getElementById("heroVideo");
@@ -813,6 +827,8 @@ video.muted = false;
 
 video.volume = 1.0;
 
+video.controls = true;
+
 await video.play();
 
 soundButton.innerHTML =
@@ -823,7 +839,9 @@ soundButton.style.background =
 
 }catch(error){
 
-console.log(error);
+alert(
+"Tap the video controls directly to enable sound."
+);
 
 }
 
@@ -833,7 +851,7 @@ console.log(error);
 
 }
 
-/* CHANGE VIDEOS */
+/* VIDEO CHANGE */
 
 function changeVideo(videoFile){
 
@@ -850,6 +868,6 @@ video.play().catch(() => {});
 }
 
 </script>
-</body>
 
+</body>
 </html>

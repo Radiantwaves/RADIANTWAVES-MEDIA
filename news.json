@@ -1,54 +1,164 @@
 {
   "hero": {
-    "title": "TODAY AFTERNOON NEWS — GLOBAL NEWS ROUNDUP",
-    "description": "Breaking news, politics, economy, security and world affairs from the United States, Canada, Europe, Africa, Asia and the Middle East."
+    "title": "RADIANT WAVES MEDIA — GLOBAL NEWS UPDATE",
+    "description": "Breaking news, politics, economy, security and world affairs from across the globe."
   },
 
   "breaking": [
 
-    "Trump rallies Republican supporters ahead of crucial U.S. midterm battles",
+    "Global political tensions continue across Europe, the Middle East and Africa",
 
-    "Severe weather and tornado threats continue across parts of the United States",
+    "United States monitoring cybersecurity threats targeting critical infrastructure",
 
-    "Cybersecurity agencies monitor global threats targeting energy infrastructure",
+    "Nigeria intensifies political activities ahead of 2027 general elections",
 
-    "Canada debates immigration reforms amid housing pressures",
+    "Severe weather alerts issued across parts of North America",
 
-    "Large political demonstrations continue across London and parts of the UK",
+    "European leaders discuss expanded defense cooperation",
 
-    "European Union leaders discuss expanded defense coordination",
+    "Middle East maritime security tensions remain high",
 
-    "Nigeria intensifies political preparations ahead of the 2027 general elections",
+    "Canada debates immigration reforms amid economic pressure",
 
-    "China expands diplomatic and economic partnerships across Africa and Asia",
+    "Artificial intelligence investment race accelerates globally",
 
-    "Iran tensions continue to raise concerns in the Persian Gulf",
+    "South Africa pushes energy reforms amid economic concerns",
 
-    "Global markets remain cautious amid inflation and geopolitical uncertainty"
+    "Global financial markets remain cautious amid inflation fears"
 
   ],
 
   "featured": {
 
-    "title": "GLOBAL POLITICAL AND SECURITY TENSIONS CONTINUE TO DOMINATE WORLD HEADLINES",
+    "title": "WORLD GOVERNMENTS RESPOND TO GROWING GLOBAL PRESSURES",
 
     "image": "assets/featured.jpg",
 
-    "content": "Political developments, economic uncertainty, security concerns, and international diplomacy continue shaping major global discussions this afternoon. From the United States and Europe to Africa, Asia, and the Middle East, governments are responding to rising geopolitical tensions, economic pressures, elections, cybersecurity threats, and regional instability. Analysts say the coming weeks could significantly impact international relations and global financial markets."
+    "content": "Governments across the United States, Europe, Africa, Asia and the Middle East continue responding to political instability, economic uncertainty, cyber threats and rising geopolitical tensions. Security agencies remain on alert as international markets react to global developments."
 
   },
+
+  "sponsoredAdverts": [
+
+    {
+
+      "title": "STONEBREAKER BITTER SPIRIT & HERBAL MIXTURE",
+
+      "subtitle": "Health Promotion & Body Therapy",
+
+      "image": "assets/stonebreaker.jpg",
+
+      "description": "Stonebreaker Bitter Spirit and Herbal Mixture helps support body cleansing, immune stimulation and internal wellness therapy. It is traditionally promoted for helping dissolve kidney stones and gallstones while supporting healthy sugar levels and fighting internal body infections.",
+
+      "products": [
+
+        {
+
+          "name": "Stonebreaker Bitter Spirit",
+
+          "big": "Available",
+
+          "small": "Available"
+
+        },
+
+        {
+
+          "name": "Stonebreaker Herbal Mixture",
+
+          "big": "Available",
+
+          "small": "Available"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "title": "FARM TO KITCHEN 🌶️",
+
+      "subtitle": "Freshly Ground Spices — No Additives",
+
+      "image": "assets/spices.jpg",
+
+      "description": "Taste the difference in every bite with premium freshly ground natural spice blends prepared without additives. Rich flavor, authentic aroma and perfect for everyday cooking.",
+
+      "products": [
+
+        {
+
+          "name": "Exotic Beef Blend",
+
+          "big": "4K",
+
+          "small": "2K"
+
+        },
+
+        {
+
+          "name": "Classic Curry",
+
+          "big": "3K",
+
+          "small": "1,500"
+
+        },
+
+        {
+
+          "name": "Gargajiya Masala",
+
+          "big": "3K",
+
+          "small": "1,500"
+
+        }
+
+      ]
+
+    }
+
+  ],
 
   "articles": [
 
     {
 
+      "category": "world",
+
+      "title": "Global Political Tensions Continue Across Multiple Regions",
+
+      "image": "assets/world.jpg",
+
+      "description": "Political and security concerns continue dominating international discussions as governments respond to conflicts, economic uncertainty and diplomatic challenges worldwide."
+
+    },
+
+    {
+
+      "category": "world",
+
+      "title": "Middle East Maritime Security Remains Under Close Watch",
+
+      "image": "assets/middleeast.jpg",
+
+      "description": "International monitoring agencies continue tracking shipping security developments in the Persian Gulf amid rising tensions involving regional powers."
+
+    },
+
+    {
+
       "category": "usa",
 
-      "title": "Trump Campaign Intensifies Ahead Of Midterm Battles",
+      "title": "Trump Campaign Activities Intensify Ahead Of Midterm Battles",
 
       "image": "assets/trump.jpg",
 
-      "description": "Former President Donald Trump continues rallying Republican supporters across major battleground states as preparations for the upcoming U.S. midterm elections gather momentum. Political observers say divisions inside the Republican Party are becoming more visible over immigration, foreign policy and economic direction."
+      "description": "Former President Donald Trump continues rallying supporters across strategic battleground states as Republican political divisions deepen over policy direction and immigration."
 
     },
 
@@ -56,35 +166,11 @@
 
       "category": "usa",
 
-      "title": "Severe Weather Threat Across Central States",
+      "title": "Severe Weather Threat Across Parts Of America",
 
       "image": "assets/storm.jpg",
 
-      "description": "Meteorologists warn that severe storms and possible tornado outbreaks may impact several central U.S. states through the weekend. Emergency agencies remain on alert amid fears of flooding, infrastructure damage and widespread power outages."
-
-    },
-
-    {
-
-      "category": "world",
-
-      "title": "Cybersecurity Threats Raise Global Alarm",
-
-      "image": "assets/cybersecurity.jpg",
-
-      "description": "Security agencies in the United States and Europe are monitoring increasing cyberattack threats targeting energy infrastructure, financial institutions and communication systems amid rising geopolitical tensions involving Iran and Russia."
-
-    },
-
-    {
-
-      "category": "world",
-
-      "title": "Canada Faces Economic Pressure Ahead Of 2026 World Cup",
-
-      "image": "assets/canada.jpg",
-
-      "description": "Canadian officials continue debating infrastructure spending and public financing linked to preparations for the 2026 FIFA World Cup. Economists expect major tourism opportunities but warn of increasing pressure on public finances."
+      "description": "Meteorologists warn that severe storms, flooding and tornado risks may continue affecting parts of the central United States."
 
     },
 
@@ -92,23 +178,23 @@
 
       "category": "europe",
 
-      "title": "Massive Political Demonstrations Continue In London",
-
-      "image": "assets/london.jpg",
-
-      "description": "Large political demonstrations linked to Britain's growing far-right movement have continued in London and several UK cities. Authorities remain concerned over increasing political polarization and anti-immigration tensions."
-
-    },
-
-    {
-
-      "category": "europe",
-
-      "title": "Europe Expands Defense Cooperation Discussions",
+      "title": "Europe Discusses Expanded Defense Cooperation",
 
       "image": "assets/europe-defense.jpg",
 
-      "description": "European Union leaders are discussing expanded defense coordination following ongoing concerns surrounding the Russia-Ukraine conflict, NATO security commitments and broader regional stability."
+      "description": "European Union leaders continue consultations on defense coordination amid concerns over regional security and NATO commitments."
+
+    },
+
+    {
+
+      "category": "europe",
+
+      "title": "Political Demonstrations Continue In London",
+
+      "image": "assets/london.jpg",
+
+      "description": "Large demonstrations linked to political and immigration tensions continue across parts of the United Kingdom."
 
     },
 
@@ -116,23 +202,11 @@
 
       "category": "africa",
 
-      "title": "Nigeria Faces Renewed Security Concerns",
+      "title": "Nigeria Intensifies Political Preparations Ahead Of 2027 Elections",
 
-      "image": "assets/nigeria-security.jpg",
+      "image": "assets/nigeria-politics.jpg",
 
-      "description": "Nigerian authorities continue investigating recent school attacks and abductions in parts of Borno and Oyo states. Security agencies say operations are ongoing against armed criminal groups."
-
-    },
-
-    {
-
-      "category": "africa",
-
-      "title": "African Leaders Push Continental Economic Integration",
-
-      "image": "assets/africa-trade.jpg",
-
-      "description": "African leaders continue promoting the African Continental Free Trade Area (AfCFTA) as economists project long-term growth opportunities through expanded trade and industrial cooperation across the continent."
+      "description": "Political activities continue intensifying across Nigeria as parties conduct consultations, screenings and preparations for future elections."
 
     },
 
@@ -140,47 +214,11 @@
 
       "category": "africa",
 
-      "title": "South Africa Battles Energy And Economic Pressures",
+      "title": "South Africa Continues Economic And Energy Reforms",
 
       "image": "assets/south-africa.jpg",
 
-      "description": "South African officials continue implementing reforms aimed at stabilizing the national power grid while attracting foreign investment to strengthen economic recovery."
-
-    },
-
-    {
-
-      "category": "world",
-
-      "title": "China Expands Diplomatic Outreach Across Asia And Africa",
-
-      "image": "assets/china.jpg",
-
-      "description": "Chinese officials continue diplomatic engagements with African and Asian partners as Beijing seeks stronger economic alliances, infrastructure partnerships and geopolitical influence."
-
-    },
-
-    {
-
-      "category": "world",
-
-      "title": "Taiwan Security Situation Remains Sensitive",
-
-      "image": "assets/taiwan.jpg",
-
-      "description": "Military analysts continue closely monitoring developments surrounding Taiwan following recent statements from Washington and Beijing concerning defense cooperation and regional stability."
-
-    },
-
-    {
-
-      "category": "world",
-
-      "title": "Iran Tensions Continue In The Persian Gulf",
-
-      "image": "assets/iran.jpg",
-
-      "description": "Diplomatic tensions involving Iran, the United States and Gulf nations remain elevated following maritime security incidents and renewed military warnings in the Persian Gulf region."
+      "description": "South African authorities continue implementing reforms aimed at stabilizing energy infrastructure and attracting foreign investment."
 
     },
 
@@ -188,11 +226,23 @@
 
       "category": "business",
 
-      "title": "Global Markets Remain Under Pressure",
+      "title": "Global Markets Remain Cautious",
 
       "image": "assets/markets.jpg",
 
-      "description": "Global financial markets remain cautious amid inflation concerns, geopolitical instability, energy market uncertainty and growing competition in artificial intelligence investment."
+      "description": "Financial markets remain under pressure amid inflation fears, geopolitical tensions and uncertainty surrounding global energy supplies."
+
+    },
+
+    {
+
+      "category": "business",
+
+      "title": "Canada Debates Economic And Immigration Reforms",
+
+      "image": "assets/canada.jpg",
+
+      "description": "Canadian lawmakers continue debating immigration policies, housing shortages and economic planning ahead of major global sporting events."
 
     },
 
@@ -200,23 +250,23 @@
 
       "category": "technology",
 
-      "title": "Artificial Intelligence Investments Accelerate Worldwide",
+      "title": "Artificial Intelligence Expansion Continues Worldwide",
 
       "image": "assets/ai.jpg",
 
-      "description": "Technology companies across the United States, Europe and Asia continue increasing investments in artificial intelligence infrastructure, automation systems and cybersecurity technologies."
+      "description": "Technology companies across the United States, Europe and Asia continue increasing investments in artificial intelligence, automation and cybersecurity."
 
     },
 
     {
 
-      "category": "business",
+      "category": "technology",
 
-      "title": "Nigeria Intensifies Political Preparations Ahead Of 2027 Elections",
+      "title": "Cybersecurity Agencies Monitor Global Threats",
 
-      "image": "assets/nigeria-politics.jpg",
+      "image": "assets/cybersecurity.jpg",
 
-      "description": "Political activities continue intensifying across Nigeria as parties prepare for the 2027 elections. In Oyo State, screening exercises and consultations among aspirants are expanding within major political parties."
+      "description": "Security experts continue warning about growing cyberattack threats targeting infrastructure, banking systems and communication networks."
 
     }
 
@@ -224,25 +274,25 @@
 
   "breakingHistory": [
 
-    "Trump intensifies campaign activities ahead of U.S. midterm political battles",
+    "United States increases cybersecurity monitoring",
 
-    "Severe weather warnings issued across several American states",
+    "Global markets react to inflation and geopolitical concerns",
 
-    "Cybersecurity agencies raise concerns over attacks targeting critical infrastructure",
+    "Nigeria intensifies preparations for 2027 elections",
 
-    "Political demonstrations continue across London and major UK cities",
+    "Middle East maritime security tensions remain high",
 
-    "European Union leaders discuss expanded military coordination",
+    "European Union discusses stronger defense cooperation",
 
-    "Nigeria continues political primaries and election preparations ahead of 2027",
+    "South Africa continues energy sector reforms",
 
-    "China expands diplomatic influence across Africa and Asia",
+    "Canada debates immigration and economic policies",
 
-    "Middle East maritime tensions continue in the Persian Gulf",
+    "Artificial intelligence investment competition expands globally",
 
-    "South Africa implements economic and energy sector reforms",
+    "Severe weather alerts issued across parts of North America",
 
-    "Global financial markets react to inflation and geopolitical concerns"
+    "International security agencies monitor cyber threats worldwide"
 
   ]
 }

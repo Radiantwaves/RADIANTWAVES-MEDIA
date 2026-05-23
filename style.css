@@ -1,17 +1,29 @@
+/* =========================
+RADIANT WAVES MEDIA
+PROFESSIONAL STYLE.CSS
+========================= */
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-body{
-  background:#000;
-  color:white;
-  font-family:Arial,sans-serif;
-  overflow-x:hidden;
+html{
+  scroll-behavior:smooth;
 }
 
-/* HEADER */
+body{
+  background:#000;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+/* =========================
+HEADER
+========================= */
 
 header{
   background:#c40000;
@@ -21,7 +33,8 @@ header{
   padding:15px 25px;
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:9999;
+  flex-wrap:wrap;
 }
 
 .logo{
@@ -34,13 +47,18 @@ header{
   height:60px;
 }
 
+.logo h1{
+  font-size:28px;
+}
+
 .header-slogan{
   font-size:14px;
+  color:#fff;
 }
 
 nav{
   display:flex;
-  gap:20px;
+  gap:18px;
   flex-wrap:wrap;
 }
 
@@ -48,26 +66,35 @@ nav a{
   color:white;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
 }
 
-/* BREAKING */
+nav a:hover{
+  color:yellow;
+}
+
+/* =========================
+BREAKING NEWS TICKER
+========================= */
 
 .ticker-wrap{
-  background:black;
+  background:#000;
   color:yellow;
   overflow:hidden;
   white-space:nowrap;
-  padding:12px;
+  padding:14px;
   font-weight:bold;
+  border-top:2px solid red;
+  border-bottom:2px solid red;
 }
 
 .ticker{
   display:inline-block;
   padding-left:100%;
-  animation:ticker 25s linear infinite;
+  animation:tickerMove 28s linear infinite;
 }
 
-@keyframes ticker{
+@keyframes tickerMove{
 
   0%{
     transform:translateX(0);
@@ -79,70 +106,122 @@ nav a{
 
 }
 
-/* HERO */
+/* =========================
+HERO VIDEO SECTION
+========================= */
 
 .hero-video{
   position:relative;
-  min-height:100vh;
-  height:auto;
-  overflow:hidden;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-  .hero-video video{
-
   width:100%;
   height:100vh;
+  overflow:hidden;
+  background:#000;
+}
 
+.hero-video video{
+  width:100%;
+  height:100%;
   object-fit:cover;
-
-  position:relative;
-
-  z-index:1;
-
-  background:black;
-
+  background:#000;
 }
-}
+
+/* OVERLAY */
 
 .hero-overlay{
-
-  position:relative;
-  z-index:2;
-
+  position:absolute;
+  top:0;
+  left:0;
   width:100%;
-  min-height:100vh;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+  z-index:2;
+}
 
-  background:rgba(0,0,0,0.5);
+/* HERO CONTENT */
 
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
+.hero-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+  width:90%;
   text-align:center;
-  padding:20px;
 }
 
 .live-badge{
   background:red;
+  color:white;
+  display:inline-block;
   padding:10px 20px;
   font-weight:bold;
   margin-bottom:20px;
+  border-radius:5px;
 }
 
-.hero-overlay h1{
+.hero-content h1{
   font-size:60px;
   margin-bottom:20px;
 }
 
-.hero-overlay p{
-  font-size:22px;
+.hero-content p{
+  font-size:24px;
   max-width:900px;
+  margin:auto;
 }
+
+/* =========================
+VIDEO BUTTONS
+========================= */
+
+.video-controls{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.video-controls button{
+  background:red;
+  color:white;
+  border:none;
+  padding:12px 22px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.video-controls button:hover{
+  background:#ff0000;
+  transform:scale(1.05);
+}
+
+/* =========================
+SOUND BUTTON
+========================= */
+
+.mute-button{
+  margin-top:25px;
+  padding:14px 28px;
+  background:red;
+  color:white;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.mute-button:hover{
+  background:#ff0000;
+}
+
+/* =========================
+BREAKING SCROLL
+========================= */
 
 .hero-scroll{
   position:absolute;
@@ -150,25 +229,17 @@ nav a{
   left:0;
   width:100%;
   background:red;
-  padding:15px;
+  padding:14px;
   font-weight:bold;
+  z-index:5;
 }
 
-.mute-button{
-  margin-top:25px;
-  padding:12px 25px;
-  background:red;
-  color:white;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
-  border-radius:5px;
-}
-
-/* FEATURED */
+/* =========================
+FEATURED NEWS
+========================= */
 
 .featured-news{
-  padding:30px;
+  padding:40px 20px;
 }
 
 .featured-card{
@@ -177,25 +248,28 @@ nav a{
   grid-template-columns:1fr 1fr;
   gap:30px;
   padding:25px;
+  border-radius:10px;
 }
 
 .featured-card img{
   width:100%;
-  height:100%;
+  border-radius:8px;
   object-fit:cover;
 }
 
 .featured-card h2{
-  margin-bottom:20px;
   font-size:38px;
+  margin-bottom:20px;
 }
 
 .featured-card p{
   color:#ccc;
-  line-height:1.7;
+  line-height:1.8;
 }
 
-/* SECTION */
+/* =========================
+SECTION TITLES
+========================= */
 
 .section-title{
   font-size:35px;
@@ -204,18 +278,26 @@ nav a{
   padding-left:15px;
 }
 
-/* NEWS GRID */
+/* =========================
+NEWS GRID
+========================= */
 
 .news-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:20px;
+  gap:25px;
   padding:20px;
 }
 
 .card{
   background:#111;
+  border-radius:8px;
   overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 .card img{
@@ -230,6 +312,7 @@ nav a{
 
 .card-content h3{
   margin-bottom:15px;
+  font-size:24px;
 }
 
 .card-content p{
@@ -237,242 +320,24 @@ nav a{
   line-height:1.7;
 }
 
-/* FOOTER */
-
-footer{
-  background:#111;
-  text-align:center;
-  padding:50px 20px;
-  margin-top:50px;
-}
-
-.footer-slogan{
-  margin:20px 0;
-  color:#ccc;
-}
-
-.social{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  margin:25px 0;
-}
-
-.social a{
-  color:white;
-  font-size:30px;
-}
-
-.copyright{
-  color:#666;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-  header{
-    flex-direction:column;
-    gap:20px;
-  }
-
-  nav{
-    justify-content:center;
-  }
-
-  .hero-overlay h1{
-    font-size:36px;
-  }
-
-  .hero-overlay p{
-    font-size:18px;
-  }
-
-  .featured-card{
-    grid-template-columns:1fr;
-  }
-
-  .section-title{
-    font-size:28px;
-  }
-
-  .news-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-/* PUBLICITY SECTION */
-
-.publicity-section{
-  padding:40px 20px;
-}
-
-.publicity-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.public-card{
-  background:#111;
-  padding:25px;
-  border-left:5px solid red;
-}
-
-.public-card h3{
-  margin-bottom:15px;
-  font-size:24px;
-}
-
-.public-card p{
-  color:#ccc;
-  line-height:1.8;
-}
-
-/* CONTACT BOX */
-
-.advert-contact-box{
-  background:#111;
-  margin-top:40px;
-  padding:35px;
-  text-align:center;
-}
-
-.advert-intro{
-  color:#ccc;
-  margin:20px 0 35px;
-  line-height:1.8;
-}
-
-.advert-buttons{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.email-btn,
-.whatsapp-btn{
-  padding:16px 28px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  font-size:18px;
-}
-
-.email-btn{
-  background:#c40000;
-}
-
-.whatsapp-btn{
-  background:#25D366;
-}
-/* FUTURE MEDIA STRUCTURE */
-
-.archive-grid,
-.birthday-grid,
-.advert-grid,
-.admin-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-  padding:20px;
-}
-
-.archive-card,
-.birthday-card,
-.advert-card,
-.admin-card{
-  background:#111;
-  padding:25px;
-  border-left:5px solid red;
-}
-
-.archive-card h3,
-.birthday-card h3,
-.advert-card h3{
-  margin-bottom:15px;
-}
-
-.archive-card p,
-.birthday-card p,
-.advert-card p{
-  color:#ccc;
-  line-height:1.7;
-}
-
-.top-story-banner{
-  background:#111;
-  padding:60px 30px;
-  text-align:center;
-  margin:20px;
-}
-
-.top-story-banner h1{
-  font-size:50px;
-  margin-bottom:20px;
-}
-
-.top-story-banner p{
-  color:#ccc;
-  font-size:20px;
-}
-
-.history-line{
-  padding:30px 20px;
-}
-
-.history-item{
-  background:#111;
-  padding:18px;
-  margin-bottom:15px;
-  border-left:5px solid yellow;
-}
-
-.live-tv-box{
-  background:black;
-  border:2px solid red;
-  padding:80px 30px;
-  text-align:center;
-  margin:20px;
-}
-
-.live-tv-box h1{
-  font-size:50px;
-  margin-bottom:20px;
-}
-
-.live-tv-box p{
-  color:#ccc;
-  font-size:20px;
-}
-
-.admin-card{
-  text-align:center;
-  font-weight:bold;
-  font-size:20px;
-}
-/* MULTIPLE SPONSORED ADVERTS */
-
-.sponsored-adverts-wrap{
-  display:flex;
-  flex-direction:column;
-  gap:40px;
-  padding:20px;
-}
+/* =========================
+SPONSORED ADVERTS
+========================= */
 
 .sponsored-ad{
   background:#111;
+  margin:25px 20px;
   border:2px solid red;
+  border-radius:8px;
+  overflow:hidden;
 }
 
 .sponsored-label{
   background:red;
   color:white;
+  text-align:center;
   padding:14px;
   font-weight:bold;
-  text-align:center;
 }
 
 .sponsored-content{
@@ -489,65 +354,268 @@ footer{
 }
 
 .sponsored-text h2{
-  margin-bottom:15px;
   font-size:34px;
+  margin-bottom:15px;
 }
 
 .sponsored-text h4{
-  margin-bottom:15px;
   color:yellow;
+  margin-bottom:15px;
 }
 
 .sponsored-text p{
   color:#ccc;
   line-height:1.8;
-  margin-bottom:15px;
 }
 
 .product-line{
   background:#000;
+  margin-top:15px;
   padding:15px;
-  margin-top:12px;
   border-left:4px solid yellow;
 }
 
+/* =========================
+ARCHIVES
+========================= */
+
+.archive-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.archive-card{
+  background:#111;
+  padding:25px;
+  border-left:5px solid red;
+  border-radius:8px;
+}
+
+.archive-card h3{
+  margin-bottom:15px;
+}
+
+/* =========================
+BREAKING HISTORY
+========================= */
+
+#history-container{
+  padding:20px;
+}
+
+.history-item{
+  background:#111;
+  margin-bottom:15px;
+  padding:18px;
+  border-left:5px solid yellow;
+}
+
+/* =========================
+LIVE TV
+========================= */
+
+.live-tv-box{
+  padding:20px;
+}
+
+.live-tv-box iframe{
+  border:2px solid red;
+  border-radius:8px;
+}
+
+/* =========================
+BIRTHDAY
+========================= */
+
+.birthday-container{
+  padding:20px;
+}
+
+.birthday-card{
+  background:#111;
+  padding:30px;
+  border-left:5px solid red;
+  border-radius:8px;
+}
+
+/* =========================
+CONTACT SECTION
+========================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.contact-card{
+  background:#111;
+  padding:25px;
+  border-radius:8px;
+  border-left:5px solid red;
+}
+
+.contact-icon{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.contact-card h3{
+  margin-bottom:15px;
+}
+
+.contact-card p{
+  color:#ccc;
+  line-height:1.7;
+}
+
+.contact-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:red;
+  color:white;
+  padding:12px 20px;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+.contact-btn:hover{
+  background:#ff0000;
+}
+
+.direct-contact{
+  background:#111;
+  margin:30px 20px;
+  padding:30px;
+  border-radius:8px;
+}
+
+.direct-contact p{
+  margin-top:15px;
+}
+
+.direct-contact a{
+  color:yellow;
+  text-decoration:none;
+}
+
+/* =========================
+FORM
+========================= */
+
+.advert-form-box{
+  padding:20px;
+}
+
+form{
+  background:#111;
+  padding:30px;
+  border-radius:8px;
+}
+
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:20px;
+  background:#000;
+  border:1px solid #333;
+  color:white;
+}
+
+form button{
+  background:red;
+  color:white;
+  border:none;
+  padding:15px 25px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+form button:hover{
+  background:#ff0000;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+  background:#111;
+  text-align:center;
+  padding:50px 20px;
+  margin-top:50px;
+}
+
+.footer-slogan{
+  color:#ccc;
+  margin:20px 0;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin:25px 0;
+}
+
+.social a{
+  color:white;
+  font-size:30px;
+}
+
+.social a:hover{
+  color:red;
+}
+
+.copyright{
+  color:#777;
+}
+
+/* =========================
+MOBILE
+========================= */
+
 @media(max-width:768px){
 
-.sponsored-content{
-  grid-template-columns:1fr;
-}
+  header{
+    flex-direction:column;
+    gap:20px;
+  }
 
-}
-/* VIDEO CONTROLS */
+  nav{
+    justify-content:center;
+  }
 
-.video-controls{
+  .hero-content h1{
+    font-size:36px;
+  }
 
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-top:25px;
+  .hero-content p{
+    font-size:18px;
+  }
 
-}
+  .featured-card{
+    grid-template-columns:1fr;
+  }
 
-.video-controls button{
+  .sponsored-content{
+    grid-template-columns:1fr;
+  }
 
-background:red;
-color:white;
-border:none;
-padding:12px 22px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-border-radius:6px;
+  .section-title{
+    font-size:28px;
+  }
 
-transition:0.3s;
-
-}
-
-.video-controls button:hover{
-
-background:#ff0000;
-transform:scale(1.05);
+  .news-grid{
+    grid-template-columns:1fr;
+  }
 
 }

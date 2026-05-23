@@ -1,11 +1,10 @@
-// ======================================
-// RADIANT WAVES MEDIA
-// FINAL STABLE SCRIPT.JS
-// ======================================
 
-// ======================================
-// LOAD NEWS JSON
-// ======================================
+// ===============================
+// RADIANT WAVES MEDIA
+// COMPLETE SCRIPT.JS
+// ===============================
+
+// LOAD JSON NEWS FILE
 
 fetch('news.json?v=' + new Date().getTime())
 
@@ -13,413 +12,333 @@ fetch('news.json?v=' + new Date().getTime())
 
 .then(newsData => {
 
-  // ======================================
-  // HERO SECTION
-  // ======================================
+// ===============================
+// HERO SECTION
+// ===============================
 
-  const heroTitle =
-  document.getElementById("hero-title");
+document.getElementById('hero-title').innerText =
+newsData.hero.title;
 
-  const heroDesc =
-  document.getElementById("hero-desc");
+document.getElementById('hero-desc').innerText =
+newsData.hero.description;
 
-  if(heroTitle){
+// ===============================
+// BREAKING NEWS TICKER
+// ===============================
 
-    heroTitle.innerText =
-    newsData.hero.title;
+const ticker =
+document.getElementById('breaking-ticker');
 
-  }
+ticker.innerHTML =
+newsData.breaking.map(item =>
+🔴 ${item}
+).join(" • ");
 
-  if(heroDesc){
+// ===============================
+// HERO MARQUEE
+// ===============================
 
-    heroDesc.innerText =
-    newsData.hero.description;
+const heroMarquee =
+document.getElementById('hero-marquee');
 
-  }
+heroMarquee.innerHTML =
+newsData.breaking.map(item =>
+🔴 ${item}
+).join(" • ");
 
-  // ======================================
-  // BREAKING NEWS TICKER
-  // ======================================
+// ===============================
+// FEATURED NEWS
+// ===============================
 
-  const ticker =
-  document.getElementById("breaking-ticker");
+const featuredContainer =
+document.getElementById('featured-news');
 
-  if(ticker){
+if(newsData.featured){
 
-    ticker.innerHTML =
+featuredContainer.innerHTML = `  
 
-    newsData.breaking.map(item =>
+<div class="featured-card">  
 
-    ` 🔴 ${item} `
+  <img  
+  src="${newsData.featured.image}"  
+  alt="${newsData.featured.title}">  
 
-    ).join(" • ");
+  <div>  
 
-  }
+    <h2>  
+      ${newsData.featured.title}  
+    </h2>  
 
-  // ======================================
-  // HERO MARQUEE
-  // ======================================
+    <p>  
+      ${newsData.featured.content}  
+    </p>  
 
-  const heroMarquee =
-  document.getElementById("hero-marquee");
+  </div>  
 
-  if(heroMarquee){
+</div>  
 
-    heroMarquee.innerHTML =
+`;
 
-    newsData.breaking.map(item =>
+}
 
-    ` 🔴 ${item} `
+// ===============================
+// GENERATE NEWS CARDS
+// ===============================
 
-    ).join(" • ");
+function generateNews(sectionId, category){
 
-  }
+const container =  
+document.getElementById(sectionId);  
 
-  // ======================================
-  // FEATURED NEWS
-  // ======================================
+if(!container) return;  
 
-  const featuredContainer =
-  document.getElementById("featured-news");
+const articles =  
+newsData.articles.filter(article =>  
+article.category === category  
+);  
 
-  if(featuredContainer && newsData.featured){
+container.innerHTML =  
 
-    featuredContainer.innerHTML = `
+articles.map(article => `  
 
-    <div class="featured-card">
+<div class="card">  
 
-      <img
-      src="${newsData.featured.image}"
-      alt="${newsData.featured.title}">
+  <img  
+  src="${article.image}"  
+  alt="${article.title}">  
 
-      <div>
+  <div class="card-content">  
 
-        <h2>
-          ${newsData.featured.title}
-        </h2>
+    <h3>  
+      ${article.title}  
+    </h3>  
 
-        <p>
-          ${newsData.featured.content}
-        </p>
+    <p>  
+      ${article.description}  
+    </p>  
 
-      </div>
+  </div>  
 
-    </div>
+</div>  
 
-    `;
+`).join("");
 
-  }
+}
 
-  // ======================================
-  // GENERATE NEWS
-  // ======================================
+generateNews("world-news", "world");
+generateNews("usa-news", "usa");
+generateNews("europe-news", "europe");
+generateNews("africa-news", "africa");
+generateNews("business-news", "business");
+generateNews("tech-news", "technology");
 
-  function generateNews(sectionId, category){
+// ===============================
+// SPONSORED ADVERTS
+// ===============================
 
-    const container =
-    document.getElementById(sectionId);
+const advertSection =
+document.getElementById("sponsored-adverts");
 
-    if(!container) return;
+if(advertSection && newsData.sponsoredAdverts){
 
-    const articles =
+advertSection.innerHTML =  
 
-    newsData.articles.filter(article =>
+newsData.sponsoredAdverts.map(ad => `  
 
-    article.category === category
+<div class="sponsored-ad">  
 
-    );
+  <div class="sponsored-label">  
 
-    container.innerHTML =
+    SPONSORED ADVERT  
 
-    articles.map(article => `
+  </div>  
 
-    <div class="card">
+  <div class="sponsored-content">  
 
-      <img
-      src="${article.image}"
-      alt="${article.title}">
+    <img  
+    src="${ad.image}"  
+    alt="${ad.title}">  
 
-      <div class="card-content">
+    <div class="sponsored-text">  
 
-        <h3>
-          ${article.title}
-        </h3>
+      <h2>  
+        ${ad.title}  
+      </h2>  
 
-        <p>
-          ${article.description}
-        </p>
+      <h4>  
+        ${ad.subtitle || ""}  
+      </h4>  
 
-      </div>
+      <p>  
+        ${ad.description}  
+      </p>  
 
-    </div>
+      ${  
 
-    `).join("");
+      ad.products  
 
-  }
+      ?  
 
-  generateNews("world-news", "world");
-  generateNews("usa-news", "usa");
-  generateNews("europe-news", "europe");
-  generateNews("africa-news", "africa");
-  generateNews("business-news", "business");
-  generateNews("tech-news", "technology");
+      ad.products.map(product => `  
 
-  // ======================================
-  // SPONSORED ADVERTS
-  // ======================================
+      <div class="product-line">  
 
-  const advertSection =
-  document.getElementById("sponsored-adverts");
+        <strong>  
+          ${product.name}  
+        </strong>  
 
-  if(advertSection && newsData.sponsoredAdverts){
+        <br>  
 
-    advertSection.innerHTML =
+        Big: ${product.big}  
 
-    newsData.sponsoredAdverts.map(ad => `
+        |  
 
-    <div class="sponsored-ad">
+        Small: ${product.small}  
 
-      <div class="sponsored-label">
+      </div>  
 
-        SPONSORED ADVERT
+      `).join("")  
 
-      </div>
+      :  
 
-      <div class="sponsored-content">
+      ""  
 
-        <img
-        src="${ad.image}"
-        alt="${ad.title}">
+      }  
 
-        <div class="sponsored-text">
+    </div>  
 
-          <h2>
-            ${ad.title}
-          </h2>
+  </div>  
 
-          <h4>
-            ${ad.subtitle || ""}
-          </h4>
+</div>  
 
-          <p>
-            ${ad.description}
-          </p>
+`).join("");
 
-          ${
+}
 
-          ad.products
+// ===============================
+// BREAKING NEWS HISTORY
+// ===============================
 
-          ?
+const historyContainer =
+document.querySelector(".history-line");
 
-          ad.products.map(product => `
+if(historyContainer && newsData.breakingHistory){
 
-          <div class="product-line">
+historyContainer.innerHTML =  
 
-            <strong>
-              ${product.name}
-            </strong>
+newsData.breakingHistory.map(item => `  
 
-            <br>
+<div class="history-item">  
 
-            Big: ${product.big}
+  ${item}  
 
-            |
+</div>  
 
-            Small: ${product.small}
+`).join("");
 
-          </div>
-
-          `).join("")
-
-          :
-
-          ""
-
-          }
-
-        </div>
-
-      </div>
-
-    </div>
-
-    `).join("");
-
-  }
-
-  // ======================================
-  // BREAKING HISTORY
-  // ======================================
-
-  const historyContainer =
-  document.getElementById("history-container");
-
-  if(historyContainer && newsData.breakingHistory){
-
-    historyContainer.innerHTML =
-
-    newsData.breakingHistory.map(item => `
-
-    <div class="history-item">
-
-      ${item}
-
-    </div>
-
-    `).join("");
-
-  }
+}
 
 })
 
 .catch(error => {
 
-  console.log(
-
-    "News Loading Error:",
-
-    error
-
-  );
+console.log(
+"News loading error:",
+error
+);
 
 });
 
-// ======================================
+// ===============================
 // VIDEO SYSTEM
-// ======================================
+// ===============================
 
 const video =
 document.getElementById("heroVideo");
 
-const soundButton =
-document.getElementById("sound-button");
+const muteButton =
+document.getElementById("mute-button");
 
-const source =
-document.getElementById("video-source");
-
-// ======================================
-// START VIDEO
-// ======================================
+/* START VIDEO */
 
 if(video){
 
-  video.muted = true;
+video.muted = true;
 
-  video.volume = 1.0;
+video.volume = 1.0;
 
-  video.play().catch(() => {});
-
-}
-
-// ======================================
-// ENABLE SOUND
-// ======================================
-
-if(soundButton){
-
-  soundButton.addEventListener(
-
-    "click",
-
-    async () => {
-
-      try{
-
-        video.muted = false;
-
-        video.volume = 1.0;
-
-        await video.play();
-
-        soundButton.innerHTML =
-
-        "🔊 SOUND ON";
-
-        soundButton.style.background =
-
-        "green";
-
-      }
-
-      catch(error){
-
-        alert(
-
-        "Browser blocked autoplay sound. Use video controls directly."
-
-        );
-
-      }
-
-    }
-
-  );
+video.play().catch(() => {});
 
 }
 
-// ======================================
-// VIDEO SWITCH BUTTONS
-// ======================================
+/* ENABLE SOUND */
 
-function changeVideo(videoFile){
+if(video && muteButton){
 
-  if(video && source){
+muteButton.addEventListener(
 
-    /* SAVE SOUND STATE */
+"click",  
 
-    const wasMuted =
-    video.muted;
+async function(){  
 
-    const currentVolume =
-    video.volume;
+  try{  
 
-    /* CHANGE VIDEO */
+    video.muted = false;  
 
-    source.src = videoFile;
+    video.volume = 1.0;  
 
-    video.load();
+    video.controls = true;  
 
-    /* RESTORE SOUND */
+    await video.play();  
 
-    video.muted = wasMuted;
+    muteButton.innerHTML =  
+    "🔊 SOUND ON";  
 
-    video.volume = currentVolume;
+    muteButton.style.background =  
+    "green";  
 
-    video.play()
+  }catch(error){  
 
-    .then(() => {
+    alert(  
+    "Tap video controls directly to enable sound."  
+    );  
 
-      console.log(
-      "Video changed successfully"
-      );
-
-    })
-
-    .catch(error => {
-
-      console.log(
-      "Video play blocked",
-      error
-      );
-
-    });
-
-  }
+  }  
 
 }
+
+);
+
+}
+
+/* AUTO VIDEO ROTATION */
+
+const videos = [
+
+"assets/video1.mp4",
+"assets/video2.mp4",
+"assets/video3.mp4"
+
+];
 
 let currentVideo = 0;
 
 setInterval(() => {
 
-  currentVideo++;
+currentVideo++;
 
-  if(currentVideo >= videos.length){
+if(currentVideo >= videos.length){
 
-    currentVideo = 0;
+currentVideo = 0;
 
-  }
+}
 
-  changeVideo(videos[currentVideo]);
+if(video){
 
-}, 30000);
+video.src = videos[currentVideo];  
+
+video.play().catch(() => {});
+
+}
+
+}, 25000);

@@ -1,11 +1,11 @@
-// ===============================
+// ======================================
 // RADIANT WAVES MEDIA
-// PROFESSIONAL SCRIPT.JS
-// ===============================
+// FINAL STABLE SCRIPT.JS
+// ======================================
 
-// ===============================
+// ======================================
 // LOAD NEWS JSON
-// ===============================
+// ======================================
 
 fetch('news.json?v=' + new Date().getTime())
 
@@ -13,9 +13,9 @@ fetch('news.json?v=' + new Date().getTime())
 
 .then(newsData => {
 
-  // ===============================
+  // ======================================
   // HERO SECTION
-  // ===============================
+  // ======================================
 
   const heroTitle =
   document.getElementById("hero-title");
@@ -37,9 +37,9 @@ fetch('news.json?v=' + new Date().getTime())
 
   }
 
-  // ===============================
-  // BREAKING TICKER
-  // ===============================
+  // ======================================
+  // BREAKING NEWS TICKER
+  // ======================================
 
   const ticker =
   document.getElementById("breaking-ticker");
@@ -56,9 +56,9 @@ fetch('news.json?v=' + new Date().getTime())
 
   }
 
-  // ===============================
+  // ======================================
   // HERO MARQUEE
-  // ===============================
+  // ======================================
 
   const heroMarquee =
   document.getElementById("hero-marquee");
@@ -75,9 +75,9 @@ fetch('news.json?v=' + new Date().getTime())
 
   }
 
-  // ===============================
+  // ======================================
   // FEATURED NEWS
-  // ===============================
+  // ======================================
 
   const featuredContainer =
   document.getElementById("featured-news");
@@ -110,9 +110,9 @@ fetch('news.json?v=' + new Date().getTime())
 
   }
 
-  // ===============================
+  // ======================================
   // GENERATE NEWS
-  // ===============================
+  // ======================================
 
   function generateNews(sectionId, category){
 
@@ -164,9 +164,9 @@ fetch('news.json?v=' + new Date().getTime())
   generateNews("business-news", "business");
   generateNews("tech-news", "technology");
 
-  // ===============================
+  // ======================================
   // SPONSORED ADVERTS
-  // ===============================
+  // ======================================
 
   const advertSection =
   document.getElementById("sponsored-adverts");
@@ -216,9 +216,7 @@ fetch('news.json?v=' + new Date().getTime())
           <div class="product-line">
 
             <strong>
-
               ${product.name}
-
             </strong>
 
             <br>
@@ -249,9 +247,9 @@ fetch('news.json?v=' + new Date().getTime())
 
   }
 
-  // ===============================
+  // ======================================
   // BREAKING HISTORY
-  // ===============================
+  // ======================================
 
   const historyContainer =
   document.getElementById("history-container");
@@ -286,9 +284,9 @@ fetch('news.json?v=' + new Date().getTime())
 
 });
 
-// ===============================
+// ======================================
 // VIDEO SYSTEM
-// ===============================
+// ======================================
 
 const video =
 document.getElementById("heroVideo");
@@ -296,12 +294,12 @@ document.getElementById("heroVideo");
 const soundButton =
 document.getElementById("sound-button");
 
-const videoSource =
+const source =
 document.getElementById("video-source");
 
-// ===============================
-// START VIDEO MUTED
-// ===============================
+// ======================================
+// START VIDEO
+// ======================================
 
 if(video){
 
@@ -309,25 +307,21 @@ if(video){
 
   video.volume = 1.0;
 
-  video.play().catch(() => {
-
-    console.log("Autoplay blocked");
-
-  });
+  video.play().catch(() => {});
 
 }
 
-// ===============================
+// ======================================
 // ENABLE SOUND
-// ===============================
+// ======================================
 
-if(video && soundButton){
+if(soundButton){
 
   soundButton.addEventListener(
 
     "click",
 
-    async function(){
+    async () => {
 
       try{
 
@@ -351,7 +345,7 @@ if(video && soundButton){
 
         alert(
 
-        "Tap the native video controls directly to enable sound."
+        "Browser blocked autoplay sound. Use video controls directly."
 
         );
 
@@ -363,35 +357,34 @@ if(video && soundButton){
 
 }
 
-// ===============================
-// VIDEO SWITCHER
-// ===============================
+// ======================================
+// VIDEO SWITCH BUTTONS
+// ======================================
 
 function changeVideo(videoFile){
 
-  if(video && videoSource){
+  if(video && source){
 
-    video.pause();
-
-    videoSource.src = videoFile;
+    source.src = videoFile;
 
     video.load();
 
-    video.play().catch(() => {
-
-      console.log("Video switch blocked");
-
-    });
+    video.play().catch(() => {});
 
   }
 
 }
-/* AUTO VIDEO ROTATION */
+
+// ======================================
+// AUTO VIDEO ROTATION
+// ======================================
 
 const videos = [
 
   "assets/video1.mp4",
+
   "assets/video2.mp4",
+
   "assets/video3.mp4"
 
 ];
@@ -408,52 +401,6 @@ setInterval(() => {
 
   }
 
-  if(video){
+  changeVideo(videos[currentVideo]);
 
-    /* CHANGE VIDEO */
-
-    video.src = videos[currentVideo];
-
-    /* KEEP SOUND ACTIVE */
-
-    video.muted = false;
-
-    video.volume = 1.0;
-
-    /* RELOAD VIDEO */
-
-    video.load();
-
-    /* PLAY VIDEO */
-
-    video.play()
-
-    .then(() => {
-
-      muteButton.innerHTML =
-      "🔊 SOUND ON";
-
-      muteButton.style.background =
-      "green";
-
-    })
-
-    .catch(() => {
-
-      /* FALLBACK */
-
-      video.muted = true;
-
-      video.play();
-
-      muteButton.innerHTML =
-      "🔇 TAP FOR SOUND";
-
-      muteButton.style.background =
-      "red";
-
-    });
-
-  }
-
-}, 25000);
+}, 30000);

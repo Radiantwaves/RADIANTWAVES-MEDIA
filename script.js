@@ -386,17 +386,12 @@ function changeVideo(videoFile){
   }
 
 }
-
-// ===============================
-// AUTO VIDEO ROTATION
-// ===============================
+/* AUTO VIDEO ROTATION */
 
 const videos = [
 
   "assets/video1.mp4",
-
   "assets/video2.mp4",
-
   "assets/video3.mp4"
 
 ];
@@ -413,6 +408,52 @@ setInterval(() => {
 
   }
 
-  changeVideo(videos[currentVideo]);
+  if(video){
 
-}, 30000);
+    /* CHANGE VIDEO */
+
+    video.src = videos[currentVideo];
+
+    /* KEEP SOUND ACTIVE */
+
+    video.muted = false;
+
+    video.volume = 1.0;
+
+    /* RELOAD VIDEO */
+
+    video.load();
+
+    /* PLAY VIDEO */
+
+    video.play()
+
+    .then(() => {
+
+      muteButton.innerHTML =
+      "🔊 SOUND ON";
+
+      muteButton.style.background =
+      "green";
+
+    })
+
+    .catch(() => {
+
+      /* FALLBACK */
+
+      video.muted = true;
+
+      video.play();
+
+      muteButton.innerHTML =
+      "🔇 TAP FOR SOUND";
+
+      muteButton.style.background =
+      "red";
+
+    });
+
+  }
+
+}, 25000);

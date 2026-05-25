@@ -1,356 +1,203 @@
 {
   "hero": {
-    "title": "RADIANT WAVES MEDIA — LATE NIGHT GLOBAL NEWS",
-    "description": "Late-night worldwide headlines, geopolitical tensions, diplomacy, economy and security updates — 24 May 2026."
+    "title": "RADIANT WAVES MEDIA — MORNING NEWS AROUND THE WORLD",
+    "description": "Breaking global developments from the United States, Europe, Africa, Asia, the Middle East and worldwide political updates."
   },
 
   "breaking": [
-
-    "U.S.–Iran negotiations remain fragile amid Middle East tensions",
-
-    "NATO increases security monitoring across Eastern Europe and Baltic region",
-
-    "Ukraine conflict escalates with renewed drone incidents and regional attacks",
-
-    "Nigeria and U.S. joint operations target ISIS-linked fighters in northeast",
-
-    "Pakistan train explosion kills dozens amid renewed security concerns",
-
-    "China expands strategic space program and Moon mission preparations",
-
-    "Global oil markets monitor Strait of Hormuz security risks",
-
-    "Europe discusses expanded military readiness and defense cooperation",
-
-    "Global markets remain cautious amid geopolitical instability",
-
-    "Middle East humanitarian concerns continue amid regional conflict"
-
+    "Trump allies intensify U.S. political campaigns ahead of major midterm battles",
+    "NATO leaders raise security concerns after renewed Russian military activity near Eastern Europe",
+    "El-Rufai political consultations spark fresh debate ahead of Nigeria’s 2027 elections",
+    "Peter Obi supporters continue nationwide mobilization and youth engagement across Nigeria",
+    "Middle East tensions remain high as U.S.–Iran diplomatic negotiations continue",
+    "South Africa faces renewed economic pressure and electricity reform debates",
+    "China expands strategic partnerships across Africa and Asia",
+    "Global financial markets remain cautious amid geopolitical uncertainty"
   ],
 
   "featured": {
-
-    "title": "GLOBAL SECURITY TENSIONS DOMINATE LATE NIGHT HEADLINES",
-
-    "image": "assets/featured.jpg",
-
-    "content": "Rising geopolitical tensions across Europe, the Middle East, Africa and Asia continue shaping global diplomacy, economic markets and military readiness as governments respond to rapidly changing international developments."
-
+    "image": "assets/worldnews.jpg",
+    "title": "Global Leaders Face Mounting Political, Security And Economic Pressure",
+    "content": "Governments across major world powers are confronting rising political tensions, economic instability, military concerns and election preparations. Security agencies continue monitoring conflicts in Eastern Europe, instability in the Middle East and terrorism threats in parts of Africa while global markets remain sensitive to inflation and geopolitical uncertainty."
   },
-
-  "sponsoredAdverts": [
-
-    {
-
-      "title": "STONEBREAKER BITTER SPIRIT & HERBAL MIXTURE",
-
-      "subtitle": "Health Promotion & Internal Wellness Support",
-
-      "image": "assets/stonebreaker.jpg",
-
-      "description": "Stonebreaker Bitter Spirit and Herbal Mixture supports immune stimulation, body cleansing and internal wellness therapy. Traditionally promoted for helping dissolve kidney stones and gallstones while supporting healthy sugar levels and internal body balance.",
-
-      "products": [
-
-        {
-
-          "name": "Stonebreaker Bitter Spirit",
-
-          "big": "Available",
-
-          "small": "Available"
-
-        },
-
-        {
-
-          "name": "Stonebreaker Herbal Mixture",
-
-          "big": "Available",
-
-          "small": "Available"
-
-        }
-
-      ]
-
-    },
-
-    {
-
-      "title": "FARM TO KITCHEN 🌶️",
-
-      "subtitle": "Freshly Ground Spices — No Additives",
-
-      "image": "assets/spices.jpg",
-
-      "description": "Natural premium spice blends prepared without additives. Rich flavor and authentic aroma for healthy home and restaurant cooking.",
-
-      "products": [
-
-        {
-
-          "name": "Exotic Beef Blend",
-
-          "big": "4K",
-
-          "small": "2K"
-
-        },
-
-        {
-
-          "name": "Classic Curry",
-
-          "big": "3K",
-
-          "small": "1,500"
-
-        },
-
-        {
-
-          "name": "Gargajiya Masala",
-
-          "big": "3K",
-
-          "small": "1,500"
-
-        }
-
-      ]
-
-    }
-
-  ],
 
   "articles": [
 
     {
-
       "category": "world",
-
-      "title": "Global Geopolitical Tensions Intensify Across Multiple Regions",
-
-      "image": "assets/world.jpg",
-
-      "description": "Governments worldwide continue responding to military tensions, diplomatic instability and growing international security concerns affecting several continents."
-
+      "image": "assets/world1.jpg",
+      "title": "Middle East Diplomacy Remains Fragile",
+      "description": "Diplomatic negotiations involving the United States, Iran and Gulf nations continue amid growing fears of wider regional instability. International observers say global oil routes and maritime security remain under close monitoring as tensions persist in the Persian Gulf."
     },
 
     {
-
       "category": "world",
-
-      "title": "Global Oil Markets Monitor Strait Of Hormuz Security Risks",
-
-      "image": "assets/oil.jpg",
-
-      "description": "Energy markets remain cautious as security concerns continue around strategic Gulf shipping routes and oil transportation corridors."
-
+      "image": "assets/world2.jpg",
+      "title": "Global Economic Recovery Faces Uncertainty",
+      "description": "Financial institutions and investors remain cautious as inflation concerns, geopolitical conflicts and rising defense spending continue affecting international markets and long-term economic forecasts."
     },
 
     {
-
       "category": "usa",
-
-      "title": "U.S.–Iran Negotiations Remain Fragile",
-
-      "image": "assets/trump.jpg",
-
-      "description": "American officials continue diplomatic efforts involving Iran as negotiations remain tense amid broader Middle East security concerns."
-
+      "image": "assets/usa1.jpg",
+      "title": "Trump Political Influence Continues Ahead Of Midterms",
+      "description": "Former President Donald Trump continues rallying Republican supporters across key battleground states as internal divisions emerge over foreign policy, immigration and economic strategy. Political analysts say the next election cycle may significantly reshape U.S. political dynamics."
     },
 
     {
-
       "category": "usa",
-
-      "title": "Political And Legal Pressures Continue In Washington",
-
-      "image": "assets/washington.jpg",
-
-      "description": "U.S. political debates continue over economic policy, international trade and legal challenges affecting national governance discussions."
-
+      "image": "assets/usa2.jpg",
+      "title": "Cybersecurity Agencies Monitor Global Threats",
+      "description": "American security officials are increasing surveillance against cyber threats targeting financial institutions, energy infrastructure and government systems amid growing international tensions involving Russia, China and Iran."
     },
 
     {
+      "category": "usa",
+      "image": "assets/usa3.jpg",
+      "title": "Severe Weather Alerts Across Parts Of America",
+      "description": "Meteorologists continue warning several U.S. regions about possible severe storms, tornado outbreaks and flooding risks as emergency agencies remain on alert for dangerous weather developments."
+    },
 
+    {
       "category": "europe",
-
-      "title": "Europe Raises Security Alert Amid NATO Tensions",
-
-      "image": "assets/europe-defense.jpg",
-
-      "description": "European leaders continue discussing expanded military readiness following reports of drone incidents and Russian military activity near the Baltic region."
-
+      "image": "assets/europe1.jpg",
+      "title": "Europe Strengthens Defense Coordination",
+      "description": "European Union and NATO leaders are discussing expanded military coordination following renewed concerns over Russian military movements near Eastern Europe and Baltic security corridors."
     },
 
     {
-
       "category": "europe",
-
-      "title": "Ukraine Conflict Continues With Cross-Border Drone Incidents",
-
-      "image": "assets/ukraine.jpg",
-
-      "description": "Regional tensions remain elevated following renewed drone strikes and security incidents connected to the ongoing Russia–Ukraine conflict."
-
+      "image": "assets/europe2.jpg",
+      "title": "Political Demonstrations Continue In London",
+      "description": "Large political demonstrations linked to immigration, economic pressure and rising nationalism continue across parts of the United Kingdom as security officials monitor public tensions and political polarization."
     },
 
     {
+      "category": "europe",
+      "image": "assets/europe3.jpg",
+      "title": "European Markets Remain Cautious",
+      "description": "European businesses and financial institutions continue warning about inflation pressures, energy uncertainty and supply chain disruptions affecting regional economic growth."
+    },
 
+    {
       "category": "africa",
-
-      "title": "Nigeria And U.S. Operations Target ISIS Fighters",
-
-      "image": "assets/nigeria-security.jpg",
-
-      "description": "Joint counterterrorism operations involving Nigerian and American forces reportedly targeted ISIS-linked fighters in northeastern Nigeria."
-
+      "image": "assets/africa1.jpg",
+      "title": "El-Rufai Political Moves Trigger National Debate",
+      "description": "Former Kaduna State Governor Nasir El-Rufai remains one of Nigeria’s most discussed political figures as consultations and alliances ahead of the 2027 elections continue generating national attention. Analysts say his influence within opposition discussions may shape future coalition politics."
     },
 
     {
-
       "category": "africa",
-
-      "title": "West Africa Security Concerns Continue Expanding",
-
-      "image": "assets/sahel.jpg",
-
-      "description": "Regional authorities continue monitoring militant activity and border instability affecting several West African countries."
-
+      "image": "assets/africa2.jpg",
+      "title": "Peter Obi Support Base Continues Growing",
+      "description": "Labour Party figure Peter Obi continues attracting strong youth and grassroots political engagement across several Nigerian states. Supporters say economic reforms, transparency and governance accountability remain central to his political message."
     },
 
     {
+      "category": "africa",
+      "image": "assets/africa3.jpg",
+      "title": "Nigeria Intensifies Security Operations",
+      "description": "Nigerian security agencies continue counterterrorism and anti-kidnapping operations across several northern regions as authorities attempt to contain growing security threats linked to armed groups and insurgents."
+    },
 
+    {
+      "category": "africa",
+      "image": "assets/africa4.jpg",
+      "title": "South Africa Faces Energy And Economic Pressure",
+      "description": "South African authorities continue efforts to stabilize electricity supply and attract investment while businesses express concerns over economic reforms, unemployment and infrastructure challenges."
+    },
+
+    {
       "category": "business",
-
-      "title": "Global Markets Remain Under Pressure",
-
-      "image": "assets/markets.jpg",
-
-      "description": "Financial markets continue reacting cautiously to geopolitical instability, military tensions and global economic uncertainty."
-
+      "image": "assets/business1.jpg",
+      "title": "Oil Markets React To Middle East Developments",
+      "description": "Energy markets remain highly sensitive to geopolitical tensions involving Iran and Gulf shipping routes as investors monitor possible disruptions to global oil supply chains."
     },
 
     {
-
       "category": "business",
-
-      "title": "Canada Monitors Economic And Security Developments",
-
-      "image": "assets/canada.jpg",
-
-      "description": "Canadian officials continue reviewing economic forecasts, NATO cooperation and Arctic defense planning amid broader international tensions."
-
+      "image": "assets/business2.jpg",
+      "title": "AI Investment Competition Expands Globally",
+      "description": "Technology companies across the United States, Europe and Asia continue investing heavily in artificial intelligence infrastructure, cybersecurity systems and digital innovation projects."
     },
 
     {
-
       "category": "technology",
-
-      "title": "China Expands Strategic Space Program",
-
-      "image": "assets/china-space.jpg",
-
-      "description": "Chinese space authorities continue advancing long-duration missions and preparations connected to future lunar exploration programs."
-
+      "image": "assets/tech1.jpg",
+      "title": "China Expands Space Ambitions",
+      "description": "Chinese space authorities continue preparations for future Moon missions and long-duration crewed operations as global competition in aerospace technology intensifies."
     },
 
     {
-
       "category": "technology",
+      "image": "assets/tech2.jpg",
+      "title": "Global Cybersecurity Concerns Continue Rising",
+      "description": "International experts warn that growing digital threats against governments, healthcare systems and critical infrastructure may become one of the largest global security challenges of the decade."
+    }
 
-      "title": "Global Cybersecurity Agencies Remain On Alert",
+  ],
 
-      "image": "assets/cybersecurity.jpg",
+  "sponsoredAdverts": [
 
-      "description": "Security experts continue monitoring rising digital threats targeting infrastructure, governments and financial systems worldwide."
+    {
+      "image": "assets/stonebreaker.jpg",
+      "title": "STONEBREAKER HERBAL MIXTURE",
+      "subtitle": "Natural Herbal Wellness Solution",
+      "description": "Experience powerful natural support with Stonebreaker Herbal Mixture. Prepared with carefully selected herbal ingredients trusted for wellness and vitality.",
+      "products": [
+        {
+          "name": "Stonebreaker Herbal Bottle",
+          "big": "5K",
+          "small": "3K"
+        }
+      ]
+    },
 
+    {
+      "image": "assets/spices.jpg",
+      "title": "FARM TO KITCHEN 🌶️",
+      "subtitle": "Freshly Ground Spices — No Additives!",
+      "description": "Taste the difference in every bite with premium fresh spice blends prepared naturally without additives.",
+      "products": [
+        {
+          "name": "Exotic Beef Blend",
+          "big": "4K",
+          "small": "2K"
+        },
+
+        {
+          "name": "Classic Curry",
+          "big": "3K",
+          "small": "1,500"
+        },
+
+        {
+          "name": "Gargajiya Masala",
+          "big": "3K",
+          "small": "1,500"
+        }
+      ]
     }
 
   ],
 
   "breakingHistory": [
 
-    "U.S.–Iran negotiations remain unstable amid Middle East tensions",
+    "U.S.–Iran diplomatic negotiations continue amid Middle East tensions",
 
-    "NATO increases monitoring across Eastern Europe and Baltic region",
+    "NATO leaders discuss increased security readiness across Eastern Europe",
 
-    "Ukraine conflict escalates with renewed drone attacks",
+    "El-Rufai consultations and Peter Obi mobilization dominate Nigerian political discussions",
 
-    "Nigeria and U.S. forces target ISIS-linked militants",
+    "South Africa continues nationwide economic and electricity reform efforts",
 
-    "Pakistan train explosion raises renewed security concerns",
+    "Global markets remain cautious over inflation and geopolitical uncertainty",
 
-    "China expands strategic space and Moon mission planning",
+    "China expands strategic technology and space development programs",
 
-    "Global oil markets monitor Strait of Hormuz tensions",
+    "Counterterrorism operations intensify across parts of northern Nigeria",
 
-    "Europe discusses expanded military readiness",
-
-    "Global financial markets react cautiously to geopolitical risks",
-
-    "Middle East humanitarian concerns continue amid ongoing conflict"
-
-  ],
-
-  "topStories": [
-
-    {
-
-      "title": "Middle East Conflict Continues Dominating Global Headlines",
-
-      "image": "assets/middleeast.jpg",
-
-      "description": "The Israel–Gaza conflict and U.S.–Iran diplomatic tensions remain major global security concerns tonight."
-
-    },
-
-    {
-
-      "title": "Europe Faces Heightened NATO Security Concerns",
-
-      "image": "assets/nato.jpg",
-
-      "description": "European leaders continue reviewing military readiness following growing tensions involving Russia and Eastern Europe."
-
-    },
-
-    {
-
-      "title": "Nigeria Emerges As Major Counterterrorism Focus",
-
-      "image": "assets/nigeria-politics.jpg",
-
-      "description": "Expanded counterterrorism operations continue across northeastern Nigeria amid rising regional security concerns."
-
-    }
-
-  ],
-
-  "weeklySummary": [
-
-    "Middle East conflict and U.S.–Iran diplomacy dominated global headlines throughout the week",
-
-    "Europe increased military consultations following NATO and Russia tensions",
-
-    "Nigeria intensified political activities and security operations",
-
-    "Artificial intelligence investments expanded globally",
-
-    "Global financial markets remained cautious amid geopolitical instability",
-
-    "Severe weather systems affected parts of North America",
-
-    "China advanced strategic technology and space exploration programs",
-
-    "International agencies monitored rising cybersecurity threats",
-
-    "Energy markets reacted to Middle East shipping concerns",
-
-    "Political uncertainty continued affecting several global regions"
+    "European political demonstrations continue amid immigration and economic debates"
 
   ]
 }

@@ -1,138 +1,131 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Afternoon Global News",
-    "description": "Global political developments, security tensions, economic uncertainty and diplomatic negotiations continue shaping international headlines this afternoon."
+    "title": "Radiant Waves Media Late Night Global News",
+    "description": "Major geopolitical tensions, security developments, political realignments and economic uncertainty continue shaping global headlines late tonight."
   },
 
   "breaking": [
-    "🔴 El-Rufai intensifies opposition consultations ahead of Nigeria’s 2027 political realignments",
-    "🔴 Peter Obi calls for economic reforms and stronger governance accountability",
-    "🔴 NATO leaders discuss expanded regional defense readiness amid Russia tensions",
-    "🔴 Severe weather alerts continue across parts of the United States",
-    "🔴 Middle East diplomatic negotiations remain fragile amid regional instability",
-    "🔴 South Africa pushes energy reforms to stabilize electricity supply",
-    "🔴 Global financial markets remain cautious over inflation and geopolitical risks",
-    "🔴 Canadian leaders discuss migration, housing and economic pressure challenges"
+    "🔴 U.S.–Iran diplomatic negotiations remain fragile amid Middle East tensions",
+    "🔴 NATO security discussions intensify following renewed Russia-related concerns in Europe",
+    "🔴 El-Rufai and Peter Obi political consultations continue ahead of Nigeria 2027 elections",
+    "🔴 Severe weather systems continue affecting parts of North America",
+    "🔴 Global oil markets remain sensitive to Persian Gulf developments",
+    "🔴 South Africa advances electricity reforms amid economic pressure",
+    "🔴 China expands strategic technology and space development initiatives",
+    "🔴 Financial markets remain cautious over inflation and geopolitical instability"
   ],
 
   "featured": {
-    "image": "assets/world.jpg",
-    "title": "Global Political And Economic Tensions Dominate International Headlines",
-    "content": "Governments across multiple continents continue responding to rising geopolitical pressure, economic uncertainty, elections, security threats and diplomatic negotiations. International analysts say the global political atmosphere remains highly sensitive as nations prepare for major policy decisions and electoral transitions."
+    "image": "assets/nightworld.jpg",
+    "title": "Global Security And Political Uncertainty Dominate Late Night Headlines",
+    "content": "Governments across Europe, North America, Africa, Asia and the Middle East continue responding to geopolitical tensions, economic uncertainty, security concerns and diplomatic negotiations. Analysts say global political pressure remains elevated as military, economic and political developments unfold across multiple regions."
   },
 
   "articles": [
 
     {
       "category": "world",
-      "image": "assets/usa.jpg",
-      "title": "United States Faces Security And Political Pressure",
-      "description": "American officials continue monitoring security threats linked to cyberattacks, foreign tensions and severe weather systems affecting central states. Political campaigns ahead of future national elections are also intensifying as divisions deepen over immigration, foreign policy and economic priorities."
+      "image": "assets/middleeast.jpg",
+      "title": "Middle East Remains Major Focus Of International Diplomacy",
+      "description": "Late-night diplomatic discussions involving the United States, Iran and Gulf nations continue as regional instability raises concerns over shipping security, energy markets and broader international security risks."
     },
 
     {
       "category": "world",
-      "image": "assets/europe.jpg",
-      "title": "Europe Strengthens Regional Defense Coordination",
-      "description": "European governments are expanding defense consultations following renewed warnings surrounding Russia and Eastern European security concerns. NATO discussions remain active as military readiness and intelligence coordination increase across several regions."
+      "image": "assets/nato.jpg",
+      "title": "NATO Leaders Continue Monitoring European Security Developments",
+      "description": "European defense officials remain on alert following renewed military tensions surrounding Eastern Europe and continued concerns over regional security coordination."
     },
 
     {
       "category": "world",
-      "image": "assets/africa.jpg",
-      "title": "African Leaders Push Economic Stability And Security Cooperation",
-      "description": "African governments continue discussions on continental trade integration, infrastructure investment and regional security operations. Analysts say economic diversification and industrial growth remain central priorities across the continent."
+      "image": "assets/globalmarkets.jpg",
+      "title": "Global Markets Remain Cautious Amid International Tensions",
+      "description": "Financial analysts continue monitoring inflation, oil prices, international conflicts and global trade developments as investors react cautiously to geopolitical uncertainty."
     },
 
     {
       "category": "usa",
       "image": "assets/trump.jpg",
-      "title": "Trump Political Influence Continues Across Republican Politics",
-      "description": "Former President Donald Trump remains highly influential within Republican politics as campaign activity expands in several battleground states. Debates over trade, immigration and foreign policy continue shaping the American political environment."
+      "title": "U.S. Political Climate Remains Intensely Divided",
+      "description": "Political campaigns and policy debates continue dominating the American political landscape as Republicans and Democrats prepare for future national electoral contests."
     },
 
     {
       "category": "usa",
-      "image": "assets/weather.jpg",
-      "title": "Severe Storm Alerts Continue Across Central United States",
-      "description": "Meteorologists warn that heavy storms, flooding and possible tornado activity may continue affecting parts of the central United States. Emergency agencies remain on alert as millions prepare for changing weather conditions."
+      "image": "assets/storm.jpg",
+      "title": "Storm And Flood Alerts Continue Across Several U.S. States",
+      "description": "Weather agencies continue monitoring dangerous storm systems capable of producing flooding, heavy rainfall and severe tornado activity across parts of the United States."
     },
 
     {
       "category": "usa",
-      "image": "assets/business.jpg",
-      "title": "Technology And AI Investments Continue Expanding",
-      "description": "Major American technology firms continue increasing investments in artificial intelligence, cloud computing, automation and cybersecurity infrastructure amid growing international competition."
+      "image": "assets/cybersecurity.jpg",
+      "title": "Cybersecurity Concerns Grow Across Critical U.S. Infrastructure",
+      "description": "American security agencies continue monitoring cyber threats targeting financial systems, transportation networks and energy infrastructure amid increasing global tensions."
     },
 
     {
       "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "United Kingdom Faces Political And Economic Debate",
-      "description": "British leaders continue debating migration policy, economic reforms and public spending as political polarization grows across parts of the country. Security officials are also monitoring protest activity and social tensions."
+      "image": "assets/europe-night.jpg",
+      "title": "Europe Expands Security And Defense Consultations",
+      "description": "European governments continue discussing expanded military coordination and intelligence cooperation as tensions linked to Russia and regional security remain elevated."
     },
 
     {
       "category": "europe",
-      "image": "assets/russia.jpg",
-      "title": "Russia-Ukraine Tensions Continue To Concern Europe",
-      "description": "Drone attacks, border incidents and military movements continue increasing security concerns across Europe. NATO members remain focused on strengthening regional defense systems and intelligence cooperation."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/eu.jpg",
-      "title": "European Markets Watch Global Economic Uncertainty",
-      "description": "European financial institutions continue monitoring inflation, energy prices and geopolitical instability as governments seek strategies to protect economic recovery and industrial growth."
+      "image": "assets/uk-politics.jpg",
+      "title": "United Kingdom Faces Growing Political Pressure",
+      "description": "British political leaders continue debating economic reforms, migration policy and national security issues as public demonstrations and political divisions remain active."
     },
 
     {
       "category": "africa",
-      "image": "assets/nigeria.jpg",
-      "title": "El-Rufai And Peter Obi Continue Strategic Political Consultations",
-      "description": "Political discussions ahead of Nigeria’s 2027 elections continue attracting national attention as former Kaduna State governor Nasir El-Rufai and Labour Party figure Peter Obi remain active in consultations surrounding governance, opposition alliances and economic reform proposals."
+      "image": "assets/nigeria-politics.jpg",
+      "title": "Nigeria’s Political Atmosphere Intensifies Ahead Of 2027 Elections",
+      "description": "Political consultations involving opposition figures including Peter Obi and Nasir El-Rufai continue attracting national attention as parties position themselves ahead of future electoral contests."
     },
 
     {
       "category": "africa",
-      "image": "assets/oyo.jpg",
-      "title": "Oyo Political Activities Intensify Ahead Of Future Elections",
-      "description": "Political stakeholders in Oyo State continue consultations and grassroots mobilization as major parties prepare for future electoral contests. Analysts expect increased political alignments and strategic negotiations in the coming months."
+      "image": "assets/oyo-politics.jpg",
+      "title": "Political Realignments Continue Across Oyo State",
+      "description": "Party consultations, grassroots mobilization and strategic alliances continue across Oyo State as politicians prepare for future elections and internal party negotiations."
     },
 
     {
       "category": "africa",
       "image": "assets/southafrica.jpg",
-      "title": "South Africa Continues Energy Reform Discussions",
-      "description": "South African authorities continue implementing reforms aimed at stabilizing electricity generation and improving investor confidence amid economic challenges and infrastructure concerns."
+      "title": "South Africa Continues Economic And Electricity Reforms",
+      "description": "Authorities in South Africa continue implementing measures aimed at stabilizing electricity generation, attracting investment and improving long-term economic performance."
     },
 
     {
       "category": "business",
-      "image": "assets/market.jpg",
-      "title": "Global Markets Remain Sensitive To Geopolitical Risks",
-      "description": "Investors continue closely monitoring inflation concerns, international conflicts, trade negotiations and energy market volatility. Economists warn that prolonged instability could affect global growth projections."
+      "image": "assets/oil-market.jpg",
+      "title": "Oil Prices React To Persian Gulf Security Concerns",
+      "description": "Energy traders continue monitoring developments in the Middle East as concerns surrounding maritime security and regional instability influence global oil prices."
     },
 
     {
       "category": "business",
-      "image": "assets/oil.jpg",
-      "title": "Oil Markets Watch Middle East Developments",
-      "description": "Energy markets remain cautious as tensions in the Persian Gulf continue influencing oil prices and shipping security concerns across international trade routes."
+      "image": "assets/economy.jpg",
+      "title": "Global Economic Outlook Remains Uncertain",
+      "description": "Economists warn that inflation, debt concerns, international conflicts and slowing industrial activity could continue affecting global economic recovery efforts."
     },
 
     {
       "category": "technology",
-      "image": "assets/ai.jpg",
-      "title": "Artificial Intelligence Expansion Accelerates Worldwide",
-      "description": "Technology companies in the United States, Europe and Asia continue accelerating investment in AI infrastructure, robotics and digital systems as competition intensifies globally."
+      "image": "assets/ai-night.jpg",
+      "title": "Artificial Intelligence Competition Accelerates Worldwide",
+      "description": "Technology companies across the United States, Europe and Asia continue investing heavily in AI systems, cybersecurity and advanced digital infrastructure."
     },
 
     {
       "category": "technology",
-      "image": "assets/china-tech.jpg",
-      "title": "China Expands Strategic Technology And Space Programs",
-      "description": "Chinese officials continue advancing major space and technology initiatives, including long-term lunar mission planning and expanded semiconductor development projects."
+      "image": "assets/china-space.jpg",
+      "title": "China Continues Expanding Strategic Space Programs",
+      "description": "Chinese officials continue advancing long-term lunar mission planning, satellite technology projects and semiconductor development initiatives."
     }
 
   ],
@@ -181,16 +174,16 @@
 
   "breakingHistory": [
 
-    "U.S. political campaigns intensify ahead of future elections and policy debates.",
-    "Europe expands regional defense coordination amid continued Russia-related tensions.",
-    "Middle East diplomatic negotiations continue amid regional instability concerns.",
-    "South Africa advances electricity and economic reform initiatives.",
-    "Nigeria’s political atmosphere grows more active ahead of 2027 election preparations.",
-    "Global AI competition accelerates across major world economies.",
-    "Financial markets remain cautious over inflation and geopolitical uncertainty.",
-    "Canada continues discussions on housing, migration and economic policy reforms.",
-    "China strengthens strategic technology and space development programs.",
-    "Severe weather systems continue affecting parts of North America."
+    "U.S.–Iran negotiations continue amid rising Middle East tensions.",
+    "NATO leaders intensify European regional defense consultations.",
+    "Nigeria’s political atmosphere grows more active ahead of 2027 elections.",
+    "South Africa advances electricity stabilization reforms.",
+    "Global financial markets remain cautious over inflation and geopolitical risks.",
+    "China expands strategic space and technology development initiatives.",
+    "Severe weather systems continue affecting parts of North America.",
+    "Oil markets remain sensitive to Persian Gulf security developments.",
+    "Artificial intelligence investment competition accelerates globally.",
+    "European leaders continue monitoring Russia-related security concerns."
 
   ]
 }

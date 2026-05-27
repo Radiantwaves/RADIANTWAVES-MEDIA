@@ -1,4 +1,156 @@
-      "description": " freshly prepared spice blends designed for rich flavor, quality cooking and authentic traditional taste.",
+{
+  "hero": {
+    "title": "Radiant Waves Media Evening Global News",
+    "description": "Evening international news coverage featuring major political developments, economic updates, security reports and breaking headlines from across the world."
+  },
+
+  "breaking": [
+    "🔴 Muslim communities worldwide continue Eid celebration gatherings and prayers",
+    "🔴 El-Rufai and Peter Obi political consultations continue ahead of Nigeria 2027 discussions",
+    "🔴 NATO leaders maintain high security alert over Eastern European tensions",
+    "🔴 Global oil prices remain unstable amid Middle East security concerns",
+    "🔴 United States officials monitor severe weather and cybersecurity threats",
+    "🔴 European leaders debate migration and defense expansion policies",
+    "🔴 African economies push trade and industrial growth strategies",
+    "🔴 Asian technology investment race intensifies across AI and semiconductor sectors"
+  ],
+
+  "featured": {
+    "image": "assets/world.jpg",
+    "title": "Global Leaders Navigate Political, Economic And Security Challenges",
+    "content": "Governments across the world continue responding to geopolitical pressure, economic uncertainty, technological competition and security concerns. International observers say diplomacy, defense coordination and economic reforms remain central to global discussions this evening."
+  },
+
+  "articles": [
+
+    {
+      "category": "world",
+      "image": "assets/global.jpg",
+      "title": "Global Diplomatic Pressure Continues Across Multiple Regions",
+      "description": "International leaders remain engaged in negotiations surrounding economic stability, regional conflicts, migration and global security coordination as tensions continue affecting several strategic regions."
+    },
+
+    {
+      "category": "world",
+      "image": "assets/middleeast.jpg",
+      "title": "Middle East Remains Focus Of International Attention",
+      "description": "Diplomatic discussions involving Iran, Gulf nations, Israel and Western powers continue amid concerns over maritime security, regional stability and global energy markets."
+    },
+
+    {
+      "category": "usa",
+      "image": "assets/trump.jpg",
+      "title": "American Political Campaign Activity Intensifies",
+      "description": "Political campaigns and policy debates continue expanding across the United States as parties focus on immigration, economic reform, cybersecurity and foreign policy ahead of future elections."
+    },
+
+    {
+      "category": "usa",
+      "image": "assets/weather.jpg",
+      "title": "Weather Authorities Issue Fresh Storm Warnings",
+      "description": "Emergency officials continue monitoring severe storms, heavy rainfall and possible tornado activity affecting parts of the United States as rescue agencies remain on standby."
+    },
+
+    {
+      "category": "usa",
+      "image": "assets/cyber.jpg",
+      "title": "Cybersecurity Agencies Monitor Global Threats",
+      "description": "American security agencies continue strengthening digital protection systems amid growing international cyberattack concerns targeting infrastructure, banking systems and communication networks."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/europe.jpg",
+      "title": "Europe Expands Defense Coordination Discussions",
+      "description": "European leaders continue strengthening defense cooperation and intelligence coordination as security concerns linked to Eastern Europe remain active."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/uk.jpg",
+      "title": "United Kingdom Debates Migration And Economic Policies",
+      "description": "British political discussions continue focusing on migration, public spending and economic recovery as social and political divisions remain visible across the country."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/russia.jpg",
+      "title": "Russia-Ukraine Conflict Continues Affecting European Security",
+      "description": "Military analysts continue monitoring cross-border tensions, drone activity and NATO preparedness as governments assess regional defense strategies."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/nigeria.jpg",
+      "title": "El-Rufai And Peter Obi Continue National Political Consultations",
+      "description": "Political consultations involving former Kaduna governor Nasir El-Rufai and Labour Party figure Peter Obi continue attracting nationwide attention as discussions surrounding governance reforms and future alliances intensify."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/africa.jpg",
+      "title": "African Leaders Push Economic Integration Plans",
+      "description": "African governments continue advancing trade integration, industrial development and infrastructure investment through regional cooperation and economic reforms."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/southafrica.jpg",
+      "title": "South Africa Continues Electricity Reform Efforts",
+      "description": "South African authorities continue implementing energy reforms aimed at stabilizing electricity supply, improving infrastructure and attracting investment."
+    },
+
+    {
+      "category": "business",
+      "image": "assets/market.jpg",
+      "title": "Global Financial Markets Remain Cautious",
+      "description": "Investors continue monitoring inflation trends, geopolitical instability and energy market developments as uncertainty affects international financial forecasts."
+    },
+
+    {
+      "category": "business",
+      "image": "assets/oil.jpg",
+      "title": "Oil Markets React To Middle East Developments",
+      "description": "Global oil traders remain focused on shipping security, diplomatic negotiations and regional instability affecting international energy supply routes."
+    },
+
+    {
+      "category": "technology",
+      "image": "assets/ai.jpg",
+      "title": "Artificial Intelligence Competition Expands Worldwide",
+      "description": "Technology firms across the United States, Europe and Asia continue increasing investment in artificial intelligence, automation, cloud systems and advanced digital infrastructure."
+    },
+
+    {
+      "category": "technology",
+      "image": "assets/china-tech.jpg",
+      "title": "China Strengthens Technology And Space Programs",
+      "description": "Chinese authorities continue expanding semiconductor development, artificial intelligence research and long-term space exploration initiatives."
+    }
+
+  ],
+
+  "sponsoredAdverts": [
+
+    {
+      "image": "assets/stonebreaker.jpg",
+      "title": "STONEBREAKER HERBAL MIXTURE",
+      "subtitle": "Natural Wellness Solution",
+      "description": "Stonebreaker Herbal Mixture is prepared from carefully selected natural ingredients traditionally used for wellness support and body cleansing.",
+      "products": [
+        {
+          "name": "Stonebreaker Herbal Bottle",
+          "big": "5K",
+          "small": "3K"
+        }
+      ]
+    },
+
+    {
+      "image": "assets/spices.jpg",
+      "title": "FARM TO KITCHEN 🌶️",
+      "subtitle": "Freshly Ground Spices — No Additives!",
+      "description": "Premium freshly prepared spice blends designed for rich flavor, quality cooking and authentic traditional taste.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -32,201 +184,6 @@
     "South Africa advances electricity and infrastructure reform programs.",
     "United States agencies monitor cybersecurity and severe weather threats.",
     "Asian technology and semiconductor investment continues expanding."
-
-  ]
-}{
-  "hero": {
-    "title": "Radiant Waves Media Morning Global News",
-    "description": "Morning headlines, global breaking developments, politics, business, diplomacy and celebration messages from around the world."
-  },
-
-  "breaking": [
-    "🔴 Muslims around the world celebrate with prayers, unity and goodwill messages",
-    "🔴 United States monitors global security and economic developments amid election debates",
-    "🔴 Europe strengthens regional defense coordination and economic discussions",
-    "🔴 Nigeria political consultations continue ahead of future electoral alignments",
-    "🔴 Middle East diplomacy remains sensitive amid ongoing regional tensions",
-    "🔴 African leaders push trade, energy and infrastructure development programs",
-    "🔴 Asian technology and AI investments continue expanding globally",
-    "🔴 Global financial markets remain cautious over inflation and geopolitical risks"
-  ],
-
-  "featured": {
-    "image": "assets/world.jpg",
-    "title": "World Leaders Focus On Stability, Economy And International Cooperation",
-    "content": "Governments and international organizations across the globe continue responding to political tensions, economic uncertainty, regional security concerns and diplomatic negotiations. Morning discussions are centered on peace efforts, investment, energy security and preparations for major political transitions."
-  },
-
-  "articles": [
-
-    {
-      "category": "world",
-      "image": "assets/muslim.jpg",
-      "title": "Greetings To Muslims Around The World",
-      "description": "Radiant Waves Media extends warm greetings to Muslims across the world during this special celebration period. Communities gathered peacefully for prayers, family reunions, charitable activities and messages of unity, peace and compassion."
-    },
-
-    {
-      "category": "world",
-      "image": "assets/usa.jpg",
-      "title": "United States Reviews Security And Economic Priorities",
-      "description": "American officials continue monitoring cybersecurity threats, economic policy discussions and foreign relations developments as political campaigns and national policy debates intensify across the country."
-    },
-
-    {
-      "category": "world",
-      "image": "assets/europe.jpg",
-      "title": "Europe Continues Regional Defense And Economic Coordination",
-      "description": "European governments remain focused on regional security, inflation management, industrial recovery and diplomatic cooperation amid continuing geopolitical uncertainty."
-    },
-
-    {
-      "category": "usa",
-      "image": "assets/trump.jpg",
-      "title": "Trump Influence Remains Strong In Republican Politics",
-      "description": "Former President Donald Trump continues holding political influence within the Republican Party as campaign activities and policy debates expand ahead of future elections."
-    },
-
-    {
-      "category": "usa",
-      "image": "assets/weather.jpg",
-      "title": "Weather Agencies Monitor Storm Systems Across Parts Of America",
-      "description": "Meteorologists continue tracking severe weather conditions including storms, flooding risks and heatwave concerns affecting multiple regions across the United States."
-    },
-
-    {
-      "category": "usa",
-      "image": "assets/business.jpg",
-      "title": "Technology And AI Competition Expands",
-      "description": "Major American technology firms continue investing heavily in artificial intelligence, cybersecurity and cloud infrastructure as global competition accelerates."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "United Kingdom Continues Economic And Migration Debates",
-      "description": "British political leaders continue discussions surrounding economic reforms, migration policies and national public spending priorities amid rising political tensions."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/russia.jpg",
-      "title": "Russia-Ukraine Situation Continues To Affect European Security",
-      "description": "European defense discussions remain active as governments monitor developments linked to the Russia-Ukraine conflict and broader NATO security coordination."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/eu.jpg",
-      "title": "European Markets Watch Inflation And Energy Costs",
-      "description": "Financial analysts across Europe continue monitoring inflation pressures, industrial recovery and energy market developments affecting economic growth."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/nigeria.jpg",
-      "title": "El-Rufai And Peter Obi Continue Political Consultations",
-      "description": "Nigerian political discussions ahead of future elections continue attracting public attention as Nasir El-Rufai and Peter Obi remain active in consultations surrounding governance reforms, economic policy and political alliances."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/africa.jpg",
-      "title": "African Leaders Push Economic Integration",
-      "description": "African governments continue promoting trade expansion, infrastructure development and regional economic cooperation under continental development programs."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/southafrica.jpg",
-      "title": "South Africa Advances Energy Reform Efforts",
-      "description": "South African authorities continue implementing electricity and investment reforms aimed at improving energy stability and strengthening investor confidence."
-    },
-
-    {
-      "category": "business",
-      "image": "assets/market.jpg",
-      "title": "Global Markets Remain Sensitive To Geopolitical Risks",
-      "description": "International investors continue monitoring inflation trends, diplomatic tensions, energy prices and global trade conditions as markets remain cautious."
-    },
-
-    {
-      "category": "business",
-      "image": "assets/oil.jpg",
-      "title": "Oil Markets Closely Watch Middle East Developments",
-      "description": "Energy markets remain focused on shipping security and diplomatic developments in the Middle East due to their potential impact on global oil supply."
-    },
-
-    {
-      "category": "technology",
-      "image": "assets/ai.jpg",
-      "title": "Artificial Intelligence Expansion Continues Worldwide",
-      "description": "Technology firms across the United States, Europe and Asia continue accelerating AI investment projects, automation systems and digital infrastructure development."
-    },
-
-    {
-      "category": "technology",
-      "image": "assets/china-tech.jpg",
-      "title": "China Expands Space And Technology Programs",
-      "description": "Chinese authorities continue strengthening long-term technology projects including semiconductor development, AI systems and future lunar exploration missions."
-    }
-
-  ],
-
-  "sponsoredAdverts": [
-
-    {
-      "image": "assets/stonebreaker.jpg",
-      "title": "STONEBREAKER HERBAL MIXTURE",
-      "subtitle": "Natural Wellness Solution",
-      "description": "Stonebreaker Herbal Mixture is prepared from carefully selected natural ingredients traditionally used for wellness and body cleansing support.",
-      "products": [
-        {
-          "name": "Stonebreaker Herbal Bottle",
-          "big": "5K",
-          "small": "3K"
-        }
-      ]
-    },
-
-    {
-      "image": "assets/spices.jpg",
-      "title": "FARM TO KITCHEN 🌶️",
-      "subtitle": "Freshly Ground Spices — No Additives!",
-      "description": "Taste the difference in every bite with premium freshly ground spice blends prepared for rich flavor and quality cooking.",
-      "products": [
-        {
-          "name": "🥩 Exotic Beef Blend",
-          "big": "4K",
-          "small": "2K"
-        },
-        {
-          "name": "🍛 Classic Curry",
-          "big": "3K",
-          "small": "1,500"
-        },
-        {
-          "name": "✨ Gargajiya Masala",
-          "big": "3K",
-          "small": "1,500"
-        }
-      ]
-    }
-
-  ],
-
-  "breakingHistory": [
-
-    "Muslims around the world celebrate peacefully with prayers and goodwill activities.",
-    "United States political and economic debates continue ahead of future elections.",
-    "Europe expands defense coordination amid geopolitical uncertainty.",
-    "Middle East diplomacy remains fragile amid regional tensions.",
-    "Nigeria political consultations continue ahead of 2027 preparations.",
-    "African governments strengthen continental trade and infrastructure discussions.",
-    "Global AI investment competition accelerates across major economies.",
-    "Financial markets remain cautious over inflation and security concerns.",
-    "China advances strategic technology and space exploration programs.",
-    "Global energy markets continue monitoring Middle East developments."
 
   ]
 }

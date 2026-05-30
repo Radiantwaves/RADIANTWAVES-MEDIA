@@ -1,110 +1,117 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Night News",
-    "description": "Global night-time coverage of major developments, breaking stories, political updates, business trends and international affairs."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Good morning. Bringing you the latest headlines, breaking developments and important stories shaping our world today."
   },
 
   "breaking": [
-    "🔴 World leaders continue diplomatic consultations on regional security issues",
-    "🔴 Global markets remain focused on inflation, energy prices and economic growth",
-    "🔴 International agencies monitor humanitarian situations in conflict-affected regions",
-    "🔴 Technology companies expand investments in artificial intelligence infrastructure",
-    "🔴 African governments strengthen cooperation on trade and development initiatives",
-    "🔴 European security discussions remain active amid regional defense concerns",
-    "🔴 North American officials review economic and border policy priorities",
-    "🔴 Energy markets watch developments across major oil-producing regions"
+    "🔴 Global leaders continue diplomatic efforts to reduce international tensions",
+    "🔴 Nigeria's political landscape remains active ahead of 2027 election preparations",
+    "🔴 World markets monitor inflation, energy prices and economic growth forecasts",
+    "🔴 Artificial intelligence investment continues expanding across major economies",
+    "🔴 European governments maintain security and defense consultations",
+    "🔴 African leaders push regional trade, investment and infrastructure development",
+    "🔴 Severe weather monitoring continues across parts of North America",
+    "🔴 International energy markets remain sensitive to geopolitical developments"
   ],
 
   "featured": {
-    "image": "assets/world.jpg",
-    "title": "Global Security, Economy And Politics Dominate Night Headlines",
-    "content": "Governments, businesses and international organizations continue responding to economic challenges, geopolitical developments, technological transformation and security concerns. Analysts say the coming weeks could be important for global policy decisions and international cooperation."
+    "image": "assets/morning-world.jpg",
+    "title": "New Day Begins Amid Global Political And Economic Challenges",
+    "content": "Governments, businesses and international organizations are beginning the day focused on economic stability, security cooperation, technological innovation and diplomatic engagement. Analysts say global attention remains centered on growth, governance and regional stability."
   },
 
   "articles": [
 
     {
       "category": "world",
-      "image": "assets/world-leaders.jpg",
-      "title": "International Diplomacy Remains Active",
-      "description": "Diplomatic discussions continue across several regions as governments seek solutions to security, economic and humanitarian challenges affecting millions of people worldwide."
+      "image": "assets/world.jpg",
+      "title": "World Leaders Focus On Diplomacy And Stability",
+      "description": "International leaders continue diplomatic engagements aimed at strengthening economic cooperation, addressing security concerns and promoting peaceful solutions to regional disputes."
     },
 
     {
       "category": "world",
-      "image": "assets/global-economy.jpg",
-      "title": "Global Economy Faces Mixed Signals",
-      "description": "Economists continue assessing inflation trends, investment flows and trade activity as countries work to maintain growth while managing financial pressures."
+      "image": "assets/un.jpg",
+      "title": "Global Organizations Call For Greater Cooperation",
+      "description": "International institutions are encouraging stronger collaboration on development, humanitarian support and economic recovery as nations face shared global challenges."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Reviews Economic And Security Priorities",
-      "description": "American policymakers continue discussions on economic growth, infrastructure investment, border management and international security cooperation."
+      "title": "United States Reviews Economic And Policy Priorities",
+      "description": "American policymakers continue discussions on economic growth, infrastructure development, trade policy and national security as new policy initiatives are considered."
     },
 
     {
       "category": "usa",
-      "image": "assets/technology.jpg",
-      "title": "Technology Sector Maintains Strong Investment Pace",
-      "description": "Major technology companies continue expanding artificial intelligence, cloud computing and cybersecurity projects as global competition intensifies."
+      "image": "assets/business.jpg",
+      "title": "Business Leaders Watch Economic Indicators",
+      "description": "Investors and corporate leaders remain focused on inflation trends, employment figures and market performance as they assess future economic opportunities."
     },
 
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "European Leaders Focus On Security Coordination",
-      "description": "European governments continue consultations on defense cooperation, economic resilience and energy security as regional challenges evolve."
+      "title": "Europe Continues Security And Economic Consultations",
+      "description": "European governments are maintaining discussions on defense cooperation, energy security and economic resilience amid changing international conditions."
     },
 
     {
       "category": "europe",
-      "image": "assets/business-europe.jpg",
-      "title": "European Businesses Monitor Market Conditions",
-      "description": "Companies across Europe remain focused on inflation, consumer spending and international trade developments affecting future growth prospects."
+      "image": "assets/uk.jpg",
+      "title": "United Kingdom Addresses Domestic Priorities",
+      "description": "British officials continue focusing on economic performance, public services and long-term policy planning while monitoring international developments."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Trade And Development Initiatives Advance",
-      "description": "Governments and regional institutions continue promoting investment, infrastructure expansion and economic integration across the continent."
+      "title": "Africa Advances Trade And Infrastructure Goals",
+      "description": "African nations continue promoting regional integration, transportation projects and investment initiatives aimed at supporting sustainable development."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria's Political Discussions Continue",
-      "description": "Political stakeholders continue consultations on governance, economic reforms and future electoral strategies as national debates remain active."
+      "title": "Nigeria's Political Environment Remains Active",
+      "description": "Political discussions continue across Nigeria as leaders, parties and stakeholders engage on governance, development and future electoral preparations."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/agriculture.jpg",
+      "title": "Agriculture And Food Security Remain Priorities",
+      "description": "Governments across Africa continue supporting agricultural production and food security initiatives to strengthen economic growth and rural development."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Investors Watch Global Economic Indicators",
-      "description": "Financial markets remain attentive to central bank policies, commodity prices and geopolitical developments that could influence investment decisions."
+      "title": "Global Markets Begin The Day Cautiously",
+      "description": "Financial markets are watching inflation data, energy prices and international developments that may influence investor sentiment and growth forecasts."
     },
 
     {
       "category": "business",
       "image": "assets/oil.jpg",
-      "title": "Energy Sector Monitors Supply And Demand Trends",
-      "description": "Oil and energy markets continue reacting to production forecasts, transportation demand and international developments."
+      "title": "Energy Markets Monitor Supply Conditions",
+      "description": "Oil and energy traders continue assessing supply trends, transportation networks and global demand as markets open for the day."
     },
 
     {
       "category": "technology",
       "image": "assets/ai.jpg",
-      "title": "Artificial Intelligence Expansion Continues",
-      "description": "Technology firms around the world are investing heavily in AI systems, automation and advanced computing infrastructure."
+      "title": "Artificial Intelligence Continues Transforming Industries",
+      "description": "Technology companies are expanding AI applications across healthcare, finance, education and manufacturing sectors."
     },
 
     {
       "category": "technology",
-      "image": "assets/innovation.jpg",
-      "title": "Innovation Drives Global Competition",
-      "description": "Research institutions and private companies continue introducing new technologies aimed at improving productivity, communication and digital services."
+      "image": "assets/china-tech.jpg",
+      "title": "Global Technology Competition Intensifies",
+      "description": "Nations and companies continue investing in advanced technology, semiconductor development and digital innovation to remain competitive."
     }
 
   ],
@@ -152,15 +159,15 @@
   ],
 
   "breakingHistory": [
-    "Global diplomatic consultations continue on security and economic issues.",
-    "Technology investments remain strong across major economies.",
-    "African trade and development programs continue expanding.",
-    "European leaders maintain defense and energy discussions.",
-    "International markets monitor inflation and growth indicators.",
-    "Energy prices remain closely watched by investors worldwide.",
-    "Governments continue reviewing infrastructure and economic priorities.",
+    "Global diplomatic engagements continue across major regions.",
+    "Economic growth and inflation remain key concerns for policymakers.",
+    "Technology investment continues expanding worldwide.",
+    "African trade and infrastructure programs move forward.",
+    "European governments maintain security consultations.",
+    "Energy markets monitor global supply and demand conditions.",
+    "Nigeria's political environment remains active.",
+    "International organizations encourage greater cooperation.",
     "Artificial intelligence development accelerates globally.",
-    "Businesses adapt to changing market conditions.",
-    "International cooperation remains central to global policy discussions."
+    "Markets remain attentive to economic and geopolitical developments."
   ]
 }

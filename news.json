@@ -1,131 +1,138 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Late Night Global News",
-    "description": "Late-night breaking news, immigration developments, security updates and major political stories from Europe, Africa, the Americas, Asia and the Middle East."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Good morning. Bringing you the latest breaking news, political developments, economic updates and major headlines from across the world."
   },
 
   "breaking": [
-    "🔴 EU reaches major migration agreement allowing expanded deportations and offshore return centres",
-    "🔴 European governments push tougher immigration enforcement measures",
-    "🔴 Nigeria battles renewed insecurity concerns in several regions",
-    "🔴 Peter Obi and opposition leaders continue political consultations ahead of 2027",
-    "🔴 El-Rufai remains active in national political realignments",
-    "🔴 Middle East tensions continue to influence global security and energy markets",
-    "🔴 Global markets remain cautious amid geopolitical uncertainty",
-    "🔴 Immigration policies remain central political issues across Europe, North America and the United Kingdom"
+    "🔴 EU migration agreement continues to spark debate over deportation centres abroad",
+    "🔴 Nigeria intensifies security operations against banditry and kidnapping networks",
+    "🔴 Peter Obi renews calls for economic reforms and accountable governance",
+    "🔴 El-Rufai continues consultations with opposition leaders ahead of 2027",
+    "🔴 Middle East tensions remain a major concern for global markets",
+    "🔴 United States political campaigns gain momentum ahead of future elections",
+    "🔴 Global oil markets monitor security developments across key shipping routes",
+    "🔴 Artificial Intelligence investment continues expanding worldwide"
   ],
 
   "featured": {
-    "image": "assets/immigration.jpg",
-    "title": "Immigration Dominates Global Political Debate",
-    "content": "Immigration policy has become one of the defining political issues across Europe, North America and several other regions. Governments are introducing stricter border controls, deportation procedures and asylum reforms as public pressure grows over migration management, security concerns and economic integration."
+    "image": "assets/world.jpg",
+    "title": "World Wakes Up To Political, Security And Economic Challenges",
+    "content": "Governments around the world begin a new day facing growing pressure from economic uncertainty, migration debates, security threats and political realignments. International leaders continue seeking solutions while citizens closely monitor developments affecting their daily lives."
   },
 
   "articles": [
 
     {
       "category": "world",
-      "image": "assets/eu-migration.jpg",
-      "title": "EU Approves Tougher Deportation And Migration Rules",
-      "description": "European Union institutions have reached a major agreement designed to increase deportations of failed asylum seekers and allow the creation of return centres outside EU territory. The measures are intended to improve enforcement of deportation orders and strengthen migration management across the bloc."
+      "image": "assets/world.jpg",
+      "title": "Immigration Remains Dominant Global Political Issue",
+      "description": "From Europe to North America and parts of Asia, governments continue reviewing immigration policies, border security measures and asylum systems as migration remains a key political challenge."
     },
 
     {
       "category": "world",
-      "image": "assets/europe.jpg",
-      "title": "European Governments Seek Offshore Return Centres",
-      "description": "Several European governments are exploring agreements with countries outside Europe that could host migrants awaiting deportation. Supporters say the policy will reduce irregular migration, while critics argue it raises humanitarian and legal concerns."
-    },
-
-    {
-      "category": "world",
-      "image": "assets/uk.jpg",
-      "title": "Immigration Remains Major Political Issue In Britain",
-      "description": "Migration policy continues to dominate political debate in the United Kingdom as leaders face pressure to reduce irregular arrivals, strengthen border enforcement and reform asylum procedures."
+      "image": "assets/global.jpg",
+      "title": "Global Leaders Focus On Stability And Economic Growth",
+      "description": "International institutions and governments continue emphasizing economic resilience, investment growth, job creation and regional security cooperation."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Continues Immigration Enforcement Debate",
-      "description": "Immigration remains a major issue in American politics as policymakers debate border security, deportation policies, asylum procedures and labor-market needs ahead of future elections."
+      "title": "American Political Activity Continues To Intensify",
+      "description": "Political leaders across the United States continue engaging voters on economic policy, immigration, national security and healthcare as campaigning activity increases nationwide."
     },
 
     {
       "category": "usa",
       "image": "assets/trump.jpg",
-      "title": "Political Divisions Persist Over Border Policies",
-      "description": "Republican and Democratic leaders remain sharply divided over immigration enforcement, border management and pathways for legal migration."
+      "title": "Trump Remains Central Figure In Republican Politics",
+      "description": "Former President Donald Trump continues influencing Republican policy discussions on border security, trade, foreign affairs and economic priorities."
+    },
+
+    {
+      "category": "usa",
+      "image": "assets/business.jpg",
+      "title": "Technology And AI Drive American Investment Growth",
+      "description": "Major technology firms continue expanding investments in artificial intelligence, cloud computing, cybersecurity and advanced infrastructure."
     },
 
     {
       "category": "europe",
-      "image": "assets/eu.jpg",
-      "title": "Europe Strengthens Border And Security Cooperation",
-      "description": "European governments continue expanding cooperation on migration management, intelligence sharing and regional security as geopolitical pressures remain elevated."
+      "image": "assets/eu-migration.jpg",
+      "title": "EU Migration Deal Faces Intense Scrutiny",
+      "description": "European leaders continue debating newly approved migration measures that could allow expanded deportations and offshore return centres for migrants denied asylum."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/europe.jpg",
+      "title": "European Security Cooperation Expands",
+      "description": "Governments across Europe continue strengthening defense partnerships, intelligence sharing and regional security coordination."
     },
 
     {
       "category": "europe",
       "image": "assets/russia.jpg",
-      "title": "Russia-Ukraine Conflict Continues To Shape Security Planning",
-      "description": "European defense officials remain focused on regional security preparedness as the conflict in Eastern Europe continues influencing military planning and diplomatic discussions."
+      "title": "Russia-Ukraine Conflict Remains Security Priority",
+      "description": "European officials continue monitoring developments surrounding the conflict as regional defense planning remains a major focus."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/africa.jpg",
+      "title": "African Governments Push Economic Development",
+      "description": "Several African nations continue promoting infrastructure projects, trade expansion, industrial growth and investment opportunities."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Faces Continuing Insecurity Challenges",
-      "description": "Security agencies remain engaged in operations against armed groups, kidnappers and criminal networks across several regions. Government officials continue emphasizing intelligence-led operations, community protection and national security reforms."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/abuja.jpg",
-      "title": "Federal Government Highlights Security And Economic Priorities",
-      "description": "The Nigerian government says infrastructure development, economic reforms, investment attraction and security improvement remain among its top national priorities."
+      "title": "Nigeria Faces Renewed Security Challenges",
+      "description": "Security agencies continue operations against terrorists, kidnappers and criminal gangs across affected regions while authorities work to improve public safety."
     },
 
     {
       "category": "africa",
       "image": "assets/peterobi.jpg",
-      "title": "Peter Obi Calls For Accountability And Economic Reforms",
-      "description": "Labour Party leader Peter Obi continues advocating improved governance, productive investment, fiscal discipline and stronger accountability across public institutions."
+      "title": "Peter Obi Continues Governance Reform Campaign",
+      "description": "The Labour Party leader maintains calls for transparency, economic discipline, job creation and institutional accountability."
     },
 
     {
       "category": "africa",
       "image": "assets/elrufai.jpg",
-      "title": "El-Rufai Continues Strategic Political Engagements",
-      "description": "Former Kaduna State Governor Nasir El-Rufai remains involved in consultations with opposition figures and political stakeholders as discussions surrounding the 2027 elections gradually intensify."
+      "title": "El-Rufai Remains Active In Opposition Consultations",
+      "description": "Former Kaduna State Governor Nasir El-Rufai continues participating in political engagements as discussions about future electoral alignments continue."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Global Markets Monitor Political And Migration Risks",
-      "description": "Investors continue watching geopolitical developments, immigration policy changes, inflation trends and energy prices for potential impacts on economic growth."
+      "title": "Global Markets Watch Economic Indicators",
+      "description": "Investors remain focused on inflation trends, energy prices, central bank policies and geopolitical developments."
     },
 
     {
       "category": "business",
       "image": "assets/oil.jpg",
-      "title": "Energy Markets Watch Middle East Developments",
-      "description": "Oil traders remain focused on developments in the Middle East, shipping routes and global supply conditions that could influence future energy prices."
+      "title": "Oil Markets Monitor Middle East Developments",
+      "description": "Energy traders continue monitoring geopolitical developments that could affect global supply routes and commodity prices."
     },
 
     {
       "category": "technology",
       "image": "assets/ai.jpg",
-      "title": "Artificial Intelligence Investment Remains Strong",
-      "description": "Technology companies worldwide continue investing heavily in AI systems, automation, cybersecurity and advanced digital infrastructure."
+      "title": "Artificial Intelligence Expansion Continues",
+      "description": "Companies worldwide are increasing investment in AI systems, automation and next-generation digital technologies."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Expands Technology And Innovation Programs",
-      "description": "Chinese authorities continue advancing major initiatives in artificial intelligence, semiconductor manufacturing and space technology development."
+      "title": "China Advances Technology And Space Programs",
+      "description": "Chinese authorities continue investing in semiconductor development, artificial intelligence and long-term space exploration initiatives."
     }
 
   ],
@@ -150,7 +157,7 @@
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
       "subtitle": "Freshly Ground Spices — No Additives",
-      "description": "Premium spice blends crafted to bring rich taste and aroma to your meals.",
+      "description": "Premium spice blends crafted to bring rich taste and aroma to every meal.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -173,15 +180,15 @@
   ],
 
   "breakingHistory": [
-    "EU agrees tougher migration and deportation framework.",
-    "European governments discuss offshore migrant return centres.",
-    "Immigration remains central political issue across Europe and North America.",
-    "Nigeria continues security operations against armed criminal groups.",
-    "Peter Obi renews calls for governance reforms and accountability.",
-    "El-Rufai continues political consultations ahead of 2027.",
-    "Middle East tensions continue affecting global energy markets.",
-    "Global investors monitor geopolitical and economic risks.",
-    "Artificial Intelligence investment remains strong worldwide.",
-    "Europe maintains focus on security and defense cooperation."
+    "EU migration reforms continue generating political debate.",
+    "Nigeria expands security operations against criminal groups.",
+    "Peter Obi renews calls for governance and economic reforms.",
+    "El-Rufai continues consultations with opposition stakeholders.",
+    "Global markets monitor geopolitical and inflation concerns.",
+    "Middle East tensions remain a focus for energy markets.",
+    "American political activity intensifies ahead of future elections.",
+    "European governments strengthen regional security cooperation.",
+    "Artificial Intelligence investments continue worldwide expansion.",
+    "African nations pursue infrastructure and economic development."
   ]
 }

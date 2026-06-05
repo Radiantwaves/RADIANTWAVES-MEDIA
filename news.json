@@ -1,24 +1,24 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Late Night Global News",
-    "description": "Late-night breaking news and major developments from Africa, Europe, the Americas, Asia, the Middle East and around the world."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Breaking overnight developments and major morning headlines from Africa, Europe, the Americas, Asia and the Middle East."
   },
 
   "breaking": [
-    "🔴 Nigeria intensifies security operations against terrorists, bandits and kidnappers",
-    "🔴 EU governments continue negotiations on migration reforms and deportation agreements",
-    "🔴 Peter Obi renews calls for economic recovery and accountable leadership",
-    "🔴 El-Rufai continues opposition consultations ahead of the 2027 elections",
-    "🔴 NATO maintains heightened security monitoring across Eastern Europe",
-    "🔴 Middle East tensions keep energy markets and global leaders on alert",
-    "🔴 Global markets remain cautious amid inflation and geopolitical uncertainty",
-    "🔴 AI competition accelerates among the United States, China and Europe"
+    "🔴 EU approves tougher migration rules including offshore return hubs for rejected asylum seekers",
+    "🔴 Nigeria confronts renewed kidnapping and bandit attacks amid nationwide security operations",
+    "🔴 Israel continues military operations along the Lebanon border despite ceasefire efforts",
+    "🔴 Middle East tensions keep global energy markets on alert",
+    "🔴 NATO maintains heightened monitoring of security developments in Eastern Europe",
+    "🔴 Global investors watch inflation, energy prices and geopolitical risks",
+    "🔴 Artificial intelligence investment race accelerates among major economies",
+    "🔴 International concern grows over humanitarian conditions in conflict zones"
   ],
 
   "featured": {
     "image": "assets/world.jpg",
-    "title": "Security, Migration And Economic Pressures Dominate Global Headlines",
-    "content": "As the day closes across much of the world, governments continue responding to growing security concerns, migration pressures, economic uncertainty and political realignments. Analysts say international cooperation remains critical as nations face increasingly complex domestic and global challenges."
+    "title": "Migration, Security And Conflict Dominate Global Headlines",
+    "content": "Governments across the world begin the day facing complex challenges ranging from migration pressures and regional conflicts to economic uncertainty and domestic security threats. International leaders continue seeking solutions through diplomacy, security cooperation and economic reforms."
   },
 
   "articles": [
@@ -26,169 +26,106 @@
     {
       "category": "world",
       "image": "assets/world.jpg",
-      "title": "World Leaders Confront Security And Economic Challenges",
-      "description": "Governments across multiple continents continue addressing terrorism, migration pressures, economic uncertainty and geopolitical tensions affecting regional and global stability."
-    },
-
-    {
-      "category": "world",
-      "image": "assets/migration.jpg",
-      "title": "Migration Remains A Major Global Political Issue",
-      "description": "Europe, North America and parts of Asia continue debating immigration policies, asylum systems and border security as governments seek long-term solutions."
+      "title": "Global Security Concerns Continue Across Multiple Regions",
+      "description": "International attention remains focused on ongoing conflicts, migration challenges, terrorism threats and economic uncertainty affecting governments across several continents."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Focuses On Economy, Security And Elections",
-      "description": "Political leaders continue debating immigration, economic growth, government spending and national security as preparations for future elections intensify."
+      "title": "United States Monitors Middle East And Global Security Developments",
+      "description": "American policymakers continue balancing foreign policy challenges, economic priorities, border security concerns and international diplomatic engagements."
     },
 
     {
       "category": "usa",
-      "image": "assets/trump.jpg",
-      "title": "Trump Remains Influential Within Republican Politics",
-      "description": "Former President Donald Trump continues shaping discussions on trade, immigration, border security and foreign policy across the Republican Party."
-    },
-
-    {
-      "category": "usa",
-      "image": "assets/technology.jpg",
-      "title": "American Technology Sector Continues Expansion",
-      "description": "Investment in artificial intelligence, cybersecurity and advanced manufacturing remains strong as technology companies compete globally."
+      "image": "assets/business.jpg",
+      "title": "Technology And Artificial Intelligence Investment Expands",
+      "description": "Major American technology companies continue increasing investment in AI infrastructure, cybersecurity and advanced computing systems amid growing global competition."
     },
 
     {
       "category": "europe",
       "image": "assets/eu-migration.jpg",
-      "title": "European Union Continues Migration Reform Discussions",
-      "description": "European leaders remain divided over migration management, deportation agreements and proposals for processing migrants outside EU borders."
+      "title": "EU Adopts Tougher Migration And Return Policies",
+      "description": "European Union institutions have agreed on stricter migration measures that would allow member states to transfer rejected asylum seekers to designated return centres outside the EU as part of broader migration reforms." 
     },
 
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "NATO Strengthens Security Coordination",
-      "description": "European allies continue enhancing defense cooperation and intelligence sharing amid ongoing regional security concerns."
+      "title": "European Governments Strengthen Security Coordination",
+      "description": "NATO members continue enhancing defence readiness and intelligence cooperation amid ongoing concerns over regional security and geopolitical tensions." 
     },
 
     {
       "category": "europe",
       "image": "assets/uk.jpg",
-      "title": "United Kingdom Reviews Economic And Immigration Policies",
-      "description": "British political leaders continue discussions surrounding migration, public spending and long-term economic growth."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/africa.jpg",
-      "title": "Africa Pursues Economic Growth And Regional Stability",
-      "description": "African governments continue promoting trade, infrastructure development and investment opportunities while addressing security concerns."
+      "title": "Migration Remains Central To European Politics",
+      "description": "Immigration, border security and asylum reform continue dominating political debates across the United Kingdom and several European Union member states."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Expands Efforts Against Insecurity",
-      "description": "Military and security agencies continue operations against insurgents, kidnappers and armed criminal groups in several regions as authorities seek to improve public safety."
+      "title": "Nigeria Faces Renewed Security Challenges",
+      "description": "Authorities continue responding to kidnappings, bandit attacks and terrorist activity across several regions. Recent reports highlighted the abduction of students in Zamfara State as security agencies intensify rescue efforts and counter-terrorism operations." 
     },
 
     {
       "category": "africa",
-      "image": "assets/peterobi.jpg",
-      "title": "Peter Obi Calls For Economic And Governance Reforms",
-      "description": "The Labour Party leader continues advocating productive economic policies, transparency, institutional reforms and job creation initiatives."
+      "image": "assets/africa.jpg",
+      "title": "African Leaders Push Economic Growth And Regional Stability",
+      "description": "Governments across Africa continue pursuing infrastructure investment, regional trade cooperation and security partnerships aimed at promoting sustainable development."
     },
 
     {
       "category": "africa",
-      "image": "assets/elrufai.jpg",
-      "title": "El-Rufai Continues Political Consultations",
-      "description": "Former Kaduna State Governor Nasir El-Rufai remains engaged in discussions involving opposition cooperation and preparations for future political developments."
-    },
-
-    {
-      "category": "business",
-      "image": "assets/market.jpg",
-      "title": "Global Markets Monitor Inflation And Growth Risks",
-      "description": "Investors continue watching inflation trends, central bank decisions and geopolitical developments that could affect global economic growth."
+      "image": "assets/abuja.jpg",
+      "title": "Nigeria's Government Faces Pressure Over Insecurity",
+      "description": "Public concern remains high over banditry, kidnappings and insurgent activities. Analysts say improving security remains one of the country's most urgent national priorities." 
     },
 
     {
       "category": "business",
       "image": "assets/oil.jpg",
-      "title": "Oil Markets Watch Middle East Developments",
-      "description": "Energy traders remain focused on regional tensions that could impact shipping routes, oil production and international fuel prices."
+      "title": "Oil Markets React To Middle East Developments",
+      "description": "Energy markets remain sensitive to developments involving Iran, Israel and regional shipping routes, with traders closely monitoring supply risks and diplomatic negotiations." 
+    },
+
+    {
+      "category": "business",
+      "image": "assets/market.jpg",
+      "title": "Global Markets Remain Cautious",
+      "description": "Investors continue assessing inflation trends, central bank decisions and geopolitical developments that could influence global economic growth."
     },
 
     {
       "category": "technology",
       "image": "assets/ai.jpg",
-      "title": "Artificial Intelligence Investment Accelerates",
-      "description": "Governments and private companies worldwide continue expanding investment in AI systems, automation and digital infrastructure."
+      "title": "Global AI Competition Intensifies",
+      "description": "Governments and technology firms across North America, Europe and Asia continue investing heavily in artificial intelligence and digital infrastructure."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Advances Technology And Space Programs",
-      "description": "China continues strengthening semiconductor production, artificial intelligence development and long-term space exploration projects."
-    }
-
-  ],
-
-  "sponsoredAdverts": [
-
-    {
-      "image": "assets/stonebreaker.jpg",
-      "title": "STONEBREAKER HERBAL MIXTURE",
-      "subtitle": "Natural Wellness Solution",
-      "description": "Prepared from carefully selected natural ingredients traditionally used to support healthy living and wellness.",
-      "products": [
-        {
-          "name": "Stonebreaker Herbal Bottle",
-          "big": "5K",
-          "small": "3K"
-        }
-      ]
-    },
-
-    {
-      "image": "assets/spices.jpg",
-      "title": "FARM TO KITCHEN 🌶️",
-      "subtitle": "Freshly Ground Spices — No Additives",
-      "description": "Premium spice blends prepared for rich flavor, freshness and quality cooking.",
-      "products": [
-        {
-          "name": "🥩 Exotic Beef Blend",
-          "big": "4K",
-          "small": "2K"
-        },
-        {
-          "name": "🍛 Classic Curry",
-          "big": "3K",
-          "small": "1,500"
-        },
-        {
-          "name": "✨ Gargajiya Masala",
-          "big": "3K",
-          "small": "1,500"
-        }
-      ]
+      "title": "China Advances Strategic Technology Projects",
+      "description": "Chinese authorities continue expanding semiconductor, artificial intelligence and space exploration programs as part of long-term technological development plans."
     }
 
   ],
 
   "breakingHistory": [
-    "Nigeria expands security operations against insurgents and kidnappers.",
-    "EU migration reforms remain a major political issue.",
-    "Peter Obi continues advocating economic and governance reforms.",
-    "El-Rufai maintains consultations ahead of 2027 political developments.",
-    "NATO strengthens defense coordination across Europe.",
-    "Middle East tensions continue influencing global energy markets.",
-    "Global investors monitor inflation and economic uncertainty.",
-    "Artificial intelligence investment expands worldwide.",
-    "African economies pursue trade and infrastructure development.",
-    "Political activity remains active across major democracies."
+    "EU approves stricter migration regulations and offshore return hub framework.",
+    "Nigeria continues nationwide security operations against kidnappers and terrorists.",
+    "Student kidnapping incident reported in Zamfara State.",
+    "Israel continues military operations near the Lebanon border.",
+    "Middle East tensions influence global energy markets.",
+    "NATO maintains regional defence readiness.",
+    "Global markets monitor inflation and geopolitical risks.",
+    "Artificial intelligence investment continues expanding worldwide.",
+    "African governments pursue economic and infrastructure reforms.",
+    "Migration remains a dominant political issue across Europe."
   ]
 }

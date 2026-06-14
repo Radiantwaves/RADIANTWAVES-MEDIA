@@ -1,138 +1,131 @@
 {
   "hero": {
     "title": "Radiant Waves Media Late Night Global News",
-    "description": "Late-night roundup of major headlines, breaking developments and key events from Nigeria and around the world."
+    "description": "Late-night roundup of breaking headlines, political developments, security updates and major stories from around the world."
   },
 
   "breaking": [
-    "🔴 MKO Abiola collapsed during meeting with U.S. envoys and was not poisoned, says Abdulsalami Abubakar",
-    "🔴 Peter Obi says there is no reason to continue detaining Nnamdi Kanu",
-    "🔴 Defence Minister says local informants are fueling terrorist operations in Nigeria",
-    "🔴 Federal Government may begin salary payments through eNaira platform, according to reports",
-    "🔴 Europe continues migration policy reforms and border security discussions",
-    "🔴 Middle East security and diplomatic developments remain top global concerns",
-    "🔴 Global markets remain cautious amid inflation and geopolitical uncertainty",
-    "🔴 China advances AI, technology and industrial modernization initiatives"
+    "🔴 Middle East remains the world's leading security concern amid ongoing diplomatic efforts",
+    "🔴 Nigeria intensifies military operations against bandits, kidnappers and terrorist groups",
+    "🔴 Peter Obi renews call for Nnamdi Kanu's release through lawful resolution",
+    "🔴 Defence Minister warns local informants are strengthening terrorist networks",
+    "🔴 Europe continues migration reforms and border security discussions",
+    "🔴 China expands artificial intelligence and advanced manufacturing programs",
+    "🔴 Global markets remain cautious over inflation, energy prices and geopolitical risks",
+    "🔴 Canada and the United States continue addressing immigration and economic challenges"
   ],
 
   "featured": {
     "image": "assets/world.jpg",
-    "title": "Nigeria Security Concerns And Global Geopolitical Developments Dominate Headlines",
-    "content": "Late-night discussions across the globe remain focused on security challenges, migration policies, economic reforms and diplomatic efforts. In Nigeria, insecurity, political developments and economic policy proposals continue attracting national attention."
+    "title": "Security, Migration And Economic Uncertainty Dominate Global Affairs",
+    "content": "As the day concludes across much of the world, governments remain focused on security threats, migration pressures, economic reforms and geopolitical tensions. Nigeria's security situation, Middle East developments and European migration policies continue attracting significant international attention."
   },
 
   "articles": [
 
     {
       "category": "world",
-      "image": "assets/middleeast.jpg",
-      "title": "Middle East Remains Center Of International Attention",
-      "description": "Security developments, diplomatic efforts and humanitarian concerns continue shaping global discussions as governments monitor regional stability and energy market implications."
+      "image": "assets/world.jpg",
+      "title": "Global Diplomacy Continues Amid Multiple Security Challenges",
+      "description": "World leaders remain engaged in diplomatic consultations aimed at reducing tensions, strengthening economic cooperation and supporting regional stability."
     },
 
     {
       "category": "world",
-      "image": "assets/europe.jpg",
-      "title": "Europe Continues Migration And Border Security Reforms",
-      "description": "European governments remain engaged in discussions over migration management, asylum policies, deportation agreements and border security measures."
+      "image": "assets/middleeast.jpg",
+      "title": "Middle East Security Developments Remain Global Focus",
+      "description": "International attention remains fixed on security developments, diplomatic initiatives and humanitarian concerns across the Middle East as governments seek lasting stability."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Monitors Global Security And Economic Trends",
-      "description": "American officials continue focusing on economic performance, trade policy, technology leadership and international security partnerships."
+      "title": "United States Reviews Economic And Security Priorities",
+      "description": "American policymakers continue monitoring inflation, trade developments, border security and international partnerships while responding to global events."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Addresses Housing And Immigration Challenges",
-      "description": "Canadian policymakers continue balancing immigration targets, labor market demands and housing affordability concerns."
+      "title": "Canada Continues Housing And Immigration Policy Discussions",
+      "description": "Canadian authorities remain focused on balancing immigration targets, workforce requirements and housing affordability concerns."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/eu-migration.jpg",
+      "title": "Migration Reforms Continue Across Europe",
+      "description": "European governments continue debating asylum policies, deportation frameworks and border management strategies as migration remains a central political issue."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/europe.jpg",
+      "title": "European Security Cooperation Remains Strong",
+      "description": "NATO allies continue strengthening intelligence sharing, military readiness and defense coordination amid ongoing security concerns."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Defence Minister Blames Local Informants For Aiding Terror Operations",
-      "description": "Nigeria's Defence Minister has warned that local informants continue to provide critical support to terrorist and criminal groups, complicating military operations across affected regions."
+      "title": "Nigeria Intensifies Fight Against Insecurity",
+      "description": "Security agencies continue operations targeting insurgents, kidnappers and bandit groups in multiple regions as authorities seek to improve public safety."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Peter Obi Calls For End To Nnamdi Kanu's Detention",
-      "description": "Labour Party presidential candidate Peter Obi has stated that there is no justification for the continued detention of Nnamdi Kanu, urging authorities to pursue lawful and peaceful resolutions."
+      "title": "Defence Minister Raises Concern Over Local Informants",
+      "description": "The Defence Minister has warned that local informants continue providing support and intelligence to terrorist groups, complicating ongoing security operations."
     },
 
     {
       "category": "africa",
       "image": "assets/politics.jpg",
-      "title": "Abdulsalami Speaks On MKO Abiola's Final Hours",
-      "description": "Former Head of State General Abdulsalami Abubakar said MKO Abiola collapsed during a meeting with visiting United States envoys and was not poisoned, addressing long-standing public speculation."
+      "title": "Peter Obi Calls For Lawful Resolution Of Nnamdi Kanu Case",
+      "description": "Former Labour Party presidential candidate Peter Obi has reiterated his position that Nnamdi Kanu's case should be resolved through lawful and peaceful means."
+    },
+
+    {
+      "category": "africa",
+      "image": "assets/history.jpg",
+      "title": "Abdulsalami Addresses MKO Abiola Death Speculation",
+      "description": "Former Head of State Abdulsalami Abubakar has stated that MKO Abiola collapsed during a meeting with visiting U.S. envoys and was not poisoned."
     },
 
     {
       "category": "africa",
       "image": "assets/enaira.jpg",
-      "title": "Federal Government Reportedly Considering eNaira Salary Payments",
-      "description": "Reports indicate the Federal Government may explore salary payments through the eNaira platform as part of broader efforts to strengthen digital financial systems."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/anambra.jpg",
-      "title": "Soludo's Wife And Fidelity Bank Empower 2,000 Women And Children",
-      "description": "An empowerment initiative involving the wife of Anambra State Governor Chukwuma Soludo and Fidelity Bank has reportedly provided support to over 2,000 women and children across the state."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/recruitment.jpg",
-      "title": "NSCDC, NIS And NCoS Recruitment Lists Released",
-      "description": "Authorities have released the list of successful applicants for recruitment exercises conducted by the Nigeria Security and Civil Defence Corps, Nigeria Immigration Service and Nigerian Correctional Service."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/accident.jpg",
-      "title": "Two Injured After Trailer Falls From Anambra Bridge",
-      "description": "Two people sustained injuries after a trailer reportedly fell from a bridge in Anambra State and crashed into vehicles below, causing significant damage."
+      "title": "Federal Government May Explore eNaira Salary Payments",
+      "description": "Reports suggest authorities may consider expanding the use of the eNaira platform as part of broader digital payment initiatives."
     },
 
     {
       "category": "africa",
       "image": "assets/agriculture.jpg",
-      "title": "PFI Credits Early Procurement For Fertiliser Supply Stability",
-      "description": "Agricultural stakeholders say early procurement strategies helped maintain fertilizer availability and stabilize supplies during the farming season."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/fct.jpg",
-      "title": "ZLP Senatorial Aspirant Promises Citizen-Centered Representation",
-      "description": "A senatorial aspirant under the Zenith Labour Party has pledged to prioritize citizen-focused policies and grassroots engagement for residents of the Federal Capital Territory."
+      "title": "Agricultural Sector Reports Stable Fertilizer Supply",
+      "description": "Industry stakeholders say early procurement planning helped maintain fertilizer availability and reduce supply disruptions."
     },
 
     {
       "category": "world",
       "image": "assets/asia.jpg",
-      "title": "Asia Expands Technology And Manufacturing Investments",
-      "description": "Asian economies continue investing in industrial development, digital infrastructure and innovation programs aimed at supporting long-term growth."
+      "title": "Asia Continues Technology And Industrial Expansion",
+      "description": "Asian economies remain focused on manufacturing growth, digital infrastructure and technological innovation."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Advances Artificial Intelligence And Semiconductor Development",
-      "description": "Chinese authorities continue supporting strategic technology sectors including artificial intelligence, semiconductor manufacturing and advanced industrial capabilities."
+      "title": "China Advances Strategic Technology Programs",
+      "description": "Chinese authorities continue investing in semiconductors, artificial intelligence and advanced industrial capabilities."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Global Markets Watch Inflation And Geopolitical Risks",
-      "description": "Investors remain focused on inflation trends, energy prices, international conflicts and economic policy decisions that may affect global growth."
+      "title": "Global Markets Monitor Inflation And Geopolitical Risks",
+      "description": "Investors continue assessing interest rates, energy prices and international developments that may affect global economic growth."
     }
 
   ],
@@ -180,15 +173,15 @@
   ],
 
   "breakingHistory": [
-    "Abdulsalami Abubakar says MKO Abiola was not poisoned before his death.",
-    "Peter Obi calls for the release of Nnamdi Kanu.",
-    "Defence Minister warns that local informants are aiding terrorist groups.",
-    "Federal Government may explore salary payments through eNaira.",
-    "NSCDC, NIS and NCoS release successful recruitment applicants.",
-    "Anambra empowerment initiative reaches over 2,000 women and children.",
-    "Europe continues migration and border security reforms.",
-    "Middle East diplomacy and security concerns remain global priorities.",
-    "China advances AI and industrial modernization programs.",
-    "Global markets monitor inflation and geopolitical developments."
+    "Middle East security and diplomatic developments remained major global stories.",
+    "Nigeria continued nationwide operations against banditry, kidnapping and terrorism.",
+    "Peter Obi renewed calls for lawful resolution of the Nnamdi Kanu case.",
+    "Defence Minister warned that local informants are aiding terrorist operations.",
+    "Abdulsalami Abubakar addressed longstanding speculation surrounding MKO Abiola's death.",
+    "Europe continued migration and border security reforms.",
+    "Canada addressed housing and immigration pressures.",
+    "China advanced technology and industrial modernization initiatives.",
+    "Global markets monitored inflation, energy prices and geopolitical risks.",
+    "Governments focused on security, stability and economic growth."
   ]
 }

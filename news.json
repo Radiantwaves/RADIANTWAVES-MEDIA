@@ -1,138 +1,131 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Midday Global News",
-    "description": "Midday update bringing you the latest headlines, security developments, business news and major stories from around the world."
+    "title": "Radiant Waves Media Late Night Global News",
+    "description": "Late-night roundup of major developments, breaking headlines and sports updates from Nigeria and around the world."
   },
 
   "breaking": [
-    "🔴 Middle East diplomacy and security concerns continue dominating international headlines",
+    "🔴 France defeat Senegal 3-1 in their opening FIFA World Cup 2026 match",
+    "🔴 Kylian Mbappé becomes France's all-time leading international goalscorer",
+    "🔴 Middle East security and diplomatic developments remain under global scrutiny",
     "🔴 Nigeria sustains nationwide operations against terrorism, banditry and kidnapping",
-    "🔴 Europe advances migration reforms and border security initiatives",
-    "🔴 United States monitors trade, economic growth and international security developments",
-    "🔴 China expands AI, semiconductor and industrial modernization programs",
-    "🔴 Canada continues addressing immigration and housing affordability challenges",
-    "🔴 Global markets track inflation, energy prices and geopolitical risks",
-    "🔴 African leaders strengthen regional security and economic partnerships"
+    "🔴 Europe continues migration and border security reforms",
+    "🔴 China advances AI, semiconductor and manufacturing initiatives",
+    "🔴 Global markets monitor inflation, oil prices and geopolitical risks",
+    "🔴 African leaders strengthen regional security and economic cooperation"
   ],
 
   "featured": {
     "image": "assets/world.jpg",
-    "title": "Global Security, Migration And Economic Issues Remain In Focus",
-    "content": "As world markets and governments continue their daily activities, attention remains fixed on geopolitical tensions, migration reforms, economic growth and security challenges. Developments in the Middle East, Europe and Africa continue shaping global discussions."
+    "title": "World Cup Drama, Global Security And Economic Challenges Dominate Headlines",
+    "content": "The biggest late-night sports story comes from the FIFA World Cup where France opened their campaign with a 3-1 victory over Senegal. Elsewhere, governments continue addressing security concerns, migration pressures and economic uncertainty across multiple regions."
   },
 
   "articles": [
 
     {
-      "category": "world",
-      "image": "assets/world.jpg",
-      "title": "International Diplomacy Continues Across Multiple Regions",
-      "description": "Governments and international organizations remain engaged in discussions aimed at strengthening cooperation, reducing tensions and supporting global stability."
+      "category": "sports",
+      "image": "assets/worldcup.jpg",
+      "title": "France Defeat Senegal 3-1 In World Cup Opener",
+      "description": "France opened their FIFA World Cup 2026 campaign with a 3-1 victory over Senegal. Kylian Mbappé scored twice while Bradley Barcola added another goal as Les Bleus secured all three points in Group I."
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/mbappe.jpg",
+      "title": "Mbappé Becomes France's Record Goalscorer",
+      "description": "Kylian Mbappé became France's all-time leading scorer after finding the net twice against Senegal, surpassing the previous national record and strengthening his place in French football history."
     },
 
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
       "title": "Middle East Developments Continue To Shape Global Agenda",
-      "description": "Security concerns, diplomatic negotiations and humanitarian issues remain central to international attention as leaders pursue long-term regional stability."
+      "description": "Security concerns, diplomatic negotiations and humanitarian issues remain at the center of international discussions as governments seek long-term regional stability."
+    },
+
+    {
+      "category": "world",
+      "image": "assets/world.jpg",
+      "title": "Global Diplomacy Continues Across Multiple Regions",
+      "description": "International leaders remain engaged in efforts to strengthen cooperation, reduce tensions and address economic and security challenges."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
       "title": "United States Focuses On Economic And Security Priorities",
-      "description": "American policymakers continue monitoring inflation, trade relations, border security and strategic international partnerships."
-    },
-
-    {
-      "category": "usa",
-      "image": "assets/business.jpg",
-      "title": "Artificial Intelligence Investments Continue Growing",
-      "description": "Technology companies continue expanding investments in AI, cybersecurity and digital infrastructure as global competition intensifies."
+      "description": "American policymakers continue monitoring inflation, trade, border security and international partnerships while assessing global developments."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Reviews Housing And Immigration Policies",
-      "description": "Canadian authorities remain focused on balancing immigration objectives with housing affordability and workforce development needs."
+      "title": "Canada Continues Housing And Immigration Discussions",
+      "description": "Canadian authorities remain focused on balancing population growth, labor market needs and housing affordability concerns."
     },
 
     {
       "category": "europe",
       "image": "assets/eu-migration.jpg",
-      "title": "Migration Reforms Remain Key Issue Across Europe",
-      "description": "European governments continue implementing asylum reforms, deportation agreements and border management measures."
+      "title": "Migration Reforms Remain Major Issue Across Europe",
+      "description": "European governments continue implementing migration policies while debating asylum systems, deportation arrangements and border management."
     },
 
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "European Security Cooperation Strengthens",
-      "description": "NATO allies continue enhancing defense planning, intelligence sharing and military readiness across the continent."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "Economic Recovery And Energy Stability Remain Priorities",
-      "description": "European leaders continue discussions focused on inflation management, energy security and sustainable economic growth."
+      "title": "European Security Cooperation Remains Strong",
+      "description": "NATO allies continue strengthening intelligence sharing, defense planning and military readiness amid ongoing regional security concerns."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Continues Fight Against Insecurity",
-      "description": "Security agencies remain engaged in operations targeting insurgents, bandits and kidnapping gangs in various regions of the country."
+      "title": "Nigeria Intensifies Fight Against Insecurity",
+      "description": "Security agencies continue operations targeting insurgents, bandits and kidnapping networks across affected regions as authorities seek improved public safety."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
       "title": "Government Focuses On Security And Economic Reforms",
-      "description": "National discussions continue around inflation, infrastructure development, governance reforms and efforts to improve public security."
-    },
-
-    {
-      "category": "africa",
-      "image": "assets/politics.jpg",
-      "title": "Calls Continue For Resolution Of Nnamdi Kanu Case",
-      "description": "Political leaders and stakeholders continue discussing legal and political pathways toward resolving the Nnamdi Kanu matter."
+      "description": "Public attention remains centered on inflation, governance reforms, infrastructure development and efforts to address insecurity."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Nations Deepen Regional Cooperation",
-      "description": "Governments across Africa continue strengthening trade, security and infrastructure partnerships aimed at boosting development."
+      "title": "African Nations Expand Trade And Security Cooperation",
+      "description": "Governments across Africa continue strengthening regional partnerships aimed at boosting economic growth and improving collective security."
     },
 
     {
       "category": "world",
       "image": "assets/asia.jpg",
-      "title": "Asia Expands Industrial And Technology Investments",
-      "description": "Asian economies continue supporting manufacturing growth, innovation programs and digital transformation initiatives."
+      "title": "Asia Advances Technology And Industrial Development",
+      "description": "Asian economies continue investing in innovation, manufacturing and digital infrastructure to strengthen competitiveness."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Advances AI And Semiconductor Development",
-      "description": "Chinese authorities continue investing in artificial intelligence, semiconductor manufacturing and advanced industrial capabilities."
+      "title": "China Expands Strategic Technology Programs",
+      "description": "Chinese authorities continue supporting artificial intelligence, semiconductor production and advanced manufacturing initiatives."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Global Markets Monitor Inflation Trends",
-      "description": "Investors continue watching interest rates, commodity prices and geopolitical developments that could affect global growth."
+      "title": "Global Markets Watch Inflation And Geopolitical Risks",
+      "description": "Investors continue monitoring interest rates, commodity prices and international developments that may affect economic growth."
     },
 
     {
       "category": "business",
       "image": "assets/oil.jpg",
       "title": "Energy Markets Remain Sensitive To Global Events",
-      "description": "Oil and gas prices continue responding to geopolitical developments, production levels and demand forecasts."
+      "description": "Oil and gas markets continue reacting to geopolitical developments and changing supply-demand forecasts."
     }
 
   ],
@@ -180,15 +173,15 @@
   ],
 
   "breakingHistory": [
+    "France defeated Senegal 3-1 in their opening FIFA World Cup 2026 match.",
+    "Kylian Mbappé became France's all-time leading international goalscorer.",
     "Middle East diplomacy and security concerns remained major international priorities.",
     "Nigeria continued nationwide operations against terrorism, kidnapping and banditry.",
     "European migration reforms remained under implementation.",
     "Canada addressed housing affordability and immigration pressures.",
-    "United States monitored economic and security developments.",
-    "China expanded AI and industrial modernization programs.",
-    "African nations strengthened regional trade and security cooperation.",
+    "China advanced technology and industrial modernization programs.",
+    "African nations strengthened trade and security partnerships.",
     "Global markets monitored inflation and energy prices.",
-    "Technology investment continued accelerating worldwide.",
     "Governments focused on security, stability and economic growth."
   ]
 }

@@ -1,152 +1,138 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Morning Global News",
-    "description": "Monday, June 22, 2026. Good morning. Bringing you breaking news, World Cup updates, security developments and major stories from every continent."
+    "title": "Radiant Waves Media Midday Global News",
+    "description": "Monday, June 22, 2026. Midday update covering breaking developments, World Cup action, business, politics, security and major stories from around the globe."
   },
 
   "breaking": [
-    "🔴 Japan thrash Tunisia 4-0 as World Cup group battles intensify",
-    "🔴 Germany secure Round-of-32 place after dramatic 2-1 comeback against Côte d'Ivoire",
-    "🔴 Curaçao earn historic first-ever World Cup point after holding Ecuador 0-0",
-    "🔴 Belgium frustrated in 0-0 draw with Iran",
-    "🔴 Middle East tensions and diplomatic efforts remain major global focus",
-    "🔴 Nigeria sustains nationwide operations against terrorism, kidnapping and banditry",
-    "🔴 Europe continues migration reforms and border security measures",
-    "🔴 Global markets monitor inflation, energy prices and geopolitical risks"
+    "🔴 France prepare to face Iraq as World Cup group stage action continues today",
+    "🔴 Argentina take on Austria in one of today's biggest World Cup fixtures",
+    "🔴 Egypt defeat New Zealand 3-1 to strengthen qualification hopes",
+    "🔴 Europe battles severe heatwave with temperatures approaching 44°C",
+    "🔴 Middle East diplomacy remains at the center of global attention",
+    "🔴 Nigeria sustains nationwide operations against terrorism and kidnapping",
+    "🔴 UK prepares for leadership transition following political developments",
+    "🔴 Global markets react to developments surrounding the Strait of Hormuz"
   ],
 
   "featured": {
     "image": "assets/worldcup.jpg",
-    "title": "World Cup Delivers Drama As Knockout Race Intensifies",
-    "content": "The FIFA World Cup remains the dominant global story. Japan produced one of the tournament's best performances with a 4-0 victory over Tunisia, Germany secured qualification with a dramatic comeback against Côte d'Ivoire, while Curaçao made history by earning their first-ever World Cup point."
+    "title": "World Cup And Global Security Dominate Midday Headlines",
+    "content": "Attention remains focused on the FIFA World Cup as Argentina, France, Senegal and Algeria prepare for crucial group-stage matches. Meanwhile, international markets continue monitoring Middle East developments and Europe faces an intense heatwave."
   },
 
   "articles": [
 
     {
       "category": "sports",
-      "image": "assets/japan.jpg",
-      "title": "Japan Crush Tunisia 4-0",
-      "description": "Japan delivered a commanding performance to defeat Tunisia 4-0. Ayase Ueda scored twice as the Asian side strengthened its chances of progressing to the knockout stage. "
+      "image": "assets/worldcup.jpg",
+      "title": "World Cup Action Continues Today",
+      "description": "Argentina face Austria, France take on Iraq, Norway battle Senegal and Jordan meet Algeria as the second round of group matches continues across North America. 0"
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/egypt.jpg",
+      "title": "Egypt Defeat New Zealand 3-1",
+      "description": "Egypt strengthened their chances of reaching the knockout stage after securing an impressive 3-1 victory over New Zealand in Group G. 1"
     },
 
     {
       "category": "sports",
       "image": "assets/germany.jpg",
-      "title": "Germany Beat Côte d'Ivoire 2-1",
-      "description": "Germany came from behind to defeat Côte d'Ivoire 2-1. Deniz Undav scored twice, including a stoppage-time winner, to send Germany into the Round of 32 as Group E leaders. "
+      "title": "Germany's Comeback Victory Still Trending",
+      "description": "Germany's dramatic 2-1 comeback win over Côte d'Ivoire remains one of the tournament's biggest talking points as the four-time champions move closer to the knockout stage."
     },
 
     {
       "category": "sports",
-      "image": "assets/curacao.jpg",
-      "title": "Curaçao Make World Cup History",
-      "description": "Tournament debutants Curaçao secured their first-ever World Cup point after a resilient 0-0 draw against Ecuador. Goalkeeper Eloy Room produced a remarkable performance with numerous saves."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/belgium.jpg",
-      "title": "Belgium Held By Iran",
-      "description": "Belgium failed to break down a disciplined Iranian side as both teams settled for a goalless draw, leaving qualification scenarios wide open."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/worldcup.jpg",
-      "title": "World Cup Results Summary",
-      "description": "Germany 2-1 Côte d'Ivoire, Japan 4-0 Tunisia, Ecuador 0-0 Curaçao, Belgium 0-0 Iran, France 3-1 Senegal, England 4-2 Croatia, Argentina 3-0 Algeria, Netherlands 5-1 Sweden, USA 2-0 Australia, Brazil 3-0 Haiti, Portugal 1-1 DR Congo, Ghana 1-0 Panama and Colombia 3-1 Uzbekistan."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/worldcup.jpg",
-      "title": "Today's World Cup Fixtures",
-      "description": "Argentina face Austria, France take on Iraq, Norway meet Senegal and Jordan play Algeria as the group stage continues across North America."
+      "image": "assets/japan.jpg",
+      "title": "Japan's 4-0 Victory Impresses Fans",
+      "description": "Japan's dominant 4-0 win against Tunisia has been widely praised as one of the strongest performances of the tournament so far. 2"
     },
 
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
-      "title": "Middle East Remains At Center Of Global Attention",
-      "description": "Diplomatic initiatives, security concerns and humanitarian issues continue dominating international discussions as world powers seek regional stability."
+      "title": "Middle East Diplomacy Remains Global Focus",
+      "description": "International attention remains fixed on ongoing diplomatic efforts involving Iran, regional security and the future of shipping through the Strait of Hormuz. Oil markets continue reacting to developments. 3"
     },
 
     {
-      "category": "world",
-      "image": "assets/world.jpg",
-      "title": "Global Diplomacy Continues Across Regions",
-      "description": "Governments and international organizations remain engaged in efforts to address security, economic and humanitarian challenges."
+      "category": "europe",
+      "image": "assets/europe.jpg",
+      "title": "Europe Faces Extreme Heatwave",
+      "description": "Several European countries are experiencing record temperatures, with parts of France, Spain, Belgium and Germany affected by extreme heat conditions. Authorities have issued widespread warnings. 4"
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/uk.jpg",
+      "title": "Political Changes Loom In United Kingdom",
+      "description": "Britain is preparing for another political transition after Prime Minister Keir Starmer announced his resignation, potentially leading to the country's seventh prime minister in a decade. 5"
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Focuses On Economy And Security",
-      "description": "American policymakers continue monitoring inflation, border security, trade policy and strategic partnerships."
+      "title": "United States Monitors Global Security And Trade",
+      "description": "American officials continue focusing on economic stability, global security partnerships and trade developments amid ongoing international uncertainties."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Balances Housing And Immigration Priorities",
-      "description": "Canadian leaders remain focused on housing affordability, labor shortages and immigration management."
+      "title": "Canada Continues Housing And Immigration Efforts",
+      "description": "Canadian policymakers remain focused on balancing housing affordability challenges with immigration and labor market demands."
     },
 
     {
       "category": "europe",
       "image": "assets/eu-migration.jpg",
       "title": "Migration Reforms Continue Across Europe",
-      "description": "European governments continue implementing new migration and asylum policies while strengthening border management systems."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/europe.jpg",
-      "title": "European Economies Monitor Growth Risks",
-      "description": "Governments across Europe remain focused on inflation, energy prices and long-term economic stability."
+      "description": "European governments continue implementing migration and asylum reforms while strengthening border management and deportation procedures."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
       "title": "Nigeria Continues Security Operations",
-      "description": "Military and security agencies remain engaged in operations against terrorists, bandits and kidnapping networks in affected regions."
+      "description": "Security agencies remain engaged in operations targeting insurgents, terrorists, bandits and kidnapping networks across affected regions."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Economic Reforms And Security Dominate Discussions",
-      "description": "Public attention remains focused on inflation, governance reforms, employment and national security."
+      "title": "Economic And Security Issues Dominate National Conversation",
+      "description": "Inflation, food prices, infrastructure projects and insecurity remain among the top concerns for Nigerians."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Nations Strengthen Regional Cooperation",
-      "description": "Governments across Africa continue expanding trade, infrastructure and security partnerships."
+      "title": "African Nations Expand Cooperation",
+      "description": "Governments across Africa continue strengthening trade, infrastructure and security partnerships aimed at promoting growth and regional stability."
     },
 
     {
       "category": "asia",
       "image": "assets/asia.jpg",
-      "title": "Asia Continues Technology And Manufacturing Expansion",
-      "description": "Asian economies continue investing in innovation, industrial development and digital infrastructure."
+      "title": "Asian Economies Continue Technology Expansion",
+      "description": "Several Asian economies continue investing in manufacturing, digital infrastructure and artificial intelligence."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Expands AI And Semiconductor Programs",
-      "description": "Chinese authorities continue investing in artificial intelligence, advanced manufacturing and semiconductor production."
+      "title": "China Advances Strategic Technology Programs",
+      "description": "Chinese authorities continue investing heavily in semiconductors, artificial intelligence and advanced manufacturing sectors."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Markets Watch Inflation And Energy Prices",
-      "description": "Investors remain focused on global inflation, oil prices and geopolitical developments affecting economic growth."
+      "title": "Markets Watch Oil Prices And Global Risks",
+      "description": "Investors remain focused on inflation, energy prices and geopolitical developments affecting global economic growth. 6"
     }
 
   ],
@@ -171,7 +157,7 @@
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
       "subtitle": "Freshly Ground Spices — No Additives!",
-      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services. Freshness and flavor in every package.",
+      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -194,15 +180,15 @@
   ],
 
   "breakingHistory": [
-    "Japan defeated Tunisia 4-0 in one of the tournament's biggest wins.",
-    "Germany secured qualification after a dramatic 2-1 comeback against Côte d'Ivoire.",
-    "Curaçao earned their first-ever World Cup point after drawing Ecuador 0-0.",
-    "Belgium were held to a goalless draw by Iran.",
-    "France, England, Argentina, Netherlands, USA and Brazil remain among leading contenders.",
-    "Middle East diplomacy remains a major international priority.",
+    "Argentina, France, Senegal and Algeria are in action today at the World Cup.",
+    "Egypt defeated New Zealand 3-1 in Group G.",
+    "Germany's comeback victory over Côte d'Ivoire remains a major tournament story.",
+    "Europe is experiencing one of its most severe heatwaves in recent years.",
+    "Middle East diplomacy continues influencing global markets.",
     "Nigeria continues nationwide security operations.",
+    "Britain prepares for another leadership transition.",
     "European migration reforms remain under implementation.",
-    "China advances AI and industrial modernization.",
-    "Global markets continue monitoring inflation and energy prices."
+    "China continues expanding AI and manufacturing investment.",
+    "Global markets remain focused on inflation and energy prices."
   ]
 }

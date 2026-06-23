@@ -1,144 +1,143 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Midday Global News",
-    "description": "Monday, June 22, 2026. Midday update covering breaking developments, World Cup action, business, politics, security and major stories from around the globe."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Tuesday, June 23, 2026. Good morning. Bringing you the latest breaking news, World Cup updates, security developments, business headlines and major stories from every continent."
   },
 
   "breaking": [
-    "🔴 France prepare to face Iraq as World Cup group stage action continues today",
-    "🔴 Argentina take on Austria in one of today's biggest World Cup fixtures",
-    "🔴 Egypt defeat New Zealand 3-1 to strengthen qualification hopes",
-    "🔴 Europe battles severe heatwave with temperatures approaching 44°C",
-    "🔴 Middle East diplomacy remains at the center of global attention",
-    "🔴 Nigeria sustains nationwide operations against terrorism and kidnapping",
-    "🔴 UK prepares for leadership transition following political developments",
-    "🔴 Global markets react to developments surrounding the Strait of Hormuz"
+    "🔴 Norway defeat Senegal 3-2 as Haaland scores another World Cup double",
+    "🔴 France defeat Iraq 3-0 to move closer to the knockout stage",
+    "🔴 Argentina beat Austria 2-0 as Messi extends his World Cup record",
+    "🔴 Europe battles one of its most severe heatwaves on record",
+    "🔴 Middle East tensions continue to influence global diplomacy and energy markets",
+    "🔴 Nigeria sustains military operations against terrorism, kidnapping and banditry",
+    "🔴 Global markets monitor oil prices amid Strait of Hormuz concerns",
+    "🔴 Heavy monsoon rains impact parts of South and Southeast Asia"
   ],
 
   "featured": {
     "image": "assets/worldcup.jpg",
-    "title": "World Cup And Global Security Dominate Midday Headlines",
-    "content": "Attention remains focused on the FIFA World Cup as Argentina, France, Senegal and Algeria prepare for crucial group-stage matches. Meanwhile, international markets continue monitoring Middle East developments and Europe faces an intense heatwave."
+    "title": "World Cup Race Intensifies As Giants Maintain Momentum",
+    "content": "Norway, France and Argentina secured important victories as the World Cup group stage entered a decisive phase. Erling Haaland scored twice for Norway against Senegal while Lionel Messi continued rewriting football history for Argentina. France also strengthened their qualification hopes with a convincing win over Iraq. 0"
   },
 
   "articles": [
 
     {
       "category": "sports",
+      "image": "assets/norway.jpg",
+      "title": "Norway Edge Senegal In Five-Goal Thriller",
+      "description": "Erling Haaland scored twice as Norway defeated Senegal 3-2, moving level with France at the top of Group I and putting themselves in a strong position to reach the knockout rounds. 1"
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/france.jpg",
+      "title": "France Defeat Iraq 3-0",
+      "description": "France secured a comfortable 3-0 victory over Iraq to maintain their strong start to the tournament and remain among the favorites for the title. 2"
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/argentina.jpg",
+      "title": "Messi Leads Argentina Past Austria",
+      "description": "Argentina defeated Austria 2-0, with Lionel Messi continuing his remarkable World Cup campaign and extending his all-time World Cup scoring record. 3"
+    },
+
+    {
+      "category": "sports",
       "image": "assets/worldcup.jpg",
-      "title": "World Cup Action Continues Today",
-      "description": "Argentina face Austria, France take on Iraq, Norway battle Senegal and Jordan meet Algeria as the second round of group matches continues across North America. 0"
+      "title": "World Cup Results Update",
+      "description": "Latest major results: Norway 3-2 Senegal, France 3-0 Iraq, Argentina 2-0 Austria, Germany 2-1 Côte d'Ivoire, Japan 4-0 Tunisia, Egypt 3-1 New Zealand, Netherlands 5-1 Sweden, Brazil 3-0 Haiti, USA 2-0 Australia, England 4-2 Croatia and France 3-1 Senegal. 4"
     },
 
     {
       "category": "sports",
-      "image": "assets/egypt.jpg",
-      "title": "Egypt Defeat New Zealand 3-1",
-      "description": "Egypt strengthened their chances of reaching the knockout stage after securing an impressive 3-1 victory over New Zealand in Group G. 1"
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/germany.jpg",
-      "title": "Germany's Comeback Victory Still Trending",
-      "description": "Germany's dramatic 2-1 comeback win over Côte d'Ivoire remains one of the tournament's biggest talking points as the four-time champions move closer to the knockout stage."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/japan.jpg",
-      "title": "Japan's 4-0 Victory Impresses Fans",
-      "description": "Japan's dominant 4-0 win against Tunisia has been widely praised as one of the strongest performances of the tournament so far. 2"
+      "image": "assets/worldcup.jpg",
+      "title": "Today's World Cup Fixtures",
+      "description": "England face Ghana, Portugal meet Uzbekistan, Panama take on Croatia and Colombia play DR Congo as another crucial day of World Cup action gets underway. 5"
     },
 
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
-      "title": "Middle East Diplomacy Remains Global Focus",
-      "description": "International attention remains fixed on ongoing diplomatic efforts involving Iran, regional security and the future of shipping through the Strait of Hormuz. Oil markets continue reacting to developments. 3"
+      "title": "Middle East Remains Global Security Focus",
+      "description": "Governments worldwide continue monitoring diplomatic and security developments across the Middle East as concerns over regional stability and energy supplies remain high."
     },
 
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "Europe Faces Extreme Heatwave",
-      "description": "Several European countries are experiencing record temperatures, with parts of France, Spain, Belgium and Germany affected by extreme heat conditions. Authorities have issued widespread warnings. 4"
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "Political Changes Loom In United Kingdom",
-      "description": "Britain is preparing for another political transition after Prime Minister Keir Starmer announced his resignation, potentially leading to the country's seventh prime minister in a decade. 5"
+      "title": "Europe Faces Historic Heatwave",
+      "description": "France, Spain, Belgium and parts of Germany are experiencing exceptional temperatures, with forecasts indicating some of the hottest days ever recorded in parts of Europe. 6"
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Monitors Global Security And Trade",
-      "description": "American officials continue focusing on economic stability, global security partnerships and trade developments amid ongoing international uncertainties."
+      "title": "United States Continues Economic And Security Focus",
+      "description": "American policymakers remain focused on economic stability, strategic partnerships, technology investment and international security developments."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Continues Housing And Immigration Efforts",
-      "description": "Canadian policymakers remain focused on balancing housing affordability challenges with immigration and labor market demands."
+      "title": "Canada Balances Housing And Immigration Priorities",
+      "description": "Canadian leaders continue addressing housing affordability challenges while maintaining immigration and workforce growth strategies."
     },
 
     {
       "category": "europe",
       "image": "assets/eu-migration.jpg",
-      "title": "Migration Reforms Continue Across Europe",
-      "description": "European governments continue implementing migration and asylum reforms while strengthening border management and deportation procedures."
+      "title": "Migration Reform Remains Key European Issue",
+      "description": "European governments continue implementing migration and asylum reforms while strengthening border security and return procedures."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Continues Security Operations",
-      "description": "Security agencies remain engaged in operations targeting insurgents, terrorists, bandits and kidnapping networks across affected regions."
+      "title": "Nigeria Continues Anti-Terror Operations",
+      "description": "Military and security agencies remain engaged in operations against insurgents, bandits and kidnapping networks across multiple regions of the country."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Economic And Security Issues Dominate National Conversation",
-      "description": "Inflation, food prices, infrastructure projects and insecurity remain among the top concerns for Nigerians."
+      "title": "Economic Challenges And Security Dominate Discussions",
+      "description": "Inflation, food prices, insecurity, infrastructure projects and economic reforms remain among the major issues facing Nigerians."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Nations Expand Cooperation",
-      "description": "Governments across Africa continue strengthening trade, infrastructure and security partnerships aimed at promoting growth and regional stability."
+      "title": "Africa Expands Regional Trade And Security Cooperation",
+      "description": "Governments across Africa continue strengthening partnerships aimed at boosting trade, infrastructure development and regional stability."
     },
 
     {
       "category": "asia",
       "image": "assets/asia.jpg",
-      "title": "Asian Economies Continue Technology Expansion",
-      "description": "Several Asian economies continue investing in manufacturing, digital infrastructure and artificial intelligence."
+      "title": "Heavy Rains Impact Parts Of Asia",
+      "description": "Several Asian countries are dealing with heavy rainfall and flooding concerns, while other regions continue facing extreme heat conditions. 7"
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Advances Strategic Technology Programs",
-      "description": "Chinese authorities continue investing heavily in semiconductors, artificial intelligence and advanced manufacturing sectors."
+      "title": "China Continues AI And Semiconductor Expansion",
+      "description": "Chinese authorities continue supporting artificial intelligence, semiconductor production and advanced manufacturing initiatives."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Markets Watch Oil Prices And Global Risks",
-      "description": "Investors remain focused on inflation, energy prices and geopolitical developments affecting global economic growth. 6"
+      "title": "Global Markets Monitor Oil Prices",
+      "description": "Investors remain focused on inflation, interest rates and energy prices as geopolitical developments continue influencing global markets."
     }
 
   ],
 
   "sponsoredAdverts": [
-
     {
       "image": "assets/stonebreaker.jpg",
       "title": "STONEBREAKER HERBAL MIXTURE",
@@ -157,7 +156,7 @@
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
       "subtitle": "Freshly Ground Spices — No Additives!",
-      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services.",
+      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services. Freshness and flavor in every package.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -176,19 +175,18 @@
         }
       ]
     }
-
   ],
 
   "breakingHistory": [
-    "Argentina, France, Senegal and Algeria are in action today at the World Cup.",
-    "Egypt defeated New Zealand 3-1 in Group G.",
-    "Germany's comeback victory over Côte d'Ivoire remains a major tournament story.",
-    "Europe is experiencing one of its most severe heatwaves in recent years.",
-    "Middle East diplomacy continues influencing global markets.",
+    "Norway defeated Senegal 3-2 with another Haaland double.",
+    "France beat Iraq 3-0 to stay among the tournament favorites.",
+    "Argentina defeated Austria 2-0 as Messi extended his World Cup scoring record.",
+    "Germany remain unbeaten after defeating Côte d'Ivoire 2-1.",
+    "Japan's 4-0 victory over Tunisia remains one of the biggest wins of the tournament.",
+    "Europe faces one of its strongest heatwaves in modern history.",
+    "Middle East diplomacy remains a major international priority.",
     "Nigeria continues nationwide security operations.",
-    "Britain prepares for another leadership transition.",
-    "European migration reforms remain under implementation.",
-    "China continues expanding AI and manufacturing investment.",
+    "Asian countries face severe monsoon rainfall.",
     "Global markets remain focused on inflation and energy prices."
   ]
 }

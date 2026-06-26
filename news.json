@@ -1,144 +1,143 @@
 {
   "hero": {
     "title": "Radiant Waves Media Morning Global News",
-    "description": "Thursday, June 25, 2026. Good morning. Bringing you the latest World Cup results, breaking international developments, security updates, business headlines and major stories from every continent."
+    "description": "Friday, June 26, 2026. Good morning. Bringing you the latest FIFA World Cup updates, breaking global developments, business, security and political news from every continent."
   },
 
   "breaking": [
-    "🔴 Brazil defeat Scotland 3-0 to reach the World Cup knockout stage",
-    "🔴 Switzerland beat Canada 2-1 to finish top of Group B",
-    "🔴 Cristiano Ronaldo's World Cup record continues to dominate global headlines",
-    "🔴 UK records its hottest June temperatures as Europe's heatwave worsens",
-    "🔴 Middle East tensions continue influencing global energy markets",
-    "🔴 Nigeria sustains military operations against terrorism and kidnapping",
-    "🔴 Germany prepare for a crucial clash against Ecuador today",
-    "🔴 Global markets monitor oil prices and inflation risks"
+    "🔴 Ecuador stun Germany 2-1 to reach the FIFA World Cup knockout stage",
+    "🔴 Brazil qualify as Group C winners after defeating Scotland 3-0",
+    "🔴 Switzerland finish top of Group B after defeating Canada 2-1",
+    "🔴 Europe's record-breaking heatwave continues with fresh health alerts",
+    "🔴 Middle East tensions keep global energy markets on edge",
+    "🔴 Nigeria intensifies military operations against terrorists and kidnappers",
+    "🔴 United States prepare for decisive World Cup group fixture",
+    "🔴 Global investors monitor inflation, oil prices and geopolitical risks"
   ],
 
   "featured": {
     "image": "assets/worldcup.jpg",
-    "title": "Brazil And Switzerland Advance As World Cup Race Intensifies",
-    "content": "Brazil secured a commanding 3-0 victory over Scotland while Switzerland defeated Canada 2-1 to top Group B. The tournament is entering a decisive stage as teams battle for places in the knockout rounds. Europe meanwhile continues facing a historic heatwave affecting millions of people across the continent."
+    "title": "Ecuador Shock Germany As World Cup Knockout Race Intensifies",
+    "content": "One of the biggest surprises of the FIFA World Cup arrived overnight as Ecuador fought back to defeat Germany 2-1 and qualify for the knockout stage as one of the best third-placed teams. Brazil and Switzerland also booked their places in the next round while group-stage drama continues across North America. 0"
   },
 
   "articles": [
 
     {
       "category": "sports",
+      "image": "assets/ecuador.jpg",
+      "title": "Ecuador Produce Biggest Upset Of The Tournament",
+      "description": "Ecuador came from behind to defeat Germany 2-1. Gonzalo Plata scored the winner as Ecuador reached the knockout stage while Germany, despite the defeat, also progressed after finishing top of Group E. 1"
+    },
+
+    {
+      "category": "sports",
       "image": "assets/brazil.jpg",
-      "title": "Brazil Beat Scotland 3-0 To Reach Knockout Stage",
-      "description": "Vinicius Junior scored twice as Brazil defeated Scotland 3-0, securing qualification for the knockout rounds and maintaining their status as one of the tournament favorites. 0"
+      "title": "Brazil Advance As Group Winners",
+      "description": "Vinicius Junior scored twice as Brazil defeated Scotland 3-0 to finish top of Group C and secure a place in the Round of 32. 2"
     },
 
     {
       "category": "sports",
       "image": "assets/switzerland.jpg",
-      "title": "Switzerland Defeat Canada 2-1",
-      "description": "Switzerland finished top of Group B after defeating co-hosts Canada 2-1. Both nations advanced to the knockout stage, with Switzerland claiming first place in the group. 1"
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/portugal.jpg",
-      "title": "Ronaldo's Historic Record Still Dominates Tournament",
-      "description": "Cristiano Ronaldo remains one of the tournament's biggest stories after becoming the first player in football history to score in six FIFA World Cups. 2"
+      "title": "Switzerland Top Group B",
+      "description": "Switzerland defeated Canada 2-1 to finish first in Group B. Canada also advanced to the knockout stage after an impressive campaign as tournament co-hosts."
     },
 
     {
       "category": "sports",
       "image": "assets/worldcup.jpg",
-      "title": "Latest Major World Cup Results",
-      "description": "Brazil 3-0 Scotland, Switzerland 2-1 Canada, Colombia 1-0 DR Congo, Croatia 1-0 Panama, Portugal 5-0 Uzbekistan, England 0-0 Ghana, Norway 3-2 Senegal, France 3-0 Iraq, Argentina 2-0 Austria and Germany 2-1 Côte d'Ivoire. 3"
+      "title": "Latest FIFA World Cup Results",
+      "description": "Ecuador 2-1 Germany, Brazil 3-0 Scotland, Switzerland 2-1 Canada, Portugal 5-0 Uzbekistan, Colombia 1-0 DR Congo, Croatia 1-0 Panama, Norway 3-2 Senegal, France 3-0 Iraq, Argentina 2-0 Austria, Germany 2-1 Côte d'Ivoire, Japan 4-0 Tunisia, Netherlands 5-1 Sweden and Egypt 3-1 New Zealand. 3"
     },
 
     {
       "category": "sports",
       "image": "assets/worldcup.jpg",
       "title": "Today's World Cup Fixtures",
-      "description": "Germany face Ecuador, Côte d'Ivoire meet Curaçao, Japan take on Sweden, Netherlands face Tunisia, United States play Türkiye and Australia battle Paraguay as group-stage action continues. 4"
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "UK Records Historic June Heat",
-      "description": "Britain recorded its hottest June temperatures on record as a severe heatwave continues across Europe. Authorities have issued emergency warnings amid temperatures exceeding 36°C. 5"
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/europe.jpg",
-      "title": "Europe Battles Unprecedented Heatwave",
-      "description": "France, Spain, Italy, Germany, Belgium and the UK continue experiencing extreme temperatures, school closures and health emergencies as the heatwave intensifies. 6"
+      "description": "Today's matches include Norway vs France, Senegal vs Iraq, Egypt vs Iran, Belgium vs New Zealand, Uruguay vs Spain and Cabo Verde vs Saudi Arabia as the group stage continues. 4"
     },
 
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
-      "title": "Middle East Remains Global Focus",
-      "description": "Governments continue monitoring regional security developments and diplomatic efforts amid concerns about energy supplies and maritime security."
+      "title": "Middle East Remains Global Diplomatic Focus",
+      "description": "Diplomatic efforts continue across the Middle East while governments closely monitor regional security developments and their impact on global energy supplies."
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/europe.jpg",
+      "title": "Europe Battles Historic Heatwave",
+      "description": "Extreme temperatures continue affecting France, Spain, Italy, Germany, Belgium and the United Kingdom. Authorities have maintained health warnings as the prolonged heatwave continues. 5"
+    },
+
+    {
+      "category": "europe",
+      "image": "assets/uk.jpg",
+      "title": "United Kingdom Faces Continued Political And Climate Challenges",
+      "description": "Political transition discussions continue while the country experiences exceptionally high temperatures alongside much of continental Europe."
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Prepares For Key World Cup Fixture",
-      "description": "The United States national team faces Türkiye today while policymakers continue focusing on economic growth, trade and international security partnerships."
+      "title": "United States Awaits Crucial World Cup Match",
+      "description": "The United States national team prepares for its final group fixture while Washington continues focusing on economic growth, trade and international security."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Advances Despite Defeat",
-      "description": "Canada progressed to the knockout stage despite losing 2-1 to Switzerland, keeping hopes alive for a deep run on home soil. 7"
+      "title": "Canada Progress Despite Narrow Defeat",
+      "description": "Canadian supporters celebrated qualification for the Round of 32 despite a 2-1 defeat to Switzerland in the final group match."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Continues Nationwide Security Operations",
-      "description": "Military authorities remain engaged in operations targeting terrorists, insurgents, bandits and kidnapping networks across several regions."
+      "title": "Nigeria Sustains Nationwide Security Operations",
+      "description": "Military authorities continue operations against terrorists, insurgents, bandits and kidnapping gangs across several regions as insecurity remains a major national priority."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Economic Reforms And Security Remain Top Concerns",
-      "description": "Inflation, food prices, electricity supply, insecurity and economic reforms continue dominating public discussions across Nigeria."
+      "title": "Economic Reform And Inflation Continue To Dominate Debate",
+      "description": "Food prices, inflation, electricity supply, insecurity and economic reforms remain among the biggest issues facing Nigerians."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Nations Expand Regional Cooperation",
-      "description": "Governments across Africa continue strengthening trade partnerships, infrastructure projects and security cooperation initiatives."
+      "title": "Africa Strengthens Regional Trade And Security",
+      "description": "African governments continue expanding regional infrastructure, trade and security cooperation aimed at improving economic growth."
     },
 
     {
       "category": "asia",
       "image": "assets/asia.jpg",
-      "title": "Asia Continues Technology And Industrial Growth",
-      "description": "Asian economies continue expanding investments in artificial intelligence, manufacturing, semiconductors and digital infrastructure."
+      "title": "Asia Expands Manufacturing And AI Investments",
+      "description": "Major Asian economies continue investing in artificial intelligence, semiconductor production, clean energy and advanced manufacturing."
     },
 
     {
       "category": "technology",
       "image": "assets/china-tech.jpg",
-      "title": "China Expands Strategic Technology Programs",
-      "description": "Chinese authorities continue supporting AI development, advanced manufacturing and semiconductor production as global competition intensifies."
+      "title": "China Continues Strategic Technology Expansion",
+      "description": "Chinese authorities continue strengthening investments in artificial intelligence, semiconductor manufacturing and next-generation technologies."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Markets Watch Oil Prices And Inflation",
-      "description": "Global investors remain focused on energy prices, inflation pressures and geopolitical developments affecting economic growth."
+      "title": "Global Markets Watch Inflation And Oil Prices",
+      "description": "Investors continue monitoring geopolitical developments, energy prices and inflation as markets await fresh economic data."
     }
 
   ],
 
   "sponsoredAdverts": [
-
     {
       "image": "assets/stonebreaker.jpg",
       "title": "STONEBREAKER HERBAL MIXTURE",
@@ -152,7 +151,6 @@
         }
       ]
     },
-
     {
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
@@ -176,19 +174,18 @@
         }
       ]
     }
-
   ],
 
   "breakingHistory": [
-    "Brazil defeated Scotland 3-0 to qualify for the knockout stage.",
+    "Ecuador shocked Germany 2-1 to qualify for the Round of 32.",
+    "Brazil defeated Scotland 3-0 to finish top of Group C.",
     "Switzerland beat Canada 2-1 to win Group B.",
-    "Cristiano Ronaldo remains one of the tournament's biggest stories.",
-    "Colombia defeated DR Congo 1-0.",
-    "Europe continues battling a historic heatwave.",
-    "The UK recorded its hottest June temperatures on record.",
-    "Middle East developments continue influencing energy markets.",
-    "Nigeria sustains nationwide security operations.",
-    "Germany prepare to face Ecuador today.",
-    "Global markets remain focused on inflation and oil prices."
+    "Cristiano Ronaldo remains one of the tournament's biggest stories after becoming the first player to score in six FIFA World Cups.",
+    "Today's World Cup fixtures include Norway vs France and Egypt vs Iran.",
+    "Europe continues battling an unprecedented heatwave.",
+    "Middle East diplomacy remains a major international priority.",
+    "Nigeria sustains nationwide anti-terror operations.",
+    "Global markets continue monitoring oil prices and inflation.",
+    "Artificial intelligence investment continues accelerating across the world."
   ]
 }

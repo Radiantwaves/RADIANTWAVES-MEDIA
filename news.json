@@ -1,138 +1,131 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Morning Global News",
-    "description": "Saturday, June 27, 2026. Good morning. Here are today's leading global headlines, FIFA World Cup updates, politics, business, security and breaking news from every continent."
+    "title": "Radiant Waves Media Late Night Global News",
+    "description": "Saturday, June 27, 2026 | 11:13 PM GMT. Bringing you the latest FIFA World Cup results, global breaking news and major developments from every continent."
   },
 
   "breaking": [
-    "🔴 France thrash Norway 4-1 as Ousmane Dembélé scores stunning first-half hat-trick",
-    "🔴 Belgium hammer New Zealand 5-1 to finish top of Group G",
-    "🔴 Spain eliminate Uruguay from the FIFA World Cup",
-    "🔴 Europe's record-breaking heatwave triggers fresh emergency warnings",
-    "🔴 Middle East diplomatic efforts continue amid regional security concerns",
-    "🔴 Nigeria intensifies nationwide operations against terrorists, bandits and kidnappers",
-    "🔴 Global markets remain cautious over oil prices, inflation and geopolitical tensions",
-    "🔴 Artificial Intelligence investment continues accelerating across the US, Europe and Asia"
+    "🔴 England defeat Panama to qualify for the FIFA World Cup Round of 32",
+    "🔴 Portugal and Colombia battle for Group K supremacy",
+    "🔴 Argentina complete perfect group stage with victory over Jordan",
+    "🔴 France finish top of Group I after Dembélé's hat-trick against Norway",
+    "🔴 Belgium top Group G following dominant win over New Zealand",
+    "🔴 Europe remains under record-breaking heatwave alerts",
+    "🔴 Nigeria sustains nationwide anti-terror and anti-kidnapping operations",
+    "🔴 Global markets monitor oil prices and geopolitical developments"
   ],
 
   "featured": {
-    "image": "assets/france.jpg",
-    "title": "Dembélé's Hat-Trick Powers France Into Knockout Stage",
-    "content": "France delivered one of the tournament's finest performances after defeating Norway 4-1. Ousmane Dembélé scored a brilliant first-half hat-trick while Kylian Mbappé added another goal to seal top spot in the group. The victory further strengthened France's status as one of the favourites to lift the FIFA World Cup."
+    "image": "assets/worldcup.jpg",
+    "title": "World Cup Knockout Picture Nearly Complete",
+    "content": "The final round of the FIFA World Cup group stage continued today with England booking their place in the Round of 32. Argentina maintained their perfect record, while France, Belgium, Brazil, Portugal, Spain and several other favourites confirmed their places in the knockout rounds. 0"
   },
 
   "articles": [
 
     {
       "category": "sports",
+      "image": "assets/england.jpg",
+      "title": "England Reach Knockout Stage",
+      "description": "England secured qualification after defeating Panama in their final Group L match, finishing strongly ahead of the Round of 32. 1"
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/argentina.jpg",
+      "title": "Argentina Finish Group Stage Perfectly",
+      "description": "Argentina completed the group phase with maximum points after defeating Jordan, extending their unbeaten run and strengthening their status among the tournament favourites. 2"
+    },
+
+    {
+      "category": "sports",
+      "image": "assets/portugal.jpg",
+      "title": "Portugal Battle Colombia For Group Leadership",
+      "description": "Portugal's clash with Colombia headlines Group K as both nations compete for first place before the knockout phase. Cristiano Ronaldo remains one of the tournament's biggest attractions. 3"
+    },
+
+    {
+      "category": "sports",
       "image": "assets/france.jpg",
-      "title": "France Defeat Norway 4-1",
-      "description": "France produced an outstanding display against Norway, winning 4-1. Ousmane Dembélé scored three first-half goals before Kylian Mbappé completed the victory. France finished top of the group and advanced comfortably into the Round of 32."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/dembele.jpg",
-      "title": "Dembélé Becomes Tournament's Standout Performer",
-      "description": "Paris Saint-Germain forward Ousmane Dembélé delivered one of the best individual performances of the tournament with a sensational first-half hat-trick, strengthening his position among the leading contenders for the Golden Boot."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/belgium.jpg",
-      "title": "Belgium Rout New Zealand 5-1",
-      "description": "Belgium secured an emphatic 5-1 victory over New Zealand to finish first in Group G. Romelu Lukaku and Leandro Trossard starred as Belgium marched confidently into the knockout rounds."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/spain.jpg",
-      "title": "Spain Knock Uruguay Out Of World Cup",
-      "description": "Spain defeated Uruguay 1-0 to secure qualification while ending Uruguay's disappointing World Cup campaign."
+      "title": "France Continue To Impress",
+      "description": "France remain one of the tournament favourites after defeating Norway 4-1. Ousmane Dembélé's sensational first-half hat-trick remains one of the standout performances of the FIFA World Cup so far. 4"
     },
 
     {
       "category": "sports",
       "image": "assets/worldcup.jpg",
       "title": "Latest FIFA World Cup Results",
-      "description": "France 4-1 Norway, Belgium 5-1 New Zealand, Spain 1-0 Uruguay, Brazil 3-0 Scotland, Ecuador 2-1 Germany, Switzerland 2-1 Canada, Portugal 5-0 Uzbekistan, Colombia 1-0 DR Congo, Croatia 1-0 Panama, Argentina 2-0 Austria and England have all progressed to the knockout stage."
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/worldcup.jpg",
-      "title": "World Cup Knockout Stage Takes Shape",
-      "description": "France, Brazil, Argentina, Belgium, Portugal, England, Switzerland, Spain and several other nations have secured qualification as the group stage approaches its conclusion."
+      "description": "England defeated Panama, Belgium 5-1 New Zealand, Spain 1-0 Uruguay, France 4-1 Norway, Senegal 5-0 Iraq, Egypt 1-1 Iran, Brazil 3-0 Scotland, Ecuador 2-1 Germany, Switzerland 2-1 Canada, Portugal 5-0 Uzbekistan and Argentina 2-0 Austria remain among the biggest results of the tournament. 5"
     },
 
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
-      "title": "Middle East Remains Centre Of Global Diplomacy",
-      "description": "International efforts continue to reduce regional tensions while governments closely monitor developments affecting security, maritime trade and global energy supplies."
+      "title": "Middle East Diplomacy Continues",
+      "description": "International diplomatic efforts remain focused on regional stability, maritime security and humanitarian issues while governments continue monitoring developments affecting global energy markets."
     },
 
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "Europe Continues Battling Historic Heatwave",
-      "description": "France, Spain, Italy, Germany, Belgium and the United Kingdom remain under extreme heat alerts as temperatures continue reaching record levels."
-    },
-
-    {
-      "category": "europe",
-      "image": "assets/uk.jpg",
-      "title": "United Kingdom Continues Political Transition",
-      "description": "Attention remains focused on Labour Party leadership developments while the government also responds to the ongoing heatwave affecting much of the country."
+      "title": "Europe Battles Extreme Heat",
+      "description": "France, Spain, Italy, Germany, Belgium and the United Kingdom remain under severe heatwave alerts as authorities continue issuing public health warnings. 6"
     },
 
     {
       "category": "usa",
       "image": "assets/usa.jpg",
       "title": "United States Focuses On Economy And Technology",
-      "description": "Washington continues advancing investment in artificial intelligence, semiconductor production, national security and economic growth."
+      "description": "Washington continues prioritising economic growth, artificial intelligence, semiconductor investment and international security cooperation."
     },
 
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Advances To Knockout Stage",
-      "description": "Tournament co-host Canada qualified for the Round of 32 despite finishing behind Switzerland in Group B."
+      "title": "Canada Prepare For Knockout Football",
+      "description": "Tournament co-host Canada advance to the Round of 32, with supporters looking ahead to the country's biggest World Cup knockout match in history."
     },
 
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Intensifies Anti-Terror Operations",
-      "description": "Military authorities continue coordinated operations against Boko Haram, ISWAP, bandits and kidnapping gangs across several states while strengthening border security."
+      "title": "Nigeria Continues Security Operations",
+      "description": "Military operations against terrorists, bandits and kidnapping gangs continue across several parts of the country as authorities intensify efforts to restore security."
     },
 
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Economic Reform Remains National Focus",
-      "description": "Inflation, food security, electricity supply, tax reforms and infrastructure development continue dominating national discussions across Nigeria."
+      "title": "Economic Reforms Remain National Priority",
+      "description": "Inflation, electricity supply, infrastructure, food security and economic reforms continue dominating national discussions across Nigeria."
     },
 
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "Africa Strengthens Trade And Infrastructure",
-      "description": "African governments continue implementing regional trade agreements, transport corridors and investment programmes to boost economic growth."
+      "title": "African Cooperation Expands",
+      "description": "African governments continue strengthening trade, transport, investment and regional security partnerships under the African Continental Free Trade Area."
     },
 
     {
       "category": "asia",
       "image": "assets/asia.jpg",
-      "title": "Asia Expands AI And Manufacturing",
-      "description": "China, Japan, South Korea and India continue investing heavily in advanced manufacturing, semiconductors, renewable energy and artificial intelligence."
+      "title": "Asia Advances Manufacturing And AI",
+      "description": "China, Japan, South Korea and India continue investing heavily in artificial intelligence, semiconductor production and advanced manufacturing."
+    },
+
+    {
+      "category": "technology",
+      "image": "assets/ai.jpg",
+      "title": "Global AI Competition Accelerates",
+      "description": "Governments and technology companies continue increasing investments in generative AI, robotics, cybersecurity and digital infrastructure."
     },
 
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Markets Monitor Inflation And Oil Prices",
-      "description": "Global financial markets remain focused on inflation data, central bank decisions, crude oil prices and geopolitical risks affecting international trade."
+      "title": "Markets Watch Oil And Inflation",
+      "description": "Investors continue monitoring oil prices, inflation, central bank policies and geopolitical developments as markets prepare for a new trading week."
     }
 
   ],
@@ -155,7 +148,7 @@
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
       "subtitle": "Freshly Ground Spices — No Additives!",
-      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services. Freshness and flavor in every package.",
+      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -177,15 +170,15 @@
   ],
 
   "breakingHistory": [
-    "France defeated Norway 4-1 with Ousmane Dembélé scoring a first-half hat-trick.",
-    "Belgium beat New Zealand 5-1 to finish top of Group G.",
-    "Spain eliminated Uruguay from the FIFA World Cup.",
-    "Brazil, France, Belgium, England and Portugal progressed to the knockout stage.",
-    "Europe remained under a record-breaking heatwave.",
-    "Middle East diplomacy continued amid regional security concerns.",
-    "Nigeria sustained nationwide anti-terror operations.",
-    "Global investors monitored inflation and oil prices.",
-    "Artificial intelligence investment accelerated worldwide.",
-    "The FIFA World Cup knockout bracket continued to take shape."
+    "England qualified for the FIFA World Cup Round of 32.",
+    "Argentina completed a perfect group-stage campaign.",
+    "France topped Group I after defeating Norway 4-1.",
+    "Ousmane Dembélé's hat-trick remains one of the tournament's standout performances.",
+    "Belgium won Group G after beating New Zealand 5-1.",
+    "Spain eliminated Uruguay from the tournament.",
+    "Europe continues battling a record-breaking heatwave.",
+    "Nigeria sustained nationwide security operations.",
+    "Global markets remain focused on inflation and energy prices.",
+    "The FIFA World Cup knockout bracket is almost complete."
   ]
 }

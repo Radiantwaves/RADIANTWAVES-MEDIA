@@ -1,133 +1,123 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Late Night Global News",
-    "description": "Saturday, June 27, 2026 | 11:13 PM GMT. Bringing you the latest FIFA World Cup results, global breaking news and major developments from every continent."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Sunday, June 28, 2026. Good morning. Bringing you today's top global headlines, FIFA World Cup knockout updates, politics, business, security and breaking news from around the world."
   },
 
   "breaking": [
-    "🔴 England defeat Panama to qualify for the FIFA World Cup Round of 32",
-    "🔴 Portugal and Colombia battle for Group K supremacy",
-    "🔴 Argentina complete perfect group stage with victory over Jordan",
-    "🔴 France finish top of Group I after Dembélé's hat-trick against Norway",
-    "🔴 Belgium top Group G following dominant win over New Zealand",
-    "🔴 Europe remains under record-breaking heatwave alerts",
-    "🔴 Nigeria sustains nationwide anti-terror and anti-kidnapping operations",
-    "🔴 Global markets monitor oil prices and geopolitical developments"
+    "🔴 FIFA World Cup Round of 32 fixtures officially confirmed after dramatic end to group stage",
+    "🔴 England defeat Panama 2-0 to finish top of Group L",
+    "🔴 DR Congo make history by reaching the World Cup knockout stage for the first time",
+    "🔴 Austria and Algeria both qualify after dramatic 3-3 draw, Iran eliminated",
+    "🔴 France prepare to face Sweden as Ousmane Dembélé leads Golden Boot race",
+    "🔴 Europe remains under extreme heatwave alerts",
+    "🔴 Nigeria sustains nationwide anti-terror operations against bandits and insurgents",
+    "🔴 Global markets prepare for a new trading week amid geopolitical uncertainty"
   ],
 
   "featured": {
     "image": "assets/worldcup.jpg",
-    "title": "World Cup Knockout Picture Nearly Complete",
-    "content": "The final round of the FIFA World Cup group stage continued today with England booking their place in the Round of 32. Argentina maintained their perfect record, while France, Belgium, Brazil, Portugal, Spain and several other favourites confirmed their places in the knockout rounds. 0"
+    "title": "World Cup Knockout Stage Officially Begins",
+    "content": "The FIFA World Cup group stage has concluded, confirming the 32 teams that will compete for football's biggest prize. France, Brazil, Argentina, England, Spain, Belgium and Portugal remain among the favourites as the knockout phase begins across the United States, Canada and Mexico."
   },
 
   "articles": [
-
-    {
-      "category": "sports",
-      "image": "assets/england.jpg",
-      "title": "England Reach Knockout Stage",
-      "description": "England secured qualification after defeating Panama in their final Group L match, finishing strongly ahead of the Round of 32. 1"
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/argentina.jpg",
-      "title": "Argentina Finish Group Stage Perfectly",
-      "description": "Argentina completed the group phase with maximum points after defeating Jordan, extending their unbeaten run and strengthening their status among the tournament favourites. 2"
-    },
-
-    {
-      "category": "sports",
-      "image": "assets/portugal.jpg",
-      "title": "Portugal Battle Colombia For Group Leadership",
-      "description": "Portugal's clash with Colombia headlines Group K as both nations compete for first place before the knockout phase. Cristiano Ronaldo remains one of the tournament's biggest attractions. 3"
-    },
-
     {
       "category": "sports",
       "image": "assets/france.jpg",
-      "title": "France Continue To Impress",
-      "description": "France remain one of the tournament favourites after defeating Norway 4-1. Ousmane Dembélé's sensational first-half hat-trick remains one of the standout performances of the FIFA World Cup so far. 4"
+      "title": "France Face Sweden In Round Of 32",
+      "description": "France finished top of Group I after their outstanding 4-1 victory over Norway. Didier Deschamps' side now face Sweden in the knockout stage with Ousmane Dembélé arriving in sensational form after his historic hat-trick. 0"
     },
-
+    {
+      "category": "sports",
+      "image": "assets/dembele.jpg",
+      "title": "Dembélé Among Golden Boot Leaders",
+      "description": "Ousmane Dembélé has emerged as one of the stars of the tournament with four goals in three matches. His hat-trick against Norway made him only the third French player to score a World Cup hat-trick. 1"
+    },
+    {
+      "category": "sports",
+      "image": "assets/england.jpg",
+      "title": "England Beat Panama 2-0",
+      "description": "England topped Group L after Jude Bellingham scored and assisted Harry Kane, whose goal made him England's all-time leading World Cup scorer with 11 goals. 2"
+    },
+    {
+      "category": "sports",
+      "image": "assets/congo.jpg",
+      "title": "DR Congo Reach Knockout Stage For First Time",
+      "description": "DR Congo came from behind to defeat Uzbekistan 3-1, recording their first World Cup victory and booking a historic Round of 32 clash against England. 3"
+    },
+    {
+      "category": "sports",
+      "image": "assets/algeria.jpg",
+      "title": "Austria And Algeria Progress After Six-Goal Thriller",
+      "description": "Austria and Algeria played out an extraordinary 3-3 draw, with both nations qualifying while Iran were heartbreakingly eliminated despite drawing Egypt 1-1. 4"
+    },
     {
       "category": "sports",
       "image": "assets/worldcup.jpg",
-      "title": "Latest FIFA World Cup Results",
-      "description": "England defeated Panama, Belgium 5-1 New Zealand, Spain 1-0 Uruguay, France 4-1 Norway, Senegal 5-0 Iraq, Egypt 1-1 Iran, Brazil 3-0 Scotland, Ecuador 2-1 Germany, Switzerland 2-1 Canada, Portugal 5-0 Uzbekistan and Argentina 2-0 Austria remain among the biggest results of the tournament. 5"
+      "title": "Confirmed Round Of 32 Fixtures",
+      "description": "Major knockout ties include France vs Sweden, England vs DR Congo, Brazil vs Japan, Belgium vs Senegal, Portugal vs Croatia, Spain vs Austria, Argentina vs Cape Verde and Germany vs Paraguay. 5"
     },
-
     {
       "category": "world",
       "image": "assets/middleeast.jpg",
       "title": "Middle East Diplomacy Continues",
-      "description": "International diplomatic efforts remain focused on regional stability, maritime security and humanitarian issues while governments continue monitoring developments affecting global energy markets."
+      "description": "Diplomatic negotiations and regional security remain major global priorities as governments monitor maritime security and humanitarian developments."
     },
-
     {
       "category": "europe",
       "image": "assets/europe.jpg",
-      "title": "Europe Battles Extreme Heat",
-      "description": "France, Spain, Italy, Germany, Belgium and the United Kingdom remain under severe heatwave alerts as authorities continue issuing public health warnings. 6"
+      "title": "Europe Faces Prolonged Heatwave",
+      "description": "France, Spain, Italy, Germany, Belgium and the United Kingdom continue experiencing exceptionally high temperatures, prompting health alerts and emergency measures."
     },
-
     {
       "category": "usa",
       "image": "assets/usa.jpg",
-      "title": "United States Focuses On Economy And Technology",
-      "description": "Washington continues prioritising economic growth, artificial intelligence, semiconductor investment and international security cooperation."
+      "title": "United States Hosts Knockout Phase",
+      "description": "Attention shifts to the Round of 32 as host cities across the United States prepare for the first knockout matches of the expanded FIFA World Cup."
     },
-
     {
       "category": "world",
       "image": "assets/canada.jpg",
-      "title": "Canada Prepare For Knockout Football",
-      "description": "Tournament co-host Canada advance to the Round of 32, with supporters looking ahead to the country's biggest World Cup knockout match in history."
+      "title": "Canada Ready For Historic Knockout Match",
+      "description": "Co-host Canada prepares to face South Africa after progressing beyond the group stage for the first time on home soil. 6"
     },
-
     {
       "category": "africa",
       "image": "assets/nigeria.jpg",
-      "title": "Nigeria Continues Security Operations",
-      "description": "Military operations against terrorists, bandits and kidnapping gangs continue across several parts of the country as authorities intensify efforts to restore security."
+      "title": "Nigeria Continues Nationwide Security Operations",
+      "description": "Military authorities sustained operations against Boko Haram, ISWAP, bandits and kidnapping gangs as insecurity remains one of the country's top priorities."
     },
-
     {
       "category": "africa",
       "image": "assets/abuja.jpg",
-      "title": "Economic Reforms Remain National Priority",
-      "description": "Inflation, electricity supply, infrastructure, food security and economic reforms continue dominating national discussions across Nigeria."
+      "title": "Economic Reforms Remain National Focus",
+      "description": "Inflation, food security, tax reforms, infrastructure projects and electricity supply continue dominating discussions across Nigeria."
     },
-
     {
       "category": "africa",
       "image": "assets/africa.jpg",
-      "title": "African Cooperation Expands",
-      "description": "African governments continue strengthening trade, transport, investment and regional security partnerships under the African Continental Free Trade Area."
+      "title": "African Nations Expand Trade Cooperation",
+      "description": "African governments continue strengthening regional trade, transport infrastructure and investment partnerships under the AfCFTA framework."
     },
-
     {
       "category": "asia",
       "image": "assets/asia.jpg",
-      "title": "Asia Advances Manufacturing And AI",
-      "description": "China, Japan, South Korea and India continue investing heavily in artificial intelligence, semiconductor production and advanced manufacturing."
+      "title": "Asia Continues Technology Growth",
+      "description": "China, Japan, South Korea and India continue investing in artificial intelligence, semiconductor manufacturing and advanced technology."
     },
-
     {
       "category": "technology",
       "image": "assets/ai.jpg",
-      "title": "Global AI Competition Accelerates",
-      "description": "Governments and technology companies continue increasing investments in generative AI, robotics, cybersecurity and digital infrastructure."
+      "title": "Artificial Intelligence Investment Accelerates",
+      "description": "Governments and technology firms continue expanding investment in AI, cybersecurity, robotics and next-generation digital infrastructure."
     },
-
     {
       "category": "business",
       "image": "assets/market.jpg",
-      "title": "Markets Watch Oil And Inflation",
-      "description": "Investors continue monitoring oil prices, inflation, central bank policies and geopolitical developments as markets prepare for a new trading week."
+      "title": "Markets Prepare For New Trading Week",
+      "description": "Global investors remain focused on inflation, central bank policies, oil prices and geopolitical risks heading into the new week."
     }
-
   ],
 
   "sponsoredAdverts": [
@@ -148,7 +138,7 @@
       "image": "assets/spices.jpg",
       "title": "FARM TO KITCHEN 🌶️",
       "subtitle": "Freshly Ground Spices — No Additives!",
-      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services.",
+      "description": "Premium freshly ground spice blends prepared for homes, restaurants and catering services. Freshness and flavour in every package.",
       "products": [
         {
           "name": "🥩 Exotic Beef Blend",
@@ -170,15 +160,15 @@
   ],
 
   "breakingHistory": [
-    "England qualified for the FIFA World Cup Round of 32.",
-    "Argentina completed a perfect group-stage campaign.",
-    "France topped Group I after defeating Norway 4-1.",
-    "Ousmane Dembélé's hat-trick remains one of the tournament's standout performances.",
-    "Belgium won Group G after beating New Zealand 5-1.",
-    "Spain eliminated Uruguay from the tournament.",
-    "Europe continues battling a record-breaking heatwave.",
+    "England defeated Panama 2-0 to finish top of Group L.",
+    "France prepare to face Sweden after topping Group I.",
+    "Ousmane Dembélé remains among the tournament's top scorers.",
+    "DR Congo reached the World Cup knockout stage for the first time.",
+    "Austria and Algeria qualified after an exciting 3-3 draw.",
+    "Iran were eliminated despite remaining unbeaten.",
+    "Europe continues battling an intense heatwave.",
     "Nigeria sustained nationwide security operations.",
-    "Global markets remain focused on inflation and energy prices.",
-    "The FIFA World Cup knockout bracket is almost complete."
+    "Global markets remain focused on inflation and oil prices.",
+    "The FIFA World Cup Round of 32 officially begins today."
   ]
 }

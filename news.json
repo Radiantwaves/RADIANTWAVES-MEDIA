@@ -1,110 +1,116 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Morning Global News",
-    "description": "Monday, July 13, 2026. Good morning. Here are today's verified global headlines, FIFA World Cup semi-final updates, politics, business, technology and security news from around the world."
+    "title": "Radiant Waves Media Late Night Global News",
+    "description": "Tuesday, July 14, 2026. Late Night Edition. Here are today's verified breaking headlines, World Cup updates, politics, business, technology and security news from around the world."
   },
 
   "breaking": [
-    "🔴 England defeat Norway 2-1 after extra time to reach the FIFA World Cup semi-finals",
-    "🔴 Argentina overcome Switzerland 3-1 to book a semi-final clash with England",
-    "🔴 FIFA to discuss possible expansion to a 64-team World Cup in 2030",
-    "🔴 Europe continues to face heatwave conditions across several countries",
+    "🔴 Spain defeat France 2-0 to qualify for the FIFA World Cup Final",
+    "🔴 England and Argentina prepare for tomorrow's second World Cup semi-final",
+    "🔴 France marks Bastille Day under heightened security and extreme heat",
+    "🔴 European leaders reaffirm support for Ukraine during Bastille Day celebrations",
     "🔴 Middle East diplomatic efforts continue amid regional security concerns",
     "🔴 Nigeria sustains nationwide operations against terrorism, banditry and kidnapping",
-    "🔴 Global investors monitor inflation, energy prices and interest-rate expectations",
-    "🔴 Artificial intelligence investment continues accelerating worldwide"
+    "🔴 Global markets continue monitoring inflation, oil prices and interest-rate outlook",
+    "🔴 Artificial intelligence investment remains a major focus across global economies"
   ],
 
   "featured": {
     "image": "assets/worldcup.jpeg",
-    "title": "World Cup Semi-Final Line-Up Nears Completion",
-    "content": "England secured a dramatic 2-1 extra-time victory over Norway to reach the FIFA World Cup semi-finals, while defending champions Argentina defeated Switzerland 3-1 after extra time. The tournament now enters its decisive stage as the world's best teams battle for a place in the final. FIFA officials are also preparing discussions on a possible 64-team World Cup for 2030 following the success of the expanded 48-team tournament."
+    "title": "Spain Reach FIFA World Cup Final",
+    "content": "Spain booked their place in the FIFA World Cup Final after a commanding 2-0 victory over France in Dallas. La Roja produced a disciplined display to eliminate one of the tournament favourites and now await the winner of Wednesday's semi-final between England and Argentina."
   },
 
   "articles": [
     {
       "category": "sports",
-      "image": "assets/england.jpeg",
-      "title": "England Reach World Cup Semi-Finals",
-      "description": "England defeated Norway 2-1 after extra time to secure a place in the FIFA World Cup semi-finals. Jude Bellingham starred with two important goals during the dramatic encounter."
+      "image": "assets/spain.jpeg",
+      "title": "Spain Eliminate France",
+      "description": "Spain defeated France 2-0 in the FIFA World Cup semi-final to secure a place in Sunday's World Cup Final after an impressive all-round performance."
     },
     {
       "category": "sports",
-      "image": "assets/argentina.jpeg",
-      "title": "Argentina Eliminate Switzerland",
-      "description": "Argentina defeated Switzerland 3-1 after extra time to progress to the semi-finals, setting up a highly anticipated meeting with England."
-    },
-    {
-      "category": "sports",
-      "image": "assets/worldcup.jpeg",
-      "title": "Semi-Final Picture Takes Shape",
-      "description": "France, Argentina and England have secured semi-final places while football fans await confirmation of the remaining finalist as the tournament approaches its climax."
+      "image": "assets/france.jpeg",
+      "title": "France Fall Short In Semi-Final",
+      "description": "France were unable to recover after conceding twice against Spain. Didier Deschamps' side now prepare for the third-place playoff."
     },
     {
       "category": "sports",
       "image": "assets/worldcup.jpeg",
-      "title": "FIFA Considers 64-Team World Cup",
-      "description": "FIFA officials are expected to discuss expanding the 2030 FIFA World Cup to 64 teams following the success of the expanded 48-team tournament in 2026."
+      "title": "England And Argentina Ready",
+      "description": "England and Argentina meet on Wednesday in the second FIFA World Cup semi-final, with the winner advancing to face Spain in the final."
+    },
+    {
+      "category": "sports",
+      "image": "assets/worldcup.jpeg",
+      "title": "World Cup Final Takes Shape",
+      "description": "Spain become the first team to reach the 2026 FIFA World Cup Final, while football fans await the outcome of England versus Argentina."
+    },
+    {
+      "category": "world",
+      "image": "assets/europe.jpeg",
+      "title": "France Celebrates Bastille Day",
+      "description": "France marked Bastille Day with heightened security measures and ceremonies highlighting European unity and continued support for Ukraine."
     },
     {
       "category": "world",
       "image": "assets/middleeast.jpeg",
       "title": "Middle East Diplomacy Continues",
-      "description": "Regional and international leaders continue diplomatic engagement aimed at improving security, humanitarian access and long-term stability across the Middle East."
+      "description": "Regional and international leaders continued diplomatic engagement aimed at reducing tensions and improving humanitarian access."
     },
     {
       "category": "europe",
       "image": "assets/europe.jpeg",
       "title": "Heatwave Continues Across Europe",
-      "description": "Several European countries remain under weather alerts as high temperatures continue to increase wildfire risks and place additional pressure on health services."
+      "description": "Extreme temperatures remain across parts of Europe, prompting health alerts and increasing wildfire risks in several countries."
     },
     {
       "category": "usa",
       "image": "assets/usa.jpeg",
-      "title": "United States Continues Hosting World Cup",
-      "description": "Host cities across the United States continue welcoming supporters from around the world as the FIFA World Cup reaches its final stages."
+      "title": "United States Hosts Semi-Finals",
+      "description": "Host cities continue welcoming thousands of supporters as the FIFA World Cup reaches its decisive final stages."
     },
     {
       "category": "asia",
       "image": "assets/china-tech.jpeg",
-      "title": "Asia Expands Technology Investment",
-      "description": "Governments and businesses across Asia continue increasing investment in artificial intelligence, semiconductor production and digital infrastructure."
+      "title": "Asia Advances Technology Investment",
+      "description": "Governments and technology companies continue investing in artificial intelligence, semiconductor manufacturing and digital innovation."
     },
     {
       "category": "africa",
       "image": "assets/nigeria.jpeg",
       "title": "Nigeria Sustains Security Operations",
-      "description": "Security agencies continue nationwide operations against insurgents, terrorists, bandits and kidnapping gangs as authorities strengthen national security efforts."
+      "description": "Security agencies continue coordinated operations against insurgents, terrorists, bandits and kidnapping gangs across affected regions."
     },
     {
       "category": "africa",
       "image": "assets/abuja.jpeg",
       "title": "Economic Reform Remains Priority",
-      "description": "Government attention remains focused on inflation, food security, infrastructure, electricity supply and economic reforms aimed at supporting long-term growth."
+      "description": "Inflation, food security, infrastructure development and investment remain central to Nigeria's economic agenda."
     },
     {
       "category": "africa",
       "image": "assets/africa.jpeg",
-      "title": "African Trade Integration Expands",
-      "description": "African countries continue strengthening regional trade, transport corridors and investment partnerships under the African Continental Free Trade Area."
+      "title": "Regional Trade Cooperation Expands",
+      "description": "African countries continue strengthening regional trade and infrastructure partnerships under the African Continental Free Trade Area."
     },
     {
       "category": "business",
       "image": "assets/market.jpeg",
-      "title": "Markets Watch Inflation And Oil Prices",
-      "description": "Global financial markets continue monitoring inflation, central bank policy decisions, crude oil prices and economic growth expectations."
+      "title": "Markets Monitor Global Economy",
+      "description": "Investors continue watching inflation trends, central bank decisions, energy prices and geopolitical developments affecting global growth."
     },
     {
       "category": "technology",
       "image": "assets/ai.jpeg",
-      "title": "Artificial Intelligence Investment Accelerates",
-      "description": "Governments and technology companies continue expanding investment in AI, robotics, cybersecurity and cloud computing."
+      "title": "Artificial Intelligence Investment Grows",
+      "description": "Governments and technology companies continue expanding investment in AI, robotics, cloud computing and cybersecurity."
     },
     {
       "category": "world",
       "image": "assets/world.jpeg",
-      "title": "Global Leaders Focus On Security And Growth",
-      "description": "Governments around the world continue balancing economic development, national security and international cooperation amid evolving geopolitical challenges."
+      "title": "Global Leaders Focus On Stability",
+      "description": "Governments continue balancing economic growth, security and international cooperation amid evolving global challenges."
     }
   ],
 
@@ -148,15 +154,15 @@
   ],
 
   "breakingHistory": [
-    "England defeated Norway 2-1 after extra time to reach the FIFA World Cup semi-finals.",
-    "Argentina defeated Switzerland 3-1 after extra time to set up a semi-final against England.",
-    "FIFA will discuss a possible expansion to a 64-team World Cup in 2030.",
+    "Spain defeated France 2-0 to reach the FIFA World Cup Final.",
+    "England and Argentina meet on Wednesday for the second semi-final.",
+    "France celebrated Bastille Day under heightened security.",
+    "European leaders reaffirmed support for Ukraine.",
     "Europe continues experiencing an intense summer heatwave.",
     "Middle East diplomatic engagement remains active.",
     "Nigeria sustained nationwide security operations.",
-    "Global markets remain focused on inflation and energy prices.",
+    "Global markets continue monitoring inflation and oil prices.",
     "Artificial intelligence investment continues expanding worldwide.",
-    "Governments continue prioritising economic growth and security.",
-    "The FIFA World Cup has entered the semi-final stage."
+    "The FIFA World Cup Final is now one match away."
   ]
 }

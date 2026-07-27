@@ -1,98 +1,86 @@
 {
   "hero": {
-    "title": "Radiant Waves Media Late Night Global News",
-    "description": "Sunday, July 26, 2026. Good evening. Here are tonight's verified breaking headlines, global developments, business, technology and sports updates from around the world."
+    "title": "Radiant Waves Media Morning Global News",
+    "description": "Monday, July 27, 2026. Good morning. Here are today's verified breaking headlines, global developments, business, technology and sports updates from around the world."
   },
 
   "breaking": [
-    "🔴 Massive wildfires continue threatening Bordeaux and southern Europe as thousands remain evacuated",
-    "🔴 Europe deploys international firefighting support as extreme heat fuels new wildfires",
-    "🔴 Commonwealth Games competition continues in Glasgow with Australia leading the medal race",
-    "🔴 Global markets prepare for another busy week of inflation data and central bank decisions",
-    "🔴 Artificial intelligence investment continues accelerating across major economies",
-    "🔴 Governments continue diplomatic efforts on regional security and humanitarian issues",
-    "🔴 Nigeria's political parties continue preparations for upcoming state elections",
-    "🔴 Technology companies expand investment in AI, cloud computing and cybersecurity"
+    "🔴 Firefighters continue battling major wildfires in southern France and Spain as extreme heat persists",
+    "🔴 Commonwealth Games action continues in Glasgow with more medals decided today",
+    "🔴 Tadej Pogacar wins a record-equalling fifth Tour de France title",
+    "🔴 Iran signals it will halt attacks while the pause in U.S. bombing continues",
+    "🔴 Global markets begin the week watching oil prices, inflation and central bank policies",
+    "🔴 Artificial intelligence investment continues expanding worldwide",
+    "🔴 Governments continue diplomatic efforts on global security and humanitarian issues",
+    "🔴 Technology companies continue investing in AI, cloud computing and cybersecurity"
   ],
 
   "featured": {
     "image": "assets/france-wildfire.jpeg",
-    "title": "Europe Battles Historic Wildfires",
-    "content": "Firefighters from several European countries continue battling major wildfires across southwestern France and parts of Spain. Authorities have evacuated hundreds of thousands of residents as extreme temperatures and strong winds continue to fuel the blazes near Bordeaux and other affected regions. 0"
+    "title": "Europe Battles Extreme Heat And Wildfires",
+    "content": "Firefighters remain on the front line across southern France and parts of Spain as extreme heat and dry conditions fuel dangerous wildfires. Authorities continue evacuations while additional firefighting resources are deployed to protect communities and forests. 0"
   },
 
   "articles": [
     {
       "category": "world",
       "image": "assets/france-wildfire.jpeg",
-      "title": "Wildfires Threaten Bordeaux",
-      "description": "Emergency crews continue working around the clock to contain major wildfires threatening communities near Bordeaux as additional international firefighting aircraft arrive to assist. 1"
+      "title": "Wildfires Continue Across Southern Europe",
+      "description": "Emergency crews continue battling large wildfires in France and Spain as high temperatures and strong winds make containment difficult. 1"
     },
     {
-      "category": "europe",
-      "image": "assets/europe.jpeg",
-      "title": "Europe Faces Extreme Heat",
-      "description": "Large parts of southern Europe remain under extreme heat alerts as authorities warn that hot and dry weather could worsen wildfire conditions. 2"
+      "category": "sports",
+      "image": "assets/tourdefrance.jpeg",
+      "title": "Pogacar Wins Fifth Tour De France",
+      "description": "Tadej Pogacar claimed his fifth Tour de France title, equalling the all-time record after another dominant performance. 2"
     },
     {
       "category": "sports",
       "image": "assets/commonwealth-games.jpeg",
       "title": "Commonwealth Games Continue",
-      "description": "Competition continued in Glasgow with swimming, gymnastics, basketball and other events attracting strong crowds as athletes compete for medals. Australia remains among the leading nations. 3"
+      "description": "Athletes continue competing across multiple events in Glasgow as the 2026 Commonwealth Games gather momentum. 3"
+    },
+    {
+      "category": "world",
+      "image": "assets/middleeast.jpeg",
+      "title": "Middle East Diplomacy Continues",
+      "description": "Iran says it will suspend attacks while the current pause in U.S. bombing operations remains in place. 4"
     },
     {
       "category": "business",
       "image": "assets/market.jpeg",
-      "title": "Markets Prepare For Busy Week",
-      "description": "Global investors are watching inflation data, interest-rate expectations, company earnings and energy prices ahead of another important trading week."
+      "title": "Markets Focus On Oil And Inflation",
+      "description": "Global investors begin the week watching energy prices, inflation data and interest-rate expectations. 5"
     },
     {
       "category": "technology",
       "image": "assets/ai.jpeg",
-      "title": "Artificial Intelligence Investment Grows",
-      "description": "Governments and technology companies continue expanding investment in artificial intelligence, cloud computing, robotics and cybersecurity."
+      "title": "AI Investment Accelerates",
+      "description": "Governments and technology companies continue expanding investment in artificial intelligence, robotics and cloud computing."
     },
     {
       "category": "africa",
-      "image": "assets/nigeria.jpeg",
-      "title": "Nigeria Political Activities Continue",
-      "description": "Political parties continue consultations and preparations ahead of upcoming elections while security and economic issues remain key national priorities."
-    },
-    {
-      "category": "asia",
-      "image": "assets/asia.jpeg",
-      "title": "Asia Strengthens Technology Sector",
-      "description": "Countries across Asia continue investing in semiconductor manufacturing, artificial intelligence and digital infrastructure to support long-term economic growth."
+      "image": "assets/africa.jpeg",
+      "title": "African Economic Cooperation",
+      "description": "Regional governments continue promoting trade, infrastructure development and investment across Africa."
     },
     {
       "category": "usa",
       "image": "assets/usa.jpeg",
-      "title": "United States Focuses On Economy",
-      "description": "Attention remains on inflation, employment and financial markets as investors prepare for another week of economic data."
+      "title": "Economic Outlook In Focus",
+      "description": "Investors are watching key economic indicators as trading resumes for the new week."
+    },
+    {
+      "category": "asia",
+      "image": "assets/asia.jpeg",
+      "title": "Asia Expands Technology Sector",
+      "description": "Asian economies continue strengthening semiconductor manufacturing, AI development and digital infrastructure."
     },
     {
       "category": "world",
       "image": "assets/diplomacy.jpeg",
-      "title": "Global Diplomacy Continues",
-      "description": "International leaders continue discussions on regional security, humanitarian assistance and economic cooperation."
-    },
-    {
-      "category": "science",
-      "image": "assets/space.jpeg",
-      "title": "International Space Research Continues",
-      "description": "Space agencies continue international cooperation on scientific research, satellite technology and future exploration missions."
-    },
-    {
-      "category": "health",
-      "image": "assets/health.jpeg",
-      "title": "Health Officials Monitor Heat Risks",
-      "description": "Public health authorities continue advising residents to stay hydrated and limit outdoor activity as extreme temperatures affect several regions."
-    },
-    {
-      "category": "environment",
-      "image": "assets/environment.jpeg",
-      "title": "Climate Conditions Under Watch",
-      "description": "Scientists continue monitoring severe weather patterns, prolonged heatwaves and wildfire conditions across multiple continents."
+      "title": "Global Cooperation Continues",
+      "description": "International leaders continue discussions on security, humanitarian assistance and economic growth."
     }
   ],
 
@@ -136,15 +124,15 @@
   ],
 
   "breakingHistory": [
-    "Major wildfires continue affecting France and Spain.",
-    "International firefighters joined operations near Bordeaux.",
-    "Commonwealth Games competition continued in Glasgow.",
-    "Global markets prepare for another important trading week.",
+    "Wildfires continue affecting southern France and Spain.",
+    "Commonwealth Games competition continues in Glasgow.",
+    "Tadej Pogacar won his fifth Tour de France title.",
+    "Iran signals it will pause attacks while the bombing pause holds.",
+    "Markets begin the week focused on oil prices and inflation.",
     "Artificial intelligence investment continues worldwide.",
-    "Governments continue diplomatic engagement on global security.",
-    "Technology companies expand cloud computing and AI infrastructure.",
-    "Heatwave warnings remain in effect across parts of Europe.",
-    "Health authorities continue issuing heat safety advice.",
+    "Global diplomatic engagement continues on security issues.",
+    "Technology companies expand AI infrastructure.",
+    "Europe remains under heat and wildfire alerts.",
     "Radiant Waves Media continues delivering verified global news."
   ]
 }

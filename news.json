@@ -1,86 +1,98 @@
 {
   "hero": {
     "title": "Radiant Waves Media Morning Global News",
-    "description": "Tuesday, July 28, 2026. Good morning. Here are today's verified breaking headlines, world news, business, technology and sports updates from around the globe."
+    "description": "Wednesday, July 29, 2026. Good morning. Here are today's verified breaking headlines, world news, business, technology and sports updates from around the globe."
   },
 
   "breaking": [
-    "🔴 France and Spain continue battling devastating wildfires as extreme heat persists",
-    "🔴 Commonwealth Games competition continues in Glasgow with more medals decided",
-    "🔴 Donald Trump says there is a 'good chance' of reaching a diplomatic deal with Iran while warning strikes could resume if talks fail",
-    "🔴 Global markets begin the week watching inflation, oil prices and central bank decisions",
-    "🔴 Artificial intelligence investment continues expanding across major economies",
-    "🔴 Governments continue diplomatic engagement on regional security and humanitarian issues",
-    "🔴 Technology firms increase investment in AI, cloud computing and cybersecurity",
-    "🔴 Climate experts warn Europe remains at high wildfire risk"
+    "🔴 Powerful 7.1-magnitude earthquake strikes southern Japan, causing casualties and structural damage",
+    "🔴 France and Spain continue battling major wildfires as a fresh heatwave spreads across southern Europe",
+    "🔴 United Nations warns that the 'climate alarm is blaring' as extreme weather intensifies worldwide",
+    "🔴 Zinedine Zidane officially begins his tenure as France national team head coach",
+    "🔴 Commonwealth Games action continues in Glasgow with athletics, boxing, swimming and para sports",
+    "🔴 Global markets focus on corporate earnings, inflation and energy prices",
+    "🔴 World leaders continue diplomatic efforts on regional security and humanitarian issues",
+    "🔴 Artificial intelligence investment continues expanding across major economies"
   ],
 
   "featured": {
-    "image": "assets/france-wildfire.jpeg",
-    "title": "Europe Battles Severe Wildfires",
-    "content": "Firefighters continue battling major wildfires across southern France and Spain as another period of extreme heat approaches. European authorities have deployed additional aircraft and emergency crews to protect affected communities and forests. 0"
+    "image": "assets/japan-earthquake.jpeg",
+    "title": "Strong Earthquake Rocks Southern Japan",
+    "content": "A powerful magnitude 7.1 earthquake struck southern Japan, causing fatalities, injuries and damage to buildings. Emergency services remain deployed while authorities continue assessing the full extent of the damage and warn residents to remain alert for possible aftershocks."
   },
 
   "articles": [
     {
       "category": "world",
+      "image": "assets/japan-earthquake.jpeg",
+      "title": "Powerful Earthquake Hits Japan",
+      "description": "Emergency responders are carrying out rescue operations after a magnitude 7.1 earthquake struck southern Japan. Authorities are monitoring aftershocks while damage assessments continue."
+    },
+    {
+      "category": "europe",
       "image": "assets/france-wildfire.jpeg",
       "title": "Wildfires Continue Across France And Spain",
-      "description": "Emergency crews remain on the front line as wildfires threaten communities across southern Europe. Thousands have been evacuated while authorities prepare for another heatwave. 1"
+      "description": "Thousands of residents remain displaced as firefighters battle major wildfires across southern France and Spain. Extreme heat and strong winds continue to challenge containment efforts."
+    },
+    {
+      "category": "world",
+      "image": "assets/un.jpeg",
+      "title": "UN Calls For Stronger Climate Action",
+      "description": "The United Nations says the 'climate alarm is blaring' as governments face increasing pressure to respond to extreme weather and climate-related disasters."
+    },
+    {
+      "category": "sports",
+      "image": "assets/zidane.jpeg",
+      "title": "Zinedine Zidane Begins France Role",
+      "description": "French football legend Zinedine Zidane officially starts work as head coach of the France national team, succeeding Didier Deschamps."
     },
     {
       "category": "sports",
       "image": "assets/commonwealth-games.jpeg",
       "title": "Commonwealth Games Continue",
-      "description": "Athletes continue competing across swimming, athletics, gymnastics and weightlifting as the Glasgow Commonwealth Games gather momentum. 2"
-    },
-    {
-      "category": "world",
-      "image": "assets/middleeast.jpeg",
-      "title": "Diplomacy Over Iran Continues",
-      "description": "U.S. President Donald Trump said there is a good chance of reaching a diplomatic agreement with Iran while cautioning that military action could resume if negotiations fail. 3"
+      "description": "Competition continues in Glasgow with medal events in athletics, boxing, swimming, weightlifting and para sports as athletes compete for podium finishes."
     },
     {
       "category": "business",
       "image": "assets/market.jpeg",
-      "title": "Markets Watch Inflation",
-      "description": "Global investors are focusing on inflation data, interest-rate expectations, company earnings and movements in energy prices. 4"
+      "title": "Markets Watch Inflation And Earnings",
+      "description": "Global investors continue monitoring inflation, company earnings, economic growth and energy prices as financial markets remain volatile."
     },
     {
       "category": "technology",
       "image": "assets/ai.jpeg",
-      "title": "AI Investment Continues",
-      "description": "Technology companies continue expanding investment in artificial intelligence, cloud computing, semiconductor development and cybersecurity."
+      "title": "AI Investment Continues Worldwide",
+      "description": "Technology companies and governments continue increasing investment in artificial intelligence, cloud computing, robotics and cybersecurity."
     },
     {
       "category": "africa",
       "image": "assets/africa.jpeg",
-      "title": "African Trade And Investment",
-      "description": "Regional governments continue strengthening infrastructure, trade and investment partnerships across Africa."
-    },
-    {
-      "category": "usa",
-      "image": "assets/usa.jpeg",
-      "title": "Economic Data In Focus",
-      "description": "Investors continue monitoring economic indicators as global markets begin another busy trading week."
+      "title": "African Trade And Infrastructure",
+      "description": "African governments continue strengthening regional trade, transport infrastructure and investment partnerships under continental development initiatives."
     },
     {
       "category": "asia",
       "image": "assets/asia.jpeg",
-      "title": "Asia Advances Technology",
-      "description": "Asian economies continue investing in artificial intelligence, digital infrastructure and advanced manufacturing."
+      "title": "Asia Advances Digital Innovation",
+      "description": "Countries across Asia continue expanding investment in semiconductor manufacturing, digital infrastructure and advanced technology."
+    },
+    {
+      "category": "usa",
+      "image": "assets/usa.jpeg",
+      "title": "Economic Outlook Remains In Focus",
+      "description": "Investors continue watching employment data, inflation trends and monetary policy decisions across the world's largest economies."
     },
     {
       "category": "world",
       "image": "assets/diplomacy.jpeg",
       "title": "Global Diplomacy Continues",
-      "description": "International leaders continue discussions on regional security, humanitarian assistance and economic cooperation."
+      "description": "World leaders continue diplomatic engagement aimed at strengthening international security, humanitarian assistance and economic cooperation."
     },
     {
-      "category": "environment",
-      "image": "assets/environment.jpeg",
-      "title": "Climate Risks Remain High",
-      "description": "Scientists continue monitoring heatwaves, drought conditions and wildfire activity across Europe and other regions. 5"
+      "category": "world",
+      "image": "assets/sunrise.jpeg",
+      "title": "Quote Of The Day",
+      "description": "Every sunrise is another opportunity to build a better future. Stay informed, stay focused, and keep moving forward."
     }
   ],
 
@@ -124,15 +136,15 @@
   ],
 
   "breakingHistory": [
-    "Wildfires continue affecting France and Spain.",
+    "A powerful earthquake struck southern Japan.",
+    "France and Spain continue battling major wildfires.",
+    "The United Nations renewed warnings over climate change.",
+    "Zinedine Zidane officially became France head coach.",
     "Commonwealth Games competition continues in Glasgow.",
-    "Diplomatic efforts over Iran remain active.",
-    "Global markets focus on inflation and oil prices.",
-    "Artificial intelligence investment continues expanding.",
-    "Technology companies strengthen AI infrastructure.",
-    "Climate experts warn of ongoing wildfire risks.",
-    "International diplomatic engagement continues.",
-    "Economic indicators remain in focus worldwide.",
-    "Radiant Waves Media continues delivering verified global news."
+    "Global markets remain focused on inflation and corporate earnings.",
+    "Artificial intelligence investment continues expanding worldwide.",
+    "Governments continue diplomatic engagement on global security.",
+    "Europe remains under heatwave alerts.",
+    "Radiant Waves Media - Connecting You to the World's Most Important Stories."
   ]
 }

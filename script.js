@@ -1,1021 +1,1206 @@
 // ============================================================
 // RADIANT WAVES MEDIA
+// COMPLETE SCRIPT.JS
 // AUTOMATIC NEWS IMAGE SYSTEM
+// VERSION 3000
 // ============================================================
 
-// ============================================================
-// NEWS JSON LOADER
-// ============================================================
+document.addEventListener("DOMContentLoaded", function () {
 
-fetch("news.json?v=" + Date.now())
+  // ==========================================================
+  // CONFIGURATION
+  // ==========================================================
 
-.then(response => {
+  const NEWS_FILE = "news.json?v=" + Date.now();
 
-    if (!response.ok) {
-        throw new Error("Unable to load news.json");
+  const WIKIMEDIA_API =
+    "https://commons.wikimedia.org/w/api.php";
+
+  const IMAGE_SEARCH_LIMIT = 6;
+
+  // ==========================================================
+  // SAFE HTML FUNCTION
+  // ==========================================================
+
+  function escapeHTML(value) {
+
+    if (value === null || value === undefined) {
+      return "";
     }
 
-    return response.json();
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
 
-})
+  }
 
-.then(newsData => {
+  // ==========================================================
+  // CATEGORY LABEL
+  // ==========================================================
 
-    // ========================================================
-    // HERO
-    // ========================================================
+  function categoryName(category) {
 
-    const heroTitle =
-        document.getElementById("hero-title");
-
-    const heroDesc =
-        document.getElementById("hero-desc");
-
-
-    if (heroTitle && newsData.hero) {
-
-        heroTitle.innerText =
-            newsData.hero.title || "Radiant Waves Media";
-
+    if (!category) {
+      return "World News";
     }
 
+    const names = {
 
-    if (heroDesc && newsData.hero) {
+      world: "World News",
 
-        heroDesc.innerText =
-            newsData.hero.description || "";
+      usa: "USA",
 
-    }
+      europe: "Europe",
 
+      africa: "Africa",
 
-    // ========================================================
-    // BREAKING NEWS TICKER
-    // ========================================================
+      business: "Business",
 
-    const ticker =
-        document.getElementById("breaking-ticker");
+      technology: "Technology",
 
+      asia: "Asia"
 
-    if (ticker && Array.isArray(newsData.breaking)) {
+    };
 
-        ticker.innerHTML =
+    return names[category] || category;
 
-            newsData.breaking
-                .map(item => `🔴 ${escapeHTML(item)}`)
-                .join(" &nbsp; • &nbsp; ");
+  }
 
-    }
+  // ==========================================================
+  // FALLBACK IMAGE
+  // ==========================================================
 
+  function fallbackImage(category) {
 
-    // ========================================================
-    // HERO MARQUEE
-    // ========================================================
+    const text =
+      encodeURIComponent(
+        "RADIANT WAVES MEDIA • " +
+        categoryName(category)
+      );
 
-    const heroMarquee =
-        document.getElementById("hero-marquee");
-
-
-    if (heroMarquee && Array.isArray(newsData.breaking)) {
-
-        heroMarquee.innerHTML =
-
-            newsData.breaking
-                .map(item => `🔴 ${escapeHTML(item)}`)
-                .join(" &nbsp; • &nbsp; ");
-
-    }
-
-
-    // ========================================================
-    // FEATURED NEWS
-    // ========================================================
-
-    loadFeaturedNews(newsData.featured);
-
-
-    // ========================================================
-    // NEWS CATEGORIES
-    // ========================================================
-
-    generateNews("world-news", "world", newsData.articles);
-
-    generateNews("usa-news", "usa", newsData.articles);
-
-    generateNews("europe-news", "europe", newsData.articles);
-
-    generateNews("africa-news", "africa", newsData.articles);
-
-    generateNews("business-news", "business", newsData.articles);
-
-    generateNews("tech-news", "technology", newsData.articles);
-
-
-    // ========================================================
-    // SPONSORED ADVERTS
-    // ========================================================
-
-    loadSponsoredAdverts(newsData.sponsoredAdverts);
-
-
-    // ========================================================
-    // BREAKING HISTORY
-    // ========================================================
-
-    loadBreakingHistory(newsData.breakingHistory);
-
-
-    // ========================================================
-    // TOP STORIES
-    // ========================================================
-
-    loadTopStories(newsData.topStories);
-
-})
-
-.catch(error => {
-
-    console.error(
-        "Radiant Waves News Loading Error:",
-        error
+    return (
+      "https://dummyimage.com/1200x700/111111/ffffff" +
+      "?text=" +
+      text
     );
 
-});
+  }
 
+  // ==========================================================
+  // WIKIMEDIA IMAGE SEARCH
+  // ==========================================================
 
-// ============================================================
-// AUTOMATIC IMAGE SEARCH
-// WIKIMEDIA COMMONS
-// ============================================================
+  async function findWikimediaImage(query) {
 
-async function getNewsImage(query) {
+    if (!query || !query.trim()) {
 
-    const fallback =
-        createFallbackImage(query);
-
-
-    if (!query) {
-
-        return fallback;
+      return {
+        url: null,
+        title: "",
+        source: ""
+      };
 
     }
-
 
     try {
 
-        const url =
+      const params = new URLSearchParams({
 
-            "https://commons.wikimedia.org/w/api.php" +
+        action: "query",
 
-            "?action=query" +
+        generator: "search",
 
-            "&generator=search" +
+        gsrsearch:
+          query +
+          " filetype:bitmap",
 
-            "&gsrsearch=" +
-            encodeURIComponent(query) +
+        gsrnamespace: "6",
 
-            "&gsrnamespace=6" +
+        gsrlimit:
+          String(IMAGE_SEARCH_LIMIT),
 
-            "&gsrlimit=8" +
+        prop:
+          "imageinfo",
 
-            "&prop=imageinfo" +
+        iiprop:
+          "url|mime|extmetadata",
 
-            "&iiprop=url" +
+        iiurlwidth:
+          "1200",
 
-            "&iiurlwidth=900" +
+        format:
+          "json",
 
-            "&format=json" +
+        origin:
+          "*"
 
-            "&origin=*";
+      });
 
+      const response =
+        await fetch(
+          WIKIMEDIA_API +
+          "?" +
+          params.toString()
+        );
 
-        const response =
-            await fetch(url);
+      if (!response.ok) {
 
+        throw new Error(
+          "Wikimedia request failed"
+        );
 
-        if (!response.ok) {
+      }
 
-            throw new Error(
-                "Image search failed"
-            );
+      const data =
+        await response.json();
 
+      if (
+        !data.query ||
+        !data.query.pages
+      ) {
+
+        return {
+          url: null,
+          title: "",
+          source: ""
+        };
+
+      }
+
+      const pages =
+        Object.values(
+          data.query.pages
+        );
+
+      // ------------------------------------------------------
+      // Find the first useful image
+      // ------------------------------------------------------
+
+      for (const page of pages) {
+
+        if (
+          !page.imageinfo ||
+          !page.imageinfo[0]
+        ) {
+          continue;
         }
 
+        const info =
+          page.imageinfo[0];
 
-        const data =
-            await response.json();
+        const mime =
+          info.mime || "";
 
-
-        const pages =
-            data.query &&
-            data.query.pages
-                ? Object.values(data.query.pages)
-                : [];
-
-
-        // ----------------------------------------------------
-        // Find an image with a usable thumbnail
-        // ----------------------------------------------------
-
-        for (const page of pages) {
-
-            if (
-                page.imageinfo &&
-                page.imageinfo[0]
-            ) {
-
-                const info =
-                    page.imageinfo[0];
-
-
-                if (
-                    info.thumburl ||
-                    info.url
-                ) {
-
-                    return (
-                        info.thumburl ||
-                        info.url
-                    );
-
-                }
-
-            }
-
+        if (
+          !mime.startsWith("image/")
+        ) {
+          continue;
         }
 
+        const imageURL =
+          info.thumburl ||
+          info.url;
+
+        if (!imageURL) {
+          continue;
+        }
+
+        const metadata =
+          info.extmetadata || {};
+
+        const artist =
+          metadata.Artist &&
+          metadata.Artist.value
+            ? metadata.Artist.value
+            : "";
+
+        const credit =
+          metadata.Credit &&
+          metadata.Credit.value
+            ? metadata.Credit.value
+            : "";
+
+        return {
+
+          url: imageURL,
+
+          title:
+            page.title || "",
+
+          source:
+            artist ||
+            credit ||
+            "Wikimedia Commons"
+
+        };
+
+      }
 
     }
 
     catch (error) {
 
-        console.warn(
-            "Automatic image search failed:",
-            query,
-            error
-        );
+      console.log(
+        "Automatic image search error:",
+        error
+      );
 
     }
 
+    return {
 
-    return fallback;
+      url: null,
 
-}
+      title: "",
 
+      source: ""
 
-// ============================================================
-// FALLBACK IMAGE
-// ============================================================
+    };
 
-function createFallbackImage(query) {
+  }
 
-    const text =
-        encodeURIComponent(
-            query || "Radiant Waves Media"
-        );
+  // ==========================================================
+  // CREATE AUTOMATIC IMAGE
+  // ==========================================================
 
+  async function getNewsImage(article) {
 
-    return (
-        "https://placehold.co/900x600/111111/ffffff" +
-        "?text=" +
-        text
-    );
-
-}
-
-
-// ============================================================
-// FEATURED NEWS
-// ============================================================
-
-async function loadFeaturedNews(featured) {
-
-    const container =
-        document.getElementById(
-            "featured-news"
-        );
-
+    // --------------------------------------------------------
+    // 1. Use local image if explicitly supplied
+    // --------------------------------------------------------
 
     if (
-        !container ||
-        !featured
+      article.image &&
+      article.image.trim()
     ) {
 
-        return;
+      return {
+
+        url:
+          article.image,
+
+        source:
+          "Radiant Waves Media"
+
+      };
 
     }
 
+    // --------------------------------------------------------
+    // 2. Search Wikimedia using imageQuery
+    // --------------------------------------------------------
 
-    container.innerHTML = `
+    if (
+      article.imageQuery &&
+      article.imageQuery.trim()
+    ) {
 
-        <div class="featured-card">
+      const result =
+        await findWikimediaImage(
+          article.imageQuery
+        );
+
+      if (result.url) {
+
+        return {
+
+          url:
+            result.url,
+
+          source:
+            result.source ||
+            "Wikimedia Commons"
+
+        };
+
+      }
+
+    }
+
+    // --------------------------------------------------------
+    // 3. Use branded fallback
+    // --------------------------------------------------------
+
+    return {
+
+      url:
+        fallbackImage(
+          article.category
+        ),
+
+      source:
+        "Radiant Waves Media"
+
+    };
+
+  }
+
+  // ==========================================================
+  // CREATE NEWS IMAGE HTML
+  // ==========================================================
+
+  async function createNewsImage(
+    article,
+    className = "news-image"
+  ) {
+
+    const image =
+      await getNewsImage(article);
+
+    const title =
+      escapeHTML(
+        article.title ||
+        "Radiant Waves Media"
+      );
+
+    return `
+
+      <div class="automatic-image-wrapper">
+
+        <div class="image-loading">
+          Loading image...
+        </div>
+
+        <img
+          class="${className}"
+          src="${escapeHTML(image.url)}"
+          alt="${title}"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='${fallbackImage(article.category)}';"
+          style="display:block;"
+        >
+
+      </div>
+
+    `;
+
+  }
+
+  // ==========================================================
+  // LOAD NEWS JSON
+  // ==========================================================
+
+  fetch(NEWS_FILE)
+
+    .then(function (response) {
+
+      if (!response.ok) {
+
+        throw new Error(
+          "Unable to load news.json"
+        );
+
+      }
+
+      return response.json();
+
+    })
+
+    .then(async function (newsData) {
+
+      console.log(
+        "Radiant Waves news loaded successfully."
+      );
+
+      // ======================================================
+      // HERO
+      // ======================================================
+
+      const heroTitle =
+        document.getElementById(
+          "hero-title"
+        );
+
+      const heroDesc =
+        document.getElementById(
+          "hero-desc"
+        );
+
+      if (
+        heroTitle &&
+        newsData.hero
+      ) {
+
+        heroTitle.innerText =
+          newsData.hero.title ||
+          "Radiant Waves Media";
+
+      }
+
+      if (
+        heroDesc &&
+        newsData.hero
+      ) {
+
+        heroDesc.innerText =
+          newsData.hero.description ||
+          "";
+
+      }
+
+      // ======================================================
+      // BREAKING TICKER
+      // ======================================================
+
+      const ticker =
+        document.getElementById(
+          "breaking-ticker"
+        );
+
+      if (
+        ticker &&
+        Array.isArray(
+          newsData.breaking
+        )
+      ) {
+
+        ticker.innerHTML =
+
+          newsData.breaking
+
+            .map(function (item) {
+
+              return `
+                🔴 ${escapeHTML(item)}
+              `;
+
+            })
+
+            .join(" • ");
+
+      }
+
+      // ======================================================
+      // HERO MARQUEE
+      // ======================================================
+
+      const heroMarquee =
+        document.getElementById(
+          "hero-marquee"
+        );
+
+      if (
+        heroMarquee &&
+        Array.isArray(
+          newsData.breaking
+        )
+      ) {
+
+        heroMarquee.innerHTML =
+
+          newsData.breaking
+
+            .map(function (item) {
+
+              return `
+                🔴 ${escapeHTML(item)}
+              `;
+
+            })
+
+            .join(" • ");
+
+      }
+
+      // ======================================================
+      // FEATURED NEWS
+      // ======================================================
+
+      const featuredContainer =
+        document.getElementById(
+          "featured-news"
+        );
+
+      if (
+        featuredContainer &&
+        newsData.featured
+      ) {
+
+        const featured =
+          newsData.featured;
+
+        let imageURL =
+          featured.image;
+
+        // If featured image is missing,
+        // search automatically.
+
+        if (
+          !imageURL &&
+          featured.imageQuery
+        ) {
+
+          const result =
+            await findWikimediaImage(
+              featured.imageQuery
+            );
+
+          imageURL =
+            result.url;
+
+        }
+
+        if (!imageURL) {
+
+          imageURL =
+            fallbackImage(
+              "world"
+            );
+
+        }
+
+        featuredContainer.innerHTML = `
+
+          <div class="featured-card">
 
             <div class="automatic-image-wrapper">
 
-                <div class="image-loading">
-                    Loading news image...
-                </div>
-
-                <img
-                    class="automatic-news-image"
-                    alt=""
-                    loading="lazy"
-                >
+              <img
+                src="${escapeHTML(imageURL)}"
+                alt="${escapeHTML(featured.title)}"
+                loading="lazy"
+                style="display:block;"
+                onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
+              >
 
             </div>
 
             <div>
 
-                <h2>
-                    ${escapeHTML(featured.title)}
-                </h2>
+              <span class="news-category">
+                FEATURED
+              </span>
 
-                <p>
-                    ${escapeHTML(featured.content)}
-                </p>
+              <h2>
+                ${escapeHTML(featured.title)}
+              </h2>
+
+              <p>
+                ${escapeHTML(featured.content)}
+              </p>
 
             </div>
 
-        </div>
+          </div>
 
-    `;
+        `;
 
+      }
 
-    const image =
-        container.querySelector(
-            ".automatic-news-image"
-        );
+      // ======================================================
+      // GENERATE NEWS
+      // ======================================================
 
+      async function generateNews(
+        sectionId,
+        category
+      ) {
 
-    const loading =
-        container.querySelector(
-            ".image-loading"
-        );
-
-
-    const query =
-        featured.imageQuery ||
-        featured.title;
-
-
-    const imageURL =
-        await getNewsImage(query);
-
-
-    if (image) {
-
-        image.src = imageURL;
-
-        image.alt =
-            featured.title || "News";
-
-        image.onload = () => {
-
-            if (loading) {
-
-                loading.style.display =
-                    "none";
-
-            }
-
-            image.style.display =
-                "block";
-
-        };
-
-        image.onerror = () => {
-
-            image.src =
-                createFallbackImage(
-                    featured.title
-                );
-
-            if (loading) {
-
-                loading.style.display =
-                    "none";
-
-            }
-
-            image.style.display =
-                "block";
-
-        };
-
-    }
-
-}
-
-
-// ============================================================
-// GENERATE NEWS
-// ============================================================
-
-async function generateNews(
-    sectionId,
-    category,
-    articles
-) {
-
-    const container =
-        document.getElementById(
+        const container =
+          document.getElementById(
             sectionId
-        );
+          );
 
+        if (!container) {
+          return;
+        }
 
-    if (!container) {
+        const articles =
+          Array.isArray(
+            newsData.articles
+          )
 
-        return;
+            ? newsData.articles.filter(
+                function (article) {
 
-    }
-
-
-    if (!Array.isArray(articles)) {
-
-        container.innerHTML = "";
-
-        return;
-
-    }
-
-
-    const filtered =
-        articles.filter(article =>
-
-            article.category === category
-
-        );
-
-
-    if (filtered.length === 0) {
-
-        container.innerHTML =
-            "<p class='no-news'>No stories available.</p>";
-
-        return;
-
-    }
-
-
-    // --------------------------------------------------------
-    // Create cards first
-    // --------------------------------------------------------
-
-    container.innerHTML =
-
-        filtered.map((article, index) => `
-
-            <article
-                class="card"
-                data-news-index="${index}"
-            >
-
-                <div class="automatic-image-wrapper">
-
-                    <div class="image-loading">
-                        Loading image...
-                    </div>
-
-                    <img
-                        class="automatic-news-image"
-                        alt=""
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="card-content">
-
-                    <div class="news-category">
-                        ${escapeHTML(
-                            article.category || "News"
-                        )}
-                    </div>
-
-                    <h3>
-                        ${escapeHTML(
-                            article.title
-                        )}
-                    </h3>
-
-                    <p>
-                        ${escapeHTML(
-                            article.description
-                        )}
-                    </p>
-
-                </div>
-
-            </article>
-
-        `).join("");
-
-
-    // --------------------------------------------------------
-    // Load images
-    // --------------------------------------------------------
-
-    const cards =
-        container.querySelectorAll(
-            ".card"
-        );
-
-
-    for (
-        let i = 0;
-        i < cards.length;
-        i++
-    ) {
-
-        const card =
-            cards[i];
-
-
-        const article =
-            filtered[i];
-
-
-        const image =
-            card.querySelector(
-                ".automatic-news-image"
-            );
-
-
-        const loading =
-            card.querySelector(
-                ".image-loading"
-            );
-
-
-        const query =
-
-            article.imageQuery ||
-
-            article.title + " " +
-
-            article.category;
-
-
-        const imageURL =
-            await getNewsImage(query);
-
-
-        if (image) {
-
-            image.src =
-                imageURL;
-
-            image.alt =
-                article.title;
-
-
-            image.onload = () => {
-
-                if (loading) {
-
-                    loading.style.display =
-                        "none";
+                  return (
+                    article.category ===
+                    category
+                  );
 
                 }
+              )
 
-                image.style.display =
-                    "block";
+            : [];
 
-            };
+        if (
+          articles.length === 0
+        ) {
 
+          container.innerHTML = `
 
-            image.onerror = () => {
+            <div class="card">
 
-                image.src =
-                    createFallbackImage(
-                        article.title
-                    );
+              <div class="card-content">
 
+                <h3>
+                  No ${escapeHTML(
+                    categoryName(category)
+                  )} stories available.
+                </h3>
 
-                if (loading) {
+              </div>
 
-                    loading.style.display =
-                        "none";
+            </div>
 
-                }
+          `;
 
-                image.style.display =
-                    "block";
-
-            };
+          return;
 
         }
 
-    }
+        // ----------------------------------------------------
+        // Generate images one article at a time
+        // ----------------------------------------------------
 
-}
+        const cards = [];
 
+        for (
+          const article of articles
+        ) {
 
-// ============================================================
-// SPONSORED ADVERTS
-// FIXED IMAGES — NEVER AUTOMATICALLY REPLACED
-// ============================================================
+          const imageHTML =
+            await createNewsImage(
+              article
+            );
 
-function loadSponsoredAdverts(adverts) {
+          cards.push(`
 
-    const container =
+            <article class="card">
+
+              ${imageHTML}
+
+              <div class="card-content">
+
+                <span class="news-category">
+
+                  ${escapeHTML(
+                    categoryName(
+                      article.category
+                    )
+                  )}
+
+                </span>
+
+                <h3>
+
+                  ${escapeHTML(
+                    article.title
+                  )}
+
+                </h3>
+
+                <p>
+
+                  ${escapeHTML(
+                    article.description
+                  )}
+
+                </p>
+
+              </div>
+
+            </article>
+
+          `);
+
+        }
+
+        container.innerHTML =
+          cards.join("");
+
+      }
+
+      // ======================================================
+      // LOAD CATEGORIES
+      // ======================================================
+
+      await generateNews(
+        "world-news",
+        "world"
+      );
+
+      await generateNews(
+        "usa-news",
+        "usa"
+      );
+
+      await generateNews(
+        "europe-news",
+        "europe"
+      );
+
+      await generateNews(
+        "africa-news",
+        "africa"
+      );
+
+      await generateNews(
+        "business-news",
+        "business"
+      );
+
+      await generateNews(
+        "tech-news",
+        "technology"
+      );
+
+      // ======================================================
+      // SPONSORED ADVERTS
+      // IMPORTANT:
+      // These continue using your fixed local images.
+      // ======================================================
+
+      const advertContainer =
         document.getElementById(
-            "sponsored-adverts"
+          "sponsored-adverts"
         );
 
+      if (
+        advertContainer &&
+        Array.isArray(
+          newsData.sponsoredAdverts
+        )
+      ) {
 
-    if (
-        !container ||
-        !Array.isArray(adverts)
-    ) {
+        advertContainer.innerHTML =
 
-        return;
+          newsData.sponsoredAdverts
 
-    }
+            .map(function (ad) {
 
+              const products =
+                Array.isArray(
+                  ad.products
+                )
 
-    container.innerHTML =
+                  ? ad.products
 
-        adverts.map(ad => `
+                  : [];
 
-            <div class="sponsored-ad">
+              return `
 
-                <div class="sponsored-label">
+                <div class="sponsored-ad">
+
+                  <div class="sponsored-label">
+
                     SPONSORED ADVERT
-                </div>
 
-                <div class="sponsored-content">
+                  </div>
+
+                  <div class="sponsored-content">
 
                     <img
-                        src="${safeImage(
-                            ad.image
-                        )}"
-                        alt="${escapeHTML(
-                            ad.title
-                        )}"
-                        loading="lazy"
+                      src="${escapeHTML(
+                        ad.image
+                      )}"
+                      alt="${escapeHTML(
+                        ad.title
+                      )}"
+                      loading="lazy"
+                      onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
                     >
 
                     <div class="sponsored-text">
 
-                        <h2>
-                            ${escapeHTML(
-                                ad.title
-                            )}
-                        </h2>
+                      <h2>
 
-                        <h4>
-                            ${escapeHTML(
-                                ad.subtitle || ""
-                            )}
-                        </h4>
+                        ${escapeHTML(
+                          ad.title
+                        )}
 
-                        <p>
-                            ${escapeHTML(
-                                ad.description || ""
-                            )}
-                        </p>
+                      </h2>
 
-                        ${
-                            Array.isArray(
-                                ad.products
-                            )
+                      <h4>
 
-                            ?
+                        ${escapeHTML(
+                          ad.subtitle || ""
+                        )}
 
-                            ad.products.map(
-                                product => `
+                      </h4>
 
-                                    <div
-                                        class="product-line">
+                      <p>
 
-                                        <strong>
-                                            ${escapeHTML(
-                                                product.name
-                                            )}
-                                        </strong>
+                        ${escapeHTML(
+                          ad.description
+                        )}
 
-                                        <br>
+                      </p>
 
-                                        Big:
-                                        ${escapeHTML(
-                                            product.big
-                                        )}
+                      ${
 
-                                        |
+                        products
 
-                                        Small:
-                                        ${escapeHTML(
-                                            product.small
-                                        )}
+                          .map(
+                            function (product) {
 
-                                    </div>
+                              return `
 
-                                `
-                            ).join("")
+                                <div class="product-line">
 
-                            :
+                                  <strong>
 
-                            ""
-                        }
+                                    ${escapeHTML(
+                                      product.name
+                                    )}
+
+                                  </strong>
+
+                                  <br>
+
+                                  Big:
+                                  ${escapeHTML(
+                                    product.big
+                                  )}
+
+                                  |
+
+                                  Small:
+                                  ${escapeHTML(
+                                    product.small
+                                  )}
+
+                                </div>
+
+                              `;
+
+                            }
+                          )
+
+                          .join("")
+
+                      }
 
                     </div>
 
+                  </div>
+
                 </div>
 
-            </div>
+              `;
 
-        `).join("");
+            })
 
-}
+            .join("");
 
+      }
 
-// ============================================================
-// BREAKING HISTORY
-// ============================================================
+      // ======================================================
+      // BREAKING NEWS HISTORY
+      // ======================================================
 
-function loadBreakingHistory(history) {
-
-    const container =
+      const historyContainer =
         document.getElementById(
-            "history-container"
+          "history-container"
         );
 
+      if (
+        historyContainer &&
+        Array.isArray(
+          newsData.breakingHistory
+        )
+      ) {
 
-    if (
-        !container ||
-        !Array.isArray(history)
-    ) {
+        historyContainer.innerHTML =
 
-        return;
+          newsData.breakingHistory
 
-    }
+            .map(function (item) {
 
+              return `
 
-    container.innerHTML =
+                <div class="history-item">
 
-        history.map(item => `
+                  ${escapeHTML(item)}
 
-            <div class="history-item">
+                </div>
 
-                ${escapeHTML(item)}
+              `;
 
-            </div>
+            })
 
-        `).join("");
+            .join("");
 
-}
+      }
 
+      // ======================================================
+      // TOP STORIES
+      // ======================================================
 
-// ============================================================
-// TOP STORIES
-// ============================================================
-
-async function loadTopStories(stories) {
-
-    const container =
+      const topStoriesContainer =
         document.getElementById(
-            "top-stories-container"
+          "top-stories-container"
         );
 
+      if (
+        topStoriesContainer &&
+        Array.isArray(
+          newsData.topStories
+        )
+      ) {
 
-    if (
-        !container ||
-        !Array.isArray(stories)
-    ) {
+        const stories = [];
 
-        return;
+        for (
+          const story
+          of newsData.topStories
+        ) {
 
-    }
+          const image =
+            await getNewsImage(
+              story
+            );
 
+          stories.push(`
 
-    container.innerHTML =
+            <article class="card">
 
-        stories.map((story, index) => `
+              <div class="automatic-image-wrapper">
 
-            <article
-                class="card"
-                data-top-index="${index}"
-            >
+                <img
+                  src="${escapeHTML(image.url)}"
+                  alt="${escapeHTML(story.title)}"
+                  loading="lazy"
+                  style="display:block;"
+                  onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
+                >
 
-                <div class="automatic-image-wrapper">
+              </div>
 
-                    <div class="image-loading">
-                        Loading image...
-                    </div>
+              <div class="card-content">
 
-                    <img
-                        class="automatic-news-image"
-                        alt=""
-                        loading="lazy"
-                    >
+                <span class="news-category">
 
-                </div>
+                  TOP STORY
 
-                <div class="card-content">
+                </span>
 
-                    <h3>
-                        ${escapeHTML(
-                            story.title
-                        )}
-                    </h3>
+                <h3>
 
-                    <p>
-                        ${escapeHTML(
-                            story.description
-                        )}
-                    </p>
+                  ${escapeHTML(
+                    story.title
+                  )}
 
-                </div>
+                </h3>
+
+                <p>
+
+                  ${escapeHTML(
+                    story.description
+                  )}
+
+                </p>
+
+              </div>
 
             </article>
 
-        `).join("");
-
-
-    const cards =
-        container.querySelectorAll(
-            ".card"
-        );
-
-
-    for (
-        let i = 0;
-        i < cards.length;
-        i++
-    ) {
-
-        const story =
-            stories[i];
-
-
-        const image =
-            cards[i].querySelector(
-                ".automatic-news-image"
-            );
-
-
-        const loading =
-            cards[i].querySelector(
-                ".image-loading"
-            );
-
-
-        const imageURL =
-            await getNewsImage(
-                story.imageQuery ||
-                story.title
-            );
-
-
-        if (image) {
-
-            image.src =
-                imageURL;
-
-            image.alt =
-                story.title;
-
-
-            image.onload = () => {
-
-                if (loading) {
-
-                    loading.style.display =
-                        "none";
-
-                }
-
-                image.style.display =
-                    "block";
-
-            };
+          `);
 
         }
 
-    }
+        topStoriesContainer.innerHTML =
+          stories.join("");
 
-}
+      }
 
+    })
 
-// ============================================================
-// SAFE IMAGE
-// Used ONLY for fixed adverts
-// ============================================================
+    .catch(function (error) {
 
-function safeImage(image) {
+      console.error(
+        "Radiant Waves News Loading Error:",
+        error
+      );
 
-    if (!image) {
+      // ------------------------------------------------------
+      // Show useful message instead of blank website
+      // ------------------------------------------------------
 
-        return "assets/logo.png";
+      const containers = [
 
-    }
+        "world-news",
 
-    return image;
+        "usa-news",
 
-}
+        "europe-news",
 
+        "africa-news",
 
-// ============================================================
-// HTML SECURITY
-// ============================================================
+        "business-news",
 
-function escapeHTML(value) {
+        "tech-news"
 
-    if (value === undefined ||
-        value === null) {
+      ];
 
-        return "";
+      containers.forEach(
+        function (id) {
 
-    }
+          const container =
+            document.getElementById(id);
 
+          if (!container) {
+            return;
+          }
 
-    return String(value)
+          container.innerHTML = `
 
-        .replace(/&/g, "&amp;")
+            <div class="card">
 
-        .replace(/</g, "&lt;")
+              <div class="card-content">
 
-        .replace(/>/g, "&gt;")
+                <h3>
+                  News temporarily unavailable
+                </h3>
 
-        .replace(/"/g, "&quot;")
+                <p>
+                  Please refresh the page.
+                  Radiant Waves Media is
+                  updating the newsroom.
+                </p>
 
-        .replace(/'/g, "&#039;");
+              </div>
 
-}
+            </div>
 
+          `;
 
-// ============================================================
-// VIDEO SYSTEM
-// ============================================================
+        }
+      );
 
-const video =
+    });
+
+  // ==========================================================
+  // VIDEO SYSTEM
+  // ==========================================================
+
+  const video =
     document.getElementById(
-        "heroVideo"
+      "heroVideo"
     );
 
-
-const videoSource =
+  const videoSource =
     document.getElementById(
-        "video-source"
+      "video-source"
     );
 
+  const soundButton =
+    document.getElementById(
+      "sound-button"
+    );
 
-if (video) {
+  // ==========================================================
+  // START VIDEO MUTED
+  // ==========================================================
+
+  if (video) {
 
     video.muted = true;
 
-    video.volume = 1;
+    video.volume = 1.0;
 
-    video.play().catch(() => {
+    video.play().catch(
+      function () {
 
         console.log(
-            "Autoplay waiting for interaction."
+          "Autoplay waiting for user interaction."
         );
 
-    });
+      }
+    );
 
-}
+  }
 
+  // ==========================================================
+  // SOUND BUTTON
+  // ==========================================================
 
-// ============================================================
-// VIDEO SWITCHER
-// ============================================================
+  if (
+    soundButton &&
+    video
+  ) {
 
-function changeVideo(videoFile) {
+    soundButton.addEventListener(
+      "click",
+      async function () {
 
-    if (
+        try {
+
+          video.muted = false;
+
+          video.volume = 1.0;
+
+          await video.play();
+
+          soundButton.innerHTML =
+            "🔊 SOUND ON";
+
+          soundButton.style.background =
+            "green";
+
+        }
+
+        catch (error) {
+
+          console.log(
+            "Unable to enable sound:",
+            error
+          );
+
+          alert(
+            "Please use the video controls to enable sound."
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+  // ==========================================================
+  // CHANGE VIDEO
+  // ==========================================================
+
+  window.changeVideo =
+    function (videoFile) {
+
+      if (
         !video ||
         !videoSource
-    ) {
+      ) {
 
         return;
 
-    }
+      }
 
+      video.pause();
 
-    video.pause();
-
-    videoSource.src =
+      videoSource.src =
         videoFile;
 
-    video.load();
+      video.load();
 
-    video.play().catch(() => {
+      video.play().catch(
+        function () {
 
-        console.log(
-            "Video play requires interaction."
-        );
+          console.log(
+            "Video play requires user interaction."
+          );
 
-    });
+        }
+      );
 
-}
+    };
 
+  // ==========================================================
+  // AUTOMATIC VIDEO ROTATION
+  // ==========================================================
 
-// ============================================================
-// AUTOMATIC VIDEO ROTATION
-// ============================================================
-
-const videos = [
+  const videos = [
 
     "assets/video1.mp4",
 
@@ -1023,36 +1208,34 @@ const videos = [
 
     "assets/video3.mp4"
 
-];
+  ];
 
+  let currentVideo = 0;
 
-let currentVideo = 0;
+  setInterval(
+    function () {
 
-
-setInterval(() => {
-
-    if (!video) {
-
+      if (!video) {
         return;
+      }
 
-    }
+      currentVideo++;
 
-
-    currentVideo++;
-
-
-    if (
+      if (
         currentVideo >=
         videos.length
-    ) {
+      ) {
 
         currentVideo = 0;
 
-    }
+      }
 
-
-    changeVideo(
+      window.changeVideo(
         videos[currentVideo]
-    );
+      );
 
-}, 30000);
+    },
+    30000
+  );
+
+});

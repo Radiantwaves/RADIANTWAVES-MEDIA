@@ -1,137 +1,170 @@
 {
   "hero": {
     "title": "Radiant Waves Media Morning Global News",
-    "description": "Saturday, August 22, 2026. Good morning. Here are the latest verified global headlines, breaking developments, business, technology, Europe and Africa news from around the world."
+    "description": "Sunday, August 23, 2026. Good morning. Here are today's leading verified global headlines, breaking developments, business, technology, climate and Africa news from around the world."
   },
 
   "breaking": [
-    "🔴 Sweden: One person killed and three injured in sword attack at a high school in Fagersta",
-    "🔴 Ukraine: European leaders prepare a Coalition of the Willing meeting to strengthen support for Kyiv",
-    "🔴 Spain: Ceuta migrant crisis remains under scrutiny after a deadly border rush",
-    "🔴 United States: Federal debt has surpassed $40 trillion for the first time",
-    "🔴 Iceland: Voters prepare for an August 29 referendum on whether to reopen EU membership negotiations",
-    "🔴 Nigeria: Families protest nearly 100 days after children were abducted in Borno State",
-    "🔴 Nigeria: Election campaigning is underway ahead of January's presidential election",
-    "🔴 Global markets: Investors watch oil, bond yields, the dollar, Nvidia earnings and the Federal Reserve"
+    "🔴 Nigeria: At least 50 people, mostly children, died after an overloaded boat capsized in Sokoto State.",
+    "🔴 Nigeria: Families continue demanding action over children abducted nearly 100 days ago in Borno State.",
+    "🔴 Iran–US tensions continue to disrupt shipping through the Strait of Hormuz and keep global energy markets under pressure.",
+    "🔴 Ukraine: France pledges to accelerate air-defence support for Ukraine as Russian attacks and diplomatic efforts continue.",
+    "🔴 Europe: Wildfires remain a major concern, with Serbia receiving international firefighting assistance.",
+    "🔴 Sweden: Police continue investigating the deadly sword attack at a high school in Fagersta.",
+    "🔴 Global markets: Oil prices and government bond yields remain elevated as investors assess geopolitical and inflation risks.",
+    "🔴 China: Humanoid robotics continues moving from demonstrations toward practical industrial and commercial applications."
   ],
 
   "featured": {
-    "image": "",
-    "title": "Sweden High School Attack Leaves One Dead",
-    "content": "An 18-year-old former student armed with a sword attacked Brinell High School in Fagersta, Sweden, on Friday. One person was killed and three others were injured. Police shot and detained the suspect, who is being investigated on suspicion of murder. The school had recently reopened after the summer break."
+    "title": "Nigeria's Sokoto Boat Tragedy Leaves At Least 50 Dead",
+    "content": "At least 50 people, mostly children, died after an overloaded boat capsized in northwest Nigeria's Sokoto State. The passengers were reportedly travelling for agricultural work. Sixteen people were rescued while recovery operations continued. The tragedy has renewed concerns about boat safety, overcrowding and emergency response on Nigeria's inland waterways.",
+    "source": "Reuters"
   },
 
   "articles": [
     {
+      "category": "africa",
+      "title": "Sokoto Boat Tragedy: At Least 50 Reported Dead",
+      "description": "At least 50 people, mostly children, were killed when an overloaded boat capsized in Sokoto State. Sixteen people were rescued and recovery efforts continued.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "africa",
+      "title": "Borno Families Demand Release Of Abducted Children",
+      "description": "Families in Borno State continue demanding government action nearly 100 days after children were abducted from classrooms. Reuters reports that about 45 children remain unaccounted for, while another group of students and a teacher abducted in June also remain missing.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "africa",
+      "title": "Nigeria's Security Challenge Remains A Major Concern",
+      "description": "Kidnapping, armed attacks and communal violence remain major security concerns in parts of Nigeria. Recent attacks in Plateau State have also highlighted continuing risks of violence and displacement.",
+      "source": "Reuters"
+    },
+
+    {
       "category": "world",
-      "image": "",
-      "title": "Deadly School Attack Shocks Sweden",
-      "description": "An 18-year-old man armed with a sword attacked students at Brinell High School in Fagersta. One person died and three were injured before police shot and detained the suspect. Authorities are continuing their investigation."
+      "title": "Iran–US Crisis Keeps Strait Of Hormuz In Focus",
+      "description": "Shipping through the Strait of Hormuz remains severely disrupted as tensions between Iran and the United States continue. Iran has granted special permission for several Iraqi oil tankers to pass, while wider maritime traffic remains far below normal levels.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "business",
+      "title": "Oil Prices Remain Elevated As Hormuz Disruption Continues",
+      "description": "Oil markets remain highly sensitive to developments around Iran and the Strait of Hormuz. Higher energy costs are adding to concerns about inflation, fuel prices and the wider global economic outlook.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "world",
+      "title": "Ukraine War Remains A Major Security Concern",
+      "description": "Russia and Ukraine continue military operations while European governments maintain diplomatic and military support for Kyiv. France has pledged to accelerate air-defence deliveries to Ukraine as European allies discuss additional assistance.",
+      "source": "Reuters"
     },
 
     {
       "category": "europe",
-      "image": "",
-      "title": "European Leaders Prepare Fresh Support For Ukraine",
-      "description": "French President Emmanuel Macron, British Prime Minister Andy Burnham and German Chancellor Friedrich Merz are due to co-chair a Coalition of the Willing meeting on Monday. Ukrainian President Volodymyr Zelensky is expected to participate remotely from Kyiv."
+      "title": "France Pledges Faster Air-Defence Support For Ukraine",
+      "description": "French President Emmanuel Macron has pledged to accelerate military equipment and missile deliveries to Ukraine. Discussions also include support for additional air-defence systems and European coordination.",
+      "source": "Reuters"
     },
 
     {
       "category": "europe",
-      "image": "",
-      "title": "Ceuta Migrant Crisis Remains In Focus",
-      "description": "Spain's North African enclave of Ceuta remains under scrutiny after a deadly border rush. The first migrants who died during the recent incident have been buried while authorities continue identifying victims and managing the aftermath."
+      "title": "Europe Continues Fighting Major Wildfires",
+      "description": "Wildfires remain a serious threat across parts of Europe. Serbia has activated international assistance as firefighters battle major blazes, while the wider region continues dealing with extreme summer weather and dangerous fire conditions.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "europe",
+      "title": "International Firefighting Support Arrives In Serbia",
+      "description": "The European Union has deployed helicopters, firefighters and emergency vehicles to Serbia through its Civil Protection Mechanism. A Russian firefighting aircraft has also been deployed as authorities battle multiple fires.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "europe",
+      "title": "Sweden Investigates Deadly School Sword Attack",
+      "description": "Swedish police are investigating the online activity of an 18-year-old former student accused of carrying out a deadly sword attack at a high school in Fagersta. One teenage girl was killed and three people were injured.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "technology",
+      "title": "China's Humanoid Robot Industry Moves Toward Practical Work",
+      "description": "Chinese robotics companies are increasingly demonstrating humanoid robots performing practical tasks such as sorting parcels, packing products and household work as the industry seeks to move beyond demonstrations toward wider commercial adoption.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "technology",
+      "title": "Humanoid Robot Sets New 100-Metre Record",
+      "description": "At the 2026 World Humanoid Robot Games in Beijing, the Chinese humanoid robot Tiangong Ultra reportedly ran 100 metres in 9.39 seconds, surpassing Usain Bolt's human world record of 9.58 seconds.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "asia",
+      "title": "China's Robotics Ambitions Continue To Expand",
+      "description": "China is using robotics competitions and industrial demonstrations to showcase advances in humanoid machines, autonomous systems and practical robotic applications.",
+      "source": "Reuters"
     },
 
     {
       "category": "usa",
-      "image": "",
-      "title": "US Federal Debt Surpasses $40 Trillion",
-      "description": "The United States federal debt has crossed the $40 trillion mark for the first time, according to the U.S. Treasury. The milestone is intensifying debate about government finances, interest costs and America's long-term fiscal outlook."
-    },
-
-    {
-      "category": "europe",
-      "image": "",
-      "title": "Iceland Prepares For EU Referendum",
-      "description": "Iceland will vote on August 29 on whether to reopen negotiations on European Union membership. The referendum is not a vote on joining the EU itself. A successful vote would begin negotiations, with any eventual membership deal requiring another referendum."
-    },
-
-    {
-      "category": "africa",
-      "image": "",
-      "title": "Nigerian Families Demand Release Of Abducted Children",
-      "description": "Families in Borno State are demanding government action nearly 100 days after children were abducted from Mussa. Around 45 children remain unaccounted for, while another group of students and a teacher abducted in June also remain in captivity."
-    },
-
-    {
-      "category": "africa",
-      "image": "",
-      "title": "Nigeria's 2027 Election Campaign Gathers Momentum",
-      "description": "Nigeria has entered the election campaign season ahead of January's polls. President Bola Tinubu is seeking another term, with economic conditions, insecurity, employment and living standards expected to dominate the political debate."
-    },
-
-    {
-      "category": "africa",
-      "image": "",
-      "title": "Nigeria's Economy Remains A Major Election Issue",
-      "description": "Economic reforms have improved some investor and government-finance indicators but have also placed significant pressure on households. The cost of living, purchasing power, inflation and employment are expected to remain central issues during the campaign."
+      "title": "US Debt And Bond Markets Remain In Focus",
+      "description": "US government debt has surpassed $40 trillion, while rising Treasury yields and fiscal concerns continue to influence global financial markets.",
+      "source": "Reuters"
     },
 
     {
       "category": "business",
-      "image": "",
-      "title": "Global Markets Face Pressure From High Bond Yields",
-      "description": "Global stocks and bonds remain under pressure as investors assess high government borrowing costs, inflation risks and geopolitical uncertainty. Oil prices and the direction of interest rates remain important market drivers."
+      "title": "Global Stocks End Difficult Week",
+      "description": "Global stock markets finished a difficult week as rising government bond yields, elevated oil prices and geopolitical uncertainty weighed on investor sentiment. The dollar weakened while gold gained.",
+      "source": "Reuters"
     },
 
     {
       "category": "business",
-      "image": "",
-      "title": "Investors Look Ahead To Nvidia Earnings",
-      "description": "Nvidia's upcoming earnings report is expected to be closely watched as investors assess whether the artificial-intelligence investment boom can continue supporting technology valuations."
-    },
-
-    {
-      "category": "technology",
-      "image": "",
-      "title": "AI Investment Remains A Global Market Driver",
-      "description": "Artificial intelligence continues to attract enormous investment in computing infrastructure, semiconductors and data centres. Investors are increasingly examining how much financing will be required to sustain the rapid expansion."
-    },
-
-    {
-      "category": "technology",
-      "image": "",
-      "title": "Technology Sector Faces Rising Financing Pressure",
-      "description": "Higher bond yields and borrowing costs are creating new questions about the financing of major technology and AI infrastructure projects, even as demand for advanced computing continues to grow."
+      "title": "Global Investors Watch Inflation And Interest Rates",
+      "description": "Investors continue monitoring oil prices, inflation expectations, government borrowing costs and central-bank policy as geopolitical risks complicate the global economic outlook.",
+      "source": "Reuters"
     },
 
     {
       "category": "world",
-      "image": "",
-      "title": "Ukraine Remains A Major European Security Concern",
-      "description": "European governments continue discussing military assistance, security guarantees and diplomatic options as Russia's war against Ukraine continues. The Coalition of the Willing meeting is expected to focus on maintaining support for Kyiv."
+      "title": "Gaza And Middle East Diplomacy Remain In Focus",
+      "description": "Diplomatic efforts concerning the wider Middle East remain active as governments work to address the continuing regional conflict, humanitarian concerns and the wider impact on energy markets.",
+      "source": "Reuters"
     },
 
     {
       "category": "world",
-      "image": "",
-      "title": "Global Security And Migration Remain In Focus",
-      "description": "Wars, migration pressures, public safety and economic uncertainty continue shaping international policy debates as governments attempt to balance security with humanitarian responsibilities."
+      "title": "International Security Remains A Major Global Concern",
+      "description": "The conflicts involving Iran, Ukraine and the wider Middle East continue shaping international diplomacy, defence policy, shipping security and global economic decisions.",
+      "source": "Reuters"
     },
 
     {
       "category": "world",
-      "image": "",
+      "title": "Climate And Extreme Weather Continue To Challenge Governments",
+      "description": "Wildfires, extreme heat and drought conditions remain major concerns across several regions. Governments are facing growing pressure to improve emergency preparedness and climate resilience.",
+      "source": "Reuters"
+    },
+
+    {
+      "category": "world",
       "title": "Today's Big Question",
-      "description": "With wars, insecurity, economic pressure and migration affecting millions of people, what should governments put first — protecting lives, creating jobs, or strengthening national security? Share your thoughts in the comments."
+      "description": "When a country faces insecurity, unemployment, rising living costs and natural disasters at the same time, which should government address first — protecting lives, creating jobs, or reducing the cost of living? Tell us your opinion in the comments."
     },
 
     {
       "category": "world",
-      "image": "",
       "title": "Inspirational Quote Of The Day",
-      "description": "You may not be able to change the whole world today, but one wise decision, one kind action and one brave step can change someone's world."
+      "description": "Your circumstances may explain where you are today, but they do not have to decide where you will be tomorrow."
     }
   ],
 
@@ -149,6 +182,7 @@
         }
       ]
     },
+
     {
       "image": "assets/spices.jpeg",
       "title": "FARM TO KITCHEN 🌶️",
@@ -175,16 +209,16 @@
   ],
 
   "breakingHistory": [
-    "Sweden: One person killed and three injured in a sword attack at a high school in Fagersta.",
-    "European leaders prepare a Coalition of the Willing meeting focused on strengthening support for Ukraine.",
-    "The deadly migrant border rush in Spain's Ceuta enclave remains under investigation.",
-    "US federal debt surpasses $40 trillion for the first time.",
-    "Iceland prepares for an August 29 referendum on reopening EU membership negotiations.",
-    "Families in Borno State demand the release of children abducted nearly 100 days ago.",
-    "Nigeria enters the election campaign season ahead of January's presidential election.",
-    "Global markets remain sensitive to oil prices, bond yields and geopolitical uncertainty.",
-    "Nvidia earnings and the Federal Reserve's Jackson Hole symposium are major upcoming market events.",
-    "Artificial intelligence investment remains a major driver of global technology markets.",
+    "Nigeria's Sokoto boat tragedy leaves at least 50 people dead, mostly children.",
+    "Families in Borno continue demanding the release of abducted children.",
+    "Iran grants permission for some Iraqi oil tankers to pass through the Strait of Hormuz.",
+    "Shipping traffic through the Strait of Hormuz remains sharply reduced.",
+    "France pledges to accelerate air-defence support for Ukraine.",
+    "European countries continue battling major wildfires.",
+    "EU firefighting assistance arrives in Serbia.",
+    "Swedish police investigate the deadly Fagersta school sword attack.",
+    "Global markets remain under pressure from oil prices and rising bond yields.",
+    "China's humanoid robotics industry continues moving toward practical commercial applications.",
     "Radiant Waves Media – Gateway to Your World News — Connecting You to the World."
   ]
 }

@@ -1,46 +1,73 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "edition": "RADIANTWAVES MORNING NEWS",
-  "headline": "BREAKING NEWS & GLOBAL SUMMARY",
-  "intro": "RadiantWaves Media has reviewed the latest available reporting and kept developing or unverified claims clearly identified. News wording is original for RadiantWaves Media.",
+  "headline": "BREAKING NEWS AROUND THE GLOBE",
+  "intro": "RadiantWaves Media has reviewed fresh reports available this morning. Developing claims and figures that have not been independently verified are clearly identified rather than presented as established fact.",
 
   "breaking_news": [
     {
-      "category": "Nigeria",
-      "headline": "Mass Abduction Report Under Investigation",
-      "summary": "A video circulating online appears to show a large group of people allegedly abducted during an attack on a mosque in Niger State. Reuters reported that residents identified relatives among the people shown. However, authorities have not confirmed that approximately 600 people were abducted, and Reuters has not independently verified the video's location or recording date.",
+      "category": "Iran / Oman",
+      "headline": "Iran and Oman Discuss Temporary Strait of Hormuz Corridor",
+      "summary": "Iran says it has restarted discussions with Oman about creating a temporary navigational corridor through the Strait of Hormuz as the wider confrontation with the United States continues. Any progress could have major consequences for international shipping and global energy supplies.",
       "source": "Reuters",
-      "verification": "Developing and not independently verified",
+      "verification": "Reported",
       "image": ""
     },
     {
-      "category": "Nigeria",
-      "headline": "Dangote Refinery Drives Major Export Growth",
-      "summary": "Nigeria's seaborne petroleum-product exports have increased significantly since 2023. The U.S. Energy Information Administration has attributed much of the growth to increased production from the Dangote refinery, strengthening Nigeria's position as a regional supplier of petroleum products.",
+      "category": "Global Energy",
+      "headline": "Oil Prices Fall as Hormuz Talks Raise Hopes",
+      "summary": "Oil prices fell after renewed Iran–Oman discussions raised hopes that navigation through the Strait of Hormuz could improve. Brent crude declined by about 2% after an earlier fall of more than 3%, as markets assessed the possibility of reduced disruption.",
+      "source": "Reuters",
+      "verification": "Reported",
+      "image": ""
+    },
+    {
+      "category": "United States / Technology",
+      "headline": "Nvidia Earnings Become Major Focus for Global Investors",
+      "summary": "Investors are closely watching Nvidia's latest earnings report, due Wednesday, as the company remains one of the most important indicators of the strength of the global artificial-intelligence investment boom. The results could influence sentiment across technology and semiconductor markets.",
+      "source": "Reuters",
+      "verification": "Confirmed event / market focus",
+      "image": ""
+    },
+    {
+      "category": "Ukraine / Europe",
+      "headline": "European Support for Ukraine Remains a Major Focus",
+      "summary": "European governments continue backing Ukraine as Russia's war continues. European leaders gathered in Kyiv on Ukraine's Independence Day and reaffirmed support for the country, including efforts to strengthen its long-range missile capabilities and wider defence capacity.",
+      "source": "AP News",
+      "verification": "Reported",
+      "image": ""
+    },
+    {
+      "category": "United States / Canada",
+      "headline": "Trade Tensions Between Canada and US Remain Unresolved",
+      "summary": "Canada is preparing retaliatory tariffs on selected US goods after trade negotiations failed to resolve the dispute. The measures are scheduled to take effect on September 8, while Washington continues to consider further tariffs affecting Canadian products.",
+      "source": "Reuters",
+      "verification": "Reported",
+      "image": ""
+    }
+  ],
+
+  "nigeria": [
+    {
+      "category": "Nigeria Security",
+      "headline": "Mass Kidnapping Investigation Continues in Niger State",
+      "summary": "President Bola Tinubu has ordered an immediate military-led rescue operation following a mass kidnapping in Niger State. Reuters reports that an armed group circulated video footage that residents said showed about 600 women, children and older people who had been abducted during an attack on a mosque. The exact number of captives has not been independently verified, so the figure should be treated as an estimate while authorities continue their investigation and rescue operation.",
+      "source": "Reuters",
+      "verification": "Developing; reported figure not independently verified",
+      "image": ""
+    },
+    {
+      "category": "Nigeria Energy",
+      "headline": "Dangote Refinery Reshapes Nigeria's Fuel Exports",
+      "summary": "Nigeria's seaborne petroleum-product exports have increased dramatically since 2023. The US Energy Information Administration has attributed much of the growth to production from the Dangote refinery, strengthening Nigeria's position as a regional supplier of refined fuel.",
       "source": "Reuters / U.S. Energy Information Administration",
       "verification": "Reported",
       "image": ""
     },
     {
-      "category": "Ukraine",
-      "headline": "EU Approves €6.1 Billion Defence Support",
-      "summary": "The European Commission has approved an additional €6.1 billion to support Ukraine's defence. The assistance includes air-defence systems, missiles, ammunition and radar equipment as Russia's war against Ukraine continues.",
-      "source": "Reuters",
-      "verification": "Confirmed",
-      "image": ""
-    },
-    {
-      "category": "Middle East",
-      "headline": "US Escalates Economic Pressure on Iran",
-      "summary": "Washington is increasing economic pressure on Iran and warning countries and companies involved in certain business dealings with Tehran that they could face sanctions. The measures come as the Iran conflict continues to affect international trade and energy markets.",
-      "source": "Reuters",
-      "verification": "Reported",
-      "image": ""
-    },
-    {
-      "category": "Iran",
-      "headline": "Tehran Rejects US Pressure",
-      "summary": "Iran continues to reject threatened US sanctions and says Washington's pressure will not intimidate Tehran. The dispute adds to uncertainty over the possibility of diplomatic progress and continues to affect the wider Middle East security situation.",
+      "category": "Nigeria Business",
+      "headline": "MTN Explores Banking Licences in African Markets",
+      "summary": "MTN Group is considering applying for banking licences in selected African markets as the telecommunications company expands its financial-services business. CEO Ralph Mupita said lending is becoming an increasingly important part of the company's mobile-money operations.",
       "source": "Reuters",
       "verification": "Reported",
       "image": ""
@@ -49,18 +76,18 @@
 
   "africa": [
     {
-      "category": "South Sudan",
-      "headline": "Security Concerns Continue",
-      "summary": "Security remains a major concern in South Sudan as violence and instability continue to challenge humanitarian and peacekeeping operations. RadiantWaves Media will continue monitoring developments from official authorities before publishing casualty figures or other developing claims.",
-      "source": "International reporting",
-      "verification": "Developing",
+      "category": "Africa",
+      "headline": "MTN Expands Financial Services Strategy",
+      "summary": "Africa's largest telecommunications operator is examining banking licences in selected markets to expand lending and financial services. MTN is also investing in digital infrastructure, including planned AI-enabled data-centre capacity in South Africa and Nigeria.",
+      "source": "Reuters",
+      "verification": "Reported",
       "image": ""
     },
     {
-      "category": "Nigeria",
-      "headline": "Nigeria's Energy Sector Gains International Attention",
-      "summary": "Nigeria's rapid increase in petroleum-product exports is emerging as an important economic development. Growing production from the Dangote refinery is helping Nigeria move toward a stronger role as a regional exporter of refined petroleum products.",
-      "source": "Reuters / U.S. Energy Information Administration",
+      "category": "Ghana",
+      "headline": "Ghana Tightens Rules on Artisanal Gold Exports",
+      "summary": "Ghana's GoldBod has ordered certain artisanal gold dore purchased by self-financing aggregators to be refined locally from September 1. The measure forms part of a broader effort to retain more value from mineral exports within the country.",
+      "source": "Reuters",
       "verification": "Reported",
       "image": ""
     }
@@ -69,18 +96,18 @@
   "europe": [
     {
       "category": "Europe",
-      "headline": "Electric Vehicles Pass 25 Percent Market Share",
-      "summary": "Battery-electric vehicles accounted for more than one in four new-car registrations across major European markets in July. France and Germany were among the markets contributing strongly to the increase.",
-      "source": "Reuters",
+      "headline": "Ukraine Support Remains Central to European Security",
+      "summary": "European leaders continue to strengthen support for Ukraine as the war with Russia enters another critical phase. Recent meetings in Kyiv highlighted military cooperation, missile production and continued political backing for Ukraine.",
+      "source": "AP News",
       "verification": "Reported",
       "image": ""
     },
     {
-      "category": "Europe",
-      "headline": "Wildfires and Extreme Weather Remain a Concern",
-      "summary": "European authorities continue monitoring wildfire and extreme-weather conditions across several countries. The wider summer crisis has placed pressure on agriculture, infrastructure, water supplies and public health.",
-      "source": "Reuters / European authorities",
-      "verification": "Developing",
+      "category": "Iceland",
+      "headline": "Iceland Prepares for EU Referendum",
+      "summary": "Iceland is preparing for an August 29 referendum on whether to restart negotiations for European Union membership. The debate includes questions surrounding fisheries, national sovereignty and the country's relationship with the European bloc.",
+      "source": "AP News",
+      "verification": "Confirmed upcoming vote",
       "image": ""
     }
   ],
@@ -88,46 +115,65 @@
   "business": [
     {
       "category": "Global Markets",
-      "headline": "Gold Rally Continues",
-      "summary": "Gold prices climbed to their highest level in more than three months as investors positioned themselves ahead of important US inflation data and the Federal Reserve's Jackson Hole meeting.",
+      "headline": "Markets Watch Nvidia and Energy Developments",
+      "summary": "Global investors are watching Nvidia's earnings, oil prices and developments around the Strait of Hormuz. Technology stocks and the wider AI investment boom remain important drivers of market sentiment.",
       "source": "Reuters",
       "verification": "Reported",
       "image": ""
     },
     {
-      "category": "Global Markets",
-      "headline": "Stock Markets Remain Cautious",
-      "summary": "Global shares remained under pressure as investors assessed technology-sector weakness, oil prices, government-bond yields and renewed US pressure on Iran. Nvidia's upcoming earnings report is also being closely watched.",
+      "category": "Global Energy",
+      "headline": "Hormuz Developments Could Affect Inflation",
+      "summary": "The Strait of Hormuz remains a critical issue for global energy markets. Any improvement in navigation could reduce pressure on oil and fuel prices, while renewed disruption could increase energy costs and inflation risks.",
       "source": "Reuters",
-      "verification": "Reported",
+      "verification": "Market analysis",
       "image": ""
     }
   ],
 
   "technology": [
     {
-      "category": "Technology",
-      "headline": "Taiwan Investigates Alleged Illegal AI Server Exports",
-      "summary": "Taiwanese prosecutors have indicted nine people in cases involving the alleged illegal export of high-end AI servers to China. The investigation includes individuals connected to Nvidia and Super Micro. Authorities are examining whether servers subject to US export controls were delivered to Chinese customers through various routes.",
+      "category": "Artificial Intelligence",
+      "headline": "Nvidia Earnings Could Test the Global AI Boom",
+      "summary": "Nvidia's latest results are expected to provide an important test of whether enormous spending on AI chips and data-centre infrastructure is translating into sustainable growth. Investors are watching revenue, demand for the company's newest chips and the outlook for AI infrastructure spending.",
       "source": "Reuters",
-      "verification": "Under investigation",
+      "verification": "Reported / market analysis",
+      "image": ""
+    },
+    {
+      "category": "Technology",
+      "headline": "Japan Studies Blockchain-Based Securities Settlement",
+      "summary": "Japan is preparing to study infrastructure that could allow instant settlement of stock and government-bond transactions using blockchain technology. A study group involving financial authorities and institutions is expected to develop an initial plan.",
+      "source": "Reuters",
+      "verification": "Reported",
+      "image": ""
+    }
+  ],
+
+  "climate": [
+    {
+      "category": "Climate",
+      "headline": "Strong El Niño Could Develop Later in 2026",
+      "summary": "Global forecasters are warning that the developing 2026 El Niño could become exceptionally strong. The phenomenon can alter rainfall, drought, heat and storm patterns across different regions. Reuters reports that forecasters are expecting a particularly strong event, although the eventual intensity remains subject to change.",
+      "source": "Reuters",
+      "verification": "Forecast / developing",
       "image": ""
     }
   ],
 
   "morning_summary": {
-    "headline": "Today's Global Picture",
-    "summary": "Security remains the dominant international theme, from the continuing Iran crisis and its impact on energy markets to Russia's war against Ukraine. In Nigeria, an alleged mass-abduction figure remains unverified and should not be presented as established fact. At the same time, Nigeria's petroleum exports are showing significant growth, driven largely by the Dangote refinery. Europe continues to see strong electric-vehicle adoption, while financial markets remain focused on inflation, interest rates, gold, oil and geopolitical risk."
+    "headline": "TODAY'S GLOBAL PICTURE",
+    "summary": "Energy, security, technology and trade dominate today's international agenda. The possibility of a temporary navigational corridor through the Strait of Hormuz is being closely watched because any improvement could ease pressure on oil and fuel markets. Ukraine remains a major European security concern, while Canada and the United States continue to face unresolved trade tensions. In Nigeria, authorities are conducting a major rescue operation after a mass kidnapping, but the reported figure of about 600 captives remains unverified. Meanwhile, investors are focused on Nvidia's earnings and the future of the global AI boom. Climate forecasters are also watching the possibility of an exceptionally strong El Niño later this year."
   },
 
   "big_question": {
     "headline": "TODAY'S BIG QUESTION",
-    "question": "When breaking news spreads faster than authorities can verify it, should social-media users wait for confirmation before sharing — even when the information could potentially save lives?",
-    "call_to_action": "Tell us what you think in the comments."
+    "question": "If reopening the Strait of Hormuz lowers global fuel prices, should governments prioritise diplomacy even when major political disagreements remain unresolved?",
+    "call_to_action": "Share your view in the comments."
   },
 
   "quote_of_the_day": {
-    "text": "Do not measure your progress by how far you still have to go. Measure it by how much stronger you have become along the way."
+    "text": "Real strength is not found in having an easy journey, but in finding the courage to keep moving when the road becomes difficult."
   },
 
   "branding": {
@@ -135,5 +181,5 @@
     "slogan": "Gateway to Your World News — Connecting You to the World."
   },
 
-  "editorial_note": "RadiantWaves Media distinguishes confirmed developments from developing reports, official claims and information that has not been independently verified."
+  "editorial_note": "RadiantWaves Media distinguishes confirmed developments from official statements, forecasts, developing reports and claims that have not been independently verified. News wording is original for RadiantWaves Media."
 }

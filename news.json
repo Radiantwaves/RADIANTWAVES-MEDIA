@@ -1,163 +1,206 @@
 {
   "date": "Thursday, August 27, 2026",
 
-  "featured": {
+  "hero": {
     "title": "Hormuz Talks Offer Hope for Global Energy Markets",
     "description": "Iran and Oman are discussing arrangements that could allow more shipping through the Strait of Hormuz. The waterway remains heavily disrupted, but diplomatic efforts have raised hopes that traffic could gradually improve.",
     "image": ""
   },
 
-  "breaking_news": [
-    {
-      "title": "Hormuz Talks Offer Hope for Energy Markets",
-      "description": "Iran and Oman are continuing discussions over arrangements that could allow more shipping through the Strait of Hormuz. No final reopening agreement has been reached, and vessel traffic remains far below normal levels.",
-      "source": "Reuters"
-    },
-    {
-      "title": "Oil Prices Continue to Fall",
-      "description": "Oil prices have declined for a fourth consecutive day as markets react to the possibility of improved shipping through the Strait of Hormuz. Brent crude has traded around the high-$80s per barrel.",
-      "source": "Reuters"
-    },
-    {
-      "title": "Russian NORSI Refinery Hit by Drone Attack",
-      "description": "Russia's NORSI refinery has suspended crude processing following a Ukrainian drone attack, according to industry sources cited by Reuters. The disruption could add pressure to regional fuel supplies.",
-      "source": "Reuters"
-    }
+  "breaking": [
+    "Hormuz talks offer hope for global energy markets",
+    "Oil prices fall for a fourth consecutive day",
+    "Russian NORSI refinery halts crude processing after drone attack",
+    "Nigeria's mass kidnapping investigation continues",
+    "Global energy markets remain focused on the Strait of Hormuz"
   ],
 
-  "world": [
+  "articles": [
+
     {
+      "category": "world",
       "title": "Hormuz Talks Offer Hope for Global Energy Markets",
-      "description": "Iran and Oman are working on arrangements that could create a temporary shipping corridor through the Strait of Hormuz. The discussions are being closely watched because the waterway is a critical route for global energy supplies.",
-      "source": "Reuters"
+      "description": "Iran and Oman are continuing discussions over arrangements that could allow more shipping through the Strait of Hormuz. No final reopening agreement has been reached, and vessel traffic remains far below normal levels.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Strait of Hormuz Iran Oman shipping oil tanker"
     },
+
     {
+      "category": "world",
       "title": "Oil Markets React to Hormuz Developments",
       "description": "Crude prices have fallen as investors assess diplomatic efforts surrounding the Strait of Hormuz. The decline reflects hopes of improved energy flows, although the situation remains uncertain.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "oil tanker Strait of Hormuz crude oil"
     },
+
     {
+      "category": "world",
       "title": "Ukraine War Continues to Affect Regional Energy Supplies",
       "description": "The war between Russia and Ukraine continues to affect energy infrastructure and fuel markets. A Ukrainian drone attack has disrupted crude processing at Russia's NORSI refinery.",
-      "source": "Reuters"
-    }
-  ],
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Russia Ukraine war refinery oil facility"
+    },
 
-  "usa": [
     {
+      "category": "usa",
       "title": "US Watches Hormuz Developments Closely",
       "description": "Washington continues to monitor developments surrounding Iran and the Strait of Hormuz as diplomatic efforts seek to reduce disruption to international shipping and energy supplies.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "United States Iran Strait of Hormuz navy"
     },
+
     {
+      "category": "usa",
       "title": "AI Investment Remains a Major US Market Story",
       "description": "Investors continue to examine whether enormous spending on artificial intelligence infrastructure will generate sustainable long-term growth for major technology companies.",
-      "source": "Reuters"
-    }
-  ],
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "artificial intelligence data center United States"
+    },
 
-  "europe": [
     {
+      "category": "europe",
       "title": "European Energy Markets Watch Strait of Hormuz",
       "description": "European governments and energy companies continue monitoring developments around the Strait of Hormuz because prolonged disruption could affect fuel prices, gas supplies and inflation.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Europe energy market gas oil terminal"
     },
+
     {
+      "category": "europe",
       "title": "Qatar Gas Disruption Raises European Energy Concerns",
       "description": "Disruption affecting Qatar's LNG industry is creating additional uncertainty for European energy markets and global gas supplies.",
-      "source": "Reuters"
-    }
-  ],
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Qatar LNG gas tanker energy"
+    },
 
-  "africa": [
     {
+      "category": "africa",
       "title": "Nigeria's Kidnapping Crisis Remains a Major Security Concern",
       "description": "Nigerian security forces are continuing rescue operations following reported mass kidnappings in Niger State. Authorities are still working to establish the full number of people abducted.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Nigeria security forces police operation"
     },
+
     {
+      "category": "africa",
       "title": "Nigeria Kidnapping Ransom Payments Raise Concern",
       "description": "A study reported by Reuters found that Nigerian kidnappers collected almost $5.8 million in ransom payments from civilian abductions over the past year, highlighting the financial dimension of the country's security crisis.",
-      "source": "Reuters / SBM Intelligence"
+      "source": "Reuters / SBM Intelligence",
+      "image": "",
+      "imageQuery": "Nigeria security police officers"
     },
+
     {
+      "category": "africa",
       "title": "Dangote Refinery Strengthens Nigeria's Fuel Export Position",
       "description": "Nigeria's petroleum-product exports by sea have increased sharply since 2023, with the Dangote refinery contributing significantly to the growth.",
-      "source": "Reuters / US Energy Information Administration"
+      "source": "Reuters / US Energy Information Administration",
+      "image": "",
+      "imageQuery": "Dangote refinery Nigeria oil refinery"
     },
+
     {
+      "category": "africa",
       "title": "MTN Considers Banking Expansion in Africa",
       "description": "MTN Group is considering banking licences in selected African markets as the telecommunications company expands its financial-services operations.",
-      "source": "Reuters"
-    }
-  ],
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "MTN Africa telecommunications business"
+    },
 
-  "business": [
     {
+      "category": "business",
       "title": "Global Markets Watch Oil and Hormuz Talks",
       "description": "Investors are watching oil prices and diplomatic developments around the Strait of Hormuz. The possibility of improved shipping has eased some concerns about prolonged energy disruption.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "global stock market financial markets trading"
     },
+
     {
+      "category": "business",
       "title": "Energy Supply Risks Remain",
       "description": "Despite falling crude prices, global energy markets remain vulnerable to further disruption because shipping through the Strait of Hormuz remains well below normal levels.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "oil tanker energy supply global market"
     },
+
     {
+      "category": "business",
       "title": "Kidnapping Has a Growing Economic Dimension in Nigeria",
       "description": "New research into ransom payments highlights the financial incentives behind kidnapping and the economic challenge facing Nigerian security agencies and affected communities.",
-      "source": "Reuters / SBM Intelligence"
-    }
-  ],
+      "source": "Reuters / SBM Intelligence",
+      "image": "",
+      "imageQuery": "Nigeria economy security business"
+    },
 
-  "technology": [
     {
+      "category": "technology",
       "title": "Artificial Intelligence Remains a Major Investment Story",
       "description": "Companies and investors continue to pour enormous amounts of money into AI chips, computing infrastructure and data centres while markets look for evidence of sustainable returns.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "artificial intelligence computer data center"
     },
+
     {
+      "category": "technology",
       "title": "Technology Earnings Under Global Investor Focus",
       "description": "Major technology companies remain under close scrutiny as investors assess AI demand, infrastructure spending and the long-term profitability of the sector.",
-      "source": "Reuters"
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "technology company artificial intelligence investors"
     }
   ],
 
-  "top_stories": [
+  "topStories": [
     {
       "title": "Hormuz Talks Could Ease Global Energy Pressure",
-      "description": "Diplomatic discussions involving Iran and Oman are raising hopes of improved shipping through the Strait of Hormuz."
+      "description": "Diplomatic discussions involving Iran and Oman are raising hopes of improved shipping through the Strait of Hormuz.",
+      "image": "",
+      "imageQuery": "Strait of Hormuz Iran Oman shipping"
     },
     {
       "title": "Oil Prices Continue Lower",
-      "description": "Crude prices have fallen for a fourth consecutive day as markets respond to hopes of reduced disruption."
+      "description": "Crude prices have fallen for a fourth consecutive day as markets respond to hopes of reduced disruption.",
+      "image": "",
+      "imageQuery": "crude oil barrels oil market"
     },
     {
       "title": "NORSI Refinery Processing Halted",
-      "description": "A Ukrainian drone attack has disrupted crude processing at one of Russia's major refineries."
+      "description": "A Ukrainian drone attack has disrupted crude processing at one of Russia's major refineries.",
+      "image": "",
+      "imageQuery": "Russian oil refinery industrial facility"
     },
     {
       "title": "Nigeria Rescue Operation Continues",
-      "description": "Security forces are continuing efforts to locate and rescue people reportedly abducted in Niger State."
+      "description": "Security forces are continuing efforts to locate and rescue people reportedly abducted in Niger State.",
+      "image": "",
+      "imageQuery": "Nigeria police security rescue operation"
     },
     {
       "title": "AI Investment Remains Huge",
-      "description": "Global technology companies continue investing heavily in artificial-intelligence infrastructure."
+      "description": "Global technology companies continue investing heavily in artificial-intelligence infrastructure.",
+      "image": "",
+      "imageQuery": "AI data center technology infrastructure"
     }
   ],
 
-  "breaking_history": [
-    {
-      "title": "August 27, 2026",
-      "description": "Hormuz talks, falling oil prices, the NORSI refinery disruption and Nigeria's kidnapping investigation dominate the morning international news."
-    },
-    {
-      "title": "RadiantWaves Editorial Standard",
-      "description": "Developing reports and figures that have not been independently verified are clearly identified rather than presented as confirmed facts."
-    }
+  "breakingHistory": [
+    "August 27, 2026 — Hormuz talks, falling oil prices, the NORSI refinery disruption and Nigeria's kidnapping investigation dominate the morning international news.",
+    "RadiantWaves Editorial Standard — Developing reports and figures that have not been independently verified are clearly identified rather than presented as confirmed facts."
   ],
 
-  "sponsored_adverts": [
+  "sponsoredAdverts": [
     {
       "title": "Advertise With RadiantWaves Media",
       "subtitle": "Reach audiences through RadiantWaves Media",
@@ -176,19 +219,19 @@
     }
   ],
 
-  "morning_summary": {
+  "morningSummary": {
     "title": "MORNING SUMMARY",
     "description": "Energy, security and economic uncertainty dominate today's global picture. The biggest immediate development is the continuing discussion between Iran and Oman over possible arrangements for shipping through the Strait of Hormuz. Oil prices have moved lower on hopes of improved traffic, although the waterway remains heavily disrupted. Nigeria continues to deal with a serious kidnapping crisis, while new research highlights the financial scale of ransom payments. The disruption at Russia's NORSI refinery adds another pressure point to regional fuel supplies, while artificial intelligence remains one of the world's biggest technology investment stories."
   },
 
-  "big_question": "Can diplomacy succeed in easing the energy crisis, or will geopolitical tensions continue to keep global fuel prices under pressure?",
+  "bigQuestion": "Can diplomacy succeed in easing the energy crisis, or will geopolitical tensions continue to keep global fuel prices under pressure?",
 
-  "quote_of_the_day": "You don't need to see the entire path ahead; sometimes, courage is simply taking the next step with faith that better days are possible.",
+  "quoteOfTheDay": "You don't need to see the entire path ahead; sometimes, courage is simply taking the next step with faith that better days are possible.",
 
   "branding": {
     "name": "RADIANTWAVES MEDIA",
     "slogan": "Gateway to Your World News — Connecting You to the World."
   },
 
-  "editorial_note": "RadiantWaves Media distinguishes confirmed developments from official statements, developing reports, forecasts and claims that have not been independently verified."
+  "editorialNote": "RadiantWaves Media distinguishes confirmed developments from official statements, developing reports, forecasts and claims that have not been independently verified."
 }

@@ -1,102 +1,137 @@
 {
-  "date": "Friday, August 28, 2026",
+  "date": "Saturday, August 29, 2026",
 
   "hero": {
-    "title": "Himalayan Flood Disaster Leaves Hundreds Dead and Nearly 1,000 Missing",
-    "description": "A catastrophic flash flood and landslide disaster in the Himalayan region has killed hundreds of people and left nearly 1,000 missing, according to the latest reports. Rescue teams are searching affected communities while authorities warn of further flooding risks.",
-    "image": ""
+    "title": "Himalayan Flood Disaster Deepens as Rescue Efforts Face Bad Weather",
+    "description": "A catastrophic glacier-related flood in the Himalayan region has killed more than 600 people and left nearly 3,000 missing across Nepal and Tibet. Bad weather is hampering rescue operations as Nepal seeks international technical assistance and estimates reconstruction could cost $4–5 billion.",
+    "image": "",
+    "imageQuery": "Nepal Himalaya flood rescue August 2026"
   },
 
   "breaking": [
-    "Himalayan floods leave hundreds dead and nearly 1,000 missing",
-    "Nigeria Football Federation leadership resigns",
-    "Nigeria kidnapping crisis remains a major security concern",
-    "Hormuz shipping talks continue as oil prices fall",
-    "Russia's NORSI refinery halts crude processing after drone attack",
-    "US reviews its military presence in Europe",
-    "Nvidia results strengthen investor focus on AI"
+    "Himalayan flood disaster: more than 600 dead and nearly 3,000 missing",
+    "Niamey: gunfire and explosions reported across Niger's capital",
+    "Iran's economy under severe pressure as US sanctions intensify",
+    "Ukraine prepares to intensify long-range strikes against Russia",
+    "Chinese chipmaker CXMT sues the US Pentagon",
+    "CXMT to supply LPDDR6 memory chips for Xiaomi's new foldable phone",
+    "Moody's changes Nigeria's credit outlook to positive"
   ],
+
+  "featured": {
+    "title": "Himalayan Flood Disaster Deepens",
+    "content": "Nepal is facing a major humanitarian and reconstruction crisis after catastrophic flooding triggered by a glacier collapse. Bad weather has disrupted some search-and-rescue operations, while authorities seek international technical help.",
+    "image": "",
+    "imageQuery": "Nepal Tibet Himalayan flood disaster rescue"
+  },
 
   "articles": [
     {
       "category": "world",
-      "title": "BREAKING: Himalayan Flood Disaster Leaves Hundreds Dead and Nearly 1,000 Missing",
-      "description": "A catastrophic flash flood and landslide disaster in the Himalayan region has killed at least 359 people and left nearly 1,000 missing, according to the latest Reuters reporting. Rescue teams are searching for survivors while authorities warn of additional flooding risks from debris-dammed lakes.",
+      "title": "BREAKING: Himalayan Flood Disaster Leaves Hundreds Dead and Thousands Missing",
+      "description": "A devastating flood triggered by a glacier collapse has killed at least 626 people in Nepal and seven in Tibet, while nearly 3,000 people remain missing. Bad weather is hampering rescue operations and Nepal is seeking international technical assistance.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Nepal China Himalaya flood landslide rescue"
+      "imageQuery": "Nepal Tibet Himalayan flood rescue"
     },
     {
       "category": "world",
-      "title": "Hormuz Shipping Talks Continue",
-      "description": "Iran and Oman are discussing arrangements that could allow more shipping through the Strait of Hormuz. No final reopening agreement has been reached and vessel traffic remains far below normal levels.",
+      "title": "Nepal Estimates $4–5 Billion Reconstruction Bill",
+      "description": "Nepal's finance minister estimates that rebuilding after the catastrophic floods could cost between $4 billion and $5 billion. The disaster has destroyed infrastructure, roads, bridges and energy facilities.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Strait of Hormuz Iran Oman tanker shipping"
+      "imageQuery": "Nepal flood destroyed bridge infrastructure"
     },
     {
       "category": "world",
-      "title": "Russia's NORSI Refinery Hit by Drone Attack",
-      "description": "Russia's NORSI refinery has halted crude processing following a Ukrainian drone attack, according to industry sources cited by Reuters. The disruption could place additional pressure on regional fuel supplies.",
+      "title": "Niamey Hit by Gunfire and Explosions",
+      "description": "Sustained gunfire and explosions were reported in several parts of Niamey, including areas near Diori Hamani International Airport and the presidential palace. The cause had not been officially established at the time of reporting, making this a developing story.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "NORSI refinery Russia oil refinery"
+      "imageQuery": "Niamey Niger capital airport"
+    },
+    {
+      "category": "world",
+      "title": "Iran's Economy Comes Under Severe Pressure",
+      "description": "Six months into the Iran–US war, Iran is facing severe economic pressure as sanctions intensify, foreign trade declines and oil sales remain disrupted. Shipping through the Strait of Hormuz also remains far below normal levels.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Iran economy Tehran oil tanker"
+    },
+    {
+      "category": "world",
+      "title": "Russia–Ukraine Conflict Remains Highly Active",
+      "description": "Ukraine continues developing its long-range strike capability against Russian targets while Russia maintains attacks against Ukrainian infrastructure. The conflict continues to affect regional security and energy markets.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Ukraine drone military Russia war"
+    },
+
+    {
+      "category": "usa",
+      "title": "Chinese Chipmaker CXMT Sues Pentagon",
+      "description": "ChangXin Memory Technologies has filed a lawsuit against the US Department of Defense seeking removal from a Pentagon list identifying it as a Chinese military company. CXMT says its chips are intended for civilian and commercial use.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "CXMT semiconductor memory chip China"
     },
     {
       "category": "usa",
-      "title": "US Reviews Military Presence in Europe",
-      "description": "The Pentagon is conducting a major review of US military deployments across Europe. Several options are reportedly being prepared, while NATO allies watch closely for any changes to the American military presence.",
+      "title": "US–China Technology Rivalry Intensifies",
+      "description": "The CXMT lawsuit adds another chapter to the growing technology dispute between Washington and Beijing, particularly around semiconductors, artificial intelligence and advanced computing.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "US military troops Europe NATO"
+      "imageQuery": "US China semiconductor technology"
     },
     {
       "category": "usa",
-      "title": "US Markets Watch Oil and Federal Reserve Policy",
-      "description": "US investors are closely monitoring oil prices, geopolitical developments and Federal Reserve policy as energy-market uncertainty continues to influence inflation expectations and financial markets.",
+      "title": "US Military Presence in Europe Remains Under Review",
+      "description": "The Pentagon is reviewing US military deployments across Europe and preparing several options for future force posture. NATO allies are watching the review closely amid concerns about possible troop reductions.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Wall Street stock market traders United States"
+      "imageQuery": "US military Europe NATO soldiers"
+    },
+
+    {
+      "category": "europe",
+      "title": "European Energy Markets Watch Strait of Hormuz",
+      "description": "European governments and energy companies continue monitoring the Strait of Hormuz because disruption to the major energy route could affect fuel prices, gas supplies and inflation.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "European energy market oil gas terminal"
     },
     {
       "category": "europe",
-      "title": "European Energy Markets Watch Hormuz",
-      "description": "European governments and energy companies continue monitoring the Strait of Hormuz because prolonged disruption could affect fuel prices, gas supplies and inflation across the region.",
+      "title": "Europe Faces Continued Energy Uncertainty",
+      "description": "The continuing Iran conflict and disruption around Hormuz are forcing European governments to reassess energy security, supply routes and dependence on vulnerable shipping corridors.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "European energy market gas oil terminal"
+      "imageQuery": "Europe LNG gas terminal energy"
     },
+
     {
-      "category": "europe",
-      "title": "NATO Allies Watch US Troop Review",
-      "description": "European NATO allies are closely watching Washington's review of US military commitments in Europe as governments assess the possible implications for regional security.",
+      "category": "africa",
+      "title": "Nigeria Receives Positive Moody's Economic Outlook",
+      "description": "Moody's has changed Nigeria's credit outlook from stable to positive, citing stronger foreign-exchange reserves, economic growth and improved resilience to external shocks. Nigeria's sovereign rating remains B3, with fiscal and debt challenges still identified as risks.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "NATO European military meeting"
+      "imageQuery": "Nigeria economy Lagos business district"
     },
     {
       "category": "africa",
-      "title": "BREAKING: Nigeria Football Federation Leadership Resigns",
-      "description": "Nigeria Football Federation President Ibrahim Musa Gusau, General Secretary Mohammed Sanusi and members of the executive committee have resigned. The leadership change follows intense criticism after Nigeria failed to qualify for the 2026 men's World Cup and the Super Falcons failed to qualify for the 2027 Women's World Cup.",
+      "title": "Nigeria's Economic Reforms Remain Under Scrutiny",
+      "description": "Nigeria's improving external position and stronger growth are supporting investor confidence, although fiscal pressure, debt affordability and the cost of living remain important challenges.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Nigeria Football Federation football Nigeria"
+      "imageQuery": "Nigeria economy market Lagos"
     },
     {
       "category": "africa",
-      "title": "Nigeria's Kidnapping Crisis Remains a Major Security Concern",
-      "description": "Nigeria continues to face a serious kidnapping crisis. A study cited by Reuters estimates that gunmen collected almost $5.8 million in ransom payments from civilian abductions between July 2025 and June 2026.",
+      "title": "Nigeria Kidnapping Crisis Remains a Major Security Concern",
+      "description": "Kidnapping continues to affect communities across Nigeria, with previous research showing the scale of ransom payments and the serious human and economic consequences of the crisis.",
       "source": "Reuters / SBM Intelligence",
       "image": "",
-      "imageQuery": "Nigeria security forces police operation"
-    },
-    {
-      "category": "africa",
-      "title": "Thousands of Abductions Recorded in Nigeria",
-      "description": "Research cited by Reuters recorded thousands of abductions and more than 1,100 killings over the past year, highlighting the growing security and economic consequences of kidnapping in Nigeria.",
-      "source": "Reuters / SBM Intelligence",
-      "image": "",
-      "imageQuery": "Nigeria police security officers"
+      "imageQuery": "Nigeria security police operation"
     },
     {
       "category": "africa",
@@ -106,92 +141,100 @@
       "image": "",
       "imageQuery": "Dangote refinery Nigeria"
     },
+
     {
-      "category": "africa",
-      "title": "MTN Considers Banking Expansion in Africa",
-      "description": "MTN Group is considering banking licences in selected African markets as the telecommunications company expands its financial-services operations.",
+      "category": "business",
+      "title": "Global Markets Watch Iran and Hormuz",
+      "description": "Investors remain focused on energy prices, inflation, interest rates and geopolitical risks as the Iran conflict continues to disrupt shipping through the Strait of Hormuz.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "MTN Africa telecommunications"
+      "imageQuery": "global oil market trading"
     },
     {
       "category": "business",
-      "title": "Oil Prices Continue Lower",
-      "description": "Oil prices have fallen as markets react to the possibility of improved shipping through the Strait of Hormuz. Brent crude remains around the high-$80s per barrel while uncertainty continues.",
+      "title": "Oil Markets Remain Highly Sensitive to Middle East Developments",
+      "description": "Oil prices remain closely tied to developments around the Strait of Hormuz. Although some diplomatic efforts have raised hopes of improved shipping, traffic remains well below normal.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Brent crude oil barrels oil market"
+      "imageQuery": "oil barrels crude oil market"
     },
     {
       "category": "business",
-      "title": "Global Markets Remain Sensitive to Geopolitical Risk",
-      "description": "Investors continue watching oil prices, bond yields, inflation expectations and geopolitical developments as uncertainty surrounding energy supplies affects global markets.",
+      "title": "Global Energy Security Faces Continued Risks",
+      "description": "The disruption around Hormuz is encouraging countries to examine alternative energy routes, pipelines and ports in an effort to reduce dependence on the strategic waterway.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "global financial markets trading"
+      "imageQuery": "oil pipeline port energy infrastructure"
     },
+
     {
-      "category": "business",
-      "title": "Nigeria Kidnapping Crisis Has Major Economic Impact",
-      "description": "Research into ransom payments highlights the financial incentives behind kidnapping and the growing economic challenge facing Nigerian security agencies, businesses and affected communities.",
-      "source": "Reuters / SBM Intelligence",
+      "category": "technology",
+      "title": "CXMT to Supply LPDDR6 Memory for Xiaomi Foldable Phone",
+      "description": "Chinese memory-chip manufacturer CXMT says it will supply its latest LPDDR6 DRAM chips for Xiaomi's upcoming 18 Fold smartphone. The development highlights China's growing semiconductor capabilities.",
+      "source": "Reuters",
       "image": "",
-      "imageQuery": "Nigeria economy business security"
+      "imageQuery": "Xiaomi foldable phone semiconductor chip"
     },
     {
       "category": "technology",
-      "title": "Nvidia Strengthens Global AI Investment Story",
-      "description": "Nvidia's latest results and outlook have strengthened investor confidence in artificial intelligence spending. Markets continue assessing whether enormous investments in AI infrastructure can generate sustainable long-term returns.",
+      "title": "China Pushes Forward With Domestic Semiconductor Production",
+      "description": "CXMT's expansion into LPDDR6 memory production highlights China's efforts to strengthen domestic semiconductor manufacturing and reduce dependence on foreign technology.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Nvidia artificial intelligence data center"
+      "imageQuery": "Chinese semiconductor factory memory chips"
     },
     {
       "category": "technology",
-      "title": "Artificial Intelligence Remains a Major Investment Story",
-      "description": "Technology companies continue investing heavily in AI chips, computing infrastructure and data centres as investors search for evidence that the current AI boom can translate into sustainable growth.",
+      "title": "AI Remains a Major Global Investment Story",
+      "description": "Artificial intelligence continues to attract enormous investment in computing infrastructure, advanced chips and data centres as investors assess whether the boom can deliver sustainable long-term returns.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "artificial intelligence data center technology"
+      "imageQuery": "artificial intelligence data centre technology"
     }
   ],
 
   "topStories": [
     {
-      "title": "Himalayan Disaster Triggers Massive Rescue Operation",
-      "description": "Rescue teams are searching for survivors after catastrophic flooding and landslides in the Himalayan region left hundreds dead and nearly 1,000 people missing.",
+      "title": "Himalayan Flood Disaster Deepens",
+      "description": "More than 600 people have died and nearly 3,000 remain missing after catastrophic flooding in Nepal and Tibet.",
       "image": "",
-      "imageQuery": "Nepal Himalayan flood rescue landslide"
+      "imageQuery": "Nepal Himalayan flood rescue"
     },
     {
-      "title": "Nigeria Football Leadership Resigns",
-      "description": "The resignation of the NFF president, general secretary and executive committee marks a major change in Nigerian football administration.",
+      "title": "Gunfire and Explosions Reported in Niamey",
+      "description": "Sustained gunfire and explosions have been reported across Niger's capital. Authorities had not yet established the cause at the time of reporting.",
       "image": "",
-      "imageQuery": "Nigeria football federation football"
+      "imageQuery": "Niamey Niger city airport"
     },
     {
-      "title": "Hormuz Talks Could Ease Global Energy Pressure",
-      "description": "Iran and Oman are discussing possible arrangements that could allow more shipping through the Strait of Hormuz.",
+      "title": "Nigeria Receives Positive Moody's Outlook",
+      "description": "Moody's has changed Nigeria's credit outlook from stable to positive while keeping the sovereign rating at B3.",
       "image": "",
-      "imageQuery": "Strait of Hormuz oil tanker"
+      "imageQuery": "Nigeria economy Lagos skyline"
     },
     {
-      "title": "NORSI Refinery Processing Halted",
-      "description": "A Ukrainian drone attack has disrupted crude processing at one of Russia's major refineries.",
+      "title": "CXMT Sues Pentagon",
+      "description": "China's leading DRAM manufacturer has challenged its inclusion on a US list of companies considered linked to China's military.",
       "image": "",
-      "imageQuery": "Russia oil refinery industrial facility"
+      "imageQuery": "CXMT China semiconductor factory"
     },
     {
-      "title": "AI Investment Remains Huge",
-      "description": "Global technology companies continue investing heavily in artificial-intelligence infrastructure.",
+      "title": "Xiaomi to Use CXMT LPDDR6 Memory",
+      "description": "CXMT will supply LPDDR6 memory chips for Xiaomi's upcoming foldable smartphone.",
       "image": "",
-      "imageQuery": "AI data center technology"
+      "imageQuery": "Xiaomi foldable smartphone technology"
     }
   ],
 
   "breakingHistory": [
-    "August 28, 2026 — The Himalayan flood disaster, Nigeria Football Federation leadership change, Hormuz developments and global energy concerns dominate the morning news.",
-    "RadiantWaves Editorial Standard — Developing reports, official statements and figures that have not been independently verified are clearly identified rather than presented as confirmed facts."
+    {
+      "title": "August 29, 2026",
+      "description": "The Himalayan flood disaster, developing security reports from Niamey, Iran's economic pressure, US–China semiconductor tensions and Nigeria's improved Moody's outlook dominate the morning news."
+    },
+    {
+      "title": "RadiantWaves Editorial Standard",
+      "description": "Developing reports and figures that have not been independently verified are clearly identified rather than presented as confirmed facts."
+    }
   ],
 
   "sponsoredAdverts": [
@@ -215,12 +258,12 @@
 
   "morningSummary": {
     "title": "MORNING SUMMARY",
-    "description": "Today's global picture is dominated by the catastrophic Himalayan floods, Nigeria's football leadership shake-up and continuing security concerns. Internationally, the Strait of Hormuz remains central to energy markets, while the disruption at Russia's NORSI refinery adds another pressure point to fuel supplies. The United States is reviewing its military presence in Europe, while Nvidia and the wider artificial-intelligence sector remain major investment stories."
+    "description": "The Himalayan disaster is the biggest developing story this morning, with more than 600 deaths and nearly 3,000 people missing across Nepal and Tibet. Bad weather is complicating rescue operations and Nepal estimates reconstruction could cost $4–5 billion. In Niger, gunfire and explosions have been reported across Niamey, but the cause remains unconfirmed. Iran continues to face severe economic pressure as the US intensifies sanctions and shipping through Hormuz remains heavily disrupted. In Nigeria, Moody's has improved the country's credit outlook to positive, while the US–China technology rivalry is intensifying after CXMT sued the Pentagon and announced a major Xiaomi chip deal."
   },
 
-  "bigQuestion": "When a crisis affects thousands of people, what matters most — immediate rescue, long-term prevention, or holding those responsible accountable?",
+  "bigQuestion": "When breaking news develops faster than authorities can confirm the facts, is it better to share immediately or wait for reliable verification?",
 
-  "quoteOfTheDay": "Even when the world feels uncertain, your courage, kindness and determination can become a light for someone else.",
+  "quoteOfTheDay": "The strongest people are not those who never face storms, but those who keep their direction when the storm arrives.",
 
   "branding": {
     "name": "RADIANTWAVES MEDIA",

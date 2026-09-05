@@ -1,30 +1,33 @@
 {
-  "date": "Friday, September 4, 2026",
+  "date": "Saturday, September 5, 2026",
 
   "hero": {
-    "title": "US–Iran Tensions Keep Oil Above $95 as Global Markets Watch Closely",
-    "description": "The US–Iran confrontation remains highly volatile as oil prices stay elevated and investors assess the risks to global energy supplies. Meanwhile, Asian markets have recovered, Nepal continues its massive flood recovery operation and China is battling severe flooding from Typhoon Saudel.",
+    "title": "US–Iran Tensions Keep Energy Markets on Edge as Global Risks Mount",
+    "description": "The US–Iran confrontation remains highly volatile, while oil prices stay elevated and concerns about the Strait of Hormuz continue. Nepal's flood disaster, Nigeria's landmark Dangote Refinery IPO and rising AI-driven exports in Asia are also among the major stories this morning.",
     "image": "",
-    "imageQuery": "US Iran conflict oil tanker Strait of Hormuz"
+    "imageQuery": "US Iran conflict oil Strait Hormuz"
   },
 
   "breaking": [
-    "US–Iran tensions keep oil prices above $95 a barrel",
-    "Brent crude rises to about $95.67 as supply disruption fears persist",
-    "Oil heads for its strongest weekly gain since mid-July",
-    "Asian markets rebound ahead of key US jobs data",
-    "Nepal flood disaster death toll rises above 1,250",
-    "More than 4,200 people remain missing after Nepal's catastrophic floods",
-    "Nepal estimates flood losses at about $2.56 billion",
-    "Typhoon Saudel brings severe flooding to southern China",
-    "US markets await the latest employment data",
-    "Japanese yen strengthens as expectations of a Bank of Japan rate hike increase",
-    "Gold remains near record highs as investors monitor US interest rates"
+    "US–Iran tensions remain extremely high as Washington considers further military action",
+    "Trump says the US could target Iran's Pickaxe Mountain very soon",
+    "Oil prices remain elevated as Strait of Hormuz shipping disruption continues",
+    "US, Britain, France and Germany push for action over Iran's nuclear programme",
+    "Russian drone strikes hit Ukraine's SBU headquarters in central Kyiv",
+    "Two Nepal flood survivors rescued alive after nine days trapped underground",
+    "Nepal's catastrophic flood death toll rises above 1,250",
+    "Nigeria's SEC approves Dangote Refinery IPO worth about ₦2.15 trillion",
+    "Dangote Refinery IPO order book expected to open September 14",
+    "Sydney faces extreme bushfire risk during an intense spring heatwave",
+    "Global money-market funds attract $46.1 billion as investors seek safety",
+    "South Korea's exports surpass last year's full-year record",
+    "AI chips account for 41% of South Korea's exports so far this year",
+    "Nvidia agrees to acquire Hugging Face for about $12.93 billion"
   ],
 
   "featured": {
-    "title": "US–Iran Conflict Keeps Global Energy Markets on Edge",
-    "content": "The confrontation between the United States and Iran remains unresolved, with continued military tensions keeping investors concerned about energy supplies and shipping through the Strait of Hormuz. Brent crude has risen to around $95.67 a barrel and is heading for its strongest weekly gain since mid-July.",
+    "title": "US–Iran Tensions Keep Global Energy Markets on Alert",
+    "content": "The confrontation between the United States and Iran remains one of the world's biggest geopolitical risks. President Donald Trump has warned that the US could target Iran's fortified Pickaxe Mountain, while disruption around the Strait of Hormuz continues to affect energy markets. Oil prices have climbed sharply as investors assess the possibility of a wider regional escalation.",
     "image": "",
     "imageQuery": "US Iran conflict Strait Hormuz oil tanker"
   },
@@ -32,248 +35,286 @@
   "articles": [
     {
       "category": "world",
-      "title": "BREAKING: US–Iran Tensions Continue",
-      "description": "The United States and Iran remain locked in a highly volatile confrontation following renewed military attacks. Washington has signalled that diplomacy remains difficult while Tehran continues to respond to US military operations.",
+      "title": "BREAKING: Trump Warns Iran's Pickaxe Mountain Could Be Targeted",
+      "description": "President Donald Trump said the United States could strike Iran's Pickaxe Mountain very soon. The fortified site near the damaged Natanz nuclear facility contains deeply buried tunnel complexes, making any attack potentially significant for the wider conflict.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "US Iran conflict Middle East military"
+      "imageQuery": "Iran Pickaxe Mountain Natanz nuclear facility"
     },
     {
       "category": "world",
-      "title": "Oil Heads for Strongest Weekly Gain Since July",
-      "description": "Brent crude rose to around $95.67 a barrel early Friday, putting it on course for a weekly gain of about 7.1%. US West Texas Intermediate reached about $91.56 and is up almost 10% for the week.",
-      "source": "Reuters",
+      "title": "Iran Nuclear Dispute Moves Toward International Escalation",
+      "description": "The United States, Britain, France and Germany are pushing the International Atomic Energy Agency board towards referring Iran to the United Nations Security Council over concerns about its nuclear programme. Diplomatic efforts remain possible, but tensions are high.",
+      "source": "Reuters / AP",
       "image": "",
-      "imageQuery": "Brent crude oil market tanker"
+      "imageQuery": "IAEA Iran nuclear talks Vienna"
     },
     {
       "category": "world",
-      "title": "Hormuz Shipping Disruption Remains a Major Concern",
-      "description": "The continuing US–Iran confrontation is creating uncertainty around commercial shipping in the Strait of Hormuz. Any prolonged disruption could place additional pressure on global energy supplies and prices.",
+      "title": "Strait of Hormuz Remains a Global Energy Flashpoint",
+      "description": "Shipping through the Strait of Hormuz remains severely disrupted as the US–Iran confrontation continues. The uncertainty is supporting higher oil prices and increasing concerns about fuel supplies and inflation around the world.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Strait of Hormuz shipping oil tanker"
+      "imageQuery": "Strait of Hormuz tanker shipping"
     },
     {
       "category": "world",
-      "title": "Putin Says Ukraine Peace Deal Could Be Possible",
-      "description": "Russian President Vladimir Putin has expressed optimism about the possibility of a peace agreement concerning Ukraine, although major differences between Moscow and Kyiv remain unresolved.",
+      "title": "Russia Strikes Ukraine Security Service Headquarters",
+      "description": "A Russian drone struck the headquarters of Ukraine's Security Service in central Kyiv, one of the most prominent government targets hit during the war. At least 12 people were reported injured, while Ukrainian officials warned of a possible response.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Vladimir Putin Russia Ukraine peace"
+      "imageQuery": "Kyiv SBU headquarters Russian drone attack"
+    },
+    {
+      "category": "world",
+      "title": "US Envoys Prepare Ukraine Peace Mission",
+      "description": "US representatives Steve Witkoff and Jared Kushner are preparing to travel to Moscow and Kyiv as Washington seeks a path towards ending the Russia–Ukraine war. No peace agreement has been reached.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Ukraine Russia peace talks US envoy"
+    },
+    {
+      "category": "world",
+      "title": "Two Nepal Flood Survivors Rescued After Nine Days",
+      "description": "Two hydropower workers were rescued alive from a flooded tunnel in Nepal nine days after catastrophic flooding swept through the Trishuli River valley. Their rescue has renewed hope for other workers still missing.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Nepal hydropower tunnel rescue workers"
+    },
+    {
+      "category": "world",
+      "title": "Nepal Disaster Leaves More Than 1,250 Dead",
+      "description": "Nepal continues a massive humanitarian and rescue operation following catastrophic flooding and landslides. More than 1,250 people have died, while thousands remain missing as rescue teams search damaged hydropower facilities and communities.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Nepal flood disaster rescue"
     },
 
     {
       "category": "usa",
-      "title": "US Jobs Report Takes Centre Stage",
-      "description": "Financial markets are awaiting the latest US employment figures for clues about the strength of the economy and the Federal Reserve's next interest-rate decision.",
+      "title": "Washington Considers Further Action Against Iran",
+      "description": "The Trump administration is considering additional military action against Iran as tensions remain high. Any further escalation could have consequences for regional security, shipping and global energy prices.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "US jobs report economy Wall Street"
+      "imageQuery": "Donald Trump Iran US military"
     },
     {
       "category": "usa",
-      "title": "Fed Officials Watch Inflation and Employment",
-      "description": "Federal Reserve policymakers continue to assess employment and inflation data as investors debate whether US interest rates could change later this month.",
+      "title": "US Investors Move Toward Safer Assets",
+      "description": "Investors are becoming more cautious as geopolitical tensions, higher oil prices and elevated government bond yields create uncertainty. US equity funds recorded another weekly outflow while money-market funds attracted strong inflows.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Federal Reserve Washington interest rates"
+      "imageQuery": "Wall Street financial markets investors"
     },
     {
       "category": "usa",
-      "title": "Higher Oil Prices Create Fresh Economic Pressure",
-      "description": "Elevated crude prices are increasing concerns about inflation and household energy costs as US policymakers monitor the economic consequences of the Middle East conflict.",
+      "title": "US Government Debt Remains a Major Economic Issue",
+      "description": "High government borrowing and rising bond yields continue to raise questions about the long-term cost of servicing US debt and the effect of fiscal pressures on financial markets.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "US gasoline oil prices economy"
+      "imageQuery": "US Treasury debt Washington"
     },
 
     {
       "category": "europe",
-      "title": "European Markets Monitor Energy and Security Risks",
-      "description": "European investors continue to monitor higher energy prices, geopolitical tensions and government bond yields as the US–Iran conflict creates additional economic uncertainty.",
+      "title": "Europe Watches Middle East Energy Risks",
+      "description": "European economies remain exposed to the consequences of higher energy prices and prolonged Middle East instability. Investors are closely monitoring oil, inflation and government borrowing costs.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "European stock market energy prices"
+      "imageQuery": "Europe energy oil market"
     },
     {
       "category": "europe",
-      "title": "Ukraine Peace Efforts Remain Under Discussion",
-      "description": "Diplomatic efforts surrounding the Russia–Ukraine war continue, although major political and security differences remain between the two sides.",
+      "title": "European Migration Policy Remains Under Debate",
+      "description": "Several European governments are examining new arrangements for managing migration and returns, including possible facilities outside the European Union. The proposals remain politically sensitive.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Ukraine peace talks Europe"
+      "imageQuery": "European migration policy border"
     },
     {
       "category": "europe",
-      "title": "Europe Faces New Energy Market Pressure",
-      "description": "Higher oil and natural gas prices are increasing pressure on European energy markets as governments assess the potential effects of prolonged Middle East instability.",
+      "title": "European Bond Yields Remain Under Pressure",
+      "description": "Higher government borrowing costs are affecting European financial markets as investors reassess inflation, fiscal deficits and the possibility of further central-bank rate increases.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Europe natural gas energy market"
+      "imageQuery": "European government bonds financial market"
     },
 
     {
       "category": "africa",
-      "title": "Nigeria's Economy Remains Under Close Watch",
-      "description": "Nigeria continues to focus on economic reforms, investment, security and living costs as policymakers seek to translate stronger economic growth into broader improvements in household welfare.",
+      "title": "BREAKING: SEC Approves Dangote Refinery IPO",
+      "description": "Nigeria's Securities and Exchange Commission has approved the initial public offering of Dangote Group's refinery business. The offering could raise about ₦2.15 trillion, or $1.63 billion, if fully subscribed.",
+      "source": "Reuters / SEC",
+      "image": "",
+      "imageQuery": "Dangote Refinery Lagos Nigeria"
+    },
+    {
+      "category": "africa",
+      "title": "Dangote Refinery IPO Set for September 14",
+      "description": "The planned offering involves 4.1 billion ordinary shares priced at ₦525 each, according to the company and Reuters. The order book is expected to open on September 14, making it potentially Africa's biggest-ever share sale.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Dangote Refinery Nigeria oil facility"
+    },
+    {
+      "category": "africa",
+      "title": "Dangote Plans Major Refinery Capacity Expansion",
+      "description": "Funds from the IPO are expected to support plans to expand the refinery's capacity from 650,000 barrels per day towards 1.4 million barrels per day.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "Dangote refinery oil production Nigeria"
+    },
+    {
+      "category": "africa",
+      "title": "Nigeria Could Attract More Energy Investment",
+      "description": "International Energy Agency chief Fatih Birol says Nigeria could potentially double energy investment within five years as global energy supply disruptions increase demand for reliable oil, gas and renewable-energy partners.",
+      "source": "Reuters / IEA",
+      "image": "",
+      "imageQuery": "Nigeria oil gas energy investment"
+    },
+    {
+      "category": "africa",
+      "title": "Nigeria's Economy Continues to Face Security and Cost Pressures",
+      "description": "Nigeria's stronger economic growth is being accompanied by continuing challenges involving security, fuel prices, household costs and the need to attract long-term investment.",
       "source": "RadiantWaves Media",
       "image": "",
-      "imageQuery": "Nigeria economy Lagos business"
-    },
-    {
-      "category": "africa",
-      "title": "Nigeria GDP Growth Reaches 4.43%",
-      "description": "Nigeria's economy expanded by 4.43% year-on-year in the second quarter of 2026, accelerating from the previous quarter as oil and non-oil sectors contributed to growth.",
-      "source": "Reuters / National Bureau of Statistics",
-      "image": "",
-      "imageQuery": "Nigeria economy Lagos skyline"
-    },
-    {
-      "category": "africa",
-      "title": "Security Remains a Major Challenge for Nigeria",
-      "description": "Kidnapping, banditry and other security threats continue to place pressure on communities and government resources across several parts of Nigeria.",
-      "source": "Reuters",
-      "image": "",
-      "imageQuery": "Nigeria security police military operation"
+      "imageQuery": "Nigeria economy Lagos market"
     },
 
     {
       "category": "business",
-      "title": "Brent Crude Climbs to $95.67",
-      "description": "Brent crude rose to approximately $95.67 a barrel early Friday, while WTI reached about $91.56. Both benchmarks are on course for significant weekly gains as Middle East supply risks persist.",
-      "source": "Reuters",
+      "title": "Global Money-Market Funds Attract $46.1 Billion",
+      "description": "Global money-market funds received a net $46.1 billion in the week ending September 2, their biggest weekly inflow since early August. Investors are seeking safer and more liquid assets amid geopolitical and bond-market uncertainty.",
+      "source": "Reuters / LSEG Lipper",
       "image": "",
-      "imageQuery": "Brent crude oil barrels market"
+      "imageQuery": "global financial markets investment funds"
     },
     {
       "category": "business",
-      "title": "Gold Holds Near $4,477 an Ounce",
-      "description": "Gold prices remained around $4,477 an ounce as investors awaited US employment data and assessed the outlook for interest rates. Geopolitical uncertainty is also supporting demand for the precious metal.",
+      "title": "Oil Prices Remain Elevated as Hormuz Risks Persist",
+      "description": "Brent crude climbed sharply during the week as renewed US–Iran tensions increased fears of further disruption around the Strait of Hormuz. Higher energy prices are also adding to inflation concerns.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "gold bars financial market"
+      "imageQuery": "Brent crude oil tanker market"
     },
     {
       "category": "business",
-      "title": "Asian Markets Rebound Ahead of US Jobs Data",
-      "description": "Asian stocks rose on Friday as investors reacted to softer US interest-rate expectations and prepared for the latest US employment figures.",
+      "title": "Global Bond Sell-Off Raises Borrowing Costs",
+      "description": "Government bond yields have climbed across several major economies, increasing borrowing costs for governments, businesses and households while creating new challenges for financial markets.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Asian stock market trading"
-    },
-    {
-      "category": "business",
-      "title": "Yen Gains as Bank of Japan Rate Hike Bets Increase",
-      "description": "The Japanese yen has strengthened as markets increasingly expect the Bank of Japan could raise interest rates, while a softer US dollar has provided additional support.",
-      "source": "Reuters",
-      "image": "",
-      "imageQuery": "Japanese yen dollar Bank of Japan"
+      "imageQuery": "global bond market trading"
     },
 
     {
       "category": "technology",
-      "title": "AI Regulation Remains a Global Political Issue",
-      "description": "Governments are increasingly examining the impact of artificial intelligence on elections, public information and political campaigns as concerns about AI-generated content grow.",
+      "title": "Nvidia Agrees to Buy Hugging Face for $12.93 Billion",
+      "description": "Nvidia has agreed to acquire AI developer platform Hugging Face for about $12.93 billion. The deal would deepen Nvidia's position in the open-source artificial-intelligence ecosystem.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "artificial intelligence election technology"
+      "imageQuery": "Nvidia Hugging Face artificial intelligence"
     },
     {
       "category": "technology",
-      "title": "AI Investment Continues to Drive Technology Markets",
-      "description": "Demand for artificial intelligence infrastructure, advanced chips and data centres continues to influence technology investment and global financial markets.",
+      "title": "AI Chip Demand Drives South Korean Exports",
+      "description": "South Korea's exports have reached $709.4 billion so far in 2026, already surpassing the previous full-year record. Semiconductor exports rose 169.6% from a year earlier and now account for 41% of total exports.",
+      "source": "Reuters / Korea Customs Service",
+      "image": "",
+      "imageQuery": "South Korea semiconductor factory AI chips"
+    },
+    {
+      "category": "technology",
+      "title": "South Korea Could Reach $1 Trillion in Annual Exports",
+      "description": "South Korea is on course to potentially reach $1 trillion in annual exports by early December as strong global demand for artificial-intelligence chips continues to support the country's technology sector.",
+      "source": "Reuters",
+      "image": "",
+      "imageQuery": "South Korea semiconductor technology exports"
+    },
+    {
+      "category": "technology",
+      "title": "AI Investment Continues to Reshape Global Industry",
+      "description": "Artificial intelligence is driving demand for advanced chips, computing infrastructure and data centres, with the technology boom increasingly influencing trade, investment and industrial policy.",
       "source": "RadiantWaves Media",
       "image": "",
       "imageQuery": "AI data centre semiconductor technology"
     },
-    {
-      "category": "technology",
-      "title": "Cybersecurity Awareness Remains Important",
-      "description": "Internet users should remain cautious about suspicious links, fake recruitment offers and requests for personal information as online scams continue to evolve.",
-      "source": "RadiantWaves Media",
-      "image": "",
-      "imageQuery": "cybersecurity phishing laptop"
-    },
 
     {
       "category": "asia",
-      "title": "Typhoon Saudel Brings Severe Flooding to China",
-      "description": "Typhoon Saudel has caused severe flooding across parts of southern China, prompting evacuations, school closures and emergency responses in several affected areas.",
+      "title": "Sydney Faces Extreme Bushfire Risk",
+      "description": "Sydney is experiencing an unusually intense spring heatwave, with temperatures reaching around 33°C. Authorities have issued an extreme bushfire-risk rating and a total fire ban for the Greater Sydney Region.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Typhoon Saudel China flooding rescue"
+      "imageQuery": "Sydney Australia bushfire risk heatwave"
     },
     {
       "category": "asia",
-      "title": "More Than 83,000 Evacuated in Fujian",
-      "description": "More than 83,000 residents in Fujian have been evacuated as Typhoon Saudel brings torrential rain and flooding. Authorities are warning of additional risks including landslides.",
+      "title": "Typhoon Saudel Brings Flooding to Southern China",
+      "description": "Typhoon Saudel has brought torrential rain and flooding to parts of southern China. More than 83,000 people have been evacuated in Fujian, while authorities continue emergency operations.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Fujian China typhoon flood evacuation"
+      "imageQuery": "Typhoon Saudel China flood rescue"
     },
     {
       "category": "asia",
-      "title": "Japan's Yen Strengthens Against Dollar",
-      "description": "The yen has gained around 2.6% over the week as investors increase expectations of a possible Bank of Japan rate hike.",
+      "title": "China Reports Fresh Landslide Rescue Operation",
+      "description": "More than 10 people were reported trapped after a landslide struck a town in China's Jiangxi province. Rescue teams are responding as authorities assess the situation.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Japan yen currency Tokyo"
+      "imageQuery": "China Jiangxi landslide rescue"
     },
 
     {
       "category": "world",
-      "title": "Nepal Flood Losses Estimated at $2.56 Billion",
-      "description": "Nepal's catastrophic August flooding has caused an estimated 387.5 billion Nepalese rupees, or about $2.56 billion, in economic losses. Authorities say more than 1,250 people have died and more than 4,200 remain missing.",
+      "title": "Nordic Football Federations Raise FIFA Governance Concerns",
+      "description": "Football associations from Nordic countries are seeking greater transparency and consultation in FIFA decision-making and have called for wider European engagement on football governance.",
       "source": "Reuters",
       "image": "",
-      "imageQuery": "Nepal flood damage villages"
-    },
-    {
-      "category": "world",
-      "title": "Engineers Help Guide Nepal Rescue Operation",
-      "description": "More than 500 engineers have been using a WhatsApp group to share tunnel layouts and structural information with rescue teams searching for people believed to be trapped at hydropower facilities.",
-      "source": "Reuters",
-      "image": "",
-      "imageQuery": "Nepal hydropower rescue engineers flood"
+      "imageQuery": "FIFA football governance Europe"
     }
   ],
 
   "topStories": [
     {
-      "title": "US–Iran Tensions Keep Oil Above $95",
-      "description": "Renewed tensions between Washington and Tehran continue to support higher oil prices and raise concerns about global energy supplies.",
+      "title": "Trump Warns Iran's Pickaxe Mountain Could Be Targeted",
+      "description": "The US president says further military action against Iran could come soon as tensions remain extremely high.",
       "image": "",
-      "imageQuery": "US Iran conflict oil tanker"
+      "imageQuery": "Trump Iran Pickaxe Mountain"
     },
     {
-      "title": "Nepal Flood Disaster Claims More Than 1,250 Lives",
-      "description": "Nepal continues a huge rescue and recovery operation following catastrophic flooding, with more than 4,200 people still missing.",
+      "title": "Dangote Refinery IPO Gets SEC Approval",
+      "description": "Nigeria's landmark refinery IPO could raise about ₦2.15 trillion and become Africa's biggest-ever share sale.",
       "image": "",
-      "imageQuery": "Nepal flood rescue operation"
+      "imageQuery": "Dangote Refinery Nigeria"
     },
     {
-      "title": "Typhoon Saudel Hits Southern China",
-      "description": "Severe flooding from Typhoon Saudel has triggered evacuations and emergency measures across affected parts of China.",
+      "title": "Two Nepal Flood Survivors Rescued After Nine Days",
+      "description": "Two hydropower workers have been pulled alive from a flooded tunnel, offering hope during Nepal's devastating disaster.",
       "image": "",
-      "imageQuery": "China typhoon flood rescue"
+      "imageQuery": "Nepal tunnel rescue workers"
     },
     {
-      "title": "Asian Markets Rebound Ahead of US Jobs Data",
-      "description": "Asian shares rose as investors awaited key US employment figures and reassessed expectations for Federal Reserve policy.",
+      "title": "South Korean Exports Break Previous Annual Record",
+      "description": "AI-chip demand has pushed South Korea's exports above last year's full-year record before the end of 2026.",
       "image": "",
-      "imageQuery": "Asian stock market financial district"
+      "imageQuery": "South Korea AI semiconductor chips"
     },
     {
-      "title": "Gold Holds Near $4,477",
-      "description": "Gold remains elevated as investors monitor interest rates, employment data and geopolitical uncertainty.",
+      "title": "Nvidia to Acquire Hugging Face for $12.93 Billion",
+      "description": "The major acquisition strengthens Nvidia's position in the open-source AI ecosystem.",
       "image": "",
-      "imageQuery": "gold bars market investment"
+      "imageQuery": "Nvidia Hugging Face AI"
+    },
+    {
+      "title": "Sydney Faces Extreme Bushfire Conditions",
+      "description": "An intense spring heatwave has pushed Sydney into extreme bushfire-risk conditions.",
+      "image": "",
+      "imageQuery": "Sydney heatwave bushfire Australia"
     }
   ],
 
   "breakingHistory": [
-    "September 4, 2026: US–Iran tensions, elevated oil prices, the Nepal flood disaster, Typhoon Saudel and global interest-rate expectations dominate the morning news.",
+    "September 5, 2026: US–Iran tensions, energy-market risks, the Nepal humanitarian disaster, Nigeria's landmark Dangote Refinery IPO, extreme weather and the accelerating AI economy dominate the morning news.",
     "RadiantWaves Editorial Standard: RadiantWaves Media distinguishes confirmed developments from official statements, developing reports, forecasts and claims that have not been independently verified."
   ],
 
@@ -298,12 +339,12 @@
 
   "morningSummary": {
     "title": "MORNING SUMMARY",
-    "description": "The global picture this Friday is dominated by geopolitical tension, energy prices, extreme weather and monetary policy. The US–Iran confrontation remains unresolved and is keeping Brent crude above $95 a barrel, with oil heading for its strongest weekly gain since July. Nepal continues to recover from catastrophic flooding that has killed more than 1,250 people and left more than 4,200 missing, while estimated economic losses have reached about $2.56 billion. China is dealing with severe flooding from Typhoon Saudel, with tens of thousands evacuated. Asian markets have rebounded ahead of important US employment data, while the Japanese yen has strengthened as expectations of a Bank of Japan rate hike increase."
+    "description": "The global picture this Saturday is dominated by conflict, energy security, humanitarian emergencies, extreme weather and technology. US–Iran tensions remain extremely high after President Donald Trump warned that the United States could target Iran's Pickaxe Mountain. The confrontation continues to affect the Strait of Hormuz and global oil markets. In Ukraine, a Russian drone struck the SBU security service headquarters in central Kyiv as US diplomats prepare further peace efforts. Nepal is still dealing with a catastrophic flood disaster, but two hydropower workers were rescued alive after nine days underground. In Nigeria, the Securities and Exchange Commission has approved the Dangote Refinery IPO, potentially creating Africa's biggest-ever share sale. Sydney faces extreme bushfire conditions, while South Korea's AI-driven semiconductor exports have pushed the country's exports beyond its previous annual record. Nvidia's planned $12.93 billion acquisition of Hugging Face is another major sign of the continuing expansion of the global AI industry."
   },
 
-  "bigQuestion": "When conflict, energy costs and climate disasters affect millions of people, should governments put greater priority on international cooperation even when political differences make cooperation difficult?",
+  "bigQuestion": "With wars, rising energy costs, extreme weather and rapid technological change affecting ordinary people at the same time, are governments doing enough to protect citizens from the consequences?",
 
-  "quoteOfTheDay": "A difficult chapter is not the end of the story; sometimes it is where the strength for the next chapter is built.",
+  "quoteOfTheDay": "You cannot control every storm around you, but you can choose to remain informed, prepared and courageous through it.",
 
   "branding": {
     "name": "RADIANTWAVES MEDIA",

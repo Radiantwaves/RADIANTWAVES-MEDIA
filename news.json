@@ -1,159 +1,157 @@
 {
-  "date": "Monday, 12 October 2026",
+  "date": "Tuesday, 13 October 2026",
   "edition": "Morning News & Global Update",
+  "branding": {
+    "name": "RadiantWaves Media",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories"
+  },
   "hero": {
-    "title": "North Korea Fires Ballistic Missiles as Middle East Conflict Keeps Energy Markets on Edge",
-    "description": "North Korea's latest missile launches, renewed pressure on Middle Eastern transport and energy infrastructure, and uncertain global markets lead today's international briefing.",
+    "title": "Global Energy Risks, Ukraine Tensions and Economic Growth in Focus",
+    "description": "Today's global briefing examines rising energy costs, the Russia–Ukraine war, the IMF's economic outlook, Nigeria's Dangote Refinery IPO and a cyberattack affecting supermarkets in France.",
     "image": "",
-    "imageQuery": "North Korea ballistic missile launch military parade"
+    "imageQuery": "world news global economy oil markets energy security international diplomacy"
   },
   "breaking": [
-    "ASIA-PACIFIC: North Korea fires multiple ballistic missiles towards the sea off its eastern coast, South Korea's military reports.",
-    "MIDDLE EAST: Attacks affecting Saudi Arabia and regional transport infrastructure heighten concerns over security and energy supplies.",
-    "ENERGY: Brent crude falls around 1.6% to $103.01 a barrel in early Monday trading, according to Reuters.",
-    "GLOBAL MARKETS: Investors assess geopolitical risks, rising borrowing costs and the approaching US corporate earnings season.",
-    "UKRAINE: A proposed energy-infrastructure ceasefire remains a diplomatic issue, with the details and implementation still developing.",
-    "TECHNOLOGY: Demand for artificial intelligence chips remains an important driver of expectations for major technology companies."
+    "ENERGY: Brent crude traded near $106 a barrel early Tuesday as markets assessed supply risks in the Gulf and the prospect of additional diesel supplies.",
+    "UKRAINE: Kyiv says Russia continues to attack energy infrastructure despite a US-announced energy ceasefire; the status and terms of any agreement remain disputed.",
+    "NIGERIA: Dangote Refinery's IPO has been extended to 27 October, giving prospective investors additional time to complete applications.",
+    "GLOBAL ECONOMY: The IMF says investment in artificial intelligence is supporting growth, but war-related inflation, public debt and uncertainty over AI returns remain major risks.",
+    "FRANCE: A cyberattack targeting refrigeration systems has reportedly affected hundreds of supermarkets, prompting food losses and an investigation."
   ],
   "featured": {
-    "title": "North Korea's Missile Launches Raise Regional Security Concerns",
-    "content": "South Korea's military says North Korea launched multiple ballistic missiles from the Pyongyang area towards the East Sea on Monday. One type reportedly travelled more than 900 kilometres. Japan also detected suspected ballistic missiles, with officials reporting that the projectiles had fallen into the sea. South Korea condemned the launches as violations of UN Security Council resolutions. The launches follow South Korea's recent test of a domestically developed hypersonic weapon. The circumstances and technical details of the latest North Korean launches remain under assessment.",
+    "title": "IMF Warns That Growth Must Reach People as Wars and Debt Threaten the Outlook",
+    "content": "The International Monetary Fund's latest outlook points to global growth supported partly by investment in artificial intelligence. However, the benefits are uneven, while conflicts, higher energy costs and public debt threaten economic stability. The central question for governments is how to translate investment and economic growth into better living standards, secure jobs and affordable essentials.",
     "image": "",
-    "imageQuery": "North Korea missile launch East Sea South Korea military October 2026"
+    "imageQuery": "International Monetary Fund global economy financial markets world economic outlook"
   },
   "articles": [
     {
       "category": "world",
-      "title": "North Korea Launches Multiple Ballistic Missiles",
-      "content": "South Korea's Joint Chiefs of Staff reported that North Korea launched several ballistic missiles from near Pyongyang towards the East Sea on Monday morning. One type reportedly travelled more than 900 kilometres. Japan separately detected suspected ballistic missiles and said the projectiles had fallen into the sea. South Korea condemned the launches and called for them to stop. The incident follows Seoul's recent hypersonic weapon test and comes amid rising tensions between the two Koreas. The precise characteristics of all the missiles remain under investigation.",
+      "title": "Middle East Tensions Keep Energy Supply Risks in Focus",
+      "summary": "Oil markets remain sensitive to security incidents affecting Gulf shipping and energy infrastructure. Brent crude futures eased early Tuesday after rising in the previous session, with traders weighing possible additional diesel supplies against continuing risks to regional supply routes.",
+      "content": "Reuters reported that Brent crude was trading at approximately $106.04 a barrel early Tuesday, while US West Texas Intermediate stood near $93.27. These were early-session prices and may change during the day. Attacks and incidents affecting the Gulf and shipping near the Strait of Hormuz continue to influence market sentiment. The Strait is an important route for international energy shipments, so prolonged disruption could increase transport, insurance and fuel costs.",
       "image": "",
-      "imageQuery": "North Korea ballistic missile launch military footage"
+      "imageQuery": "oil tanker Strait of Hormuz oil terminal global energy shipping"
     },
     {
       "category": "world",
-      "title": "Saudi Arabia Faces Renewed Security Concerns After Reported Attacks",
-      "content": "Saudi Arabia has faced reported missile attacks affecting Riyadh's airport and other regional infrastructure over the weekend. Reporting from The Guardian's live coverage said the attacks killed 12 people and injured more than 300, while the Houthis claimed responsibility for strikes. The developments have intensified concerns about civilian safety, aviation and regional energy infrastructure. Details of individual incidents and responsibility should be followed through official statements and independently verified reporting as the situation develops.",
+      "title": "Ukraine Disputes the Status of US-Announced Energy Ceasefire",
+      "summary": "Ukraine says Russian attacks on energy facilities have continued despite a ceasefire announcement by US President Donald Trump. The existence, terms and implementation of any agreement remain contested.",
+      "content": "Ukrainian President Volodymyr Zelenskyy has accused Russia of violating the energy ceasefire following strikes on Ukrainian infrastructure. Ukraine has called on Washington to ensure that any agreement is respected. European Union foreign ministers have also advanced new sanctions listings targeting Russia's military-industrial supply chains. Reports of continuing attacks underline the uncertainty surrounding the proposed arrangement. This is not confirmation of a fully implemented or mutually observed ceasefire.",
       "image": "",
-      "imageQuery": "Riyadh Saudi Arabia international airport terminal"
-    },
-    {
-      "category": "world",
-      "title": "Diplomatic Efforts Continue Amid Middle East Conflict",
-      "content": "The conflict involving Iran and wider regional tensions continue to shape international diplomacy. Questions surrounding maritime security, shipping routes and the Strait of Hormuz remain central to the global response. Any sustained interruption to commercial shipping could affect the movement of oil and liquefied natural gas, increasing uncertainty for importers and energy-dependent industries. Diplomatic statements and proposed arrangements should not be treated as a confirmed settlement until the relevant parties announce and implement an agreement.",
-      "image": "",
-      "imageQuery": "Strait of Hormuz commercial oil tankers aerial view"
+      "imageQuery": "Ukraine damaged power infrastructure repair crews energy facilities"
     },
     {
       "category": "business",
-      "title": "Oil Prices Ease as Investors Assess Supply Risks",
-      "content": "Brent crude futures fell approximately 1.6% to $103.01 a barrel in early Monday trading, while US crude futures also declined, according to Reuters. Prices have been moving in response to geopolitical developments and uncertainty over potential changes in energy exports. The market is also monitoring a proposal concerning energy supplies linked to the Russia-Ukraine conflict. Prices can change quickly, and the reported levels represent a market snapshot rather than a fixed price for the day.",
+      "title": "Oil Slips as Markets Weigh Possible Russian Diesel Supplies",
+      "summary": "Crude prices edged lower early Tuesday as traders considered the possibility of additional diesel supplies from Russia alongside continuing geopolitical risks.",
+      "content": "Reuters reported that the US administration had temporarily lifted sanctions affecting Russian fuel exports following an announced arrangement for Russia to supply diesel to global markets. The proposal has attracted criticism from US lawmakers who argue that easing restrictions could undermine pressure on Moscow over its war in Ukraine. Any impact on global fuel availability will depend on actual deliveries, market conditions and the implementation of the arrangement. OPEC has also highlighted the burden of high shipping and insurance costs.",
       "image": "",
-      "imageQuery": "crude oil barrels refinery energy market"
+      "imageQuery": "diesel fuel storage tanks oil refinery industrial energy supply"
+    },
+    {
+      "category": "business",
+      "title": "IMF Says AI Investment Is Supporting Global Growth but Risks Remain",
+      "summary": "The International Monetary Fund projects global real GDP growth of around 3.1% in 2026, with investment in artificial intelligence supporting activity while debt, conflict and inflation create uncertainty.",
+      "content": "According to Reuters' reporting on the IMF outlook, AI-related investment is helping support growth in advanced economies and several countries involved in technology supply chains. However, the benefits may not arrive as quickly or as widely as investors expect. The IMF also identifies prolonged conflict-related inflation, rising public debt and climate-related disruptions as significant risks. Governments face the challenge of maintaining financial stability while investing in infrastructure, skills, energy security and services that benefit the wider population.",
+      "image": "",
+      "imageQuery": "IMF world economy meeting economists global financial outlook"
+    },
+    {
+      "category": "africa",
+      "title": "Dangote Refinery Extends IPO Deadline to 27 October",
+      "summary": "Dangote Petroleum Refinery has extended its public share offering by two weeks, with the move intended to give prospective investors more time to complete the application process.",
+      "content": "Reuters reported on 12 October that Nigeria's Securities and Exchange Commission had approved an extension of the Dangote Refinery IPO deadline to 27 October 2026. The offer is intended to broaden ownership of the refinery, which has a reported capacity of 700,000 barrels per day, and help finance its expansion. The company is seeking to reach a large number of retail investors, including through initiatives to broaden access across Africa. However, the offering is not registered as a public offering in every African country, and international participation may be limited by local rules and available platforms. Investors should read the prospectus, consider the risks and avoid assuming that strong demand guarantees returns.",
+      "image": "",
+      "imageQuery": "Dangote Petroleum Refinery Lekki Lagos Nigeria refinery industrial complex"
+    },
+    {
+      "category": "africa",
+      "title": "Dangote IPO Raises Questions About Access to African Capital Markets",
+      "summary": "The refinery's share offering has drawn attention to the potential for domestic investment to help finance large African infrastructure and industrial projects.",
+      "content": "Reuters reported that the Dangote IPO has generated strong public interest and highlighted the role retail investors could play in African capital markets. Supporters say broader share ownership could help mobilise local savings for industrial expansion and reduce dependence on some forms of foreign borrowing. Other observers have questioned the valuation and stressed the importance of transparency, investor education and reliable digital investment platforms. The longer-term impact will depend on the offer's outcome and whether more people participate safely and sustainably in capital markets.",
+      "image": "",
+      "imageQuery": "Nigerian Stock Exchange Lagos financial market investors trading"
     },
     {
       "category": "europe",
-      "title": "European Governments Monitor Energy Costs and Supply Security",
-      "content": "European policymakers continue to face pressure to balance affordable energy, industrial competitiveness and reliable supplies. International conflicts and uncertainty surrounding refined petroleum products can influence transport, manufacturing and household bills. Governments and businesses are monitoring fuel availability, import costs and alternative supply routes. The extent of any additional price increases will depend on market conditions, shipping security and developments in international diplomacy.",
+      "title": "Cyberattack Disrupts Refrigeration Systems at French Supermarkets",
+      "summary": "A cyberattack reported on 11–12 October affected refrigeration systems at hundreds of French supermarkets, leading to food losses and an investigation.",
+      "content": "Le Monde reported that the attack affected stores across several major supermarket networks after refrigeration control systems were manipulated. Some retailers reportedly had to discard fresh and frozen products to avoid food-safety risks. Investigators are examining the incident, and no group had claimed responsibility in the report. The case highlights how weaknesses in connected industrial systems can disrupt essential services, supply chains and food availability. The full financial impact and the precise scope of the attack remain under assessment.",
       "image": "",
-      "imageQuery": "European energy infrastructure gas pipelines refinery"
+      "imageQuery": "French supermarket food refrigeration aisle supermarket shelves"
     },
     {
       "category": "europe",
-      "title": "Ukraine Energy Ceasefire Proposal Remains Under Discussion",
-      "content": "A proposal for an energy-focused ceasefire between Russia and Ukraine has become part of wider diplomatic discussions. Any arrangement would need clear terms, agreement from the parties and a way to monitor compliance. Energy infrastructure has remained a significant feature of the conflict, with attacks threatening electricity generation, fuel supplies and essential services. Until the terms are formally agreed and implemented, a comprehensive energy truce should not be presented as established.",
+      "title": "Europe Faces Renewed Pressure to Protect Energy Security",
+      "summary": "European governments are weighing energy affordability, industrial competitiveness and continued support for Ukraine amid renewed uncertainty over fuel supplies.",
+      "content": "Higher fuel prices and risks to international energy transport are adding pressure to European households and businesses. EU leaders are due to discuss energy prices, competitiveness, support for Ukraine and defence readiness at their 15–16 October European Council meeting. Policymakers face difficult choices between short-term relief, investment in more resilient energy systems and longer-term efforts to reduce exposure to volatile fossil-fuel markets.",
       "image": "",
-      "imageQuery": "Ukraine electricity power station energy infrastructure"
+      "imageQuery": "European Union flags Brussels energy security policy meeting"
     },
     {
       "category": "usa",
-      "title": "US Markets Prepare for Corporate Earnings and Inflation Data",
-      "content": "US investors are entering a closely watched period as major companies prepare to report earnings and fresh inflation data approaches. Markets are weighing expectations for corporate profits against borrowing costs, geopolitical uncertainty and the financial demands of investment in artificial intelligence. Technology companies remain an important influence on market performance, although results and price movements can vary considerably between businesses. Investors are also monitoring Treasury yields and signals about the future direction of monetary policy.",
+      "title": "US-Russia Diesel Arrangement Draws Bipartisan Criticism",
+      "summary": "The US administration's reported decision to ease sanctions affecting Russian fuel exports has raised questions about energy prices, sanctions policy and support for Ukraine.",
+      "content": "The administration says additional diesel supplies could help ease tightness in global fuel markets. Critics in both major US political parties argue that easing restrictions could provide revenue to Russia while its war against Ukraine continues. The real effect on prices will depend on the amount of fuel delivered, the timing of shipments and broader market conditions. The development illustrates how energy policy, economic pressures and foreign-policy objectives can come into conflict.",
       "image": "",
-      "imageQuery": "New York Wall Street stock market financial district"
+      "imageQuery": "White House Washington DC US government foreign policy"
     },
     {
       "category": "technology",
-      "title": "Artificial Intelligence Chips Remain Central to Technology Market Expectations",
-      "content": "Demand for advanced chips used in artificial intelligence continues to influence expectations for the technology industry. Taiwan Semiconductor Manufacturing Company, a major producer of advanced semiconductors, is expected to report results this week. Investors will be watching for information about orders, manufacturing capacity and demand from technology companies. Strong interest in AI infrastructure is also prompting questions about investment costs, financing and how sustainable future spending will be.",
+      "title": "AI Investment Supports Growth but Raises Questions About Future Returns",
+      "summary": "The global AI boom is attracting major investment, but economists warn that expected productivity gains may take time to materialise and may not be shared evenly.",
+      "content": "Investment in data centres, computing infrastructure and AI services is helping support economic activity in several economies. Yet the benefits remain uncertain, particularly if company earnings fail to meet high expectations or energy demand and borrowing costs rise further. Governments and businesses are also confronting questions about workforce training, responsible regulation, infrastructure capacity and how productivity gains can improve wages and public services.",
       "image": "",
-      "imageQuery": "advanced semiconductor wafer artificial intelligence computer chips"
+      "imageQuery": "artificial intelligence data centre servers computing technology"
     },
     {
       "category": "asia",
-      "title": "Asian Markets Trade Unevenly as Investors Assess Risks",
-      "content": "Asian share markets began the week unevenly as investors considered geopolitical developments, energy prices and the approaching corporate earnings season. Reuters reported declines in South Korean and Taiwanese shares, while mainland Chinese blue-chip stocks recorded a modest gain in early trading. Japanese markets were closed on Monday, and trading conditions were affected by a partial US market holiday. Movements may change as further company results and economic information become available.",
+      "title": "Asian Markets Monitor Dollar Strength and Energy Risks",
+      "summary": "Currency and financial markets across Asia are responding to a stronger US dollar, changing bond yields and continuing geopolitical uncertainty.",
+      "content": "Reuters reported that the US dollar was trading near an 18-month high early Tuesday, supported by relatively high US interest rates, economic growth and demand for defensive assets amid geopolitical risks. The dollar's strength can make dollar-priced imports more expensive for some economies, particularly energy importers. Currency movements and oil prices remain subject to new economic data and developments in the Middle East and Ukraine.",
       "image": "",
-      "imageQuery": "Asian financial district stock exchange market screens"
-    },
-    {
-      "category": "africa",
-      "title": "African Economies Remain Exposed to Energy and Shipping Costs",
-      "content": "African economies continue to monitor international oil prices, freight costs and the availability of essential imports. Higher fuel and transport expenses can place pressure on food distribution, agriculture, manufacturing and household purchasing power. Countries that depend on imported refined petroleum products may face particular challenges when global supplies tighten. Expanding local processing and diversifying supply routes can improve resilience, although domestic production does not automatically insulate consumers from international price movements.",
-      "image": "",
-      "imageQuery": "African port cargo ships fuel transport logistics"
-    },
-    {
-      "category": "africa",
-      "title": "Nigeria's Dangote Refinery Draws International Energy Attention",
-      "content": "Nigeria's Dangote Refinery remains an important development in the country's energy sector as global fuel supply disruptions create opportunities for refined petroleum exports. Reuters previously reported that the refinery had become an important supplier to European fuel markets during supply disruptions. The planned public share offering has also attracted attention from Nigerian investors. The wider significance includes domestic fuel availability, export earnings and capital-market participation. However, refinery output and an IPO do not guarantee lower retail fuel prices or investment returns.",
-      "image": "",
-      "imageQuery": "Dangote Petroleum Refinery Lekki Nigeria aerial view"
-    },
-    {
-      "category": "business",
-      "title": "Investors Watch Bond Yields and the US Dollar",
-      "content": "Global financial markets are responding to changes in government bond yields, currency movements and expectations for interest rates. Higher long-term yields can increase borrowing costs for governments, companies and households, while affecting how investors value shares and other assets. Reuters reported that the US dollar remained firm as investors assessed the interest-rate outlook. The implications will depend on incoming economic data, central-bank decisions and developments in energy markets.",
-      "image": "",
-      "imageQuery": "government bonds financial markets trading screens"
+      "imageQuery": "Asian financial district stock exchange electronic market screens"
     }
   ],
   "topStories": [
     {
-      "title": "North Korea Fires Multiple Ballistic Missiles",
-      "summary": "South Korea reports several launches towards the East Sea, including a missile type that travelled more than 900 kilometres.",
-      "category": "Asia-Pacific"
+      "title": "Oil Markets Balance Gulf Supply Risks Against Possible Diesel Relief",
+      "category": "World",
+      "summary": "Crude prices eased early Tuesday, but shipping disruptions and energy infrastructure attacks continue to create uncertainty."
     },
     {
-      "title": "Saudi Arabia Faces Renewed Security Concerns",
-      "summary": "Reported attacks affecting aviation and regional infrastructure raise concerns over civilian safety and transport.",
-      "category": "Middle East"
+      "title": "Ukraine Challenges the Status of an Energy Ceasefire",
+      "category": "World",
+      "summary": "Kyiv says attacks on energy facilities have continued despite a US announcement of a proposed arrangement."
     },
     {
-      "title": "Oil Falls Below Its Recent High",
-      "summary": "Brent crude trades around $103.01 a barrel in early Monday trading as investors assess supply risks.",
-      "category": "Business"
+      "title": "Dangote Refinery IPO Deadline Extended",
+      "category": "Africa",
+      "summary": "The Nigerian share offering is now due to close on 27 October, according to Reuters."
     },
     {
-      "title": "Ukraine Energy Truce Proposal Remains Uncertain",
-      "summary": "Diplomatic discussions continue, but a comprehensive, implemented energy ceasefire has not been established.",
-      "category": "Europe"
+      "title": "IMF Highlights AI-Driven Growth and Global Economic Risks",
+      "category": "Business",
+      "summary": "Technology investment supports growth, while debt, inflation and conflict threaten economic stability."
     },
     {
-      "title": "Artificial Intelligence Shapes Technology Outlook",
-      "summary": "Investors watch semiconductor demand and company earnings for further evidence of AI-related spending.",
-      "category": "Technology"
-    },
-    {
-      "title": "Dangote Refinery Maintains International Focus",
-      "summary": "Nigeria's refining expansion and proposed IPO remain significant energy and investment stories.",
-      "category": "Africa"
+      "title": "Cyberattack Hits Refrigeration Systems at French Supermarkets",
+      "category": "Europe",
+      "summary": "Retailers have reported food losses as investigators examine an attack on connected refrigeration systems."
     }
   ],
   "breakingHistory": [
-    "12 October 2026: South Korea reports multiple North Korean ballistic missile launches towards the East Sea.",
-    "12 October 2026: Oil prices decline in early trading as investors assess geopolitical and energy-supply developments.",
-    "12 October 2026: Reported attacks affecting Saudi Arabia raise concerns over regional aviation and infrastructure.",
-    "12 October 2026: Global investors monitor corporate earnings, bond yields and inflation expectations."
+    "13 October 2026: Oil markets assess Gulf supply risks and the potential impact of additional Russian diesel supplies.",
+    "12 October 2026: Reuters reports that the Dangote Refinery IPO deadline has been extended to 27 October.",
+    "12 October 2026: Ukraine disputes the status of a US-announced energy ceasefire after further reported strikes on energy infrastructure.",
+    "13 October 2026: Reports describe a cyberattack affecting refrigeration systems at hundreds of French supermarkets."
   ],
-  "morningSummary": "Monday's international agenda is dominated by North Korea's latest missile launches, renewed security concerns in the Middle East and uncertainty in global energy markets. Investors are also watching US corporate earnings, inflation data and the continuing growth of artificial intelligence-related investment. Across Africa, energy supply and fuel affordability remain important economic concerns.",
-  "bigQuestion": "As geopolitical tensions affect energy supplies, financial markets and regional security, how can governments protect their citizens while maintaining international cooperation?",
-  "quoteOfTheDay": "In a world of uncertainty, clarity begins with careful listening, reliable information and the wisdom to distinguish what is known from what is still unfolding.",
-  "branding": {
-    "name": "RadiantWaves Media",
-    "slogan": "Gateway to Your World News — Connecting You to the World",
-    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories."
-  },
-  "editorialNote": "RadiantWaves Media presents independently written news summaries based on available reporting. Missile activity, casualty figures, diplomatic proposals and market prices may change as further information becomes available. Official statements are attributed to the relevant authorities, and developing claims should be checked against subsequent reporting.",
+  "morningSummary": "Good morning. Energy security, the war in Ukraine, financial markets and Nigeria's capital market are among today's major stories. Oil prices eased slightly in early trading, but risks to Gulf shipping remain. Ukraine says attacks on energy infrastructure have continued despite a US-announced ceasefire arrangement whose implementation remains disputed. The IMF says AI investment is supporting global growth but warns that conflict, inflation and public debt remain serious risks. In Nigeria, Dangote Refinery's IPO deadline has been extended to 27 October. In France, a cyberattack affecting supermarket refrigeration systems has highlighted the vulnerability of essential infrastructure.",
+  "bigQuestion": "How can governments turn economic growth and security spending into improvements that ordinary people can actually feel in their daily lives? Share your views respectfully. Constructive debate begins with facts, accountability and a willingness to listen.",
+  "quoteOfTheDay": "A responsible society measures progress not only by the wealth it creates or the security it funds, but by how those achievements improve everyday life for its people.",
+  "editorialNote": "RadiantWaves Media presents independently written news summaries based on available reporting. Market prices and developing conflict reports can change quickly. Claims about military actions, ceasefires and political agreements are attributed to the relevant sources where appropriate. This news content is for general information and is not investment advice.",
   "sponsoredAdverts": [
     {
       "title": "Premium Nigerian Spices — From Nigeria to the World",

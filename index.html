@@ -1,1097 +1,630 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RadiantWaves Media — Gateway to Your World News. International news, Africa, Europe, the USA, business, technology and global affairs.">
+  <meta name="theme-color" content="#c40000">
+  <meta property="og:site_name" content="RadiantWaves Media">
+  <meta property="og:title" content="RadiantWaves Media | Global News">
+  <meta property="og:description" content="Gateway to Your World News — Connecting You to the World.">
+  <meta property="og:type" content="website">
 
-<meta charset="UTF-8">
+  <title>RadiantWaves Media | Global News</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css?v=4000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<meta name="description"
-content="Radiant Waves Media — Gateway To Your World News. Global breaking news, Africa, Europe, USA, business, technology and world news.">
-
-<meta name="theme-color"
-content="#c40000">
-
-<title>
-Radiant Waves Media | Global News
-</title>
-
-<link rel="stylesheet"
-href="./style.css?v=3000">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <script src="./script.js?v=4000" defer></script>
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-HEADER
-===================================================== -->
-
-<header>
-
-<div class="logo">
-
-<img
-src="logo.png"
-alt="Radiant Waves Media Logo">
-
-<div>
-
-<h1>
-RADIANT WAVES MEDIA
-</h1>
-
-<p class="header-slogan">
-Gateway To Your World News — Connecting You To The World
-</p>
-
-</div>
-
-</div>
-
-
-<nav>
-
-<a href="#world">
-World
-</a>
-
-<a href="#usa">
-USA
-</a>
-
-<a href="#europe">
-Europe
-</a>
-
-<a href="#africa">
-Africa
-</a>
-
-<a href="#business">
-Business
-</a>
-
-<a href="#technology">
-Technology
-</a>
-
-<a href="#top-stories">
-Top Stories
-</a>
-
-<a href="#archives">
-Archives
-</a>
-
-<a href="#live-tv">
-Live TV
-</a>
-
-<a href="#birthday-wall">
-Birthdays
-</a>
-
-<a href="#advert-form">
-Advertise
-</a>
-
-</nav>
-
-</header>
-
-
-
-<!-- =====================================================
-BREAKING NEWS TICKER
-===================================================== -->
-
-<div class="ticker-wrap">
-
-<div
-class="ticker"
-id="breaking-ticker">
-
-Loading Breaking News...
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-HERO VIDEO
-===================================================== -->
-
-<section class="hero-video">
-
-<video
-id="heroVideo"
-autoplay
-loop
-controls
-playsinline
-webkit-playsinline
-preload="auto">
-
-<source
-id="video-source"
-src="assets/video1.mp4"
-type="video/mp4">
-
-Your browser does not support video playback.
-
-</video>
-
-
-<div class="hero-overlay">
-</div>
-
-
-<div class="hero-content">
-
-
-<div class="live-badge">
-🔴 LIVE NEWS
-</div>
-
-
-<h1 id="hero-title">
-Global Breaking News
-</h1>
-
-
-<p id="hero-desc">
-Live updates from around the globe
-</p>
-
-
-
-<!-- VIDEO BUTTONS -->
-
-<div class="video-controls">
-
-<button
-type="button"
-onclick="changeVideo('assets/video1.mp4')">
-
-VIDEO 1
-
-</button>
-
-
-<button
-type="button"
-onclick="changeVideo('assets/video2.mp4')">
-
-VIDEO 2
-
-</button>
-
-
-<button
-type="button"
-onclick="changeVideo('assets/video3.mp4')">
-
-VIDEO 3
-
-</button>
-
-</div>
-
-
-
-<!-- SOUND -->
-
-<button
-id="sound-button"
-class="mute-button"
-type="button">
-
-🔊 ENABLE SOUND
-
-</button>
-
-
-
-<!-- HERO BREAKING SCROLL -->
-
-<div class="hero-scroll">
-
-<marquee
-id="hero-marquee"
-scrollamount="5">
-
-Loading Headlines...
-
-</marquee>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-FEATURED NEWS
-===================================================== -->
-
-<section
-class="featured-news"
-id="featured-news">
-
-</section>
-
-
-
-<!-- =====================================================
-SPONSORED ADVERTS
-THESE IMAGES REMAIN FIXED
-===================================================== -->
-
-<section
-id="sponsored-adverts-section">
-
-<h2 class="section-title">
-Sponsored Adverts
-</h2>
-
-
-<div id="sponsored-adverts">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-TOP STORIES
-===================================================== -->
-
-<section id="top-stories">
-
-<h2 class="section-title">
-Top Stories Of The Week
-</h2>
-
-
-<div id="top-stories-container">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-BREAKING NEWS HISTORY
-===================================================== -->
-
-<section id="breaking-history">
-
-<h2 class="section-title">
-Breaking News History
-</h2>
-
-
-<div id="history-container">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-ARCHIVES
-===================================================== -->
-
-<section id="archives">
-
-<h2 class="section-title">
-Previous News Archives
-</h2>
-
-
-<div class="archive-box">
-
-
-<div class="archive-card">
-
-<h3>
-🌅 Morning News
-</h3>
-
-<p>
-Daily morning world headlines and reports.
-</p>
-
-</div>
-
-
-<div class="archive-card">
-
-<h3>
-☀️ Midday News
-</h3>
-
-<p>
-Afternoon international updates and developments.
-</p>
-
-</div>
-
-
-<div class="archive-card">
-
-<h3>
-🌆 Evening News
-</h3>
-
-<p>
-Prime-time global stories and analysis.
-</p>
-
-</div>
-
-
-<div class="archive-card">
-
-<h3>
-🌙 Late Night News
-</h3>
-
-<p>
-Overnight breaking stories around the world.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-LIVE TV
-===================================================== -->
-
-<section id="live-tv">
-
-<h2 class="section-title">
-Radiant Waves Live TV
-</h2>
-
-
-<div class="live-tv-box">
-
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
-frameborder="0"
-allow="autoplay; encrypted-media; picture-in-picture"
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-BIRTHDAY WALL
-===================================================== -->
-
-<section id="birthday-wall">
-
-<h2 class="section-title">
-Birthday Wall 🎂
-</h2>
-
-
-<div class="birthday-container">
-
-
-<div class="birthday-card">
-
-<h3>
-Celebrate With Radiant Waves Media
-</h3>
-
-
-<p>
-Send birthday greetings, anniversaries, memorials and celebrations worldwide.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-CONTACT
-===================================================== -->
-
-<section id="contact-us">
-
-<h2 class="section-title">
-Contact Radiant Waves Media
-</h2>
-
-
-
-<div class="contact-grid">
-
-
-
-<!-- ADVERT -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-📢
-</div>
-
-
-<h3>
-Advert & Publicity
-</h3>
-
-
-<p>
-Promote businesses, products, events, campaigns and programs globally.
-</p>
-
-
-<a
-href="mailto:radiantwave2022@gmail.com?subject=Advert Request"
-class="contact-btn">
-
-Send Advert Request
-
-</a>
-
-</div>
-
-
-
-<!-- BIRTHDAY -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-🎂
-</div>
-
-
-<h3>
-Birthday Greetings
-</h3>
-
-
-<p>
-Celebrate birthdays, anniversaries and memorials on our platform.
-</p>
-
-
-<a
-href="mailto:radiantwave2022@gmail.com?subject=Birthday Greeting"
-class="contact-btn">
-
-Submit Celebration
-
-</a>
-
-</div>
-
-
-
-<!-- LEGAL -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-⚖️
-</div>
-
-
-<h3>
-Legal Notices
-</h3>
-
-
-<p>
-Publish official announcements, legal notices and awareness campaigns.
-</p>
-
-
-<a
-href="mailto:radiantwave2022@gmail.com?subject=Legal Notice"
-class="contact-btn">
-
-Send Notice
-
-</a>
-
-</div>
-
-
-
-<!-- BREAKING NEWS -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-🚨
-</div>
-
-
-<h3>
-Breaking News Tips
-</h3>
-
-
-<p>
-Send eyewitness reports, videos and urgent developments.
-</p>
-
-
-<a
-href="https://wa.me/33621613149"
-target="_blank"
-rel="noopener"
-class="contact-btn">
-
-Send News Tip
-
-</a>
-
-</div>
-
-
-
-</div>
-
-
-
-<!-- DIRECT CONTACT -->
-
-<div class="direct-contact">
-
-<h3>
-📱 Direct Newsroom Contacts
-</h3>
-
-
-<p>
-
-<strong>
-WhatsApp Hotline:
-</strong>
-
-<a
-href="https://wa.me/33621613149"
-target="_blank"
-rel="noopener">
-
-+33 6 21 61 31 49
-
-</a>
-
-</p>
-
-
-<p>
-
-<strong>
-Email Address:
-</strong>
-
-<a
-href="mailto:radiantwave2022@gmail.com">
-
-radiantwave2022@gmail.com
-
-</a>
-
-</p>
-
-</div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-ADVERT FORM
-===================================================== -->
-
-<section id="advert-form">
-
-<h2 class="section-title">
-Advertise With Us
-</h2>
-
-
-<div class="advert-form-box">
-
-
-<form
-action="mailto:radiantwave2022@gmail.com"
-method="POST"
-enctype="text/plain">
-
-
-<input
-type="text"
-name="fullname"
-placeholder="Full Name"
-required>
-
-
-<input
-type="email"
-name="email"
-placeholder="Email Address"
-required>
-
-
-<input
-type="text"
-name="whatsapp"
-placeholder="WhatsApp Number">
-
-
-<input
-type="text"
-name="business"
-placeholder="Business Name">
-
-
-<select name="service">
-
-<option>
-Advert Placement
-</option>
-
-<option>
-Birthday Greeting
-</option>
-
-<option>
-Publicity
-</option>
-
-<option>
-Legal Notice
-</option>
-
-<option>
-Event Promotion
-</option>
-
-<option>
-Memorial Message
-</option>
-
-</select>
-
-
-<textarea
-name="message"
-placeholder="Write Full Details Here..."
-rows="6"
-required>
-</textarea>
-
-
-<button
-type="submit">
-
-Submit Request
-
-</button>
-
-
-</form>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-WORLD NEWS
-===================================================== -->
-
-<section id="world">
-
-<h2 class="section-title">
-🌍 World News
-</h2>
-
-
-<div
-class="news-grid"
-id="world-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-USA
-===================================================== -->
-
-<section id="usa">
-
-<h2 class="section-title">
-🇺🇸 USA News
-</h2>
-
-
-<div
-class="news-grid"
-id="usa-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-EUROPE
-===================================================== -->
-
-<section id="europe">
-
-<h2 class="section-title">
-🇪🇺 Europe News
-</h2>
-
-
-<div
-class="news-grid"
-id="europe-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-AFRICA
-===================================================== -->
-
-<section id="africa">
-
-<h2 class="section-title">
-🌍 Africa News
-</h2>
-
-
-<div
-class="news-grid"
-id="africa-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-BUSINESS
-===================================================== -->
-
-<section id="business">
-
-<h2 class="section-title">
-📈 Business News
-</h2>
-
-
-<div
-class="news-grid"
-id="business-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-TECHNOLOGY
-===================================================== -->
-
-<section id="technology">
-
-<h2 class="section-title">
-💻 Technology News
-</h2>
-
-
-<div
-class="news-grid"
-id="tech-news">
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-FOOTER
-===================================================== -->
-
-<footer>
-
-
-<h2>
-Radiant Waves Media
-</h2>
-
-
-<p class="footer-slogan">
-
-Connecting You Deeper To The World's Most Important Stories
-
-</p>
-
-
-
-<div class="social">
-
-
-<a
-href="https://facebook.com/Radiantwavesnews"
-target="_blank"
-rel="noopener"
-aria-label="Facebook">
-
-<i class="fab fa-facebook">
-</i>
-
-</a>
-
-
-
-<a
-href="https://twitter.com/radiant13528995"
-target="_blank"
-rel="noopener"
-aria-label="X">
-
-<i class="fab fa-x-twitter">
-</i>
-
-</a>
-
-
-
-<a
-href="https://youtube.com/@radiantwave=wv6j"
-target="_blank"
-rel="noopener"
-aria-label="YouTube">
-
-<i class="fab fa-youtube">
-</i>
-
-</a>
-
-
-
-<a
-href="https://tiktok.com/@radiantwavesmedia"
-target="_blank"
-rel="noopener"
-aria-label="TikTok">
-
-<i class="fab fa-tiktok">
-</i>
-
-</a>
-
-
-</div>
-
-
-
-<p class="copyright">
-
-© 2026 Radiant Waves Media
-
-</p>
-
-
-</footer>
-
-
-
-<!-- =====================================================
-MAIN SCRIPT
-===================================================== -->
-
-<script
-src="./script.js?v=3000"
-defer>
-</script>
-
-
-
-<!-- =====================================================
-VIDEO + SOUND SYSTEM
-===================================================== -->
-
-<script>
-
-document.addEventListener(
-"DOMContentLoaded",
-function(){
-
-const video =
-document.getElementById("heroVideo");
-
-const soundButton =
-document.getElementById("sound-button");
-
-const source =
-document.getElementById("video-source");
-
-
-
-/* =========================
-START VIDEO MUTED
-========================= */
-
-if(video){
-
-video.muted = true;
-
-video.volume = 1.0;
-
-video.play().catch(function(){
-
-console.log(
-"Autoplay waiting for user interaction."
-);
-
-});
-
-}
-
-
-
-/* =========================
-ENABLE SOUND
-========================= */
-
-if(soundButton && video){
-
-soundButton.addEventListener(
-"click",
-async function(){
-
-try{
-
-video.muted = false;
-
-video.volume = 1.0;
-
-await video.play();
-
-soundButton.innerHTML =
-"🔊 SOUND ON";
-
-soundButton.style.background =
-"green";
-
-}
-
-catch(error){
-
-console.log(error);
-
-alert(
-"Tap the video controls to enable sound."
-);
-
-}
-
-});
-
-}
-
-
-
-/* =========================
-CHANGE VIDEO
-========================= */
-
-window.changeVideo =
-function(videoFile){
-
-if(
-video &&
-source &&
-videoFile
-){
-
-video.pause();
-
-source.src =
-videoFile;
-
-video.load();
-
-video.play().catch(function(){
-
-console.log(
-"Video play waiting for user interaction."
-);
-
-});
-
-}
-
-};
-
-});
-
-</script>
-
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="RadiantWaves Media home">
+      <img src="./logo.png" alt="RadiantWaves Media logo" class="brand-logo">
+
+      <span class="brand-copy">
+        <span class="brand-name">RADIANTWAVES MEDIA</span>
+        <span class="header-slogan">Gateway to Your World News — Connecting You to the World</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#world">World</a>
+      <a href="#usa">USA</a>
+      <a href="#europe">Europe</a>
+      <a href="#africa">Africa</a>
+      <a href="#asia">Asia</a>
+      <a href="#business">Business</a>
+      <a href="#technology">Technology</a>
+      <a href="#top-stories">Top Stories</a>
+      <a href="#archives">Archives</a>
+      <a href="#live-tv">Live TV</a>
+      <a href="#birthday-wall">Birthdays</a>
+      <a href="#advert-form">Advertise</a>
+    </nav>
+  </header>
+
+  <div class="ticker-wrap" aria-label="Breaking news">
+    <span class="ticker-label">
+      <i class="fa-solid fa-bolt" aria-hidden="true"></i> BREAKING
+    </span>
+
+    <div class="ticker-viewport">
+      <div class="ticker" id="breaking-ticker">
+        Loading the latest headlines…
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- FEATURED VIDEO NEWS -->
+    <section class="hero-video" id="home" aria-label="Featured video news">
+      <video
+        id="heroVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="metadata"
+        poster="./logo.png"
+        aria-label="RadiantWaves Media featured video">
+
+        <source id="video-source" src="assets/video1.mp4" type="video/mp4">
+
+        Your browser does not support video playback.
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-kicker">
+          <span class="status-dot"></span> VIDEO NEWS
+        </span>
+
+        <p class="hero-date" id="edition-date">GLOBAL NEWSROOM</p>
+
+        <h1 id="hero-title">Global Breaking News</h1>
+
+        <p class="hero-description" id="hero-desc">
+          Reports and perspectives from around the world.
+        </p>
+
+        <div class="video-controls" aria-label="Choose a featured video">
+          <button type="button" data-video="assets/video1.mp4" class="video-choice is-active">
+            Video 1
+          </button>
+
+          <button type="button" data-video="assets/video2.mp4" class="video-choice">
+            Video 2
+          </button>
+
+          <button type="button" data-video="assets/video3.mp4" class="video-choice">
+            Video 3
+          </button>
+        </div>
+
+        <button id="sound-button" class="mute-button" type="button" aria-pressed="false">
+          <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+          Enable sound
+        </button>
+
+        <p class="video-note">
+          Sound is off by default. Select a video or enable sound when you are ready.
+        </p>
+      </div>
+
+      <div class="hero-scroll">
+        <div id="hero-marquee">Loading headlines…</div>
+      </div>
+    </section>
+
+    <!-- FEATURED NEWS STORY -->
+    <section
+      class="featured-news content-section"
+      id="featured-news"
+      aria-label="Featured story">
+    </section>
+
+    <!-- NEWSROOM BRIEFING -->
+    <section class="content-section" id="morning-summary-section">
+      <div class="editorial-panel">
+        <p class="eyebrow">THE GLOBAL PICTURE</p>
+
+        <h2 class="section-title compact-title">Newsroom Briefing</h2>
+
+        <p id="morning-summary" class="summary-copy">
+          Our newsroom briefing will appear here.
+        </p>
+
+        <p id="editorial-note" class="editorial-note"></p>
+      </div>
+    </section>
+
+    <!-- SPONSORED ADVERTS -->
+    <section class="content-section" id="sponsored-adverts-section">
+      <div class="section-heading">
+        <p class="eyebrow">OUR PARTNERS</p>
+        <h2 class="section-title">Sponsored Adverts</h2>
+      </div>
+
+      <div id="sponsored-adverts" class="sponsored-list"></div>
+    </section>
+
+    <!-- TOP STORIES -->
+    <section class="content-section" id="top-stories">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT MATTERS NOW</p>
+        <h2 class="section-title">Top Stories</h2>
+      </div>
+
+      <div id="top-stories-container" class="news-grid"></div>
+    </section>
+
+    <!-- COMMUNITY QUESTION AND QUOTE -->
+    <section class="content-section community-panel" id="big-question-section">
+      <div class="community-card">
+        <p class="eyebrow">JOIN THE CONVERSATION</p>
+
+        <h2>Today's Big Question</h2>
+
+        <p id="big-question">
+          A question for thoughtful, respectful discussion will appear here.
+        </p>
+
+        <p class="discussion-note">
+          Share your views respectfully. Focus on evidence, ideas and accountability—not personal attacks.
+        </p>
+      </div>
+
+      <div class="community-card quote-card">
+        <p class="eyebrow">THOUGHT FOR TODAY</p>
+
+        <blockquote id="quote-of-the-day">
+          A thoughtful quote will appear here.
+        </blockquote>
+
+        <span class="quote-credit">RadiantWaves Media</span>
+      </div>
+    </section>
+
+    <!-- BREAKING NEWS BRIEFS -->
+    <section class="content-section" id="breaking-history">
+      <div class="section-heading">
+        <p class="eyebrow">DEVELOPMENTS TO FOLLOW</p>
+        <h2 class="section-title">Breaking News Briefs</h2>
+      </div>
+
+      <div id="history-container" class="history-list"></div>
+    </section>
+
+    <!-- NEWS ARCHIVES -->
+    <section class="content-section" id="archives">
+      <div class="section-heading">
+        <p class="eyebrow">CATCH UP</p>
+        <h2 class="section-title">News Editions & Archives</h2>
+      </div>
+
+      <div class="archive-box">
+        <article class="archive-card">
+          <span class="archive-icon">🌅</span>
+          <h3>Morning News</h3>
+          <p>Daily world headlines and the stories shaping the day.</p>
+        </article>
+
+        <article class="archive-card">
+          <span class="archive-icon">☀️</span>
+          <h3>Midday Update</h3>
+          <p>International updates and developing stories.</p>
+        </article>
+
+        <article class="archive-card">
+          <span class="archive-icon">🌆</span>
+          <h3>Evening News</h3>
+          <p>Key developments, context and analysis.</p>
+        </article>
+
+        <article class="archive-card">
+          <span class="archive-icon">🌙</span>
+          <h3>Late Night Briefing</h3>
+          <p>Overnight developments from around the world.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- LIVE TV -->
+    <section class="content-section" id="live-tv">
+      <div class="section-heading">
+        <p class="eyebrow">WATCH</p>
+        <h2 class="section-title">RadiantWaves Live TV</h2>
+      </div>
+
+      <div class="live-tv-box">
+        <div class="live-tv-message">
+          <i class="fa-solid fa-tv" aria-hidden="true"></i>
+
+          <h3>Watch RadiantWaves Media</h3>
+
+          <p>
+            The live player will appear here when the newsroom's YouTube live-stream channel ID is configured.
+          </p>
+
+          <p class="small-note">
+            To activate this section, replace
+            <code>YOUR_CHANNEL_ID</code>
+            in the iframe URL with your actual YouTube channel ID.
+          </p>
+        </div>
+
+        <iframe
+          title="RadiantWaves Media YouTube live stream"
+          loading="lazy"
+          src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+          allow="autoplay; encrypted-media; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY GREETINGS -->
+    <section class="content-section" id="birthday-wall">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR CELEBRATIONS</p>
+        <h2 class="section-title">Birthday Wall & Special Messages</h2>
+      </div>
+
+      <div class="birthday-card">
+        <span class="large-emoji">🎂</span>
+
+        <div>
+          <h3>Celebrate With RadiantWaves Media</h3>
+
+          <p>
+            Send birthday greetings, anniversaries, memorials and other special messages for consideration on our platform.
+          </p>
+
+          <a
+            class="text-link"
+            href="mailto:radiantwave2022@gmail.com?subject=Birthday%20Greeting">
+            Submit a greeting
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT THE NEWSROOM -->
+    <section class="content-section" id="contact-us">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2 class="section-title">Contact the Newsroom</h2>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <span class="contact-icon">
+            <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+          </span>
+
+          <h3>Advertising & Publicity</h3>
+
+          <p>
+            Ask about business adverts, sponsored content, event promotion and publicity packages.
+          </p>
+
+          <a
+            href="mailto:radiantwave2022@gmail.com?subject=Advertising%20Request"
+            class="contact-btn">
+            Enquire about advertising
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-icon">
+            <i class="fa-solid fa-cake-candles" aria-hidden="true"></i>
+          </span>
+
+          <h3>Greetings & Memorials</h3>
+
+          <p>
+            Submit birthday greetings, anniversaries, memorials and special announcements.
+          </p>
+
+          <a
+            href="mailto:radiantwave2022@gmail.com?subject=Greeting%20or%20Memorial"
+            class="contact-btn">
+            Submit a message
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-icon">
+            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+          </span>
+
+          <h3>Legal Notices</h3>
+
+          <p>
+            Contact us about official announcements, legal notices and public-awareness messages.
+          </p>
+
+          <a
+            href="mailto:radiantwave2022@gmail.com?subject=Legal%20Notice"
+            class="contact-btn">
+            Send a notice
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-icon">
+            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+          </span>
+
+          <h3>News Tips & Corrections</h3>
+
+          <p>
+            Send news tips, eyewitness material or a correction request. Please include dates, locations and supporting information where possible.
+          </p>
+
+          <a
+            href="https://wa.me/33621613149"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn">
+            Contact the newsroom
+          </a>
+        </article>
+      </div>
+
+      <div class="direct-contact">
+        <h3>Direct newsroom contacts</h3>
+
+        <p>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/33621613149" target="_blank" rel="noopener noreferrer">
+            +33 6 21 61 31 49
+          </a>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:radiantwave2022@gmail.com">
+            radiantwave2022@gmail.com
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ADVERTISING REQUEST FORM -->
+    <section class="content-section" id="advert-form">
+      <div class="section-heading">
+        <p class="eyebrow">WORK WITH US</p>
+        <h2 class="section-title">Request Advertising or Publicity</h2>
+      </div>
+
+      <div class="advert-form-box">
+        <p class="form-intro">
+          Tell us what you need and the newsroom will follow up. Your email application will open when you submit this form.
+        </p>
+
+        <form
+          id="advert-request-form"
+          action="mailto:radiantwave2022@gmail.com"
+          method="post"
+          enctype="text/plain">
+
+          <div class="form-grid">
+            <label>
+              Full name
+              <input
+                type="text"
+                name="Full name"
+                autocomplete="name"
+                placeholder="Your full name"
+                required>
+            </label>
+
+            <label>
+              Email address
+              <input
+                type="email"
+                name="Email address"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required>
+            </label>
+
+            <label>
+              WhatsApp number
+              <input
+                type="tel"
+                name="WhatsApp number"
+                autocomplete="tel"
+                placeholder="Include country code">
+            </label>
+
+            <label>
+              Business or organisation
+              <input
+                type="text"
+                name="Business or organisation"
+                autocomplete="organization"
+                placeholder="Business name (if applicable)">
+            </label>
+          </div>
+
+          <label>
+            Service required
+            <select name="Service">
+              <option>Advert placement</option>
+              <option>Birthday greeting</option>
+              <option>Publicity</option>
+              <option>Legal notice</option>
+              <option>Event promotion</option>
+              <option>Memorial message</option>
+              <option>Media production or interview</option>
+              <option>Other enquiry</option>
+            </select>
+          </label>
+
+          <label>
+            Details
+            <textarea
+              name="Details"
+              placeholder="Tell us about your request, preferred dates and any relevant links."
+              rows="6"
+              required></textarea>
+          </label>
+
+          <button class="submit-btn" type="submit">
+            Prepare email request
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <p class="small-note">
+            This form uses your device's email application; it does not send information to a website database.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- WORLD NEWS -->
+    <section class="content-section news-section" id="world">
+      <div class="section-heading">
+        <p class="eyebrow">INTERNATIONAL AFFAIRS</p>
+        <h2 class="section-title">🌍 World News</h2>
+      </div>
+
+      <div class="news-grid" id="world-news" aria-live="polite"></div>
+    </section>
+
+    <!-- USA NEWS -->
+    <section class="content-section news-section" id="usa">
+      <div class="section-heading">
+        <p class="eyebrow">UNITED STATES</p>
+        <h2 class="section-title">🇺🇸 USA News</h2>
+      </div>
+
+      <div class="news-grid" id="usa-news" aria-live="polite"></div>
+    </section>
+
+    <!-- EUROPE NEWS -->
+    <section class="content-section news-section" id="europe">
+      <div class="section-heading">
+        <p class="eyebrow">EUROPE</p>
+        <h2 class="section-title">🇪🇺 Europe News</h2>
+      </div>
+
+      <div class="news-grid" id="europe-news" aria-live="polite"></div>
+    </section>
+
+    <!-- AFRICA NEWS -->
+    <section class="content-section news-section" id="africa">
+      <div class="section-heading">
+        <p class="eyebrow">AFRICA</p>
+        <h2 class="section-title">🌍 Africa News</h2>
+      </div>
+
+      <div class="news-grid" id="africa-news" aria-live="polite"></div>
+    </section>
+
+    <!-- ASIA NEWS -->
+    <section class="content-section news-section" id="asia">
+      <div class="section-heading">
+        <p class="eyebrow">ASIA-PACIFIC</p>
+        <h2 class="section-title">🌏 Asia News</h2>
+      </div>
+
+      <div class="news-grid" id="asia-news" aria-live="polite"></div>
+    </section>
+
+    <!-- BUSINESS NEWS -->
+    <section class="content-section news-section" id="business">
+      <div class="section-heading">
+        <p class="eyebrow">MARKETS & INDUSTRY</p>
+        <h2 class="section-title">📈 Business News</h2>
+      </div>
+
+      <div class="news-grid" id="business-news" aria-live="polite"></div>
+    </section>
+
+    <!-- TECHNOLOGY NEWS -->
+    <section class="content-section news-section" id="technology">
+      <div class="section-heading">
+        <p class="eyebrow">DIGITAL & INNOVATION</p>
+        <h2 class="section-title">💻 Technology News</h2>
+      </div>
+
+      <div class="news-grid" id="tech-news" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a href="#home" class="footer-brand">RADIANTWAVES MEDIA</a>
+
+    <p class="footer-slogan">
+      Connecting You Deeper to the World's Most Important Stories
+    </p>
+
+    <div class="social" aria-label="Social media links">
+      <a
+        href="https://facebook.com/Radiantwavesnews"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://twitter.com/radiant13528995"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://youtube.com/@radiantwave=wv6j"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://tiktok.com/@radiantwavesmedia"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TikTok">
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <p class="footer-contact">
+      <a href="mailto:radiantwave2022@gmail.com">radiantwave2022@gmail.com</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://wa.me/33621613149" target="_blank" rel="noopener noreferrer">
+        WhatsApp newsroom
+      </a>
+    </p>
+
+    <p class="copyright">
+      © <span id="copyright-year">2026</span> RadiantWaves Media. All rights reserved.
+    </p>
+
+    <p class="footer-disclaimer">
+      News is updated as information becomes available. Claims are attributed where appropriate; developing stories may change as more evidence emerges.
+    </p>
+  </footer>
 
 </body>
-
 </html>

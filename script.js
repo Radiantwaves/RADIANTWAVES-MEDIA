@@ -1,1241 +1,769 @@
-// ============================================================
-// RADIANT WAVES MEDIA
-// COMPLETE SCRIPT.JS
-// AUTOMATIC NEWS IMAGE SYSTEM
-// VERSION 3000
-// ============================================================
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ==========================================================
+   RADIANTWAVES MEDIA
+   Complete newsroom functionality
+   File: script.js
+   ========================================================== */
 
-  // ==========================================================
-  // CONFIGURATION
-  // ==========================================================
+(() => {
+  "use strict";
 
-  const NEWS_FILE = "news.json?v=" + Date.now();
+  const NEWS_FILE = "./news.json";
+  const WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php";
 
-  const WIKIMEDIA_API =
-    "https://commons.wikimedia.org/w/api.php";
+  const $ = (id) => document.getElementById(id);
+  const imageCache = new Map();
 
-  const IMAGE_SEARCH_LIMIT = 6;
+  const CATEGORY_NAMES = {
+    world: "World News",
+    usa: "USA News",
+    europe: "Europe News",
+    africa: "Africa News",
+    asia: "Asia News",
+    business: "Business News",
+    technology: "Technology News"
+  };
 
-  // ==========================================================
-  // SAFE HTML FUNCTION
-  // ==========================================================
+  const CATEGORY_SECTIONS = [
+    ["world-news", "world"],
+    ["usa-news", "usa"],
+    ["europe-news", "europe"],
+    ["africa-news", "africa"],
+    ["asia-news", "asia"],
+    ["business-news", "business"],
+    ["tech-news", "technology"]
+  ];
+
+  /* -------------------- SAFE TEXT -------------------- */
 
   function escapeHTML(value) {
-
-    if (value === null || value === undefined) {
-      return "";
-    }
-
-    return String(value)
+    return String(value ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
-
   }
-
-  // ==========================================================
-  // CATEGORY LABEL
-  // ==========================================================
 
   function categoryName(category) {
+    return CATEGORY_NAMES[String(category || "world").toLowerCase()]
+      || "World News";
+  }
 
-    if (!category) {
-      return "World News";
+  function safeImageURL(value) {
+    if (typeof value !== "string" || !value.trim()) return "";
+
+    const url = value.trim();
+
+    if (/^https?:\/\//i.test(url)) return url;
+    if (/^(?:\.\/|\.\.\/|assets\/)/i.test(url)) return url;
+
+    return "";
+  }
+
+  function safeLink(value) {
+    const url = String(value || "#").trim();
+
+    if (/^(https?:\/\/|mailto:|tel:|#|\.\/|\.\.\/)/i.test(url)) {
+      return url;
     }
 
-    const names = {
-
-      world: "World News",
-
-      usa: "USA",
-
-      europe: "Europe",
-
-      africa: "Africa",
-
-      business: "Business",
-
-      technology: "Technology",
-
-      asia: "Asia"
-
-    };
-
-    return names[category] || category;
-
+    return "#";
   }
 
-  // ==========================================================
-  // FALLBACK IMAGE
-  // ==========================================================
-
-  function fallbackImage(category) {
-
-    const text =
-      encodeURIComponent(
-        "RADIANT WAVES MEDIA • " +
-        categoryName(category)
-      );
-
-    return (
-      "https://dummyimage.com/1200x700/111111/ffffff" +
-      "?text=" +
-      text
+  function fallbackImage(category = "world") {
+    const label = encodeURIComponent(
+      `RADIANTWAVES MEDIA - ${categoryName(category)}`
     );
 
+    return `https://dummyimage.com/1200x700/151515/f4f4f4&text=${label}`;
   }
 
-  // ==========================================================
-  // WIKIMEDIA IMAGE SEARCH
-  // ==========================================================
+  function plainText(value) {
+    const element = document.createElement("div");
+    element.innerHTML = String(value ?? "");
+    return (element.textContent || "").trim();
+  }
+
+  /* -------------------- IMAGE LOOKUP -------------------- */
 
   async function findWikimediaImage(query) {
+    const searchTerm = String(query || "").trim();
 
-    if (!query || !query.trim()) {
+    if (!searchTerm) return null;
 
-      return {
-        url: null,
-        title: "",
-        source: ""
-      };
+    const cacheKey = searchTerm.toLowerCase();
 
+    if (imageCache.has(cacheKey)) {
+      return imageCache.get(cacheKey);
     }
 
-    try {
+    const request = (async () => {
+      try {
+        const params = new URLSearchParams({
+          action: "query",
+          generator: "search",
+          gsrsearch: `${searchTerm} filetype:bitmap`,
+          gsrnamespace: "6",
+          gsrlimit: "6",
+          prop: "imageinfo",
+          iiprop: "url|mime",
+          iiurlwidth: "1200",
+          format: "json",
+          origin: "*"
+        });
 
-      const params = new URLSearchParams({
-
-        action: "query",
-
-        generator: "search",
-
-        gsrsearch:
-          query +
-          " filetype:bitmap",
-
-        gsrnamespace: "6",
-
-        gsrlimit:
-          String(IMAGE_SEARCH_LIMIT),
-
-        prop:
-          "imageinfo",
-
-        iiprop:
-          "url|mime|extmetadata",
-
-        iiurlwidth:
-          "1200",
-
-        format:
-          "json",
-
-        origin:
-          "*"
-
-      });
-
-      const response =
-        await fetch(
-          WIKIMEDIA_API +
-          "?" +
-          params.toString()
+        const response = await fetch(
+          `${WIKIMEDIA_API}?${params.toString()}`
         );
 
-      if (!response.ok) {
-
-        throw new Error(
-          "Wikimedia request failed"
-        );
-
-      }
-
-      const data =
-        await response.json();
-
-      if (
-        !data.query ||
-        !data.query.pages
-      ) {
-
-        return {
-          url: null,
-          title: "",
-          source: ""
-        };
-
-      }
-
-      const pages =
-        Object.values(
-          data.query.pages
-        );
-
-      // ------------------------------------------------------
-      // Find the first useful image
-      // ------------------------------------------------------
-
-      for (const page of pages) {
-
-        if (
-          !page.imageinfo ||
-          !page.imageinfo[0]
-        ) {
-          continue;
+        if (!response.ok) {
+          throw new Error("Image search request failed.");
         }
 
-        const info =
-          page.imageinfo[0];
+        const data = await response.json();
+        const pages = Object.values(data?.query?.pages || {});
 
-        const mime =
-          info.mime || "";
+        for (const page of pages) {
+          const info = page?.imageinfo?.[0];
 
-        if (
-          !mime.startsWith("image/")
-        ) {
-          continue;
-        }
-
-        const imageURL =
-          info.thumburl ||
-          info.url;
-
-        if (!imageURL) {
-          continue;
-        }
-
-        const metadata =
-          info.extmetadata || {};
-
-        const artist =
-          metadata.Artist &&
-          metadata.Artist.value
-            ? metadata.Artist.value
-            : "";
-
-        const credit =
-          metadata.Credit &&
-          metadata.Credit.value
-            ? metadata.Credit.value
-            : "";
-
-        return {
-
-          url: imageURL,
-
-          title:
-            page.title || "",
-
-          source:
-            artist ||
-            credit ||
-            "Wikimedia Commons"
-
-        };
-
-      }
-
-    }
-
-    catch (error) {
-
-      console.log(
-        "Automatic image search error:",
-        error
-      );
-
-    }
-
-    return {
-
-      url: null,
-
-      title: "",
-
-      source: ""
-
-    };
-
-  }
-
-  // ==========================================================
-  // CREATE AUTOMATIC IMAGE
-  // ==========================================================
-
-  async function getNewsImage(article) {
-
-    // --------------------------------------------------------
-    // 1. Use local image if explicitly supplied
-    // --------------------------------------------------------
-
-    if (
-      article.image &&
-      article.image.trim()
-    ) {
-
-      return {
-
-        url:
-          article.image,
-
-        source:
-          "Radiant Waves Media"
-
-      };
-
-    }
-
-    // --------------------------------------------------------
-    // 2. Search Wikimedia using imageQuery
-    // --------------------------------------------------------
-
-    if (
-      article.imageQuery &&
-      article.imageQuery.trim()
-    ) {
-
-      const result =
-        await findWikimediaImage(
-          article.imageQuery
-        );
-
-      if (result.url) {
-
-        return {
-
-          url:
-            result.url,
-
-          source:
-            result.source ||
-            "Wikimedia Commons"
-
-        };
-
-      }
-
-    }
-
-    // --------------------------------------------------------
-    // 3. Use branded fallback
-    // --------------------------------------------------------
-
-    return {
-
-      url:
-        fallbackImage(
-          article.category
-        ),
-
-      source:
-        "Radiant Waves Media"
-
-    };
-
-  }
-
-  // ==========================================================
-  // CREATE NEWS IMAGE HTML
-  // ==========================================================
-
-  async function createNewsImage(
-    article,
-    className = "news-image"
-  ) {
-
-    const image =
-      await getNewsImage(article);
-
-    const title =
-      escapeHTML(
-        article.title ||
-        "Radiant Waves Media"
-      );
-
-    return `
-
-      <div class="automatic-image-wrapper">
-
-        <div class="image-loading">
-          Loading image...
-        </div>
-
-        <img
-          class="${className}"
-          src="${escapeHTML(image.url)}"
-          alt="${title}"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='${fallbackImage(article.category)}';"
-          style="display:block;"
-        >
-
-      </div>
-
-    `;
-
-  }
-
-  // ==========================================================
-  // LOAD NEWS JSON
-  // ==========================================================
-
-  fetch(NEWS_FILE)
-
-    .then(function (response) {
-
-      if (!response.ok) {
-
-        throw new Error(
-          "Unable to load news.json"
-        );
-
-      }
-
-      return response.json();
-
-    })
-
-    .then(async function (newsData) {
-
-      console.log(
-        "Radiant Waves news loaded successfully."
-      );
-
-      // ======================================================
-      // HERO
-      // ======================================================
-
-      const heroTitle =
-        document.getElementById(
-          "hero-title"
-        );
-
-      const heroDesc =
-        document.getElementById(
-          "hero-desc"
-        );
-
-      if (
-        heroTitle &&
-        newsData.hero
-      ) {
-
-        heroTitle.innerText =
-          newsData.hero.title ||
-          "Radiant Waves Media";
-
-      }
-
-      if (
-        heroDesc &&
-        newsData.hero
-      ) {
-
-        heroDesc.innerText =
-          newsData.hero.description ||
-          "";
-
-      }
-
-      // ======================================================
-      // BREAKING TICKER
-      // ======================================================
-
-      const ticker =
-        document.getElementById(
-          "breaking-ticker"
-        );
-
-      if (
-        ticker &&
-        Array.isArray(
-          newsData.breaking
-        )
-      ) {
-
-        ticker.innerHTML =
-
-          newsData.breaking
-
-            .map(function (item) {
-
-              return `
-                🔴 ${escapeHTML(item)}
-              `;
-
-            })
-
-            .join(" • ");
-
-      }
-
-      // ======================================================
-      // HERO MARQUEE
-      // ======================================================
-
-      const heroMarquee =
-        document.getElementById(
-          "hero-marquee"
-        );
-
-      if (
-        heroMarquee &&
-        Array.isArray(
-          newsData.breaking
-        )
-      ) {
-
-        heroMarquee.innerHTML =
-
-          newsData.breaking
-
-            .map(function (item) {
-
-              return `
-                🔴 ${escapeHTML(item)}
-              `;
-
-            })
-
-            .join(" • ");
-
-      }
-
-      // ======================================================
-      // FEATURED NEWS
-      // ======================================================
-
-      const featuredContainer =
-        document.getElementById(
-          "featured-news"
-        );
-
-      if (
-        featuredContainer &&
-        newsData.featured
-      ) {
-
-        const featured =
-          newsData.featured;
-
-        let imageURL =
-          featured.image;
-
-        // If featured image is missing,
-        // search automatically.
-
-        if (
-          !imageURL &&
-          featured.imageQuery
-        ) {
-
-          const result =
-            await findWikimediaImage(
-              featured.imageQuery
-            );
-
-          imageURL =
-            result.url;
-
-        }
-
-        if (!imageURL) {
-
-          imageURL =
-            fallbackImage(
-              "world"
-            );
-
-        }
-
-        featuredContainer.innerHTML = `
-
-          <div class="featured-card">
-
-            <div class="automatic-image-wrapper">
-
-              <img
-                src="${escapeHTML(imageURL)}"
-                alt="${escapeHTML(featured.title)}"
-                loading="lazy"
-                style="display:block;"
-                onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
-              >
-
-            </div>
-
-            <div>
-
-              <span class="news-category">
-                FEATURED
-              </span>
-
-              <h2>
-                ${escapeHTML(featured.title)}
-              </h2>
-
-              <p>
-                ${escapeHTML(featured.content)}
-              </p>
-
-            </div>
-
-          </div>
-
-        `;
-
-      }
-
-      // ======================================================
-      // GENERATE NEWS
-      // ======================================================
-
-      async function generateNews(
-        sectionId,
-        category
-      ) {
-
-        const container =
-          document.getElementById(
-            sectionId
-          );
-
-        if (!container) {
-          return;
-        }
-
-        const articles =
-          Array.isArray(
-            newsData.articles
-          )
-
-            ? newsData.articles.filter(
-                function (article) {
-
-                  return (
-                    article.category ===
-                    category
-                  );
-
-                }
-              )
-
-            : [];
-
-        if (
-          articles.length === 0
-        ) {
-
-          container.innerHTML = `
-
-            <div class="card">
-
-              <div class="card-content">
-
-                <h3>
-                  No ${escapeHTML(
-                    categoryName(category)
-                  )} stories available.
-                </h3>
-
-              </div>
-
-            </div>
-
-          `;
-
-          return;
-
-        }
-
-        // ----------------------------------------------------
-        // Generate images one article at a time
-        // ----------------------------------------------------
-
-        const cards = [];
-
-        for (
-          const article of articles
-        ) {
-
-          const imageHTML =
-            await createNewsImage(
-              article
-            );
-
-          cards.push(`
-
-            <article class="card">
-
-              ${imageHTML}
-
-              <div class="card-content">
-
-                <span class="news-category">
-
-                  ${escapeHTML(
-                    categoryName(
-                      article.category
-                    )
-                  )}
-
-                </span>
-
-                <h3>
-
-                  ${escapeHTML(
-                    article.title
-                  )}
-
-                </h3>
-
-                <p>
-
-                  ${escapeHTML(
-                    article.description
-                  )}
-
-                </p>
-
-              </div>
-
-            </article>
-
-          `);
-
-        }
-
-        container.innerHTML =
-          cards.join("");
-
-      }
-
-      // ======================================================
-      // LOAD CATEGORIES
-      // ======================================================
-
-      await generateNews(
-        "world-news",
-        "world"
-      );
-
-      await generateNews(
-        "usa-news",
-        "usa"
-      );
-
-      await generateNews(
-        "europe-news",
-        "europe"
-      );
-
-      await generateNews(
-        "africa-news",
-        "africa"
-      );
-
-      await generateNews(
-        "business-news",
-        "business"
-      );
-
-      await generateNews(
-        "tech-news",
-        "technology"
-      );
-
-      // ======================================================
-      // SPONSORED ADVERTS
-      // IMPORTANT:
-      // These continue using your fixed local images.
-      // ======================================================
-
-      const advertContainer =
-        document.getElementById(
-          "sponsored-adverts"
-        );
-
-      if (
-        advertContainer &&
-        Array.isArray(
-          newsData.sponsoredAdverts
-        )
-      ) {
-
-        advertContainer.innerHTML =
-
-          newsData.sponsoredAdverts
-
-            .map(function (ad) {
-
-              const products =
-                Array.isArray(
-                  ad.products
-                )
-
-                  ? ad.products
-
-                  : [];
-
-              return `
-
-                <div class="sponsored-ad">
-
-                  <div class="sponsored-label">
-
-                    SPONSORED ADVERT
-
-                  </div>
-
-                  <div class="sponsored-content">
-
-                    <img
-                      src="${escapeHTML(
-                        ad.image
-                      )}"
-                      alt="${escapeHTML(
-                        ad.title
-                      )}"
-                      loading="lazy"
-                      onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
-                    >
-
-                    <div class="sponsored-text">
-
-                      <h2>
-
-                        ${escapeHTML(
-                          ad.title
-                        )}
-
-                      </h2>
-
-                      <h4>
-
-                        ${escapeHTML(
-                          ad.subtitle || ""
-                        )}
-
-                      </h4>
-
-                      <p>
-
-                        ${escapeHTML(
-                          ad.description
-                        )}
-
-                      </p>
-
-                      ${
-
-                        products
-
-                          .map(
-                            function (product) {
-
-                              return `
-
-                                <div class="product-line">
-
-                                  <strong>
-
-                                    ${escapeHTML(
-                                      product.name
-                                    )}
-
-                                  </strong>
-
-                                  <br>
-
-                                  Big:
-                                  ${escapeHTML(
-                                    product.big
-                                  )}
-
-                                  |
-
-                                  Small:
-                                  ${escapeHTML(
-                                    product.small
-                                  )}
-
-                                </div>
-
-                              `;
-
-                            }
-                          )
-
-                          .join("")
-
-                      }
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              `;
-
-            })
-
-            .join("");
-
-      }
-
-      // ======================================================
-      // BREAKING NEWS HISTORY
-      // ======================================================
-
-      const historyContainer =
-        document.getElementById(
-          "history-container"
-        );
-
-      if (
-        historyContainer &&
-        Array.isArray(
-          newsData.breakingHistory
-        )
-      ) {
-
-        historyContainer.innerHTML =
-
-          newsData.breakingHistory
-
-            .map(function (item) {
-
-              return `
-
-                <div class="history-item">
-
-                  ${escapeHTML(item)}
-
-                </div>
-
-              `;
-
-            })
-
-            .join("");
-
-      }
-
-      // ======================================================
-      // TOP STORIES
-      // ======================================================
-
-      const topStoriesContainer =
-        document.getElementById(
-          "top-stories-container"
-        );
-
-      if (
-        topStoriesContainer &&
-        Array.isArray(
-          newsData.topStories
-        )
-      ) {
-
-        const stories = [];
-
-        for (
-          const story
-          of newsData.topStories
-        ) {
-
-          const image =
-            await getNewsImage(
-              story
-            );
-
-          stories.push(`
-
-            <article class="card">
-
-              <div class="automatic-image-wrapper">
-
-                <img
-                  src="${escapeHTML(image.url)}"
-                  alt="${escapeHTML(story.title)}"
-                  loading="lazy"
-                  style="display:block;"
-                  onerror="this.onerror=null;this.src='${fallbackImage("world")}';"
-                >
-
-              </div>
-
-              <div class="card-content">
-
-                <span class="news-category">
-
-                  TOP STORY
-
-                </span>
-
-                <h3>
-
-                  ${escapeHTML(
-                    story.title
-                  )}
-
-                </h3>
-
-                <p>
-
-                  ${escapeHTML(
-                    story.description
-                  )}
-
-                </p>
-
-              </div>
-
-            </article>
-
-          `);
-
-        }
-
-        topStoriesContainer.innerHTML =
-          stories.join("");
-
-      }
-
-    })
-
-    .catch(function (error) {
-
-      console.error(
-        "Radiant Waves News Loading Error:",
-        error
-      );
-
-      // ------------------------------------------------------
-      // Show useful message instead of blank website
-      // ------------------------------------------------------
-
-      const containers = [
-
-        "world-news",
-
-        "usa-news",
-
-        "europe-news",
-
-        "africa-news",
-
-        "business-news",
-
-        "tech-news"
-
-      ];
-
-      containers.forEach(
-        function (id) {
-
-          const container =
-            document.getElementById(id);
-
-          if (!container) {
-            return;
+          if (!info || !String(info.mime || "").startsWith("image/")) {
+            continue;
           }
 
-          container.innerHTML = `
+          const url = info.thumburl || info.url;
 
-            <div class="card">
-
-              <div class="card-content">
-
-                <h3>
-                  News temporarily unavailable
-                </h3>
-
-                <p>
-                  Please refresh the page.
-                  Radiant Waves Media is
-                  updating the newsroom.
-                </p>
-
-              </div>
-
-            </div>
-
-          `;
-
+          if (url && /^https?:\/\//i.test(url)) {
+            return url;
+          }
         }
-      );
-
-    });
-
-  // ==========================================================
-  // VIDEO SYSTEM
-  // ==========================================================
-
-  const video =
-    document.getElementById(
-      "heroVideo"
-    );
-
-  const videoSource =
-    document.getElementById(
-      "video-source"
-    );
-
-  const soundButton =
-    document.getElementById(
-      "sound-button"
-    );
-
-  // ==========================================================
-  // START VIDEO MUTED
-  // ==========================================================
-
-  if (video) {
-
-    video.muted = true;
-
-    video.volume = 1.0;
-
-    video.play().catch(
-      function () {
-
-        console.log(
-          "Autoplay waiting for user interaction."
-        );
-
+      } catch (error) {
+        console.warn("Image lookup unavailable:", error);
       }
-    );
 
+      return null;
+    })();
+
+    imageCache.set(cacheKey, request);
+
+    return request;
   }
 
-  // ==========================================================
-  // SOUND BUTTON
-  // ==========================================================
+  async function resolveImage(item, category = "world") {
+    const suppliedImage = safeImageURL(item?.image);
 
-  if (
-    soundButton &&
-    video
-  ) {
+    if (suppliedImage) {
+      return suppliedImage;
+    }
 
-    soundButton.addEventListener(
-      "click",
-      async function () {
+    const searchImage = await findWikimediaImage(item?.imageQuery);
 
+    return searchImage || fallbackImage(category);
+  }
+
+  function imageMarkup(url, alt, className, category = "world") {
+    const safeURL = safeImageURL(url) || fallbackImage(category);
+
+    return `
+      <div class="news-image-wrap">
+        <img
+          class="${escapeHTML(className || "news-image")}"
+          src="${escapeHTML(safeURL)}"
+          alt="${escapeHTML(alt || "RadiantWaves Media news image")}"
+          loading="lazy"
+          decoding="async"
+          data-fallback="${escapeHTML(fallbackImage(category))}">
+      </div>
+    `;
+  }
+
+  function wireImageFallbacks(root = document) {
+    root.querySelectorAll("img[data-fallback]").forEach((img) => {
+      if (img.dataset.fallbackReady === "true") return;
+
+      img.dataset.fallbackReady = "true";
+
+      img.addEventListener("error", () => {
+        const fallback = img.dataset.fallback;
+
+        if (fallback && img.src !== fallback) {
+          img.src = fallback;
+          delete img.dataset.fallback;
+        }
+      });
+    });
+  }
+
+  /* -------------------- EMPTY AND ERROR STATES -------------------- */
+
+  function showMessage(container, title, message) {
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="empty-state">
+        <strong>${escapeHTML(title)}</strong>
+        ${message ? `<p>${escapeHTML(message)}</p>` : ""}
+      </div>
+    `;
+  }
+
+  /* -------------------- BREAKING NEWS AND TEXT -------------------- */
+
+  function renderTextSections(data) {
+    const editionDate = [data.edition, data.date]
+      .filter(Boolean)
+      .join(" · ");
+
+    if ($("edition-date")) {
+      $("edition-date").textContent = editionDate || "GLOBAL NEWSROOM";
+    }
+
+    if ($("hero-title")) {
+      $("hero-title").textContent =
+        data.hero?.title || "Global Breaking News";
+    }
+
+    if ($("hero-desc")) {
+      $("hero-desc").textContent =
+        data.hero?.description ||
+        "Reports and perspectives from around the world.";
+    }
+
+    if ($("morning-summary")) {
+      $("morning-summary").textContent =
+        data.morningSummary ||
+        "Our newsroom is following important developments around the world.";
+    }
+
+    if ($("editorial-note")) {
+      $("editorial-note").textContent =
+        data.editorialNote ||
+        "Developing stories may change as new information becomes available.";
+    }
+
+    if ($("big-question")) {
+      $("big-question").textContent =
+        data.bigQuestion ||
+        "What should leaders prioritise, and how should citizens measure progress?";
+    }
+
+    if ($("quote-of-the-day")) {
+      const quote = String(
+        data.quoteOfTheDay ||
+        "An informed public is better equipped to ask meaningful questions."
+      ).replace(/[“”]/g, "");
+
+      $("quote-of-the-day").textContent = `“${quote}”`;
+    }
+
+    const breaking = Array.isArray(data.breaking)
+      ? data.breaking.filter(Boolean)
+      : [];
+
+    const tickerItems = breaking.length
+      ? breaking
+      : ["Welcome to RadiantWaves Media — connecting you to the world."];
+
+    const tickerHTML = tickerItems
+      .map((item) =>
+        `<span class="ticker-item">${escapeHTML(item)}</span>`
+      )
+      .join("");
+
+    if ($("breaking-ticker")) {
+      $("breaking-ticker").innerHTML = tickerHTML + tickerHTML;
+    }
+
+    if ($("hero-marquee")) {
+      $("hero-marquee").innerHTML = tickerItems
+        .map((item) => escapeHTML(item))
+        .join(" ◆ ");
+    }
+
+    const history = Array.isArray(data.breakingHistory)
+      ? data.breakingHistory
+      : [];
+
+    if ($("history-container")) {
+      if (!history.length) {
+        showMessage(
+          $("history-container"),
+          "No breaking briefs available",
+          "Check back for future newsroom updates."
+        );
+      } else {
+        $("history-container").innerHTML = history
+          .map((item) => {
+            const title = typeof item === "string"
+              ? item
+              : item?.title || item?.headline || "News update";
+
+            const summary = typeof item === "string"
+              ? ""
+              : item?.summary || item?.description || item?.content || "";
+
+            const date = typeof item === "object"
+              ? item?.date || ""
+              : "";
+
+            return `
+              <article class="history-item">
+                ${date
+                  ? `<span class="history-date">${escapeHTML(date)}</span>`
+                  : ""}
+                <h3>${escapeHTML(title)}</h3>
+                ${summary ? `<p>${escapeHTML(summary)}</p>` : ""}
+              </article>
+            `;
+          })
+          .join("");
+      }
+    }
+  }
+
+  /* -------------------- FEATURED STORY -------------------- */
+
+  async function renderFeatured(data) {
+    const container = $("featured-news");
+    const featured = data.featured;
+
+    if (!container) return;
+
+    if (!featured || !featured.title) {
+      container.innerHTML = "";
+      return;
+    }
+
+    const image = await resolveImage(featured, "world");
+
+    container.innerHTML = `
+      <article class="featured-story">
+        <div class="featured-image-wrap">
+          ${imageMarkup(
+            image,
+            featured.title,
+            "featured-image",
+            "world"
+          )}
+        </div>
+
+        <div class="featured-copy">
+          <span class="featured-label">Editor's Pick</span>
+
+          <h2>${escapeHTML(featured.title)}</h2>
+
+          <p>${escapeHTML(
+            featured.summary ||
+            featured.description ||
+            featured.content ||
+            "More information will be added as this story develops."
+          )}</p>
+
+          <span class="news-meta">RadiantWaves Media newsroom</span>
+        </div>
+      </article>
+    `;
+
+    wireImageFallbacks(container);
+  }
+
+  /* -------------------- NEWS ARTICLE CARDS -------------------- */
+
+  function makeNewsCard(article, image, category) {
+    const title = article?.title || "News update";
+
+    const summary =
+      article?.summary ||
+      article?.description ||
+      article?.content ||
+      "More information will be added as the story develops.";
+
+    const source = article?.source
+      ? `<span>Source: ${escapeHTML(article.source)}</span>`
+      : "";
+
+    const date = article?.date
+      ? `<span>${escapeHTML(article.date)}</span>`
+      : "";
+
+    const link = safeLink(article?.url || article?.link);
+
+    const readMore = link !== "#"
+      ? `<a class="news-link" href="${escapeHTML(link)}"
+           target="_blank" rel="noopener noreferrer">
+           Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+         </a>`
+      : "";
+
+    return `
+      <article class="news-card">
+        ${imageMarkup(image, title, "news-image", category)}
+
+        <div class="news-card-body">
+          <div class="news-meta">
+            <span class="news-category">${escapeHTML(categoryName(category))}</span>
+            ${date}
+          </div>
+
+          <h3>${escapeHTML(title)}</h3>
+
+          <p>${escapeHTML(summary)}</p>
+
+          ${source ? `<div class="news-meta">${source}</div>` : ""}
+
+          ${readMore}
+        </div>
+      </article>
+    `;
+  }
+
+  async function renderArticleSection(data, sectionId, category) {
+    const container = $(sectionId);
+
+    if (!container) return;
+
+    const articles = Array.isArray(data.articles)
+      ? data.articles.filter(
+          (article) =>
+            String(article?.category || "").toLowerCase() === category
+        )
+      : [];
+
+    if (!articles.length) {
+      showMessage(
+        container,
+        `No ${categoryName(category)} stories yet`,
+        "Please check back for the next newsroom update."
+      );
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="loading-state">
+        Loading ${escapeHTML(categoryName(category).toLowerCase())}…
+      </div>
+    `;
+
+    const cards = await Promise.all(
+      articles.map(async (article) => {
+        const image = await resolveImage(article, category);
+        return makeNewsCard(article, image, category);
+      })
+    );
+
+    container.innerHTML = cards.join("");
+    wireImageFallbacks(container);
+  }
+
+  /* -------------------- TOP STORIES -------------------- */
+
+  async function renderTopStories(data) {
+    const container = $("top-stories-container");
+
+    if (!container) return;
+
+    const stories = Array.isArray(data.topStories)
+      ? data.topStories
+      : [];
+
+    if (!stories.length) {
+      showMessage(
+        container,
+        "Top stories are being updated",
+        "Please check back shortly."
+      );
+      return;
+    }
+
+    const cards = await Promise.all(
+      stories.map(async (story, index) => {
+        const image = await resolveImage(story, "world");
+
+        return `
+          <article class="news-card top-story-card">
+            ${imageMarkup(
+              image,
+              story.title || "Top story",
+              "news-image",
+              "world"
+            )}
+
+            <div class="news-card-body">
+              <span class="top-story-number">${index + 1}</span>
+
+              <div class="news-meta">
+                <span class="news-category">Top Story</span>
+                ${story.date ? `<span>${escapeHTML(story.date)}</span>` : ""}
+              </div>
+
+              <h3>${escapeHTML(story.title || "Top story")}</h3>
+
+              <p>${escapeHTML(
+                story.description ||
+                story.summary ||
+                story.content ||
+                ""
+              )}</p>
+            </div>
+          </article>
+        `;
+      })
+    );
+
+    container.innerHTML = cards.join("");
+    wireImageFallbacks(container);
+  }
+
+  /* -------------------- SPONSORED ADVERTS -------------------- */
+
+  function renderAdverts(data) {
+    const container = $("sponsored-adverts");
+
+    if (!container) return;
+
+    const adverts = Array.isArray(data.sponsoredAdverts)
+      ? data.sponsoredAdverts
+      : [];
+
+    if (!adverts.length) {
+      showMessage(
+        container,
+        "No sponsored adverts at present",
+        "Contact RadiantWaves Media to enquire about advertising."
+      );
+      return;
+    }
+
+    container.innerHTML = adverts.map((ad) => {
+      const image = safeImageURL(ad.image) || fallbackImage("business");
+
+      const products = Array.isArray(ad.products)
+        ? ad.products
+        : [];
+
+      const productHTML = products.map((product) => {
+        if (typeof product === "string") {
+          return `<li>${escapeHTML(product)}</li>`;
+        }
+
+        if (product && typeof product === "object") {
+          const name = product.name || product.title || "Product";
+
+          const sizes = [
+            product.big ? `Big: ${product.big}` : "",
+            product.small ? `Small: ${product.small}` : ""
+          ].filter(Boolean).join(" · ");
+
+          return `
+            <li>
+              <strong>${escapeHTML(name)}</strong>
+              ${sizes ? `<span>${escapeHTML(sizes)}</span>` : ""}
+            </li>
+          `;
+        }
+
+        return "";
+      }).join("");
+
+      const buttonText = ad.button || "Contact us";
+      const link = safeLink(ad.link);
+
+      const action = `
+        <a class="advert-btn"
+           href="${escapeHTML(link)}"
+           ${/^https?:\/\//i.test(link)
+             ? 'target="_blank" rel="noopener noreferrer"'
+             : ""}>
+          ${escapeHTML(buttonText)}
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      `;
+
+      return `
+        <article class="sponsored-card">
+          <img
+            class="sponsored-image"
+            src="${escapeHTML(image)}"
+            alt="${escapeHTML(ad.title || "Sponsored advert")}"
+            loading="lazy"
+            decoding="async"
+            data-fallback="${escapeHTML(fallbackImage("business"))}">
+
+          <div class="sponsored-copy">
+            <span class="sponsored-label">Sponsored Advert</span>
+
+            <h3>${escapeHTML(ad.title || "Our Partner")}</h3>
+
+            ${ad.subtitle
+              ? `<p><strong>${escapeHTML(ad.subtitle)}</strong></p>`
+              : ""}
+
+            <p>${escapeHTML(ad.description || "")}</p>
+
+            ${productHTML
+              ? `<ul class="product-list">${productHTML}</ul>`
+              : ""}
+
+            ${action}
+          </div>
+        </article>
+      `;
+    }).join("");
+
+    wireImageFallbacks(container);
+  }
+
+  /* -------------------- VIDEO CONTROLS -------------------- */
+
+  function setupVideo() {
+    const video = $("heroVideo");
+    const source = $("video-source");
+    const soundButton = $("sound-button");
+
+    if (!video || !source) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    video.play().catch(() => {
+      // Some mobile browsers block autoplay.
+      // The viewer can still select a video or start playback manually.
+    });
+
+    document.querySelectorAll("[data-video]").forEach((button) => {
+      button.setAttribute("aria-pressed", "false");
+
+      button.addEventListener("click", () => {
+        const file = safeImageURL(button.dataset.video);
+
+        if (!file) return;
+
+        const currentFile = source.getAttribute("src");
+
+        if (currentFile === file) {
+          video.play().catch(() => {});
+          return;
+        }
+
+        source.setAttribute("src", file);
+        video.load();
+
+        video.play().catch(() => {});
+
+        document.querySelectorAll("[data-video]").forEach((choice) => {
+          const active = choice === button;
+
+          choice.classList.toggle("is-active", active);
+          choice.setAttribute("aria-pressed", String(active));
+        });
+      });
+    });
+
+    if (!soundButton) return;
+
+    soundButton.addEventListener("click", async () => {
+      if (video.muted) {
         try {
-
           video.muted = false;
-
-          video.volume = 1.0;
-
+          video.volume = 1;
           await video.play();
 
           soundButton.innerHTML =
-            "🔊 SOUND ON";
+            '<i class="fa-solid fa-volume-high" aria-hidden="true"></i> Sound on';
 
-          soundButton.style.background =
-            "green";
+          soundButton.setAttribute("aria-pressed", "true");
+        } catch (error) {
+          video.muted = true;
 
-        }
-
-        catch (error) {
-
-          console.log(
-            "Unable to enable sound:",
-            error
-          );
+          soundButton.setAttribute("aria-pressed", "false");
 
           alert(
-            "Please use the video controls to enable sound."
+            "Sound could not be enabled. Please check your device volume and try again."
           );
-
         }
+      } else {
+        video.muted = true;
 
+        soundButton.innerHTML =
+          '<i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Enable sound';
+
+        soundButton.setAttribute("aria-pressed", "false");
       }
-    );
-
+    });
   }
 
-  // ==========================================================
-  // CHANGE VIDEO
-  // ==========================================================
+  /* -------------------- NEWSROOM INITIALISATION -------------------- */
 
-  window.changeVideo =
-    function (videoFile) {
-
-      if (
-        !video ||
-        !videoSource
-      ) {
-
-        return;
-
-      }
-
-      video.pause();
-
-      videoSource.src =
-        videoFile;
-
-      video.load();
-
-      video.play().catch(
-        function () {
-
-          console.log(
-            "Video play requires user interaction."
-          );
-
-        }
+  async function loadNewsroom() {
+    try {
+      const response = await fetch(
+        `${NEWS_FILE}?v=${Date.now()}`,
+        { cache: "no-store" }
       );
 
-    };
-
-  // ==========================================================
-  // AUTOMATIC VIDEO ROTATION
-  // ==========================================================
-
-  const videos = [
-
-    "assets/video1.mp4",
-
-    "assets/video2.mp4",
-
-    "assets/video3.mp4"
-
-  ];
-
-  let currentVideo = 0;
-
-  setInterval(
-    function () {
-
-      if (!video) {
-        return;
+      if (!response.ok) {
+        throw new Error(`Could not load news.json (${response.status})`);
       }
 
-      currentVideo++;
+      const data = await response.json();
 
-      if (
-        currentVideo >=
-        videos.length
-      ) {
+      renderTextSections(data);
+      renderAdverts(data);
 
-        currentVideo = 0;
+      await Promise.all([
+        renderFeatured(data),
+        renderTopStories(data),
+        ...CATEGORY_SECTIONS.map(([id, category]) =>
+          renderArticleSection(data, id, category)
+        )
+      ]);
 
+      console.info("RadiantWaves Media newsroom loaded successfully.");
+    } catch (error) {
+      console.error("Newsroom loading error:", error);
+
+      CATEGORY_SECTIONS.forEach(([id]) => {
+        showMessage(
+          $(id),
+          "News temporarily unavailable",
+          "Please refresh the page. If the problem continues, check that news.json is valid JSON and uploaded beside index.html."
+        );
+      });
+
+      if ($("breaking-ticker")) {
+        $("breaking-ticker").textContent =
+          "Newsroom update in progress — please refresh shortly.";
       }
 
-      window.changeVideo(
-        videos[currentVideo]
-      );
+      if ($("featured-news")) {
+        showMessage(
+          $("featured-news"),
+          "Featured news temporarily unavailable",
+          "Please try refreshing the page."
+        );
+      }
 
-    },
-    30000
-  );
+      if ($("top-stories-container")) {
+        showMessage(
+          $("top-stories-container"),
+          "Top stories temporarily unavailable",
+          "Please try refreshing the page."
+        );
+      }
+    }
+  }
 
-});
+  /* -------------------- START WEBSITE -------------------- */
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const year = $("copyright-year");
+
+    if (year) {
+      year.textContent = String(new Date().getFullYear());
+    }
+
+    setupVideo();
+    loadNewsroom();
+  });
+})();

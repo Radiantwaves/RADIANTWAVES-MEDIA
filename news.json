@@ -1,149 +1,156 @@
 {
-  "date": "Friday, 16 October 2026",
+  "date": "Sunday, 18 October 2026",
   "edition": "Morning News & Global Update",
+  "branding": {
+    "name": "RadiantWaves Media",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories"
+  },
   "hero": {
-    "title": "Global Energy Pressures, Economic Uncertainty and Government Priorities",
-    "description": "From continuing Middle East tensions and rising energy costs to financial market uncertainty and the challenges facing households, RadiantWaves brings you the latest developments shaping the world.",
+    "title": "Global Tensions, Europe's Protests and Nigeria's Economic Choices",
+    "description": "Sunday's global briefing examines the latest developments in the Russia–Ukraine war, rising energy costs, demonstrations in France, Nigeria's economic reforms and the international issues shaping markets and diplomacy.",
     "image": "",
-    "imageQuery": "global city skyline world news newsroom"
+    "imageQuery": "world leaders international diplomacy news conference"
   },
   "breaking": [
-    "🌍 GLOBAL ECONOMY: The IMF warns that prolonged conflict and renewed disruption to energy production and shipping could deepen economic pressure across the Middle East and beyond.",
-    "🛢️ ENERGY: Oil prices remain elevated amid continuing uncertainty over supplies and shipping routes in the Middle East.",
-    "📉 MARKETS: Technology shares face renewed pressure as investors reassess artificial intelligence spending, borrowing costs and the outlook for interest rates.",
-    "🇪🇺 EUROPE: Rising energy costs and economic pressures are increasing calls for measures to protect households and maintain industrial competitiveness.",
-    "🇺🇦 UKRAINE: Russia and Ukraine continue to exchange attacks on energy infrastructure, with questions remaining over the scope and implementation of an energy ceasefire.",
-    "🇳🇬 NIGERIA: Fuel affordability and the wider cost of living remain central concerns as international energy developments influence domestic economic conditions.",
-    "🌐 GLOBAL GOVERNANCE: International financial institutions face growing pressure to address debt, energy security, inflation and the unequal effects of global economic shocks."
+    "UKRAINE: President Volodymyr Zelenskyy says Russian forces targeted Ukraine's energy, oil and gas infrastructure 76 times over the past week. The claimed attacks raise fresh questions about efforts to protect energy facilities.",
+    "FRANCE: Protests over living costs and public services have continued following demonstrations across several French cities. Authorities have reported arrests and clashes in some locations.",
+    "EUROPE: High energy costs remain a concern for households and industry as European governments debate measures to reduce the impact of the energy crisis.",
+    "NIGERIA: Petrol prices, food costs, economic reforms and security remain important issues for households and policymakers.",
+    "GLOBAL MARKETS: Investors continue to assess geopolitical risks, energy supply uncertainty and the outlook for interest rates."
   ],
   "featured": {
-    "title": "Governments Face Difficult Choices as Households Feel Economic Pressure",
-    "content": "Governments around the world are being challenged to balance national security, public spending, economic stability and support for vulnerable households. Conflict, higher energy costs, borrowing pressures and uncertain financial markets can place additional demands on public budgets while increasing the cost of everyday essentials. The challenge is not simply to announce policies, but to demonstrate measurable improvements in people's lives. Effective responses require clear priorities, responsible spending, transparent decisions and accountability for results.",
+    "title": "Ukraine's Energy Infrastructure Faces Renewed Pressure",
+    "content": "Ukrainian President Volodymyr Zelenskyy said Russia had targeted Ukraine's energy, oil and gas infrastructure 76 times during the past week. He identified substations in several regions among the affected sites. The report comes amid disputed claims about an energy-focused ceasefire. There is no independently confirmed comprehensive end to attacks on energy infrastructure. Damage to power and fuel facilities can affect electricity supplies, industry and civilian life as winter approaches.",
     "image": "",
-    "imageQuery": "citizens public services government parliament economic policy"
+    "imageQuery": "Ukraine damaged electricity substation energy infrastructure October 2026"
   },
   "articles": [
     {
       "category": "world",
-      "title": "IMF Warns Prolonged Conflict Could Deepen Economic Risks",
-      "content": "The International Monetary Fund has warned that prolonged conflict and renewed disruption to energy production, shipping and critical infrastructure pose major risks to economies across the Middle East and Central Asia. The effects differ between countries, with energy exporters and importers facing different pressures. The IMF has emphasised the importance of price stability, fiscal buffers and long-term economic resilience. The wider consequences include potential pressure on inflation, trade, public finances and household purchasing power.",
+      "title": "Ukraine Reports Repeated Attacks on Energy Infrastructure",
+      "summary": "President Volodymyr Zelenskyy said Russian forces had targeted Ukraine's energy, oil and gas infrastructure 76 times in the past week. He reported strikes affecting substations in the Vinnytsia, Zhytomyr, Khmelnytskyi and Odesa regions. The claims come amid uncertainty over an energy ceasefire previously discussed publicly by US President Donald Trump. Kyiv and Moscow have not provided confirmation of a comprehensive agreement that has stopped these attacks.",
       "image": "",
-      "imageQuery": "International Monetary Fund global economic outlook meeting"
+      "imageQuery": "Ukraine electricity substation damaged by Russian strikes October 2026",
+      "source": "Reuters"
     },
     {
-      "category": "world",
-      "title": "Middle East Tensions Continue to Influence Energy Security",
-      "content": "Uncertainty surrounding the Middle East conflict continues to affect energy markets and shipping expectations. The Strait of Hormuz is a critical route for international oil and liquefied natural gas shipments. Any renewed disruption could raise transport costs, affect supply availability and increase pressure on fuel and electricity prices. Governments and businesses are monitoring developments while considering alternative supplies and routes. Market conditions remain subject to rapid change.",
+      "category": "europe",
+      "title": "Protests Over Living Costs Continue to Challenge France",
+      "summary": "Demonstrations over living costs, education and public services have drawn attention to social and economic pressures in France. Reports from Saturday described marches in multiple cities, with clashes, fires and arrests in some locations. The scale of participation and arrest figures vary between reports. The demonstrations underline public concern about purchasing power and the quality of essential services. Further developments should be checked against updated police and local-authority statements.",
       "image": "",
-      "imageQuery": "oil tankers commercial shipping Strait of Hormuz"
+      "imageQuery": "France Paris public demonstrations police street October 2026",
+      "source": "Associated Press and The Guardian"
+    },
+    {
+      "category": "europe",
+      "title": "European Governments Debate Responses to High Energy Costs",
+      "summary": "Energy prices remain a major concern for European households and businesses following disruption to international fuel supplies. EU leaders have discussed short-term measures to cushion the economic impact, while disagreements remain over the balance between immediate relief, industrial competitiveness and climate policy. Higher energy costs can feed into transport, manufacturing and food prices. Proposed measures should not be confused with policies that have already been formally approved.",
+      "image": "",
+      "imageQuery": "European Union leaders meeting energy security Brussels",
+      "source": "Euronews"
     },
     {
       "category": "usa",
-      "title": "US Economic Debate Focuses on Inflation and Household Costs",
-      "content": "Economic affordability remains a major issue in the United States as households and businesses assess the effects of prices, energy costs and interest rates. Financial markets are also responding to uncertainty surrounding technology investment and borrowing costs. Policymakers face difficult decisions about economic growth, public spending and measures intended to ease pressure on consumers. The effectiveness of proposed policies will ultimately depend on their implementation and measurable economic outcomes.",
+      "title": "Washington's Russia Policy Adds Uncertainty to Ukraine Support",
+      "summary": "US decisions concerning Russia-related sanctions and energy transactions have raised questions about the future direction of Washington's policy towards Moscow and Kyiv. Ukrainian officials have expressed concern that changes could weaken pressure on Russia while the war continues. The dispute also reflects the challenge facing US policymakers as they weigh energy costs, national security and support for Ukraine. Statements from governments involved should be assessed separately from independent confirmation of their claims.",
       "image": "",
-      "imageQuery": "United States economy financial district Washington government"
-    },
-    {
-      "category": "europe",
-      "title": "Europe Weighs Energy Affordability Against Industrial Competitiveness",
-      "content": "European policymakers continue to face pressure to reduce energy costs while protecting industrial competitiveness and maintaining energy security. Higher energy prices can affect manufacturing, transport, food production and household budgets. EU discussions have highlighted the need to consider demand reduction and targeted measures while maintaining longer-term energy and climate objectives. The policy challenge is to provide effective relief without creating unsustainable public spending commitments.",
-      "image": "",
-      "imageQuery": "European Union flags energy policy meeting Brussels"
-    },
-    {
-      "category": "europe",
-      "title": "Ukraine War Keeps Energy Infrastructure and Security in Focus",
-      "content": "Attacks on energy infrastructure remain a concern in the Russia–Ukraine war. Ukrainian and Russian forces continue to report strikes affecting energy-related facilities, while diplomatic efforts to limit attacks remain uncertain. A durable arrangement would require clarity about the commitments of both sides, monitoring and implementation. The continuing conflict also affects European security planning, energy policy and public spending.",
-      "image": "",
-      "imageQuery": "Ukraine energy infrastructure power station repair workers"
+      "imageQuery": "White House Washington foreign policy press briefing",
+      "source": "Reuters"
     },
     {
       "category": "africa",
-      "title": "Nigeria Faces Continuing Pressure Over Fuel Affordability",
-      "content": "Fuel affordability remains an important concern for Nigerian households and businesses. International oil prices, exchange-rate conditions, refining costs, distribution expenses and domestic market competition can all influence pump prices. Nigeria's expanding refining capacity may improve supply options and create export opportunities, but it does not automatically shield consumers from changes in global crude prices. The broader policy challenge is to strengthen supply security while addressing transport costs, inflation and household purchasing power.",
+      "title": "Nigeria's Economic Reforms Remain Under Public Scrutiny",
+      "summary": "The Nigerian government continues to face public pressure over petrol prices, food inflation, transport costs and living standards. Recent reporting has highlighted the administration's commitment to maintaining market-oriented reforms rather than returning to petrol subsidies or multiple exchange rates. The key question for households is whether reforms can produce measurable improvements in purchasing power, jobs, public services and economic stability. Official statements should be considered alongside independently verified economic data.",
       "image": "",
-      "imageQuery": "Nigeria petrol station motorists fuel pumps"
+      "imageQuery": "Nigeria petrol station motorists fuel prices Lagos",
+      "source": "Channels Television and Reuters"
+    },
+    {
+      "category": "africa",
+      "title": "Nigeria's Security Challenge Remains a National Priority",
+      "summary": "Security remains central to Nigeria's public debate, including efforts to tackle terrorism, banditry, kidnappings and attacks on communities. The government has directed security agencies to intensify operations and improve protection for citizens. The effectiveness of these measures will need to be judged by verified outcomes, including safer communities, successful rescues, reduced attacks and improved access to schools and businesses. Claims about operations and casualty figures should be attributed to the authorities or other identified sources.",
+      "image": "",
+      "imageQuery": "Nigerian security personnel patrol public road Nigeria",
+      "source": "Nigerian news reporting"
     },
     {
       "category": "business",
-      "title": "Dangote Refinery Draws Attention to Nigeria's Refining and Export Potential",
-      "content": "The Dangote Refinery remains an important development in Nigeria's energy and industrial landscape. Increased domestic refining capacity can influence fuel availability, imports and opportunities to supply international markets. However, the benefits for consumers depend on a range of factors, including crude prices, distribution costs, competition and market conditions. Investors should assess published offering documents, company disclosures, valuation and risk before making investment decisions. Public interest in a share offering does not guarantee future returns.",
+      "title": "Energy Disruption Continues to Influence Global Economic Prospects",
+      "summary": "International energy supply uncertainty remains a concern for governments, manufacturers and transport operators. When oil and refined-fuel prices rise, the effects can spread through freight, agriculture, electricity generation and the production of everyday goods. Countries that import much of their fuel can face additional pressure on foreign exchange and public finances. The overall impact depends on the duration of disruptions, market prices, shipping conditions and the policy response in each country.",
       "image": "",
-      "imageQuery": "Dangote oil refinery industrial processing facilities Nigeria"
+      "imageQuery": "oil refinery industrial processing units global energy market",
+      "source": "International energy-market reporting"
     },
     {
       "category": "business",
-      "title": "AI Investment Uncertainty Puts Technology Markets Under Pressure",
-      "content": "Global financial markets are reassessing the scale and profitability of investment in artificial intelligence infrastructure. Concerns about financing costs, expected returns and the pace of future demand have placed pressure on some technology-related shares. The sector remains important to innovation and economic growth, but investors are increasingly examining whether projected revenues can justify substantial spending. Market movements can change quickly, and short-term price changes do not establish the long-term prospects of any individual company.",
+      "title": "Dangote Refinery Keeps Nigeria in the International Fuel-Supply Conversation",
+      "summary": "Nigeria's Dangote Refinery remains an important development in the country's effort to expand domestic refining and supply petroleum products to local and overseas markets. Greater refining capacity may reduce dependence on imported finished fuel, but it does not automatically insulate consumers from international crude prices, exchange-rate movements, logistics costs or local distribution margins. The refinery's investment plans and market impact should be assessed using confirmed company disclosures and regulatory filings.",
       "image": "",
-      "imageQuery": "artificial intelligence data centre servers technology"
-    },
-    {
-      "category": "business",
-      "title": "Bond Yields and Interest-Rate Expectations Shape Market Sentiment",
-      "content": "Government bond yields, inflation data and expectations for central-bank policy continue to influence financial markets. Changes in borrowing costs can affect governments refinancing debt, companies funding investment and households paying mortgages or other loans. Currency movements also reflect changing investor expectations and demand for safer assets. These developments underline the connection between international financial conditions and the cost of living, employment and public budgets.",
-      "image": "",
-      "imageQuery": "financial markets bond yields stock exchange screens"
+      "imageQuery": "Dangote Petroleum Refinery Lekki Lagos aerial view",
+      "source": "Reuters and company disclosures"
     },
     {
       "category": "technology",
-      "title": "AI's Economic Promise Brings Questions About Risk and Accountability",
-      "content": "Artificial intelligence continues to attract investment and reshape industries, but uncertainty remains over profitability, infrastructure costs and the distribution of its economic benefits. Governments and businesses face the challenge of encouraging innovation while addressing safety, transparency, employment disruption and financial risk. Responsible technology policy requires evidence-based decisions, clear accountability and attention to how new systems affect workers, consumers and public services.",
+      "title": "AI Deepfakes Put Pressure on Regulators and Digital Platforms",
+      "summary": "The spread of AI-generated images, videos and audio is creating growing concerns about privacy, online abuse and public trust. Deepfakes can be used to impersonate people or make false material appear authentic. Regulators and platforms face the challenge of protecting people without undermining legitimate expression. Users can reduce risk by checking the original source, looking for independent confirmation and avoiding the sharing of unverified content.",
       "image": "",
-      "imageQuery": "artificial intelligence researcher computer technology laboratory"
+      "imageQuery": "artificial intelligence digital media deepfake technology illustration",
+      "source": "International technology reporting"
     },
     {
       "category": "asia",
-      "title": "Asian Markets Respond to Technology and Interest-Rate Uncertainty",
-      "content": "Asian financial markets are responding to changing expectations around technology investment, interest rates and global economic growth. Economies with significant exposure to semiconductor and technology companies can be particularly sensitive to shifts in investor confidence. Currency movements and borrowing costs also affect trade and investment. The latest market performance should be interpreted in context, as conditions differ across countries and sectors.",
+      "title": "Asian Economies Monitor Energy Costs and Technology Demand",
+      "summary": "Economies across Asia remain exposed to changes in oil prices, shipping costs and global demand for manufactured goods. Demand for advanced chips and AI-related products continues to be an important factor in regional technology supply chains. At the same time, movements in currencies and interest-rate expectations can affect exporters, investors and import costs. Specific market changes should be checked against the latest official data and exchange reports.",
       "image": "",
-      "imageQuery": "Asian financial district stock market trading screens"
+      "imageQuery": "Asian electronics manufacturing semiconductor production factory",
+      "source": "International business reporting"
     },
     {
       "category": "world",
-      "title": "Public Spending Decisions Become More Difficult as Needs Compete",
-      "content": "Governments must decide how to allocate limited resources between security, healthcare, education, infrastructure, employment support and assistance for vulnerable households. Emergency spending may be necessary during crises, but long-term financial sustainability also matters. Strong public administration requires transparent budgeting, careful evaluation of results and clear explanations of trade-offs. Citizens need to be able to judge policies by their real-world effects rather than promises alone.",
+      "title": "Why Energy Infrastructure Matters During Conflict",
+      "summary": "Power stations, electricity substations, oil facilities and gas infrastructure are essential to everyday life and economic activity. Damage to these systems can interrupt heating, healthcare, transport, communications and industrial production. International discussions about protecting energy infrastructure are therefore important for both humanitarian and economic reasons. Any ceasefire announcement must be distinguished from a verified reduction in attacks on the ground.",
       "image": "",
-      "imageQuery": "public services healthcare education infrastructure government budget"
+      "imageQuery": "electricity transmission lines power station energy infrastructure",
+      "source": "RadiantWaves Media explainer"
     }
   ],
   "topStories": [
     {
-      "title": "Energy Security and the Cost of Living",
-      "description": "Middle East tensions and uncertainty around international shipping continue to create risks for fuel prices, transport and household budgets."
+      "title": "Ukraine Reports 76 Attacks on Energy Infrastructure in One Week",
+      "description": "Zelenskyy says energy, oil and gas facilities were targeted as uncertainty remains over a proposed energy ceasefire.",
+      "image": "",
+      "imageQuery": "Ukraine energy infrastructure substation"
     },
     {
-      "title": "Governments Under Pressure to Deliver Results",
-      "description": "Leaders face difficult choices involving security, public spending, economic stability and support for vulnerable citizens."
+      "title": "France Faces Continued Public Anger Over Living Costs",
+      "description": "Demonstrations have highlighted concerns about purchasing power, education and public services, with clashes reported in some locations.",
+      "image": "",
+      "imageQuery": "Paris France demonstration public protest"
     },
     {
-      "title": "Nigeria's Fuel Market and Refining Capacity",
-      "description": "Domestic refining creates opportunities, but international prices and distribution costs continue to influence the cost of fuel."
+      "title": "Nigeria's Fuel Prices and Economic Reforms Remain in Focus",
+      "description": "Households continue to watch petrol, food and transport costs while the government defends its economic reform direction.",
+      "image": "",
+      "imageQuery": "Nigeria petrol station fuel pump motorists"
     },
     {
-      "title": "AI Investment and Global Financial Markets",
-      "description": "Investors are reassessing the profitability of major technology investments as borrowing costs and market uncertainty persist."
-    },
-    {
-      "title": "Europe's Economic and Energy Challenges",
-      "description": "European policymakers are balancing affordable energy, industrial competitiveness, security and public finances."
+      "title": "Europe Debates How to Respond to High Energy Costs",
+      "description": "Governments are weighing immediate support for consumers and industry against longer-term energy and climate commitments.",
+      "image": "",
+      "imageQuery": "European Union energy ministers meeting"
     }
   ],
   "breakingHistory": [
-    "International energy security remains vulnerable to prolonged conflict and renewed shipping disruption.",
-    "Financial markets are reassessing technology investment, inflation risks and the outlook for interest rates.",
-    "Governments face growing pressure to show how public spending improves security, essential services and household welfare."
+    "Ukraine's president reports repeated attacks on energy infrastructure during the past week.",
+    "Protests over living costs and public services continue to draw attention in France.",
+    "EU leaders remain divided over the best response to high energy costs.",
+    "Nigeria's petrol prices, security and economic reforms remain key issues for public debate."
   ],
-  "morningSummary": "Friday's global picture is shaped by continuing Middle East tensions, uncertainty in energy markets, financial market volatility and the pressure on governments to protect households. The IMF has warned of risks from prolonged conflict and renewed disruption to energy production and shipping. Europe continues to balance energy affordability with industrial competitiveness, while Nigeria faces the challenge of improving fuel security and managing the cost of living. Technology investment and interest-rate expectations are also influencing financial markets. Across these issues, a common question remains: are public policies delivering measurable improvements in people's everyday lives?",
-  "bigQuestion": "What should governments prioritise most to improve people's lives: stronger security, more jobs, affordable essential goods or better public services? Share your views respectfully. Let's encourage a constructive discussion based on facts, accountability and practical solutions.",
-  "quoteOfTheDay": "True progress begins when we look beyond the promises made and pay attention to the difference our decisions make in people's everyday lives.",
-  "branding": {
-    "name": "RadiantWaves Media",
-    "tagline": "Gateway to Your World News — Connecting You to the World",
-    "footerTagline": "Connecting You Deeper to the World's Most Important Stories."
-  },
-  "editorialNote": "RadiantWaves Media aims to provide clear, original and responsible reporting. International developments, market prices and official statements can change quickly. Claims should be attributed to their sources, and developing stories should be checked against reliable reporting before being treated as confirmed. This bulletin is for general information and is not financial or investment advice.",
+  "morningSummary": "Sunday's global picture is shaped by continuing conflict, economic pressure and public demands for accountability. Ukraine reports repeated attacks on energy infrastructure, while France faces protests over living costs and public services. European governments are considering how to respond to high energy prices. In Nigeria, the public conversation continues to centre on petrol prices, food inflation, security, jobs and the results of economic reforms. RadiantWaves Media will continue to distinguish confirmed developments from statements that require further verification.",
+  "bigQuestion": "When choosing Nigeria's next president, what should matter most to voters: proven experience, a clear economic plan, the ability to unite the country, or measurable results in security and living standards? Share your views respectfully. Let's discuss policies, evidence and accountability—not insults or assumptions.",
+  "quoteOfTheDay": "A world that changes quickly demands more than quick reactions; it demands the patience to understand, the courage to question and the wisdom to act.",
+  "editorialNote": "Political statements, campaign claims, casualty figures and government announcements are attributed to their respective sources. They should not be treated as independently established facts unless supported by evidence. Reports about conflicts and energy infrastructure can change as new information emerges. RadiantWaves Media aims to present developments clearly, distinguish verified facts from claims, and encourage informed, respectful discussion.",
   "sponsoredAdverts": [
     {
       "title": "Premium Nigerian Spices — From Nigeria to the World",

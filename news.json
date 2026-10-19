@@ -1,156 +1,210 @@
 {
-  "date": "Sunday, 18 October 2026",
+  "date": "Monday, 19 October 2026",
   "edition": "Morning News & Global Update",
-  "branding": {
-    "name": "RadiantWaves Media",
-    "slogan": "Gateway to Your World News — Connecting You to the World",
-    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories"
-  },
   "hero": {
-    "title": "Global Tensions, Europe's Protests and Nigeria's Economic Choices",
-    "description": "Sunday's global briefing examines the latest developments in the Russia–Ukraine war, rising energy costs, demonstrations in France, Nigeria's economic reforms and the international issues shaping markets and diplomacy.",
+    "title": "Hormuz Crisis, Global Markets and European Unrest Shape Monday's Headlines",
+    "description": "RadiantWaves Media brings you the latest developments in energy security, Iran–US diplomacy, the war in Ukraine, European affairs, global markets and Africa.",
     "image": "",
-    "imageQuery": "world leaders international diplomacy news conference"
+    "imageQuery": "Strait of Hormuz oil tankers international shipping aerial photograph"
   },
   "breaking": [
-    "UKRAINE: President Volodymyr Zelenskyy says Russian forces targeted Ukraine's energy, oil and gas infrastructure 76 times over the past week. The claimed attacks raise fresh questions about efforts to protect energy facilities.",
-    "FRANCE: Protests over living costs and public services have continued following demonstrations across several French cities. Authorities have reported arrests and clashes in some locations.",
-    "EUROPE: High energy costs remain a concern for households and industry as European governments debate measures to reduce the impact of the energy crisis.",
-    "NIGERIA: Petrol prices, food costs, economic reforms and security remain important issues for households and policymakers.",
-    "GLOBAL MARKETS: Investors continue to assess geopolitical risks, energy supply uncertainty and the outlook for interest rates."
+    "MIDDLE EAST: Iran says its proposal to reopen the Strait of Hormuz within seven days remains on the table, subject to US acceptance of its conditions. Negotiations remain unresolved.",
+    "ENERGY: Brent crude fell around 2% to approximately $107.57 a barrel in early Monday trading, while security risks around Hormuz continue to affect shipping and investor sentiment.",
+    "MARITIME SECURITY: Iran's Revolutionary Guard said an oil tanker caught fire after striking a naval mine in the Strait of Hormuz. The incident and its circumstances require careful monitoring.",
+    "UKRAINE: President Volodymyr Zelenskyy says discussions with US envoys Steve Witkoff and Jared Kushner are continuing as diplomatic efforts proceed.",
+    "GLOBAL MARKETS: Investors are assessing uncertainty over US policy towards Russian oil exports, maritime risks and the outlook for technology companies.",
+    "FRANCE: Protests over living costs and public services have placed renewed pressure on the government, while President Emmanuel Macron has retained Interior Minister Laurent Nuñez, according to reports."
   ],
   "featured": {
-    "title": "Ukraine's Energy Infrastructure Faces Renewed Pressure",
-    "content": "Ukrainian President Volodymyr Zelenskyy said Russia had targeted Ukraine's energy, oil and gas infrastructure 76 times during the past week. He identified substations in several regions among the affected sites. The report comes amid disputed claims about an energy-focused ceasefire. There is no independently confirmed comprehensive end to attacks on energy infrastructure. Damage to power and fuel facilities can affect electricity supplies, industry and civilian life as winter approaches.",
+    "title": "Strait of Hormuz: Diplomacy Continues as Shipping Risks Remain High",
+    "content": "Iran has reiterated an offer to reopen the Strait of Hormuz within seven days if Washington accepts conditions that include easing restrictions on Iranian oil exports and ports. The United States has also pressed Iran over its nuclear programme, leaving major differences unresolved. The waterway is a vital route for global energy supplies. A reported tanker explosion has added to concerns about the safety of commercial shipping. There is no confirmed comprehensive agreement to end the crisis.",
     "image": "",
-    "imageQuery": "Ukraine damaged electricity substation energy infrastructure October 2026"
+    "imageQuery": "commercial oil tanker Strait of Hormuz maritime security"
   },
   "articles": [
     {
+      "id": "world-hormuz-diplomacy",
       "category": "world",
-      "title": "Ukraine Reports Repeated Attacks on Energy Infrastructure",
-      "summary": "President Volodymyr Zelenskyy said Russian forces had targeted Ukraine's energy, oil and gas infrastructure 76 times in the past week. He reported strikes affecting substations in the Vinnytsia, Zhytomyr, Khmelnytskyi and Odesa regions. The claims come amid uncertainty over an energy ceasefire previously discussed publicly by US President Donald Trump. Kyiv and Moscow have not provided confirmation of a comprehensive agreement that has stopped these attacks.",
+      "title": "Iran Renews Proposal to Reopen Strait of Hormuz",
+      "summary": "Iranian Foreign Minister Abbas Araqchi says Tehran's offer to reopen the strategic waterway within seven days remains active. The proposal is conditional, and negotiations remain stalled over sanctions, maritime restrictions and Iran's nuclear programme.",
+      "content": "The Strait of Hormuz remains at the centre of international diplomatic and economic concerns. Iran wants the immediate reopening of the waterway to be a priority, while US officials have demanded action on nuclear enrichment. The outcome could influence oil availability, shipping costs, insurance premiums and inflation. Neither a comprehensive settlement nor a lasting reopening agreement has been confirmed.",
       "image": "",
-      "imageQuery": "Ukraine electricity substation damaged by Russian strikes October 2026",
-      "source": "Reuters"
+      "imageQuery": "Strait of Hormuz oil tankers Persian Gulf satellite photograph",
+      "source": "Reuters",
+      "date": "2026-10-19"
     },
     {
-      "category": "europe",
-      "title": "Protests Over Living Costs Continue to Challenge France",
-      "summary": "Demonstrations over living costs, education and public services have drawn attention to social and economic pressures in France. Reports from Saturday described marches in multiple cities, with clashes, fires and arrests in some locations. The scale of participation and arrest figures vary between reports. The demonstrations underline public concern about purchasing power and the quality of essential services. Further developments should be checked against updated police and local-authority statements.",
+      "id": "world-tanker-incident",
+      "category": "world",
+      "title": "Reported Tanker Explosion Raises Maritime Security Concerns",
+      "summary": "Iran's Islamic Revolutionary Guard Corps said a tanker caught fire after striking a naval mine in the Strait of Hormuz. The incident comes amid continuing risks to vessels navigating the region.",
+      "content": "The report adds to concerns about the safety of commercial shipping in one of the world's most important energy corridors. Ship operators, insurers and governments are monitoring the situation as attacks and maritime incidents continue to affect confidence. Details about the incident and any wider consequences should be treated cautiously until independently established.",
       "image": "",
-      "imageQuery": "France Paris public demonstrations police street October 2026",
-      "source": "Associated Press and The Guardian"
+      "imageQuery": "oil tanker at sea Persian Gulf maritime security patrol",
+      "source": "Reuters reporting carried by international media",
+      "date": "2026-10-19"
     },
     {
-      "category": "europe",
-      "title": "European Governments Debate Responses to High Energy Costs",
-      "summary": "Energy prices remain a major concern for European households and businesses following disruption to international fuel supplies. EU leaders have discussed short-term measures to cushion the economic impact, while disagreements remain over the balance between immediate relief, industrial competitiveness and climate policy. Higher energy costs can feed into transport, manufacturing and food prices. Proposed measures should not be confused with policies that have already been formally approved.",
-      "image": "",
-      "imageQuery": "European Union leaders meeting energy security Brussels",
-      "source": "Euronews"
-    },
-    {
-      "category": "usa",
-      "title": "Washington's Russia Policy Adds Uncertainty to Ukraine Support",
-      "summary": "US decisions concerning Russia-related sanctions and energy transactions have raised questions about the future direction of Washington's policy towards Moscow and Kyiv. Ukrainian officials have expressed concern that changes could weaken pressure on Russia while the war continues. The dispute also reflects the challenge facing US policymakers as they weigh energy costs, national security and support for Ukraine. Statements from governments involved should be assessed separately from independent confirmation of their claims.",
-      "image": "",
-      "imageQuery": "White House Washington foreign policy press briefing",
-      "source": "Reuters"
-    },
-    {
-      "category": "africa",
-      "title": "Nigeria's Economic Reforms Remain Under Public Scrutiny",
-      "summary": "The Nigerian government continues to face public pressure over petrol prices, food inflation, transport costs and living standards. Recent reporting has highlighted the administration's commitment to maintaining market-oriented reforms rather than returning to petrol subsidies or multiple exchange rates. The key question for households is whether reforms can produce measurable improvements in purchasing power, jobs, public services and economic stability. Official statements should be considered alongside independently verified economic data.",
-      "image": "",
-      "imageQuery": "Nigeria petrol station motorists fuel prices Lagos",
-      "source": "Channels Television and Reuters"
-    },
-    {
-      "category": "africa",
-      "title": "Nigeria's Security Challenge Remains a National Priority",
-      "summary": "Security remains central to Nigeria's public debate, including efforts to tackle terrorism, banditry, kidnappings and attacks on communities. The government has directed security agencies to intensify operations and improve protection for citizens. The effectiveness of these measures will need to be judged by verified outcomes, including safer communities, successful rescues, reduced attacks and improved access to schools and businesses. Claims about operations and casualty figures should be attributed to the authorities or other identified sources.",
-      "image": "",
-      "imageQuery": "Nigerian security personnel patrol public road Nigeria",
-      "source": "Nigerian news reporting"
-    },
-    {
+      "id": "business-oil-markets",
       "category": "business",
-      "title": "Energy Disruption Continues to Influence Global Economic Prospects",
-      "summary": "International energy supply uncertainty remains a concern for governments, manufacturers and transport operators. When oil and refined-fuel prices rise, the effects can spread through freight, agriculture, electricity generation and the production of everyday goods. Countries that import much of their fuel can face additional pressure on foreign exchange and public finances. The overall impact depends on the duration of disruptions, market prices, shipping conditions and the policy response in each country.",
+      "title": "Oil Prices Ease as Traders Weigh Supply Risks",
+      "summary": "Brent crude fell to around $107.57 a barrel in early Monday trading as investors weighed regional tensions, potential changes in Russian oil exports and recent price movements.",
+      "content": "Oil markets remain highly sensitive to developments involving Iran, the Strait of Hormuz and sanctions on Russian energy exports. Even when futures prices fall, shipping risks and insurance costs can keep physical delivery expensive. Sustained disruption could feed into petrol, diesel, electricity, transport and food prices. Market prices fluctuate throughout the day and the quoted figure is an early-session snapshot, not a closing price.",
       "image": "",
-      "imageQuery": "oil refinery industrial processing units global energy market",
-      "source": "International energy-market reporting"
+      "imageQuery": "crude oil storage tanks refinery industrial energy market",
+      "source": "Reuters",
+      "date": "2026-10-19"
     },
     {
+      "id": "europe-france-protests",
+      "category": "europe",
+      "title": "France Faces Renewed Pressure Following Protests",
+      "summary": "Reports describe widespread unrest and arrests following protests linked to living costs and public services. President Emmanuel Macron has declined Interior Minister Laurent Nuñez's offer to resign.",
+      "content": "The protests have renewed attention on household purchasing power, public services, policing and government accountability. Authorities have announced security responses in affected areas. The scale and consequences of the unrest continue to develop, and reported arrest figures should be understood in the context of ongoing official updates. The economic pressures behind the demonstrations remain an important issue for households and businesses.",
+      "image": "",
+      "imageQuery": "Paris France city street demonstration police public square",
+      "source": "The Guardian live reporting, with developments attributed to officials and news agencies",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "europe-energy-costs",
+      "category": "europe",
+      "title": "Energy Security Remains a Major Concern Across Europe",
+      "summary": "Uncertainty surrounding Middle Eastern supplies and maritime routes continues to put pressure on Europe's energy outlook and industrial costs.",
+      "content": "European governments face the challenge of maintaining reliable energy supplies while protecting households and industry from price volatility. Higher costs for fuel and transport can spread through manufacturing, agriculture and food distribution. Policymakers must balance short-term support with public finances, energy efficiency and long-term supply resilience.",
+      "image": "",
+      "imageQuery": "European energy infrastructure electricity pylons gas pipeline industrial facility",
+      "source": "RadiantWaves Media global energy analysis",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "ukraine-diplomacy",
+      "category": "world",
+      "title": "Zelenskyy Says Contact With US Envoys Continues",
+      "summary": "Ukrainian President Volodymyr Zelenskyy said he had spoken with US envoys Steve Witkoff and Jared Kushner as diplomatic communication continues over the war with Russia.",
+      "content": "The discussions form part of continuing efforts to explore diplomatic initiatives while fighting and attacks on infrastructure remain concerns. Ukraine's relationship with Washington is important to its defence and intelligence support. There is no basis to describe these contacts alone as a peace agreement or a confirmed comprehensive energy ceasefire.",
+      "image": "",
+      "imageQuery": "Volodymyr Zelenskyy Ukrainian president diplomatic meeting Kyiv",
+      "source": "Reuters",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "business-global-markets",
       "category": "business",
-      "title": "Dangote Refinery Keeps Nigeria in the International Fuel-Supply Conversation",
-      "summary": "Nigeria's Dangote Refinery remains an important development in the country's effort to expand domestic refining and supply petroleum products to local and overseas markets. Greater refining capacity may reduce dependence on imported finished fuel, but it does not automatically insulate consumers from international crude prices, exchange-rate movements, logistics costs or local distribution margins. The refinery's investment plans and market impact should be assessed using confirmed company disclosures and regulatory filings.",
+      "title": "Global Investors Assess Russian Oil Policy and Shipping Risks",
+      "summary": "Financial markets are weighing uncertainty over US measures affecting Russian oil exports, maritime security risks and the outlook for major technology companies.",
+      "content": "Changes in energy sanctions can affect the availability of crude, trade flows and market expectations, although the practical impact of any policy change may take time to emerge. Investors are also watching technology earnings and the costs associated with artificial intelligence. Bond yields, currencies and equity markets may respond differently as new information becomes available.",
       "image": "",
-      "imageQuery": "Dangote Petroleum Refinery Lekki Lagos aerial view",
-      "source": "Reuters and company disclosures"
+      "imageQuery": "global financial markets stock exchange trading screens",
+      "source": "Reuters",
+      "date": "2026-10-19"
     },
     {
-      "category": "technology",
-      "title": "AI Deepfakes Put Pressure on Regulators and Digital Platforms",
-      "summary": "The spread of AI-generated images, videos and audio is creating growing concerns about privacy, online abuse and public trust. Deepfakes can be used to impersonate people or make false material appear authentic. Regulators and platforms face the challenge of protecting people without undermining legitimate expression. Users can reduce risk by checking the original source, looking for independent confirmation and avoiding the sharing of unverified content.",
-      "image": "",
-      "imageQuery": "artificial intelligence digital media deepfake technology illustration",
-      "source": "International technology reporting"
-    },
-    {
+      "id": "asia-china-economy",
       "category": "asia",
-      "title": "Asian Economies Monitor Energy Costs and Technology Demand",
-      "summary": "Economies across Asia remain exposed to changes in oil prices, shipping costs and global demand for manufactured goods. Demand for advanced chips and AI-related products continues to be an important factor in regional technology supply chains. At the same time, movements in currencies and interest-rate expectations can affect exporters, investors and import costs. Specific market changes should be checked against the latest official data and exchange reports.",
+      "title": "China Reports 4.5% Economic Growth in Third Quarter",
+      "summary": "China reported year-on-year economic growth of 4.5% in the third quarter, alongside a reported increase in retail sales, providing investors with fresh information about the world's second-largest economy.",
+      "content": "The figures offer a snapshot of activity in China as businesses and investors assess domestic demand, manufacturing, trade and technology investment. Growth figures alone do not show how evenly economic gains are distributed among households and industries. Global markets will continue to watch Chinese consumption, exports and policy decisions.",
       "image": "",
-      "imageQuery": "Asian electronics manufacturing semiconductor production factory",
-      "source": "International business reporting"
+      "imageQuery": "Shanghai China financial district skyline modern skyscrapers",
+      "source": "Reuters global markets reporting",
+      "date": "2026-10-19"
     },
     {
-      "category": "world",
-      "title": "Why Energy Infrastructure Matters During Conflict",
-      "summary": "Power stations, electricity substations, oil facilities and gas infrastructure are essential to everyday life and economic activity. Damage to these systems can interrupt heating, healthcare, transport, communications and industrial production. International discussions about protecting energy infrastructure are therefore important for both humanitarian and economic reasons. Any ceasefire announcement must be distinguished from a verified reduction in attacks on the ground.",
+      "id": "technology-ai-markets",
+      "category": "technology",
+      "title": "AI Investment Remains in Focus as Markets Watch Tech Earnings",
+      "summary": "Investors are watching major technology-company earnings and the substantial spending associated with artificial intelligence infrastructure.",
+      "content": "AI continues to influence investment in data centres, chips, cloud computing and software. Companies face questions about whether future revenue will justify the cost of building and operating these systems. This week's earnings announcements may provide additional information, but market expectations and forecasts are not guarantees of future performance.",
       "image": "",
-      "imageQuery": "electricity transmission lines power station energy infrastructure",
-      "source": "RadiantWaves Media explainer"
+      "imageQuery": "artificial intelligence data centre server racks technology infrastructure",
+      "source": "Reuters global markets reporting",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "africa-nigeria-energy",
+      "category": "africa",
+      "title": "Nigeria's Energy Position Remains Important to African Markets",
+      "summary": "Nigeria's refining capacity and petroleum exports remain relevant as international fuel markets experience disruption and price volatility.",
+      "content": "Nigeria's domestic refining sector could contribute to regional fuel supply, but the effect on consumers depends on crude prices, operating costs, distribution, exchange rates and domestic pricing conditions. Higher international energy prices can also affect African countries that depend heavily on imported petroleum products. Claims about current production, export volumes or pump prices should be checked against the latest company and market data.",
+      "image": "",
+      "imageQuery": "Dangote refinery Lekki Nigeria industrial refinery aerial view",
+      "source": "RadiantWaves Media regional energy overview",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "africa-cost-of-living",
+      "category": "africa",
+      "title": "African Households Remain Exposed to Energy and Transport Costs",
+      "summary": "Changes in oil prices, freight charges and fertiliser supplies can affect transport, food production and household purchasing power across African economies.",
+      "content": "The effects of international conflicts are not confined to the countries involved. Fuel and shipping costs can increase the price of moving goods, operating machinery and importing essential supplies. Governments and businesses are therefore monitoring energy security, local production, logistics and targeted support for vulnerable households.",
+      "image": "",
+      "imageQuery": "African market traders food produce transport street market",
+      "source": "RadiantWaves Media global economic overview",
+      "date": "2026-10-19"
     }
   ],
   "topStories": [
     {
-      "title": "Ukraine Reports 76 Attacks on Energy Infrastructure in One Week",
-      "description": "Zelenskyy says energy, oil and gas facilities were targeted as uncertainty remains over a proposed energy ceasefire.",
+      "title": "Iran Renews Hormuz Reopening Proposal",
+      "description": "Tehran says its offer remains available, but key differences with Washington continue.",
       "image": "",
-      "imageQuery": "Ukraine energy infrastructure substation"
+      "imageQuery": "Strait of Hormuz commercial shipping oil tanker"
     },
     {
-      "title": "France Faces Continued Public Anger Over Living Costs",
-      "description": "Demonstrations have highlighted concerns about purchasing power, education and public services, with clashes reported in some locations.",
+      "title": "Tanker Incident Raises Shipping Concerns",
+      "description": "A reported tanker fire adds to maritime security worries in the Gulf.",
       "image": "",
-      "imageQuery": "Paris France demonstration public protest"
+      "imageQuery": "oil tanker at sea Persian Gulf"
     },
     {
-      "title": "Nigeria's Fuel Prices and Economic Reforms Remain in Focus",
-      "description": "Households continue to watch petrol, food and transport costs while the government defends its economic reform direction.",
+      "title": "Oil Markets React to Geopolitical Risks",
+      "description": "Energy prices remain volatile as traders assess supply routes and sanctions policy.",
       "image": "",
-      "imageQuery": "Nigeria petrol station fuel pump motorists"
+      "imageQuery": "oil refinery crude oil storage tanks"
     },
     {
-      "title": "Europe Debates How to Respond to High Energy Costs",
-      "description": "Governments are weighing immediate support for consumers and industry against longer-term energy and climate commitments.",
+      "title": "France Faces Political Pressure After Protests",
+      "description": "Unrest over living costs and public services keeps government accountability in focus.",
       "image": "",
-      "imageQuery": "European Union energy ministers meeting"
+      "imageQuery": "Paris France demonstration city street"
+    },
+    {
+      "title": "Ukraine and US Envoys Continue Contact",
+      "description": "Diplomatic communication continues, but no comprehensive peace settlement has been confirmed.",
+      "image": "",
+      "imageQuery": "Ukraine president diplomatic meeting"
+    },
+    {
+      "title": "Nigeria's Refining Sector in the Spotlight",
+      "description": "Domestic refining remains important as international fuel markets face disruption.",
+      "image": "",
+      "imageQuery": "Dangote refinery Nigeria Lekki"
     }
   ],
   "breakingHistory": [
-    "Ukraine's president reports repeated attacks on energy infrastructure during the past week.",
-    "Protests over living costs and public services continue to draw attention in France.",
-    "EU leaders remain divided over the best response to high energy costs.",
-    "Nigeria's petrol prices, security and economic reforms remain key issues for public debate."
+    "Iran says its conditional proposal to reopen the Strait of Hormuz within seven days remains on the table.",
+    "A reported tanker explosion in the Strait of Hormuz highlights continuing risks to commercial shipping.",
+    "Brent crude fell around 2% to approximately $107.57 a barrel in early Monday trading.",
+    "Zelenskyy says diplomatic contact with US envoys continues as the war with Russia remains unresolved.",
+    "France faces renewed political pressure following protests over living costs and public services.",
+    "China reported third-quarter economic growth of 4.5%, according to Reuters."
   ],
-  "morningSummary": "Sunday's global picture is shaped by continuing conflict, economic pressure and public demands for accountability. Ukraine reports repeated attacks on energy infrastructure, while France faces protests over living costs and public services. European governments are considering how to respond to high energy prices. In Nigeria, the public conversation continues to centre on petrol prices, food inflation, security, jobs and the results of economic reforms. RadiantWaves Media will continue to distinguish confirmed developments from statements that require further verification.",
-  "bigQuestion": "When choosing Nigeria's next president, what should matter most to voters: proven experience, a clear economic plan, the ability to unite the country, or measurable results in security and living standards? Share your views respectfully. Let's discuss policies, evidence and accountability—not insults or assumptions.",
-  "quoteOfTheDay": "A world that changes quickly demands more than quick reactions; it demands the patience to understand, the courage to question and the wisdom to act.",
-  "editorialNote": "Political statements, campaign claims, casualty figures and government announcements are attributed to their respective sources. They should not be treated as independently established facts unless supported by evidence. Reports about conflicts and energy infrastructure can change as new information emerges. RadiantWaves Media aims to present developments clearly, distinguish verified facts from claims, and encourage informed, respectful discussion.",
+  "morningSummary": "Monday's global picture is dominated by energy security, maritime risks and unsettled diplomacy. Iran says it is still offering a conditional route to reopening the Strait of Hormuz, while a reported tanker explosion has raised fresh concerns about shipping safety. Oil prices eased in early trading, but risks to physical supplies and transport remain. In Europe, France is facing renewed pressure following protests, while Ukraine and US envoys continue diplomatic contact. Markets are also assessing uncertainty around Russian oil policy, Chinese growth and major technology-company investment.",
+  "bigQuestion": "As Nigeria approaches 2027, what should voters examine most carefully: the government's record, the opposition's policy plans, the credibility of individual candidates, or their ability to work together? Share your views respectfully. Let's discuss evidence, policies and accountability rather than personal attacks.",
+  "quoteOfTheDay": "Good leadership is measured not only by the decisions made at the top, but by the safety, opportunities and dignity those decisions create for ordinary people.",
+  "branding": {
+    "name": "RadiantWaves Media",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories",
+    "socialMedia": {
+      "facebook": "Radiantwavesnews",
+      "tiktok": "@radiantwavesmedia",
+      "youtube": "radiantwave=wv6j",
+      "x": "@radiant13528995"
+    }
+  },
+  "editorialNote": "RadiantWaves Media presents independently written news summaries based on available reporting. Developing stories, market prices, casualty figures and claims made by governments or military organisations may change as further information emerges. Claims are attributed where appropriate; readers should consult the linked reporting for additional context.",
   "sponsoredAdverts": [
     {
       "title": "Premium Nigerian Spices — From Nigeria to the World",

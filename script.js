@@ -1,114 +1,65 @@
 
-/* ==========================================================
-   RADIANTWAVES MEDIA — COMPLETE NEWSROOM SCRIPT
-   Version 5000
-
-   Main news file:       ./news.json
-   Archive index:        ./archives/index.json
-   Leaders updates:      news.json -> leadersWatch
-
-   Important:
-   This script displays supplied news. It does not independently
-   verify news or automatically discover leaders' statements.
-   ========================================================== */
+/* =========================================================
+   RADIANTWAVES MEDIA — COMPLETE SCRIPT.JS
+   File 3 of 4
+   Works with the matching news.json and index.html
+   ========================================================= */
 
 (() => {
   "use strict";
 
-  const NEWS_FILE = "./news.json";
-  const ARCHIVE_INDEX_FILE = "./archives/index.json";
+  const NEWS_FILE = "./news.json?v=5000";
 
-  const WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php";
-  const IMAGE_SEARCH_LIMIT = 6;
-  const imageSearchCache = new Map();
+  const CATEGORY_TARGETS = {
+    world: "world-news",
+    usa: "usa-news",
+    europe: "europe-news",
+    africa: "africa-news",
+    asia: "asia-news",
+    business: "business-news",
+    technology: "tech-news"
+  };
 
-  const FALLBACK_BASE =
-    "https://dummyimage.com/1200x700/151515/f4f4f4";
+  const CATEGORY_LABELS = {
+    world: "World",
+    usa: "USA",
+    europe: "Europe",
+    africa: "Africa",
+    asia: "Asia",
+    business: "Business",
+    technology: "Technology"
+  };
+
+  let newsData = null;
 
   const $ = (id) => document.getElementById(id);
 
+  function setText(id, value) {
+    const element = $(id);
 
-  /* ==================== GENERAL HELPERS ==================== */
-
-  function escapeHTML(value) {
-    return String(value ?? "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
+    if (element && value !== undefined && value !== null) {
+      element.textContent = String(value);
+    }
   }
 
+  function safeUrl(value) {
+    if (!value || typeof value !== "string") return "";
 
-  function plainText(value) {
-    const node = document.createElement("div");
-    node.innerHTML = String(value ?? "");
-    return (node.textContent || node.innerText || "").trim();
-  }
+    try {
+      const parsed = new URL(value, window.location.href);
 
-
-  function categoryName(category) {
-    const names = {
-      world: "World News",
-      usa: "USA News",
-      europe: "Europe News",
-      africa: "Africa News",
-      asia: "Asia News",
-      business: "Business News",
-      technology: "Technology News",
-      tech: "Technology News"
-    };
-
-    return names[String(category || "world").toLowerCase()]
-      || "World News";
-  }
-
-
-  function normaliseCategory(category) {
-    const value = String(category || "world").toLowerCase().trim();
-
-    if (value === "tech") return "technology";
-    if (value === "united states" || value === "us") return "usa";
-
-    return value;
-  }
-
-
-  function fallbackImage(category = "world") {
-    const label = encodeURIComponent(
-      `RADIANTWAVES MEDIA | ${categoryName(category)}`
-    );
-
-    return `${FALLBACK_BASE}?text=${label}`;
-  }
-
-
-  function safeImageURL(value) {
-    if (typeof value !== "string" || !value.trim()) return "";
-
-    const url = value.trim();
-
-    if (/^https?:\/\//i.test(url)) return url;
-    if (/^\.{1,2}\//.test(url)) return url;
-    if (/^assets\//i.test(url)) return `./${url}`;
+      if (
+        parsed.protocol === "https:" ||
+        parsed.protocol === "http:"
+      ) {
+        return parsed.href;
+      }
+    } catch (_) {
+      return "";
+    }
 
     return "";
   }
-
-
-  function safeLink(value) {
-    const link = String(value || "").trim();
-
-    if (/^https?:\/\//i.test(link)) return link;
-    if (/^mailto:/i.test(link)) return link;
-    if (/^tel:/i.test(link)) return link;
-    if (/^\.{1,2}\//.test(link)) return link;
-    if (/^archives\//i.test(link)) return `./${link}`;
-    if (link.startsWith("#")) return link;
-
-    return "";
-  }
-
 
   function formatDate(value) {
     if (!value) return "";
@@ -119,1114 +70,694 @@
       return String(value);
     }
 
-    return new Intl.DateTimeFormat("en-GB", {
-      day: "2-digit",
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
       month: "short",
       year: "numeric"
-    }).format(date);
-  }
-
-
-  function setText(id, value) {
-    const element = $(id);
-    if (element) element.textContent = String(value ?? "");
-  }
-
-
-  function showMessage(container, title, message = "") {
-    if (!container) return;
-
-    container.innerHTML = `
-      <article class="card status-card">
-        <div class="card-content">
-          <h3>${escapeHTML(title)}</h3>
-          ${message
-            ? `<p>${escapeHTML(message)}</p>`
-            : ""}
-        </div>
-      </article>
-    `;
-  }
-
-
-  function setPlainEmptyState(container, message) {
-    if (!container) return;
-
-    container.innerHTML = `
-      <p class="empty-state">${escapeHTML(message)}</p>
-    `;
-  }
-
-
-  async function fetchJSON(url) {
-    const separator = url.includes("?") ? "&" : "?";
-
-    const response = await fetch(
-      `${url}${separator}v=${Date.now()}`,
-      { cache: "no-store" }
-    );
-
-    if (!response.ok) {
-      throw new Error(`${url} returned HTTP ${response.status}`);
-    }
-
-    return response.json();
-  }
-
-
-  /* ==================== IMAGE LOOKUP ==================== */
-
-  async function findWikimediaImage(query) {
-    const cleanQuery = String(query || "").trim();
-
-    if (!cleanQuery) return null;
-
-    const cacheKey = cleanQuery.toLowerCase();
-
-    if (imageSearchCache.has(cacheKey)) {
-      return imageSearchCache.get(cacheKey);
-    }
-
-    const request = (async () => {
-      try {
-        const params = new URLSearchParams({
-          action: "query",
-          generator: "search",
-          gsrsearch: `${cleanQuery} filetype:bitmap`,
-          gsrnamespace: "6",
-          gsrlimit: String(IMAGE_SEARCH_LIMIT),
-          prop: "imageinfo",
-          iiprop: "url|mime|extmetadata",
-          iiurlwidth: "1200",
-          format: "json",
-          origin: "*"
-        });
-
-        const response = await fetch(
-          `${WIKIMEDIA_API}?${params.toString()}`
-        );
-
-        if (!response.ok) {
-          throw new Error(`Wikimedia returned ${response.status}`);
-        }
-
-        const data = await response.json();
-        const pages = Object.values(data?.query?.pages || {});
-
-        for (const page of pages) {
-          const info = page?.imageinfo?.[0];
-
-          if (!info || !String(info.mime || "").startsWith("image/")) {
-            continue;
-          }
-
-          const url = info.thumburl || info.url;
-
-          if (!url || !/^https?:\/\//i.test(url)) {
-            continue;
-          }
-
-          const metadata = info.extmetadata || {};
-
-          const artist = plainText(metadata.Artist?.value || "");
-          const credit = plainText(metadata.Credit?.value || "");
-
-          return {
-            url,
-            title: page.title || "",
-            credit: artist || credit || "Wikimedia Commons"
-          };
-        }
-      } catch (error) {
-        console.warn("Automatic image lookup failed:", error);
-      }
-
-      return null;
-    })();
-
-    imageSearchCache.set(cacheKey, request);
-
-    return request;
-  }
-
-
-  async function resolveImage(item, category = "world") {
-    const suppliedImage = safeImageURL(item?.image);
-
-    if (suppliedImage) {
-      return {
-        url: suppliedImage,
-        credit: "Image supplied with the story"
-      };
-    }
-
-    const found = await findWikimediaImage(item?.imageQuery);
-
-    if (found?.url) return found;
-
-    return {
-      url: fallbackImage(category),
-      credit: "RadiantWaves Media graphic"
-    };
-  }
-
-
-  function imageMarkup(url, alt, className = "news-image", category = "world") {
-    const safeURL = safeImageURL(url) || fallbackImage(category);
-    const fallback = escapeHTML(fallbackImage(category));
-
-    return `
-      <div class="automatic-image-wrapper">
-        <div class="image-loading" aria-hidden="true">
-          Preparing image…
-        </div>
-
-        <img
-          class="${escapeHTML(className)}"
-          src="${escapeHTML(safeURL)}"
-          alt="${escapeHTML(alt)}"
-          loading="lazy"
-          decoding="async"
-          data-fallback="${fallback}"
-        >
-      </div>
-    `;
-  }
-
-
-  function wireImageStates(root = document) {
-    root.querySelectorAll(
-      ".automatic-image-wrapper img"
-    ).forEach((img) => {
-      const wrapper = img.closest(".automatic-image-wrapper");
-      const loading = wrapper?.querySelector(".image-loading");
-
-      const hideLoading = () => {
-        if (loading) loading.hidden = true;
-      };
-
-      img.addEventListener("load", hideLoading, { once: true });
-
-      img.addEventListener("error", () => {
-        if (img.dataset.fallback && img.src !== img.dataset.fallback) {
-          img.src = img.dataset.fallback;
-          img.removeAttribute("data-fallback");
-        } else {
-          hideLoading();
-
-          if (loading) {
-            loading.textContent = "Image unavailable";
-          }
-        }
-      });
-
-      if (img.complete && img.naturalWidth > 0) {
-        hideLoading();
-      }
     });
   }
 
+  function makeElement(tag, className, text) {
+    const element = document.createElement(tag);
 
-  /* ==================== NEWS ARTICLE CARDS ==================== */
-
-  function makeNewsCard(article, image, category) {
-    const title = article?.title || "Untitled story";
-
-    const summary =
-      article?.summary
-      || article?.description
-      || article?.content
-      || "More information will be added as the story develops.";
-
-    const source = article?.source
-      ? `<p class="story-source">Source: ${escapeHTML(article.source)}</p>`
-      : "";
-
-    const date = article?.date
-      ? `<p class="story-date">${escapeHTML(formatDate(article.date))}</p>`
-      : "";
-
-    const url = safeLink(article?.url || article?.link);
-
-    const titleHTML = url
-      ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(title)}</a>`
-      : escapeHTML(title);
-
-    return `
-      <article class="card news-card">
-        ${imageMarkup(image.url, title, "news-image", category)}
-
-        <div class="card-content">
-          <span class="news-category">
-            ${escapeHTML(categoryName(category))}
-          </span>
-
-          <h3>${titleHTML}</h3>
-
-          <p>${escapeHTML(summary)}</p>
-
-          ${source}
-          ${date}
-        </div>
-      </article>
-    `;
-  }
-
-
-  async function renderArticleSection(newsData, sectionId, category) {
-    const container = $(sectionId);
-
-    if (!container) return;
-
-    const articles = Array.isArray(newsData.articles)
-      ? newsData.articles.filter((article) =>
-          normaliseCategory(article?.category) === category
-        )
-      : [];
-
-    if (!articles.length) {
-      showMessage(
-        container,
-        `No ${categoryName(category)} stories yet.`,
-        "Please check back for the next newsroom update."
-      );
-      return;
+    if (className) {
+      element.className = className;
     }
 
-    container.innerHTML = `
-      <div class="loading-card">
-        Loading ${escapeHTML(categoryName(category).toLowerCase())}…
-      </div>
-    `;
+    if (text !== undefined && text !== null) {
+      element.textContent = String(text);
+    }
 
-    const cards = await Promise.all(
-      articles.map(async (article) => {
-        const image = await resolveImage(article, category);
-        return makeNewsCard(article, image, category);
-      })
+    return element;
+  }
+
+  function makeLink(url, label, className) {
+    const link = makeElement("a", className || "", label);
+    const validUrl = safeUrl(url);
+
+    if (validUrl) {
+      link.href = validUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    } else {
+      link.removeAttribute("href");
+      link.setAttribute("aria-disabled", "true");
+    }
+
+    return link;
+  }
+
+  function clearAndAppend(target, elements) {
+    if (!target) return;
+
+    target.replaceChildren();
+
+    elements.forEach((element) => {
+      if (element) target.appendChild(element);
+    });
+  }
+
+  function makePlaceholder(message) {
+    return makeElement("p", "empty-message", message);
+  }
+
+  function makeArticleCard(article, categoryLabel) {
+    const card = makeElement("article", "news-card article-card");
+    const content = makeElement("div", "card-content article-content");
+
+    const category = makeElement(
+      "span",
+      "card-category article-category",
+      categoryLabel || article.category || "News"
     );
 
-    container.innerHTML = cards.join("");
-    wireImageStates(container);
+    const title = makeElement(
+      "h3",
+      "",
+      article.title || "News update"
+    );
+
+    const summary = makeElement(
+      "p",
+      "",
+      article.summary || article.description || article.content || ""
+    );
+
+    content.appendChild(category);
+    content.appendChild(title);
+
+    if (summary.textContent) {
+      content.appendChild(summary);
+    }
+
+    const footer = makeElement("div", "card-footer article-footer");
+    const sourceText = article.source || "Source not specified";
+    const dateText = formatDate(article.date);
+
+    footer.appendChild(makeElement("span", "article-source", sourceText));
+
+    if (dateText) {
+      footer.appendChild(makeElement("span", "article-date", dateText));
+    }
+
+    content.appendChild(footer);
+
+    const url = safeUrl(article.url);
+
+    if (url) {
+      const readMore = makeLink(url, "Read the original report ↗", "source-link");
+      content.appendChild(readMore);
+    }
+
+    card.appendChild(content);
+
+    return card;
   }
 
-
-  async function renderFeatured(newsData) {
+  function makeFeaturedStory(story) {
     const container = $("featured-news");
-    const featured = newsData.featured;
 
     if (!container) return;
 
-    if (!featured || !featured.title) {
-      setPlainEmptyState(
-        container,
-        "The featured story will appear here when supplied in news.json."
-      );
+    if (!story || typeof story !== "object") {
+      clearAndAppend(container, [
+        makePlaceholder("No featured story has been published in news.json yet.")
+      ]);
       return;
     }
 
-    const image = await resolveImage(featured, "world");
-    const url = safeLink(featured.url || featured.link);
+    const wrapper = makeElement("div", "featured-copy");
+    const label = makeElement("span", "card-category", "FEATURED STORY");
+    const heading = makeElement("h2", "", story.title || "Latest global news");
+    const body = makeElement(
+      "p",
+      "",
+      story.content || story.summary || story.description || ""
+    );
 
-    const titleHTML = url
-      ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(featured.title)}</a>`
-      : escapeHTML(featured.title);
+    wrapper.appendChild(label);
+    wrapper.appendChild(heading);
 
-    container.innerHTML = `
-      <article class="featured-card">
+    if (body.textContent) {
+      wrapper.appendChild(body);
+    }
 
-        ${imageMarkup(
-          image.url,
-          featured.title || "Featured story",
-          "featured-image",
-          "world"
-        )}
+    if (story.source || story.date) {
+      const meta = makeElement(
+        "p",
+        "article-meta",
+        [story.source, formatDate(story.date)].filter(Boolean).join(" · ")
+      );
 
-        <div class="featured-copy">
+      wrapper.appendChild(meta);
+    }
 
-          <p class="eyebrow">EDITOR'S PICK</p>
+    if (safeUrl(story.url)) {
+      wrapper.appendChild(
+        makeLink(story.url, "Read the source report ↗", "source-link")
+      );
+    }
 
-          <span class="news-category">FEATURED STORY</span>
-
-          <h2>${titleHTML}</h2>
-
-          <p>
-            ${escapeHTML(
-              featured.content
-              || featured.summary
-              || featured.description
-              || ""
-            )}
-          </p>
-
-          ${featured.source
-            ? `<p class="story-source">Source: ${escapeHTML(featured.source)}</p>`
-            : `<p class="story-source">RadiantWaves Media newsroom</p>`}
-
-          ${featured.date
-            ? `<p class="story-date">${escapeHTML(formatDate(featured.date))}</p>`
-            : ""}
-
-        </div>
-      </article>
-    `;
-
-    wireImageStates(container);
+    clearAndAppend(container, [wrapper]);
   }
 
-
-  async function renderTopStories(newsData) {
+  function renderTopStories(stories) {
     const container = $("top-stories-container");
 
     if (!container) return;
 
-    const stories = Array.isArray(newsData.topStories)
-      ? newsData.topStories
-      : [];
-
-    if (!stories.length) {
-      showMessage(
-        container,
-        "Top stories are being updated.",
-        "Please check back shortly."
-      );
+    if (!Array.isArray(stories) || stories.length === 0) {
+      clearAndAppend(container, [
+        makePlaceholder("No top stories are available in this edition.")
+      ]);
       return;
     }
 
-    const cards = await Promise.all(
-      stories.map(async (story) => {
-        const image = await resolveImage(story, "world");
-        const url = safeLink(story.url || story.link);
-
-        const titleHTML = url
-          ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(story.title || "Top story")}</a>`
-          : escapeHTML(story.title || "Top story");
-
-        return `
-          <article class="card news-card">
-
-            ${imageMarkup(
-              image.url,
-              story.title || "Top story",
-              "news-image",
-              "world"
-            )}
-
-            <div class="card-content">
-
-              <span class="news-category">TOP STORY</span>
-
-              <h3>${titleHTML}</h3>
-
-              <p>
-                ${escapeHTML(
-                  story.description
-                  || story.summary
-                  || story.content
-                  || ""
-                )}
-              </p>
-
-              ${story.source
-                ? `<p class="story-source">Source: ${escapeHTML(story.source)}</p>`
-                : ""}
-
-              ${story.date
-                ? `<p class="story-date">${escapeHTML(formatDate(story.date))}</p>`
-                : ""}
-
-            </div>
-          </article>
-        `;
-      })
+    const cards = stories.map((story) =>
+      makeArticleCard(story, story.category || "Top story")
     );
 
-    container.innerHTML = cards.join("");
-    wireImageStates(container);
+    clearAndAppend(container, cards);
   }
 
+  function renderCategoryArticles(articles) {
+    Object.entries(CATEGORY_TARGETS).forEach(([category, targetId]) => {
+      const container = $(targetId);
 
-  /* ==================== SPONSORED ADVERTS ==================== */
+      if (!container) return;
 
-  function renderAdverts(newsData) {
+      const matching = Array.isArray(articles)
+        ? articles.filter((article) => {
+            const value = String(article.category || "")
+              .toLowerCase()
+              .trim();
+
+            if (category === "technology") {
+              return value === "technology" || value === "tech";
+            }
+
+            if (category === "usa") {
+              return value === "usa" || value === "us" ||
+                value === "united states";
+            }
+
+            return value === category;
+          })
+        : [];
+
+      if (matching.length === 0) {
+        clearAndAppend(container, [
+          makePlaceholder(
+            `No ${CATEGORY_LABELS[category]} articles are available in this edition.`
+          )
+        ]);
+        return;
+      }
+
+      clearAndAppend(
+        container,
+        matching.map((article) =>
+          makeArticleCard(article, CATEGORY_LABELS[category])
+        )
+      );
+    });
+  }
+
+  function renderBreakingTicker(items) {
+    const ticker = $("breaking-ticker");
+
+    if (!ticker) return;
+
+    const messages = Array.isArray(items)
+      ? items.filter((item) => typeof item === "string" && item.trim())
+      : [];
+
+    if (messages.length === 0) {
+      ticker.textContent = "Welcome to RadiantWaves Media — your global news update.";
+      return;
+    }
+
+    ticker.replaceChildren();
+
+    messages.forEach((message, index) => {
+      if (index > 0) {
+        ticker.appendChild(
+          makeElement("span", "ticker-separator", "  ◆  ")
+        );
+      }
+
+      ticker.appendChild(
+        makeElement("span", "ticker-item", message)
+      );
+    });
+  }
+
+  function renderMorningSummary(data) {
+    const summary = $("morning-summary");
+    const note = $("editorial-note");
+
+    if (summary) {
+      const text = typeof data.morningSummary === "string"
+        ? data.morningSummary
+        : "";
+
+      clearAndAppend(summary, [
+        makeElement("h2", "", "Morning Global Summary"),
+        makeElement(
+          "p",
+          "",
+          text || "The latest global summary will appear here when published."
+        )
+      ]);
+    }
+
+    if (note) {
+      const text = typeof data.editorialNote === "string"
+        ? data.editorialNote
+        : "";
+
+      clearAndAppend(note, [
+        makeElement("h2", "", "Editorial Note"),
+        makeElement(
+          "p",
+          "",
+          text || "RadiantWaves Media encourages readers to check original sources and compare reliable reports."
+        )
+      ]);
+    }
+  }
+
+  function renderQuestionAndQuote(data) {
+    const question = $("big-question");
+    const quote = $("quote-of-the-day");
+
+    if (question) {
+      clearAndAppend(question, [
+        makeElement("h2", "", "💬 Today's Big Question"),
+        makeElement(
+          "p",
+          "",
+          data.bigQuestion ||
+            "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?"
+        )
+      ]);
+    }
+
+    if (quote) {
+      const quoteText = typeof data.quoteOfTheDay === "string"
+        ? data.quoteOfTheDay
+        : data.quoteOfTheDay && data.quoteOfTheDay.text
+          ? data.quoteOfTheDay.text
+          : "Stay curious about the world, question what you hear, and look beyond the headline. Understanding the facts is the first step towards making informed decisions.";
+
+      clearAndAppend(quote, [
+        makeElement("h2", "", "🌍 Thought for Today"),
+        makeElement("p", "", `“${quoteText}”`)
+      ]);
+    }
+  }
+
+  function renderHistory(items) {
+    const container = $("history-container");
+
+    if (!container) return;
+
+    if (!Array.isArray(items) || items.length === 0) {
+      clearAndAppend(container, [
+        makePlaceholder("Historical news updates will appear here.")
+      ]);
+      return;
+    }
+
+    const cards = items.map((item) => {
+      const card = makeElement("article", "history-card");
+
+      if (typeof item === "string") {
+        card.appendChild(makeElement("p", "", item));
+      } else {
+        card.appendChild(
+          makeElement("h3", "", item.title || "From the archive")
+        );
+
+        card.appendChild(
+          makeElement("p", "", item.summary || item.description || "")
+        );
+
+        if (safeUrl(item.url)) {
+          card.appendChild(
+            makeLink(item.url, "Read source ↗", "source-link")
+          );
+        }
+      }
+
+      return card;
+    });
+
+    clearAndAppend(container, cards);
+  }
+
+  function renderArchive(data) {
+    const container = $("archive-list");
+
+    if (!container) return;
+
+    const articles = Array.isArray(data.articles) ? data.articles : [];
+    const topStories = Array.isArray(data.topStories) ? data.topStories : [];
+
+    const combined = [...topStories, ...articles];
+
+    if (data.featured) {
+      combined.unshift(data.featured);
+    }
+
+    if (combined.length === 0) {
+      clearAndAppend(container, [
+        makePlaceholder("The news archive is awaiting published stories.")
+      ]);
+      return;
+    }
+
+    const cards = combined.map((article) => {
+      const card = makeElement("article", "archive-card");
+
+      card.appendChild(
+        makeElement("h3", "", article.title || "News report")
+      );
+
+      const metadata = [
+        article.category || "Global news",
+        article.source || "",
+        formatDate(article.date)
+      ].filter(Boolean).join(" · ");
+
+      card.appendChild(makeElement("p", "", metadata));
+
+      if (safeUrl(article.url)) {
+        card.appendChild(
+          makeLink(article.url, "Open original source ↗", "source-link")
+        );
+      }
+
+      return card;
+    });
+
+    clearAndAppend(container, cards);
+  }
+
+  function renderAdverts(items) {
     const container = $("sponsored-adverts");
 
     if (!container) return;
 
-    const adverts = Array.isArray(newsData.sponsoredAdverts)
-      ? newsData.sponsoredAdverts
-      : [];
-
-    if (!adverts.length) {
-      setPlainEmptyState(
-        container,
-        "There are no sponsored adverts to display at present."
-      );
+    if (!Array.isArray(items) || items.length === 0) {
+      clearAndAppend(container, [
+        makePlaceholder(
+          "Advertising opportunities are available. Contact RadiantWaves Media for enquiries."
+        )
+      ]);
       return;
     }
 
-    container.innerHTML = adverts.map((ad) => {
-      const image =
-        safeImageURL(ad.image) || fallbackImage("business");
+    const cards = items.map((item) => {
+      const card = makeElement("article", "advert-card");
 
-      const products = Array.isArray(ad.products)
-        ? ad.products
-        : [];
+      card.appendChild(
+        makeElement("span", "advert-label", "Advertisement")
+      );
 
-      const productHTML = products.map((product) => {
-        if (typeof product === "string") {
-          return `<li>${escapeHTML(product)}</li>`;
-        }
+      card.appendChild(
+        makeElement("h3", "", item.title || "Advertise with RadiantWaves Media")
+      );
 
-        if (product && typeof product === "object") {
-          const name = product.name || product.title || "Product";
+      card.appendChild(
+        makeElement("p", "", item.description || item.summary || "")
+      );
 
-          const sizes = [
-            product.big ? `Big: ${product.big}` : "",
-            product.small ? `Small: ${product.small}` : ""
-          ].filter(Boolean).join(" · ");
+      if (safeUrl(item.url)) {
+        card.appendChild(
+          makeLink(item.url, item.linkText || "Find out more ↗", "source-link")
+        );
+      } else {
+        card.appendChild(
+          makeLink(
+            "mailto:info@radiantwavesmedia.com?subject=Advertising%20Enquiry",
+            "Contact us about advertising ↗",
+            "source-link"
+          )
+        );
+      }
 
-          return `
-            <li>
-              <strong>${escapeHTML(name)}</strong>
-              ${sizes ? `<span>${escapeHTML(sizes)}</span>` : ""}
-            </li>
-          `;
-        }
-
-        return "";
-      }).join("");
-
-      const href = safeLink(ad.link);
-
-      const action = ad.button && href
-        ? `
-          <a
-            class="contact-btn advert-action"
-            href="${escapeHTML(href)}"
-            ${/^https?:\/\//i.test(href)
-              ? 'target="_blank" rel="noopener noreferrer"'
-              : ""}
-          >
-            ${escapeHTML(ad.button)}
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        `
-        : "";
-
-      return `
-        <article class="sponsored-ad">
-
-          <div class="sponsored-label">SPONSORED ADVERT</div>
-
-          <div class="sponsored-content">
-
-            <img
-              src="${escapeHTML(image)}"
-              alt="${escapeHTML(ad.title || "Sponsored advert")}"
-              loading="lazy"
-              decoding="async"
-              data-ad-fallback="${escapeHTML(fallbackImage("business"))}"
-            >
-
-            <div class="sponsored-text">
-
-              <p class="eyebrow">PARTNER MESSAGE</p>
-
-              <h3>${escapeHTML(ad.title || "Sponsored advert")}</h3>
-
-              ${ad.subtitle
-                ? `<h4>${escapeHTML(ad.subtitle)}</h4>`
-                : ""}
-
-              <p>${escapeHTML(ad.description || "")}</p>
-
-              ${productHTML
-                ? `<ul class="product-list">${productHTML}</ul>`
-                : ""}
-
-              ${action}
-
-            </div>
-          </div>
-        </article>
-      `;
-    }).join("");
-
-    container.querySelectorAll("img[data-ad-fallback]").forEach((img) => {
-      img.addEventListener("error", () => {
-        if (
-          img.dataset.adFallback
-          && img.src !== img.dataset.adFallback
-        ) {
-          img.src = img.dataset.adFallback;
-          img.removeAttribute("data-ad-fallback");
-        }
-      }, { once: true });
+      return card;
     });
+
+    clearAndAppend(container, cards);
   }
 
+  function renderHero(data) {
+    const hero = data.hero || {};
 
-  /* ==================== TEXT, TICKER AND BRIEFS ==================== */
-
-  function renderTextSections(newsData) {
-    const edition = [newsData.edition, newsData.date]
-      .filter(Boolean)
-      .join(" · ");
-
-    setText("edition-date", edition || "GLOBAL NEWSROOM");
-
-    setText(
-      "hero-title",
-      newsData.hero?.title || "Global Breaking News"
-    );
-
+    setText("hero-title", hero.title || "Gateway to Your World News");
     setText(
       "hero-desc",
-      newsData.hero?.description
-        || "Reports and perspectives from around the world."
+      hero.description ||
+        "Connecting you to the stories shaping our world."
     );
 
     setText(
-      "morning-summary",
-      newsData.morningSummary
-        || "The newsroom briefing will be updated as stories develop."
+      "edition-date",
+      data.edition || data.date || "Global News Edition"
     );
 
     setText(
-      "editorial-note",
-      newsData.editorialNote
-        || "Developing stories may change as new information becomes available."
+      "hero-marquee",
+      hero.marquee ||
+        "World · USA · Canada · Europe · UK · Africa · Asia · Australia"
     );
+
+    const video = $("heroVideo");
+
+    if (video && hero.video) {
+      const validVideo = safeUrl(hero.video);
+
+      if (validVideo && video.getAttribute("src") !== validVideo) {
+        video.src = validVideo;
+        video.load();
+      }
+    }
+  }
+
+  function renderAll(data) {
+    newsData = data;
+
+    renderHero(data);
+    makeFeaturedStory(data.featured);
+    renderTopStories(data.topStories);
+    renderCategoryArticles(data.articles);
+    renderBreakingTicker(data.breaking);
+    renderMorningSummary(data);
+    renderQuestionAndQuote(data);
+    renderHistory(data.breakingHistory);
+    renderArchive(data);
+    renderAdverts(data.sponsoredAdverts);
 
     setText(
-      "big-question",
-      newsData.bigQuestion
-        || "What issue should leaders prioritise, and how should progress be measured?"
+      "copyright-year",
+      String(new Date().getFullYear())
     );
 
-    const quote = String(
-      newsData.quoteOfTheDay
-      || "A thoughtful world begins with informed questions."
-    ).replace(/[“”"]/g, "");
-
-    setText("quote-of-the-day", `“${quote}”`);
-
-
-    /* Breaking ticker */
-
-    const breaking = Array.isArray(newsData.breaking)
-      ? newsData.breaking.filter(Boolean)
-      : [];
-
-    const tickerItems = breaking.length
-      ? breaking
-      : ["Welcome to RadiantWaves Media — global news and perspectives."];
-
-    const tickerHTML = tickerItems
-      .map((item) =>
-        `<span class="ticker-item">${escapeHTML(item)}</span>`
-      )
-      .join("");
-
-    const ticker = $("breaking-ticker");
-
-    if (ticker) {
-      ticker.innerHTML = tickerHTML + tickerHTML;
-    }
-
-
-    /* Hero scrolling headlines */
-
-    const heroMarquee = $("hero-marquee");
-
-    if (heroMarquee) {
-      heroMarquee.innerHTML = tickerItems
-        .map((item) => `<span>${escapeHTML(item)}</span>`)
-        .join('<span class="marquee-separator"> ◆ </span>');
-    }
-
-
-    /* Breaking news briefs */
-
-    const history = Array.isArray(newsData.breakingHistory)
-      ? newsData.breakingHistory
-      : [];
-
-    const historyContainer = $("history-container");
-
-    if (historyContainer) {
-      historyContainer.innerHTML = history.length
-        ? history.map((item) => {
-            if (typeof item === "string") {
-              return `
-                <article class="history-item">
-                  <span class="history-mark" aria-hidden="true">●</span>
-                  <p>${escapeHTML(item)}</p>
-                </article>
-              `;
-            }
-
-            return `
-              <article class="history-item">
-                <span class="history-mark" aria-hidden="true">●</span>
-                <div>
-                  ${item.date
-                    ? `<p class="story-date">${escapeHTML(formatDate(item.date))}</p>`
-                    : ""}
-                  <p>${escapeHTML(item.title || item.text || item.summary || "")}</p>
-                  ${item.source
-                    ? `<p class="story-source">Source: ${escapeHTML(item.source)}</p>`
-                    : ""}
-                </div>
-              </article>
-            `;
-          }).join("")
-        : `<p class="empty-state">No additional breaking briefs are available yet.</p>`;
-    }
+    document.dispatchEvent(
+      new CustomEvent("radiantwaves:newsloaded", {
+        detail: { edition: data.edition || data.date || "" }
+      })
+    );
   }
 
-
-  /* ==================== LEADERS WATCH ==================== */
-
-  const LEADER_DEFINITIONS = [
-    { id: "macron", name: "Emmanuel Macron" },
-    { id: "burnham", name: "Andy Burnham" },
-    { id: "merz", name: "Friedrich Merz" },
-    { id: "trump", name: "Donald Trump" },
-    { id: "tinubu", name: "Bola Ahmed Tinubu" },
-    { id: "atiku", name: "Atiku Abubakar" },
-    { id: "obi", name: "Peter Obi" },
-    { id: "vonderleyen", name: "Ursula von der Leyen" },
-    { id: "xi", name: "Xi Jinping" },
-    { id: "putin", name: "Vladimir Putin" }
-  ];
-
-
-  function getLeaderUpdates(newsData) {
-    const supplied = newsData.leadersWatch ?? newsData.leaders;
-
-    if (Array.isArray(supplied)) {
-      return supplied;
-    }
-
-    if (supplied && typeof supplied === "object") {
-      return Object.entries(supplied).map(([id, value]) => ({
-        id,
-        ...(typeof value === "object" && value ? value : {
-          summary: String(value)
-        })
-      }));
-    }
-
-    return [];
-  }
-
-
-  function renderLeadersWatch(newsData) {
-    const updates = getLeaderUpdates(newsData);
-
-    const updateMap = new Map();
-
-    updates.forEach((item) => {
-      const id = String(item.id || item.personId || "")
-        .toLowerCase()
-        .trim();
-
-      if (id) updateMap.set(id, item);
-    });
-
-    LEADER_DEFINITIONS.forEach((leader) => {
-      const updateContainer = $(`update-${leader.id}`);
-      const sourceContainer = $(`source-${leader.id}`);
-
-      if (!updateContainer) return;
-
-      const update = updateMap.get(leader.id);
-
-      if (!update) {
-        setPlainEmptyState(
-          updateContainer,
-          "No new verified update has been added to the newsroom yet. Check the original sources for the latest statements."
-        );
-
-        if (sourceContainer) {
-          sourceContainer.textContent =
-            "No update supplied. No new statement is being claimed.";
-        }
-
-        return;
-      }
-
-      const summary =
-        update.summary
-        || update.content
-        || update.statement
-        || update.description
-        || "";
-
-      const title = update.title || "";
-
-      const date = update.date || update.publishedAt || "";
-      const source = update.source || "";
-      const url = safeLink(update.url || update.link);
-
-      if (!summary.trim() && !title.trim()) {
-        setPlainEmptyState(
-          updateContainer,
-          "This entry has no update text yet."
-        );
-
-        if (sourceContainer) {
-          sourceContainer.textContent = "No complete update supplied.";
-        }
-
-        return;
-      }
-
-      updateContainer.innerHTML = `
-        ${date
-          ? `<p class="leader-date">Update date: ${escapeHTML(formatDate(date))}</p>`
-          : ""}
-
-        ${title
-          ? `<h4>${escapeHTML(title)}</h4>`
-          : ""}
-
-        <p>${escapeHTML(summary || title)}</p>
-
-        ${update.quote
-          ? `<p class="leader-quote">“${escapeHTML(update.quote)}”</p>`
-          : ""}
-      `;
-
-      if (sourceContainer) {
-        const sourceName = source || "Source not supplied";
-        const sourceDate = date
-          ? ` · Published ${formatDate(date)}`
-          : "";
-
-        sourceContainer.innerHTML = url
-          ? `Source: <a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(sourceName)}</a>${escapeHTML(sourceDate)}`
-          : `Source: ${escapeHTML(sourceName)}${escapeHTML(sourceDate)}`;
-      }
-    });
-  }
-
-
-  /* ==================== NEWS ARCHIVE ==================== */
-
-  function normaliseArchiveEntries(data) {
-    if (Array.isArray(data)) return data;
-
-    if (Array.isArray(data?.editions)) return data.editions;
-    if (Array.isArray(data?.archives)) return data.archives;
-    if (Array.isArray(data?.items)) return data.items;
-
-    return [];
-  }
-
-
-  function renderArchiveCards(entries) {
-    const container = $("archive-list");
-
-    if (!container) return;
-
-    if (!entries.length) {
-      container.innerHTML = `
-        <article class="archive-card">
-          <span class="archive-icon" aria-hidden="true">🗂️</span>
-          <h3>No saved editions yet</h3>
-          <p>
-            Previous editions will appear here after dated news files
-            have been saved and added to archives/index.json.
-          </p>
-        </article>
-      `;
-
-      return;
-    }
-
-    const sortedEntries = [...entries].sort((a, b) => {
-      const dateA = new Date(a.date || a.publishedAt || 0).getTime();
-      const dateB = new Date(b.date || b.publishedAt || 0).getTime();
-
-      return dateB - dateA;
-    });
-
-    container.innerHTML = sortedEntries.map((entry) => {
-      const title =
-        entry.title
-        || entry.edition
-        || "News edition";
-
-      const date = entry.date || entry.publishedAt || "";
-      const description = entry.description || entry.summary || "";
-
-      const rawURL = entry.url || entry.file || entry.path || "";
-      const url = safeLink(rawURL);
-
-      const linkHTML = url
-        ? `
-          <a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">
-            Open this edition
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        `
-        : `<p class="archive-meta">Archive file link not supplied.</p>`;
-
-      return `
-        <article class="archive-card">
-
-          <span class="archive-icon" aria-hidden="true">🗂️</span>
-
-          <h3>${escapeHTML(title)}</h3>
-
-          ${date
-            ? `<p class="archive-meta">${escapeHTML(formatDate(date))}</p>`
-            : ""}
-
-          ${description
-            ? `<p>${escapeHTML(description)}</p>`
-            : ""}
-
-          ${linkHTML}
-
-        </article>
-      `;
-    }).join("");
-  }
-
-
-  async function loadArchive() {
-    const container = $("archive-list");
-
-    if (!container) return;
-
+  async function loadNews() {
     try {
-      const data = await fetchJSON(ARCHIVE_INDEX_FILE);
-      const entries = normaliseArchiveEntries(data);
+      const response = await fetch(NEWS_FILE, {
+        cache: "no-store"
+      });
 
-      renderArchiveCards(entries);
+      if (!response.ok) {
+        throw new Error(`Could not load news.json (HTTP ${response.status}).`);
+      }
+
+      const data = await response.json();
+
+      if (!data || typeof data !== "object" || Array.isArray(data)) {
+        throw new Error("news.json must contain a JSON object.");
+      }
+
+      renderAll(data);
     } catch (error) {
-      console.info(
-        "No archive index has been loaded yet. This is expected until archive files are created.",
-        error
+      console.error("RadiantWaves news loading error:", error);
+
+      const message = makeElement(
+        "p",
+        "empty-message",
+        "The news feed could not be loaded. Please check that news.json is valid JSON and has been committed to the repository."
       );
 
-      renderArchiveCards([]);
+      [
+        "featured-news",
+        "top-stories-container"
+      ].forEach((id) => {
+        const container = $(id);
+
+        if (container) {
+          container.replaceChildren(message.cloneNode(true));
+        }
+      });
+
+      Object.values(CATEGORY_TARGETS).forEach((id) => {
+        const container = $(id);
+
+        if (container) {
+          container.replaceChildren(message.cloneNode(true));
+        }
+      });
     }
   }
 
+  /* Sound control for the hero video */
 
-  /* ==================== HERO VIDEO AND SOUND ==================== */
-
-  function setupVideo() {
+  function setupSoundButton() {
+    const button = $("sound-button");
     const video = $("heroVideo");
-    const source = $("video-source");
-    const soundButton = $("sound-button");
 
-    if (!video || !source) return;
+    if (!button || !video) return;
 
     video.muted = true;
-    video.defaultMuted = true;
     video.playsInline = true;
 
-    video.play().catch(() => {
-      /* Some mobile browsers block autoplay. */
+    function updateButton() {
+      button.textContent = video.muted
+        ? "🔇 Turn sound on"
+        : "🔊 Turn sound off";
+
+      button.setAttribute(
+        "aria-pressed",
+        video.muted ? "false" : "true"
+      );
+    }
+
+    button.addEventListener("click", async () => {
+      video.muted = !video.muted;
+
+      if (!video.muted) {
+        try {
+          await video.play();
+        } catch (error) {
+          console.warn("Video playback needs user interaction.", error);
+        }
+      }
+
+      updateButton();
     });
 
+    updateButton();
+  }
+
+  /* Video selector buttons */
+
+  function setupVideoButtons() {
+    const video = $("heroVideo");
+
+    if (!video) return;
 
     document.querySelectorAll("[data-video]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const file = safeImageURL(button.dataset.video);
+      button.addEventListener("click", async () => {
+        const path = button.getAttribute("data-video");
+        const validPath = safeUrl(path);
 
-        if (!file) return;
-
-        const currentSource = source.getAttribute("src");
-
-        if (currentSource === file) {
-          video.play().catch(() => {});
+        if (!validPath) {
+          console.warn("Invalid video path:", path);
           return;
         }
 
-        const wasMuted = video.muted;
-
-        source.src = file;
-        video.muted = wasMuted;
+        video.src = validPath;
         video.load();
 
-        video.play().catch(() => {});
-
-        document.querySelectorAll("[data-video]").forEach((choice) => {
-          const active = choice === button;
-
-          choice.classList.toggle("is-active", active);
-          choice.setAttribute("aria-pressed", String(active));
-        });
-      });
-    });
-
-
-    if (soundButton) {
-      soundButton.addEventListener("click", async () => {
         try {
-          if (video.muted) {
-            video.muted = false;
-            video.volume = 1;
-
-            await video.play();
-
-            soundButton.innerHTML = `
-              <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
-              Sound on
-            `;
-
-            soundButton.setAttribute("aria-pressed", "true");
-          } else {
-            video.muted = true;
-
-            soundButton.innerHTML = `
-              <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
-              Enable sound
-            `;
-
-            soundButton.setAttribute("aria-pressed", "false");
-          }
+          await video.play();
         } catch (error) {
-          video.muted = true;
-          soundButton.setAttribute("aria-pressed", "false");
-
-          console.warn("Sound could not be enabled:", error);
-
-          alert(
-            "Your browser did not enable sound. Please try the video player's sound control."
-          );
+          console.warn("The selected video could not autoplay.", error);
         }
       });
-    }
+    });
   }
 
+  /* Mobile navigation toggle, if the button exists */
 
-  /* ==================== ADVERT FORM ==================== */
+  function setupMobileNavigation() {
+    const toggle = $("nav-toggle");
+    const menu = $("nav-menu");
 
-  function setupAdvertForm() {
-    const form = $("advert-request-form");
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      menu.classList.toggle("is-open", !expanded);
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* Contact form: open the visitor's email application */
+
+  function setupContactForm() {
+    const form = $("contact-form");
 
     if (!form) return;
 
-    /*
-      The form retains its mailto action in index.html.
-      No information is stored in a website database.
-    */
-    form.addEventListener("submit", () => {
-      const submitButton = form.querySelector('button[type="submit"]');
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-      if (submitButton) {
-        submitButton.textContent = "Preparing your email…";
+      const name = form.querySelector('[name="name"]');
+      const email = form.querySelector('[name="email"]');
+      const subject = form.querySelector('[name="subject"]');
+      const message = form.querySelector('[name="message"]');
+
+      const nameValue = name ? name.value.trim() : "";
+      const emailValue = email ? email.value.trim() : "";
+      const subjectValue = subject ? subject.value.trim() : "Website enquiry";
+      const messageValue = message ? message.value.trim() : "";
+
+      if (!nameValue || !emailValue || !messageValue) {
+        window.alert("Please complete your name, email address and message.");
+        return;
       }
+
+      const mailSubject = encodeURIComponent(subjectValue);
+      const mailBody = encodeURIComponent(
+        `Name: ${nameValue}\nEmail: ${emailValue}\n\n${messageValue}`
+      );
+
+      window.location.href =
+        `mailto:info@radiantwavesmedia.com?subject=${mailSubject}&body=${mailBody}`;
     });
   }
 
+  /* Start after the page elements have loaded */
 
-  /* ==================== LOAD THE NEWSROOM ==================== */
-
-  async function loadNewsroom() {
-    try {
-      const newsData = await fetchJSON(NEWS_FILE);
-
-      if (!newsData || typeof newsData !== "object") {
-        throw new Error("news.json does not contain a valid JSON object.");
-      }
-
-      renderTextSections(newsData);
-
-      await renderFeatured(newsData);
-
-      renderAdverts(newsData);
-
-      await renderTopStories(newsData);
-
-      renderLeadersWatch(newsData);
-
-      const sections = [
-        ["world-news", "world"],
-        ["usa-news", "usa"],
-        ["europe-news", "europe"],
-        ["africa-news", "africa"],
-        ["asia-news", "asia"],
-        ["business-news", "business"],
-        ["tech-news", "technology"]
-      ];
-
-      await Promise.all(
-        sections.map(([id, category]) =>
-          renderArticleSection(newsData, id, category)
-        )
-      );
-
-      console.info("RadiantWaves Media newsroom loaded.");
-
-    } catch (error) {
-      console.error(
-        "RadiantWaves Media could not load news.json:",
-        error
-      );
-
-      const categoryIDs = [
-        "world-news",
-        "usa-news",
-        "europe-news",
-        "africa-news",
-        "asia-news",
-        "business-news",
-        "tech-news"
-      ];
-
-      categoryIDs.forEach((id) => {
-        showMessage(
-          $(id),
-          "News temporarily unavailable",
-          "Please refresh the page. If the problem continues, check that news.json is valid JSON and is uploaded beside index.html."
-        );
-      });
-
-      setPlainEmptyState(
-        $("featured-news"),
-        "The featured story could not be loaded. Please check news.json."
-      );
-
-      showMessage(
-        $("top-stories-container"),
-        "Top stories could not be loaded.",
-        "Please check news.json and refresh the page."
-      );
-
-      setText(
-        "breaking-ticker",
-        "Newsroom update in progress — please refresh shortly."
-      );
-
-      setText(
-        "morning-summary",
-        "The newsroom briefing could not be loaded."
-      );
-
-      renderLeadersWatch({});
-    }
+  function start() {
+    setupSoundButton();
+    setupVideoButtons();
+    setupMobileNavigation();
+    setupContactForm();
+    loadNews();
   }
 
-
-  /* ==================== STARTUP ==================== */
-
-  document.addEventListener("DOMContentLoaded", () => {
-    setText("copyright-year", new Date().getFullYear());
-
-    setupVideo();
-    setupAdvertForm();
-
-    loadNewsroom();
-    loadArchive();
-  });
-
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
 })();

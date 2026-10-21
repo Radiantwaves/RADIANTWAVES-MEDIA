@@ -1,13 +1,13 @@
 
 /* =========================================================
    RADIANTWAVES MEDIA — COMPLETE SCRIPT.JS
-   Leaders Watch photos, verified source links and summaries
+   Global news, Leaders Watch, source links and website features
    ========================================================= */
 
 (() => {
   "use strict";
 
-  const NEWS_FILE = "./news.json?v=5002";
+  const NEWS_FILE = "./news.json?v=5003";
 
   const CATEGORY_TARGETS = {
     world: "world-news",
@@ -31,6 +31,10 @@
 
   const $ = (id) => document.getElementById(id);
 
+  /* =========================================================
+     GENERAL HELPERS
+     ========================================================= */
+
   function setText(id, value) {
     const element = $(id);
 
@@ -39,15 +43,19 @@
     }
   }
 
-  function safeUrl(value) {
+  function safeUrl(value, allowMailto = false) {
     if (typeof value !== "string" || !value.trim()) {
       return "";
     }
 
     try {
-      const url = new URL(value, window.location.href);
+      const url = new URL(value.trim(), window.location.href);
 
-      if (url.protocol === "https:" || url.protocol === "http:") {
+      if (
+        url.protocol === "https:" ||
+        url.protocol === "http:" ||
+        (allowMailto && url.protocol === "mailto:")
+      ) {
         return url.href;
       }
     } catch (_) {
@@ -76,9 +84,11 @@
   function makeElement(tag, className = "", text = "") {
     const element = document.createElement(tag);
 
-    if (className) element.className = className;
+    if (className) {
+      element.className = className;
+    }
 
-    if (text !== undefined && text !== null) {
+    if (text !== undefined && text !== null && text !== "") {
       element.textContent = String(text);
     }
 
@@ -87,12 +97,15 @@
 
   function makeLink(url, label, className = "source-link") {
     const link = makeElement("a", className, label);
-    const validUrl = safeUrl(url);
+    const validUrl = safeUrl(url, true);
 
     if (validUrl) {
       link.href = validUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
+
+      if (!validUrl.startsWith("mailto:")) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
     } else {
       link.setAttribute("aria-disabled", "true");
     }
@@ -114,8 +127,25 @@
     return makeElement("p", "empty-message", message);
   }
 
+  function getSummary(item) {
+    if (!item || typeof item !== "object") return "";
+
+    return (
+      item.summary ||
+      item.description ||
+      item.content ||
+      ""
+    );
+  }
+
+  function getStoryUrl(item) {
+    if (!item || typeof item !== "object") return "";
+
+    return safeUrl(item.url || item.sourceUrl);
+  }
+
   /* =========================================================
-     STANDARD NEWS ARTICLE CARDS
+     STANDARD NEWS CARDS
      ========================================================= */
 
   function makeArticleCard(article, categoryLabel) {
@@ -134,11 +164,7 @@
       makeElement("h3", "", article.title || "News update")
     );
 
-    const summary =
-      article.summary ||
-      article.description ||
-      article.content ||
-      "";
+    const summary = getSummary(article);
 
     if (summary) {
       content.appendChild(makeElement("p", "", summary));
@@ -146,14 +172,16 @@
 
     const metadata = [
       article.source ? "Source: " + article.source : "",
-      formatDate(article.date)
+      article.date ? formatDate(article.date) : ""
     ].filter(Boolean).join(" · ");
 
     if (metadata) {
-      content.appendChild(makeElement("p", "story-source", metadata));
+      content.appendChild(
+        makeElement("p", "story-source", metadata)
+      );
     }
 
-    const url = safeUrl(article.url);
+    const url = getStoryUrl(article);
 
     if (url) {
       content.appendChild(
@@ -173,6 +201,10 @@
     return card;
   }
 
+  /* =========================================================
+     FEATURED STORY
+     ========================================================= */
+
   function renderFeaturedStory(story) {
     const container = $("featured-news");
     if (!container) return;
@@ -187,14 +219,18 @@
     const wrapper = makeElement("div", "featured-copy");
 
     wrapper.appendChild(
-      makeElement("span", "news-category", "FEATURED STORY")
+      makeElement(
+        "span",
+        "news-category",
+        "FEATURED STORY"
+      )
     );
 
     wrapper.appendChild(
       makeElement("h2", "", story.title || "Latest global news")
     );
 
-    const body = story.content || story.summary || story.description || "";
+    const body = getSummary(story);
 
     if (body) {
       wrapper.appendChild(makeElement("p", "", body));
@@ -202,7 +238,7 @@
 
     const metadata = [
       story.source ? "Source: " + story.source : "",
-      formatDate(story.date)
+      story.date ? formatDate(story.date) : ""
     ].filter(Boolean).join(" · ");
 
     if (metadata) {
@@ -211,9 +247,11 @@
       );
     }
 
-    if (safeUrl(story.url)) {
+    const url = getStoryUrl(story);
+
+    if (url) {
       wrapper.appendChild(
-        makeLink(story.url, "Read the original report ↗", "text-link")
+        makeLink(url, "Read the original report ↗", "text-link")
       );
     } else {
       wrapper.appendChild(
@@ -227,6 +265,10 @@
 
     replaceContents(container, [wrapper]);
   }
+
+  /* =========================================================
+     TOP STORIES
+     ========================================================= */
 
   function renderTopStories(stories) {
     const container = $("top-stories-container");
@@ -251,55 +293,64 @@
      CATEGORY NEWS
      ========================================================= */
 
+  function normaliseCategory(value) {
+    const category = String(value || "")
+      .toLowerCase()
+      .trim();
+
+    const aliases = {
+      "us": "usa",
+      "united states": "usa",
+      "u.s.": "usa",
+      "uk": "europe",
+      "united kingdom": "europe",
+      "britain": "europe",
+      "tech": "technology",
+      "world news": "world",
+      "african news": "africa",
+      "european news": "europe",
+      "asian news": "asia"
+    };
+
+    return aliases[category] || category;
+  }
+
   function renderCategoryArticles(articles) {
-    Object.entries(CATEGORY_TARGETS).forEach(([category, targetId]) => {
-      const container = $(targetId);
-      if (!container) return;
+    Object.entries(CATEGORY_TARGETS).forEach(
+      ([category, targetId]) => {
+        const container = $(targetId);
+        if (!container) return;
 
-      const matching = Array.isArray(articles)
-        ? articles.filter((article) => {
-            const value = String(article.category || "")
-              .toLowerCase()
-              .trim();
+        const matching = Array.isArray(articles)
+          ? articles.filter((article) => {
+              return normaliseCategory(article.category) === category;
+            })
+          : [];
 
-            if (category === "technology") {
-              return value === "technology" || value === "tech";
-            }
+        if (!matching.length) {
+          replaceContents(container, [
+            placeholder(
+              `No ${CATEGORY_LABELS[category]} articles are available in this edition.`
+            )
+          ]);
+          return;
+        }
 
-            if (category === "usa") {
-              return [
-                "usa",
-                "us",
-                "united states"
-              ].includes(value);
-            }
-
-            return value === category;
-          })
-        : [];
-
-      if (!matching.length) {
-        replaceContents(container, [
-          placeholder(
-            `No ${CATEGORY_LABELS[category]} articles are available in this edition.`
+        replaceContents(
+          container,
+          matching.map((article) =>
+            makeArticleCard(article, CATEGORY_LABELS[category])
           )
-        ]);
-        return;
+        );
       }
-
-      replaceContents(
-        container,
-        matching.map((article) =>
-          makeArticleCard(article, CATEGORY_LABELS[category])
-        )
-      );
-    });
+    );
   }
 
   /* =========================================================
      LEADERS WATCH
-     Supports leader photos, summaries, dates and source links.
-     Reads leadersWatch or leaders from news.json.
+     Supports leadersWatch objects and arrays.
+     Uses image/photo/imageUrl from news.json when supplied.
+     Does not invent source links.
      ========================================================= */
 
   function renderLeaderPhoto(item, displayName) {
@@ -314,16 +365,23 @@
     const frame = makeElement("div", "leader-image-wrap");
 
     if (!imageUrl) {
+      const initials = displayName
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((word) => word.charAt(0).toUpperCase())
+        .join("");
+
       const fallback = makeElement(
         "div",
         "leader-photo-placeholder",
-        displayName
+        initials || "RW"
       );
 
       fallback.setAttribute("role", "img");
       fallback.setAttribute(
         "aria-label",
-        "Photograph not supplied for " + displayName
+        "No photograph supplied for " + displayName
       );
 
       frame.appendChild(fallback);
@@ -345,12 +403,13 @@
         makeElement(
           "div",
           "leader-photo-placeholder",
-          "Photograph unavailable"
+          "Photo unavailable"
         )
       );
     }, { once: true });
 
     frame.appendChild(image);
+
     return frame;
   }
 
@@ -363,10 +422,12 @@
     let entries = [];
 
     if (Array.isArray(updates)) {
-      entries = updates.map((item) => [
-        item.name || item.id || "World leader",
-        item
-      ]);
+      entries = updates
+        .filter((item) => item && typeof item === "object")
+        .map((item) => [
+          item.name || item.id || "World leader",
+          item
+        ]);
     } else if (updates && typeof updates === "object") {
       entries = Object.entries(updates);
     }
@@ -380,12 +441,14 @@
       return;
     }
 
-    const cards = entries.map(([name, item]) => {
-      if (!item || typeof item !== "object") {
-        item = { summary: String(item || "") };
-      }
+    const cards = entries.map(([name, originalItem]) => {
+      const item =
+        originalItem && typeof originalItem === "object"
+          ? originalItem
+          : { summary: String(originalItem || "") };
 
       const displayName = item.name || name;
+
       const card = makeElement(
         "article",
         "card news-card leader-card"
@@ -420,25 +483,19 @@
           makeElement(
             "p",
             "story-date",
-            "Updated: " + formatDate(item.date)
+            "Update date: " + formatDate(item.date)
           )
         );
       }
 
-      if (item.summary || item.description || item.content) {
+      const summary = getSummary(item);
+
+      if (summary) {
         content.appendChild(
-          makeElement(
-            "p",
-            "leader-summary",
-            item.summary || item.description || item.content
-          )
+          makeElement("p", "leader-summary", summary)
         );
       }
 
-      /*
-       * A status label can distinguish a verified update from
-       * a policy discussion or an entry awaiting verification.
-       */
       if (item.status) {
         content.appendChild(
           makeElement("p", "leader-status", item.status)
@@ -451,7 +508,7 @@
         );
       }
 
-      const sourceUrl = safeUrl(item.url || item.sourceUrl);
+      const sourceUrl = getStoryUrl(item);
 
       if (sourceUrl) {
         content.appendChild(
@@ -462,15 +519,11 @@
           )
         );
       } else if (item.status) {
-        /*
-         * No invented or permanent links. This is suitable
-         * for Atiku and Obi policy-watch discussion entries.
-         */
         content.appendChild(
           makeElement(
             "p",
             "small-note",
-            "No source link is attached to this entry. A source will be added when a relevant report is verified."
+            "No source link is attached to this entry. Check for a relevant verified report before publishing a new statement."
           )
         );
       } else {
@@ -484,6 +537,7 @@
       }
 
       card.appendChild(content);
+
       return card;
     });
 
@@ -499,8 +553,8 @@
     if (!ticker) return;
 
     const messages = Array.isArray(items)
-      ? items.filter((item) =>
-          typeof item === "string" && item.trim()
+      ? items.filter(
+          (item) => typeof item === "string" && item.trim()
         )
       : [];
 
@@ -526,7 +580,7 @@
   }
 
   /* =========================================================
-     NEWSROOM SUMMARY AND EDITORIAL NOTE
+     MORNING SUMMARY AND EDITORIAL NOTE
      ========================================================= */
 
   function renderMorningSummary(data) {
@@ -558,6 +612,7 @@
     if (!quote) return;
 
     const quoteData = data.quoteOfTheDay;
+
     let quoteText = "";
     let author = "RadiantWaves Media";
 
@@ -609,6 +664,10 @@
         return card;
       }
 
+      if (!item || typeof item !== "object") {
+        return card;
+      }
+
       if (item.date) {
         card.appendChild(
           makeElement("p", "story-date", formatDate(item.date))
@@ -619,10 +678,10 @@
         makeElement("h3", "", item.title || "News development")
       );
 
-      if (item.summary || item.description) {
-        card.appendChild(
-          makeElement("p", "", item.summary || item.description)
-        );
+      const summary = getSummary(item);
+
+      if (summary) {
+        card.appendChild(makeElement("p", "", summary));
       }
 
       if (item.source) {
@@ -631,9 +690,11 @@
         );
       }
 
-      if (safeUrl(item.url)) {
+      const url = getStoryUrl(item);
+
+      if (url) {
         card.appendChild(
-          makeLink(item.url, "Read source report ↗", "text-link")
+          makeLink(url, "Read source report ↗", "text-link")
         );
       }
 
@@ -644,7 +705,7 @@
   }
 
   /* =========================================================
-     NEWS EDITIONS AND ARCHIVES
+     NEWS ARCHIVE
      ========================================================= */
 
   function renderArchive(data) {
@@ -656,7 +717,7 @@
       ...(Array.isArray(data.articles) ? data.articles : [])
     ];
 
-    if (data.featured) {
+    if (data.featured && typeof data.featured === "object") {
       stories.unshift(data.featured);
     }
 
@@ -677,16 +738,18 @@
       const metadata = [
         article.category || "Global news",
         article.source || "",
-        formatDate(article.date)
+        article.date ? formatDate(article.date) : ""
       ].filter(Boolean).join(" · ");
 
       if (metadata) {
         card.appendChild(makeElement("p", "", metadata));
       }
 
-      if (safeUrl(article.url)) {
+      const url = getStoryUrl(article);
+
+      if (url) {
         card.appendChild(
-          makeLink(article.url, "Open original source ↗", "text-link")
+          makeLink(url, "Open original source ↗", "text-link")
         );
       }
 
@@ -698,6 +761,7 @@
 
   /* =========================================================
      SPONSORED ADVERTS
+     Supports both web links and mailto links.
      ========================================================= */
 
   function renderAdverts(items) {
@@ -728,13 +792,13 @@
         )
       );
 
-      if (item.description || item.summary) {
-        card.appendChild(
-          makeElement("p", "", item.description || item.summary)
-        );
+      const description = getSummary(item);
+
+      if (description) {
+        card.appendChild(makeElement("p", "", description));
       }
 
-      const url = safeUrl(item.url);
+      const url = safeUrl(item.url, true);
 
       if (url) {
         card.appendChild(
@@ -747,8 +811,8 @@
       } else {
         card.appendChild(
           makeLink(
-            "https://radiantwavesmedia.com",
-            "Visit RadiantWaves Media ↗",
+            "mailto:info@radiantwavesmedia.com",
+            "Contact our advertising team ↗",
             "text-link"
           )
         );
@@ -765,7 +829,10 @@
      ========================================================= */
 
   function renderHero(data) {
-    const hero = data.hero || {};
+    const hero =
+      data.hero && typeof data.hero === "object"
+        ? data.hero
+        : {};
 
     setText(
       "hero-title",
@@ -857,17 +924,24 @@
       }
 
       renderAll(data);
+
+      console.info(
+        "RadiantWaves Media news loaded:",
+        data.edition || data.date || "Edition"
+      );
     } catch (error) {
       console.error("RadiantWaves news loading error:", error);
 
       const message =
-        "The news feed could not be loaded. Check that news.json contains valid JSON and has been committed to the repository.";
+        "The news feed could not be loaded. Check that news.json contains valid JSON and that the latest changes have been committed.";
 
       [
         "featured-news",
         "top-stories-container",
         "leaders-grid",
-        "history-container"
+        "history-container",
+        "archive-list",
+        "sponsored-adverts"
       ].forEach((id) => {
         const container = $(id);
 
@@ -1000,14 +1074,29 @@
 
       const formData = new FormData(form);
 
-      const name = String(formData.get("Full name") || "").trim();
-      const email = String(formData.get("Email address") || "").trim();
-      const whatsapp = String(formData.get("WhatsApp number") || "").trim();
+      const name = String(
+        formData.get("Full name") || ""
+      ).trim();
+
+      const email = String(
+        formData.get("Email address") || ""
+      ).trim();
+
+      const whatsapp = String(
+        formData.get("WhatsApp number") || ""
+      ).trim();
+
       const organisation = String(
         formData.get("Business or organisation") || ""
       ).trim();
-      const service = String(formData.get("Service") || "").trim();
-      const details = String(formData.get("Details") || "").trim();
+
+      const service = String(
+        formData.get("Service") || ""
+      ).trim();
+
+      const details = String(
+        formData.get("Details") || ""
+      ).trim();
 
       const subject = encodeURIComponent(
         "RadiantWaves Media — " + (service || "Website enquiry")

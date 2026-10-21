@@ -1,14 +1,13 @@
 
 /* =========================================================
    RADIANTWAVES MEDIA — COMPLETE SCRIPT.JS
-   File 2 of 4
-   Works with index.html and news.json
+   Leaders Watch photos, verified source links and summaries
    ========================================================= */
 
 (() => {
   "use strict";
 
-  const NEWS_FILE = "./news.json?v=5001";
+  const NEWS_FILE = "./news.json?v=5002";
 
   const CATEGORY_TARGETS = {
     world: "world-news",
@@ -34,13 +33,16 @@
 
   function setText(id, value) {
     const element = $(id);
+
     if (element && value !== undefined && value !== null) {
       element.textContent = String(value);
     }
   }
 
   function safeUrl(value) {
-    if (typeof value !== "string" || !value.trim()) return "";
+    if (typeof value !== "string" || !value.trim()) {
+      return "";
+    }
 
     try {
       const url = new URL(value, window.location.href);
@@ -92,7 +94,6 @@
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     } else {
-      link.removeAttribute("href");
       link.setAttribute("aria-disabled", "true");
     }
 
@@ -113,9 +114,9 @@
     return makeElement("p", "empty-message", message);
   }
 
-  /* ---------------------------------------------------------
-     ARTICLE CARDS AND ORIGINAL REPORT LINKS
-     --------------------------------------------------------- */
+  /* =========================================================
+     STANDARD NEWS ARTICLE CARDS
+     ========================================================= */
 
   function makeArticleCard(article, categoryLabel) {
     const card = makeElement("article", "card news-card");
@@ -133,7 +134,8 @@
       makeElement("h3", "", article.title || "News update")
     );
 
-    const summary = article.summary ||
+    const summary =
+      article.summary ||
       article.description ||
       article.content ||
       "";
@@ -142,17 +144,13 @@
       content.appendChild(makeElement("p", "", summary));
     }
 
-    const source = article.source || "Source not specified";
-    const date = formatDate(article.date);
+    const metadata = [
+      article.source ? "Source: " + article.source : "",
+      formatDate(article.date)
+    ].filter(Boolean).join(" · ");
 
-    content.appendChild(
-      makeElement("p", "story-source", "Source: " + source)
-    );
-
-    if (date) {
-      content.appendChild(
-        makeElement("p", "story-date", date)
-      );
+    if (metadata) {
+      content.appendChild(makeElement("p", "story-source", metadata));
     }
 
     const url = safeUrl(article.url);
@@ -166,7 +164,7 @@
         makeElement(
           "p",
           "small-note",
-          "Original report link not provided."
+          "Original report link not supplied."
         )
       );
     }
@@ -219,7 +217,11 @@
       );
     } else {
       wrapper.appendChild(
-        placeholder("The original report link has not been supplied.")
+        makeElement(
+          "p",
+          "small-note",
+          "Original report link not supplied."
+        )
       );
     }
 
@@ -230,7 +232,7 @@
     const container = $("top-stories-container");
     if (!container) return;
 
-    if (!Array.isArray(stories) || stories.length === 0) {
+    if (!Array.isArray(stories) || !stories.length) {
       replaceContents(container, [
         placeholder("No top stories are available in this edition.")
       ]);
@@ -245,9 +247,9 @@
     );
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      CATEGORY NEWS
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderCategoryArticles(articles) {
     Object.entries(CATEGORY_TARGETS).forEach(([category, targetId]) => {
@@ -265,9 +267,11 @@
             }
 
             if (category === "usa") {
-              return value === "usa" ||
-                value === "us" ||
-                value === "united states";
+              return [
+                "usa",
+                "us",
+                "united states"
+              ].includes(value);
             }
 
             return value === category;
@@ -292,11 +296,63 @@
     });
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      LEADERS WATCH
-     Reads the actual leadersWatch object in news.json.
-     Does not assume that its keys are short IDs.
-     --------------------------------------------------------- */
+     Supports leader photos, summaries, dates and source links.
+     Reads leadersWatch or leaders from news.json.
+     ========================================================= */
+
+  function renderLeaderPhoto(item, displayName) {
+    const imageUrl = safeUrl(
+      item.image ||
+      item.photo ||
+      item.imageUrl ||
+      item.bannerImage ||
+      item.portrait
+    );
+
+    const frame = makeElement("div", "leader-image-wrap");
+
+    if (!imageUrl) {
+      const fallback = makeElement(
+        "div",
+        "leader-photo-placeholder",
+        displayName
+      );
+
+      fallback.setAttribute("role", "img");
+      fallback.setAttribute(
+        "aria-label",
+        "Photograph not supplied for " + displayName
+      );
+
+      frame.appendChild(fallback);
+      return frame;
+    }
+
+    const image = document.createElement("img");
+
+    image.className = "leader-photo";
+    image.src = imageUrl;
+    image.alt = "Photograph of " + displayName;
+    image.loading = "lazy";
+    image.decoding = "async";
+
+    image.addEventListener("error", () => {
+      image.remove();
+
+      frame.appendChild(
+        makeElement(
+          "div",
+          "leader-photo-placeholder",
+          "Photograph unavailable"
+        )
+      );
+    }, { once: true });
+
+    frame.appendChild(image);
+    return frame;
+  }
 
   function renderLeadersWatch(data) {
     const grid = $("leaders-grid");
@@ -318,43 +374,74 @@
     if (!entries.length) {
       replaceContents(grid, [
         placeholder(
-          "No Leaders Watch entries have been added to this edition."
+          "Leaders Watch is awaiting verified updates for this edition."
         )
       ]);
       return;
     }
 
     const cards = entries.map(([name, item]) => {
-      const card = makeElement("article", "card news-card");
-      const content = makeElement("div", "card-content");
+      if (!item || typeof item !== "object") {
+        item = { summary: String(item || "") };
+      }
 
-      const displayName =
-        item.name ||
-        (name === "UK Government" ? "Andy Burnham — UK Government" : name);
+      const displayName = item.name || name;
+      const card = makeElement(
+        "article",
+        "card news-card leader-card"
+      );
+
+      card.appendChild(renderLeaderPhoto(item, displayName));
+
+      const content = makeElement("div", "card-content");
 
       content.appendChild(
         makeElement("span", "news-category", "LEADERS WATCH")
       );
 
       content.appendChild(
-        makeElement("h3", "", displayName)
+        makeElement("h3", "leader-name", displayName)
       );
 
       if (item.role) {
         content.appendChild(
-          makeElement("p", "", item.role)
+          makeElement("p", "leader-role", item.role)
         );
       }
 
       if (item.title) {
         content.appendChild(
-          makeElement("h4", "", item.title)
+          makeElement("h4", "leader-headline", item.title)
         );
       }
 
-      if (item.summary) {
+      if (item.date) {
         content.appendChild(
-          makeElement("p", "", item.summary)
+          makeElement(
+            "p",
+            "story-date",
+            "Updated: " + formatDate(item.date)
+          )
+        );
+      }
+
+      if (item.summary || item.description || item.content) {
+        content.appendChild(
+          makeElement(
+            "p",
+            "leader-summary",
+            item.summary || item.description || item.content
+          )
+        );
+      }
+
+      /*
+       * A status label can distinguish a verified update from
+       * a policy discussion or an entry awaiting verification.
+       */
+      if (item.status) {
+        content.appendChild(
+          makeElement("p", "leader-status", item.status)
         );
       }
 
@@ -364,32 +451,34 @@
         );
       }
 
-      if (item.date) {
+      const sourceUrl = safeUrl(item.url || item.sourceUrl);
+
+      if (sourceUrl) {
         content.appendChild(
-          makeElement("p", "story-date", formatDate(item.date))
+          makeLink(
+            sourceUrl,
+            item.linkText || "Read the source report ↗",
+            "text-link"
+          )
         );
-      } else {
+      } else if (item.status) {
+        /*
+         * No invented or permanent links. This is suitable
+         * for Atiku and Obi policy-watch discussion entries.
+         */
         content.appendChild(
           makeElement(
             "p",
-            "story-date",
-            "Monitoring link — no update date supplied"
+            "small-note",
+            "No source link is attached to this entry. A source will be added when a relevant report is verified."
           )
-        );
-      }
-
-      const url = safeUrl(item.url);
-
-      if (url) {
-        content.appendChild(
-          makeLink(url, "Visit source / official updates ↗", "text-link")
         );
       } else {
         content.appendChild(
           makeElement(
             "p",
             "small-note",
-            "No valid source link has been provided."
+            "A verified source link has not yet been supplied."
           )
         );
       }
@@ -401,9 +490,9 @@
     replaceContents(grid, cards);
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      BREAKING NEWS TICKER
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderBreakingTicker(items) {
     const ticker = $("breaking-ticker");
@@ -436,76 +525,70 @@
     });
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      NEWSROOM SUMMARY AND EDITORIAL NOTE
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderMorningSummary(data) {
-    const summary = $("morning-summary");
-    const note = $("editorial-note");
+    setText(
+      "morning-summary",
+      data.morningSummary ||
+        "The latest global summary will appear here when published."
+    );
 
-    if (summary) {
-      const text = data.morningSummary || "";
-
-      summary.textContent = text ||
-        "The latest global summary will appear here when published.";
-    }
-
-    if (note) {
-      note.textContent = data.editorialNote ||
-        "Readers are encouraged to check original sources and compare reliable reports.";
-    }
+    setText(
+      "editorial-note",
+      data.editorialNote ||
+        "Check original sources and compare reliable reports before drawing conclusions."
+    );
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      BIG QUESTION AND THOUGHT FOR TODAY
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderQuestionAndQuote(data) {
-    const question = $("big-question");
-    const quote = $("quote-of-the-day");
+    setText(
+      "big-question",
+      data.bigQuestion ||
+        "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?"
+    );
 
-    if (question) {
-      question.textContent = data.bigQuestion ||
-        "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?";
+    const quote = $("quote-of-the-day");
+    if (!quote) return;
+
+    const quoteData = data.quoteOfTheDay;
+    let quoteText = "";
+    let author = "RadiantWaves Media";
+
+    if (typeof quoteData === "string") {
+      quoteText = quoteData;
+    } else if (quoteData && typeof quoteData === "object") {
+      quoteText = quoteData.quote || quoteData.text || "";
+      author = quoteData.author || author;
     }
 
-    if (quote) {
-      const quoteData = data.quoteOfTheDay;
-      let quoteText = "";
-      let author = "RadiantWaves Media";
+    if (!quoteText) {
+      quoteText =
+        "Stay curious about the world, question what you hear, and look beyond the headline.";
+    }
 
-      if (typeof quoteData === "string") {
-        quoteText = quoteData;
-      } else if (quoteData && typeof quoteData === "object") {
-        quoteText = quoteData.quote || quoteData.text || "";
-        author = quoteData.author || author;
-      }
+    quote.replaceChildren(
+      makeElement("p", "", "“" + quoteText + "”")
+    );
 
-      if (!quoteText) {
-        quoteText =
-          "Stay curious about the world, question what you hear, and look beyond the headline.";
-      }
+    const credit = quote.parentElement
+      ? quote.parentElement.querySelector(".quote-credit")
+      : null;
 
-      quote.replaceChildren();
-
-      quote.appendChild(
-        makeElement("p", "", "“" + quoteText + "”")
-      );
-
-      const credit = $("quote-of-the-day")
-        .parentElement
-        ?.querySelector(".quote-credit");
-
-      if (credit) {
-        credit.textContent = author;
-      }
+    if (credit) {
+      credit.textContent = author;
     }
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      BREAKING NEWS BRIEFS
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderHistory(items) {
     const container = $("history-container");
@@ -560,9 +643,9 @@
     replaceContents(container, cards);
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      NEWS EDITIONS AND ARCHIVES
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderArchive(data) {
     const container = $("archive-list");
@@ -613,9 +696,9 @@
     replaceContents(container, cards);
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      SPONSORED ADVERTS
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderAdverts(items) {
     const container = $("sponsored-adverts");
@@ -654,13 +737,13 @@
       const url = safeUrl(item.url);
 
       if (url) {
-        const link = makeLink(
-          url,
-          item.linkText || "Find out more ↗",
-          "text-link"
+        card.appendChild(
+          makeLink(
+            url,
+            item.linkText || "Find out more ↗",
+            "text-link"
+          )
         );
-
-        card.appendChild(link);
       } else {
         card.appendChild(
           makeLink(
@@ -671,16 +754,15 @@
         );
       }
 
-      container.appendChild(card);
       return card;
     });
 
     replaceContents(container, cards);
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      HERO VIDEO AND HEADLINES
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderHero(data) {
     const hero = data.hero || {};
@@ -720,9 +802,9 @@
     }
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      RENDER ALL SECTIONS
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function renderAll(data) {
     renderHero(data);
@@ -748,9 +830,9 @@
     );
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      LOAD NEWS.JSON
-     --------------------------------------------------------- */
+     ========================================================= */
 
   async function loadNews() {
     try {
@@ -806,9 +888,9 @@
     }
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      VIDEO SOUND CONTROL
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function setupSoundButton() {
     const button = $("sound-button");
@@ -830,18 +912,15 @@
       );
 
       icon.setAttribute("aria-hidden", "true");
-
       button.appendChild(icon);
+
       button.appendChild(
         document.createTextNode(
           video.muted ? " Enable sound" : " Turn sound off"
         )
       );
 
-      button.setAttribute(
-        "aria-pressed",
-        String(!video.muted)
-      );
+      button.setAttribute("aria-pressed", String(!video.muted));
     }
 
     button.addEventListener("click", async () => {
@@ -861,9 +940,9 @@
     updateButton();
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      VIDEO SELECTION BUTTONS
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function setupVideoButtons() {
     const video = $("heroVideo");
@@ -906,9 +985,9 @@
     });
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      ADVERT REQUEST EMAIL FORM
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function setupAdvertForm() {
     const form = $("advert-request-form");
@@ -951,10 +1030,9 @@
     });
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      OPTIONAL MOBILE NAVIGATION
-     Supports a toggle if one is added in a future HTML update.
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function setupMobileNavigation() {
     const toggle = $("nav-toggle");
@@ -978,9 +1056,9 @@
     });
   }
 
-  /* ---------------------------------------------------------
+  /* =========================================================
      STARTUP
-     --------------------------------------------------------- */
+     ========================================================= */
 
   function start() {
     setupSoundButton();

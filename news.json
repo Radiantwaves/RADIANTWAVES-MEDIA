@@ -1,304 +1,364 @@
+
 {
-  "edition": "RadiantWaves Morning News & Global Update",
+  "edition": "RadiantWaves Late Night News & Global Update",
   "date": "Wednesday, 21 October 2026",
   "hero": {
-    "title": "WORLD NEWS TODAY: POLITICS, HEALTH AND THE GLOBAL ECONOMY",
-    "description": "Your global briefing from RadiantWaves Media, covering breaking developments across Africa, Europe, the United States, Canada, Asia and beyond.",
-    "marquee": "BREAKING: Nigeria reports an imported Ebola case | DR Congo outbreak expands | France faces political and security pressure | UK announces additional defensive support for Saudi Arabia | Nigeria's 2027 opposition talks remain unsettled",
+    "title": "LATE NIGHT WORLD NEWS: HEALTH, POLITICS, SECURITY AND THE GLOBAL ECONOMY",
+    "description": "Your late-night briefing from Africa, Europe, the Americas, Asia and the wider world. Follow verified developments, statements from world leaders, public health alerts, humanitarian crises and the decisions affecting everyday life.",
     "video": "./assets/video1.mp4"
   },
-  "morningSummary": "Good morning and welcome to RadiantWaves Media. Today's briefing follows major developments in public health, politics, security and the economy. Nigeria's health authorities are responding to a reported imported Ebola case, while the outbreak of Bundibugyo virus disease in the Democratic Republic of the Congo remains a serious regional concern. In Europe, France is dealing with unrest and political pressure. The UK has announced additional defensive military support for Saudi Arabia amid renewed Houthi attacks. In Canada, Alberta voters have rejected moving towards separation. Nigeria's political parties continue discussions about possible opposition cooperation ahead of the 2027 presidential election. Read the linked reports for details and further updates.",
-  "editorialNote": "RadiantWaves Media aims to report verified information fairly and clearly. Some stories are developing, and figures or official responses may change. Follow the linked sources for updates. An official monitoring link does not necessarily mean that a leader has made a new statement today. Editorial discussion topics must not be presented as direct quotations or fresh announcements unless verified.",
-  "bigQuestion": "During a public health emergency such as Ebola, what should governments prioritise first: rapid testing and contact tracing, clear public communication, or protecting hospitals and frontline workers?",
+  "morningSummary": "Tonight's global briefing focuses on Nigeria's officially confirmed Ebola case and contact tracing, the deadly strike reported in Abyei, the United Nations' latest climate warning, the European Union's updated Arctic strategy and continuing pressure on global oil prices. France is also facing renewed political and social tensions. In Nigeria, Atiku Abubakar's Ask AA public-engagement platform and Peter Obi's previously published policy commitments provide documented material for political coverage. Readers should follow the linked reports for developments after publication.",
+  "editorialNote": "RadiantWaves Media writes its own summaries and attributes claims to their sources. A source link does not mean every statement in a report has been independently confirmed by RadiantWaves. Dates refer to the reported event or source publication where stated. Developing stories may change as authorities release further information. Analysis is labelled separately from direct statements.",
+  "bigQuestion": {
+    "title": "Tonight's Big Question",
+    "question": "When governments face a public health emergency, conflict and rising energy costs at the same time, how should they balance public safety, humanitarian assistance and the cost of living?",
+    "description": "Share your view respectfully. Focus on evidence, practical solutions and the effect of public decisions on ordinary people."
+  },
   "quoteOfTheDay": {
-    "quote": "A well-informed society does not simply react to headlines; it checks the facts, asks thoughtful questions and acts with responsibility.",
-    "author": "RadiantWaves Media"
+    "text": "A headline may catch our attention, but evidence, context and accountability help us understand the world.",
+    "author": "RadiantWaves Media",
+    "type": "Original editorial quote"
   },
   "breaking": [
-    "NIGERIA: Authorities report an imported Ebola case and are working on the public-health response.",
-    "AFRICA: DR Congo's Bundibugyo Ebola outbreak has spread to another province, according to Reuters.",
-    "NIGERIA POLITICS: Disagreement continues over a possible single opposition ticket for the 2027 election.",
-    "FRANCE: Political leaders face pressure following unrest and security concerns in several cities.",
-    "UK: Government announces additional defensive air support for Saudi Arabia amid Houthi attacks.",
-    "CANADA: Alberta voters reject a move towards a process for provincial separation.",
-    "ASIA: Asian shares rise as investors respond to strong US corporate earnings.",
-    "GLOBAL ECONOMY: Oil prices and currencies remain sensitive to geopolitical risks and market expectations."
+    "NIGERIA: Federal authorities confirm one Ebola case in the FCT and report 44 close contacts identified for tracing.",
+    "AFRICA: Associated Press reports at least 153 deaths following a drone strike at Amiet Market in Abyei.",
+    "CLIMATE: A new UN assessment warns that current national commitments remain insufficient to meet global temperature goals.",
+    "EUROPE: The European Union announces an updated Arctic strategy with a stronger security focus.",
+    "ENERGY: Oil markets remain sensitive to Middle East tensions and developments in Russia-Ukraine talks.",
+    "FRANCE: President Emmanuel Macron responds to unrest and criticism as further protests are anticipated.",
+    "UNITED KINGDOM: Government borrowing and public debt feature prominently ahead of the planned 28 October Budget.",
+    "NIGERIA POLITICS: Atiku Abubakar's Ask AA platform invites questions about his record and policy proposals."
   ],
   "breakingHistory": [
     {
+      "title": "Nigeria confirms an Ebola case in the FCT",
+      "summary": "Nigeria's Federal Ministry of Health said on 20 October that laboratory testing confirmed one case in the Federal Capital Territory. Authorities reported that the patient was in isolation and that 44 close contacts had been identified for monitoring.",
+      "date": "20 October 2026",
+      "source": "Federal Ministry of Health and Social Welfare",
+      "url": "https://health.gov.ng/fg-confirms-ebola-disease-case-in-fct-activates-public-health-response/"
+    },
+    {
+      "title": "Deadly drone strike reported in Abyei",
+      "summary": "Associated Press reported at least 153 deaths after a drone strike hit Amiet Market in the disputed Abyei region. Responsibility and the circumstances surrounding the attack should be attributed to the parties and officials cited in the report.",
+      "date": "20 October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f36b3c7d15be6b48efdc35eed7219d6d"
+    },
+    {
+      "title": "UN climate assessment warns of a widening emissions gap",
+      "summary": "A new United Nations assessment says current climate commitments and policies are not enough to meet agreed temperature goals. The report calls for faster emissions reductions.",
       "date": "21 October 2026",
-      "title": "Nigeria Ebola response",
-      "summary": "The WHO African Region reported that Nigeria had confirmed an imported case of Bundibugyo virus disease. Follow official health guidance and subsequent updates.",
-      "source": "WHO Regional Office for Africa",
-      "url": "https://www.afro.who.int/outbreaks-and-emergencies-updates"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/0eff0561e0af1f3d7421a96d9db02ba9"
     },
     {
+      "title": "EU updates its Arctic strategy",
+      "summary": "The European Union's updated strategy places greater emphasis on Arctic security, surveillance and strategic infrastructure amid growing geopolitical competition.",
       "date": "20 October 2026",
-      "title": "Ebola outbreak in DR Congo",
-      "summary": "Reuters reported that the outbreak had expanded to North Ubangi province, with two cases reported there, including one fatality.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/congo-confirms-ebola-outbreak-spreads-eighth-province-2026-10-18/"
+      "url": "https://www.reuters.com/world/eu-unveils-new-arctic-strategy-with-focus-security-2026-10-20/"
     },
     {
-      "date": "20 October 2026",
-      "title": "UK defensive military support",
-      "summary": "The UK government announced additional defensive air support for Saudi Arabia in response to escalating Houthi attacks.",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/news/operational-update-20-october-uk-military-support-to-the-kingdom-of-saudi-arabia"
-    },
-    {
-      "date": "20 October 2026",
-      "title": "Alberta referendum",
-      "summary": "Reporting said Alberta voters rejected moving forward with a process that could lead to separation from Canada.",
+      "title": "Oil markets weigh geopolitical risks and supply data",
+      "summary": "Reuters reports that crude prices remain affected by Middle East tensions, shipping risks and developments in Russia-Ukraine talks, alongside changes in US inventory data.",
+      "date": "21 October 2026",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/alberta-votes-to-remain-part-of-canada-4959526"
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
     }
   ],
   "featured": {
     "category": "Africa",
-    "title": "Ebola alert: Nigeria reports an imported case as regional outbreak response continues",
-    "content": "Nigeria's reported imported case of Bundibugyo virus disease has renewed attention on surveillance, early detection and cross-border public-health coordination. The wider outbreak has been affecting the Democratic Republic of the Congo, while health authorities and international partners continue response measures in affected countries. The confirmation of an imported case does not, by itself, establish widespread transmission within Nigeria. For reliable updates, consult Nigeria's health authorities and the World Health Organization.",
-    "summary": "Nigeria has reported an imported Ebola case. Health authorities are monitoring the situation as the wider regional outbreak response continues.",
-    "source": "WHO Regional Office for Africa",
-    "date": "21 October 2026",
-    "url": "https://www.afro.who.int/outbreaks-and-emergencies-updates"
+    "title": "Nigeria's Ebola Response: Contact Tracing and Public Health Vigilance",
+    "summary": "Nigeria's Federal Ministry of Health confirmed a laboratory-positive Ebola case in the Federal Capital Territory on 20 October. The patient, a woman who had travelled from Uganda, was reported to be in isolation and receiving medical care. Authorities said 44 close contacts had been identified and that surveillance and infection-control measures had been strengthened. The public should follow official health guidance and avoid spreading unverified claims about suspected cases.",
+    "content": "The Federal Government has called on public and private health facilities to remain alert, identify and isolate suspected cases promptly, maintain infection-prevention measures and report concerns to public health authorities. Contact tracing is a key part of identifying people who may have been exposed. This report reflects the official information available in the linked statement; further updates should be checked with the Ministry of Health and the Nigeria Centre for Disease Control.",
+    "date": "20 October 2026",
+    "source": "Federal Ministry of Health and Social Welfare",
+    "url": "https://health.gov.ng/fg-confirms-ebola-disease-case-in-fct-activates-public-health-response/",
+    "image": ""
   },
   "topStories": [
     {
       "category": "Africa",
-      "title": "Nigeria reports imported Ebola case: authorities focus on public-health response",
-      "description": "The WHO African Region reported on 20 October that Nigeria had confirmed an imported case of Bundibugyo virus disease. Surveillance, case management and contact tracing are important parts of the response. Follow official updates for confirmed details and public-health advice.",
-      "summary": "Nigeria has reported an imported case of Ebola disease caused by Bundibugyo virus. Follow official health guidance and avoid sharing unverified claims.",
-      "source": "WHO Regional Office for Africa",
+      "title": "Nigeria confirms Ebola case as authorities identify 44 close contacts",
+      "summary": "The Federal Ministry of Health confirmed one case in the FCT on 20 October and said contact tracing was under way. Follow official updates for further information on the response.",
       "date": "20 October 2026",
-      "url": "https://www.afro.who.int/outbreaks-and-emergencies-updates"
+      "source": "Federal Ministry of Health",
+      "url": "https://health.gov.ng/fg-confirms-ebola-disease-case-in-fct-activates-public-health-response/"
     },
     {
       "category": "Africa",
-      "title": "DR Congo Ebola outbreak reported in an eighth province",
-      "description": "Reuters reported that the Bundibugyo virus outbreak in the Democratic Republic of the Congo had reached North Ubangi province, where two cases, including one fatality, were reported. The situation remains a significant public-health concern. Case totals can change as authorities investigate and update surveillance data.",
-      "summary": "The outbreak in DR Congo has expanded geographically, adding pressure to surveillance and response efforts.",
-      "source": "Reuters",
-      "date": "18 October 2026",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/congo-confirms-ebola-outbreak-spreads-eighth-province-2026-10-18/"
-    },
-    {
-      "category": "Africa",
-      "title": "Nigeria 2027: Atiku and Obi camps disagree over a possible single opposition ticket",
-      "description": "Nigeria's opposition parties continue to debate whether they can agree on a common presidential candidate for the 2027 election. Reporting describes disagreements among political camps and other opposition figures over the proposed arrangement. The discussions remain political negotiations, and any final agreement should be confirmed through official party statements.",
-      "summary": "Opposition leaders are debating a possible common candidate for 2027, but disagreements over strategy and ambitions remain.",
-      "source": "The Guardian Nigeria",
-      "date": "19 October 2026",
-      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
-    },
-    {
-      "category": "Europe",
-      "title": "France faces political pressure following unrest in major cities",
-      "description": "Recent reporting describes unrest, security concerns and political criticism in France. President Emmanuel Macron has left crisis management to Prime Minister Sébastien Lecornu, while the government faces questions about public order and the social and economic issues behind the protests. Details may evolve as authorities provide further information.",
-      "summary": "France's government is under pressure to address public safety and the issues raised during recent unrest.",
-      "source": "Le Monde",
+      "title": "Abyei market strike: AP reports at least 153 deaths",
+      "summary": "A drone strike at Amiet Market in the disputed Abyei region reportedly caused mass civilian casualties. AP's report includes differing accounts of the intended target; claims about responsibility should remain attributed until independently established.",
       "date": "20 October 2026",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/10/20/after-weekend-of-violence-macron-leaves-crisis-resolution-to-pm_6759601_5.html"
-    },
-    {
-      "category": "Europe",
-      "title": "UK announces additional defensive military support for Saudi Arabia",
-      "description": "The UK government said RAF Typhoon aircraft would carry out defensive counter-air missions to help protect Saudi cities and critical infrastructure from aerial attacks. It also announced logistical support and military advisers. The government said the Typhoons would not conduct offensive strikes against the Houthis, while the wider conflict continues to raise humanitarian and regional-security concerns.",
-      "summary": "Britain has announced additional defensive air support for Saudi Arabia amid renewed Houthi attacks.",
-      "source": "UK Government",
-      "date": "20 October 2026",
-      "url": "https://www.gov.uk/government/news/operational-update-20-october-uk-military-support-to-the-kingdom-of-saudi-arabia"
-    },
-    {
-      "category": "USA",
-      "title": "US midterm campaigning intensifies as political debate grows",
-      "description": "US political campaigning is intensifying ahead of the November midterm elections. Recent reporting covers President Donald Trump's campaigning and disputes over political messaging, public policy and the role of federal institutions. Claims made by political figures should be checked against independent reporting and primary evidence.",
-      "summary": "The approaching US midterm elections are driving fresh campaigning and debate over policy and political accountability.",
       "source": "Associated Press",
-      "date": "20 October 2026",
-      "url": "https://apnews.com/article/a298dcb9327bbad29c0bcc9e61955edb"
+      "url": "https://apnews.com/article/f36b3c7d15be6b48efdc35eed7219d6d"
     },
     {
       "category": "World",
-      "title": "Canada: Alberta voters reject moving towards separation",
-      "description": "Reporting on Alberta's non-binding referendum said voters rejected moving forward with a process that could lead to separation from Canada. The result comes amid wider debate about provincial concerns, energy policy and relations with the federal government led by Prime Minister Mark Carney. The referendum was non-binding.",
-      "summary": "Alberta voters have rejected the proposed next step towards a separation process, keeping the province within Canada.",
-      "source": "Reuters",
+      "title": "UN climate report warns countries are not on track",
+      "summary": "The latest assessment warns that national climate pledges and current policies are not sufficient to keep warming within international goals. The report renews pressure for faster cuts in greenhouse-gas emissions.",
+      "date": "21 October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/0eff0561e0af1f3d7421a96d9db02ba9"
+    },
+    {
+      "category": "Europe",
+      "title": "EU Arctic strategy puts security and surveillance in focus",
+      "summary": "The EU has updated its Arctic approach as melting ice, emerging shipping routes and geopolitical competition increase the region's strategic importance. The proposed measures include improved monitoring and maritime security cooperation.",
       "date": "20 October 2026",
-      "url": "https://www.investing.com/news/world-news/alberta-votes-to-remain-part-of-canada-4959526"
-    },
-    {
-      "category": "Asia",
-      "title": "Asian markets rise as strong US earnings support investor confidence",
-      "description": "Reuters reported gains across major Asian stock markets following positive signals from Wall Street corporate earnings. Investors remain attentive to energy prices, borrowing costs, technology valuations and geopolitical developments. Market movements can change during the trading day.",
-      "summary": "Asian shares rose following strong US earnings, although economic and geopolitical risks remain.",
       "source": "Reuters",
-      "date": "21 October 2026",
-      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-21/"
-    },
-    {
-      "category": "Asia",
-      "title": "Japanese envoy meets Myanmar's Min Aung Hlaing",
-      "description": "Reuters reported that Japanese envoy Yohei Sasakawa met Myanmar's Min Aung Hlaing in Naypyitaw. Myanmar remains affected by conflict and political instability following the 2021 military coup. The meeting was reported by state media; its wider implications should be assessed against further diplomatic and humanitarian developments.",
-      "summary": "A Japanese envoy's meeting with Myanmar's leader has drawn attention to diplomatic engagement amid continuing conflict.",
-      "source": "Reuters",
-      "date": "21 October 2026",
-      "url": "https://www.reuters.com/world/asia-pacific/japan-envoy-sasakawa-meets-myanmars-min-aung-hlaing-state-media-says-2026-10-21/"
+      "url": "https://www.reuters.com/world/eu-unveils-new-arctic-strategy-with-focus-security-2026-10-20/"
     },
     {
       "category": "Business",
-      "title": "Oil and currency markets react to geopolitical uncertainty",
-      "description": "Global energy prices and currency movements remain sensitive to geopolitical developments and expectations about economic policy. Reuters' market coverage reported pressure on the US dollar and mixed currency movements as investors assessed oil prices, central-bank expectations and regional tensions. Market prices can move quickly, so this report should not be treated as investment advice.",
-      "summary": "Energy and currency markets remain sensitive to geopolitical risks, interest-rate expectations and economic news.",
-      "source": "Reuters",
+      "title": "Oil prices respond to Middle East risks and peace-talk developments",
+      "summary": "Crude markets continue to weigh shipping disruptions, geopolitical tensions and signs of movement in Russia-Ukraine negotiations. Changes in oil prices can affect fuel costs, transport, production and household budgets, although local prices also depend on taxes, exchange rates and government policy.",
       "date": "21 October 2026",
-      "url": "https://www.reuters.com/world/africa/dollar-back-foot-us-yields-crude-prices-dip-aussie-buoyed-by-hawkish-rba-2026-10-21/"
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
     },
     {
-      "category": "World",
-      "title": "Deadly drone strike reported in the disputed Sudan–South Sudan border area",
-      "description": "Reuters reporting described a deadly drone strike in the disputed Abyei area near Sudan and South Sudan. The region's political status and security situation remain sensitive. Casualty figures in developing conflict reports can vary as authorities and other sources provide updates; consult the linked report for its specific account.",
-      "summary": "A drone strike in the disputed Abyei area has raised further concern about security and civilian protection.",
+      "category": "Europe",
+      "title": "Macron responds to unrest and criticism in France",
+      "summary": "Reuters reports that President Emmanuel Macron has vowed to restore order amid unrest and planned protests. The demonstrations and the government's response have raised questions about public security, living costs and political confidence.",
+      "date": "21 October 2026",
       "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-government-faces-fresh-test-yellow-vests-mobilise-2026-10-21/"
+    },
+    {
+      "category": "United Kingdom",
+      "title": "UK borrowing and public debt put pressure on the coming Budget",
+      "summary": "Reuters reports that government borrowing in September exceeded expectations and public sector debt passed £3 trillion. The figures add to the fiscal challenges facing the government ahead of the Budget scheduled for 28 October.",
+      "date": "21 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/uk/uk-borrows-more-than-expected-again-debt-hits-3-trillion-2026-10-21/"
+    },
+    {
+      "category": "Canada",
+      "title": "Alberta voters reject starting a separation process",
+      "summary": "Associated Press reports that Alberta voters rejected a proposal to begin a process towards separation from Canada. The vote was not itself a binding independence referendum; the result keeps debate over provincial autonomy and national unity in focus.",
       "date": "20 October 2026",
-      "url": "https://www.reuters.com/world/africa/drone-strike-disputed-sudan-south-sudan-area-kills-dozens-minister-says-2026-10-20/"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/ed0d58ef051859ce12052e75d2d6e8a0"
+    },
+    {
+      "category": "Nigeria Politics",
+      "title": "Atiku launches Ask AA platform for questions from Nigerians",
+      "summary": "The African Democratic Congress announced on 15 October that Atiku Abubakar was launching Ask AA, a platform for Nigerians to ask about his public record, policy proposals and vision. This is a report of the party's announcement, not a claim that he made a new statement tonight.",
+      "date": "15 October 2026",
+      "source": "African Democratic Congress",
+      "url": "https://www.adc.org.ng/news-single/atiku-abubakar-launches-ask-aa-portal-to-engage-directly-with-nigerians"
+    },
+    {
+      "category": "Nigeria Politics",
+      "title": "Peter Obi's published policy priorities focus on governance and public welfare",
+      "summary": "In an Independence Day address reported by Channels Television on 1 October, Peter Obi said his priorities would include insecurity, education, healthcare and productive enterprise. The report is dated and should not be presented as a new statement made on 21 October.",
+      "date": "1 October 2026",
+      "source": "Channels Television",
+      "url": "https://www.channelstv.com/2026/10/01/nigerians-will-see-tangible-impact-of-effective-leadership-within-my-one-year-as-president-obi/"
+    },
+    {
+      "category": "Asia",
+      "title": "Asian economies watch energy costs and global trade risks",
+      "summary": "Higher oil costs and geopolitical uncertainty can affect import bills, inflation and manufacturing across energy-importing economies. This is a broad economic watch item, not a claim about a new announcement by a specific Asian government.",
+      "date": "21 October 2026",
+      "source": "Reuters energy coverage",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
+    },
+    {
+      "category": "Australia",
+      "title": "Australia and the wider Asia-Pacific face the global energy and climate challenge",
+      "summary": "Energy security, fuel affordability and emissions reduction remain linked policy challenges for governments across the Asia-Pacific. This is a regional context item; check Australian government announcements and local reporting for country-specific developments.",
+      "date": "21 October 2026",
+      "source": "UN climate assessment",
+      "url": "https://apnews.com/article/0eff0561e0af1f3d7421a96d9db02ba9"
     },
     {
       "category": "Technology",
-      "title": "AI-driven cyber threats put company security under renewed scrutiny",
-      "description": "Recent international reporting has raised concerns about the use of AI agents in cyber intrusions affecting numerous companies. Organisations are being urged to review access controls, monitor unusual activity and strengthen incident-response procedures. The scale and details of individual incidents should be checked against the original reporting.",
-      "summary": "Reports of AI-assisted cyber intrusions highlight the importance of strong digital security and rapid incident response.",
-      "source": "Reuters",
-      "date": "20 October 2026",
-      "url": "https://www.reuters.com/podcasts/macrons-twilight-trumps-approval-ai-hacking-2026-10-20/"
+      "title": "Digital public engagement becomes part of political communication",
+      "summary": "Atiku Abubakar's Ask AA initiative is an example of a political team using an online platform to collect questions from citizens. Its practical value will depend on access, transparency and whether responses are substantive and publicly verifiable.",
+      "date": "15 October 2026",
+      "source": "African Democratic Congress",
+      "url": "https://www.adc.org.ng/news-single/atiku-abubakar-launches-ask-aa-portal-to-engage-directly-with-nigerians"
     }
   ],
   "articles": [
     {
       "category": "world",
-      "title": "Global briefing: conflict, health and economic decisions affect households",
-      "summary": "Today's international developments show how public-health emergencies, regional conflict, energy prices and political decisions can affect ordinary people. RadiantWaves will continue to monitor verified updates and link to the reporting behind each story.",
-      "source": "RadiantWaves Media",
+      "title": "World Briefing: Conflict, Climate and Public Health",
+      "summary": "Tonight's international picture includes public health surveillance in Nigeria, civilian casualties reported in Abyei, climate commitments and security concerns in the Arctic. The linked reports provide the underlying detail.",
       "date": "21 October 2026",
-      "url": "https://www.reuters.com/world/"
+      "source": "RadiantWaves Media desk",
+      "url": "https://apnews.com/"
     },
     {
       "category": "usa",
-      "title": "United States: follow the midterm campaign and policy debate",
-      "summary": "Campaign activity is intensifying ahead of the US midterm elections. Follow reporting on candidates, policy proposals, Congress and the impact of political decisions on communities.",
-      "source": "Associated Press",
-      "date": "20 October 2026",
-      "url": "https://apnews.com/hub/politics"
+      "title": "United States: Climate policy and energy markets remain under scrutiny",
+      "summary": "A new UN climate assessment has renewed scrutiny of national emissions commitments, while oil-market movements reflect geopolitical risks and supply concerns. This summary does not imply a new White House announcement tonight.",
+      "date": "21 October 2026",
+      "source": "Associated Press and Reuters",
+      "url": "https://apnews.com/article/0eff0561e0af1f3d7421a96d9db02ba9"
     },
     {
       "category": "europe",
-      "title": "France and Europe: security, political pressure and economic concerns",
-      "summary": "France is dealing with unrest and political criticism, while European governments continue to confront economic and security challenges. Check the linked reports for verified developments rather than relying on unconfirmed social-media claims.",
-      "source": "Le Monde",
-      "date": "20 October 2026",
-      "url": "https://www.lemonde.fr/en/"
+      "title": "Europe watches unrest, energy costs and Arctic security",
+      "summary": "France faces renewed unrest, the EU has updated its Arctic strategy and European governments continue to weigh energy affordability against security and climate goals.",
+      "date": "21 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/eu-unveils-new-arctic-strategy-with-focus-security-2026-10-20/"
     },
     {
       "category": "africa",
-      "title": "Nigeria and Central Africa: follow official Ebola updates",
-      "summary": "Nigeria's reported imported Ebola case and the wider Bundibugyo virus outbreak in DR Congo require accurate public-health information. Avoid rumours, do not stigmatise affected people, and follow health authorities for advice on symptoms, testing and response measures.",
-      "source": "WHO Regional Office for Africa",
+      "title": "Africa: Ebola surveillance and civilian protection are urgent concerns",
+      "summary": "Nigeria has confirmed an Ebola case in the FCT, while AP reports heavy casualties from a strike in Abyei. Official health information and independent reporting should guide updates as the situation develops.",
       "date": "21 October 2026",
-      "url": "https://www.afro.who.int/outbreaks-and-emergencies-updates"
+      "source": "Federal Ministry of Health and Associated Press",
+      "url": "https://health.gov.ng/fg-confirms-ebola-disease-case-in-fct-activates-public-health-response/"
     },
     {
       "category": "asia",
-      "title": "Asia: markets, diplomacy and regional security",
-      "summary": "Asian markets have risen amid strong US earnings, while diplomatic engagement with Myanmar continues against a backdrop of conflict. Economic performance and political developments vary by country, so individual reports should be read in context.",
-      "source": "Reuters",
+      "title": "Asia-Pacific: Energy security and climate targets",
+      "summary": "Oil-price movements and the global emissions outlook affect governments, manufacturers and households across the Asia-Pacific. Country-specific announcements should be added when verified reports become available.",
       "date": "21 October 2026",
-      "url": "https://www.reuters.com/world/asia-pacific/"
+      "source": "Reuters and Associated Press",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
     },
     {
       "category": "business",
-      "title": "Business and energy: monitor oil prices, currencies and household costs",
-      "summary": "Energy prices, exchange rates, borrowing costs and geopolitical risks can influence transport, food and business expenses. This section follows the major market developments without presenting short-term movements as guaranteed forecasts.",
-      "source": "Reuters",
+      "title": "Oil, shipping and the household cost of living",
+      "summary": "Crude prices are affected by geopolitical risk, supply expectations and inventory data. The effect on household bills differs by country and depends on currency movements, taxes, subsidies and retail pricing.",
       "date": "21 October 2026",
-      "url": "https://www.reuters.com/business/energy/"
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
     },
     {
       "category": "technology",
-      "title": "Technology: cybersecurity remains a global business concern",
-      "summary": "Reports about AI-assisted cyber activity underline the importance of secure accounts, multi-factor authentication, software updates and staff awareness. Companies should consult trusted security guidance and investigate incidents through appropriate channels.",
-      "source": "Reuters",
-      "date": "20 October 2026",
-      "url": "https://www.reuters.com/technology/"
+      "title": "Technology and public accountability: Can digital platforms improve access?",
+      "summary": "Online platforms can help citizens question political leaders directly, but public trust depends on transparency, access and verifiable answers. Atiku Abubakar's Ask AA platform was announced by the ADC on 15 October.",
+      "date": "15 October 2026",
+      "source": "African Democratic Congress",
+      "url": "https://www.adc.org.ng/news-single/atiku-abubakar-launches-ask-aa-portal-to-engage-directly-with-nigerians"
     }
   ],
-  "leadersWatch": {
-    "Emmanuel Macron": {
-      "role": "President of France",
-      "title": "FRANCE WATCH: GOVERNMENT RESPONSE, SECURITY AND THE ECONOMY",
-      "summary": "Monitor official statements and independently verified reporting on public order, the economy and the government's response to current developments. This is a monitoring topic, not a claim that a new statement has been issued today.",
-      "url": "https://www.elysee.fr/en/"
+  "leadersWatch": [
+    {
+      "name": "Atiku Abubakar",
+      "role": "African Democratic Congress",
+      "title": "ATIKU WATCH: ASK AA AND PUBLIC QUESTIONS",
+      "summary": "The ADC announced on 15 October that Atiku Abubakar's Ask AA platform would allow Nigerians to submit questions about his record, policies and vision. Coverage should track actual responses, interviews and official announcements. Do not attribute a new position to him without a dated source.",
+      "date": "15 October 2026",
+      "status": "Verified party announcement; follow-up statements require verification",
+      "image": "assets/leaders/atiku.jpg",
+      "url": "https://www.adc.org.ng/news-single/atiku-abubakar-launches-ask-aa-portal-to-engage-directly-with-nigerians"
     },
-    "UK Government": {
-      "role": "Official UK government updates",
-      "title": "UK WATCH: SECURITY, COST OF LIVING AND FOREIGN POLICY",
-      "summary": "Follow official government announcements and verified reporting on domestic policy, the economy and international affairs. The link is a government news page, not proof of a new announcement today.",
-      "url": "https://www.gov.uk/government/news"
+    {
+      "name": "Peter Obi",
+      "role": "Nigeria Democratic Congress",
+      "title": "OBI WATCH: GOVERNANCE, SECURITY AND PUBLIC WELFARE",
+      "summary": "In an Independence Day address reported on 1 October, Peter Obi identified insecurity, education, healthcare and productive enterprise among his priorities. This entry refers to that dated address, not a new statement tonight. Add fresh coverage only when a new speech, interview or party statement is verified.",
+      "date": "1 October 2026",
+      "status": "Dated statement; monitor for new verified developments",
+      "image": "assets/leaders/obi.jpg",
+      "url": "https://www.channelstv.com/2026/10/01/nigerians-will-see-tangible-impact-of-effective-leadership-within-my-one-year-as-president-obi/"
     },
-    "Friedrich Merz": {
-      "role": "Chancellor of Germany",
-      "title": "GERMANY WATCH: GOVERNMENT POLICY AND EUROPEAN AFFAIRS",
-      "summary": "Monitor official announcements on Germany's domestic policies, economy and role in European affairs.",
-      "url": "https://www.bundesregierung.de/breg-en"
-    },
-    "Donald Trump": {
-      "role": "President of the United States",
-      "title": "USA WATCH: ADMINISTRATION POLICY AND MIDTERM DEBATE",
-      "summary": "Follow official White House announcements and independently verified reporting on domestic and foreign policy. Distinguish official decisions from campaign statements and political commentary.",
-      "url": "https://www.whitehouse.gov/"
-    },
-    "Bola Ahmed Tinubu": {
+    {
+      "name": "Bola Ahmed Tinubu",
       "role": "President of Nigeria",
-      "title": "NIGERIA WATCH: ECONOMY, SECURITY, HEALTH AND GOVERNANCE",
-      "summary": "Monitor official federal announcements and verified reporting on economic policy, security, public health and governance. New statements should be attributed and dated before being presented as fresh news.",
+      "title": "NIGERIA WATCH: OFFICIAL PRESIDENCY UPDATES",
+      "summary": "Use this section for dated presidential announcements, policy decisions, official speeches and confirmed government responses. No new presidential statement is claimed in this entry.",
+      "status": "Official source for monitoring; not a claim of a new announcement",
+      "image": "",
       "url": "https://statehouse.gov.ng/"
     },
-    "Atiku Abubakar": {
-      "role": "2027 presidential candidate — African Democratic Congress",
-      "title": "ATIKU POLICY WATCH: THE ECONOMY, FUEL PRICES AND JOBS",
-      "summary": "RadiantWaves discussion topic: What practical steps would reduce the cost of living, improve electricity supply and create jobs? Examine Atiku Abubakar's publicly stated proposals and ask how they would be funded, implemented and measured. This is an editorial topic, not a claim that he made a new statement today.",
-      "status": "Editorial topic — verify new statements before publication"
+    {
+      "name": "Emmanuel Macron",
+      "role": "President of France",
+      "title": "FRANCE WATCH: UNREST, SECURITY AND COST OF LIVING",
+      "summary": "Reuters reported on 21 October that Macron vowed to restore order amid unrest and planned protests. The story links public security with wider questions about living costs and political tension.",
+      "date": "21 October 2026",
+      "status": "Dated news report",
+      "image": "",
+      "url": "https://www.reuters.com/world/europe/french-government-faces-fresh-test-yellow-vests-mobilise-2026-10-21/"
     },
-    "Peter Obi": {
-      "role": "2027 presidential candidate — Nigeria Democratic Congress",
-      "title": "OBI POLICY WATCH: PUBLIC SPENDING, PRODUCTION AND ACCOUNTABILITY",
-      "summary": "RadiantWaves discussion topic: How could Nigeria reduce wasteful public spending, support local production and improve healthcare, education and security? Examine Peter Obi's publicly stated proposals and ask what measurable results Nigerians should expect. This is an editorial topic, not a claim that he made a new statement today.",
-      "status": "Editorial topic — verify new statements before publication"
+    {
+      "name": "Andy Burnham",
+      "role": "Prime Minister of the United Kingdom",
+      "title": "UK WATCH: PUBLIC FINANCES AND THE COMING BUDGET",
+      "summary": "Reuters reported on 21 October that UK borrowing exceeded expectations in September and public sector debt passed £3 trillion. The government's Budget is scheduled for 28 October. This is economic reporting, not a new quotation from the Prime Minister.",
+      "date": "21 October 2026",
+      "status": "Dated news report",
+      "image": "",
+      "url": "https://www.reuters.com/world/uk/uk-borrows-more-than-expected-again-debt-hits-3-trillion-2026-10-21/"
     },
-    "Ursula von der Leyen": {
+    {
+      "name": "Donald Trump",
+      "role": "President of the United States",
+      "title": "USA WATCH: CLIMATE, ENERGY AND FOREIGN POLICY",
+      "summary": "Track dated White House statements and verified reporting on US climate policy, energy markets and international relations. The UN climate assessment published on 21 October provides context for the wider emissions debate; it is not a new Trump statement.",
+      "date": "21 October 2026",
+      "status": "Contextual report; no new presidential quotation claimed",
+      "image": "",
+      "url": "https://www.whitehouse.gov/"
+    },
+    {
+      "name": "Ursula von der Leyen",
       "role": "President of the European Commission",
-      "title": "EU WATCH: POLICY, TRADE AND REGIONAL SECURITY",
-      "summary": "Follow official European Commission announcements on EU policy, economic affairs and international relations.",
-      "url": "https://commission.europa.eu/index_en"
+      "title": "EU WATCH: ARCTIC SECURITY AND ENERGY",
+      "summary": "Reuters reported on 20 October that the EU had unveiled an updated Arctic strategy with a stronger security focus. Follow European Commission announcements for the official policy document and further implementation details.",
+      "date": "20 October 2026",
+      "status": "Dated policy report",
+      "image": "",
+      "url": "https://www.reuters.com/world/eu-unveils-new-arctic-strategy-with-focus-security-2026-10-20/"
     },
-    "Xi Jinping": {
+    {
+      "name": "Xi Jinping",
       "role": "President of China",
-      "title": "CHINA WATCH: DIPLOMACY, TRADE AND REGIONAL DEVELOPMENTS",
-      "summary": "Monitor official announcements and independent reporting on China's economic, diplomatic and regional policy.",
+      "title": "CHINA WATCH: OFFICIAL ANNOUNCEMENTS AND ECONOMIC POLICY",
+      "summary": "This is a monitoring entry for verified statements, policy announcements and official diplomatic developments. It does not claim that a new statement was made tonight.",
+      "status": "Official monitoring source",
+      "image": "",
       "url": "https://english.www.gov.cn/"
     },
-    "Vladimir Putin": {
+    {
+      "name": "Vladimir Putin",
       "role": "President of Russia",
-      "title": "RUSSIA WATCH: FOREIGN POLICY AND THE WAR IN UKRAINE",
-      "summary": "Follow verified reporting on Russia's foreign policy and diplomatic developments relating to Ukraine. Statements by parties to a conflict should be attributed and independently checked.",
-      "url": "https://www.reuters.com/world/"
+      "title": "RUSSIA WATCH: UKRAINE AND INTERNATIONAL SECURITY",
+      "summary": "Follow dated statements and independent reporting on Russia's war against Ukraine and any diplomatic developments. Reuters' 21 October oil-market report discusses how developments around Russia-Ukraine talks are being watched by energy markets; it should not be treated as a complete account of negotiations.",
+      "date": "21 October 2026",
+      "status": "Dated reporting; verify each new statement",
+      "image": "",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
+    },
+    {
+      "name": "European Union",
+      "role": "European institutions",
+      "title": "EU WATCH: ARCTIC STRATEGY AND RUSSIA-UKRAINE WAR",
+      "summary": "The EU's updated Arctic strategy places greater emphasis on security and surveillance. For the Russia-Ukraine war, use dated reports that distinguish official claims from independently verified events.",
+      "date": "20 October 2026",
+      "status": "Dated policy report and continuing conflict coverage",
+      "image": "",
+      "url": "https://www.reuters.com/world/eu-unveils-new-arctic-strategy-with-focus-security-2026-10-20/"
     }
-  },
+  ],
   "sponsoredAdverts": [
     {
-      "title": "Advertise with RadiantWaves Media",
-      "description": "Reach audiences interested in international news, business, technology and public affairs. Contact our team to discuss advertising opportunities.",
+      "title": "Stonebreaker Product Advert",
+      "description": "Sponsored product information. Confirm the advertiser's approved product description, contact details and image before publication. Do not present unverified medical claims as established facts.",
       "label": "Sponsored",
+      "image": "",
+      "url": "mailto:info@radiantwavesmedia.com"
+    },
+    {
+      "title": "Advertise with RadiantWaves Media",
+      "description": "Reach audiences across Africa, Europe and the wider world. Contact RadiantWaves Media to discuss advertising placements and sponsored content.",
+      "label": "Sponsored",
+      "image": "",
       "url": "mailto:info@radiantwavesmedia.com"
     }
-  ]
+  ],
+  "footer": {
+    "brand": "RadiantWaves Media",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "editorialPrinciple": "Stay curious. Check the source. Separate facts from opinion."
+  }
 }

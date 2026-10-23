@@ -1,13 +1,37 @@
-
 /* =========================================================
-   RADIANTWAVES MEDIA — COMPLETE SCRIPT.JS
+   RADIANTWAVES MEDIA — SCRIPT.JS (PROFESSIONAL REBUILD)
    Global news, Leaders Watch, source links and website features
    ========================================================= */
 
 (() => {
   "use strict";
 
-  const NEWS_FILE = "./news.json?v=5003";
+  /* =========================================================
+     CONFIGURATION
+     Adjust these values to match your deployment.
+     ========================================================= */
+
+  const CONFIG = {
+    // Path to the news data file.
+    NEWS_FILE: "./news.json",
+
+    // Optional: re-fetch news.json on a timer (milliseconds).
+    // Set to 0 to disable. 600000 = every 10 minutes.
+    NEWS_REFRESH_INTERVAL: 0,
+
+    // Contact email used for mailto fallbacks.
+    CONTACT_EMAIL: "info@radiantwavesmedia.com",
+
+    // Professional form handling (recommended over mailto).
+    // 1. Get a free access key at https://web3forms.com
+    //    (works fine with GitHub Pages static hosting).
+    // 2. Paste it below. When set, the advert form submits via
+    //    fetch() with a success/error message on the page.
+    // 3. If left blank, the form falls back to the old mailto
+    //    behaviour.
+    FORM_ACCESS_KEY: "",
+    FORM_ENDPOINT: "https://api.web3forms.com/submit"
+  };
 
   const CATEGORY_TARGETS = {
     world: "world-news",
@@ -28,6 +52,10 @@
     business: "Business",
     technology: "Technology"
   };
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
 
   const $ = (id) => document.getElementById(id);
 
@@ -81,6 +109,11 @@
     });
   }
 
+  function isoDate(value) {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? "" : date.toISOString();
+  }
+
   function makeElement(tag, className = "", text = "") {
     const element = document.createElement(tag);
 
@@ -93,6 +126,18 @@
     }
 
     return element;
+  }
+
+  function makeTimeElement(value, prefix = "") {
+    const time = document.createElement("time");
+    const iso = isoDate(value);
+
+    if (iso) {
+      time.dateTime = iso;
+    }
+
+    time.textContent = (prefix ? prefix + " " : "") + formatDate(value);
+    return time;
   }
 
   function makeLink(url, label, className = "source-link") {
@@ -108,6 +153,7 @@
       }
     } else {
       link.setAttribute("aria-disabled", "true");
+      link.tabIndex = -1;
     }
 
     return link;
@@ -144,6 +190,45 @@
     return safeUrl(item.url || item.sourceUrl);
   }
 
+  function sourceMetadata(item) {
+    const parts = [];
+
+    if (item.source) {
+      parts.push("Source: " + item.source);
+    }
+
+    return parts;
+  }
+
+  function appendMetadata(content, item, options = {}) {
+    const { showDate = true, datePrefix = "" } = options;
+    const fragment = document.createDocumentFragment();
+
+    const text = sourceMetadata(item).join(" · ");
+
+    if (text) {
+      fragment.appendChild(
+        makeElement("span", "story-source", text)
+      );
+    }
+
+    if (showDate && item.date) {
+      if (text) {
+        fragment.appendChild(
+          makeElement("span", "story-source", " · ")
+        );
+      }
+
+      fragment.appendChild(makeTimeElement(item.date, datePrefix));
+    }
+
+    if (fragment.childNodes.length) {
+      const wrap = makeElement("p", "story-meta");
+      wrap.appendChild(fragment);
+      content.appendChild(wrap);
+    }
+  }
+
   /* =========================================================
      STANDARD NEWS CARDS
      ========================================================= */
@@ -170,16 +255,7 @@
       content.appendChild(makeElement("p", "", summary));
     }
 
-    const metadata = [
-      article.source ? "Source: " + article.source : "",
-      article.date ? formatDate(article.date) : ""
-    ].filter(Boolean).join(" · ");
-
-    if (metadata) {
-      content.appendChild(
-        makeElement("p", "story-source", metadata)
-      );
-    }
+    appendMetadata(content, article);
 
     const url = getStoryUrl(article);
 
@@ -205,6 +281,57 @@
      FEATURED STORY
      ========================================================= */
 
+  function injectFeaturedJsonLd(story) {
+    if (!story || typeof story !== "object") return;
+
+    const url = getStoryUrl(story);
+    let domain = "";
+
+    if (url) {
+      try {
+        domain = new URL(url).hostname.replace(/^www\./, "");
+      } catch (_) {
+        domain = "";
+      }
+    }
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": story.title || "Latest global news",
+      "description": getSummary(story),
+      "datePublished": isoDate(story.date) || undefined,
+      "author": {
+        "@type": "Organization",
+        "name": story.source || "RadiantWaves Media"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "RadiantWaves Media",
+        "logo": {
+          "@type": "ImageObject",
+          "url": new URL("./logo.png", window.location.href).href
+        }
+      },
+      "mainEntityOfPage": url || undefined
+    };
+
+    if (domain) {
+      jsonLd.isBasedOn = url;
+    }
+
+    let tag = document.getElementById("featured-jsonld");
+
+    if (!tag) {
+      tag = document.createElement("script");
+      tag.type = "application/ld+json";
+      tag.id = "featured-jsonld";
+      document.head.appendChild(tag);
+    }
+
+    tag.textContent = JSON.stringify(jsonLd);
+  }
+
   function renderFeaturedStory(story) {
     const container = $("featured-news");
     if (!container) return;
@@ -219,11 +346,7 @@
     const wrapper = makeElement("div", "featured-copy");
 
     wrapper.appendChild(
-      makeElement(
-        "span",
-        "news-category",
-        "FEATURED STORY"
-      )
+      makeElement("span", "news-category", "FEATURED STORY")
     );
 
     wrapper.appendChild(
@@ -236,16 +359,7 @@
       wrapper.appendChild(makeElement("p", "", body));
     }
 
-    const metadata = [
-      story.source ? "Source: " + story.source : "",
-      story.date ? formatDate(story.date) : ""
-    ].filter(Boolean).join(" · ");
-
-    if (metadata) {
-      wrapper.appendChild(
-        makeElement("p", "story-source", metadata)
-      );
-    }
+    appendMetadata(wrapper, story);
 
     const url = getStoryUrl(story);
 
@@ -264,6 +378,8 @@
     }
 
     replaceContents(container, [wrapper]);
+
+    injectFeaturedJsonLd(story);
   }
 
   /* =========================================================
@@ -302,9 +418,11 @@
       "us": "usa",
       "united states": "usa",
       "u.s.": "usa",
+      "u.s.a.": "usa",
       "uk": "europe",
       "united kingdom": "europe",
       "britain": "europe",
+      "great britain": "europe",
       "tech": "technology",
       "world news": "world",
       "african news": "africa",
@@ -479,13 +597,11 @@
       }
 
       if (item.date) {
-        content.appendChild(
-          makeElement(
-            "p",
-            "story-date",
-            "Update date: " + formatDate(item.date)
-          )
+        const dateLine = makeElement("p", "story-date");
+        dateLine.appendChild(
+          makeTimeElement(item.date, "Update date:")
         );
+        content.appendChild(dateLine);
       }
 
       const summary = getSummary(item);
@@ -546,6 +662,9 @@
 
   /* =========================================================
      BREAKING NEWS TICKER
+     Content is duplicated once so the CSS marquee can loop
+     seamlessly. The duplicate is aria-hidden so screen readers
+     announce each headline only once.
      ========================================================= */
 
   function renderBreakingTicker(items) {
@@ -564,19 +683,35 @@
       return;
     }
 
-    ticker.replaceChildren();
+    const buildSequence = (hidden) => {
+      const sequence = makeElement(
+        "span",
+        "ticker-sequence" + (hidden ? " ticker-sequence--clone" : "")
+      );
 
-    messages.forEach((message, index) => {
-      if (index > 0) {
-        ticker.appendChild(
-          makeElement("span", "ticker-separator", " ◆ ")
-        );
+      if (hidden) {
+        sequence.setAttribute("aria-hidden", "true");
       }
 
-      ticker.appendChild(
-        makeElement("span", "ticker-item", message)
-      );
-    });
+      messages.forEach((message, index) => {
+        if (index > 0) {
+          sequence.appendChild(
+            makeElement("span", "ticker-separator", " ◆ ")
+          );
+        }
+
+        sequence.appendChild(
+          makeElement("span", "ticker-item", message)
+        );
+      });
+
+      return sequence;
+    };
+
+    ticker.replaceChildren(
+      buildSequence(false),
+      buildSequence(true)
+    );
   }
 
   /* =========================================================
@@ -629,7 +764,7 @@
     }
 
     quote.replaceChildren(
-      makeElement("p", "", "“" + quoteText + "”")
+      makeElement("p", "", "\u201C" + quoteText + "\u201D")
     );
 
     const credit = quote.parentElement
@@ -669,9 +804,9 @@
       }
 
       if (item.date) {
-        card.appendChild(
-          makeElement("p", "story-date", formatDate(item.date))
-        );
+        const dateLine = makeElement("p", "story-date");
+        dateLine.appendChild(makeTimeElement(item.date));
+        card.appendChild(dateLine);
       }
 
       card.appendChild(
@@ -735,14 +870,31 @@
         makeElement("h3", "", article.title || "News report")
       );
 
-      const metadata = [
-        article.category || "Global news",
-        article.source || "",
-        article.date ? formatDate(article.date) : ""
-      ].filter(Boolean).join(" · ");
+      const metadataLine = makeElement("p", "story-meta");
 
-      if (metadata) {
-        card.appendChild(makeElement("p", "", metadata));
+      const parts = [
+        article.category || "Global news",
+        article.source || ""
+      ].filter(Boolean);
+
+      if (parts.length) {
+        metadataLine.appendChild(
+          makeElement("span", "", parts.join(" · "))
+        );
+      }
+
+      if (article.date) {
+        if (parts.length) {
+          metadataLine.appendChild(
+            makeElement("span", "", " · ")
+          );
+        }
+
+        metadataLine.appendChild(makeTimeElement(article.date));
+      }
+
+      if (metadataLine.childNodes.length) {
+        card.appendChild(metadataLine);
       }
 
       const url = getStoryUrl(article);
@@ -811,7 +963,7 @@
       } else {
         card.appendChild(
           makeLink(
-            "mailto:info@radiantwavesmedia.com",
+            "mailto:" + CONFIG.CONTACT_EMAIL,
             "Contact our advertising team ↗",
             "text-link"
           )
@@ -854,7 +1006,7 @@
     setText(
       "hero-marquee",
       hero.marquee ||
-        "World · USA · Canada · Europe · UK · Africa · Asia · Australia"
+        "World \u00B7 USA \u00B7 Canada \u00B7 Europe \u00B7 UK \u00B7 Africa \u00B7 Asia \u00B7 Australia"
     );
 
     const video = $("heroVideo");
@@ -862,7 +1014,8 @@
     if (video && hero.video) {
       const validVideo = safeUrl(hero.video);
 
-      if (validVideo && video.src !== validVideo) {
+      if (validVideo && video.dataset.src !== validVideo) {
+        video.dataset.src = validVideo;
         video.src = validVideo;
         video.load();
       }
@@ -903,7 +1056,7 @@
 
   async function loadNews() {
     try {
-      const response = await fetch(NEWS_FILE, {
+      const response = await fetch(CONFIG.NEWS_FILE, {
         cache: "no-store"
       });
 
@@ -1022,7 +1175,14 @@
     const video = $("heroVideo");
     if (!video) return;
 
-    document.querySelectorAll("[data-video]").forEach((button) => {
+    const buttons = document.querySelectorAll("[data-video]");
+
+    buttons.forEach((button) => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.classList.contains("is-active"))
+      );
+
       button.addEventListener("click", async () => {
         const path = button.getAttribute("data-video");
         const validPath = safeUrl(path);
@@ -1035,13 +1195,18 @@
         video.src = validPath;
         video.load();
 
-        document.querySelectorAll("[data-video]").forEach((item) => {
+        buttons.forEach((item) => {
           item.classList.remove("is-active");
           item.setAttribute("aria-pressed", "false");
         });
 
         button.classList.add("is-active");
         button.setAttribute("aria-pressed", "true");
+
+        if (prefersReducedMotion.matches) {
+          video.pause();
+          return;
+        }
 
         try {
           await video.play();
@@ -1050,77 +1215,199 @@
         }
       });
     });
+  }
 
-    document.querySelectorAll("[data-video]").forEach((button) => {
-      button.setAttribute(
-        "aria-pressed",
-        String(button.classList.contains("is-active"))
-      );
+  /* =========================================================
+     VIDEO POLITENESS
+     - Respects prefers-reduced-motion (no autoplay).
+     - Pauses the stream while the tab is hidden to save
+       bandwidth and battery.
+     ========================================================= */
+
+  function setupVideoPoliteness() {
+    const video = $("heroVideo");
+    if (!video) return;
+
+    if (prefersReducedMotion.matches) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    }
+
+    prefersReducedMotion.addEventListener("change", (event) => {
+      if (event.matches) {
+        video.pause();
+      } else if (!video.paused) {
+        video.play().catch(() => {});
+      }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        video.pause();
+      } else if (
+        !prefersReducedMotion.matches &&
+        video.autoplay !== false
+      ) {
+        video.play().catch(() => {});
+      }
     });
   }
 
   /* =========================================================
-     ADVERT REQUEST EMAIL FORM
+     ADVERT REQUEST FORM
+
+     Professional handling order:
+     1. If FORM_ACCESS_KEY is set, submit via fetch() to
+        Web3Forms (or any compatible endpoint). The visitor
+        stays on the page and sees a success/error message.
+     2. Otherwise, fall back to opening the visitor's email
+        client with a pre-filled message (previous behaviour).
      ========================================================= */
+
+  function buildMailto(form, formData) {
+    const name = String(formData.get("Full name") || "").trim();
+    const email = String(formData.get("Email address") || "").trim();
+    const whatsapp = String(
+      formData.get("WhatsApp number") || ""
+    ).trim();
+    const organisation = String(
+      formData.get("Business or organisation") || ""
+    ).trim();
+    const service = String(formData.get("Service") || "").trim();
+    const details = String(formData.get("Details") || "").trim();
+
+    const subject = encodeURIComponent(
+      "RadiantWaves Media \u2014 " + (service || "Website enquiry")
+    );
+
+    const body = encodeURIComponent(
+      "Advertising / Publicity Enquiry\n\n" +
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "WhatsApp: " + (whatsapp || "Not supplied") + "\n" +
+      "Business / Organisation: " +
+      (organisation || "Not supplied") + "\n" +
+      "Service required: " + service + "\n\n" +
+      "Details:\n" + details
+    );
+
+    return (
+      "mailto:" + CONFIG.CONTACT_EMAIL +
+      "?subject=" + subject +
+      "&body=" + body
+    );
+  }
+
+  function setFormStatus(form, message, isError = false) {
+    let status = form.querySelector(".form-status");
+
+    if (!status) {
+      status = makeElement("p", "form-status");
+      status.setAttribute("role", "status");
+      form.appendChild(status);
+    }
+
+    status.textContent = message;
+    status.classList.toggle("form-status--error", isError);
+  }
 
   function setupAdvertForm() {
     const form = $("advert-request-form");
     if (!form) return;
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!form.reportValidity()) return;
 
       const formData = new FormData(form);
 
-      const name = String(
-        formData.get("Full name") || ""
-      ).trim();
+      // Fallback: no access key configured, use the visitor's
+      // email client as before.
+      if (!CONFIG.FORM_ACCESS_KEY) {
+        window.location.href = buildMailto(form, formData);
+        return;
+      }
 
-      const email = String(
-        formData.get("Email address") || ""
-      ).trim();
-
-      const whatsapp = String(
-        formData.get("WhatsApp number") || ""
-      ).trim();
-
-      const organisation = String(
-        formData.get("Business or organisation") || ""
-      ).trim();
-
-      const service = String(
-        formData.get("Service") || ""
-      ).trim();
-
-      const details = String(
-        formData.get("Details") || ""
-      ).trim();
-
-      const subject = encodeURIComponent(
-        "RadiantWaves Media — " + (service || "Website enquiry")
+      const submitButton = form.querySelector(
+        'button[type="submit"]'
       );
 
-      const body = encodeURIComponent(
-        "Advertising / Publicity Enquiry\n\n" +
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "WhatsApp: " + (whatsapp || "Not supplied") + "\n" +
-        "Business / Organisation: " +
-        (organisation || "Not supplied") + "\n" +
-        "Service required: " + service + "\n\n" +
-        "Details:\n" + details
-      );
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
 
-      window.location.href =
-        "mailto:info@radiantwavesmedia.com?subject=" +
-        subject + "&body=" + body;
+      setFormStatus(form, "Sending your request\u2026");
+
+      try {
+        const payload = {
+          access_key: CONFIG.FORM_ACCESS_KEY,
+          subject:
+            "RadiantWaves Media \u2014 " +
+            (String(formData.get("Service") || "").trim() ||
+              "Website enquiry"),
+          from_name: String(
+            formData.get("Full name") || ""
+          ).trim(),
+          name: String(formData.get("Full name") || "").trim(),
+          email: String(
+            formData.get("Email address") || ""
+          ).trim(),
+          whatsapp: String(
+            formData.get("WhatsApp number") || ""
+          ).trim(),
+          organisation: String(
+            formData.get("Business or organisation") || ""
+          ).trim(),
+          service: String(formData.get("Service") || "").trim(),
+          details: String(formData.get("Details") || "").trim()
+        };
+
+        const response = await fetch(CONFIG.FORM_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok && result.success) {
+          setFormStatus(
+            form,
+            "Thank you \u2014 your request has been sent. " +
+            "Our advertising team will reply to your email address."
+          );
+          form.reset();
+        } else {
+          throw new Error(
+            result.message || "The form service rejected the request."
+          );
+        }
+      } catch (error) {
+        console.error("Advert form error:", error);
+
+        setFormStatus(
+          form,
+          "Sending failed. Your email application will open " +
+          "instead so you can still send the request.",
+          true
+        );
+
+        window.location.href = buildMailto(form, formData);
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
     });
   }
 
   /* =========================================================
-     OPTIONAL MOBILE NAVIGATION
+     MOBILE NAVIGATION
+     (Requires #nav-toggle and #nav-menu in index.html)
      ========================================================= */
 
   function setupMobileNavigation() {
@@ -1134,14 +1421,35 @@
         toggle.getAttribute("aria-expanded") === "true";
 
       toggle.setAttribute("aria-expanded", String(!expanded));
+      toggle.setAttribute(
+        "aria-label",
+        expanded ? "Open menu" : "Close menu"
+      );
+
       menu.classList.toggle("is-open", !expanded);
+      document.body.classList.toggle("nav-open", !expanded);
     });
 
     menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         menu.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
       });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menu.classList.contains("is-open")
+      ) {
+        menu.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        toggle.focus();
+      }
     });
   }
 
@@ -1152,9 +1460,14 @@
   function start() {
     setupSoundButton();
     setupVideoButtons();
+    setupVideoPoliteness();
     setupMobileNavigation();
     setupAdvertForm();
     loadNews();
+
+    if (CONFIG.NEWS_REFRESH_INTERVAL > 0) {
+      window.setInterval(loadNews, CONFIG.NEWS_REFRESH_INTERVAL);
+    }
   }
 
   if (document.readyState === "loading") {

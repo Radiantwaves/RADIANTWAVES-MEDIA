@@ -1,34 +1,16 @@
+
 /* =========================================================
-   RADIANTWAVES MEDIA — SCRIPT.JS (PROFESSIONAL REBUILD)
-   Global news, Leaders Watch, source links and website features
+   RADIANTWAVES MEDIA — SCRIPT.JS
+   News feed, Leaders Watch, source links and sponsored adverts
    ========================================================= */
 
 (() => {
   "use strict";
 
-  /* =========================================================
-     CONFIGURATION
-     Adjust these values to match your deployment.
-     ========================================================= */
-
   const CONFIG = {
-    // Path to the news data file.
     NEWS_FILE: "./news.json",
-
-    // Optional: re-fetch news.json on a timer (milliseconds).
-    // Set to 0 to disable. 600000 = every 10 minutes.
     NEWS_REFRESH_INTERVAL: 0,
-
-    // Contact email used for mailto fallbacks.
     CONTACT_EMAIL: "info@radiantwavesmedia.com",
-
-    // Professional form handling (recommended over mailto).
-    // 1. Get a free access key at https://web3forms.com
-    //    (works fine with GitHub Pages static hosting).
-    // 2. Paste it below. When set, the advert form submits via
-    //    fetch() with a success/error message on the page.
-    // 3. If left blank, the form falls back to the old mailto
-    //    behaviour.
     FORM_ACCESS_KEY: "",
     FORM_ENDPOINT: "https://api.web3forms.com/submit"
   };
@@ -72,9 +54,7 @@
   }
 
   function safeUrl(value, allowMailto = false) {
-    if (typeof value !== "string" || !value.trim()) {
-      return "";
-    }
+    if (typeof value !== "string" || !value.trim()) return "";
 
     try {
       const url = new URL(value.trim(), window.location.href);
@@ -98,9 +78,7 @@
 
     const date = new Date(value);
 
-    if (Number.isNaN(date.getTime())) {
-      return String(value);
-    }
+    if (Number.isNaN(date.getTime())) return String(value);
 
     return date.toLocaleDateString("en-GB", {
       day: "numeric",
@@ -117,9 +95,7 @@
   function makeElement(tag, className = "", text = "") {
     const element = document.createElement(tag);
 
-    if (className) {
-      element.className = className;
-    }
+    if (className) element.className = className;
 
     if (text !== undefined && text !== null && text !== "") {
       element.textContent = String(text);
@@ -132,11 +108,11 @@
     const time = document.createElement("time");
     const iso = isoDate(value);
 
-    if (iso) {
-      time.dateTime = iso;
-    }
+    if (iso) time.dateTime = iso;
 
-    time.textContent = (prefix ? prefix + " " : "") + formatDate(value);
+    time.textContent =
+      (prefix ? prefix + " " : "") + formatDate(value);
+
     return time;
   }
 
@@ -176,12 +152,7 @@
   function getSummary(item) {
     if (!item || typeof item !== "object") return "";
 
-    return (
-      item.summary ||
-      item.description ||
-      item.content ||
-      ""
-    );
+    return item.summary || item.description || item.content || "";
   }
 
   function getStoryUrl(item) {
@@ -191,29 +162,22 @@
   }
 
   function sourceMetadata(item) {
-    const parts = [];
-
-    if (item.source) {
-      parts.push("Source: " + item.source);
-    }
-
-    return parts;
+    return item.source ? ["Source: " + item.source] : [];
   }
 
   function appendMetadata(content, item, options = {}) {
     const { showDate = true, datePrefix = "" } = options;
     const fragment = document.createDocumentFragment();
+    const sourceText = sourceMetadata(item).join(" · ");
 
-    const text = sourceMetadata(item).join(" · ");
-
-    if (text) {
+    if (sourceText) {
       fragment.appendChild(
-        makeElement("span", "story-source", text)
+        makeElement("span", "story-source", sourceText)
       );
     }
 
     if (showDate && item.date) {
-      if (text) {
+      if (sourceText) {
         fragment.appendChild(
           makeElement("span", "story-source", " · ")
         );
@@ -251,9 +215,7 @@
 
     const summary = getSummary(article);
 
-    if (summary) {
-      content.appendChild(makeElement("p", "", summary));
-    }
+    if (summary) content.appendChild(makeElement("p", "", summary));
 
     appendMetadata(content, article);
 
@@ -265,11 +227,7 @@
       );
     } else {
       content.appendChild(
-        makeElement(
-          "p",
-          "small-note",
-          "Original report link not supplied."
-        )
+        makeElement("p", "small-note", "Original report link not supplied.")
       );
     }
 
@@ -298,29 +256,27 @@
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": story.title || "Latest global news",
-      "description": getSummary(story),
-      "datePublished": isoDate(story.date) || undefined,
-      "author": {
+      headline: story.title || "Latest global news",
+      description: getSummary(story),
+      datePublished: isoDate(story.date) || undefined,
+      author: {
         "@type": "Organization",
-        "name": story.source || "RadiantWaves Media"
+        name: story.source || "RadiantWaves Media"
       },
-      "publisher": {
+      publisher: {
         "@type": "Organization",
-        "name": "RadiantWaves Media",
-        "logo": {
+        name: "RadiantWaves Media",
+        logo: {
           "@type": "ImageObject",
-          "url": new URL("./logo.png", window.location.href).href
+          url: new URL("./logo.png", window.location.href).href
         }
       },
-      "mainEntityOfPage": url || undefined
+      mainEntityOfPage: url || undefined
     };
 
-    if (domain) {
-      jsonLd.isBasedOn = url;
-    }
+    if (domain) jsonLd.isBasedOn = url;
 
-    let tag = document.getElementById("featured-jsonld");
+    let tag = $("featured-jsonld");
 
     if (!tag) {
       tag = document.createElement("script");
@@ -355,9 +311,7 @@
 
     const body = getSummary(story);
 
-    if (body) {
-      wrapper.appendChild(makeElement("p", "", body));
-    }
+    if (body) wrapper.appendChild(makeElement("p", "", body));
 
     appendMetadata(wrapper, story);
 
@@ -369,16 +323,11 @@
       );
     } else {
       wrapper.appendChild(
-        makeElement(
-          "p",
-          "small-note",
-          "Original report link not supplied."
-        )
+        makeElement("p", "small-note", "Original report link not supplied.")
       );
     }
 
     replaceContents(container, [wrapper]);
-
     injectFeaturedJsonLd(story);
   }
 
@@ -410,20 +359,18 @@
      ========================================================= */
 
   function normaliseCategory(value) {
-    const category = String(value || "")
-      .toLowerCase()
-      .trim();
+    const category = String(value || "").toLowerCase().trim();
 
     const aliases = {
-      "us": "usa",
+      us: "usa",
       "united states": "usa",
       "u.s.": "usa",
       "u.s.a.": "usa",
-      "uk": "europe",
+      uk: "europe",
       "united kingdom": "europe",
-      "britain": "europe",
+      britain: "europe",
       "great britain": "europe",
-      "tech": "technology",
+      tech: "technology",
       "world news": "world",
       "african news": "africa",
       "european news": "europe",
@@ -434,41 +381,36 @@
   }
 
   function renderCategoryArticles(articles) {
-    Object.entries(CATEGORY_TARGETS).forEach(
-      ([category, targetId]) => {
-        const container = $(targetId);
-        if (!container) return;
+    Object.entries(CATEGORY_TARGETS).forEach(([category, targetId]) => {
+      const container = $(targetId);
+      if (!container) return;
 
-        const matching = Array.isArray(articles)
-          ? articles.filter((article) => {
-              return normaliseCategory(article.category) === category;
-            })
-          : [];
-
-        if (!matching.length) {
-          replaceContents(container, [
-            placeholder(
-              `No ${CATEGORY_LABELS[category]} articles are available in this edition.`
-            )
-          ]);
-          return;
-        }
-
-        replaceContents(
-          container,
-          matching.map((article) =>
-            makeArticleCard(article, CATEGORY_LABELS[category])
+      const matching = Array.isArray(articles)
+        ? articles.filter(
+            (article) => normaliseCategory(article.category) === category
           )
-        );
+        : [];
+
+      if (!matching.length) {
+        replaceContents(container, [
+          placeholder(
+            `No ${CATEGORY_LABELS[category]} articles are available in this edition.`
+          )
+        ]);
+        return;
       }
-    );
+
+      replaceContents(
+        container,
+        matching.map((article) =>
+          makeArticleCard(article, CATEGORY_LABELS[category])
+        )
+      );
+    });
   }
 
   /* =========================================================
      LEADERS WATCH
-     Supports leadersWatch objects and arrays.
-     Uses image/photo/imageUrl from news.json when supplied.
-     Does not invent source links.
      ========================================================= */
 
   function renderLeaderPhoto(item, displayName) {
@@ -516,18 +458,12 @@
 
     image.addEventListener("error", () => {
       image.remove();
-
       frame.appendChild(
-        makeElement(
-          "div",
-          "leader-photo-placeholder",
-          "Photo unavailable"
-        )
+        makeElement("div", "leader-photo-placeholder", "Photo unavailable")
       );
     }, { once: true });
 
     frame.appendChild(image);
-
     return frame;
   }
 
@@ -536,25 +472,19 @@
     if (!grid) return;
 
     const updates = data.leadersWatch || data.leaders || {};
-
     let entries = [];
 
     if (Array.isArray(updates)) {
       entries = updates
         .filter((item) => item && typeof item === "object")
-        .map((item) => [
-          item.name || item.id || "World leader",
-          item
-        ]);
+        .map((item) => [item.name || item.id || "World leader", item]);
     } else if (updates && typeof updates === "object") {
       entries = Object.entries(updates);
     }
 
     if (!entries.length) {
       replaceContents(grid, [
-        placeholder(
-          "Leaders Watch is awaiting verified updates for this edition."
-        )
+        placeholder("Leaders Watch is awaiting verified updates for this edition.")
       ]);
       return;
     }
@@ -566,11 +496,7 @@
           : { summary: String(originalItem || "") };
 
       const displayName = item.name || name;
-
-      const card = makeElement(
-        "article",
-        "card news-card leader-card"
-      );
+      const card = makeElement("article", "card news-card leader-card");
 
       card.appendChild(renderLeaderPhoto(item, displayName));
 
@@ -579,15 +505,10 @@
       content.appendChild(
         makeElement("span", "news-category", "LEADERS WATCH")
       );
-
-      content.appendChild(
-        makeElement("h3", "leader-name", displayName)
-      );
+      content.appendChild(makeElement("h3", "leader-name", displayName));
 
       if (item.role) {
-        content.appendChild(
-          makeElement("p", "leader-role", item.role)
-        );
+        content.appendChild(makeElement("p", "leader-role", item.role));
       }
 
       if (item.title) {
@@ -598,24 +519,18 @@
 
       if (item.date) {
         const dateLine = makeElement("p", "story-date");
-        dateLine.appendChild(
-          makeTimeElement(item.date, "Update date:")
-        );
+        dateLine.appendChild(makeTimeElement(item.date, "Update date:"));
         content.appendChild(dateLine);
       }
 
       const summary = getSummary(item);
 
       if (summary) {
-        content.appendChild(
-          makeElement("p", "leader-summary", summary)
-        );
+        content.appendChild(makeElement("p", "leader-summary", summary));
       }
 
       if (item.status) {
-        content.appendChild(
-          makeElement("p", "leader-status", item.status)
-        );
+        content.appendChild(makeElement("p", "leader-status", item.status));
       }
 
       if (item.source) {
@@ -639,7 +554,7 @@
           makeElement(
             "p",
             "small-note",
-            "No source link is attached to this entry. Check for a relevant verified report before publishing a new statement."
+            "No source link is attached. Check a reliable source before publishing a new statement."
           )
         );
       } else {
@@ -653,7 +568,6 @@
       }
 
       card.appendChild(content);
-
       return card;
     });
 
@@ -662,9 +576,9 @@
 
   /* =========================================================
      BREAKING NEWS TICKER
-     Content is duplicated once so the CSS marquee can loop
-     seamlessly. The duplicate is aria-hidden so screen readers
-     announce each headline only once.
+     Duplicates the headlines for a continuous CSS loop.
+     Slows the existing CSS animation without changing its
+     visual design.
      ========================================================= */
 
   function renderBreakingTicker(items) {
@@ -689,9 +603,7 @@
         "ticker-sequence" + (hidden ? " ticker-sequence--clone" : "")
       );
 
-      if (hidden) {
-        sequence.setAttribute("aria-hidden", "true");
-      }
+      if (hidden) sequence.setAttribute("aria-hidden", "true");
 
       messages.forEach((message, index) => {
         if (index > 0) {
@@ -708,10 +620,20 @@
       return sequence;
     };
 
-    ticker.replaceChildren(
-      buildSequence(false),
-      buildSequence(true)
-    );
+    ticker.replaceChildren(buildSequence(false), buildSequence(true));
+
+    /*
+     * Make the ticker approximately 1.7 times slower when its
+     * animation is applied to .ticker-sequence in style.css.
+     */
+    ticker.querySelectorAll(".ticker-sequence").forEach((sequence) => {
+      const animation = window.getComputedStyle(sequence).animationDuration;
+      const seconds = parseFloat(animation);
+
+      if (animation.includes("s") && Number.isFinite(seconds) && seconds > 0) {
+        sequence.style.animationDuration = (seconds * 1.7) + "s";
+      }
+    });
   }
 
   /* =========================================================
@@ -747,7 +669,6 @@
     if (!quote) return;
 
     const quoteData = data.quoteOfTheDay;
-
     let quoteText = "";
     let author = "RadiantWaves Media";
 
@@ -771,9 +692,7 @@
       ? quote.parentElement.querySelector(".quote-credit")
       : null;
 
-    if (credit) {
-      credit.textContent = author;
-    }
+    if (credit) credit.textContent = author;
   }
 
   /* =========================================================
@@ -799,9 +718,7 @@
         return card;
       }
 
-      if (!item || typeof item !== "object") {
-        return card;
-      }
+      if (!item || typeof item !== "object") return card;
 
       if (item.date) {
         const dateLine = makeElement("p", "story-date");
@@ -814,10 +731,7 @@
       );
 
       const summary = getSummary(item);
-
-      if (summary) {
-        card.appendChild(makeElement("p", "", summary));
-      }
+      if (summary) card.appendChild(makeElement("p", "", summary));
 
       if (item.source) {
         card.appendChild(
@@ -885,9 +799,7 @@
 
       if (article.date) {
         if (parts.length) {
-          metadataLine.appendChild(
-            makeElement("span", "", " · ")
-          );
+          metadataLine.appendChild(makeElement("span", "", " · "));
         }
 
         metadataLine.appendChild(makeTimeElement(article.date));
@@ -913,7 +825,8 @@
 
   /* =========================================================
      SPONSORED ADVERTS
-     Supports both web links and mailto links.
+     FIX: displays image, subtitle, description, products
+     and the supplied link from news.json.
      ========================================================= */
 
   function renderAdverts(items) {
@@ -936,6 +849,40 @@
         makeElement("span", "advert-label", item.label || "Sponsored")
       );
 
+      /*
+       * Advert image: reads paths such as assets/spices.jpeg
+       * and assets/stonebreaker.jpeg from news.json.
+       */
+      if (item.image) {
+        const imageUrl = safeUrl(item.image);
+
+        if (imageUrl) {
+          const image = document.createElement("img");
+          image.className = "advert-image";
+          image.src = imageUrl;
+          image.alt = item.imageAlt || item.title || "Sponsored advert";
+          image.loading = "lazy";
+          image.decoding = "async";
+
+          image.style.display = "block";
+          image.style.width = "100%";
+          image.style.maxWidth = "100%";
+          image.style.height = "auto";
+          image.style.maxHeight = "260px";
+          image.style.objectFit = "contain";
+          image.style.margin = "12px 0";
+          image.style.borderRadius = "8px";
+
+          image.addEventListener("error", () => {
+            image.alt = "Advert image unavailable";
+            image.style.display = "none";
+            console.error("RadiantWaves advert image could not load:", item.image);
+          }, { once: true });
+
+          card.appendChild(image);
+        }
+      }
+
       card.appendChild(
         makeElement(
           "h3",
@@ -944,19 +891,42 @@
         )
       );
 
+      if (item.subtitle) {
+        card.appendChild(makeElement("h4", "advert-subtitle", item.subtitle));
+      }
+
       const description = getSummary(item);
 
       if (description) {
         card.appendChild(makeElement("p", "", description));
       }
 
-      const url = safeUrl(item.url, true);
+      if (Array.isArray(item.products) && item.products.length) {
+        const list = makeElement("ul", "advert-products");
 
-      if (url) {
+        item.products.forEach((product) => {
+          list.appendChild(makeElement("li", "", String(product)));
+        });
+
+        card.appendChild(list);
+      }
+
+      /*
+       * Accept either "link" or "url" from news.json.
+       * Ignore "#" placeholders and use the advertising email
+       * instead of sending visitors to the top of the page.
+       */
+      const suppliedLink = item.url || item.link || "";
+      const usableLink =
+        suppliedLink.trim() && suppliedLink.trim() !== "#"
+          ? safeUrl(suppliedLink, true)
+          : "";
+
+      if (usableLink) {
         card.appendChild(
           makeLink(
-            url,
-            item.linkText || "Find out more ↗",
+            usableLink,
+            item.button || item.linkText || "Find out more ↗",
             "text-link"
           )
         );
@@ -964,7 +934,7 @@
         card.appendChild(
           makeLink(
             "mailto:" + CONFIG.CONTACT_EMAIL,
-            "Contact our advertising team ↗",
+            item.button || "Contact our advertising team ↗",
             "text-link"
           )
         );
@@ -982,19 +952,13 @@
 
   function renderHero(data) {
     const hero =
-      data.hero && typeof data.hero === "object"
-        ? data.hero
-        : {};
+      data.hero && typeof data.hero === "object" ? data.hero : {};
 
-    setText(
-      "hero-title",
-      hero.title || "Gateway to Your World News"
-    );
+    setText("hero-title", hero.title || "Gateway to Your World News");
 
     setText(
       "hero-desc",
-      hero.description ||
-        "Connecting you to the stories shaping our world."
+      hero.description || "Connecting you to the stories shaping our world."
     );
 
     setText(
@@ -1006,7 +970,7 @@
     setText(
       "hero-marquee",
       hero.marquee ||
-        "World \u00B7 USA \u00B7 Canada \u00B7 Europe \u00B7 UK \u00B7 Africa \u00B7 Asia \u00B7 Australia"
+        "World · USA · Canada · Europe · UK · Africa · Asia · Australia"
     );
 
     const video = $("heroVideo");
@@ -1043,9 +1007,7 @@
 
     document.dispatchEvent(
       new CustomEvent("radiantwaves:newsloaded", {
-        detail: {
-          edition: data.edition || data.date || ""
-        }
+        detail: { edition: data.edition || data.date || "" }
       })
     );
   }
@@ -1068,11 +1030,7 @@
 
       const data = await response.json();
 
-      if (
-        !data ||
-        typeof data !== "object" ||
-        Array.isArray(data)
-      ) {
+      if (!data || typeof data !== "object" || Array.isArray(data)) {
         throw new Error("news.json must contain a JSON object.");
       }
 
@@ -1098,17 +1056,13 @@
       ].forEach((id) => {
         const container = $(id);
 
-        if (container) {
-          replaceContents(container, [placeholder(message)]);
-        }
+        if (container) replaceContents(container, [placeholder(message)]);
       });
 
       Object.values(CATEGORY_TARGETS).forEach((id) => {
         const container = $(id);
 
-        if (container) {
-          replaceContents(container, [placeholder(message)]);
-        }
+        if (container) replaceContents(container, [placeholder(message)]);
       });
 
       setText("breaking-ticker", "News feed temporarily unavailable.");
@@ -1219,9 +1173,6 @@
 
   /* =========================================================
      VIDEO POLITENESS
-     - Respects prefers-reduced-motion (no autoplay).
-     - Pauses the stream while the tab is hidden to save
-       bandwidth and battery.
      ========================================================= */
 
   function setupVideoPoliteness() {
@@ -1255,21 +1206,12 @@
 
   /* =========================================================
      ADVERT REQUEST FORM
-
-     Professional handling order:
-     1. If FORM_ACCESS_KEY is set, submit via fetch() to
-        Web3Forms (or any compatible endpoint). The visitor
-        stays on the page and sees a success/error message.
-     2. Otherwise, fall back to opening the visitor's email
-        client with a pre-filled message (previous behaviour).
      ========================================================= */
 
   function buildMailto(form, formData) {
     const name = String(formData.get("Full name") || "").trim();
     const email = String(formData.get("Email address") || "").trim();
-    const whatsapp = String(
-      formData.get("WhatsApp number") || ""
-    ).trim();
+    const whatsapp = String(formData.get("WhatsApp number") || "").trim();
     const organisation = String(
       formData.get("Business or organisation") || ""
     ).trim();
@@ -1277,7 +1219,7 @@
     const details = String(formData.get("Details") || "").trim();
 
     const subject = encodeURIComponent(
-      "RadiantWaves Media \u2014 " + (service || "Website enquiry")
+      "RadiantWaves Media — " + (service || "Website enquiry")
     );
 
     const body = encodeURIComponent(
@@ -1285,8 +1227,7 @@
       "Name: " + name + "\n" +
       "Email: " + email + "\n" +
       "WhatsApp: " + (whatsapp || "Not supplied") + "\n" +
-      "Business / Organisation: " +
-      (organisation || "Not supplied") + "\n" +
+      "Business / Organisation: " + (organisation || "Not supplied") + "\n" +
       "Service required: " + service + "\n\n" +
       "Details:\n" + details
     );
@@ -1322,40 +1263,28 @@
 
       const formData = new FormData(form);
 
-      // Fallback: no access key configured, use the visitor's
-      // email client as before.
       if (!CONFIG.FORM_ACCESS_KEY) {
         window.location.href = buildMailto(form, formData);
         return;
       }
 
-      const submitButton = form.querySelector(
-        'button[type="submit"]'
-      );
+      const submitButton = form.querySelector('button[type="submit"]');
 
-      if (submitButton) {
-        submitButton.disabled = true;
-      }
+      if (submitButton) submitButton.disabled = true;
 
-      setFormStatus(form, "Sending your request\u2026");
+      setFormStatus(form, "Sending your request…");
 
       try {
         const payload = {
           access_key: CONFIG.FORM_ACCESS_KEY,
           subject:
-            "RadiantWaves Media \u2014 " +
+            "RadiantWaves Media — " +
             (String(formData.get("Service") || "").trim() ||
               "Website enquiry"),
-          from_name: String(
-            formData.get("Full name") || ""
-          ).trim(),
+          from_name: String(formData.get("Full name") || "").trim(),
           name: String(formData.get("Full name") || "").trim(),
-          email: String(
-            formData.get("Email address") || ""
-          ).trim(),
-          whatsapp: String(
-            formData.get("WhatsApp number") || ""
-          ).trim(),
+          email: String(formData.get("Email address") || "").trim(),
+          whatsapp: String(formData.get("WhatsApp number") || "").trim(),
           organisation: String(
             formData.get("Business or organisation") || ""
           ).trim(),
@@ -1377,8 +1306,7 @@
         if (response.ok && result.success) {
           setFormStatus(
             form,
-            "Thank you \u2014 your request has been sent. " +
-            "Our advertising team will reply to your email address."
+            "Thank you — your request has been sent. Our advertising team will reply to your email address."
           );
           form.reset();
         } else {
@@ -1391,23 +1319,19 @@
 
         setFormStatus(
           form,
-          "Sending failed. Your email application will open " +
-          "instead so you can still send the request.",
+          "Sending failed. Your email application will open instead so you can still send the request.",
           true
         );
 
         window.location.href = buildMailto(form, formData);
       } finally {
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
+        if (submitButton) submitButton.disabled = false;
       }
     });
   }
 
   /* =========================================================
      MOBILE NAVIGATION
-     (Requires #nav-toggle and #nav-menu in index.html)
      ========================================================= */
 
   function setupMobileNavigation() {
@@ -1417,8 +1341,7 @@
     if (!toggle || !menu) return;
 
     toggle.addEventListener("click", () => {
-      const expanded =
-        toggle.getAttribute("aria-expanded") === "true";
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
 
       toggle.setAttribute("aria-expanded", String(!expanded));
       toggle.setAttribute(
@@ -1440,10 +1363,7 @@
     });
 
     document.addEventListener("keydown", (event) => {
-      if (
-        event.key === "Escape" &&
-        menu.classList.contains("is-open")
-      ) {
+      if (event.key === "Escape" && menu.classList.contains("is-open")) {
         menu.classList.remove("is-open");
         document.body.classList.remove("nav-open");
         toggle.setAttribute("aria-expanded", "false");

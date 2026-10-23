@@ -1,342 +1,401 @@
 {
-  "edition": "RadiantWaves Morning News & Global Update",
+  "edition": "RadiantWaves Night News & Global Update",
   "date": "Friday, 23 October 2026",
   "hero": {
-    "title": "WORLD NEWS TODAY: HORMUZ TENSIONS, NIGERIA POLITICS AND GLOBAL SECURITY",
-    "description": "Your morning briefing on the stories shaping Nigeria and the world, from public health and political accountability to international security, trade, energy and the cost of living.",
+    "title": "NIGHT WORLD NEWS: HORMUZ OIL CRISIS, STORM AUSTEN AND NIGERIA 2027",
+    "description": "Your evening briefing on international security, political accountability, public health, extreme weather, elections and the global economy.",
     "image": "",
-    "imageQuery": "international newsroom global news world map",
+    "imageQuery": "international television newsroom world map night",
     "video": "./assets/video1.mp4"
   },
-  "morningSummary": "Today's briefing covers reports of damage to oil tankers in the Strait of Hormuz, the war in Ukraine, Nigeria's Ebola response and growing political debate ahead of the 2027 election. In Nigeria, Atiku Abubakar has demanded accountability over funds reportedly approved for Ebola preparedness, while the APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. These positions require independent financial evidence. Other stories include US voting rules, Canada-US trade tensions, French political unrest, developments in Asia and concerns about inflation and energy prices. Some reports are dated 21–22 October and may develop further.",
-  "editorialNote": "This edition is dated Friday, 23 October 2026. Stories are rewritten in original language and linked to available reports or official sources. Claims are attributed to the people or organisations making them. Reports about tanker attacks, political disagreements and investigations are not presented as independently confirmed in every detail. The claim that Abdullahi Ganduje has resigned from the APC has not been sufficiently verified for publication as fact. Some reports are dated 21–22 October rather than breaking this minute. Check official announcements and reliable updates before republishing.",
+  "morningSummary": "Tonight's global briefing examines reports of damage to oil tankers in the Strait of Hormuz, severe weather in France and Britain, Typhoon Champi in East Asia, developments in Ukraine and the latest economic pressures. In Nigeria, the Ebola response has prompted debate about preparedness spending, while opposition parties continue to face questions about cooperation ahead of the 2027 election. Other coverage includes US voting rules, Canada–US trade tensions, France's economic outlook, developments in Africa and Australia's investigation into an attack involving MP Helen Haines. Figures and claims in developing stories are attributed to the sources reporting them.",
+  "editorialNote": "RadiantWaves Media rewrites reporting in original language and links readers to the source material. Claims about attacks, political disputes, casualties and investigations are attributed to the organisations or officials reporting them. Market prices and casualty figures may change. The status of investigations and proposed political arrangements should not be overstated. This edition includes reports dated 21–23 October 2026; not every story is breaking at the moment of publication. Check official notices and the latest reliable reporting before republishing.",
   "bigQuestion": {
     "title": "Today's Big Question",
-    "question": "When political leaders make promises about security, the economy or public services, what evidence should citizens demand before deciding whether those promises are being delivered?",
-    "description": "Share your views respectfully. Evidence and constructive debate matter more than rumours or personal attacks. Consider published budgets, audited spending, measurable results, delivery timelines and independent assessments."
+    "question": "As elections approach and living costs remain a concern, what should citizens demand first from political leaders: a clear plan, transparent use of public funds, or measurable improvements in everyday life?",
+    "description": "Share your views respectfully. Evidence, public accountability and constructive debate matter more than rumours or personal attacks."
   },
   "quoteOfTheDay": {
-    "text": "In a world of competing claims, responsible citizens look beyond the loudest voices, verify the facts and judge decisions by their real consequences.",
+    "text": "The value of information is not in how quickly it spreads, but in how carefully it is checked before people are asked to believe it.",
     "author": "RadiantWaves Media",
     "type": "Original editorial quote"
   },
   "breaking": [
-    "MIDDLE EAST: Iranian state media says seven oil tankers were damaged or caught fire in the Strait of Hormuz. Details and responsibility require careful attribution and verification.",
-    "UKRAINE: Reports describe a deadly Russian missile attack on Kyiv. Casualty figures and military claims should be checked against updated reporting.",
-    "NIGERIA HEALTH: One imported Ebola Bundibugyo virus disease case was confirmed in the FCT on 20 October. WHO reported that 44 contacts had been identified for monitoring.",
-    "NIGERIA POLITICS: Atiku Abubakar has demanded public accounting for the reported ₦10 billion Ebola preparedness allocation. The APC Presidential Campaign Council says the money remains untouched; independently verifiable spending records are needed.",
-    "2027 ELECTION WATCH: Opposition parties remain divided over whether to support a single presidential candidate. No final joint opposition arrangement should be assumed without confirmation.",
-    "GANDUJE CLAIM: The claim that Abdullahi Ganduje has resigned from the APC remains unverified in the checks for this edition.",
-    "UNITED STATES: A Supreme Court decision reportedly allows New Hampshire to restrict student identification cards as voting identification. This concerns state voting rules, not a nationwide ban on student voting.",
-    "CANADA: Trade tensions with the United States continue as Canada considers ways to diversify economic partnerships and support affected industries.",
-    "FRANCE: Political unrest and plans for further security measures remain under scrutiny. Protesters should not be collectively blamed for acts committed by individuals.",
-    "ASIA: Reports describe continued tension on the Korean Peninsula and economic developments in China and Japan. Specific claims should be checked against the linked reporting.",
-    "AUSTRALIA: Reports say independent MP Helen Haines was seriously injured after being struck by a vehicle in an incident police described as deliberate. The investigation must establish the circumstances and motive.",
-    "GLOBAL ECONOMY: Energy prices, shipping risks, trade disputes and borrowing costs remain important factors for businesses and household budgets."
+    "MIDDLE EAST: Iranian state media reported damage to oil tankers in the Strait of Hormuz, renewing concerns about shipping safety and energy supplies.",
+    "ENERGY: Oil prices traded at elevated levels amid concerns about possible escalation involving Iran and disruption to Gulf energy infrastructure. Check the latest market quote before publishing a precise closing price.",
+    "UNITED STATES: Reuters reports that a federal judge ordered Donald Trump to sit for a deposition by 11 December in his defamation lawsuit against the BBC. This is a procedural development, not a final ruling.",
+    "ASIA: Typhoon Champi disrupted flights and public services in Taiwan, with reported casualties and injuries. Conditions and figures may change.",
+    "FRANCE AND UK: Storm Austen brought damaging winds, heavy rain, power cuts and transport disruption. Travellers should check current weather and transport alerts.",
+    "NIGERIA: WHO confirmed one imported Ebola Bundibugyo virus disease case in the FCT on 20 October. Forty-four contacts had been identified for monitoring.",
+    "NIGERIA POLITICS: The APC began campaign preparations for 2027 after President Bola Tinubu inaugurated its Presidential Campaign Council on 14 October.",
+    "NIGERIA 2027: Reports describe continuing disagreements among opposition groups considering a common presidential candidate. No final opposition ticket should be assumed without confirmation.",
+    "NIGERIA PUBLIC FUNDS: Atiku Abubakar has questioned the reported ₦10 billion Ebola preparedness allocation. The APC Presidential Campaign Council says the funds remain untouched; independently verifiable records are needed to assess the competing claims.",
+    "UNITED STATES: The Supreme Court cleared the way for New Hampshire to restrict student identification cards for voting in the midterm elections. The decision concerns state rules, not a nationwide ban on student voting.",
+    "CANADA–US: Tariff disagreements continue, with political leaders exchanging statements about trade negotiations and interference allegations. These allegations do not establish wrongdoing by themselves.",
+    "FRANCE: Authorities are preparing for possible further protests amid concerns about living costs and public order.",
+    "UNITED KINGDOM: September retail sales fell by 0.4%, while consumer confidence weakened. The monthly decline came despite an increase in sales volumes over the three months to September.",
+    "ASIA: Reports describe an earthquake in Tibet, renewed Korean Peninsula tensions and economic developments in China and Japan. Figures and official statements require ongoing verification.",
+    "AUSTRALIA: Police are investigating an incident in which independent MP Helen Haines was reportedly struck by a vehicle. Avoid speculation about motive before the investigation establishes the facts.",
+    "AFRICA: A reported drone strike in the disputed Abyei region caused mass casualties, according to news reports. Responsibility and casualty figures should remain attributed to their sources.",
+    "ETHIOPIA: Reports describe renewed tension involving federal-backed regional authorities and Tigrayan forces. Claims about specific attacks and casualties require verification.",
+    "EBOLA WATCH: ECDC reports cases in Nigeria and Kenya and a wider outbreak in the Democratic Republic of the Congo. ECDC assesses the risk to the general EU/EEA population as very low while advising continued preparedness."
   ],
   "breakingHistory": [
-    "23 October 2026 — Strait of Hormuz: Iranian state media reported that seven oil tankers were damaged or caught fire. Source: Associated Press — https://apnews.com/article/dde5b98a8bf961224514994b02babce9",
-    "23 October 2026 — Nigeria politics: Atiku Abubakar called for details of spending from the reported ₦10 billion Ebola preparedness allocation. Source: TheCable — https://www.thecable.ng/atiku-asks-tinubu-to-account-for-n10bn-ebola-preparedness-fund/",
-    "22 October 2026 — Nigeria politics: The APC Presidential Campaign Council disputed Atiku's criticism and said the Ebola preparedness funds remained untouched. Source: Premium Times — https://www.premiumtimesng.com/news/top-news/919429-ebola-apc-campaign-council-accuses-atiku-of-politicising-disease-outbreak-says-n10bn-fund-intact.html",
-    "20 October 2026 — Nigeria public health: WHO reported one imported Ebola Bundibugyo virus disease case in the FCT and outlined the response. Source: WHO Africa — https://afro.who.int/countries/nigeria/news/nigeria-confirms-imported-case-ebola-bundibugyo-virus-disease",
-    "19 October 2026 — Nigeria 2027 politics: Channels Television reported continuing disagreement over a proposed single opposition presidential candidate. Source: Channels Television — https://www.channelstv.com/2026/10/19/five-things-to-know-today-11/",
-    "22 October 2026 — Ukraine and international security: Reuters examined how US midterm politics and energy costs are affecting the diplomatic debate around Ukraine. Source: Reuters — https://www.reuters.com/world/us/midterms-reach-kyiv-2026-10-22/",
-    "22 October 2026 — Canada and trade: Reuters reported on Canada's efforts to diversify its trade relationships amid tensions with the United States. Source: Reuters — https://www.reuters.com/world/americas/canadas-carney-visits-turkey-push-ease-us-trade-dependence-2026-10-22/"
+    "23 October 2026 — Hormuz: Iranian state media reported damage to several oil tankers. Source: Associated Press — https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
+    "22 October 2026 — United States: A federal judge ordered Donald Trump to sit for a deposition in his BBC defamation case by 11 December. Source: Reuters — https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/",
+    "23 October 2026 — Taiwan: Typhoon Champi disrupted flights and public services. Source: Associated Press — https://apnews.com/article/8cf1c88611fc6ede98ebac11201f91cb",
+    "23 October 2026 — France and Britain: Storm Austen caused widespread power outages and transport disruption. Source: Reuters — https://www.reuters.com/business/energy/storm-causes-power-outages-traffic-disruptions-france-britain-2026-10-23/",
+    "14 October 2026 — Nigeria: President Bola Tinubu inaugurated the APC Presidential Campaign Council ahead of the 2027 election. Source: State House — https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/",
+    "19 October 2026 — Nigeria: Reporting described continuing disagreement among opposition camps over a possible common presidential candidate. Source: The Guardian Nigeria — https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+    "23 October 2026 — Nigeria and East Africa: ECDC published an assessment of imported Ebola cases in Nigeria and Kenya. Source: ECDC — https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23",
+    "23 October 2026 — United Kingdom: Retail sales fell by 0.4% in September, according to official figures. Source: Reuters — https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/",
+    "23 October 2026 — Canada–US: Reuters reported continuing trade discussions and tariff tensions. Source: Reuters — https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/",
+    "21 October 2026 — Sudan–South Sudan border: A reported strike in Abyei caused mass casualties; responsibility remains attributed to reporting sources. Source: Al Jazeera — https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153"
   ],
   "featured": {
     "category": "Africa",
-    "title": "Nigeria's Ebola Response Raises Questions About Preparedness and Public Accountability",
-    "summary": "Nigeria confirmed an imported Ebola Bundibugyo virus disease case in the FCT on 20 October. The response has prompted public health measures as well as a political dispute about the reported ₦10 billion allocation for preparedness.",
-    "content": "WHO reported that one case had been confirmed and 44 contacts identified for monitoring. Separately, former Vice-President Atiku Abubakar has demanded disclosure of spending from the reported Ebola preparedness allocation. The APC Presidential Campaign Council says the money remains untouched and accused Atiku of politicising the outbreak. Neither political statement substitutes for independently verifiable financial records. Citizens can reasonably ask for the amount released, payment dates, contracts, recipients, goods or services delivered and an audit. Public health advice should continue to come from recognised health authorities.",
-    "date": "20–22 October 2026",
-    "source": "WHO Africa, TheCable and Premium Times",
-    "url": "https://www.thecable.ng/atiku-asks-tinubu-to-account-for-n10bn-ebola-preparedness-fund/",
+    "title": "Nigeria's Ebola Response: Public Health Action and Questions About Preparedness Spending",
+    "summary": "Nigeria confirmed one imported Ebola Bundibugyo virus disease case on 20 October. WHO reported that 44 contacts had been identified for monitoring. The public health response has also prompted a political dispute about the reported ₦10 billion preparedness allocation.",
+    "content": "Health authorities are investigating the patient's travel and exposure history and monitoring identified contacts. Separately, Atiku Abubakar has called for details of spending from the reported Ebola preparedness allocation. The APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. Neither political statement is a substitute for financial records. The public can reasonably ask for the amount released, expenditure records, contracts, deliveries and independent audit findings. For health advice, follow the Nigeria Centre for Disease Control and Prevention, the Federal Ministry of Health and WHO.",
+    "date": "20–23 October 2026",
+    "source": "WHO Africa and ECDC",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23",
     "image": "",
-    "imageQuery": "public health laboratory workers protective equipment infectious disease response"
+    "imageQuery": "public health workers in protective equipment infectious disease laboratory"
   },
   "topStories": [
     {
       "category": "World",
-      "title": "Iranian Media Reports Seven Tankers Damaged in Strait of Hormuz",
-      "summary": "Iranian state media reported that seven oil tankers were damaged or caught fire overnight, some reportedly after attacks and others after striking naval mines. The incident has intensified concerns about maritime security and energy supplies. The details in the Iranian account should not be treated as independently verified in every respect.",
-      "date": "22 October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/dde5b98a8bf961224514994b02babce9"
-    },
-    {
-      "category": "World",
-      "title": "Kyiv Attack Renews Attention on Ukraine's Civilian Protection",
-      "summary": "Reports describe a deadly Russian missile attack on Kyiv. Casualty numbers, damage assessments and claims about intercepted drones can change as authorities provide updates. The wider war continues to complicate diplomatic efforts and regional security.",
+      "title": "Hormuz Shipping Concerns Put Global Energy Supplies Under Pressure",
+      "summary": "Iranian state media reported damage to oil tankers in the Strait of Hormuz. The reports have raised concerns about shipping safety and possible disruption to energy supplies. Responsibility for individual incidents and the precise extent of damage should be established through further reporting.",
       "date": "23 October 2026",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/5eef1c7dc4cc401dd8de85f718574877"
-    },
-    {
-      "category": "Africa",
-      "title": "Nigeria's Ebola Response: Contact Tracing and Preparedness Under Scrutiny",
-      "summary": "WHO reported one imported Ebola Bundibugyo virus disease case in the FCT on 20 October and said 44 contacts had been identified for monitoring. The case has also prompted questions about the country's preparedness and the reported emergency allocation.",
-      "date": "20–22 October 2026",
-      "source": "WHO Africa and TheCable",
-      "url": "https://afro.who.int/countries/nigeria/news/nigeria-confirms-imported-case-ebola-bundibugyo-virus-disease"
-    },
-    {
-      "category": "Africa",
-      "title": "Atiku Demands Records on Ebola Preparedness Funds; APC Disputes His Criticism",
-      "summary": "Atiku Abubakar has asked the federal government to publish details of the reported ₦10 billion allocation for Ebola preparedness. The APC Presidential Campaign Council says the funds remain untouched and accuses him of politicising the outbreak. The dispute highlights the need for transparent records, clear disbursement information and independent auditing.",
-      "date": "22 October 2026",
-      "source": "TheCable and Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/919429-ebola-apc-campaign-council-accuses-atiku-of-politicising-disease-outbreak-says-n10bn-fund-intact.html"
-    },
-    {
-      "category": "Africa",
-      "title": "Nigeria 2027: Opposition Unity Remains Unresolved",
-      "summary": "Recent reporting describes disagreement among opposition groups about whether to unite behind one presidential candidate. Candidate selection, party interests and a shared policy programme remain important questions. No final agreement should be reported without a verifiable announcement.",
-      "date": "19 October 2026",
-      "source": "Channels Television",
-      "url": "https://www.channelstv.com/2026/10/19/five-things-to-know-today-11/"
+      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28"
     },
     {
       "category": "USA",
-      "title": "New Hampshire Voting Identification Rules Face National Attention",
-      "summary": "The Associated Press reports that the US Supreme Court cleared the way for New Hampshire to restrict the use of student identification cards for voting. The issue concerns the state's voter-identification rules and should not be described as a nationwide ban on student voting.",
-      "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://www.wcax.com/news/ap/"
-    },
-    {
-      "category": "Canada",
-      "title": "Canada Weighs Trade Diversification Amid US Tariff Tensions",
-      "summary": "Canada continues to face questions about the impact of US tariffs on manufacturing, jobs and cross-border trade. The eventual effects depend on the measures implemented, negotiations and how businesses adjust. Proposed support should not be confused with confirmed outcomes.",
-      "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/a9b923802d5e2d5a37f0e213db91ef56"
-    },
-    {
-      "category": "Europe",
-      "title": "France Faces Continued Political Tension After Protests",
-      "summary": "Reports describe restrictions on some student demonstrations following unrest and looting in several cities. The circumstances differ between locations, and the actions of individuals should not be attributed to all protesters. Readers should check local authority guidance for any affected area.",
-      "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://www.wcax.com/news/ap/"
-    },
-    {
-      "category": "Europe",
-      "title": "Ukraine War and European Security Remain Central Diplomatic Issues",
-      "summary": "Diplomacy around the war in Ukraine continues amid military pressure, energy concerns and political calculations in the United States and Europe. Discussions or possible meetings do not establish that a peace agreement has been reached.",
+      "title": "Trump Ordered to Give Deposition in BBC Defamation Case",
+      "summary": "Reuters reports that a federal judge ordered Donald Trump to sit for a deposition by 11 December in his $10 billion defamation lawsuit against the BBC. The order is a step in the legal process and does not determine the final outcome of the case.",
       "date": "22 October 2026",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/midterms-reach-kyiv-2026-10-22/"
-    },
-    {
-      "category": "United Kingdom",
-      "title": "UK Policy Debate Continues on Housing, Migration and Growth",
-      "summary": "Housing, migration rules and economic growth remain prominent issues in British political debate. Proposed policies should be distinguished from measures formally enacted or brought into force. This item is a policy overview rather than a claim of a new law announced this morning.",
-      "date": "23 October 2026",
-      "source": "BBC News",
-      "url": "https://www.bbc.com/news/politics"
+      "url": "https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/"
     },
     {
       "category": "Asia",
-      "title": "Korean Peninsula Tensions Require Careful Monitoring",
-      "summary": "Regional reporting describes renewed tension between North and South Korea, including threats related to border measures and propaganda broadcasts. Such developments raise security concerns but do not establish that a new war has begun.",
+      "title": "Typhoon Champi Disrupts Flights and Public Services in Taiwan",
+      "summary": "The Associated Press reported that Taiwan cancelled hundreds of flights, closed schools and offices, and evacuated people from vulnerable areas. The report recorded one death and more than 170 injuries in Taiwan, with further disruption reported in Japan and the Philippines. Emergency information may change as authorities assess the impact.",
+      "date": "23 October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/8cf1c88611fc6ede98ebac11201f91cb"
+    },
+    {
+      "category": "Europe",
+      "title": "Storm Austen Causes Power Cuts and Travel Disruption in France and Britain",
+      "summary": "Reuters reported that nearly 300,000 French homes lost electricity and more than 12,000 British homes were affected as strong winds and heavy rain disrupted transport. Conditions vary by location. Travellers should check the latest local weather warnings, rail services and airport updates.",
+      "date": "23 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/storm-causes-power-outages-traffic-disruptions-france-britain-2026-10-23/"
+    },
+    {
+      "category": "Africa",
+      "title": "Nigeria 2027: APC Campaign Preparations and Opposition Disagreements",
+      "summary": "The State House announced on 14 October that President Bola Tinubu inaugurated the APC Presidential Campaign Council. Separately, reports describe disagreements among opposition groups considering a common candidate. These are distinct developments; no final opposition agreement should be assumed without confirmation.",
+      "date": "14–19 October 2026",
+      "source": "State House and The Guardian Nigeria",
+      "url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
+    },
+    {
+      "category": "Africa",
+      "title": "Ebola in Nigeria: Health Authorities Continue Contact Monitoring",
+      "summary": "ECDC's 23 October update records one confirmed Bundibugyo Ebola virus disease case in Nigeria and 44 contacts under monitoring. Kenya had reported nine cases, including one death, by 22 October. The DRC continues to report a much larger outbreak. ECDC assesses the risk to the general EU/EEA population as very low.",
+      "date": "23 October 2026",
+      "source": "European Centre for Disease Prevention and Control",
+      "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23"
+    },
+    {
+      "category": "USA",
+      "title": "Supreme Court Allows New Hampshire to Restrict Student IDs for Voting",
+      "summary": "The Associated Press reports that the US Supreme Court allowed New Hampshire to enforce a restriction on student identification cards for voting in the midterms. This is a state-specific voting rule and not a nationwide prohibition on students voting.",
+      "date": "23 October 2026",
+      "source": "Associated Press via WBUR",
+      "url": "https://www.wbur.org/news/2026/10/23/supreme-court-new-hampshire-ban-student-ids-voting"
+    },
+    {
+      "category": "USA",
+      "title": "Wall Street Technology Shares Fall as AI Spending Concerns Grow",
+      "summary": "Associated Press reported that the S&P 500 fell 1.2% and the Nasdaq Composite dropped 2.6% on Thursday, 22 October. Investors were concerned about AI-related valuations and data-centre spending. These are Thursday's closing figures, not Friday's final market results.",
+      "date": "22 October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/1970e79d013cbddcae89c53b4b98f384"
+    },
+    {
+      "category": "Canada",
+      "title": "Canada–US Dispute Continues Over Tariffs and Midterm Allegations",
+      "summary": "Associated Press reports that Canadian Prime Minister Mark Carney rejected US allegations that Canadian politicians were interfering in the US midterm elections. The allegations and Carney's response should be attributed to their sources. The dispute alone does not establish unlawful interference.",
+      "date": "October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/9f18ee52d4c3a72fe8b2efaac579416f"
+    },
+    {
+      "category": "Canada",
+      "title": "Trump Says Canada Is Working Towards a Trade Deal",
+      "summary": "Reuters reports that Donald Trump said Canada was working hard to reach a trade deal with the United States. Tariff tensions remain, and negotiations do not amount to an agreement until the governments confirm the terms and status.",
+      "date": "23 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/"
+    },
+    {
+      "category": "Europe",
+      "title": "France Prepares for Further Protests Amid Cost-of-Living Concerns",
+      "summary": "The Associated Press reports that authorities planned a major police and gendarmerie deployment for Saturday amid fears of renewed violence during protests. The scale of deployment is a precaution and does not mean all demonstrations will become violent. Follow local authority and transport updates.",
+      "date": "23 October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/0208e62321f811e3003460f71b7fcc89"
+    },
+    {
+      "category": "Europe",
+      "title": "French Business Activity Contracts in Preliminary October Survey",
+      "summary": "A preliminary survey reported a contraction in French business activity in October after growth in September. Survey readings are early indicators of economic conditions, not final official GDP figures. The results add to debate about public finances, confidence and economic momentum.",
+      "date": "23 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/default/francepmi-contraction-inattendue-de-lactivit-conomique-en-octobre-les-pressions-2026-10-23/"
+    },
+    {
+      "category": "United Kingdom",
+      "title": "UK Retail Sales Fall 0.4% in September",
+      "summary": "Official figures reported by Reuters show UK retail sales fell 0.4% in September compared with August. Sales volumes were nevertheless 0.7% higher over the three months to September. Consumer confidence weakened sharply in October, while households continue to face pressure from fuel and energy costs.",
+      "date": "23 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/"
+    },
+    {
+      "category": "United Kingdom",
+      "title": "Government Announces Measures Intended to Reduce Business Costs",
+      "summary": "Reuters reports that the UK government announced measures intended to save businesses nearly £800 million annually through changes to administrative burdens and tariff measures. The figure is a projected saving and should not be described as money already saved by every business.",
+      "date": "23 October 2026",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/uk/uk-government-promises-save-businesses-800-million-paperwork-tariffs-2026-10-23/"
+    },
+    {
+      "category": "Asia",
+      "title": "Earthquake in Tibet: Rescue and Damage Assessments Continue",
+      "summary": "Channel NewsAsia reporting described a magnitude 7.0 earthquake in Tibet that killed 16 people and caused more than 300 houses to collapse. Casualty and damage figures may change as rescue teams and local authorities provide further information.",
       "date": "October 2026",
       "source": "Channel NewsAsia",
       "url": "https://www.channelnewsasia.com/east-asia"
     },
     {
       "category": "Asia",
-      "title": "Japan's Mission to Phobos Advances Space-Science Ambitions",
-      "summary": "Japan's planned uncrewed mission to investigate Phobos, one of Mars's moons, is part of a wider effort to understand the formation and evolution of the Martian system. A planned sample return must not be described as completed before the spacecraft achieves that milestone.",
+      "title": "South Korea Proposes Talks With North Korea",
+      "summary": "Regional reporting says South Korea has proposed talks with North Korea. A proposal does not establish that negotiations have started or that an agreement has been reached. Further statements from both governments will determine whether diplomatic contact progresses.",
       "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://www.wcax.com/news/ap/"
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
     },
     {
       "category": "Asia",
-      "title": "China's Growth Supported by Exports, While Domestic Demand Remains a Concern",
-      "summary": "Recent economic reporting puts China's third-quarter growth at 4.5% year on year, with exports helping support activity. The headline figure does not mean all households, regions or businesses are experiencing equal growth.",
-      "date": "19 October 2026",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/live/2026/oct/19/exports-lift-china-economic-growth-french-protests-pressure-euro-bonds-latest-business-live-updates"
+      "title": "Japan Watches Inflation While China Prepares for Party Meeting",
+      "summary": "Regional reports highlight Japanese inflation remaining above the Bank of Japan's target and attention on China's upcoming Communist Party meeting, scheduled to begin on 26 October. Future policy decisions should not be presented as confirmed before official announcements.",
+      "date": "October 2026",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
     },
     {
       "category": "Australia",
-      "title": "Australian MP Helen Haines Seriously Injured in Vehicle Incident",
-      "summary": "Reports say independent MP Helen Haines was struck by a vehicle in an incident police described as deliberate. Her injuries and the legal case have been reported, but the full circumstances and motive must be established through the investigation and court process.",
-      "date": "21 October 2026",
-      "source": "Just Security, summarising reporting",
-      "url": "https://www.justsecurity.org/161515/early-edition-october-21-2026/"
+      "title": "Police Investigate Vehicle Incident Involving MP Helen Haines",
+      "summary": "Reports say independent Australian MP Helen Haines was struck by a vehicle outside her office and that a man was arrested. Police are investigating the circumstances. No motive should be attributed without evidence from investigators or court proceedings.",
+      "date": "October 2026",
+      "source": "South China Morning Post",
+      "url": "https://www.scmp.com/news/asia/australasia/article/3371376/australian-lawmaker-helen-haines-critical-condition-after-vehicle-attack"
     },
     {
       "category": "Africa",
-      "title": "Regional Ebola Surveillance Continues",
-      "summary": "Health authorities and international agencies continue monitoring Ebola developments in affected parts of Africa, including the Democratic Republic of the Congo. Reported totals depend on the date, geographic coverage and surveillance data used. Nigeria's confirmed imported case should be distinguished from separate outbreaks elsewhere.",
+      "title": "Abyei Strike: Reports of at Least 153 Deaths",
+      "summary": "Al Jazeera reports that South Sudanese authorities attributed a drone strike in the disputed Abyei area to Sudan's army, with at least 153 people reported killed. Responsibility and the exact toll should remain attributed to the sources until independently established.",
       "date": "21 October 2026",
-      "source": "European Centre for Disease Prevention and Control",
-      "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-21"
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153"
+    },
+    {
+      "category": "Africa",
+      "title": "Ethiopia's Tigray Region Faces Renewed Tensions",
+      "summary": "The Associated Press reports renewed tensions involving a federal-backed regional administration and Tigrayan forces following changes in control in Mekelle earlier in the month. Specific claims about attacks, responsibility and casualties require verification from multiple reliable sources.",
+      "date": "October 2026",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/64ef30aae97ed3bea93481875f8de45c"
     }
   ],
   "articles": [
     {
       "category": "world",
-      "title": "Global Security: Shipping, Conflict and Diplomacy",
-      "content": "Reports of damage to oil tankers in the Strait of Hormuz have renewed concern about shipping safety and energy supplies. The war in Ukraine remains a major security and diplomatic challenge. In both cases, the public should distinguish claims made by governments or military authorities from facts independently confirmed by journalists or international organisations.",
+      "title": "Global Security: Shipping Risks, Storms and Conflict",
+      "content": "The Strait of Hormuz remains a focus of concern after reports of tanker damage. At the same time, severe weather has disrupted transport and electricity supplies in parts of France and Britain, while the war in Ukraine continues. Each story carries different risks: shipping security affects energy markets, storms affect daily life and infrastructure, and conflict reporting requires careful verification of military claims and casualties.",
       "image": "",
-      "imageQuery": "international maritime security oil tanker ships sea"
+      "imageQuery": "world map maritime security global news newsroom"
     },
     {
       "category": "usa",
-      "title": "United States: Voting Rules, Midterm Politics and Household Costs",
-      "content": "Voting identification rules in New Hampshire have drawn attention after a Supreme Court decision reported by the Associated Press. This is a state-specific issue, not a nationwide ban on student voting. Immigration, living costs and economic policy remain prominent themes in the run-up to the November midterm elections. Claims about policy outcomes should be supported by legislation, official data or reliable reporting.",
+      "title": "United States: Legal Developments, Voting Rules and Markets",
+      "content": "A federal judge ordered Donald Trump to sit for a deposition in his defamation case against the BBC, according to Reuters. Separately, the Supreme Court allowed New Hampshire to restrict student ID use for voting. On Wall Street, technology shares fell on Thursday amid concerns about AI valuations and data-centre spending. These are separate developments and should not be conflated with a nationwide change in voting rights or a final legal ruling.",
       "image": "",
-      "imageQuery": "United States Capitol building Washington DC"
+      "imageQuery": "United States Capitol and Wall Street financial district"
     },
     {
       "category": "europe",
-      "title": "Europe: Protests, Ukraine and Public Security",
-      "content": "France continues to face political tension following protests and unrest in several cities. Reports describe restrictions on some demonstrations, but the actions of individuals should not be generalised to all protesters. European security remains closely tied to developments in Ukraine, diplomatic relations with Russia and the wider energy outlook.",
+      "title": "Europe: Storm Damage, Protests and Economic Uncertainty",
+      "content": "Storm Austen caused power outages and transport disruption in France and Britain. France is also preparing for possible further protests amid concerns about the cost of living, while preliminary survey data point to weaker business activity in October. Weather warnings, protest restrictions and economic indicators should be checked against the latest local or official updates.",
       "image": "",
-      "imageQuery": "European city street protest police public square"
+      "imageQuery": "France storm damaged roads European city weather"
     },
     {
       "category": "africa",
-      "title": "Nigeria: Ebola Preparedness and Political Accountability",
-      "content": "Nigeria's confirmed imported Ebola Bundibugyo virus disease case requires sustained public health vigilance. WHO reported that 44 contacts had been identified for monitoring. The case has also prompted a political dispute about a reported ₦10 billion preparedness allocation. Atiku Abubakar has called for details of spending, while the APC Presidential Campaign Council says the funds remain untouched. Transparent disbursement records and independent auditing would help the public assess the competing claims.",
+      "title": "Africa: Ebola Monitoring, Conflict and Public Accountability",
+      "content": "Nigeria's confirmed imported Ebola Bundibugyo virus disease case has prompted contact monitoring, while ECDC reports additional cases in Kenya and a wider outbreak in the DRC. In Nigeria, the response has also triggered debate about the reported preparedness allocation. Separately, reports of a deadly strike in Abyei and renewed tension in Ethiopia underline the need to protect civilians and distinguish attributed claims from independently confirmed facts.",
       "image": "",
-      "imageQuery": "public health team medical laboratory Nigeria"
+      "imageQuery": "African public health response humanitarian aid workers"
     },
     {
       "category": "asia",
-      "title": "Asia: Security Tensions, Economic Growth and Scientific Research",
-      "content": "Regional reporting covers tension on the Korean Peninsula, China's economic growth and Japan's space-science ambitions. These are distinct developments and should not be combined into a single claim about regional instability. Specific statements, growth figures and mission milestones should be checked against dated reports and official agencies.",
+      "title": "Asia-Pacific: Typhoon Disruption and Regional Security",
+      "content": "Typhoon Champi has disrupted services in Taiwan, while regional reporting describes an earthquake in Tibet and continuing tension on the Korean Peninsula. Japan's inflation outlook and China's upcoming political meeting are also drawing attention. Casualty figures, official warnings and future policy decisions may change as more information becomes available.",
       "image": "",
-      "imageQuery": "Asia international trade port modern city skyline"
+      "imageQuery": "Taiwan typhoon coastal city storm weather"
     },
     {
       "category": "business",
-      "title": "Energy and Trade: Potential Effects on Household Budgets",
-      "content": "Maritime security risks around the Strait of Hormuz can influence expectations for oil supply, shipping insurance and energy prices. Tariff disputes can also affect manufacturing costs and cross-border commerce. Actual effects on consumers depend on the duration of disruptions, alternative supply routes, exchange rates, taxes and government policy. Market prices should be checked at publication time.",
+      "title": "Global Economy: Oil, Retail Sales and Trade Disputes",
+      "content": "Oil-market concerns are linked to fears of disruption in the Gulf, but market prices fluctuate throughout the trading day. UK retail sales fell 0.4% in September, although three-month sales volumes rose. Canada–US tariff tensions and uncertainty over trade negotiations remain important for manufacturers and consumers. The actual effects depend on the duration of disruptions, currency movements, taxes and policy decisions.",
       "image": "",
-      "imageQuery": "oil tanker refinery global shipping energy industry"
+      "imageQuery": "oil refinery global trade shipping containers financial markets"
     },
     {
       "category": "technology",
-      "title": "Science and Public Information: Verify the Milestone Before Reporting It",
-      "content": "Japan's planned mission to investigate Phobos illustrates the importance of distinguishing a mission objective from a completed achievement. The same principle applies to political announcements, public spending and digital claims: identify the original source, confirm the date, and verify whether the promised action has actually occurred.",
+      "title": "AI Investment Under Scrutiny as Investors Reassess Costs",
+      "content": "Thursday's fall in US technology shares was linked in reporting to concerns about AI valuations and data-centre spending. Artificial intelligence remains an area of investment, but investors are examining whether expected revenue and productivity gains justify the cost of infrastructure. Market movements are not, on their own, proof that an entire technology sector is succeeding or failing.",
       "image": "",
-      "imageQuery": "spacecraft Mars moon Phobos scientific exploration"
+      "imageQuery": "AI data centre server racks technology infrastructure"
     }
   ],
   "leadersWatch": {
     "Atiku Abubakar": {
       "name": "Atiku Abubakar",
-      "role": "Former Vice-President of Nigeria and ADC presidential candidate",
-      "title": "ATIKU WATCH: QUESTIONS OVER EBOLA PREPAREDNESS FUNDS",
-      "summary": "Atiku Abubakar has demanded details of spending from the reported ₦10 billion Ebola preparedness allocation, questioning the government's readiness and transparency. The APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. The key public-interest issue is whether disbursement records, contracts, deliveries and audit information can clarify the competing claims.",
-      "date": "22 October 2026",
-      "status": "Political dispute; competing claims",
+      "role": "Former Vice-President of Nigeria",
+      "title": "ATIKU WATCH: OPPOSITION UNITY AND PUBLIC ACCOUNTABILITY",
+      "summary": "Recent reporting describes disagreement among opposition groups considering a common presidential candidate ahead of 2027. Atiku has also questioned the reported ₦10 billion Ebola preparedness allocation. The APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. The political disagreement and the financial claim should be assessed separately, using verifiable records and confirmed announcements.",
+      "date": "19–22 October 2026",
+      "status": "Developing political issues",
       "image": "assets/leaders/atiku.jpg",
-      "url": "https://www.thecable.ng/atiku-asks-tinubu-to-account-for-n10bn-ebola-preparedness-fund/"
+      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
     },
     "Peter Obi": {
       "name": "Peter Obi",
-      "role": "Nigerian politician and NDC presidential candidate",
-      "title": "OBI WATCH: OPPOSITION COORDINATION AND 2027",
-      "summary": "Opposition parties continue to debate whether to support a single presidential candidate ahead of the 2027 election. Recent reporting describes disagreements among political camps. This update does not suggest that a final agreement has been reached or that the discussions favour any one politician.",
+      "role": "Nigerian politician",
+      "title": "OBI WATCH: 2027 OPPOSITION COORDINATION",
+      "summary": "Reports describe continuing disagreements among opposition camps about whether to support a common presidential candidate. The debate involves party interests, candidate selection and the terms of any potential alliance. No final agreement or outcome favouring one individual should be inferred without a verifiable announcement.",
       "date": "19 October 2026",
       "status": "Developing political story",
       "image": "assets/leaders/obi.jpg",
-      "url": "https://www.channelstv.com/2026/10/19/five-things-to-know-today-11/"
+      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
     },
     "Bola Ahmed Tinubu": {
       "name": "Bola Ahmed Tinubu",
       "role": "President of Nigeria",
-      "title": "TINUBU WATCH: PUBLIC HEALTH AND ACCOUNTABILITY",
-      "summary": "The reported Ebola preparedness allocation has become a subject of public debate following the confirmed case in the FCT. The administration's response can be assessed through public health results, transparent spending records and timely communication. Political criticism and government rebuttals should be assessed against verifiable evidence.",
-      "date": "22 October 2026",
-      "status": "Public accountability issue",
-      "image": "",
-      "url": "https://statehouse.gov.ng/"
+      "title": "TINUBU WATCH: APC CAMPAIGN PREPARATIONS",
+      "summary": "The State House announced on 14 October that Tinubu inaugurated the APC Presidential Campaign Council ahead of the 2027 general election. The administration's policy record, campaign commitments and public spending remain subjects for scrutiny as the election approaches.",
+      "date": "14 October 2026",
+      "status": "Official announcement",
+      "image": "assets/leaders/tinubu.jpg",
+      "url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
     },
     "Emmanuel Macron": {
       "name": "Emmanuel Macron",
       "role": "President of France",
-      "title": "FRANCE WATCH: PROTESTS AND POLITICAL PRESSURE",
-      "summary": "France remains under scrutiny following unrest and political tensions. Government security measures and restrictions on demonstrations should be assessed against public safety, civil liberties and independently reported events.",
-      "date": "October 2026",
-      "status": "Developing domestic situation",
-      "image": "",
-      "url": "https://www.reuters.com/world/europe/"
-    },
-    "UK Government": {
-      "name": "UK Government",
-      "role": "United Kingdom government",
-      "title": "UK WATCH: HOUSING, MIGRATION AND ECONOMIC POLICY",
-      "summary": "Housing, migration rules and economic growth remain central issues in British political debate. New proposals should be distinguished from enacted legislation and measures already in force.",
+      "title": "MACRON WATCH: PUBLIC ORDER AND ECONOMIC PRESSURE",
+      "summary": "France is dealing with storm-related disruption, political tensions and concerns about business activity and the cost of living. Follow official announcements and reliable reporting for new decisions. Do not attribute every protest or incident to the president without supporting evidence.",
       "date": "23 October 2026",
-      "status": "Policy monitoring",
-      "image": "",
-      "url": "https://www.bbc.com/news/politics"
+      "status": "Domestic developments",
+      "image": "assets/leaders/macron.jpg",
+      "url": "https://www.reuters.com/default/francepmi-contraction-inattendue-de-lactivit-conomique-en-octobre-les-pressions-2026-10-23/"
     },
     "Donald Trump": {
       "name": "Donald Trump",
       "role": "President of the United States",
-      "title": "USA WATCH: MIDDLE EAST SECURITY AND ENERGY",
-      "summary": "The United States is monitoring regional security risks and their potential implications for shipping and energy markets. Official travel and security notices should be checked for the latest guidance. Diplomatic developments should not be treated as proof of a settlement unless the parties confirm an agreement.",
-      "date": "22 October 2026",
-      "status": "International security monitoring",
-      "image": "",
-      "url": "https://www.whitehouse.gov/"
+      "title": "TRUMP WATCH: BBC LAWSUIT AND TRADE DISPUTES",
+      "summary": "Reuters reports that a federal judge ordered Trump to sit for a deposition by 11 December in his defamation lawsuit against the BBC. Separately, Trump said Canada was working towards a trade deal. The deposition order is not a final ruling, and the trade comments do not establish that an agreement has been reached.",
+      "date": "22–23 October 2026",
+      "status": "Legal and trade developments",
+      "image": "assets/leaders/trump.jpg",
+      "url": "https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/"
+    },
+    "UK Government": {
+      "name": "UK Government",
+      "role": "United Kingdom government",
+      "title": "UK WATCH: RETAIL SALES AND BUSINESS COSTS",
+      "summary": "Official figures showed retail sales fell 0.4% in September, while consumer confidence weakened in October. The government also announced measures intended to reduce business costs. Projected savings should be distinguished from money already saved, and economic figures should be assessed in context.",
+      "date": "23 October 2026",
+      "status": "Economic developments",
+      "image": "assets/leaders/uk-government.jpg",
+      "url": "https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/"
     },
     "Friedrich Merz": {
       "name": "Friedrich Merz",
       "role": "Chancellor of Germany",
-      "title": "GERMANY WATCH: EUROPEAN ECONOMY AND SECURITY",
-      "summary": "Germany remains central to European economic and security discussions. This card links to official government information and does not attribute a new statement to the chancellor without a dated source.",
+      "title": "GERMANY WATCH: EUROPEAN POLICY",
+      "summary": "Germany remains central to European economic and security discussions. This card links to official government information and does not claim a new statement from the chancellor tonight.",
       "date": "23 October 2026",
       "status": "Official-source monitoring",
-      "image": "",
+      "image": "assets/leaders/merz.jpg",
       "url": "https://www.bundesregierung.de/"
     },
     "Ursula von der Leyen": {
       "name": "Ursula von der Leyen",
       "role": "President of the European Commission",
-      "title": "EU WATCH: ARCTIC SECURITY AND RESILIENCE",
-      "summary": "The European Commission's updated Arctic strategy, published on 20 October, addresses security, resilience, climate and cooperation with northern communities. It is a dated policy development rather than a claim of a new announcement today.",
+      "title": "EU WATCH: SECURITY AND RESILIENCE",
+      "summary": "The European Commission's updated Arctic strategy, published on 20 October, addresses security, resilience, climate issues and cooperation with northern communities. This is a dated policy development, not a claim of a new announcement tonight.",
       "date": "20 October 2026",
       "status": "Dated policy update",
-      "image": "",
+      "image": "assets/leaders/von-der-leyen.jpg",
       "url": "https://commission.europa.eu/news-and-media/news/eu-strategy-rapidly-changing-arctic-2026-10-20_en"
     },
     "Xi Jinping": {
       "name": "Xi Jinping",
       "role": "President of China",
-      "title": "CHINA WATCH: ECONOMIC GROWTH AND TRADE",
-      "summary": "Recent reporting puts China's third-quarter growth at 4.5% year on year, supported in part by exports. The headline figure does not describe every household or sector, and readers should consult the underlying economic data for a fuller picture.",
-      "date": "19 October 2026",
-      "status": "Economic reporting",
-      "image": "",
-      "url": "https://www.theguardian.com/business/live/2026/oct/19/exports-lift-china-economic-growth-french-protests-pressure-euro-bonds-latest-business-live-updates"
+      "title": "CHINA WATCH: ECONOMY AND POLICY",
+      "summary": "Regional reporting is focused on China's economic outlook and the Communist Party meeting scheduled to begin on 26 October. Future decisions should not be reported as confirmed until official statements are issued.",
+      "date": "23 October 2026",
+      "status": "Policy monitoring",
+      "image": "assets/leaders/xi.jpg",
+      "url": "https://english.www.gov.cn/"
     },
     "Vladimir Putin": {
       "name": "Vladimir Putin",
       "role": "President of Russia",
-      "title": "RUSSIA WATCH: UKRAINE WAR AND DIPLOMACY",
-      "summary": "Reports continue to cover Russian attacks on Ukraine and possible diplomatic discussions. Any casualty figures and military claims should be attributed to their sources, and possible talks should not be presented as a peace agreement.",
+      "title": "RUSSIA WATCH: UKRAINE AND REGIONAL SECURITY",
+      "summary": "Reports describe continuing attacks in Ukraine and wider security concerns. Casualty figures and military claims should be attributed to their sources and checked against updated reporting. Diplomatic discussions should not be described as a peace agreement unless confirmed by the parties.",
       "date": "23 October 2026",
-      "status": "Conflict and diplomacy monitoring",
-      "image": "",
-      "url": "https://www.reuters.com/world/us/midterms-reach-kyiv-2026-10-22/"
+      "status": "Conflict monitoring",
+      "image": "assets/leaders/putin.jpg",
+      "url": "https://www.reuters.com/world/"
     },
     "Mark Carney": {
       "name": "Mark Carney",
       "role": "Prime Minister of Canada",
-      "title": "CANADA WATCH: TRADE DIVERSIFICATION",
-      "summary": "Canada is pursuing broader trade and strategic relationships as it faces uncertainty over US tariffs and cross-border commerce. Proposed initiatives should be distinguished from agreements already signed and implemented.",
-      "date": "22 October 2026",
-      "status": "Trade policy monitoring",
-      "image": "",
-      "url": "https://www.reuters.com/world/americas/canadas-carney-visits-turkey-push-ease-us-trade-dependence-2026-10-22/"
+      "title": "CANADA WATCH: TRADE RELATIONS WITH THE UNITED STATES",
+      "summary": "Canada and the United States remain involved in a trade dispute. Statements about negotiations and political interference should be attributed to the speakers, and no agreement or wrongdoing should be assumed without supporting evidence.",
+      "date": "23 October 2026",
+      "status": "Trade and diplomatic developments",
+      "image": "assets/leaders/carney.jpg",
+      "url": "https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/"
+    },
+    "Helen Haines": {
+      "name": "Helen Haines",
+      "role": "Independent Member of Parliament in Australia",
+      "title": "AUSTRALIA WATCH: POLICE INVESTIGATION",
+      "summary": "Reports say Helen Haines was struck by a vehicle outside her office and that a man was arrested. Police are investigating the circumstances. Motive and legal responsibility should not be stated as fact until supported by evidence from the investigation or court proceedings.",
+      "date": "October 2026",
+      "status": "Police investigation",
+      "image": "assets/leaders/helen-haines.jpg",
+      "url": "https://www.scmp.com/news/asia/australasia/article/3371376/australian-lawmaker-helen-haines-critical-condition-after-vehicle-attack"
     }
   },
   "sponsoredAdverts": [

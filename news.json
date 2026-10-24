@@ -1,432 +1,357 @@
+
 {
-  "edition": "RadiantWaves Night News & Global Update",
-  "date": "Friday, 23 October 2026",
-  "hero": {
-    "title": "NIGHT WORLD NEWS: HORMUZ OIL CRISIS, STORM AUSTEN AND NIGERIA 2027",
-    "description": "Your evening briefing on international security, political accountability, public health, extreme weather, elections and the global economy.",
-    "image": "",
-    "imageQuery": "international television newsroom world map night",
-    "video": "./assets/video1.mp4"
-  },
-  "morningSummary": "Tonight's global briefing examines reports of damage to oil tankers in the Strait of Hormuz, severe weather in France and Britain, Typhoon Champi in East Asia, developments in Ukraine and the latest economic pressures. In Nigeria, the Ebola response has prompted debate about preparedness spending, while opposition parties continue to face questions about cooperation ahead of the 2027 election. Other coverage includes US voting rules, Canada–US trade tensions, France's economic outlook, developments in Africa and Australia's investigation into an attack involving MP Helen Haines. Figures and claims in developing stories are attributed to the sources reporting them.",
-  "editorialNote": "RadiantWaves Media rewrites reporting in original language and links readers to the source material. Claims about attacks, political disputes, casualties and investigations are attributed to the organisations or officials reporting them. Market prices and casualty figures may change. The status of investigations and proposed political arrangements should not be overstated. This edition includes reports dated 21–23 October 2026; not every story is breaking at the moment of publication. Check official notices and the latest reliable reporting before republishing.",
-  "bigQuestion": {
-    "title": "Today's Big Question",
-    "question": "As elections approach and living costs remain a concern, what should citizens demand first from political leaders: a clear plan, transparent use of public funds, or measurable improvements in everyday life?",
-    "description": "Share your views respectfully. Evidence, public accountability and constructive debate matter more than rumours or personal attacks."
-  },
-  "quoteOfTheDay": {
-    "text": "The value of information is not in how quickly it spreads, but in how carefully it is checked before people are asked to believe it.",
-    "author": "RadiantWaves Media",
-    "type": "Original editorial quote"
-  },
-  "breaking": [
-    "MIDDLE EAST: Iranian state media reported damage to oil tankers in the Strait of Hormuz, renewing concerns about shipping safety and energy supplies.",
-    "ENERGY: Oil prices traded at elevated levels amid concerns about possible escalation involving Iran and disruption to Gulf energy infrastructure. Check the latest market quote before publishing a precise closing price.",
-    "UNITED STATES: Reuters reports that a federal judge ordered Donald Trump to sit for a deposition by 11 December in his defamation lawsuit against the BBC. This is a procedural development, not a final ruling.",
-    "ASIA: Typhoon Champi disrupted flights and public services in Taiwan, with reported casualties and injuries. Conditions and figures may change.",
-    "FRANCE AND UK: Storm Austen brought damaging winds, heavy rain, power cuts and transport disruption. Travellers should check current weather and transport alerts.",
-    "NIGERIA: WHO confirmed one imported Ebola Bundibugyo virus disease case in the FCT on 20 October. Forty-four contacts had been identified for monitoring.",
-    "NIGERIA POLITICS: The APC began campaign preparations for 2027 after President Bola Tinubu inaugurated its Presidential Campaign Council on 14 October.",
-    "NIGERIA 2027: Reports describe continuing disagreements among opposition groups considering a common presidential candidate. No final opposition ticket should be assumed without confirmation.",
-    "NIGERIA PUBLIC FUNDS: Atiku Abubakar has questioned the reported ₦10 billion Ebola preparedness allocation. The APC Presidential Campaign Council says the funds remain untouched; independently verifiable records are needed to assess the competing claims.",
-    "UNITED STATES: The Supreme Court cleared the way for New Hampshire to restrict student identification cards for voting in the midterm elections. The decision concerns state rules, not a nationwide ban on student voting.",
-    "CANADA–US: Tariff disagreements continue, with political leaders exchanging statements about trade negotiations and interference allegations. These allegations do not establish wrongdoing by themselves.",
-    "FRANCE: Authorities are preparing for possible further protests amid concerns about living costs and public order.",
-    "UNITED KINGDOM: September retail sales fell by 0.4%, while consumer confidence weakened. The monthly decline came despite an increase in sales volumes over the three months to September.",
-    "ASIA: Reports describe an earthquake in Tibet, renewed Korean Peninsula tensions and economic developments in China and Japan. Figures and official statements require ongoing verification.",
-    "AUSTRALIA: Police are investigating an incident in which independent MP Helen Haines was reportedly struck by a vehicle. Avoid speculation about motive before the investigation establishes the facts.",
-    "AFRICA: A reported drone strike in the disputed Abyei region caused mass casualties, according to news reports. Responsibility and casualty figures should remain attributed to their sources.",
-    "ETHIOPIA: Reports describe renewed tension involving federal-backed regional authorities and Tigrayan forces. Claims about specific attacks and casualties require verification.",
-    "EBOLA WATCH: ECDC reports cases in Nigeria and Kenya and a wider outbreak in the Democratic Republic of the Congo. ECDC assesses the risk to the general EU/EEA population as very low while advising continued preparedness."
-  ],
-  "breakingHistory": [
-    "23 October 2026 — Hormuz: Iranian state media reported damage to several oil tankers. Source: Associated Press — https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
-    "22 October 2026 — United States: A federal judge ordered Donald Trump to sit for a deposition in his BBC defamation case by 11 December. Source: Reuters — https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/",
-    "23 October 2026 — Taiwan: Typhoon Champi disrupted flights and public services. Source: Associated Press — https://apnews.com/article/8cf1c88611fc6ede98ebac11201f91cb",
-    "23 October 2026 — France and Britain: Storm Austen caused widespread power outages and transport disruption. Source: Reuters — https://www.reuters.com/business/energy/storm-causes-power-outages-traffic-disruptions-france-britain-2026-10-23/",
-    "14 October 2026 — Nigeria: President Bola Tinubu inaugurated the APC Presidential Campaign Council ahead of the 2027 election. Source: State House — https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/",
-    "19 October 2026 — Nigeria: Reporting described continuing disagreement among opposition camps over a possible common presidential candidate. Source: The Guardian Nigeria — https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
-    "23 October 2026 — Nigeria and East Africa: ECDC published an assessment of imported Ebola cases in Nigeria and Kenya. Source: ECDC — https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23",
-    "23 October 2026 — United Kingdom: Retail sales fell by 0.4% in September, according to official figures. Source: Reuters — https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/",
-    "23 October 2026 — Canada–US: Reuters reported continuing trade discussions and tariff tensions. Source: Reuters — https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/",
-    "21 October 2026 — Sudan–South Sudan border: A reported strike in Abyei caused mass casualties; responsibility remains attributed to reporting sources. Source: Al Jazeera — https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153"
-  ],
-  "featured": {
-    "category": "Africa",
-    "title": "Nigeria's Ebola Response: Public Health Action and Questions About Preparedness Spending",
-    "summary": "Nigeria confirmed one imported Ebola Bundibugyo virus disease case on 20 October. WHO reported that 44 contacts had been identified for monitoring. The public health response has also prompted a political dispute about the reported ₦10 billion preparedness allocation.",
-    "content": "Health authorities are investigating the patient's travel and exposure history and monitoring identified contacts. Separately, Atiku Abubakar has called for details of spending from the reported Ebola preparedness allocation. The APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. Neither political statement is a substitute for financial records. The public can reasonably ask for the amount released, expenditure records, contracts, deliveries and independent audit findings. For health advice, follow the Nigeria Centre for Disease Control and Prevention, the Federal Ministry of Health and WHO.",
-    "date": "20–23 October 2026",
-    "source": "WHO Africa and ECDC",
-    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23",
-    "image": "",
-    "imageQuery": "public health workers in protective equipment infectious disease laboratory"
-  },
-  "topStories": [
-    {
-      "category": "World",
-      "title": "Hormuz Shipping Concerns Put Global Energy Supplies Under Pressure",
-      "summary": "Iranian state media reported damage to oil tankers in the Strait of Hormuz. The reports have raised concerns about shipping safety and possible disruption to energy supplies. Responsibility for individual incidents and the precise extent of damage should be established through further reporting.",
-      "date": "23 October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28"
-    },
-    {
-      "category": "USA",
-      "title": "Trump Ordered to Give Deposition in BBC Defamation Case",
-      "summary": "Reuters reports that a federal judge ordered Donald Trump to sit for a deposition by 11 December in his $10 billion defamation lawsuit against the BBC. The order is a step in the legal process and does not determine the final outcome of the case.",
-      "date": "22 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/"
-    },
-    {
-      "category": "Asia",
-      "title": "Typhoon Champi Disrupts Flights and Public Services in Taiwan",
-      "summary": "The Associated Press reported that Taiwan cancelled hundreds of flights, closed schools and offices, and evacuated people from vulnerable areas. The report recorded one death and more than 170 injuries in Taiwan, with further disruption reported in Japan and the Philippines. Emergency information may change as authorities assess the impact.",
-      "date": "23 October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/8cf1c88611fc6ede98ebac11201f91cb"
-    },
-    {
-      "category": "Europe",
-      "title": "Storm Austen Causes Power Cuts and Travel Disruption in France and Britain",
-      "summary": "Reuters reported that nearly 300,000 French homes lost electricity and more than 12,000 British homes were affected as strong winds and heavy rain disrupted transport. Conditions vary by location. Travellers should check the latest local weather warnings, rail services and airport updates.",
-      "date": "23 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/energy/storm-causes-power-outages-traffic-disruptions-france-britain-2026-10-23/"
-    },
-    {
-      "category": "Africa",
-      "title": "Nigeria 2027: APC Campaign Preparations and Opposition Disagreements",
-      "summary": "The State House announced on 14 October that President Bola Tinubu inaugurated the APC Presidential Campaign Council. Separately, reports describe disagreements among opposition groups considering a common candidate. These are distinct developments; no final opposition agreement should be assumed without confirmation.",
-      "date": "14–19 October 2026",
-      "source": "State House and The Guardian Nigeria",
-      "url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
-    },
-    {
-      "category": "Africa",
-      "title": "Ebola in Nigeria: Health Authorities Continue Contact Monitoring",
-      "summary": "ECDC's 23 October update records one confirmed Bundibugyo Ebola virus disease case in Nigeria and 44 contacts under monitoring. Kenya had reported nine cases, including one death, by 22 October. The DRC continues to report a much larger outbreak. ECDC assesses the risk to the general EU/EEA population as very low.",
-      "date": "23 October 2026",
-      "source": "European Centre for Disease Prevention and Control",
-      "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-23"
-    },
-    {
-      "category": "USA",
-      "title": "Supreme Court Allows New Hampshire to Restrict Student IDs for Voting",
-      "summary": "The Associated Press reports that the US Supreme Court allowed New Hampshire to enforce a restriction on student identification cards for voting in the midterms. This is a state-specific voting rule and not a nationwide prohibition on students voting.",
-      "date": "23 October 2026",
-      "source": "Associated Press via WBUR",
-      "url": "https://www.wbur.org/news/2026/10/23/supreme-court-new-hampshire-ban-student-ids-voting"
-    },
-    {
-      "category": "USA",
-      "title": "Wall Street Technology Shares Fall as AI Spending Concerns Grow",
-      "summary": "Associated Press reported that the S&P 500 fell 1.2% and the Nasdaq Composite dropped 2.6% on Thursday, 22 October. Investors were concerned about AI-related valuations and data-centre spending. These are Thursday's closing figures, not Friday's final market results.",
-      "date": "22 October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/1970e79d013cbddcae89c53b4b98f384"
-    },
-    {
-      "category": "Canada",
-      "title": "Canada–US Dispute Continues Over Tariffs and Midterm Allegations",
-      "summary": "Associated Press reports that Canadian Prime Minister Mark Carney rejected US allegations that Canadian politicians were interfering in the US midterm elections. The allegations and Carney's response should be attributed to their sources. The dispute alone does not establish unlawful interference.",
-      "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/9f18ee52d4c3a72fe8b2efaac579416f"
-    },
-    {
-      "category": "Canada",
-      "title": "Trump Says Canada Is Working Towards a Trade Deal",
-      "summary": "Reuters reports that Donald Trump said Canada was working hard to reach a trade deal with the United States. Tariff tensions remain, and negotiations do not amount to an agreement until the governments confirm the terms and status.",
-      "date": "23 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/"
-    },
-    {
-      "category": "Europe",
-      "title": "France Prepares for Further Protests Amid Cost-of-Living Concerns",
-      "summary": "The Associated Press reports that authorities planned a major police and gendarmerie deployment for Saturday amid fears of renewed violence during protests. The scale of deployment is a precaution and does not mean all demonstrations will become violent. Follow local authority and transport updates.",
-      "date": "23 October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/0208e62321f811e3003460f71b7fcc89"
-    },
-    {
-      "category": "Europe",
-      "title": "French Business Activity Contracts in Preliminary October Survey",
-      "summary": "A preliminary survey reported a contraction in French business activity in October after growth in September. Survey readings are early indicators of economic conditions, not final official GDP figures. The results add to debate about public finances, confidence and economic momentum.",
-      "date": "23 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/default/francepmi-contraction-inattendue-de-lactivit-conomique-en-octobre-les-pressions-2026-10-23/"
-    },
-    {
-      "category": "United Kingdom",
-      "title": "UK Retail Sales Fall 0.4% in September",
-      "summary": "Official figures reported by Reuters show UK retail sales fell 0.4% in September compared with August. Sales volumes were nevertheless 0.7% higher over the three months to September. Consumer confidence weakened sharply in October, while households continue to face pressure from fuel and energy costs.",
-      "date": "23 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/"
-    },
-    {
-      "category": "United Kingdom",
-      "title": "Government Announces Measures Intended to Reduce Business Costs",
-      "summary": "Reuters reports that the UK government announced measures intended to save businesses nearly £800 million annually through changes to administrative burdens and tariff measures. The figure is a projected saving and should not be described as money already saved by every business.",
-      "date": "23 October 2026",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/uk/uk-government-promises-save-businesses-800-million-paperwork-tariffs-2026-10-23/"
-    },
-    {
-      "category": "Asia",
-      "title": "Earthquake in Tibet: Rescue and Damage Assessments Continue",
-      "summary": "Channel NewsAsia reporting described a magnitude 7.0 earthquake in Tibet that killed 16 people and caused more than 300 houses to collapse. Casualty and damage figures may change as rescue teams and local authorities provide further information.",
-      "date": "October 2026",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
-    },
-    {
-      "category": "Asia",
-      "title": "South Korea Proposes Talks With North Korea",
-      "summary": "Regional reporting says South Korea has proposed talks with North Korea. A proposal does not establish that negotiations have started or that an agreement has been reached. Further statements from both governments will determine whether diplomatic contact progresses.",
-      "date": "October 2026",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
-    },
-    {
-      "category": "Asia",
-      "title": "Japan Watches Inflation While China Prepares for Party Meeting",
-      "summary": "Regional reports highlight Japanese inflation remaining above the Bank of Japan's target and attention on China's upcoming Communist Party meeting, scheduled to begin on 26 October. Future policy decisions should not be presented as confirmed before official announcements.",
-      "date": "October 2026",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
-    },
-    {
-      "category": "Australia",
-      "title": "Police Investigate Vehicle Incident Involving MP Helen Haines",
-      "summary": "Reports say independent Australian MP Helen Haines was struck by a vehicle outside her office and that a man was arrested. Police are investigating the circumstances. No motive should be attributed without evidence from investigators or court proceedings.",
-      "date": "October 2026",
-      "source": "South China Morning Post",
-      "url": "https://www.scmp.com/news/asia/australasia/article/3371376/australian-lawmaker-helen-haines-critical-condition-after-vehicle-attack"
-    },
-    {
-      "category": "Africa",
-      "title": "Abyei Strike: Reports of at Least 153 Deaths",
-      "summary": "Al Jazeera reports that South Sudanese authorities attributed a drone strike in the disputed Abyei area to Sudan's army, with at least 153 people reported killed. Responsibility and the exact toll should remain attributed to the sources until independently established.",
-      "date": "21 October 2026",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153"
-    },
-    {
-      "category": "Africa",
-      "title": "Ethiopia's Tigray Region Faces Renewed Tensions",
-      "summary": "The Associated Press reports renewed tensions involving a federal-backed regional administration and Tigrayan forces following changes in control in Mekelle earlier in the month. Specific claims about attacks, responsibility and casualties require verification from multiple reliable sources.",
-      "date": "October 2026",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/64ef30aae97ed3bea93481875f8de45c"
-    }
-  ],
-  "articles": [
-    {
-      "category": "world",
-      "title": "Global Security: Shipping Risks, Storms and Conflict",
-      "content": "The Strait of Hormuz remains a focus of concern after reports of tanker damage. At the same time, severe weather has disrupted transport and electricity supplies in parts of France and Britain, while the war in Ukraine continues. Each story carries different risks: shipping security affects energy markets, storms affect daily life and infrastructure, and conflict reporting requires careful verification of military claims and casualties.",
-      "image": "",
-      "imageQuery": "world map maritime security global news newsroom"
-    },
-    {
-      "category": "usa",
-      "title": "United States: Legal Developments, Voting Rules and Markets",
-      "content": "A federal judge ordered Donald Trump to sit for a deposition in his defamation case against the BBC, according to Reuters. Separately, the Supreme Court allowed New Hampshire to restrict student ID use for voting. On Wall Street, technology shares fell on Thursday amid concerns about AI valuations and data-centre spending. These are separate developments and should not be conflated with a nationwide change in voting rights or a final legal ruling.",
-      "image": "",
-      "imageQuery": "United States Capitol and Wall Street financial district"
-    },
-    {
-      "category": "europe",
-      "title": "Europe: Storm Damage, Protests and Economic Uncertainty",
-      "content": "Storm Austen caused power outages and transport disruption in France and Britain. France is also preparing for possible further protests amid concerns about the cost of living, while preliminary survey data point to weaker business activity in October. Weather warnings, protest restrictions and economic indicators should be checked against the latest local or official updates.",
-      "image": "",
-      "imageQuery": "France storm damaged roads European city weather"
-    },
-    {
-      "category": "africa",
-      "title": "Africa: Ebola Monitoring, Conflict and Public Accountability",
-      "content": "Nigeria's confirmed imported Ebola Bundibugyo virus disease case has prompted contact monitoring, while ECDC reports additional cases in Kenya and a wider outbreak in the DRC. In Nigeria, the response has also triggered debate about the reported preparedness allocation. Separately, reports of a deadly strike in Abyei and renewed tension in Ethiopia underline the need to protect civilians and distinguish attributed claims from independently confirmed facts.",
-      "image": "",
-      "imageQuery": "African public health response humanitarian aid workers"
-    },
-    {
-      "category": "asia",
-      "title": "Asia-Pacific: Typhoon Disruption and Regional Security",
-      "content": "Typhoon Champi has disrupted services in Taiwan, while regional reporting describes an earthquake in Tibet and continuing tension on the Korean Peninsula. Japan's inflation outlook and China's upcoming political meeting are also drawing attention. Casualty figures, official warnings and future policy decisions may change as more information becomes available.",
-      "image": "",
-      "imageQuery": "Taiwan typhoon coastal city storm weather"
-    },
-    {
-      "category": "business",
-      "title": "Global Economy: Oil, Retail Sales and Trade Disputes",
-      "content": "Oil-market concerns are linked to fears of disruption in the Gulf, but market prices fluctuate throughout the trading day. UK retail sales fell 0.4% in September, although three-month sales volumes rose. Canada–US tariff tensions and uncertainty over trade negotiations remain important for manufacturers and consumers. The actual effects depend on the duration of disruptions, currency movements, taxes and policy decisions.",
-      "image": "",
-      "imageQuery": "oil refinery global trade shipping containers financial markets"
-    },
-    {
-      "category": "technology",
-      "title": "AI Investment Under Scrutiny as Investors Reassess Costs",
-      "content": "Thursday's fall in US technology shares was linked in reporting to concerns about AI valuations and data-centre spending. Artificial intelligence remains an area of investment, but investors are examining whether expected revenue and productivity gains justify the cost of infrastructure. Market movements are not, on their own, proof that an entire technology sector is succeeding or failing.",
-      "image": "",
-      "imageQuery": "AI data centre server racks technology infrastructure"
-    }
-  ],
-  "leadersWatch": {
-    "Atiku Abubakar": {
-      "name": "Atiku Abubakar",
-      "role": "Former Vice-President of Nigeria",
-      "title": "ATIKU WATCH: OPPOSITION UNITY AND PUBLIC ACCOUNTABILITY",
-      "summary": "Recent reporting describes disagreement among opposition groups considering a common presidential candidate ahead of 2027. Atiku has also questioned the reported ₦10 billion Ebola preparedness allocation. The APC Presidential Campaign Council disputes his criticism and says the funds remain untouched. The political disagreement and the financial claim should be assessed separately, using verifiable records and confirmed announcements.",
-      "date": "19–22 October 2026",
-      "status": "Developing political issues",
-      "image": "assets/leaders/atiku.jpg",
-      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
-    },
-    "Peter Obi": {
-      "name": "Peter Obi",
-      "role": "Nigerian politician",
-      "title": "OBI WATCH: 2027 OPPOSITION COORDINATION",
-      "summary": "Reports describe continuing disagreements among opposition camps about whether to support a common presidential candidate. The debate involves party interests, candidate selection and the terms of any potential alliance. No final agreement or outcome favouring one individual should be inferred without a verifiable announcement.",
-      "date": "19 October 2026",
-      "status": "Developing political story",
-      "image": "assets/leaders/obi.jpg",
-      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
-    },
-    "Bola Ahmed Tinubu": {
-      "name": "Bola Ahmed Tinubu",
-      "role": "President of Nigeria",
-      "title": "TINUBU WATCH: APC CAMPAIGN PREPARATIONS",
-      "summary": "The State House announced on 14 October that Tinubu inaugurated the APC Presidential Campaign Council ahead of the 2027 general election. The administration's policy record, campaign commitments and public spending remain subjects for scrutiny as the election approaches.",
-      "date": "14 October 2026",
-      "status": "Official announcement",
-      "image": "assets/leaders/tinubu.jpg",
-      "url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
-    },
-    "Emmanuel Macron": {
-      "name": "Emmanuel Macron",
-      "role": "President of France",
-      "title": "MACRON WATCH: PUBLIC ORDER AND ECONOMIC PRESSURE",
-      "summary": "France is dealing with storm-related disruption, political tensions and concerns about business activity and the cost of living. Follow official announcements and reliable reporting for new decisions. Do not attribute every protest or incident to the president without supporting evidence.",
-      "date": "23 October 2026",
-      "status": "Domestic developments",
-      "image": "assets/leaders/macron.jpg",
-      "url": "https://www.reuters.com/default/francepmi-contraction-inattendue-de-lactivit-conomique-en-octobre-les-pressions-2026-10-23/"
-    },
-    "Donald Trump": {
-      "name": "Donald Trump",
-      "role": "President of the United States",
-      "title": "TRUMP WATCH: BBC LAWSUIT AND TRADE DISPUTES",
-      "summary": "Reuters reports that a federal judge ordered Trump to sit for a deposition by 11 December in his defamation lawsuit against the BBC. Separately, Trump said Canada was working towards a trade deal. The deposition order is not a final ruling, and the trade comments do not establish that an agreement has been reached.",
-      "date": "22–23 October 2026",
-      "status": "Legal and trade developments",
-      "image": "assets/leaders/trump.jpg",
-      "url": "https://www.reuters.com/world/trump-ordered-sit-deposition-his-10-billion-bbc-lawsuit-ap-reports-2026-10-22/"
-    },
-    "UK Government": {
-      "name": "UK Government",
-      "role": "United Kingdom government",
-      "title": "UK WATCH: RETAIL SALES AND BUSINESS COSTS",
-      "summary": "Official figures showed retail sales fell 0.4% in September, while consumer confidence weakened in October. The government also announced measures intended to reduce business costs. Projected savings should be distinguished from money already saved, and economic figures should be assessed in context.",
-      "date": "23 October 2026",
-      "status": "Economic developments",
-      "image": "assets/leaders/uk-government.jpg",
-      "url": "https://www.reuters.com/world/uk/british-retail-sales-fall-by-04-september-2026-10-23/"
-    },
-    "Friedrich Merz": {
-      "name": "Friedrich Merz",
-      "role": "Chancellor of Germany",
-      "title": "GERMANY WATCH: EUROPEAN POLICY",
-      "summary": "Germany remains central to European economic and security discussions. This card links to official government information and does not claim a new statement from the chancellor tonight.",
-      "date": "23 October 2026",
-      "status": "Official-source monitoring",
-      "image": "assets/leaders/merz.jpg",
-      "url": "https://www.bundesregierung.de/"
-    },
-    "Ursula von der Leyen": {
-      "name": "Ursula von der Leyen",
-      "role": "President of the European Commission",
-      "title": "EU WATCH: SECURITY AND RESILIENCE",
-      "summary": "The European Commission's updated Arctic strategy, published on 20 October, addresses security, resilience, climate issues and cooperation with northern communities. This is a dated policy development, not a claim of a new announcement tonight.",
-      "date": "20 October 2026",
-      "status": "Dated policy update",
-      "image": "assets/leaders/von-der-leyen.jpg",
-      "url": "https://commission.europa.eu/news-and-media/news/eu-strategy-rapidly-changing-arctic-2026-10-20_en"
-    },
-    "Xi Jinping": {
-      "name": "Xi Jinping",
-      "role": "President of China",
-      "title": "CHINA WATCH: ECONOMY AND POLICY",
-      "summary": "Regional reporting is focused on China's economic outlook and the Communist Party meeting scheduled to begin on 26 October. Future decisions should not be reported as confirmed until official statements are issued.",
-      "date": "23 October 2026",
-      "status": "Policy monitoring",
-      "image": "assets/leaders/xi.jpg",
-      "url": "https://english.www.gov.cn/"
-    },
-    "Vladimir Putin": {
-      "name": "Vladimir Putin",
-      "role": "President of Russia",
-      "title": "RUSSIA WATCH: UKRAINE AND REGIONAL SECURITY",
-      "summary": "Reports describe continuing attacks in Ukraine and wider security concerns. Casualty figures and military claims should be attributed to their sources and checked against updated reporting. Diplomatic discussions should not be described as a peace agreement unless confirmed by the parties.",
-      "date": "23 October 2026",
-      "status": "Conflict monitoring",
-      "image": "assets/leaders/putin.jpg",
-      "url": "https://www.reuters.com/world/"
-    },
-    "Mark Carney": {
-      "name": "Mark Carney",
-      "role": "Prime Minister of Canada",
-      "title": "CANADA WATCH: TRADE RELATIONS WITH THE UNITED STATES",
-      "summary": "Canada and the United States remain involved in a trade dispute. Statements about negotiations and political interference should be attributed to the speakers, and no agreement or wrongdoing should be assumed without supporting evidence.",
-      "date": "23 October 2026",
-      "status": "Trade and diplomatic developments",
-      "image": "assets/leaders/carney.jpg",
-      "url": "https://www.reuters.com/business/trump-says-canada-working-very-hard-make-deal-with-us-2026-10-23/"
-    },
-    "Helen Haines": {
-      "name": "Helen Haines",
-      "role": "Independent Member of Parliament in Australia",
-      "title": "AUSTRALIA WATCH: POLICE INVESTIGATION",
-      "summary": "Reports say Helen Haines was struck by a vehicle outside her office and that a man was arrested. Police are investigating the circumstances. Motive and legal responsibility should not be stated as fact until supported by evidence from the investigation or court proceedings.",
-      "date": "October 2026",
-      "status": "Police investigation",
-      "image": "assets/leaders/helen-haines.jpg",
-      "url": "https://www.scmp.com/news/asia/australasia/article/3371376/australian-lawmaker-helen-haines-critical-condition-after-vehicle-attack"
-    }
-  },
-  "sponsoredAdverts": [
-    {
-      "title": "Premium Nigerian Spices — From Nigeria to the World",
-      "subtitle": "Authentic Nigerian Spices & Seasonings",
-      "description": "Discover carefully selected Nigerian spices and seasonings prepared for customers in Nigeria and international markets.",
-      "label": "Sponsored",
-      "image": "assets/spices.jpeg",
-      "button": "Shop Spices",
-      "link": "#",
-      "products": [
-        "Suya Spice",
-        "Jollof Spice",
-        "Pepper Mix",
-        "Traditional Nigerian Seasonings"
-      ]
-    },
-    {
-      "title": "Stonebreaker Herbal Product",
-      "subtitle": "Traditional Nigerian Herbal Product",
-      "description": "Explore a traditional Nigerian herbal product presented for customers interested in natural and cultural wellness products. Health-related claims should be supported by appropriate evidence and comply with applicable advertising rules.",
-      "label": "Sponsored",
-      "image": "assets/stonebreaker.jpeg",
-      "button": "Learn More",
-      "link": "#"
-    }
-  ],
-  "branding": {
-    "name": "RadiantWaves Media",
-    "slogan": "Gateway to Your World News — Connecting You to the World",
-    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories."
-  }
+"edition": "RadiantWaves Morning News & Global Update",
+"date": "Saturday, 24 October 2026",
+"branding": {
+"name": "RadiantWaves Media Nigeria Ltd",
+"slogan": "Gateway to Your World News — Connecting You to the World",
+"editorialPrinciple": "Accurate reporting, transparent sourcing and independent commentary.",
+"originalContentAttribution": "Original summaries, editorial perspectives, Thought for Today and Today’s Big Question are produced by RadiantWaves Media. External facts and reports are attributed to their respective sources."
+},
+"hero": {
+"title": "MORNING NEWS & GLOBAL UPDATE",
+"subtitle": "Saturday's essential headlines from Nigeria and around the world",
+"description": "A source-attributed review of global affairs, elections, the economy, public safety and developments affecting everyday life.",
+"source": "RadiantWaves Media",
+"image": "assets/news-hero.jpg"
+},
+"morningSummary": {
+"title": "The World This Morning",
+"text": "Inflation and household costs remain important issues ahead of the US midterm elections. Taiwan is assessing the impact of Typhoon Champi, while the UK faces further severe-weather risks. In Nigeria, preparations for the 2027 election are under way, and opposition leaders continue to discuss possible cooperation. South Sudan's planned December election remains an important development to monitor.",
+"source": "RadiantWaves Media",
+"note": "This is an original editorial summary based on the linked reports below, not a quotation from an external news organisation."
+},
+"editorialNote": {
+"title": "Newsroom Verification Note",
+"text": "RadiantWaves Media distinguishes confirmed information from allegations, forecasts and political claims. Election dates, developing incidents and political agreements may change. Readers should consult the linked original reports and relevant official authorities for updates.",
+"source": "RadiantWaves Media"
+},
+"bigQuestion": {
+"title": "Today's Big Question",
+"question": "As elections approach around the world, what should voters demand first from their leaders: honesty, a clear plan or measurable results?",
+"description": "Share your views respectfully. Facts, accountability and constructive debate matter.",
+"source": "RadiantWaves Media",
+"type": "Original editorial question"
+},
+"quoteOfTheDay": {
+"title": "RadiantWaves Thought for Today",
+"quote": "Leadership is not measured by the promises made, but by the lives improved and the responsibilities fulfilled.",
+"source": "RadiantWaves Media",
+"attribution": "Original thought written for this edition"
+},
+"breaking": [
+{
+"headline": "Taiwan reports one death and more than 500 injuries after Typhoon Champi",
+"source": "Channel NewsAsia",
+"url": "https://www.channelnewsasia.com/east-asia/taiwan-counts-1-dead-and-527-injured-after-typhoon-champi-sweeps-past-6488446"
+},
+{
+"headline": "US inflation and consumer confidence remain in focus ahead of the midterm elections",
+"source": "Associated Press",
+"url": "https://apnews.com/article/7fc70f244e14a16e55450cf8b89d4651"
+},
+{
+"headline": "Nigeria's opposition faces continuing challenges in efforts to agree on a common candidate",
+"source": "The Guardian Nigeria",
+"url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
+}
+],
+"breakingHistory": [],
+"featured": {
+"category": "Global Affairs",
+"title": "Elections, economic pressure and public safety shape the global agenda",
+"summary": "Today's reports highlight economic concerns in the United States, severe weather risks in parts of Europe and Asia, political safety in Australia, and preparations for elections in Nigeria and South Sudan.",
+"body": "These developments have different local causes, but they raise common questions about preparedness, accountability, public trust and the ability of institutions to respond effectively. This is an original RadiantWaves Media overview based on the reports linked in this edition.",
+"source": "RadiantWaves Media",
+"url": ""
+},
+"topStories": [
+{
+"category": "USA",
+"title": "Inflation and consumer confidence in focus ahead of US midterms",
+"summary": "The Associated Press reports that inflation, energy costs, consumer confidence and economic growth are important concerns as the United States approaches its 3 November midterm elections. Forecasts and expectations should not be mistaken for final economic results.",
+"source": "Associated Press",
+"url": "https://apnews.com/article/7fc70f244e14a16e55450cf8b89d4651"
+},
+{
+"category": "Canada",
+"title": "Carney criticises the costs of US tariffs",
+"summary": "The supplied Associated Press report covers Canadian Prime Minister Mark Carney's criticism of US tariffs and his response to allegations concerning Canadian electoral interference. The claims should be understood in the context of the report rather than treated as independently established conclusions.",
+"source": "Associated Press",
+"url": "https://apnews.com/article/canada-ontario-carney-ford-trump-tariffs-a9b923802d5e2d5a37f0e213db91ef56"
+},
+{
+"category": "United Kingdom",
+"title": "Burnham warns of a potentially difficult winter for flooding",
+"summary": "The Guardian reports that Prime Minister Andy Burnham warned that the UK could face a winter of greater flooding. Severe weather, storm-related disruption and household preparedness are central concerns in the report.",
+"source": "The Guardian",
+"url": "https://www.theguardian.com/politics/live/2026/oct/23/uk-warnings-stockpile-storm-austen-treasury-autumn-budget-latest-news-updates"
+},
+{
+"category": "Europe",
+"title": "Paris prepares for further protests as Spain's election approaches",
+"summary": "Le Monde reports preparations in Paris ahead of another weekend of demonstrations following earlier violence and damage to businesses. Euronews has reported on the implications of Spain's snap election, scheduled for 29 November according to the supplied report.",
+"source": "Le Monde and Euronews",
+"url": "https://www.lemonde.fr/en/politics/article/2026/10/23/worry-hovers-in-air-as-paris-boards-up-for-another-weekend-of-protests_6762472_5.html",
+"additionalSources": [
+{
+"name": "Euronews",
+"url": "https://www.euronews.com/2026/10/05/what-does-spains-snap-election-mean-for-the-european-politics"
+}
+]
+},
+{
+"category": "Asia",
+"title": "Typhoon Champi leaves casualties and disruption in Taiwan",
+"summary": "Channel NewsAsia reports one death and 527 injuries after Typhoon Champi swept past Taiwan. The storm damaged property, disrupted flights and cut electricity. It weakened while moving north, although strong winds and further disruption remained concerns.",
+"source": "Channel NewsAsia",
+"url": "https://www.channelnewsasia.com/east-asia/taiwan-counts-1-dead-and-527-injured-after-typhoon-champi-sweeps-past-6488446"
+},
+{
+"category": "Africa",
+"title": "South Sudan's planned first general election set for December",
+"summary": "ACI Africa reports that South Sudan's first general election since independence is scheduled for 22 December 2026. The election has been postponed several times in the past. Preparations, security, political participation and implementation of the transitional arrangements remain important issues to monitor.",
+"source": "ACI Africa",
+"url": "https://www.aciafrica.org/news/22567/south-sudan-sets-date-for-long-awaited-first-ever-general-election"
+},
+{
+"category": "Australia",
+"title": "Threats against politicians raise renewed concerns about safety",
+"summary": "ABC News reports that Australian politicians across the political spectrum have described threats, harassment and intimidation. Its report says the motive in the alleged attack involving independent MP Helen Haines remained unknown. No motive should be asserted without reliable confirmation from authorities.",
+"source": "ABC News",
+"url": "https://www.abc.net.au/news/2026-10-22/threats-abuse-australian-politicians-mps-security/107294268"
+},
+{
+"category": "Nigeria",
+"title": "APC campaign preparations move forward ahead of 2027",
+"summary": "Nigeria's State House reported that President Bola Tinubu inaugurated the APC Presidential Campaign Council on 14 October 2026. This is an official announcement of the party's preparations; it does not establish the outcome of the forthcoming election.",
+"source": "The State House, Abuja",
+"url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
+},
+{
+"category": "Nigeria",
+"title": "Opposition unity remains unresolved as camps debate a common candidate",
+"summary": "The Guardian Nigeria reports disagreements among opposition figures and supporters as groups consider a possible common candidate for 2027. The report describes ongoing discussions and competing preferences; it does not establish that Atiku Abubakar and Peter Obi have agreed on a joint ticket.",
+"source": "The Guardian Nigeria",
+"url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
+},
+{
+"category": "Nigeria",
+"title": "INEC leadership and electoral administration under scrutiny",
+"summary": "Channels Television's report examines developments involving INEC leadership and election preparations. Appointments, nominations and vacancies should be described according to their actual procedural status; a nomination must not be presented as a completed appointment unless confirmation is established.",
+"source": "Channels Television",
+"url": "https://www.channelstv.com/2026/10/16/nigeria-2027-election-watch-inec-leadership-changes-and-apc-reveals-its-campaign-priorities/"
+},
+{
+"category": "World",
+"title": "Russia and Ukraine announce a local ceasefire and plans for further talks",
+"summary": "Reuters reports that Russia and Ukraine agreed to a ceasefire arrangement for the town of Oleshky from 27 October to facilitate humanitarian aid and civilian evacuations. The report also describes plans for technical-level talks in November. These developments do not amount to a comprehensive peace agreement.",
+"source": "Reuters",
+"url": "https://www.reuters.com/world/europe/russia-ukraine-agree-ceasefire-embattled-town-hold-peace-talks-next-month-2026-10-23/"
+}
+],
+"articles": {
+"world": [
+{
+"title": "Russia and Ukraine plan further technical-level peace talks",
+"summary": "Reuters reports plans for further discussions in November alongside a local humanitarian ceasefire arrangement. The wider war continues, and major disagreements remain over security and territorial questions.",
+"source": "Reuters",
+"url": "https://www.reuters.com/world/europe/russia-ukraine-agree-ceasefire-embattled-town-hold-peace-talks-next-month-2026-10-23/"
+}
+],
+"usa": [
+{
+"title": "Economic concerns feature prominently before the midterm elections",
+"summary": "Inflation, energy costs, consumer confidence and the outlook for growth are among the issues discussed in the Associated Press report. Economic forecasts are estimates and may change as new data becomes available.",
+"source": "Associated Press",
+"url": "https://apnews.com/article/7fc70f244e14a16e55450cf8b89d4651"
+}
+],
+"europe": [
+{
+"title": "Paris prepares for another weekend of protests",
+"summary": "Le Monde reports preparations ahead of further demonstrations following earlier violence and damage to businesses.",
+"source": "Le Monde",
+"url": "https://www.lemonde.fr/en/politics/article/2026/10/23/worry-hovers-in-air-as-paris-boards-up-for-another-weekend-of-protests_6762472_5.html"
+},
+{
+"title": "Spain's snap election and its wider political implications",
+"summary": "Euronews examines the implications of Spain's scheduled snap election and its potential significance for Spanish and European politics.",
+"source": "Euronews",
+"url": "https://www.euronews.com/2026/10/05/what-does-spains-snap-election-mean-for-the-european-politics"
+}
+],
+"africa": [
+{
+"title": "South Sudan prepares for its planned December election",
+"summary": "ACI Africa reports that the first general election is scheduled for 22 December 2026. The date and preparations should continue to be checked against official election authority announcements.",
+"source": "ACI Africa",
+"url": "https://www.aciafrica.org/news/22567/south-sudan-sets-date-for-long-awaited-first-ever-general-election"
+}
+],
+"asia": [
+{
+"title": "Taiwan assesses damage after Typhoon Champi",
+"summary": "The storm left one reported death and hundreds of injuries, disrupted flights and caused power outages, according to Channel NewsAsia.",
+"source": "Channel NewsAsia",
+"url": "https://www.channelnewsasia.com/east-asia/taiwan-counts-1-dead-and-527-injured-after-typhoon-champi-sweeps-past-6488446"
+}
+],
+"business": [
+{
+"title": "Tariffs and energy costs remain concerns for households and businesses",
+"summary": "The supplied Associated Press reports cover US economic pressures and Canadian criticism of US tariffs. The precise effects differ across sectors and households; readers should consult the original reports for details.",
+"source": "Associated Press",
+"url": "https://apnews.com/article/canada-ontario-carney-ford-trump-tariffs-a9b923802d5e2d5a37f0e213db91ef56"
+}
+],
+"technology": [
+{
+"title": "Technology and public safety: digital threats require responsible reporting",
+"summary": "Online harassment and threats against public figures are part of the wider safety concerns described in the Australian reporting. RadiantWaves Media encourages responsible online conduct and cautions readers against spreading unverified allegations or identifying supposed perpetrators without reliable evidence.",
+"source": "RadiantWaves Media",
+"url": ""
+}
+]
+},
+"leadersWatch": {
+"note": "Leader updates should be added only when supported by a reliable, current source. A profile alone is not evidence of a new statement or development.",
+"leaders": [
+{
+"name": "Emmanuel Macron",
+"role": "President of France",
+"headline": "No additional verified update included in this edition.",
+"summary": "Check official presidential communications and reliable reporting before publishing a new claim.",
+"source": "RadiantWaves Media",
+"url": "https://www.elysee.fr/"
+},
+{
+"name": "Andy Burnham",
+"role": "Prime Minister of the United Kingdom",
+"headline": "Warns of possible further flooding this winter.",
+"summary": "The Guardian reports that Burnham discussed flood risks and emergency preparedness amid severe weather.",
+"source": "The Guardian",
+"url": "https://www.theguardian.com/politics/live/2026/oct/23/uk-warnings-stockpile-storm-austen-treasury-autumn-budget-latest-news-updates"
+},
+{
+"name": "Friedrich Merz",
+"role": "Chancellor of Germany",
+"headline": "No additional verified update included in this edition.",
+"summary": "Check official government communications and reliable reporting before publishing a new claim.",
+"source": "RadiantWaves Media",
+"url": "https://www.bundesregierung.de/"
+},
+{
+"name": "Donald Trump",
+"role": "President of the United States",
+"headline": "US economic concerns feature in coverage ahead of the midterm elections.",
+"summary": "The Associated Press report discusses inflation, energy costs and consumer confidence in the US economic outlook.",
+"source": "Associated Press",
+"url": "https://apnews.com/article/7fc70f244e14a16e55450cf8b89d4651"
+},
+{
+"name": "Bola Ahmed Tinubu",
+"role": "President of Nigeria",
+"headline": "APC inaugurates its Presidential Campaign Council.",
+"summary": "The State House reported the inauguration on 14 October 2026 as part of the party's preparations for the 2027 election.",
+"source": "The State House, Abuja",
+"url": "https://statehouse.gov.ng/president-tinubu-inaugurates-presidential-campaign-council-emphasises-readiness-to-renew-covenant-with-nigerians/"
+},
+{
+"name": "Atiku Abubakar",
+"role": "Former Vice-President of Nigeria",
+"headline": "Opposition discussions continue without a confirmed common ticket.",
+"summary": "The Guardian Nigeria reports disagreements and competing preferences among opposition camps. No final joint ticket should be assumed.",
+"source": "The Guardian Nigeria",
+"url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+"image": "assets/leaders/atiku.jpg"
+},
+{
+"name": "Peter Obi",
+"role": "Former Governor of Anambra State",
+"headline": "Opposition unity discussions remain unresolved.",
+"summary": "Reporting describes competing views about a possible common opposition candidate. Any claim of an agreed ticket requires direct confirmation.",
+"source": "The Guardian Nigeria",
+"url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+"image": "assets/leaders/obi.jpg"
+},
+{
+"name": "Ursula von der Leyen",
+"role": "President of the European Commission",
+"headline": "No additional verified update included in this edition.",
+"summary": "Check official European Commission communications and reliable reporting before publishing a new claim.",
+"source": "RadiantWaves Media",
+"url": "https://commission.europa.eu/"
+},
+{
+"name": "Xi Jinping",
+"role": "President of China",
+"headline": "No additional verified update included in this edition.",
+"summary": "Check official statements and reliable independent reporting before publishing a new claim.",
+"source": "RadiantWaves Media",
+"url": "https://english.www.gov.cn/"
+},
+{
+"name": "Vladimir Putin",
+"role": "President of Russia",
+"headline": "Russia and Ukraine announce a local ceasefire arrangement.",
+"summary": "Reuters reports a planned local ceasefire for humanitarian aid and evacuation, alongside plans for further technical-level talks. This is not a comprehensive peace agreement.",
+"source": "Reuters",
+"url": "https://www.reuters.com/world/europe/russia-ukraine-agree-ceasefire-embattled-town-hold-peace-talks-next-month-2026-10-23/"
+}
+]
+},
+"sponsoredAdverts": [
+{
+"title": "Spices and Food Products",
+"description": "Discover the advertised product. Contact the advertiser for details, availability and terms.",
+"image": "assets/spices.jpeg",
+"label": "Sponsored",
+"source": "Advertiser",
+"url": ""
+},
+{
+"title": "Stonebreaker Product",
+"description": "Please consult the advertiser for product details, intended use and applicable safety information.",
+"image": "assets/stonebreaker.jpeg",
+"label": "Sponsored",
+"source": "Advertiser",
+"url": ""
+}
+],
+"radiantWavesPerspective": {
+"title": "Nigeria: What voters should demand before 2027",
+"text": "Nigerians should assess every party and candidate by their policies, public record, integrity and practical plans for the cost of living, employment, security and public services. Campaign promises should be tested against evidence, feasibility and measurable outcomes. Opposition cooperation may affect the contest, but no alliance or ticket should be treated as settled until it is formally confirmed.",
+"source": "RadiantWaves Media",
+"type": "Original editorial commentary"
+},
+"electionWatch": [
+{
+"election": "United States midterm elections",
+"date": "3 November 2026",
+"note": "Check official election authorities for final arrangements.",
+"source": "RadiantWaves Media"
+},
+{
+"election": "Spain snap election",
+"date": "29 November 2026",
+"note": "Date reported by the supplied Euronews article; verify with official electoral authorities.",
+"source": "Euronews",
+"url": "https://www.euronews.com/2026/10/05/what-does-spains-snap-election-mean-for-the-european-politics"
+},
+{
+"election": "South Sudan planned general election",
+"date": "22 December 2026",
+"note": "The date has been reported by ACI Africa. Monitor official election authority announcements for changes.",
+"source": "ACI Africa",
+"url": "https://www.aciafrica.org/news/22567/south-sudan-sets-date-for-long-awaited-first-ever-general-election"
+}
+],
+"sourcePolicy": {
+"originalContent": "RadiantWaves Media",
+"externalReporting": "Credit the original publisher and link directly to the specific report wherever available.",
+"verification": "Distinguish confirmed facts, allegations, forecasts, opinions and developing stories.",
+"corrections": "Correct material errors promptly and make clear when information has changed.",
+"advertising": "Sponsored content must be clearly labelled and kept distinct from independent editorial reporting."
+}
 }

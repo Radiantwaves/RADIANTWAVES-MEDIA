@@ -1,7 +1,5 @@
-
 /* =========================================================
    RADIANTWAVES MEDIA — SCRIPT.JS
-   News feed, Leaders Watch, source links and sponsored adverts
    ========================================================= */
 
 (() => {
@@ -41,13 +39,10 @@
 
   const $ = (id) => document.getElementById(id);
 
-  /* =========================================================
-     GENERAL HELPERS
-     ========================================================= */
+  /* GENERAL HELPERS */
 
   function setText(id, value) {
     const element = $(id);
-
     if (element && value !== undefined && value !== null) {
       element.textContent = String(value);
     }
@@ -77,7 +72,6 @@
     if (!value) return "";
 
     const date = new Date(value);
-
     if (Number.isNaN(date.getTime())) return String(value);
 
     return date.toLocaleDateString("en-GB", {
@@ -96,7 +90,6 @@
     const element = document.createElement(tag);
 
     if (className) element.className = className;
-
     if (text !== undefined && text !== null && text !== "") {
       element.textContent = String(text);
     }
@@ -139,7 +132,6 @@
     if (!target) return;
 
     target.replaceChildren();
-
     elements.forEach((element) => {
       if (element) target.appendChild(element);
     });
@@ -149,20 +141,24 @@
     return makeElement("p", "empty-message", message);
   }
 
+  /* FIX: accept body as another possible news-summary field. */
+
   function getSummary(item) {
     if (!item || typeof item !== "object") return "";
 
-    return item.summary || item.description || item.content || "";
+    return item.summary || item.description || item.content || item.body || "";
   }
+
+  /* FIX: accept link as well as url and sourceUrl. */
 
   function getStoryUrl(item) {
     if (!item || typeof item !== "object") return "";
 
-    return safeUrl(item.url || item.sourceUrl);
+    return safeUrl(item.url || item.sourceUrl || item.link);
   }
 
   function sourceMetadata(item) {
-    return item.source ? ["Source: " + item.source] : [];
+    return item && item.source ? ["Source: " + item.source] : [];
   }
 
   function appendMetadata(content, item, options = {}) {
@@ -193,9 +189,7 @@
     }
   }
 
-  /* =========================================================
-     STANDARD NEWS CARDS
-     ========================================================= */
+  /* STANDARD NEWS CARDS */
 
   function makeArticleCard(article, categoryLabel) {
     const card = makeElement("article", "card news-card");
@@ -214,7 +208,6 @@
     );
 
     const summary = getSummary(article);
-
     if (summary) content.appendChild(makeElement("p", "", summary));
 
     appendMetadata(content, article);
@@ -235,9 +228,7 @@
     return card;
   }
 
-  /* =========================================================
-     FEATURED STORY
-     ========================================================= */
+  /* FEATURED STORY */
 
   function injectFeaturedJsonLd(story) {
     if (!story || typeof story !== "object") return;
@@ -310,7 +301,6 @@
     );
 
     const body = getSummary(story);
-
     if (body) wrapper.appendChild(makeElement("p", "", body));
 
     appendMetadata(wrapper, story);
@@ -331,9 +321,7 @@
     injectFeaturedJsonLd(story);
   }
 
-  /* =========================================================
-     TOP STORIES
-     ========================================================= */
+  /* TOP STORIES */
 
   function renderTopStories(stories) {
     const container = $("top-stories-container");
@@ -354,9 +342,7 @@
     );
   }
 
-  /* =========================================================
-     CATEGORY NEWS
-     ========================================================= */
+  /* CATEGORY NEWS */
 
   function normaliseCategory(value) {
     const category = String(value || "").toLowerCase().trim();
@@ -409,9 +395,7 @@
     });
   }
 
-  /* =========================================================
-     LEADERS WATCH
-     ========================================================= */
+  /* LEADERS WATCH */
 
   function renderLeaderPhoto(item, displayName) {
     const imageUrl = safeUrl(
@@ -449,7 +433,6 @@
     }
 
     const image = document.createElement("img");
-
     image.className = "leader-photo";
     image.src = imageUrl;
     image.alt = "Photograph of " + displayName;
@@ -479,12 +462,40 @@
         .filter((item) => item && typeof item === "object")
         .map((item) => [item.name || item.id || "World leader", item]);
     } else if (updates && typeof updates === "object") {
-      entries = Object.entries(updates);
+      /*
+       * FIX: news.json may use:
+       * leadersWatch: { note: "...", leaders: [...] }
+       * Render only the leaders array, never the note as a leader.
+       */
+      if (Array.isArray(updates.leaders)) {
+        entries = updates.leaders
+          .filter((item) => item && typeof item === "object")
+          .map((item) => [item.name || item.id || "World leader", item]);
+      } else {
+        entries = Object.entries(updates).filter(
+          ([key, value]) =>
+            key !== "note" &&
+            value &&
+            typeof value === "object"
+        );
+      }
+    }
+
+    const note =
+      updates && !Array.isArray(updates) && typeof updates === "object"
+        ? updates.note
+        : "";
+
+    if (note) {
+      const noteElement = $("leaders-note");
+      if (noteElement) noteElement.textContent = String(note);
     }
 
     if (!entries.length) {
       replaceContents(grid, [
-        placeholder("Leaders Watch is awaiting verified updates for this edition.")
+        placeholder(
+          "Leaders Watch is awaiting verified updates for this edition."
+        )
       ]);
       return;
     }
@@ -505,6 +516,7 @@
       content.appendChild(
         makeElement("span", "news-category", "LEADERS WATCH")
       );
+
       content.appendChild(makeElement("h3", "leader-name", displayName));
 
       if (item.role) {
@@ -524,7 +536,6 @@
       }
 
       const summary = getSummary(item);
-
       if (summary) {
         content.appendChild(makeElement("p", "leader-summary", summary));
       }
@@ -549,20 +560,12 @@
             "text-link"
           )
         );
-      } else if (item.status) {
-        content.appendChild(
-          makeElement(
-            "p",
-            "small-note",
-            "No source link is attached. Check a reliable source before publishing a new statement."
-          )
-        );
       } else {
         content.appendChild(
           makeElement(
             "p",
             "small-note",
-            "A verified source link has not yet been supplied."
+            "No verified source link is attached. Check a reliable source before publishing a new statement."
           )
         );
       }
@@ -574,12 +577,7 @@
     replaceContents(grid, cards);
   }
 
-  /* =========================================================
-     BREAKING NEWS TICKER
-     Duplicates the headlines for a continuous CSS loop.
-     Slows the existing CSS animation without changing its
-     visual design.
-     ========================================================= */
+  /* BREAKING NEWS TICKER */
 
   function renderBreakingTicker(items) {
     const ticker = $("breaking-ticker");
@@ -622,23 +620,22 @@
 
     ticker.replaceChildren(buildSequence(false), buildSequence(true));
 
-    /*
-     * Make the ticker approximately 1.7 times slower when its
-     * animation is applied to .ticker-sequence in style.css.
-     */
+    /* Slow the existing ticker animation by approximately 70%. */
     ticker.querySelectorAll(".ticker-sequence").forEach((sequence) => {
       const animation = window.getComputedStyle(sequence).animationDuration;
       const seconds = parseFloat(animation);
 
-      if (animation.includes("s") && Number.isFinite(seconds) && seconds > 0) {
+      if (
+        animation.includes("s") &&
+        Number.isFinite(seconds) &&
+        seconds > 0
+      ) {
         sequence.style.animationDuration = (seconds * 1.7) + "s";
       }
     });
   }
-
-  /* =========================================================
-     MORNING SUMMARY AND EDITORIAL NOTE
-     ========================================================= */
+   
+  /* MORNING SUMMARY AND EDITORIAL NOTE */
 
   function renderMorningSummary(data) {
     setText(
@@ -654,16 +651,24 @@
     );
   }
 
-  /* =========================================================
-     BIG QUESTION AND THOUGHT FOR TODAY
-     ========================================================= */
+  /* BIG QUESTION AND THOUGHT FOR TODAY */
 
   function renderQuestionAndQuote(data) {
-    setText(
-      "big-question",
-      data.bigQuestion ||
-        "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?"
-    );
+    const questionElement = $("big-question");
+
+    if (questionElement) {
+      const questionData = data.bigQuestion;
+      let questionText = "";
+
+      if (typeof questionData === "string") {
+        questionText = questionData;
+      } else if (questionData && typeof questionData === "object") {
+        questionText = questionData.question || questionData.text || "";
+      }
+
+      questionElement.textContent = questionText ||
+        "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?";
+    }
 
     const quote = $("quote-of-the-day");
     if (!quote) return;
@@ -695,9 +700,7 @@
     if (credit) credit.textContent = author;
   }
 
-  /* =========================================================
-     BREAKING NEWS BRIEFS
-     ========================================================= */
+  /* BREAKING NEWS BRIEFS */
 
   function renderHistory(items) {
     const container = $("history-container");
@@ -753,9 +756,7 @@
     replaceContents(container, cards);
   }
 
-  /* =========================================================
-     NEWS ARCHIVE
-     ========================================================= */
+  /* NEWS ARCHIVE */
 
   function renderArchive(data) {
     const container = $("archive-list");
@@ -823,11 +824,7 @@
     replaceContents(container, cards);
   }
 
-  /* =========================================================
-     SPONSORED ADVERTS
-     FIX: displays image, subtitle, description, products
-     and the supplied link from news.json.
-     ========================================================= */
+  /* SPONSORED ADVERTS */
 
   function renderAdverts(items) {
     const container = $("sponsored-adverts");
@@ -849,15 +846,12 @@
         makeElement("span", "advert-label", item.label || "Sponsored")
       );
 
-      /*
-       * Advert image: reads paths such as assets/spices.jpeg
-       * and assets/stonebreaker.jpeg from news.json.
-       */
       if (item.image) {
         const imageUrl = safeUrl(item.image);
 
         if (imageUrl) {
           const image = document.createElement("img");
+
           image.className = "advert-image";
           image.src = imageUrl;
           image.alt = item.imageAlt || item.title || "Sponsored advert";
@@ -876,7 +870,10 @@
           image.addEventListener("error", () => {
             image.alt = "Advert image unavailable";
             image.style.display = "none";
-            console.error("RadiantWaves advert image could not load:", item.image);
+            console.error(
+              "RadiantWaves advert image could not load:",
+              item.image
+            );
           }, { once: true });
 
           card.appendChild(image);
@@ -892,7 +889,9 @@
       );
 
       if (item.subtitle) {
-        card.appendChild(makeElement("h4", "advert-subtitle", item.subtitle));
+        card.appendChild(
+          makeElement("h4", "advert-subtitle", item.subtitle)
+        );
       }
 
       const description = getSummary(item);
@@ -911,11 +910,6 @@
         card.appendChild(list);
       }
 
-      /*
-       * Accept either "link" or "url" from news.json.
-       * Ignore "#" placeholders and use the advertising email
-       * instead of sending visitors to the top of the page.
-       */
       const suppliedLink = item.url || item.link || "";
       const usableLink =
         suppliedLink.trim() && suppliedLink.trim() !== "#"
@@ -946,9 +940,7 @@
     replaceContents(container, cards);
   }
 
-  /* =========================================================
-     HERO VIDEO AND HEADLINES
-     ========================================================= */
+  /* HERO VIDEO AND HEADLINES */
 
   function renderHero(data) {
     const hero =
@@ -958,7 +950,8 @@
 
     setText(
       "hero-desc",
-      hero.description || "Connecting you to the stories shaping our world."
+      hero.description ||
+        "Connecting you to the stories shaping our world."
     );
 
     setText(
@@ -986,9 +979,7 @@
     }
   }
 
-  /* =========================================================
-     RENDER ALL SECTIONS
-     ========================================================= */
+  /* RENDER ALL SECTIONS */
 
   function renderAll(data) {
     renderHero(data);
@@ -1012,9 +1003,7 @@
     );
   }
 
-  /* =========================================================
-     LOAD NEWS.JSON
-     ========================================================= */
+  /* LOAD NEWS.JSON */
 
   async function loadNews() {
     try {
@@ -1056,22 +1045,24 @@
       ].forEach((id) => {
         const container = $(id);
 
-        if (container) replaceContents(container, [placeholder(message)]);
+        if (container) {
+          replaceContents(container, [placeholder(message)]);
+        }
       });
 
       Object.values(CATEGORY_TARGETS).forEach((id) => {
         const container = $(id);
 
-        if (container) replaceContents(container, [placeholder(message)]);
+        if (container) {
+          replaceContents(container, [placeholder(message)]);
+        }
       });
 
       setText("breaking-ticker", "News feed temporarily unavailable.");
     }
   }
 
-  /* =========================================================
-     VIDEO SOUND CONTROL
-     ========================================================= */
+  /* VIDEO SOUND CONTROL */
 
   function setupSoundButton() {
     const button = $("sound-button");
@@ -1121,9 +1112,7 @@
     updateButton();
   }
 
-  /* =========================================================
-     VIDEO SELECTION BUTTONS
-     ========================================================= */
+  /* VIDEO SELECTION BUTTONS */
 
   function setupVideoButtons() {
     const video = $("heroVideo");
@@ -1171,9 +1160,7 @@
     });
   }
 
-  /* =========================================================
-     VIDEO POLITENESS
-     ========================================================= */
+  /* VIDEO POLITENESS */
 
   function setupVideoPoliteness() {
     const video = $("heroVideo");
@@ -1204,9 +1191,7 @@
     });
   }
 
-  /* =========================================================
-     ADVERT REQUEST FORM
-     ========================================================= */
+  /* ADVERT REQUEST FORM */
 
   function buildMailto(form, formData) {
     const name = String(formData.get("Full name") || "").trim();
@@ -1227,7 +1212,8 @@
       "Name: " + name + "\n" +
       "Email: " + email + "\n" +
       "WhatsApp: " + (whatsapp || "Not supplied") + "\n" +
-      "Business / Organisation: " + (organisation || "Not supplied") + "\n" +
+      "Business / Organisation: " +
+      (organisation || "Not supplied") + "\n" +
       "Service required: " + service + "\n\n" +
       "Details:\n" + details
     );
@@ -1330,9 +1316,7 @@
     });
   }
 
-  /* =========================================================
-     MOBILE NAVIGATION
-     ========================================================= */
+  /* MOBILE NAVIGATION */
 
   function setupMobileNavigation() {
     const toggle = $("nav-toggle");
@@ -1373,9 +1357,7 @@
     });
   }
 
-  /* =========================================================
-     STARTUP
-     ========================================================= */
+  /* STARTUP */
 
   function start() {
     setupSoundButton();

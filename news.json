@@ -1,242 +1,261 @@
+
 {
-  "edition": "RadiantWaves Midday News & Global Update",
+  "edition": "RadiantWaves Media Midday News & Global Update",
   "date": "Saturday, 24 October 2026",
-  "tagline": "Gateway to Your World News — Connecting You to the World",
-  "hero": {
-    "title": "MIDDAY NEWS & GLOBAL UPDATE",
-    "subtitle": "World affairs, elections, public health and the issues shaping people's lives",
-    "image": "assets/midday-world-news.jpg",
-    "imageAlt": "Global news and world affairs"
+  "dateISO": "2026-10-24",
+  "brand": {
+    "name": "RadiantWaves Media Nigeria Ltd",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footer": "Connecting You Deeper to the World’s Most Important Stories",
+    "email": "info@radiantwavesmedia.com",
+    "supportEmail": "support@radiantwavesmedia.com",
+    "whatsapp": "+33 6 21 61 31 49"
   },
-  "summary": "Today's bulletin examines the US midterm-election debate over household costs, tensions between Canada and Washington, UK retail figures, protests in Paris, Typhoon Champi's impact in Taiwan, the Ebola response, and Nigeria's preparations for the 2027 elections. Developing claims should be checked against the linked reporting and official updates.",
+  "hero": {
+    "title": "MIDDAY WORLD NEWS: ECONOMY, HEALTH, POLITICS AND NIGERIA 2027",
+    "subtitle": "Your global midday briefing from RadiantWaves Media, connecting you to the stories that matter.",
+    "image": "assets/logo.png",
+    "video": "",
+    "videoPoster": "assets/logo.png",
+    "buttonText": "Explore Today's News"
+  },
+  "summary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC's published timetable lists 16 January 2027 for the presidential and National Assembly elections.",
+  "morningSummary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC's published timetable lists 16 January 2027 for the presidential and National Assembly elections.",
   "breaking": [
-    "US midterm elections are scheduled for 3 November 2026, with the cost of living a major campaign issue.",
-    "Nigeria's 2027 campaign season is taking shape as parties and opposition groups debate their strategies.",
-    "Health authorities continue surveillance and contact tracing following Nigeria's reported imported Ebola case."
+    "USA: A Reuters/Ipsos poll indicates that many Americans blame Trump's policies for prices rising faster than their earnings.",
+    "Canada: Mark Carney rejects US allegations of Canadian political interference in American midterm elections.",
+    "UK: Retail sales volumes fell by 0.4% in September, according to the Office for National Statistics.",
+    "Europe: Paris is preparing for further demonstrations following recent unrest.",
+    "Asia: Typhoon Champi left one person dead and hundreds injured in Taiwan.",
+    "Africa: Health officials are investigating possible links between Ebola cases in Nigeria and Kenya involving travel through Uganda.",
+    "Nigeria: The APC is opening its 2027 campaign in Kaduna as opposition groups continue discussions about a possible common candidate."
   ],
+  "breakingHistory": [],
+  "breakingNewsHistory": [],
   "featured": {
-    "title": "Nigeria 2027: Ask the Candidates for Answers, Not Just Promises",
-    "summary": "RadiantWaves Media invites presidential aspirants and their representatives to participate in fair, evidence-led interviews and submit written responses on the economy, security, electricity, public spending and measurable results.",
+    "id": "nigeria-2027-opposition-unity",
+    "title": "NIGERIA 2027: CAN THE OPPOSITION AGREE ON A COMMON PRESIDENTIAL CANDIDATE?",
     "category": "Nigeria Politics",
-    "image": "assets/political-interview-2027.jpg",
-    "source": "RadiantWaves Media",
-    "url": "https://radiantwavesmedia.com/"
+    "region": "Africa",
+    "summary": "Discussions about a possible common opposition candidate continue, but reporting describes disagreements involving the camps associated with Atiku Abubakar and Peter Obi. Differences over political platforms, leadership, candidate selection and party ambitions remain obstacles. A united ticket should not be assumed to have been agreed.",
+    "analysis": "The challenge for Nigeria's opposition is to turn discussions about unity into a credible and transparent arrangement. A successful coalition would need agreement on candidate selection, policy priorities, campaign organisation and how supporters of different parties would work together. A shared opposition position alone does not guarantee that voters will support a single candidate.",
+    "editorialPerspective": "RadiantWaves Media believes Nigerians should assess all parties by their policies, records, integrity and practical plans for the cost of living, employment, security and public services—not campaign promises alone.",
+    "source": "The Guardian Nigeria",
+    "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+    "image": "assets/leaders/atiku.jpg",
+    "imageAlt": "Nigeria's 2027 opposition discussions involving Atiku Abubakar and Peter Obi",
+    "published": "2026-10-19",
+    "verificationStatus": "Source checked; no final opposition agreement established",
+    "tags": [
+      "Nigeria 2027",
+      "Atiku Abubakar",
+      "Peter Obi",
+      "Opposition unity",
+      "Presidential election"
+    ]
   },
   "topStories": [
     {
-      "title": "USA: Cost of Living Looms Over Midterm Elections",
+      "id": "usa-economy-midterms",
+      "title": "USA: Rising Household Costs Put Pressure on Republicans Ahead of Midterms",
       "category": "USA",
-      "summary": "Rising household costs are a political vulnerability for President Donald Trump and Republican candidates ahead of the 3 November midterm elections. Reuters reports that a Reuters/Ipsos poll found many respondents blamed Trump's policies for prices rising faster than their earnings. Poll findings reflect public opinion and do not establish that government policy alone caused price increases.",
+      "region": "North America",
+      "summary": "Fuel and grocery costs are major concerns ahead of the 3 November midterm elections. A Reuters/Ipsos poll found that 78% of Americans surveyed blamed Trump's policies for prices rising faster than their earnings. The poll reflects public opinion and does not, by itself, establish the cause of every price increase.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/trump-foreign-policy-hits-voters-pocketbook-imperiling-republicans-midterms-2026-10-24/",
-      "image": "assets/news/usa-midterms.jpg",
-      "imageAlt": "United States midterm election campaign"
+      "published": "2026-10-24",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "Canada: Carney Rejects US Election-Interference Allegations",
+      "id": "canada-us-tensions",
+      "title": "CANADA: Carney Rejects US Allegations of Election Interference",
       "category": "Canada",
-      "summary": "Canadian Prime Minister Mark Carney has rejected US allegations that Canadian politicians are interfering in American midterm elections. The dispute adds to wider tensions over trade and tariffs. The allegations remain contested.",
+      "region": "North America",
+      "summary": "Canadian Prime Minister Mark Carney has rejected US allegations that Canadian politicians are interfering in American midterm elections. The dispute adds to tensions over tariffs, trade and diplomatic relations. The allegations remain contested.",
       "source": "Associated Press",
       "url": "https://apnews.com/article/9f18ee52d4c3a72fe8b2efaac579416f",
-      "image": "assets/news/canada-us.jpg",
-      "imageAlt": "Canada and United States flags"
+      "published": "2026-10-24",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "UK: Retail Sales Volumes Fell in September",
+      "id": "uk-retail-sales",
+      "title": "UK: Retail Sales Fall as Consumers Face Pressure Ahead of Christmas",
       "category": "United Kingdom",
-      "summary": "Official figures show retail sales volumes in Great Britain fell by 0.4% in September after rising in August. Sales volumes remained above their level a year earlier, indicating a mixed consumer picture rather than a uniform collapse in spending.",
+      "region": "Europe",
+      "summary": "Retail sales volumes in Great Britain fell by 0.4% in September, according to the Office for National Statistics. The decline follows a rise in August. Weak consumer confidence and pressure on household budgets are concerns for retailers heading into the Christmas trading period.",
       "source": "Office for National Statistics",
       "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026",
-      "image": "assets/news/uk-retail.jpg",
-      "imageAlt": "High street retail shops in the United Kingdom"
+      "published": "2026-10-23",
+      "verificationStatus": "Official statistics checked"
     },
     {
-      "title": "France: Paris Prepares for Further Demonstrations",
+      "id": "paris-protests",
+      "title": "EUROPE: Paris Prepares for Further Demonstrations",
       "category": "Europe",
-      "summary": "Businesses in parts of Paris have been boarding up shopfronts ahead of further demonstrations following violence during earlier protests. Authorities face the challenge of protecting residents and businesses while respecting peaceful protest. The scale of any further unrest remains developing news.",
+      "region": "Europe",
+      "summary": "Paris is preparing for further demonstrations following recent unrest and damage to businesses. Authorities face the challenge of protecting the public and property while respecting the right to peaceful protest.",
       "source": "Le Monde",
       "url": "https://www.lemonde.fr/en/politics/article/2026/10/23/worry-hovers-in-air-as-paris-boards-up-for-another-weekend-of-protests_6762472_5.html",
-      "image": "assets/news/paris-protests.jpg",
-      "imageAlt": "Paris streets ahead of demonstrations"
+      "published": "2026-10-23",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "Taiwan: Typhoon Champi Leaves One Dead and Hundreds Injured",
+      "id": "taiwan-typhoon-champi",
+      "title": "ASIA: Taiwan Assesses Damage After Typhoon Champi",
       "category": "Asia",
-      "summary": "Channel NewsAsia reported that Typhoon Champi left one person dead and 527 injured in Taiwan. The storm caused disruption, including power interruptions and transport impacts. Follow local authorities for current safety guidance and updated figures.",
+      "region": "Asia",
+      "summary": "Typhoon Champi swept past Taiwan on 24 October, leaving one person dead and 527 people injured, according to reports citing Taiwan's authorities. The storm damaged property, disrupted flights and cut electricity. It weakened as it moved north.",
       "source": "Channel NewsAsia",
       "url": "https://www.channelnewsasia.com/east-asia/taiwan-counts-1-dead-and-527-injured-after-typhoon-champi-sweeps-past-6488446",
-      "image": "assets/news/typhoon-champi.jpg",
-      "imageAlt": "Typhoon conditions and storm damage in Taiwan"
+      "published": "2026-10-24",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "Africa: Nigeria Continues Ebola Response and Contact Tracing",
+      "id": "africa-ebola-contact-tracing",
+      "title": "AFRICA: Health Officials Investigate Possible Links Between Ebola Cases",
       "category": "Africa",
-      "summary": "Nigerian authorities reported an imported Ebola case in Abuja and initiated public-health measures, including isolation and contact tracing. Reported genetic similarity between viruses identified in Nigeria and Kenya does not by itself prove that the patients met or that one directly infected the other. Follow official health updates for confirmed information.",
-      "source": "Nigeria Federal Ministry of Health",
-      "url": "https://health.gov.ng/fg-confirms-ebola-disease-case-in-fct-activates-public-health-response/",
-      "additionalSources": [
-        {
-          "name": "Federal Ministry of Information",
-          "url": "https://fmino.gov.ng/fg-provides-update-on-fct-ebola-case-as-genetic-analysis-shows-virus-is-related-to-virus-identified-in-kenya/"
-        },
-        {
-          "name": "World Health Organization",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622"
-        }
-      ],
-      "image": "assets/news/ebola-response.jpg",
-      "imageAlt": "Public health response and disease surveillance"
+      "region": "Africa",
+      "summary": "Health officials are investigating whether the first confirmed Ebola patients in Nigeria and Kenya crossed paths at Uganda's Entebbe International Airport. Nigerian authorities reported contact tracing after a case involving a traveller who had returned from Uganda. The investigation is ongoing, and a possible connection between cases should not be treated as proof of where infection occurred.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/aad964dbbbca2f39e00739108ef7fc0a",
+      "published": "2026-10-23",
+      "verificationStatus": "Source checked; investigation ongoing"
     },
     {
-      "title": "Nigeria: Tinubu Campaign Activity Reported in Kaduna",
+      "id": "nigeria-apc-kaduna-campaign",
+      "title": "NIGERIA: APC Opens 2027 Campaign in Kaduna",
       "category": "Nigeria Politics",
-      "summary": "Reports said President Bola Tinubu's re-election campaign activity was scheduled to begin in Kaduna on 24 October. Voters will want evidence and clear plans on living costs, insecurity, electricity, jobs and public spending. Confirm event details with the campaign and reputable reporting before updating this story.",
+      "region": "Africa",
+      "summary": "The APC is opening its 2027 re-election campaign in Kaduna on 24 October. The campaign comes as voters continue to assess the administration's record on living costs, security, employment and public services. A campaign announcement is not evidence of electoral support or of future results.",
       "source": "Punch",
       "url": "https://punchng.com/2027-tinubu-kicks-off-campaign-in-kaduna-october-24/",
-      "additionalSources": [
-        {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/2026/10/24/the-road-to-2027-runs-through-kaduna-but-the-north-is-not-a-number/"
-        }
-      ],
-      "image": "assets/news/nigeria-campaign.jpg",
-      "imageAlt": "Nigerian political campaign"
+      "published": "2026-10-24",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "Nigeria: Opposition Unity Talks Face Difficult Choices",
+      "id": "nigeria-opposition-unity",
+      "title": "NIGERIA 2027: Atiku and Obi Camps Face Challenges Over a Common Ticket",
       "category": "Nigeria Politics",
-      "summary": "Reporting describes discussions among opposition figures and groups about a possible common presidential candidate for 2027, including camps associated with Atiku Abubakar and Peter Obi. Differences over leadership, party platforms and candidate selection remain obstacles. A unified ticket is not guaranteed.",
+      "region": "Africa",
+      "summary": "Opposition figures continue to discuss a possible consensus presidential candidate. Reporting describes disagreements over party platforms, candidate selection and political leadership. No common ticket should be presented as agreed unless the relevant parties formally confirm it.",
       "source": "The Guardian Nigeria",
       "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
-      "image": "assets/news/opposition-talks.jpg",
-      "imageAlt": "Political discussions ahead of Nigeria's 2027 election"
+      "published": "2026-10-19",
+      "verificationStatus": "Source checked"
     },
     {
-      "title": "Global Economy: Energy Prices and Markets Remain Sensitive to Geopolitical Risks",
+      "id": "nigeria-voter-priorities",
+      "title": "NIGERIA 2027: Kaduna Campaign Highlights the Importance of Voter Accountability",
+      "category": "Nigeria Politics",
+      "region": "Africa",
+      "summary": "The Kaduna campaign opening places attention on the North's electoral importance and on the issues that may shape voter choices. Security, food prices, employment, public services, electoral transparency and measurable delivery should be central to scrutiny of every party.",
+      "source": "Channels Television",
+      "url": "https://www.channelstv.com/2026/10/24/the-road-to-2027-runs-through-kaduna-but-the-north-is-not-a-number/",
+      "published": "2026-10-24",
+      "verificationStatus": "Source checked; analysis and political assessments are attributed to the publisher"
+    },
+    {
+      "id": "global-oil-markets",
+      "title": "GLOBAL ECONOMY: Oil Prices and Market Uncertainty Raise Cost Concerns",
       "category": "Business",
-      "summary": "Geopolitical tensions, trade disputes and uncertainty over energy supplies can influence oil prices and financial markets, with possible effects on transport, food distribution and inflation. Market movements have multiple causes and should not be attributed to a single event without evidence.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/trump-foreign-policy-hits-voters-pocketbook-imperiling-republicans-midterms-2026-10-24/",
-      "image": "assets/news/global-markets.jpg",
-      "imageAlt": "Global financial markets and energy prices"
+      "region": "Global",
+      "summary": "Middle East tensions and concerns about energy supplies have contributed to volatility in oil prices and global markets. Higher energy costs can feed into transport, food distribution and household bills. Market movements can change quickly, so current prices should be checked before publication.",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/live/2026/oct/23/global-stocks-fall-ai-fears-grow-british-retail-sales-fall-business-live-latest-news",
+      "published": "2026-10-23",
+      "verificationStatus": "Source checked; market figures require a current update"
     }
   ],
   "categories": {
     "World": [],
     "USA": [],
+    "Canada": [],
+    "United Kingdom": [],
     "Europe": [],
     "Africa": [],
     "Asia": [],
+    "Australia": [],
+    "Nigeria Politics": [],
     "Business": [],
-    "Technology": [],
-    "Nigeria Politics": []
+    "Technology": []
   },
   "electionWatch": [
     {
       "country": "United States",
-      "date": "3 November 2026",
-      "summary": "US midterm elections are scheduled for 3 November. Voters will choose members of Congress and decide a range of state and local contests.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/trump-foreign-policy-hits-voters-pocketbook-imperiling-republicans-midterms-2026-10-24/"
+      "event": "Midterm elections",
+      "date": "2026-11-03",
+      "status": "Scheduled",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/7fc70f244e14a16e55450cf8b89d4651"
     },
     {
       "country": "Nigeria",
-      "date": "16 January 2027",
-      "summary": "The reported 2027 calendar lists presidential and National Assembly elections for 16 January and governorship and State House of Assembly elections for 6 February. Check INEC's current official timetable before publication or updating these dates.",
-      "source": "INEC",
+      "event": "Presidential and National Assembly elections",
+      "date": "2027-01-16",
+      "status": "Date listed in INEC's published election calendar",
+      "source": "Independent National Electoral Commission",
       "url": "https://www.inecnigeria.org/elections/calendar/"
     },
     {
       "country": "South Sudan",
-      "date": "22 December 2026",
-      "summary": "General elections have been planned for 22 December 2026. Given the country's transitional political context, monitor the National Elections Commission for any change to the timetable.",
-      "source": "South Sudan National Elections Commission",
-      "url": "https://nec.gov.ss/frequently-asked-questions/"
+      "event": "Planned first general election",
+      "date": "2026-12-22",
+      "status": "Date reported; check official announcements for any changes",
+      "source": "ACI Africa",
+      "url": "https://www.aciafrica.org/news/22567/south-sudan-sets-date-for-long-awaited-first-ever-general-election"
     }
   ],
   "publicInterestFeature": {
-    "title": "2027 Presidential Questions: Where Are the Answers?",
-    "eyebrow": "RADIANTWAVES MEDIA — PUBLIC INTEREST INTERVIEW & RIGHT-OF-REPLY INITIATIVE",
-    "intro": "As Nigeria approaches the 2027 general election, RadiantWaves Media Nigeria Ltd invites declared and prospective presidential aspirants, candidates, campaign organisations and authorised representatives to share their plans, answer public-interest questions and provide evidence that voters can examine.",
-    "purpose": "Our aim is to help the public compare policies, records and measurable commitments fairly. We welcome interview requests, written opinions, policy documents and evidence-based responses from candidates across political parties.",
-    "questionsHeading": "Core questions for every participating aspirant",
-    "questions": [
-      {
-        "number": 1,
-        "question": "Cost of Living and the Economy",
-        "detail": "What practical steps would you take to address inflation, food prices, jobs, wages and household purchasing power? What targets and timelines would you publish?"
-      },
-      {
-        "number": 2,
-        "question": "Fuel, Energy and Electricity",
-        "detail": "What is your plan for fuel affordability, energy security and reliable electricity? How would you fund the plan and measure progress?"
-      },
-      {
-        "number": 3,
-        "question": "Security and Public Safety",
-        "detail": "How would your administration improve security, protect communities and strengthen accountability for the use of security resources?"
-      },
-      {
-        "number": 4,
-        "question": "Public Spending and Accountability",
-        "detail": "How would you make public contracts, budgets, borrowing and government spending more transparent, and how would citizens track delivery?"
-      },
-      {
-        "number": 5,
-        "question": "Record in Public Office",
-        "detail": "What verifiable results from your previous public service or leadership experience demonstrate your ability to deliver the promises you are making?"
-      },
-      {
-        "number": 6,
-        "question": "Jobs, Education and Health",
-        "detail": "What measurable commitments would you make on employment, skills, schools and access to healthcare, and how would you report progress?"
-      },
-      {
-        "number": 7,
-        "question": "First 100 Days and First Year",
-        "detail": "What three priorities would you pursue first, what would they cost, and what independent evidence would show whether they had worked?"
-      }
-    ],
-    "participation": {
-      "invitation": "Presidential aspirants and authorised representatives are invited to request a journalistic interview or submit a written response or opinion article addressing these questions.",
-      "submissionGuidance": [
-        "Identify the candidate and the authorised person submitting the response.",
-        "Provide a short biography and the candidate's current political role or declared status.",
-        "Answer the questions directly and include supporting documents, data or official links where available.",
-        "State clearly whether claims are proposals, targets, completed actions or allegations.",
-        "Provide contact details for verification and follow-up."
-      ],
-      "readerParticipation": "Readers may suggest additional public-interest questions for consideration. Questions should be relevant, fair and applicable consistently to participating candidates.",
-      "contactEmail": "info@radiantwavesmedia.com",
-      "contactEmailSecondary": "support@radiantwavesmedia.com",
-      "whatsapp": "+33 6 21 61 31 49",
-      "website": "https://radiantwavesmedia.com/"
-    },
-    "editorialStandards": [
-      "RadiantWaves will seek to apply the same core questions and comparable standards to participating candidates, while allowing relevant follow-up questions.",
-      "Claims and documents will be checked as far as reasonably possible against reliable sources and independent evidence.",
-      "A candidate's statement will be identified as that candidate's position and will not automatically be presented as an established fact.",
-      "Candidates will have a reasonable opportunity to respond to material, relevant allegations before publication where practicable.",
-      "Participation, non-participation or a delayed response will not by itself be treated as proof of wrongdoing.",
-      "Publication decisions remain subject to verification, editorial judgement, available space and applicable law. An invitation does not guarantee publication."
-    ],
-    "closing": "The public deserves more than slogans. We invite candidates to explain their plans, show their evidence and be judged fairly by the electorate.",
-    "image": "assets/political-interview-2027.jpg",
-    "imageAlt": "RadiantWaves Media public-interest presidential interview initiative"
+    "title": "What Should Voters Demand From Their Leaders?",
+    "category": "Public Interest",
+    "summary": "As elections approach, citizens face important choices about economic results, security, integrity and the quality of public services.",
+    "body": "Campaign promises should be assessed against evidence. Voters can examine past performance, published policies, realistic funding plans and independent reporting. Accountability requires measurable commitments and honest explanations when targets are missed.",
+    "source": "RadiantWaves Media Editorial Desk",
+    "url": "",
+    "verificationStatus": "Original editorial feature"
   },
   "leadersWatch": {
-    "note": "No verified update is published here unless the newsroom can identify a reliable source. Check the original source before publishing a new statement or claim.",
+    "note": "No verified update is published unless the newsroom can identify a reliable source. Check the original source before publishing a new statement or claim.",
     "leaders": []
   },
+  "sponsoredAdverts": [
+    {
+      "id": "spices-advert",
+      "title": "Discover Our Spices",
+      "description": "Explore the advertised spice products. Contact the advertiser for product details, availability and orders.",
+      "image": "assets/spices.jpeg",
+      "imageAlt": "Spice products advertisement",
+      "sponsor": "Advertiser",
+      "label": "Sponsored",
+      "url": "",
+      "email": "info@radiantwavesmedia.com",
+      "active": true
+    },
+    {
+      "id": "stonebreaker-advert",
+      "title": "Stonebreaker Product Advert",
+      "description": "View the advertised Stonebreaker product. Check product details and suitability directly with the seller.",
+      "image": "assets/stonebreaker.jpeg",
+      "imageAlt": "Stonebreaker product advertisement",
+      "sponsor": "Advertiser",
+      "label": "Sponsored",
+      "url": "",
+      "email": "info@radiantwavesmedia.com",
+      "active": true
+    }
+  ],
+  "archive": [],
+  "archives": [],
+  "articles": [],
   "thoughtForToday": {
     "title": "RadiantWaves Thought for Today",
     "text": "Democracy grows stronger when leaders answer for their decisions and citizens judge them by evidence, not promises."
   },
   "todaysBigQuestion": {
     "title": "Today's Big Question",
-    "text": "With elections approaching in Nigeria and the United States, what should matter most to voters: economic results, security, or the integrity and accountability of political leaders?",
+    "text": "With elections approaching in Nigeria and the United States, should voters prioritise economic results, security, or the integrity of political leaders?",
     "prompt": "Share your views respectfully. Healthy debate begins with facts."
   },
-  "footer": "RadiantWaves Media Nigeria Ltd — Gateway to Your World News — Connecting You to the World.",
-  "editorialNote": "This bulletin reflects information prepared for Saturday, 24 October 2026. Developing stories may change as authorities and news organisations publish further verified updates. Check each source and the current official election timetable before publication."
+  "editorialNote": "RadiantWaves Media attributes reporting to its sources and distinguishes confirmed facts from allegations, opinion and developing reports. Political claims should be checked against original reporting and official records. Election dates and arrangements may change.",
+  "footer": "RadiantWaves Media — Gateway to Your World News — Connecting You to the World."
 }

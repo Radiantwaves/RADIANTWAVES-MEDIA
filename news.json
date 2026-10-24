@@ -14,21 +14,21 @@
   "hero": {
     "title": "MIDDAY WORLD NEWS: ECONOMY, HEALTH, POLITICS AND NIGERIA 2027",
     "subtitle": "Your global midday briefing from RadiantWaves Media, connecting you to the stories that matter.",
-    "image": "assets/logo.png",
+    "image": "./assets/logo.png",
     "video": "",
-    "videoPoster": "assets/logo.png",
+    "videoPoster": "./assets/logo.png",
     "buttonText": "Explore Today's News"
   },
-  "summary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC's published timetable lists 16 January 2027 for the presidential and National Assembly elections.",
-  "morningSummary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC's published timetable lists 16 January 2027 for the presidential and National Assembly elections.",
+  "summary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC has scheduled the Presidential and National Assembly elections for Saturday, 16 January 2027. The date remains the published schedule unless INEC officially announces a revision.",
+  "morningSummary": "The midday briefing examines economic pressure ahead of the US midterm elections, US–Canada tensions, falling British retail sales, demonstrations in Paris, Typhoon Champi's impact on Taiwan and Ebola contact tracing in Africa. In Nigeria, the APC is opening its 2027 campaign in Kaduna while opposition groups continue discussions about a possible common candidate. INEC has scheduled the Presidential and National Assembly elections for Saturday, 16 January 2027. The date remains the published schedule unless INEC officially announces a revision.",
   "breaking": [
     "USA: A Reuters/Ipsos poll indicates that many Americans blame Trump's policies for prices rising faster than their earnings.",
     "Canada: Mark Carney rejects US allegations of Canadian political interference in American midterm elections.",
     "UK: Retail sales volumes fell by 0.4% in September, according to the Office for National Statistics.",
     "Europe: Paris is preparing for further demonstrations following recent unrest.",
-    "Asia: Typhoon Champi left one person dead and hundreds injured in Taiwan.",
+    "Asia: Typhoon Champi left one person dead and hundreds injured in Taiwan, according to reports.",
     "Africa: Health officials are investigating possible links between Ebola cases in Nigeria and Kenya involving travel through Uganda.",
-    "Nigeria: The APC is opening its 2027 campaign in Kaduna as opposition groups continue discussions about a possible common candidate."
+    "Nigeria: INEC's published timetable schedules the Presidential and National Assembly elections for 16 January 2027. Any change should be confirmed through an official INEC announcement."
   ],
   "breakingHistory": [],
   "breakingNewsHistory": [],
@@ -42,10 +42,10 @@
     "editorialPerspective": "RadiantWaves Media believes Nigerians should assess all parties by their policies, records, integrity and practical plans for the cost of living, employment, security and public services—not campaign promises alone.",
     "source": "The Guardian Nigeria",
     "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
-    "image": "assets/leaders/atiku.jpg",
-    "imageAlt": "Nigeria's 2027 opposition discussions involving Atiku Abubakar and Peter Obi",
+    "image": "./assets/leaders/atiku.jpg",
+    "imageAlt": "Image accompanying coverage of Nigeria's 2027 opposition discussions involving Atiku Abubakar and Peter Obi",
     "published": "2026-10-19",
-    "verificationStatus": "Source checked; no final opposition agreement established",
+    "verificationStatus": "Reporting attributed to the publisher; no final opposition agreement established",
     "tags": [
       "Nigeria 2027",
       "Atiku Abubakar",
@@ -64,7 +64,7 @@
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/trump-foreign-policy-hits-voters-pocketbook-imperiling-republicans-midterms-2026-10-24/",
       "published": "2026-10-24",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Source attribution supplied; verify the original report before republication"
     },
     {
       "id": "canada-us-tensions",
@@ -75,7 +75,7 @@
       "source": "Associated Press",
       "url": "https://apnews.com/article/9f18ee52d4c3a72fe8b2efaac579416f",
       "published": "2026-10-24",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Source attribution supplied; verify the original report before republication"
     },
     {
       "id": "uk-retail-sales",
@@ -86,7 +86,7 @@
       "source": "Office for National Statistics",
       "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026",
       "published": "2026-10-23",
-      "verificationStatus": "Official statistics checked"
+      "verificationStatus": "Official source supplied; confirm that the linked bulletin supports the stated figures"
     },
     {
       "id": "paris-protests",
@@ -97,40 +97,40 @@
       "source": "Le Monde",
       "url": "https://www.lemonde.fr/en/politics/article/2026/10/23/worry-hovers-in-air-as-paris-boards-up-for-another-weekend-of-protests_6762472_5.html",
       "published": "2026-10-23",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Source attribution supplied; verify the original report before republication"
     },
     {
       "id": "taiwan-typhoon-champi",
       "title": "ASIA: Taiwan Assesses Damage After Typhoon Champi",
       "category": "Asia",
       "region": "Asia",
-      "summary": "Typhoon Champi swept past Taiwan on 24 October, leaving one person dead and 527 people injured, according to reports citing Taiwan's authorities. The storm damaged property, disrupted flights and cut electricity. It weakened as it moved north.",
+      "summary": "Reports say Typhoon Champi swept past Taiwan on 24 October, leaving one person dead and 527 people injured. The storm reportedly damaged property, disrupted flights and cut electricity. Confirm casualty and damage figures against the latest official update before republication.",
       "source": "Channel NewsAsia",
       "url": "https://www.channelnewsasia.com/east-asia/taiwan-counts-1-dead-and-527-injured-after-typhoon-champi-sweeps-past-6488446",
       "published": "2026-10-24",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Source attribution supplied; casualty figures require confirmation against the original report"
     },
     {
       "id": "africa-ebola-contact-tracing",
       "title": "AFRICA: Health Officials Investigate Possible Links Between Ebola Cases",
       "category": "Africa",
       "region": "Africa",
-      "summary": "Health officials are investigating whether the first confirmed Ebola patients in Nigeria and Kenya crossed paths at Uganda's Entebbe International Airport. Nigerian authorities reported contact tracing after a case involving a traveller who had returned from Uganda. The investigation is ongoing, and a possible connection between cases should not be treated as proof of where infection occurred.",
+      "summary": "Health officials are investigating whether the first confirmed Ebola patients in Nigeria and Kenya crossed paths at Uganda's Entebbe International Airport. Nigerian authorities reportedly began contact tracing after a case involving a traveller who had returned from Uganda. The investigation is ongoing; a possible connection between cases is not proof of where infection occurred.",
       "source": "Associated Press",
       "url": "https://apnews.com/article/aad964dbbbca2f39e00739108ef7fc0a",
       "published": "2026-10-23",
-      "verificationStatus": "Source checked; investigation ongoing"
+      "verificationStatus": "Source attribution supplied; investigation described as ongoing"
     },
     {
       "id": "nigeria-apc-kaduna-campaign",
       "title": "NIGERIA: APC Opens 2027 Campaign in Kaduna",
       "category": "Nigeria Politics",
       "region": "Africa",
-      "summary": "The APC is opening its 2027 re-election campaign in Kaduna on 24 October. The campaign comes as voters continue to assess the administration's record on living costs, security, employment and public services. A campaign announcement is not evidence of electoral support or of future results.",
+      "summary": "Reporting says the APC is opening its 2027 re-election campaign in Kaduna on 24 October. The campaign comes as voters continue to assess the administration's record on living costs, security, employment and public services. A campaign announcement is not evidence of electoral support or future results.",
       "source": "Punch",
       "url": "https://punchng.com/2027-tinubu-kicks-off-campaign-in-kaduna-october-24/",
       "published": "2026-10-24",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Source attribution supplied; verify the event and report before republication"
     },
     {
       "id": "nigeria-opposition-unity",
@@ -141,29 +141,29 @@
       "source": "The Guardian Nigeria",
       "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
       "published": "2026-10-19",
-      "verificationStatus": "Source checked"
+      "verificationStatus": "Reporting attributed to the publisher; no final agreement established"
     },
     {
       "id": "nigeria-voter-priorities",
       "title": "NIGERIA 2027: Kaduna Campaign Highlights the Importance of Voter Accountability",
       "category": "Nigeria Politics",
       "region": "Africa",
-      "summary": "The Kaduna campaign opening places attention on the North's electoral importance and on the issues that may shape voter choices. Security, food prices, employment, public services, electoral transparency and measurable delivery should be central to scrutiny of every party.",
+      "summary": "The Kaduna campaign opening places attention on the North's electoral importance and on the issues that may shape voter choices. Security, food prices, employment, public services, electoral transparency and measurable delivery are relevant issues for voters to examine across parties.",
       "source": "Channels Television",
       "url": "https://www.channelstv.com/2026/10/24/the-road-to-2027-runs-through-kaduna-but-the-north-is-not-a-number/",
       "published": "2026-10-24",
-      "verificationStatus": "Source checked; analysis and political assessments are attributed to the publisher"
+      "verificationStatus": "Source attribution supplied; analysis and political assessments should remain attributed to the publisher"
     },
     {
       "id": "global-oil-markets",
       "title": "GLOBAL ECONOMY: Oil Prices and Market Uncertainty Raise Cost Concerns",
       "category": "Business",
       "region": "Global",
-      "summary": "Middle East tensions and concerns about energy supplies have contributed to volatility in oil prices and global markets. Higher energy costs can feed into transport, food distribution and household bills. Market movements can change quickly, so current prices should be checked before publication.",
+      "summary": "Middle East tensions and concerns about energy supplies have contributed to uncertainty in oil prices and global markets. Higher energy costs can affect transport, food distribution and household bills. Market movements can change quickly, so current prices and the specific causes of movements should be checked before publication.",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/business/live/2026/oct/23/global-stocks-fall-ai-fears-grow-british-retail-sales-fall-business-live-latest-news",
       "published": "2026-10-23",
-      "verificationStatus": "Source checked; market figures require a current update"
+      "verificationStatus": "Source attribution supplied; current market figures require an update"
     }
   ],
   "categories": {
@@ -192,15 +192,29 @@
       "country": "Nigeria",
       "event": "Presidential and National Assembly elections",
       "date": "2027-01-16",
-      "status": "Date listed in INEC's published election calendar",
+      "displayDate": "Saturday, 16 January 2027",
+      "status": "Scheduled by INEC",
+      "note": "INEC's published timetable fixes the Presidential and National Assembly elections for 16 January 2027. This is the scheduled date. If the Commission revises the timetable, RadiantWaves Media will update this entry following an official INEC announcement.",
       "source": "Independent National Electoral Commission",
-      "url": "https://www.inecnigeria.org/elections/calendar/"
+      "url": "https://www.inecnigeria.org/elections/calendar/",
+      "lastChecked": "2026-10-24"
+    },
+    {
+      "country": "Nigeria",
+      "event": "Governorship and State House of Assembly elections",
+      "date": "2027-02-06",
+      "displayDate": "Saturday, 6 February 2027",
+      "status": "Scheduled by INEC",
+      "note": "This is the date listed in INEC's published timetable. Any revision should be reported only after an official announcement.",
+      "source": "Independent National Electoral Commission",
+      "url": "https://www.inecnigeria.org/elections/calendar/",
+      "lastChecked": "2026-10-24"
     },
     {
       "country": "South Sudan",
-      "event": "Planned first general election",
+      "event": "Planned general election",
       "date": "2026-12-22",
-      "status": "Date reported; check official announcements for any changes",
+      "status": "Previously reported date; confirm with official announcements before publication",
       "source": "ACI Africa",
       "url": "https://www.aciafrica.org/news/22567/south-sudan-sets-date-for-long-awaited-first-ever-general-election"
     }
@@ -223,7 +237,7 @@
       "id": "spices-advert",
       "title": "Discover Our Spices",
       "description": "Explore the advertised spice products. Contact the advertiser for product details, availability and orders.",
-      "image": "assets/spices.jpeg",
+      "image": "./assets/spices.jpeg",
       "imageAlt": "Spice products advertisement",
       "sponsor": "Advertiser",
       "label": "Sponsored",
@@ -235,7 +249,7 @@
       "id": "stonebreaker-advert",
       "title": "Stonebreaker Product Advert",
       "description": "View the advertised Stonebreaker product. Check product details and suitability directly with the seller.",
-      "image": "assets/stonebreaker.jpeg",
+      "image": "./assets/stonebreaker.jpeg",
       "imageAlt": "Stonebreaker product advertisement",
       "sponsor": "Advertiser",
       "label": "Sponsored",
@@ -256,6 +270,6 @@
     "text": "With elections approaching in Nigeria and the United States, should voters prioritise economic results, security, or the integrity of political leaders?",
     "prompt": "Share your views respectfully. Healthy debate begins with facts."
   },
-  "editorialNote": "RadiantWaves Media attributes reporting to its sources and distinguishes confirmed facts from allegations, opinion and developing reports. Political claims should be checked against original reporting and official records. Election dates and arrangements may change.",
+  "editorialNote": "RadiantWaves Media attributes reporting to its sources and distinguishes confirmed facts from allegations, opinion and developing reports. Political claims should be checked against original reporting and official records. Election dates should be treated as scheduled dates published by the relevant electoral authority and changed in our coverage only when an official revision is announced.",
   "footer": "RadiantWaves Media — Gateway to Your World News — Connecting You to the World."
 }

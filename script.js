@@ -1,5 +1,6 @@
 /* =========================================================
    RADIANTWAVES MEDIA — SCRIPT.JS
+   Complete corrected replacement
    ========================================================= */
 
 (() => {
@@ -132,6 +133,7 @@
     if (!target) return;
 
     target.replaceChildren();
+
     elements.forEach((element) => {
       if (element) target.appendChild(element);
     });
@@ -141,15 +143,18 @@
     return makeElement("p", "empty-message", message);
   }
 
-  /* FIX: accept body as another possible news-summary field. */
-
   function getSummary(item) {
     if (!item || typeof item !== "object") return "";
 
-    return item.summary || item.description || item.content || item.body || "";
+    return (
+      item.summary ||
+      item.description ||
+      item.content ||
+      item.body ||
+      item.text ||
+      ""
+    );
   }
-
-  /* FIX: accept link as well as url and sourceUrl. */
 
   function getStoryUrl(item) {
     if (!item || typeof item !== "object") return "";
@@ -157,23 +162,18 @@
     return safeUrl(item.url || item.sourceUrl || item.link);
   }
 
-  function sourceMetadata(item) {
-    return item && item.source ? ["Source: " + item.source] : [];
-  }
-
   function appendMetadata(content, item, options = {}) {
     const { showDate = true, datePrefix = "" } = options;
     const fragment = document.createDocumentFragment();
-    const sourceText = sourceMetadata(item).join(" · ");
 
-    if (sourceText) {
+    if (item.source) {
       fragment.appendChild(
-        makeElement("span", "story-source", sourceText)
+        makeElement("span", "story-source", "Source: " + item.source)
       );
     }
 
     if (showDate && item.date) {
-      if (sourceText) {
+      if (item.source) {
         fragment.appendChild(
           makeElement("span", "story-source", " · ")
         );
@@ -208,7 +208,10 @@
     );
 
     const summary = getSummary(article);
-    if (summary) content.appendChild(makeElement("p", "", summary));
+
+    if (summary) {
+      content.appendChild(makeElement("p", "", summary));
+    }
 
     appendMetadata(content, article);
 
@@ -234,15 +237,6 @@
     if (!story || typeof story !== "object") return;
 
     const url = getStoryUrl(story);
-    let domain = "";
-
-    if (url) {
-      try {
-        domain = new URL(url).hostname.replace(/^www\./, "");
-      } catch (_) {
-        domain = "";
-      }
-    }
 
     const jsonLd = {
       "@context": "https://schema.org",
@@ -264,8 +258,6 @@
       },
       mainEntityOfPage: url || undefined
     };
-
-    if (domain) jsonLd.isBasedOn = url;
 
     let tag = $("featured-jsonld");
 
@@ -300,8 +292,11 @@
       makeElement("h2", "", story.title || "Latest global news")
     );
 
-    const body = getSummary(story);
-    if (body) wrapper.appendChild(makeElement("p", "", body));
+    const summary = getSummary(story);
+
+    if (summary) {
+      wrapper.appendChild(makeElement("p", "", summary));
+    }
 
     appendMetadata(wrapper, story);
 
@@ -342,40 +337,134 @@
     );
   }
 
-  /* CATEGORY NEWS */
+  /* CATEGORY NORMALISATION */
 
   function normaliseCategory(value) {
-    const category = String(value || "").toLowerCase().trim();
+    const category = String(value || "")
+      .toLowerCase()
+      .trim()
+      .replace(/[_-]+/g, " ")
+      .replace(/\s+/g, " ");
 
     const aliases = {
       us: "usa",
-      "united states": "usa",
       "u.s.": "usa",
       "u.s.a.": "usa",
+      america: "usa",
+      "united states": "usa",
+      "united states of america": "usa",
+
       uk: "europe",
-      "united kingdom": "europe",
       britain: "europe",
       "great britain": "europe",
-      tech: "technology",
-      "world news": "world",
-      "african news": "africa",
+      "united kingdom": "europe",
+      "uk news": "europe",
+      france: "europe",
       "european news": "europe",
-      "asian news": "asia"
+
+      tech: "technology",
+      "digital technology": "technology",
+      "innovation and digital change": "technology",
+
+      international: "world",
+      global: "world",
+      "world news": "world",
+      "international affairs": "world",
+
+      "african news": "africa",
+      "asia news": "asia",
+      "asian news": "asia",
+
+      economy: "business",
+      markets: "business",
+      finance: "business",
+      "markets and the economy": "business",
+
+      "nigeria politics": "nigeria politics",
+      politics: "nigeria politics"
     };
 
     return aliases[category] || category;
   }
 
-  function renderCategoryArticles(articles) {
+  /*
+   * Collect articles from the supported JSON locations.
+   * Your current edition stores stories under topStories,
+   * so category rendering must not rely on data.articles alone.
+   */
+
+  function getAllArticles(data) {
+    const result = [];
+    const seen = new Set();
+
+    function addArticle(article, forcedCategory = "") {
+      if (!article || typeof article !== "object") return;
+
+      const copy = {
+        ...article,
+        category: article.category || forcedCategory || ""
+      };
+
+      const identity = [
+        copy.title || "",
+        copy.url || copy.sourceUrl || copy.link || "",
+        copy.source || ""
+      ].join("|");
+
+      if (seen.has(identity)) return;
+
+      seen.add(identity);
+      result.push(copy);
+    }
+
+    if (Array.isArray(data.articles)) {
+      data.articles.forEach((article) => addArticle(article));
+    }
+
+    if (Array.isArray(data.topStories)) {
+      data.topStories.forEach((article) => addArticle(article));
+    }
+
+    if (data.categories && typeof data.categories === "object") {
+      Object.entries(data.categories).forEach(([category, stories]) => {
+        if (Array.isArray(stories)) {
+          stories.forEach((article) => addArticle(article, category));
+        }
+      });
+    }
+
+    return result;
+  }
+
+  /* CATEGORY NEWS */
+
+  function renderCategoryArticles(data) {
+    const articles = getAllArticles(data);
+
     Object.entries(CATEGORY_TARGETS).forEach(([category, targetId]) => {
       const container = $(targetId);
       if (!container) return;
 
-      const matching = Array.isArray(articles)
-        ? articles.filter(
-            (article) => normaliseCategory(article.category) === category
-          )
-        : [];
+      let matching = articles.filter(
+        (article) =>
+          normaliseCategory(article.category) === category
+      );
+
+      /*
+       * The supplied JSON does not currently contain a dedicated
+       * World category. When necessary, show international reports
+       * from the available top stories instead of an empty section.
+       */
+      if (category === "world" && matching.length === 0) {
+        matching = articles.filter((article) => {
+          const articleCategory = normaliseCategory(article.category);
+
+          return (
+            articleCategory !== "nigeria politics" &&
+            articleCategory !== "technology"
+          );
+        });
+      }
 
       if (!matching.length) {
         replaceContents(container, [
@@ -462,11 +551,6 @@
         .filter((item) => item && typeof item === "object")
         .map((item) => [item.name || item.id || "World leader", item]);
     } else if (updates && typeof updates === "object") {
-      /*
-       * FIX: news.json may use:
-       * leadersWatch: { note: "...", leaders: [...] }
-       * Render only the leaders array, never the note as a leader.
-       */
       if (Array.isArray(updates.leaders)) {
         entries = updates.leaders
           .filter((item) => item && typeof item === "object")
@@ -486,15 +570,17 @@
         ? updates.note
         : "";
 
-    if (note) {
-      const noteElement = $("leaders-note");
-      if (noteElement) noteElement.textContent = String(note);
+    const noteElement = $("leaders-note");
+
+    if (noteElement) {
+      noteElement.textContent = note ||
+        "Check a reliable original source before publishing a new statement or claim.";
     }
 
     if (!entries.length) {
       replaceContents(grid, [
         placeholder(
-          "Leaders Watch is awaiting verified updates for this edition."
+          "No leader records are supplied in this edition. Restore the verified leader entries and image paths in news.json to display their profiles and photographs."
         )
       ]);
       return;
@@ -536,6 +622,7 @@
       }
 
       const summary = getSummary(item);
+
       if (summary) {
         content.appendChild(makeElement("p", "leader-summary", summary));
       }
@@ -550,12 +637,12 @@
         );
       }
 
-      const sourceUrl = getStoryUrl(item);
+      const url = getStoryUrl(item);
 
-      if (sourceUrl) {
+      if (url) {
         content.appendChild(
           makeLink(
-            sourceUrl,
+            url,
             item.linkText || "Read the source report ↗",
             "text-link"
           )
@@ -595,7 +682,7 @@
       return;
     }
 
-    const buildSequence = (hidden) => {
+    function buildSequence(hidden) {
       const sequence = makeElement(
         "span",
         "ticker-sequence" + (hidden ? " ticker-sequence--clone" : "")
@@ -616,13 +703,18 @@
       });
 
       return sequence;
-    };
+    }
 
-    ticker.replaceChildren(buildSequence(false), buildSequence(true));
+    ticker.replaceChildren(
+      buildSequence(false),
+      buildSequence(true)
+    );
 
     /* Slow the existing ticker animation by approximately 70%. */
     ticker.querySelectorAll(".ticker-sequence").forEach((sequence) => {
-      const animation = window.getComputedStyle(sequence).animationDuration;
+      const animation =
+        window.getComputedStyle(sequence).animationDuration;
+
       const seconds = parseFloat(animation);
 
       if (
@@ -634,13 +726,14 @@
       }
     });
   }
-   
-  /* MORNING SUMMARY AND EDITORIAL NOTE */
+
+  /* SUMMARY AND EDITORIAL NOTE */
 
   function renderMorningSummary(data) {
     setText(
       "morning-summary",
       data.morningSummary ||
+        data.summary ||
         "The latest global summary will appear here when published."
     );
 
@@ -651,29 +744,50 @@
     );
   }
 
-  /* BIG QUESTION AND THOUGHT FOR TODAY */
+  /* TODAY'S BIG QUESTION AND THOUGHT FOR TODAY */
 
   function renderQuestionAndQuote(data) {
     const questionElement = $("big-question");
 
     if (questionElement) {
-      const questionData = data.bigQuestion;
+      const questionData = data.bigQuestion || data.todaysBigQuestion;
       let questionText = "";
 
       if (typeof questionData === "string") {
         questionText = questionData;
       } else if (questionData && typeof questionData === "object") {
-        questionText = questionData.question || questionData.text || "";
+        questionText =
+          questionData.question ||
+          questionData.text ||
+          "";
       }
 
       questionElement.textContent = questionText ||
-        "When leaders make decisions about conflict, fuel prices and the economy, what should matter most: national security, economic stability or the everyday wellbeing of citizens?";
+        "What should voters expect from their leaders, and how should public promises be measured?";
+
+      if (
+        questionData &&
+        typeof questionData === "object" &&
+        questionData.prompt
+      ) {
+        const parent = questionElement.parentElement;
+        let prompt = parent
+          ? parent.querySelector(".big-question-prompt")
+          : null;
+
+        if (!prompt && parent) {
+          prompt = makeElement("p", "big-question-prompt");
+          questionElement.insertAdjacentElement("afterend", prompt);
+        }
+
+        if (prompt) prompt.textContent = questionData.prompt;
+      }
     }
 
     const quote = $("quote-of-the-day");
     if (!quote) return;
 
-    const quoteData = data.quoteOfTheDay;
+    const quoteData = data.quoteOfTheDay || data.thoughtForToday;
     let quoteText = "";
     let author = "RadiantWaves Media";
 
@@ -681,7 +795,10 @@
       quoteText = quoteData;
     } else if (quoteData && typeof quoteData === "object") {
       quoteText = quoteData.quote || quoteData.text || "";
-      author = quoteData.author || author;
+      author =
+        quoteData.author ||
+        quoteData.title ||
+        author;
     }
 
     if (!quoteText) {
@@ -700,7 +817,7 @@
     if (credit) credit.textContent = author;
   }
 
-  /* BREAKING NEWS BRIEFS */
+  /* BREAKING NEWS HISTORY */
 
   function renderHistory(items) {
     const container = $("history-container");
@@ -708,7 +825,9 @@
 
     if (!Array.isArray(items) || !items.length) {
       replaceContents(container, [
-        placeholder("No breaking news briefs are available.")
+        placeholder(
+          "No archived breaking-news briefs are available for this edition."
+        )
       ]);
       return;
     }
@@ -734,7 +853,10 @@
       );
 
       const summary = getSummary(item);
-      if (summary) card.appendChild(makeElement("p", "", summary));
+
+      if (summary) {
+        card.appendChild(makeElement("p", "", summary));
+      }
 
       if (item.source) {
         card.appendChild(
@@ -756,19 +878,67 @@
     replaceContents(container, cards);
   }
 
-  /* NEWS ARCHIVE */
+  /* ARCHIVE */
 
   function renderArchive(data) {
     const container = $("archive-list");
     if (!container) return;
 
-    const stories = [
-      ...(Array.isArray(data.topStories) ? data.topStories : []),
-      ...(Array.isArray(data.articles) ? data.articles : [])
-    ];
+    const stories = [];
+    const seen = new Set();
 
-    if (data.featured && typeof data.featured === "object") {
-      stories.unshift(data.featured);
+    function addStory(story) {
+      if (!story || typeof story !== "object") return;
+
+      const key = [
+        story.title || "",
+        story.url || story.sourceUrl || story.link || ""
+      ].join("|");
+
+      if (seen.has(key)) return;
+
+      seen.add(key);
+      stories.push(story);
+    }
+
+    if (data.featured) addStory(data.featured);
+
+    if (Array.isArray(data.topStories)) {
+      data.topStories.forEach(addStory);
+    }
+
+    if (Array.isArray(data.articles)) {
+      data.articles.forEach(addStory);
+    }
+
+    /*
+     * Accept real archive records if added to news.json later.
+     * These fields must contain actual records, not just titles.
+     */
+    const archived = data.archives || data.archiveRecords || data.archive;
+
+    if (Array.isArray(archived)) {
+      archived.forEach((edition) => {
+        if (Array.isArray(edition.articles)) {
+          edition.articles.forEach((article) => {
+            addStory({
+              ...article,
+              date: article.date || edition.date,
+              edition: edition.edition || edition.title || ""
+            });
+          });
+        } else if (Array.isArray(edition.topStories)) {
+          edition.topStories.forEach((article) => {
+            addStory({
+              ...article,
+              date: article.date || edition.date,
+              edition: edition.edition || edition.title || ""
+            });
+          });
+        } else {
+          addStory(edition);
+        }
+      });
     }
 
     if (!stories.length) {
@@ -785,29 +955,30 @@
         makeElement("h3", "", article.title || "News report")
       );
 
-      const metadataLine = makeElement("p", "story-meta");
+      const metadata = makeElement("p", "story-meta");
 
       const parts = [
         article.category || "Global news",
-        article.source || ""
+        article.source || "",
+        article.edition || ""
       ].filter(Boolean);
 
       if (parts.length) {
-        metadataLine.appendChild(
+        metadata.appendChild(
           makeElement("span", "", parts.join(" · "))
         );
       }
 
       if (article.date) {
         if (parts.length) {
-          metadataLine.appendChild(makeElement("span", "", " · "));
+          metadata.appendChild(makeElement("span", "", " · "));
         }
 
-        metadataLine.appendChild(makeTimeElement(article.date));
+        metadata.appendChild(makeTimeElement(article.date));
       }
 
-      if (metadataLine.childNodes.length) {
-        card.appendChild(metadataLine);
+      if (metadata.childNodes.length) {
+        card.appendChild(metadata);
       }
 
       const url = getStoryUrl(article);
@@ -858,17 +1029,7 @@
           image.loading = "lazy";
           image.decoding = "async";
 
-          image.style.display = "block";
-          image.style.width = "100%";
-          image.style.maxWidth = "100%";
-          image.style.height = "auto";
-          image.style.maxHeight = "260px";
-          image.style.objectFit = "contain";
-          image.style.margin = "12px 0";
-          image.style.borderRadius = "8px";
-
           image.addEventListener("error", () => {
-            image.alt = "Advert image unavailable";
             image.style.display = "none";
             console.error(
               "RadiantWaves advert image could not load:",
@@ -911,15 +1072,15 @@
       }
 
       const suppliedLink = item.url || item.link || "";
-      const usableLink =
+      const validLink =
         suppliedLink.trim() && suppliedLink.trim() !== "#"
           ? safeUrl(suppliedLink, true)
           : "";
 
-      if (usableLink) {
+      if (validLink) {
         card.appendChild(
           makeLink(
-            usableLink,
+            validLink,
             item.button || item.linkText || "Find out more ↗",
             "text-link"
           )
@@ -940,17 +1101,21 @@
     replaceContents(container, cards);
   }
 
-  /* HERO VIDEO AND HEADLINES */
+  /* HERO */
 
   function renderHero(data) {
     const hero =
       data.hero && typeof data.hero === "object" ? data.hero : {};
 
-    setText("hero-title", hero.title || "Gateway to Your World News");
+    setText(
+      "hero-title",
+      hero.title || "Gateway to Your World News"
+    );
 
     setText(
       "hero-desc",
       hero.description ||
+        hero.subtitle ||
         "Connecting you to the stories shaping our world."
     );
 
@@ -985,12 +1150,21 @@
     renderHero(data);
     renderFeaturedStory(data.featured);
     renderTopStories(data.topStories);
-    renderCategoryArticles(data.articles);
+
+    /* Pass the entire JSON object, not data.articles alone. */
+    renderCategoryArticles(data);
+
     renderLeadersWatch(data);
     renderBreakingTicker(data.breaking);
     renderMorningSummary(data);
     renderQuestionAndQuote(data);
-    renderHistory(data.breakingHistory);
+
+    renderHistory(
+      data.breakingHistory ||
+      data.breakingNewsHistory ||
+      data.history
+    );
+
     renderArchive(data);
     renderAdverts(data.sponsoredAdverts);
 
@@ -998,7 +1172,9 @@
 
     document.dispatchEvent(
       new CustomEvent("radiantwaves:newsloaded", {
-        detail: { edition: data.edition || data.date || "" }
+        detail: {
+          edition: data.edition || data.date || ""
+        }
       })
     );
   }
@@ -1160,7 +1336,7 @@
     });
   }
 
-  /* VIDEO POLITENESS */
+  /* REDUCED MOTION AND PAGE VISIBILITY */
 
   function setupVideoPoliteness() {
     const video = $("heroVideo");
@@ -1193,7 +1369,7 @@
 
   /* ADVERT REQUEST FORM */
 
-  function buildMailto(form, formData) {
+  function buildMailto(formData) {
     const name = String(formData.get("Full name") || "").trim();
     const email = String(formData.get("Email address") || "").trim();
     const whatsapp = String(formData.get("WhatsApp number") || "").trim();
@@ -1250,7 +1426,7 @@
       const formData = new FormData(form);
 
       if (!CONFIG.FORM_ACCESS_KEY) {
-        window.location.href = buildMailto(form, formData);
+        window.location.href = buildMailto(formData);
         return;
       }
 
@@ -1294,6 +1470,7 @@
             form,
             "Thank you — your request has been sent. Our advertising team will reply to your email address."
           );
+
           form.reset();
         } else {
           throw new Error(
@@ -1309,7 +1486,7 @@
           true
         );
 
-        window.location.href = buildMailto(form, formData);
+        window.location.href = buildMailto(formData);
       } finally {
         if (submitButton) submitButton.disabled = false;
       }
@@ -1365,6 +1542,7 @@
     setupVideoPoliteness();
     setupMobileNavigation();
     setupAdvertForm();
+
     loadNews();
 
     if (CONFIG.NEWS_REFRESH_INTERVAL > 0) {

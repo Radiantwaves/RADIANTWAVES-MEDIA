@@ -1,431 +1,510 @@
-
 {
-  "edition": "Night News, Breaking News & Global Update",
-  "date": "Sunday, 25 October 2026",
-  "dateISO": "2026-10-25",
+  "edition": "Night News",
+  "date": "2026-10-25",
+  "day": "Sunday",
   "brand": "RadiantWaves Media Nigeria Ltd",
-  "slogan": "Gateway to Your World News — Connecting You to the World",
+  "headline": "Global News Tonight: France Protests, Public Health and Political Accountability",
+  "summary": "RadiantWaves Media brings you a global news update for Sunday, 25 October 2026. France is facing renewed pressure following large demonstrations over living costs and public services. In East and Central Africa, Ebola surveillance and cross-border measures remain important public-health concerns. Our newsroom continues to monitor developments in the United States, Canada, the United Kingdom, Europe, Asia, Australia and Nigerian politics. Reports are attributed to their original publishers, and unverified claims are not presented as established facts.",
+  "morningSummary": "Today's global briefing focuses on political accountability, public services, public health, international relations and technology. Follow the original reports linked in each story for further details and updates.",
+  "editorialNote": "This is a manually prepared news edition. News can change quickly. Statements are attributed to the named speaker or publisher; summaries are not presented as direct quotations. Where a new statement or development could not be independently verified, the item is labelled accordingly. Confirm developing reports before republishing them as breaking news.",
   "hero": {
-    "title": "Night News & Global Update",
-    "subtitle": "Breaking developments, world affairs, political leadership, Nigerian politics and the future of technology.",
+    "title": "Global News Tonight",
+    "description": "The stories shaping politics, public health, international relations and public accountability.",
+    "date": "Sunday, 25 October 2026",
     "video": "assets/video1.mp4"
   },
-  "summary": "Tonight's global update covers demonstrations in France, the upcoming US midterm elections, a shooting in Tallahassee, the forthcoming Canada–EU summit, attacks reported in Russia's Belgorod region, diplomatic discussions involving the United States and Iran, Nigeria's 2027 election campaign, and developments in artificial intelligence and cybersecurity. Reports are attributed to their sources, and developing stories remain subject to verification.",
-  "editorialNote": "RadiantWaves Media separates confirmed announcements from claims made by officials, political figures and other sources. Casualty figures, investigations, election arrangements and diplomatic proposals can change. Check the linked reports for the latest updates. Do not treat an alleged agreement or reported proposal as a confirmed outcome.",
   "breakingNews": [
     {
       "title": "France: unions call for further demonstrations",
       "category": "Europe",
-      "summary": "Reuters reports that French unions and protest groups are calling for another nationwide demonstration on 31 October and a strike on 5 November. Organisers cite wages, living costs and public services. The scale of future demonstrations remains uncertain.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
-      "status": "Reported on 25 October 2026"
-    },
-    {
-      "title": "Florida shooting: at least 12 people injured",
-      "category": "USA",
-      "summary": "Reuters reports that at least 12 people were injured in a shooting near Florida A&M University's Bragg Memorial Stadium in Tallahassee after a homecoming football game. Police said 11 victims suffered gunshot wounds. The investigation was continuing, and no arrests had been reported in the cited update.",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034",
-      "status": "Developing investigation"
-    },
-    {
-      "title": "Russia's Belgorod region reports deadly drone attacks",
-      "category": "Europe",
-      "summary": "Reuters reported that local authorities attributed drone attacks in Russia's Belgorod region to Ukraine. Authorities reported deaths, injuries and damage to residential and commercial property. The attribution and casualty figures should remain clearly attributed to the reporting authorities.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/",
-      "status": "Reported; wartime claims require careful attribution"
-    },
-    {
-      "title": "Possible Trump–Putin–Xi summit under discussion",
-      "category": "World",
-      "summary": "A Kremlin official says preparations are under way for a possible trilateral meeting involving Donald Trump, Vladimir Putin and Xi Jinping, potentially around the November APEC summit in China. This remains a reported diplomatic proposal; do not describe a final date, venue or agenda as confirmed.",
-      "source": "Saudi Gazette",
-      "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china",
-      "status": "Proposed meeting; final arrangements unconfirmed"
-    },
-    {
-      "title": "Washington and Tehran: diplomatic messages reportedly continue",
-      "category": "Middle East",
-      "summary": "The supplied Associated Press report describes diplomatic messages passing between Iran and the United States through intermediaries. Negotiations and their possible outcomes remain uncertain. Verify the full report and any subsequent official statements before publishing a more definitive account.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/4779a3deeb1a23f59414164532d5c885",
-      "status": "Reported diplomatic contact; outcome unconfirmed"
-    },
-    {
-      "title": "Canada–EU summit announced for Montréal",
-      "category": "Canada",
-      "summary": "Canada's government announced that Prime Minister Mark Carney will host a Canada–European Union summit in Montréal on 29–30 October. The agenda includes trade, economic resilience, defence, energy, technology and cooperation between Canada and the EU.",
-      "source": "Prime Minister of Canada",
-      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal",
-      "status": "Officially announced"
-    },
-    {
-      "title": "North Korean leader visits China's border city",
-      "category": "Asia",
-      "summary": "The Wall Street Journal reports that Kim Jong Un visited Dandong in China and crossed a newly completed bridge over the Yalu River. The report describes the visit as a sign of closer engagement between Pyongyang and Beijing. Further diplomatic developments should be confirmed through reliable reporting.",
-      "source": "The Wall Street Journal",
-      "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069",
-      "status": "Reported"
-    }
-  ],
-  "featuredStory": {
-    "title": "AI innovation brings new opportunities — and cybersecurity risks",
-    "category": "Technology",
-    "date": "2026-10-25",
-    "summary": "Artificial intelligence is becoming more capable of helping developers identify software vulnerabilities. That can help organisations strengthen security, but similar capabilities can also be misused. Chinese AI company Moonshot says it reduced the cyber-offensive capabilities of its Kimi K3.1 Pro model before its planned open-weight release. Its benchmark claims have not been independently verified. The broader challenge is to encourage innovation while protecting systems, personal information and essential services.",
-    "source": "Reuters",
-    "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
-  },
-  "topStories": [
-    {
-      "title": "USA: midterm elections approach on 3 November",
-      "category": "USA",
-      "summary": "The upcoming midterm elections put the economy, cost of living, trade and foreign policy in focus. Polls should be read with attention to their fieldwork dates, samples and limitations.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
-    },
-    {
-      "title": "Canada prepares to deepen cooperation with Europe",
-      "category": "Canada",
-      "summary": "The Canada–EU summit in Montréal on 29–30 October is intended to advance cooperation on trade, defence, energy, research and economic resilience.",
-      "source": "Government of Canada",
-      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
-    },
-    {
-      "title": "UK announces business and technology measures",
-      "category": "Europe",
-      "summary": "The UK government has announced measures to reduce regulatory burdens on businesses and provide technology-sector work placements for young people. The longer-term impact on investment, training and employment remains to be assessed.",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
-    },
-    {
-      "title": "France: protests put pressure on the government",
-      "category": "Europe",
-      "summary": "French unions and protest groups are planning further action over wages, living costs and public services. Authorities have reported arrests and injuries during recent demonstrations. Future events and their impact remain uncertain.",
-      "source": "Reuters",
       "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
     },
     {
-      "title": "Ukraine war: deadly drone attacks reported in Belgorod",
-      "category": "Europe",
-      "summary": "Russian regional authorities reported deaths, injuries and property damage after drone attacks in the Belgorod region. Claims about responsibility and battlefield events should be attributed to the sources making them.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/"
-    },
-    {
-      "title": "Asia: closer China–North Korea engagement reported",
-      "category": "Asia",
-      "summary": "A report describes a visit by Kim Jong Un to Dandong and the opening of a new cross-border bridge. The development is relevant to regional diplomacy, trade and relations between China and North Korea.",
-      "source": "The Wall Street Journal",
-      "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
-    },
-    {
-      "title": "Africa: public health and economic development remain priorities",
+      "title": "Uganda tightens Ebola screening and quarantine measures",
       "category": "Africa",
-      "summary": "Public-health preparedness, security, reliable electricity, employment and access to essential services remain important regional issues. For disease reports, use dated WHO or national health-authority notices and do not infer a widespread outbreak from preparedness measures alone.",
-      "source": "WHO Africa",
-      "url": "https://www.afro.who.int/"
+      "url": "https://apnews.com/article/86561d00f73410febe41e44041105a86"
     },
     {
-      "title": "Australia and the Pacific: monitor Vanuatu earthquake updates",
-      "category": "Asia",
-      "summary": "Reports describe strong earthquakes offshore from Vanuatu and an earlier tsunami warning. Readers in affected areas should follow current official emergency advice, as warning status and local impacts may change.",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/world/asia-pacific"
-    },
-    {
-      "title": "Nigeria: Tinubu begins re-election campaign",
-      "category": "Nigeria Politics",
-      "summary": "Reuters reported that President Bola Ahmed Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign comes amid public concern about living costs and security, while the administration defends its economic reforms.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
-    },
-    {
-      "title": "Nigeria: opposition coalition discussions continue",
-      "category": "Nigeria Politics",
-      "summary": "Reports describe disagreements among political camps associated with Atiku Abubakar, Peter Obi and other opposition figures. No final joint ticket, withdrawal or vice-presidential arrangement should be assumed without a verifiable announcement.",
-      "source": "The Guardian Nigeria",
-      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
-    },
-    {
-      "title": "Digital innovation: AI developers address cyber risks",
-      "category": "Technology",
-      "summary": "Moonshot says it reduced certain cyber-offensive capabilities in its latest Kimi model before releasing its weights. The company's own benchmark results have not been independently verified. The story highlights the balance between open AI development and cybersecurity safeguards.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
+      "title": "RadiantWaves continues monitoring global political and public-health developments",
+      "category": "World",
+      "url": "https://www.reuters.com/world/"
     }
   ],
-  "categories": {
-    "world": [],
-    "usa": [
-      {
-        "title": "Florida shooting investigation continues",
-        "summary": "At least 12 people were reported injured in a shooting near Florida A&M University's stadium. Police said the investigation was continuing and no arrests had been reported in the cited update.",
-        "source": "Reuters",
-        "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034"
-      }
-    ],
-    "europe": [
-      {
-        "title": "French unions announce further planned action",
-        "summary": "Unions and protest groups have called for further demonstrations and a strike over wages, living costs and public services.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
-      },
-      {
-        "title": "UK government announces business and technology measures",
-        "summary": "Government announcements include regulatory changes for businesses and planned work placements for young people entering technology sectors.",
-        "source": "UK Government",
-        "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
-      }
-    ],
-    "africa": [
-      {
-        "title": "Nigeria's 2027 election campaign develops",
-        "summary": "Tinubu has launched his re-election campaign. Economic conditions, security, party primaries and the opposition's strategy are important subjects to monitor.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
-      }
-    ],
-    "asia": [
-      {
-        "title": "China–North Korea ties in focus after reported visit",
-        "summary": "A report describes Kim Jong Un visiting Dandong and crossing a new bridge connecting the two countries.",
-        "source": "The Wall Street Journal",
-        "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
-      }
-    ],
-    "business": [
-      {
-        "title": "Canada and the EU prepare for economic partnership talks",
-        "summary": "The Montréal summit scheduled for 29–30 October will focus on trade, energy, defence, technology and economic resilience.",
-        "source": "Government of Canada",
-        "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
-      }
-    ],
-    "technology": [
-      {
-        "title": "AI and cybersecurity: innovation needs safeguards",
-        "summary": "AI systems can help find software vulnerabilities, but they can also create risks if misused. Organisations need secure development practices, timely updates, access controls and responsible deployment.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
-      },
-      {
-        "title": "Digital transformation across Africa",
-        "summary": "Digital identity, mobile banking, telemedicine, e-commerce and public-service platforms can widen access. Progress depends on reliable electricity, affordable internet, digital skills, privacy and cybersecurity.",
-        "source": "RadiantWaves Media",
-        "url": "https://www.itu.int/"
-      }
-    ]
+  "featuredStory": {
+    "id": "featured-france-protests-20261025",
+    "title": "France faces renewed pressure as protest groups call for more demonstrations",
+    "category": "Europe",
+    "region": "France",
+    "date": "2026-10-25",
+    "image": "assets/leaders/macron.jpg",
+    "description": "French unions and protest groups have called for another nationwide demonstration on 31 October and a strike on 5 November. Reuters reports that the demonstrations have centred on wages, living costs and public services. The French Interior Ministry reported 410,000 participants in Saturday's rallies, while the CGT union gave a higher estimate. These figures come from different sources and should not be treated as identical estimates.",
+    "whyItMatters": "The protests put pressure on the French government over the cost of living, public services and its response to public discontent.",
+    "source": "Reuters",
+    "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
+    "verified": true
   },
+  "topStories": [
+    {
+      "id": "top-france-protests",
+      "title": "France: unions call for further rallies over wages and public services",
+      "category": "Europe",
+      "region": "France",
+      "date": "2026-10-25",
+      "image": "assets/leaders/macron.jpg",
+      "description": "French unions and protest groups have called for another nationwide demonstration on 31 October and a strike on 5 November. Reuters reports that the movement is driven by concerns over wages, living costs and public services. Authorities and unions have reported different attendance figures.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
+      "verified": true
+    },
+    {
+      "id": "top-uganda-ebola",
+      "title": "Uganda tightens Ebola screening and quarantine measures",
+      "category": "Africa",
+      "region": "East and Central Africa",
+      "date": "2026-10-25",
+      "image": "assets/leaders/uk-government.jpg",
+      "description": "The Associated Press reports that Uganda has introduced stricter border measures, including health screening and a 21-day quarantine requirement for certain citizens returning from neighbouring Congo. Investigations into reported infections and possible transmission routes remain ongoing. Follow official public-health guidance for the latest information.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/86561d00f73410febe41e44041105a86",
+      "verified": true
+    },
+    {
+      "id": "top-us-politics",
+      "title": "United States: midterm election campaigning continues",
+      "category": "USA",
+      "region": "United States",
+      "date": "2026-10-25",
+      "image": "assets/leaders/trump.jpg",
+      "description": "The United States is approaching its 2026 midterm elections, scheduled for 3 November. Control of Congress, the economy, immigration, healthcare and the performance of the federal government are important issues for voters. This is election context rather than a claim about a newly announced campaign development.",
+      "source": "Federal Election Commission",
+      "url": "https://www.fec.gov/",
+      "verified": true
+    },
+    {
+      "id": "top-canada",
+      "title": "Canada: trade, security and international partnerships remain in focus",
+      "category": "Canada",
+      "region": "Canada",
+      "date": "2026-10-25",
+      "image": "assets/leaders/carney.jpg",
+      "description": "Canada's government continues to face important questions around trade relations, economic resilience and international security. RadiantWaves is monitoring official announcements for new developments. No new statement is attributed to the Canadian prime minister in this item.",
+      "source": "Government of Canada",
+      "url": "https://www.canada.ca/en.html",
+      "verified": false
+    },
+    {
+      "id": "top-uk-government",
+      "title": "United Kingdom: government policy and public accountability",
+      "category": "UK",
+      "region": "United Kingdom",
+      "date": "2026-10-25",
+      "image": "assets/leaders/uk-government.jpg",
+      "description": "RadiantWaves is monitoring government policy, public services, the economy and the UK's international relationships. No fresh government announcement is claimed here without a directly verified report. Andy Burnham is included in Leaders Watch using the role reported by current sources; readers should consult the official government website for formal announcements.",
+      "source": "UK Government",
+      "url": "https://www.gov.uk/",
+      "verified": false
+    },
+    {
+      "id": "top-eu",
+      "title": "European Union: cooperation, security and economic policy",
+      "category": "Europe",
+      "region": "European Union",
+      "date": "2026-10-25",
+      "image": "assets/leaders/von-der-leyen.jpg",
+      "description": "European policy debates continue to cover security, economic competitiveness, energy and cooperation between member states and international partners. This is a monitoring brief; it does not attribute a new announcement to the European Commission president.",
+      "source": "European Commission",
+      "url": "https://commission.europa.eu/",
+      "verified": false
+    },
+    {
+      "id": "top-germany",
+      "title": "Germany: economic and European policy under observation",
+      "category": "Europe",
+      "region": "Germany",
+      "date": "2026-10-25",
+      "image": "assets/leaders/merz.jpg",
+      "description": "Germany's economic direction, European security and its role in EU policy remain important subjects for international observers. This monitoring item does not claim that a new policy or statement was announced today.",
+      "source": "German Federal Government",
+      "url": "https://www.bundesregierung.de/breg-en",
+      "verified": false
+    },
+    {
+      "id": "top-asia",
+      "title": "Asia: diplomacy and regional security remain important watchpoints",
+      "category": "Asia",
+      "region": "Asia",
+      "date": "2026-10-25",
+      "image": "assets/leaders/xi.jpg",
+      "description": "Developments involving China and other Asian powers continue to matter for global trade, security and diplomacy. RadiantWaves will publish specific developments when a reliable report or official statement can be checked.",
+      "source": "Reuters World News",
+      "url": "https://www.reuters.com/world/",
+      "verified": false
+    },
+    {
+      "id": "top-australia",
+      "title": "Australia and the Pacific: regional developments under monitoring",
+      "category": "Australia",
+      "region": "Australia and Pacific",
+      "date": "2026-10-25",
+      "image": "assets/leaders/helen-haines.jpg",
+      "description": "RadiantWaves is monitoring Australian public affairs and Pacific regional developments. This is a watch item, not a claim that a new statement has been made by Helen Haines or the Australian government today.",
+      "source": "Australian Government",
+      "url": "https://www.australia.gov.au/",
+      "verified": false
+    },
+    {
+      "id": "top-nigeria-politics",
+      "title": "Nigeria: political accountability and opposition cooperation",
+      "category": "Nigeria Politics",
+      "region": "Nigeria",
+      "date": "2026-10-25",
+      "image": "assets/leaders/tinubu.jpg",
+      "description": "Nigeria's political debate includes governance, the cost of living, public services and the prospects for opposition cooperation. Claims about negotiations between political parties or presidential candidates should be supported by direct statements or multiple credible reports before being treated as confirmed.",
+      "source": "Independent National Electoral Commission",
+      "url": "https://inecnigeria.org/",
+      "verified": false
+    }
+  ],
+  "worldNews": [
+    {
+      "title": "Global affairs: diplomacy and security",
+      "category": "World",
+      "date": "2026-10-25",
+      "description": "International relations, conflict prevention, trade and civilian protection remain central global concerns. This section will carry specific breaking developments once the underlying report has been checked.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/",
+      "verified": false
+    }
+  ],
+  "usaNews": [
+    {
+      "title": "US midterm elections approach",
+      "category": "USA",
+      "date": "2026-10-25",
+      "image": "assets/leaders/trump.jpg",
+      "description": "US voters are due to vote in the midterm elections on 3 November 2026. The elections will determine congressional representation and shape the political environment for the remainder of the presidential term.",
+      "source": "Federal Election Commission",
+      "url": "https://www.fec.gov/",
+      "verified": true
+    }
+  ],
+  "europeNews": [
+    {
+      "title": "French unions call for more demonstrations",
+      "category": "Europe",
+      "date": "2026-10-25",
+      "image": "assets/leaders/macron.jpg",
+      "description": "French unions and protest groups have announced further planned action over wages, living costs and public services.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
+      "verified": true
+    }
+  ],
+  "africaNews": [
+    {
+      "title": "Uganda strengthens Ebola prevention measures at borders",
+      "category": "Africa",
+      "date": "2026-10-25",
+      "description": "Uganda has tightened screening and quarantine measures as regional authorities monitor Ebola cases and investigate possible transmission routes. Readers should follow health authorities for current travel and medical advice.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/86561d00f73410febe41e44041105a86",
+      "verified": true
+    }
+  ],
+  "asiaNews": [
+    {
+      "title": "Asia diplomacy watch",
+      "category": "Asia",
+      "date": "2026-10-25",
+      "description": "RadiantWaves is monitoring diplomacy, trade and security across Asia. A specific new development will be added when it can be confirmed through a reliable report or official announcement.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/",
+      "verified": false
+    }
+  ],
+  "businessNews": [
+    {
+      "title": "Global economy: trade and cost-of-living pressures",
+      "category": "Business",
+      "date": "2026-10-25",
+      "description": "Household costs, trade relationships, public spending and economic confidence remain important issues across major economies. This is a general economic watch item, not a claim about a newly released economic indicator.",
+      "source": "Reuters Business",
+      "url": "https://www.reuters.com/business/",
+      "verified": false
+    }
+  ],
+  "technologyNews": [
+    {
+      "title": "Technology watch: AI governance and cybersecurity",
+      "category": "Technology",
+      "date": "2026-10-25",
+      "description": "Artificial intelligence governance, digital security, data protection and accountability remain important policy questions. Specific claims about a new product, breach or regulatory decision should be checked against the original announcement before publication.",
+      "source": "Reuters Technology",
+      "url": "https://www.reuters.com/technology/",
+      "verified": false
+    }
+  ],
   "leadersWatch": {
-    "note": "Leaders Watch tracks documented actions, official announcements and attributed reporting. It does not rank leaders. Unconfirmed proposals and political allegations must not be presented as established facts.",
+    "note": "Leader photos are loaded from the existing assets/leaders/ folder. Updates below distinguish verified reporting from monitoring notes. Only use text in quotation marks when the linked source contains those exact words. Where no current direct statement has been verified, the entry says so.",
     "leaders": [
       {
         "name": "Donald Trump",
         "role": "President of the United States",
-        "country": "USA",
-        "update": "The US midterm elections are scheduled for 3 November. The cost of living, trade and foreign policy remain important campaign issues. A possible trilateral meeting with Putin and Xi has been reported, but final arrangements are not confirmed.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
+        "country": "United States",
+        "image": "assets/leaders/trump.jpg",
+        "update": "The United States is approaching its 3 November 2026 midterm elections. The result will shape congressional politics and the administration's legislative prospects.",
+        "statement": "No new direct statement from President Trump is quoted in this entry.",
+        "source": "Federal Election Commission",
+        "url": "https://www.fec.gov/",
+        "verified": true
       },
       {
         "name": "Mark Carney",
         "role": "Prime Minister of Canada",
         "country": "Canada",
-        "update": "Canada has officially announced that Carney will host the Canada–EU summit in Montréal on 29–30 October. Trade, defence, energy, AI and economic resilience are among the stated priorities.",
+        "image": "assets/leaders/carney.jpg",
+        "update": "Canada's international partnerships, trade and security policy remain under observation. No fresh statement has been independently verified for this edition.",
+        "statement": "No new direct statement is quoted in this entry.",
         "source": "Government of Canada",
-        "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
+        "url": "https://www.canada.ca/en.html",
+        "verified": false
       },
       {
         "name": "Emmanuel Macron",
         "role": "President of France",
         "country": "France",
-        "update": "French unions and protest groups are calling for further action over wages, living costs and public services. The government faces continuing pressure over how to respond to the demonstrations.",
+        "image": "assets/leaders/macron.jpg",
+        "update": "France faces continued pressure following large demonstrations over wages, living costs and public services. Reuters reports that unions have called for further action on 31 October and 5 November.",
+        "statement": "Reuters reports on the protests and the government's difficult choices; this entry does not present a new direct quote from Macron.",
         "source": "Reuters",
-        "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
+        "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
+        "verified": true
       },
       {
         "name": "Bola Ahmed Tinubu",
         "role": "President of Nigeria",
         "country": "Nigeria",
-        "update": "Reuters reported that Tinubu launched his re-election campaign in Kaduna on 24 October. The economy, household costs, security and the delivery of public services remain important campaign issues.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
+        "image": "assets/leaders/tinubu.jpg",
+        "update": "Governance, economic conditions, public services and political accountability remain central issues in Nigeria. A specific new presidential announcement has not been verified for this entry.",
+        "statement": "No new direct statement is quoted in this entry.",
+        "source": "State House Nigeria",
+        "url": "https://statehouse.gov.ng/",
+        "verified": false
       },
       {
         "name": "Atiku Abubakar",
-        "role": "Opposition political figure",
+        "role": "Former Vice-President and opposition politician",
         "country": "Nigeria",
-        "update": "Opposition coalition discussions remain a focus of political reporting. Claims about withdrawal, candidate selection or a negotiated ticket require direct confirmation from the people and parties concerned.",
-        "source": "The Guardian Nigeria",
-        "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
+        "image": "assets/leaders/atiku.jpg",
+        "update": "Opposition cooperation and the direction of Nigeria's political alliances remain subjects of public debate. Any claim about private negotiations, conditions or an agreement should be checked against an attributable statement.",
+        "statement": "No new direct statement from Atiku Abubakar has been verified for this edition.",
+        "source": "Atiku Abubakar's official website",
+        "url": "https://www.atiku.org/",
+        "verified": false
       },
       {
         "name": "Peter Obi",
-        "role": "Opposition political figure",
+        "role": "Former governor and opposition politician",
         "country": "Nigeria",
-        "update": "Debate continues around opposition cooperation, party platforms and candidate selection ahead of 2027. No final coalition arrangement should be assumed without a verifiable announcement.",
-        "source": "The Guardian Nigeria",
-        "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
+        "image": "assets/leaders/obi.jpg",
+        "update": "Political cooperation, governance reform and economic accountability remain important topics in Nigeria's opposition debate. No new direct statement is quoted here.",
+        "statement": "No new direct statement from Peter Obi has been verified for this edition.",
+        "source": "Labour Party Nigeria",
+        "url": "https://labourparty.com.ng/",
+        "verified": false
       },
       {
         "name": "Andy Burnham",
         "role": "Prime Minister of the United Kingdom",
         "country": "United Kingdom",
-        "update": "The UK government has announced plans to reduce regulatory burdens on businesses and provide technology-sector work placements for young people. Their effects on investment and jobs will need to be assessed over time.",
+        "image": "assets/leaders/andy.jpg",
+        "update": "The UK government is being monitored for policy announcements on public services, the economy and international relations. No fresh prime-ministerial statement has been verified for this edition.",
+        "statement": "No new direct statement is quoted in this entry.",
         "source": "UK Government",
-        "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
+        "url": "https://www.gov.uk/",
+        "verified": false
       },
       {
         "name": "Friedrich Merz",
         "role": "Chancellor of Germany",
         "country": "Germany",
-        "update": "Germany's policy agenda includes European security, support for Ukraine and economic competitiveness. This edition does not establish a new major statement from Merz on 25 October; check the official chancellery for the latest announcements.",
+        "image": "assets/leaders/merz.jpg",
+        "update": "Germany's economic policy, European cooperation and security commitments remain important areas to monitor. No new direct statement is quoted in this entry.",
+        "statement": "No new direct statement has been verified for this edition.",
         "source": "German Federal Government",
-        "url": "https://www.bundeskanzler.de/bk-en"
+        "url": "https://www.bundesregierung.de/breg-en",
+        "verified": false
       },
       {
         "name": "Vladimir Putin",
         "role": "President of Russia",
         "country": "Russia",
-        "update": "The Kremlin has reported preparations for a possible trilateral meeting with Trump and Xi. The proposal remains subject to confirmation of final arrangements. Russia's Belgorod region also reported deadly drone attacks, with casualty claims attributed to local authorities.",
-        "source": "Saudi Gazette",
-        "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+        "image": "assets/leaders/putin.jpg",
+        "update": "Developments involving Russia, Ukraine and international diplomacy remain important global watchpoints. This entry does not claim a new announcement or quote from the Russian president.",
+        "statement": "No new direct statement has been verified for this edition.",
+        "source": "Kremlin",
+        "url": "https://en.kremlin.ru/",
+        "verified": false
       },
       {
         "name": "Xi Jinping",
         "role": "President of China",
         "country": "China",
-        "update": "China's regional diplomacy and relations with the United States, Russia and North Korea remain important to monitor. A possible Trump–Putin–Xi meeting has been reported, but a final schedule has not been confirmed.",
-        "source": "Saudi Gazette",
-        "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+        "image": "assets/leaders/xi.jpg",
+        "update": "China's diplomatic, economic and security relationships remain important to international affairs. No new direct statement from Xi Jinping has been verified for this edition.",
+        "statement": "No new direct statement is quoted in this entry.",
+        "source": "Ministry of Foreign Affairs of China",
+        "url": "https://www.fmprc.gov.cn/eng/",
+        "verified": false
       },
       {
-        "name": "Kim Jong Un",
-        "role": "Leader of North Korea",
-        "country": "North Korea",
-        "update": "The Wall Street Journal reports that Kim Jong Un visited China's border city of Dandong. The visit is relevant to North Korea's relations with China and regional economic and diplomatic developments.",
-        "source": "The Wall Street Journal",
-        "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
+        "name": "Ursula von der Leyen",
+        "role": "President of the European Commission",
+        "country": "European Union",
+        "image": "assets/leaders/von-der-leyen.jpg",
+        "update": "EU policy discussions continue to cover economic competitiveness, security and cooperation with international partners. No new direct statement is quoted in this entry.",
+        "statement": "No new direct statement has been verified for this edition.",
+        "source": "European Commission",
+        "url": "https://commission.europa.eu/",
+        "verified": false
+      },
+      {
+        "name": "Helen Haines",
+        "role": "Australian independent politician",
+        "country": "Australia",
+        "image": "assets/leaders/helen-haines.jpg",
+        "update": "Helen Haines is included in the image library, but no current news update or fresh statement about her has been verified for this edition.",
+        "statement": "No new direct statement is quoted in this entry.",
+        "source": "Australian Parliament",
+        "url": "https://www.aph.gov.au/",
+        "verified": false
+      },
+      {
+        "name": "UK Government",
+        "role": "Official government updates",
+        "country": "United Kingdom",
+        "image": "assets/leaders/uk-government.jpg",
+        "update": "Use this image for a verified UK government story when the image matches the report. No separate new announcement is claimed here.",
+        "statement": "No new official statement is quoted in this entry.",
+        "source": "UK Government",
+        "url": "https://www.gov.uk/",
+        "verified": false
       }
     ]
   },
-  "electionWatch": [
-    {
-      "date": "2026-10-25",
-      "country": "Bulgaria",
-      "event": "Presidential election",
-      "summary": "The election is scheduled for 25 October. Consult the official electoral authority for results and any runoff arrangements.",
-      "source": "National Assembly of Bulgaria",
-      "url": "https://parliament.bg/en/news/ID/6600"
-    },
-    {
-      "date": "2026-10-25",
-      "country": "Serbia",
-      "event": "Early parliamentary election",
-      "summary": "Serbia's government confirmed that parliamentary elections were called for 25 October. Check the national electoral commission for official results.",
-      "source": "Government of Serbia",
-      "url": "https://www.srbija.gov.rs/vest/en/287130/president-of-republic-calls-parliamentary-elections-for-25-october.php"
-    },
-    {
-      "date": "2026-11-03",
-      "country": "United States",
-      "event": "Midterm elections",
-      "summary": "Congressional and other elections take place across the United States. Consult official state election authorities for local voting information.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
-    },
-    {
-      "date": "2026-11-29",
-      "country": "Spain",
-      "event": "Reported snap parliamentary election",
-      "summary": "The date was included in the supplied draft but has not been independently verified for this edition. Do not publish it as confirmed until an official election announcement is located.",
-      "source": "Spanish Government",
-      "url": "https://www.lamoncloa.gob.es/"
-    },
-    {
-      "date": "2026-12-05",
-      "country": "The Gambia",
-      "event": "Reported presidential election",
-      "summary": "The date was included in the supplied draft. Confirm the timetable with the Independent Electoral Commission before presenting it as definitive.",
-      "source": "Gambia Independent Electoral Commission",
-      "url": "https://iec.gm/"
-    },
-    {
-      "date": "2027-01-16",
-      "country": "Nigeria",
-      "event": "Presidential and National Assembly elections",
-      "summary": "This date appears in the published election calendar supplied for the bulletin. Check INEC for any revised timetable or official notices.",
-      "source": "INEC",
-      "url": "https://www.inecnigeria.org/elections/calendar/"
-    },
-    {
-      "date": "2027-02-06",
-      "country": "Nigeria",
-      "event": "Governorship and State House of Assembly elections",
-      "summary": "The published timetable lists elections for participating states on this date. Consult INEC for state-specific details and any revisions.",
-      "source": "INEC",
-      "url": "https://www.inecnigeria.org/elections/calendar/"
-    }
-  ],
   "breakingHistory": [
     {
-      "date": "2026-10-25",
-      "title": "France: further demonstrations announced",
-      "summary": "French unions and protest groups called for another demonstration on 31 October and a strike on 5 November.",
-      "source": "Reuters",
+      "date": "1971-10-25",
+      "title": "United Nations General Assembly adopts Resolution 2758",
+      "category": "History",
+      "description": "On 25 October 1971, the UN General Assembly adopted Resolution 2758 concerning the representation of China at the United Nations.",
+      "source": "United Nations Digital Library",
+      "url": "https://digitallibrary.un.org/",
+      "verified": true
+    }
+  ],
+  "electionWatch": [
+    {
+      "country": "United States",
+      "election": "2026 midterm elections",
+      "date": "2026-11-03",
+      "status": "Scheduled",
+      "description": "The US midterm elections are scheduled for 3 November 2026. Consult official election authorities for voting information and certified results.",
+      "source": "Federal Election Commission",
+      "url": "https://www.fec.gov/",
+      "verified": true
+    },
+    {
+      "country": "Nigeria",
+      "election": "Next general elections",
+      "date": "",
+      "status": "Check official timetable",
+      "description": "RadiantWaves will publish confirmed dates for Nigeria's next presidential, National Assembly and state elections after checking the latest official INEC timetable. Do not treat unverified dates circulating online as confirmed.",
+      "source": "Independent National Electoral Commission",
+      "url": "https://inecnigeria.org/",
+      "verified": false
+    }
+  ],
+  "archives": [],
+  "archiveNote": "No previous-edition records are included in this file. Add an edition to the archive only after it has actually been published.",
+  "todaysBigQuestion": {
+    "question": "When governments face public anger over living costs and public services, what should come first: stronger public spending, tighter financial discipline, or a different approach to accountability?",
+    "context": "France's demonstrations and economic pressures in many countries raise wider questions about trust, public priorities and the responsibilities of elected leaders.",
+    "invite": "Share your view respectfully. Focus on policies, evidence and public outcomes rather than personal insults."
+  },
+  "thoughtForToday": {
+    "title": "Thought for Today",
+    "text": "Leadership is not measured by promises alone, but by the difference people can see in their daily lives.",
+    "attribution": "Original reflection by RadiantWaves Media",
+    "original": true
+  },
+  "innovationWatch": {
+    "title": "Innovation and Digital Transformation",
+    "description": "Artificial intelligence, cybersecurity and digital public services offer opportunities, but they also raise questions about privacy, fairness, accuracy and accountability. Responsible innovation requires evidence, transparency and safeguards for the public.",
+    "source": "Reuters Technology",
+    "url": "https://www.reuters.com/technology/"
+  },
+  "sponsoredAdverts": [
+    {
+      "title": "Advertise with RadiantWaves Media",
+      "description": "Reach audiences through digital media placements and sponsored content. Advertising enquiries are subject to editorial and commercial review.",
+      "image": "assets/spices.jpeg",
+      "type": "sponsored",
+      "url": "mailto:info@radiantwavesmedia.com"
+    },
+    {
+      "title": "Business and Product Promotion",
+      "description": "Contact RadiantWaves Media to discuss advertising opportunities and promotional partnerships.",
+      "image": "assets/stonebreaker.jpeg",
+      "type": "sponsored",
+      "url": "mailto:info@radiantwavesmedia.com"
+    }
+  ],
+  "contact": {
+    "company": "RadiantWaves Media Nigeria Ltd",
+    "email": "info@radiantwavesmedia.com",
+    "supportEmail": "support@radiantwavesmedia.com",
+    "whatsapp": "+33 6 21 61 31 49",
+    "whatsappUrl": "https://wa.me/33621613149"
+  },
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
+    "tiktok": "https://www.tiktok.com/@radiantwaves",
+    "youtube": "https://www.youtube.com/@RADIANTWAVE-wv6",
+    "x": "https://x.com/Radiant13528995"
+  },
+  "sources": [
+    {
+      "name": "Reuters — France protests",
       "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
     },
     {
-      "date": "2026-10-25",
-      "title": "Tallahassee shooting investigation",
-      "summary": "Authorities reported at least 12 injured following a shooting near Florida A&M University's stadium. The investigation was continuing.",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034"
+      "name": "Associated Press — Uganda Ebola measures",
+      "url": "https://apnews.com/article/86561d00f73410febe41e44041105a86"
     },
     {
-      "date": "2026-10-25",
-      "title": "Deadly drone attacks reported in Belgorod",
-      "summary": "Russian regional authorities reported deaths, injuries and property damage after drone attacks. Claims remain attributed to those authorities.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/"
+      "name": "Reuters — World News",
+      "url": "https://www.reuters.com/world/"
     },
     {
-      "date": "2026-10-25",
-      "title": "Possible trilateral summit reported",
-      "summary": "A Kremlin official said preparations were under way for a possible meeting involving Trump, Putin and Xi. Final arrangements remain unconfirmed.",
-      "source": "Saudi Gazette",
-      "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+      "name": "Reuters — Technology",
+      "url": "https://www.reuters.com/technology/"
+    },
+    {
+      "name": "European Commission",
+      "url": "https://commission.europa.eu/"
+    },
+    {
+      "name": "UK Government",
+      "url": "https://www.gov.uk/"
+    },
+    {
+      "name": "Independent National Electoral Commission",
+      "url": "https://inecnigeria.org/"
+    },
+    {
+      "name": "Federal Election Commission",
+      "url": "https://www.fec.gov/"
     }
-  ],
-  "archive": [],
-  "sponsoredAdverts": [
-    {
-      "title": "Spices and Food Products",
-      "image": "assets/spices.jpeg",
-      "description": "Contact the advertiser for product details and availability."
-    },
-    {
-      "title": "Stonebreaker Product",
-      "image": "assets/stonebreaker.jpeg",
-      "description": "Contact the advertiser for product details and availability."
-    }
-  ],
-  "thoughtForToday": {
-    "text": "True leadership is not about controlling the conversation; it is about accepting responsibility, listening to people and delivering results that improve lives.",
-    "author": "RadiantWaves Media"
-  },
-  "todaysBigQuestion": {
-    "question": "In a world facing political division, rising living costs and rapid technological change, what should citizens demand most from their leaders: accountability, economic opportunity, security or honesty?",
-    "prompt": "Share your views respectfully. Ask for evidence, question promises and hold leaders accountable. Informed debate begins with facts."
-  },
-  "footer": {
-    "tagline": "Connecting You Deeper to the World's Most Important Stories",
-    "email": "info@radiantwavesmedia.com",
-    "supportEmail": "support@radiantwavesmedia.com",
-    "whatsapp": "+33 6 21 61 31 49"
-  }
+  ]
 }

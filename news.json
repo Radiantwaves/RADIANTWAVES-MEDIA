@@ -1,174 +1,233 @@
 
 {
-  "edition": "Morning News & Global Update",
+  "edition": "Night News, Breaking News & Global Update",
   "date": "Sunday, 25 October 2026",
   "dateISO": "2026-10-25",
   "brand": "RadiantWaves Media Nigeria Ltd",
   "slogan": "Gateway to Your World News — Connecting You to the World",
   "hero": {
-    "title": "Morning News & Global Update",
-    "subtitle": "The latest developments across the continents, world leaders, elections, business and public affairs.",
+    "title": "Night News & Global Update",
+    "subtitle": "Breaking developments, world affairs, political leadership, Nigerian politics and the future of technology.",
     "video": "assets/video1.mp4"
   },
-  "summary": "Today's bulletin covers the US midterm campaign, Canadian trade relations, UK retail figures, demonstrations in France, the earthquake reported on the Tibetan Plateau, Ebola vaccine research in the Democratic Republic of the Congo, earthquakes near Vanuatu and Nigeria's developing 2027 election campaign. Claims without adequate confirmation are identified for further verification.",
-  "editorialNote": "RadiantWaves Media distinguishes confirmed information from allegations and developing reports. Check the linked sources for updates before drawing conclusions. Election schedules, casualty figures and breaking news may change.",
+  "summary": "Tonight's global update covers demonstrations in France, the upcoming US midterm elections, a shooting in Tallahassee, the forthcoming Canada–EU summit, attacks reported in Russia's Belgorod region, diplomatic discussions involving the United States and Iran, Nigeria's 2027 election campaign, and developments in artificial intelligence and cybersecurity. Reports are attributed to their sources, and developing stories remain subject to verification.",
+  "editorialNote": "RadiantWaves Media separates confirmed announcements from claims made by officials, political figures and other sources. Casualty figures, investigations, election arrangements and diplomatic proposals can change. Check the linked reports for the latest updates. Do not treat an alleged agreement or reported proposal as a confirmed outcome.",
   "breakingNews": [
     {
-      "title": "US midterm elections approach amid cost-of-living concerns",
+      "title": "France: unions call for further demonstrations",
+      "category": "Europe",
+      "summary": "Reuters reports that French unions and protest groups are calling for another nationwide demonstration on 31 October and a strike on 5 November. Organisers cite wages, living costs and public services. The scale of future demonstrations remains uncertain.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/",
+      "status": "Reported on 25 October 2026"
+    },
+    {
+      "title": "Florida shooting: at least 12 people injured",
       "category": "USA",
+      "summary": "Reuters reports that at least 12 people were injured in a shooting near Florida A&M University's Bragg Memorial Stadium in Tallahassee after a homecoming football game. Police said 11 victims suffered gunshot wounds. The investigation was continuing, and no arrests had been reported in the cited update.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/",
-      "status": "Reported",
-      "summary": "Economic pressure and living costs are prominent issues ahead of the 3 November midterm elections. Poll findings reflect surveyed opinions and do not independently establish the causes of price changes."
+      "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034",
+      "status": "Developing investigation"
     },
     {
-      "title": "UK retail sales decline in September",
+      "title": "Russia's Belgorod region reports deadly drone attacks",
       "category": "Europe",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026",
-      "status": "Reported",
-      "summary": "Official figures show retail sales volumes fell 0.4% in September compared with August, while sales volumes increased over the third quarter as a whole."
-    },
-    {
-      "title": "France faces scrutiny after demonstrations",
-      "category": "Europe",
+      "summary": "Reuters reported that local authorities attributed drone attacks in Russia's Belgorod region to Ukraine. Authorities reported deaths, injuries and damage to residential and commercial property. The attribution and casualty figures should remain clearly attributed to the reporting authorities.",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/france-mounts-huge-security-operation-to-prevent-protest-violence-4970771",
-      "status": "Reported",
-      "summary": "Reports describe demonstrations over public and economic concerns, with clashes reported in some locations. Incidents involving some participants should not be attributed to all demonstrators."
+      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/",
+      "status": "Reported; wartime claims require careful attribution"
     },
     {
-      "title": "Earthquake reported on the Tibetan Plateau",
+      "title": "Possible Trump–Putin–Xi summit under discussion",
+      "category": "World",
+      "summary": "A Kremlin official says preparations are under way for a possible trilateral meeting involving Donald Trump, Vladimir Putin and Xi Jinping, potentially around the November APEC summit in China. This remains a reported diplomatic proposal; do not describe a final date, venue or agenda as confirmed.",
+      "source": "Saudi Gazette",
+      "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china",
+      "status": "Proposed meeting; final arrangements unconfirmed"
+    },
+    {
+      "title": "Washington and Tehran: diplomatic messages reportedly continue",
+      "category": "Middle East",
+      "summary": "The supplied Associated Press report describes diplomatic messages passing between Iran and the United States through intermediaries. Negotiations and their possible outcomes remain uncertain. Verify the full report and any subsequent official statements before publishing a more definitive account.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/4779a3deeb1a23f59414164532d5c885",
+      "status": "Reported diplomatic contact; outcome unconfirmed"
+    },
+    {
+      "title": "Canada–EU summit announced for Montréal",
+      "category": "Canada",
+      "summary": "Canada's government announced that Prime Minister Mark Carney will host a Canada–European Union summit in Montréal on 29–30 October. The agenda includes trade, economic resilience, defence, energy, technology and cooperation between Canada and the EU.",
+      "source": "Prime Minister of Canada",
+      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal",
+      "status": "Officially announced"
+    },
+    {
+      "title": "North Korean leader visits China's border city",
       "category": "Asia",
-      "source": "US Geological Survey",
-      "url": "https://earthquake.usgs.gov/earthquakes/",
-      "status": "Further casualty verification required",
-      "summary": "Check the US Geological Survey and relevant local authorities for the event details, magnitude, location and latest verified impact. Do not publish an unconfirmed death toll."
-    },
-    {
-      "title": "Ebola vaccine research in the Democratic Republic of the Congo",
-      "category": "Africa",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news",
-      "status": "Public-health update; check latest notice",
-      "summary": "WHO updates on Ebola vaccine research and public-health preparedness should be consulted for the latest confirmed information. Preparedness measures or contact tracing do not automatically establish a widespread outbreak in every country mentioned."
-    },
-    {
-      "title": "Earthquakes near Vanuatu prompt safety monitoring",
-      "category": "Asia",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/world/asia-pacific",
-      "status": "Check current official advisories",
-      "summary": "Consult local emergency authorities and official tsunami information for the latest warning status and safety instructions following reported offshore earthquakes."
-    },
-    {
-      "title": "Nigeria's 2027 election campaign develops",
-      "category": "Africa",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "status": "Reported",
-      "summary": "Reuters reported that President Bola Tinubu launched his re-election campaign in Kaduna on 24 October. Living costs, employment and security remain important subjects in public debate."
+      "summary": "The Wall Street Journal reports that Kim Jong Un visited Dandong in China and crossed a newly completed bridge over the Yalu River. The report describes the visit as a sign of closer engagement between Pyongyang and Beijing. Further diplomatic developments should be confirmed through reliable reporting.",
+      "source": "The Wall Street Journal",
+      "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069",
+      "status": "Reported"
     }
   ],
   "featuredStory": {
-    "title": "Nigeria's 2027 election: economy, security and accountability in focus",
-    "category": "Nigeria Politics",
+    "title": "AI innovation brings new opportunities — and cybersecurity risks",
+    "category": "Technology",
     "date": "2026-10-25",
-    "summary": "As political campaigns develop, voters will be watching inflation, food and fuel costs, employment, security, public spending and electoral transparency. Claims about candidates and coalition negotiations should be attributed to reliable sources and checked against official statements.",
+    "summary": "Artificial intelligence is becoming more capable of helping developers identify software vulnerabilities. That can help organisations strengthen security, but similar capabilities can also be misused. Chinese AI company Moonshot says it reduced the cyber-offensive capabilities of its Kimi K3.1 Pro model before its planned open-weight release. Its benchmark claims have not been independently verified. The broader challenge is to encourage innovation while protecting systems, personal information and essential services.",
     "source": "Reuters",
-    "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-    "image": "assets/leaders/tinubu.jpg"
+    "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
   },
   "topStories": [
     {
-      "title": "US voters prepare for midterm elections",
+      "title": "USA: midterm elections approach on 3 November",
       "category": "USA",
-      "summary": "Economic conditions, prices and public assessments of the administration are among the issues to watch before the 3 November elections.",
+      "summary": "The upcoming midterm elections put the economy, cost of living, trade and foreign policy in focus. Polls should be read with attention to their fieldwork dates, samples and limitations.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
     },
     {
-      "title": "Canada and the United States: trade relations under scrutiny",
+      "title": "Canada prepares to deepen cooperation with Europe",
       "category": "Canada",
-      "summary": "Tariffs and export-market diversification remain important areas to monitor. Verify specific statements by Canadian officials against dated reports or official releases.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/a9b923802d5e2d5a37f0e213db91ef56"
+      "summary": "The Canada–EU summit in Montréal on 29–30 October is intended to advance cooperation on trade, defence, energy, research and economic resilience.",
+      "source": "Government of Canada",
+      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
     },
     {
-      "title": "British retail sales fall in September",
+      "title": "UK announces business and technology measures",
       "category": "Europe",
-      "summary": "Retail sales volumes declined month on month, although the quarterly picture was stronger than the September figure alone suggests.",
-      "source": "Office for National Statistics",
-      "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026"
+      "summary": "The UK government has announced measures to reduce regulatory burdens on businesses and provide technology-sector work placements for young people. The longer-term impact on investment, training and employment remains to be assessed.",
+      "source": "UK Government",
+      "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
     },
     {
-      "title": "France: demonstrations and public order",
+      "title": "France: protests put pressure on the government",
       "category": "Europe",
-      "summary": "Reports describe demonstrations and clashes in some locations. Follow reliable updates for verified details on the scale of protests and the official response.",
+      "summary": "French unions and protest groups are planning further action over wages, living costs and public services. Authorities have reported arrests and injuries during recent demonstrations. Future events and their impact remain uncertain.",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/france-mounts-huge-security-operation-to-prevent-protest-violence-4970771"
+      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
     },
     {
-      "title": "Tibetan Plateau earthquake: await verified impact updates",
+      "title": "Ukraine war: deadly drone attacks reported in Belgorod",
+      "category": "Europe",
+      "summary": "Russian regional authorities reported deaths, injuries and property damage after drone attacks in the Belgorod region. Claims about responsibility and battlefield events should be attributed to the sources making them.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/"
+    },
+    {
+      "title": "Asia: closer China–North Korea engagement reported",
       "category": "Asia",
-      "summary": "Consult authoritative seismic information and local emergency updates before publishing casualty figures or damage estimates.",
-      "source": "US Geological Survey",
-      "url": "https://earthquake.usgs.gov/earthquakes/"
+      "summary": "A report describes a visit by Kim Jong Un to Dandong and the opening of a new cross-border bridge. The development is relevant to regional diplomacy, trade and relations between China and North Korea.",
+      "source": "The Wall Street Journal",
+      "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
     },
     {
-      "title": "Ebola vaccine research and regional preparedness",
+      "title": "Africa: public health and economic development remain priorities",
       "category": "Africa",
-      "summary": "WHO remains a key source for confirmed disease updates, vaccine research and public-health guidance.",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news"
+      "summary": "Public-health preparedness, security, reliable electricity, employment and access to essential services remain important regional issues. For disease reports, use dated WHO or national health-authority notices and do not infer a widespread outbreak from preparedness measures alone.",
+      "source": "WHO Africa",
+      "url": "https://www.afro.who.int/"
     },
     {
-      "title": "Vanuatu earthquakes: follow official safety advice",
+      "title": "Australia and the Pacific: monitor Vanuatu earthquake updates",
       "category": "Asia",
-      "summary": "Check current tsunami advisories and local emergency instructions rather than relying on an earlier warning.",
+      "summary": "Reports describe strong earthquakes offshore from Vanuatu and an earlier tsunami warning. Readers in affected areas should follow current official emergency advice, as warning status and local impacts may change.",
       "source": "ABC News Australia",
       "url": "https://www.abc.net.au/news/world/asia-pacific"
     },
     {
-      "title": "Nigeria's opposition considers its 2027 strategy",
+      "title": "Nigeria: Tinubu begins re-election campaign",
       "category": "Nigeria Politics",
-      "summary": "Reports of discussions involving Atiku Abubakar and Peter Obi should not be treated as a final coalition agreement without confirmation from the parties concerned.",
+      "summary": "Reuters reported that President Bola Ahmed Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign comes amid public concern about living costs and security, while the administration defends its economic reforms.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
+    },
+    {
+      "title": "Nigeria: opposition coalition discussions continue",
+      "category": "Nigeria Politics",
+      "summary": "Reports describe disagreements among political camps associated with Atiku Abubakar, Peter Obi and other opposition figures. No final joint ticket, withdrawal or vice-presidential arrangement should be assumed without a verifiable announcement.",
       "source": "The Guardian Nigeria",
       "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
     },
     {
-      "title": "Nigeria's election timetable: consult INEC",
-      "category": "Nigeria Politics",
-      "summary": "Voters should check the latest official INEC calendar for election dates, deadlines and any revisions.",
-      "source": "INEC",
-      "url": "https://www.inecnigeria.org/elections/calendar/"
+      "title": "Digital innovation: AI developers address cyber risks",
+      "category": "Technology",
+      "summary": "Moonshot says it reduced certain cyber-offensive capabilities in its latest Kimi model before releasing its weights. The company's own benchmark results have not been independently verified. The story highlights the balance between open AI development and cybersecurity safeguards.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
     }
   ],
   "categories": {
     "world": [],
-    "usa": [],
-    "europe": [],
-    "africa": [],
-    "asia": [],
-    "business": [
+    "usa": [
       {
-        "title": "Trade and household finances remain key economic issues",
-        "summary": "Developments in tariffs, retail spending and living costs deserve continued attention. Specific policy announcements and economic figures should be linked to primary or reliable sources.",
-        "source": "Office for National Statistics",
-        "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2026"
+        "title": "Florida shooting investigation continues",
+        "summary": "At least 12 people were reported injured in a shooting near Florida A&M University's stadium. Police said the investigation was continuing and no arrests had been reported in the cited update.",
+        "source": "Reuters",
+        "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034"
       }
     ],
-    "technology": []
+    "europe": [
+      {
+        "title": "French unions announce further planned action",
+        "summary": "Unions and protest groups have called for further demonstrations and a strike over wages, living costs and public services.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
+      },
+      {
+        "title": "UK government announces business and technology measures",
+        "summary": "Government announcements include regulatory changes for businesses and planned work placements for young people entering technology sectors.",
+        "source": "UK Government",
+        "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
+      }
+    ],
+    "africa": [
+      {
+        "title": "Nigeria's 2027 election campaign develops",
+        "summary": "Tinubu has launched his re-election campaign. Economic conditions, security, party primaries and the opposition's strategy are important subjects to monitor.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
+      }
+    ],
+    "asia": [
+      {
+        "title": "China–North Korea ties in focus after reported visit",
+        "summary": "A report describes Kim Jong Un visiting Dandong and crossing a new bridge connecting the two countries.",
+        "source": "The Wall Street Journal",
+        "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
+      }
+    ],
+    "business": [
+      {
+        "title": "Canada and the EU prepare for economic partnership talks",
+        "summary": "The Montréal summit scheduled for 29–30 October will focus on trade, energy, defence, technology and economic resilience.",
+        "source": "Government of Canada",
+        "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
+      }
+    ],
+    "technology": [
+      {
+        "title": "AI and cybersecurity: innovation needs safeguards",
+        "summary": "AI systems can help find software vulnerabilities, but they can also create risks if misused. Organisations need secure development practices, timely updates, access controls and responsible deployment.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/technology/moonshot-curbs-hacking-ability-new-kimi-model-fears-grow-over-ai-powered-2026-10-24/"
+      },
+      {
+        "title": "Digital transformation across Africa",
+        "summary": "Digital identity, mobile banking, telemedicine, e-commerce and public-service platforms can widen access. Progress depends on reliable electricity, affordable internet, digital skills, privacy and cybersecurity.",
+        "source": "RadiantWaves Media",
+        "url": "https://www.itu.int/"
+      }
+    ]
   },
   "leadersWatch": {
-    "note": "Leaders Watch tracks verified statements, decisions and public-policy developments. It does not rank leaders or treat rumours as facts.",
+    "note": "Leaders Watch tracks documented actions, official announcements and attributed reporting. It does not rank leaders. Unconfirmed proposals and political allegations must not be presented as established facts.",
     "leaders": [
       {
         "name": "Donald Trump",
         "role": "President of the United States",
         "country": "USA",
-        "image": "assets/leaders/trump.jpg",
-        "update": "The US midterm elections are scheduled for 3 November. Economic conditions and voter concerns are important issues to monitor.",
+        "update": "The US midterm elections are scheduled for 3 November. The cost of living, trade and foreign policy remain important campaign issues. A possible trilateral meeting with Putin and Xi has been reported, but final arrangements are not confirmed.",
         "source": "Reuters",
         "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
       },
@@ -176,26 +235,23 @@
         "name": "Mark Carney",
         "role": "Prime Minister of Canada",
         "country": "Canada",
-        "image": "assets/leaders/carney.jpg",
-        "update": "Monitor official announcements and reliable reporting on US-Canada trade relations and tariff developments.",
+        "update": "Canada has officially announced that Carney will host the Canada–EU summit in Montréal on 29–30 October. Trade, defence, energy, AI and economic resilience are among the stated priorities.",
         "source": "Government of Canada",
-        "url": "https://www.canada.ca/en.html"
+        "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/25/prime-minister-carney-host-canada-european-union-summit-montreal"
       },
       {
         "name": "Emmanuel Macron",
         "role": "President of France",
         "country": "France",
-        "image": "assets/leaders/macron.jpg",
-        "update": "Public order and the government's response to demonstrations remain subjects to follow through verified statements and reporting.",
+        "update": "French unions and protest groups are calling for further action over wages, living costs and public services. The government faces continuing pressure over how to respond to the demonstrations.",
         "source": "Reuters",
-        "url": "https://www.investing.com/news/world-news/france-mounts-huge-security-operation-to-prevent-protest-violence-4970771"
+        "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
       },
       {
         "name": "Bola Ahmed Tinubu",
         "role": "President of Nigeria",
         "country": "Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "update": "Reuters reported the launch of his re-election campaign in Kaduna on 24 October. Economic conditions and security are key public-policy issues.",
+        "update": "Reuters reported that Tinubu launched his re-election campaign in Kaduna on 24 October. The economy, household costs, security and the delivery of public services remain important campaign issues.",
         "source": "Reuters",
         "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
       },
@@ -203,8 +259,7 @@
         "name": "Atiku Abubakar",
         "role": "Opposition political figure",
         "country": "Nigeria",
-        "image": "assets/leaders/atiku.jpg",
-        "update": "Opposition coalition discussions are being reported. No final ticket or agreement should be assumed without a verifiable announcement.",
+        "update": "Opposition coalition discussions remain a focus of political reporting. Claims about withdrawal, candidate selection or a negotiated ticket require direct confirmation from the people and parties concerned.",
         "source": "The Guardian Nigeria",
         "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
       },
@@ -212,36 +267,141 @@
         "name": "Peter Obi",
         "role": "Opposition political figure",
         "country": "Nigeria",
-        "image": "assets/leaders/obi.jpg",
-        "update": "His role in possible opposition cooperation remains a subject of political discussion. Verify claims about negotiations against direct statements.",
+        "update": "Debate continues around opposition cooperation, party platforms and candidate selection ahead of 2027. No final coalition arrangement should be assumed without a verifiable announcement.",
         "source": "The Guardian Nigeria",
         "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "update": "The UK government has announced plans to reduce regulatory burdens on businesses and provide technology-sector work placements for young people. Their effects on investment and jobs will need to be assessed over time.",
+        "source": "UK Government",
+        "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street"
+      },
+      {
+        "name": "Friedrich Merz",
+        "role": "Chancellor of Germany",
+        "country": "Germany",
+        "update": "Germany's policy agenda includes European security, support for Ukraine and economic competitiveness. This edition does not establish a new major statement from Merz on 25 October; check the official chancellery for the latest announcements.",
+        "source": "German Federal Government",
+        "url": "https://www.bundeskanzler.de/bk-en"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "President of Russia",
+        "country": "Russia",
+        "update": "The Kremlin has reported preparations for a possible trilateral meeting with Trump and Xi. The proposal remains subject to confirmation of final arrangements. Russia's Belgorod region also reported deadly drone attacks, with casualty claims attributed to local authorities.",
+        "source": "Saudi Gazette",
+        "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "President of China",
+        "country": "China",
+        "update": "China's regional diplomacy and relations with the United States, Russia and North Korea remain important to monitor. A possible Trump–Putin–Xi meeting has been reported, but a final schedule has not been confirmed.",
+        "source": "Saudi Gazette",
+        "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+      },
+      {
+        "name": "Kim Jong Un",
+        "role": "Leader of North Korea",
+        "country": "North Korea",
+        "update": "The Wall Street Journal reports that Kim Jong Un visited China's border city of Dandong. The visit is relevant to North Korea's relations with China and regional economic and diplomatic developments.",
+        "source": "The Wall Street Journal",
+        "url": "https://www.wsj.com/world/asia/kim-jong-un-makes-surprise-trip-to-china-crosses-new-bridge-3d0f7069"
       }
     ]
   },
   "electionWatch": [
     {
+      "date": "2026-10-25",
+      "country": "Bulgaria",
+      "event": "Presidential election",
+      "summary": "The election is scheduled for 25 October. Consult the official electoral authority for results and any runoff arrangements.",
+      "source": "National Assembly of Bulgaria",
+      "url": "https://parliament.bg/en/news/ID/6600"
+    },
+    {
+      "date": "2026-10-25",
+      "country": "Serbia",
+      "event": "Early parliamentary election",
+      "summary": "Serbia's government confirmed that parliamentary elections were called for 25 October. Check the national electoral commission for official results.",
+      "source": "Government of Serbia",
+      "url": "https://www.srbija.gov.rs/vest/en/287130/president-of-republic-calls-parliamentary-elections-for-25-october.php"
+    },
+    {
       "date": "2026-11-03",
       "country": "United States",
       "event": "Midterm elections",
+      "summary": "Congressional and other elections take place across the United States. Consult official state election authorities for local voting information.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/bipartisan-majority-americans-blame-trump-policies-rising-costs-reutersipsos-2026-10-09/"
     },
     {
+      "date": "2026-11-29",
+      "country": "Spain",
+      "event": "Reported snap parliamentary election",
+      "summary": "The date was included in the supplied draft but has not been independently verified for this edition. Do not publish it as confirmed until an official election announcement is located.",
+      "source": "Spanish Government",
+      "url": "https://www.lamoncloa.gob.es/"
+    },
+    {
+      "date": "2026-12-05",
+      "country": "The Gambia",
+      "event": "Reported presidential election",
+      "summary": "The date was included in the supplied draft. Confirm the timetable with the Independent Electoral Commission before presenting it as definitive.",
+      "source": "Gambia Independent Electoral Commission",
+      "url": "https://iec.gm/"
+    },
+    {
       "date": "2027-01-16",
       "country": "Nigeria",
-      "event": "Presidential and National Assembly elections, according to the published INEC calendar",
+      "event": "Presidential and National Assembly elections",
+      "summary": "This date appears in the published election calendar supplied for the bulletin. Check INEC for any revised timetable or official notices.",
       "source": "INEC",
       "url": "https://www.inecnigeria.org/elections/calendar/"
     },
     {
       "date": "2027-02-06",
       "country": "Nigeria",
-      "event": "Governorship and State House of Assembly elections in participating states, according to the published INEC calendar",
+      "event": "Governorship and State House of Assembly elections",
+      "summary": "The published timetable lists elections for participating states on this date. Consult INEC for state-specific details and any revisions.",
       "source": "INEC",
       "url": "https://www.inecnigeria.org/elections/calendar/"
     }
   ],
+  "breakingHistory": [
+    {
+      "date": "2026-10-25",
+      "title": "France: further demonstrations announced",
+      "summary": "French unions and protest groups called for another demonstration on 31 October and a strike on 5 November.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Tallahassee shooting investigation",
+      "summary": "Authorities reported at least 12 injured following a shooting near Florida A&M University's stadium. The investigation was continuing.",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/world-news/at-least-12-injured-in-a-shooting-in-tallahassee-florida-4971034"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Deadly drone attacks reported in Belgorod",
+      "summary": "Russian regional authorities reported deaths, injuries and property damage after drone attacks. Claims remain attributed to those authorities.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/three-people-killed-14-injured-ukrainian-attacks-russias-belgorod-region-2026-10-25/"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Possible trilateral summit reported",
+      "summary": "A Kremlin official said preparations were under way for a possible meeting involving Trump, Putin and Xi. Final arrangements remain unconfirmed.",
+      "source": "Saudi Gazette",
+      "url": "https://saudigazette.com.sa/article/665717/world/kremlin-says-preparations-begin-for-putin-xi-and-trump-trilateral-summit-in-china"
+    }
+  ],
+  "archive": [],
   "sponsoredAdverts": [
     {
       "title": "Spices and Food Products",
@@ -254,15 +414,13 @@
       "description": "Contact the advertiser for product details and availability."
     }
   ],
-  "archive": [],
-  "breakingHistory": [],
-  "todaysBigQuestion": {
-    "question": "As elections approach in Nigeria and the United States, should voters prioritise lower living costs, national security or the integrity of political leaders?",
-    "prompt": "Share your views respectfully. Ask for evidence, question promises and hold leaders accountable."
-  },
   "thoughtForToday": {
-    "text": "Good leadership is measured not by the loudness of its promises, but by the honesty of its decisions and the difference it makes in people's lives.",
+    "text": "True leadership is not about controlling the conversation; it is about accepting responsibility, listening to people and delivering results that improve lives.",
     "author": "RadiantWaves Media"
+  },
+  "todaysBigQuestion": {
+    "question": "In a world facing political division, rising living costs and rapid technological change, what should citizens demand most from their leaders: accountability, economic opportunity, security or honesty?",
+    "prompt": "Share your views respectfully. Ask for evidence, question promises and hold leaders accountable. Informed debate begins with facts."
   },
   "footer": {
     "tagline": "Connecting You Deeper to the World's Most Important Stories",

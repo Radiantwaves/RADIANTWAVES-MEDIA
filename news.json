@@ -1,536 +1,481 @@
 {
-  "edition": "Morning News",
-  "date": "2026-10-27",
-  "day": "Tuesday",
-  "brand": "RadiantWaves Media Nigeria Ltd",
-  "slogan": "Gateway to Your World News — Connecting You to the World",
-  "headline": "Morning Global Update: Ukraine Ceasefire, US Elections, France Protests and Nigeria's 2027 Race",
-  "summary": "Tuesday's global briefing examines a limited humanitarian ceasefire in Ukraine, the approaching US midterm elections, continuing unrest in France, unresolved US–Canada trade talks, the Ebola response in Central Africa, political safety in Australia and a possible international summit involving Donald Trump, Vladimir Putin and Xi Jinping. In Nigeria, President Bola Tinubu has launched his re-election campaign as economic hardship and security remain major political issues.",
-  "morningSummary": "Good morning from RadiantWaves Media. Our global news desk brings you verified reporting and important developments across Europe, North America, Africa, Asia and the Pacific. We distinguish confirmed events from proposals, allegations and political claims. Follow the original sources for continuing updates.",
-  "editorialNote": "Prepared for the morning edition of Tuesday, 27 October 2026. This is a developing news cycle. The Oleshky ceasefire is limited to a humanitarian operation and must not be described as a general peace agreement. A possible Trump–Putin–Xi meeting remains unconfirmed as a final arrangement. US–Canada trade negotiations have not produced a confirmed settlement in the cited report. Political statements are attributed to their speakers or reporting organisations. Unverified claims are labelled accordingly.",
-  "hero": {
-    "title": "Morning Global News Update",
-    "description": "Ukraine's local humanitarian ceasefire, US midterm campaigning, global economic pressure and Nigeria's developing 2027 election contest.",
-    "date": "Tuesday, 27 October 2026",
-    "video": "assets/video1.mp4"
+  "edition": "RadiantWaves Morning News & Global Update",
+  "date": "Tuesday, 27 October 2026",
+  "branding": {
+    "company": "RadiantWaves Media Nigeria Ltd",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footerSlogan": "Connecting You Deeper to the World's Most Important Stories"
   },
-  "breakingNews": [
+  "hero": {
+    "title": "WORLD NEWS TODAY: THE STORIES THAT MATTER",
+    "description": "Your global briefing on politics, diplomacy, elections, public services, technology and the issues affecting everyday life.",
+    "marquee": "World News | USA | Canada | Europe | UK | Africa | Asia | Australia | Nigeria Politics",
+    "image": "assets/news-hero.jpg"
+  },
+  "morningSummary": "Welcome to RadiantWaves Media's global morning briefing for Tuesday, 27 October 2026. Today's coverage examines a reported local humanitarian ceasefire in Ukraine, the United States midterm elections, protests over living costs in France, US–Canada trade discussions, concerns surrounding Ebola response workers in the Democratic Republic of the Congo, technology and immigration oversight in the United Kingdom, and Nigeria's developing 2027 political contest. These are developing stories. Readers should consult the linked reports for updates and distinguish confirmed developments from political claims and speculation.",
+  "editorialNote": "RadiantWaves Media aims to provide balanced, evidence-led journalism. Statements attributed to political figures should be checked against the original report or official publication. Where an exact quotation has not been verified, this bulletin provides a summary rather than presenting invented words as a direct quote.",
+  "breaking": [
     {
-      "title": "Ukraine and Russia begin a limited ceasefire around Oleshky for humanitarian aid and evacuation",
+      "headline": "Ukraine: Reported local humanitarian ceasefire",
+      "summary": "Reports describe a localised arrangement intended to facilitate humanitarian assistance and evacuations around Oleshky. This should not be interpreted as a nationwide ceasefire or a comprehensive peace agreement.",
       "category": "World",
+      "source": "Reuters",
       "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/"
     },
     {
-      "title": "More than 30 million Americans have voted early ahead of the 3 November midterms",
+      "headline": "United States: Midterm election campaigning intensifies",
+      "summary": "A report says more than 30 million people have voted early ahead of the 3 November 2026 midterm elections. Turnout, household costs and the direction of national policy remain important campaign issues.",
       "category": "USA",
+      "source": "Associated Press",
       "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
     },
     {
-      "title": "France faces further demonstrations over living costs and public services",
-      "category": "Europe",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html"
-    },
-    {
-      "title": "Trump says the US–Canada trade dispute could be settled soon; no final deal is confirmed",
-      "category": "Business",
-      "url": "https://globalnews.ca/news/12121158/trump-trade-war-end-soon/"
-    },
-    {
-      "title": "Nigeria's Tinubu launches re-election campaign as economic hardship tests support",
+      "headline": "Nigeria: The 2027 political contest gathers momentum",
+      "summary": "President Bola Tinubu has launched his re-election campaign in Kaduna. Economic hardship and insecurity are likely to remain central public concerns as political parties prepare for the next general election.",
       "category": "Nigeria Politics",
+      "source": "Reuters",
       "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
     }
   ],
   "featuredStory": {
-    "id": "featured-ukraine-oleshky-20261027",
-    "title": "Ukraine: local ceasefire opens a humanitarian window in Oleshky",
-    "category": "World",
-    "region": "Ukraine",
-    "date": "2026-10-27",
-    "image": "assets/leaders/putin.jpg",
-    "description": "Russia and Ukraine began a localised ceasefire around the Russian-occupied town of Oleshky in Ukraine's Kherson region to enable a humanitarian operation. The arrangement is intended to facilitate aid deliveries and civilian evacuations. Fighting and attacks have continued elsewhere, so this must not be presented as a nationwide ceasefire or a peace settlement.",
-    "whyItMatters": "The arrangement could provide relief to civilians facing shortages of food and medicine. Its success depends on safe access, the delivery of supplies and the ability of residents to leave without being harmed.",
-    "source": "Reuters",
-    "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/",
-    "verified": true
+    "title": "The Cost of Living Test: Are Governments Delivering for Ordinary People?",
+    "subtitle": "Economic pressure, public services and political accountability across the world",
+    "category": "Featured Analysis",
+    "date": "27 October 2026",
+    "image": "assets/diplomacy.jpeg",
+    "summary": "From protests in France to election campaigning in the United States and Nigeria, the cost of living remains a major test for political leadership. Citizens want more than campaign promises: they want affordable food and housing, reliable public services, employment opportunities, personal security and evidence that public money is being used responsibly.",
+    "whyItMatters": "When household budgets are under pressure, governments face questions about taxation, spending priorities, wages, inflation, infrastructure and the quality of essential services. Opposition parties also have a responsibility to explain how their proposed alternatives would be funded and delivered.",
+    "keyQuestions": [
+      "Are public funds being spent on the services people need most?",
+      "What practical measures can reduce pressure on household budgets?",
+      "How can citizens measure whether political promises have been fulfilled?",
+      "What safeguards ensure that public money is used transparently?"
+    ],
+    "radiantWavesView": "RadiantWaves Media believes public debate should focus on measurable outcomes, credible evidence and accountability. Governments should explain their decisions, while opposition parties should present realistic alternatives. Citizens deserve facts rather than political slogans.",
+    "source": "Le Monde",
+    "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html"
   },
   "topStories": [
     {
-      "id": "world-ukraine-oleshky",
-      "title": "Ukraine: local ceasefire allows a humanitarian operation",
-      "category": "World",
-      "region": "Ukraine",
-      "date": "2026-10-27",
-      "image": "assets/leaders/putin.jpg",
-      "description": "A local ceasefire began around Oleshky to support aid deliveries and evacuations. The arrangement is limited to this humanitarian operation. Reuters reports that attacks have continued elsewhere in Ukraine, meaning the local truce is not a general peace agreement.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/",
-      "verified": true
-    },
-    {
-      "id": "usa-midterms-early-voting",
-      "title": "US midterms: more than 30 million Americans have already voted",
-      "category": "USA",
-      "region": "United States",
-      "date": "2026-10-27",
-      "image": "assets/leaders/trump.jpg",
-      "description": "With the US midterm elections scheduled for 3 November, more than 30 million Americans had already voted, according to the Associated Press. The contest will help determine control of Congress. Economic pressures, immigration, healthcare, national security and election integrity are prominent campaign issues.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299",
-      "verified": true
-    },
-    {
-      "id": "france-protests",
-      "title": "France prepares for further demonstrations amid economic pressure",
+      "title": "Ukraine: Humanitarian access remains a central concern",
       "category": "Europe",
-      "region": "France",
-      "date": "2026-10-27",
-      "image": "assets/leaders/macron.jpg",
-      "description": "Demonstrations over living costs, wages and public services have increased pressure on the French government. Le Monde reports that further protests are planned for 31 October, followed by strike action on 5 November. The Interior Ministry and the CGT union have reported different attendance figures for previous demonstrations.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html",
-      "verified": true
-    },
-    {
-      "id": "canada-us-trade",
-      "title": "Trump says US–Canada trade dispute could end soon",
-      "category": "Business",
-      "region": "Canada and United States",
-      "date": "2026-10-26",
-      "image": "assets/leaders/carney.jpg",
-      "description": "Donald Trump said he expects the trade dispute with Canada to be settled soon. Canadian reporting says discussions are moving at the political level, but a final settlement has not been announced. Tariffs and the future of cross-border trade remain important concerns for businesses and workers in both countries.",
-      "source": "Global News / The Canadian Press",
-      "url": "https://globalnews.ca/news/12121158/trump-trade-war-end-soon/",
-      "verified": true
-    },
-    {
-      "id": "africa-ebola-response",
-      "title": "Central Africa: Ebola response and health-worker safety remain concerns",
-      "category": "Africa",
-      "region": "Democratic Republic of the Congo and neighbouring countries",
-      "date": "2026-10-27",
-      "image": "assets/leaders/uk-government.jpg",
-      "description": "The World Health Organization says the Bundibugyo virus disease outbreak in the Democratic Republic of the Congo requires sustained surveillance, contact tracing, infection prevention and cross-border coordination. Concerns about the safety of response workers add to the challenge of reaching affected communities. Readers should consult WHO for current outbreak information and travel guidance.",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622",
-      "verified": true
-    },
-    {
-      "id": "australia-politician-safety",
-      "title": "Australia debates public accountability and the safety of politicians",
-      "category": "Australia",
-      "region": "Australia",
-      "date": "2026-10-27",
-      "image": "assets/leaders/helen-haines.jpg",
-      "description": "Australian political debate has focused on government spending, public explanations of funded projects and threats against politicians. The Guardian reports that the government is considering responses to growing concerns about MPs' safety. ABC reporting has also covered security measures following events involving independent MP Helen Haines.",
-      "source": "The Guardian and ABC News Australia",
-      "url": "https://www.theguardian.com/australia-news/live/2026/oct/27/one-nation-pauline-hanson-independent-jacqui-lambie-labor-anthony-albanese-coalition-ntwnfb",
-      "verified": true
-    },
-    {
-      "id": "asia-proposed-summit",
-      "title": "Possible Trump–Putin–Xi meeting remains a proposal",
-      "category": "Asia",
-      "region": "China and international diplomacy",
-      "date": "2026-10-27",
-      "image": "assets/leaders/xi.jpg",
-      "description": "Reports say Russia has raised the possibility of a meeting involving Donald Trump, Vladimir Putin and Xi Jinping on the sidelines of a summit in China next month. The Kremlin has said the idea was discussed, but no specific proposal or agreement on the meeting was put forward. The three-way meeting should therefore be described as possible, not confirmed.",
-      "source": "The Washington Post",
-      "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//",
-      "verified": true
-    },
-    {
-      "id": "nigeria-election",
-      "title": "Nigeria: Tinubu launches re-election campaign amid economic hardship",
-      "category": "Nigeria Politics",
-      "region": "Nigeria",
-      "date": "2026-10-24",
-      "image": "assets/leaders/tinubu.jpg",
-      "description": "President Bola Tinubu formally launched his re-election campaign in Kaduna on 24 October. Reuters reports that the economy and security are likely to dominate the contest, with the president defending his reforms despite a continuing cost-of-living crisis. Atiku Abubakar and Peter Obi remain prominent opposition figures.",
+      "date": "27 October 2026",
+      "image": "assets/diplomacy.jpeg",
+      "summary": "A reported local ceasefire around Oleshky is intended to allow humanitarian operations and evacuations. Fighting elsewhere remains a separate concern, and the reported arrangement should not be described as a general peace agreement.",
+      "whyItMatters": "Local humanitarian arrangements can help civilians receive assistance, but their effectiveness depends on implementation, access and the safety of aid workers and residents.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "verified": true
+      "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/"
     },
     {
-      "id": "uk-ai-immigration",
-      "title": "UK report questions transparency of AI use in immigration operations",
-      "category": "Technology",
-      "region": "United Kingdom",
-      "date": "2026-10-27",
-      "image": "assets/leaders/andy.jpg",
-      "description": "A report by Open Rights Group alleges that AI tools have been embedded across parts of the Home Office's immigration operations with insufficient transparency and public scrutiny. The Home Office says AI assists trained decision-makers and that caseworkers remain responsible for asylum decisions. The debate highlights the importance of safeguards, independent scrutiny and human accountability when technology affects people's rights.",
+      "title": "USA: More than 30 million early votes reported before midterms",
+      "category": "USA",
+      "date": "27 October 2026",
+      "image": "assets/news-hero.jpg",
+      "summary": "Early voting is an important feature of the run-up to the United States midterm elections scheduled for 3 November 2026. The reported early-vote total does not by itself predict the final result.",
+      "whyItMatters": "Midterm elections determine representation in Congress and can influence the direction of legislation, government oversight and national political priorities.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
+    },
+    {
+      "title": "France: Protests put living costs and public services under scrutiny",
+      "category": "Europe",
+      "date": "26–27 October 2026",
+      "image": "assets/diplomacy.jpeg",
+      "summary": "French authorities are facing continued pressure following protests over economic conditions and public services. The political challenge is to respond to public concerns while explaining the costs and consequences of proposed measures.",
+      "whyItMatters": "Public trust can weaken when citizens feel that wages, essential services and household expenses are moving in the wrong direction.",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html"
+    },
+    {
+      "title": "Canada–United States: Trade discussions continue",
+      "category": "Canada",
+      "date": "27 October 2026",
+      "image": "assets/diplomacy.jpeg",
+      "summary": "Donald Trump has indicated that a US–Canada trade settlement could be reached soon. An indication that an agreement may be close is not the same as a signed or implemented final deal.",
+      "whyItMatters": "Trade arrangements affect businesses, jobs, supply chains and consumer prices in both countries. The details of any settlement will matter more than a political prediction.",
+      "source": "RadiantWaves Media newsroom",
+      "sourceUrl": "",
+      "verificationNote": "Check the latest official statements from the United States and Canadian governments before publication of any new claim about a concluded agreement."
+    },
+    {
+      "title": "DR Congo: Attacks on Ebola response workers raise safety concerns",
+      "category": "Africa",
+      "date": "27 October 2026",
+      "image": "assets/news-hero.jpg",
+      "summary": "Reports of attacks affecting Ebola response personnel highlight the dangers faced by health workers during outbreak-control operations. The precise location, incident details and public-health situation should be confirmed through health authorities and established reporting.",
+      "whyItMatters": "Health workers need safe access to communities to support surveillance, contact tracing, treatment and public information. Violence can disrupt response efforts and put more people at risk.",
+      "source": "RadiantWaves Media newsroom",
+      "sourceUrl": "",
+      "verificationNote": "Confirm incident details and current outbreak information with the World Health Organization and relevant national health authorities."
+    },
+    {
+      "title": "United Kingdom: Questions raised about AI in immigration operations",
+      "category": "UK",
+      "date": "27 October 2026",
+      "image": "assets/news-hero.jpg",
+      "summary": "A report has raised concerns about the use of artificial intelligence within immigration operations. The Home Office position, as described in the report, is that AI assists trained decision-makers. The extent of its use, safeguards and human oversight remain important questions.",
+      "whyItMatters": "Decisions affecting immigration status can have serious consequences for individuals and families. Systems using AI need appropriate transparency, accountability, safeguards against error and meaningful human oversight.",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
-      "verified": true
+      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
     },
     {
-      "id": "nigeria-opposition",
-      "title": "Nigeria opposition: coalition questions remain unresolved",
+      "title": "Australia: Accountability and the safety of public representatives",
+      "category": "Australia & Pacific",
+      "date": "27 October 2026",
+      "image": "assets/news-hero.jpg",
+      "summary": "Public spending accountability and the safety of politicians remain important democratic concerns. Specific claims about new Australian developments should be checked against the relevant parliamentary, government or news source before publication.",
+      "whyItMatters": "Democratic institutions need transparent spending, public scrutiny and a political environment in which elected representatives can perform their duties without intimidation.",
+      "source": "RadiantWaves Media newsroom",
+      "sourceUrl": "",
+      "verificationNote": "This is a general editorial summary, not a verified direct statement by the Australian Prime Minister or Helen Haines."
+    },
+    {
+      "title": "Asia: Possible high-level meeting involving Trump, Putin and Xi",
+      "category": "Asia & Diplomacy",
+      "date": "27 October 2026",
+      "image": "assets/diplomacy.jpeg",
+      "summary": "Reports have raised the possibility of a meeting involving Donald Trump, Vladimir Putin and Xi Jinping in China next month. Until the relevant governments confirm the arrangements, the meeting should be described as possible rather than finalised.",
+      "whyItMatters": "Any high-level talks involving the United States, Russia and China could attract attention because of their implications for security, trade and international relations.",
+      "source": "RadiantWaves Media newsroom",
+      "sourceUrl": "",
+      "verificationNote": "Seek confirmation from official government announcements or reliable independent reporting before presenting the meeting as confirmed."
+    },
+    {
+      "title": "Nigeria: Tinubu launches re-election campaign as economic concerns persist",
       "category": "Nigeria Politics",
-      "region": "Nigeria",
-      "date": "2026-10-27",
+      "date": "24 October 2026",
+      "image": "assets/leaders/tinubu.jpg",
+      "summary": "Reuters reported that Bola Tinubu launched his re-election campaign in Kaduna. The campaign faces public scrutiny over economic hardship, insecurity and the government's record.",
+      "whyItMatters": "The 2027 election debate should examine results, policy proposals, public spending, security and the practical consequences of political decisions for Nigerian households.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
+    },
+    {
+      "title": "Nigeria's opposition: Can competing camps agree on a common direction?",
+      "category": "Nigeria Politics",
+      "date": "27 October 2026",
       "image": "assets/leaders/atiku.jpg",
-      "description": "Atiku Abubakar and Peter Obi remain important figures in the opposition debate ahead of the 2027 election. Public discussion about a joint ticket, party alliances or one candidate stepping aside should not be treated as a concluded agreement without a direct statement or corroborated reporting.",
-      "source": "Independent National Electoral Commission",
-      "url": "https://inecnigeria.org/",
-      "verified": false
+      "summary": "Atiku Abubakar's political camp and Peter Obi's supporters remain part of wider opposition discussions about the 2027 election. Disagreements over strategy, party structures and a possible common ticket present challenges for opposition unity.",
+      "whyItMatters": "A credible opposition needs more than criticism of the incumbent government. It needs a clear programme, a transparent selection process, credible candidates and an explanation of how its proposals would be delivered.",
+      "source": "The Guardian Nigeria",
+      "url": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+      "verificationNote": "Do not claim that Atiku or Obi has agreed to step aside unless a reliable report or official statement confirms it."
     }
   ],
-  "worldNews": [
-    {
-      "title": "Ukraine: local humanitarian ceasefire begins around Oleshky",
-      "category": "World",
-      "date": "2026-10-27",
-      "image": "assets/leaders/putin.jpg",
-      "description": "The local truce is intended to allow humanitarian aid and civilian evacuations. It does not cover the whole war.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/",
-      "verified": true
-    },
-    {
-      "title": "A possible three-way summit involving Trump, Putin and Xi remains unconfirmed",
-      "category": "World",
-      "date": "2026-10-27",
-      "image": "assets/leaders/xi.jpg",
-      "description": "The idea of a meeting in China next month has been reported, but no final arrangement has been confirmed.",
-      "source": "The Washington Post",
-      "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//",
-      "verified": true
-    }
-  ],
-  "usaNews": [
-    {
-      "title": "More than 30 million Americans have voted early ahead of the midterms",
-      "category": "USA",
-      "date": "2026-10-27",
-      "image": "assets/leaders/trump.jpg",
-      "description": "The 3 November midterms will determine congressional representation and influence the administration's ability to advance its agenda.",
+  "regionalBriefings": {
+    "usa": {
+      "title": "United States",
+      "summary": "The 3 November 2026 midterm elections are approaching. Early voting, economic pressures and the balance of power in Congress are central issues to watch.",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299",
-      "verified": true
+      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
     },
-    {
-      "title": "Trump says Canada trade dispute could be settled soon",
-      "category": "USA",
-      "date": "2026-10-26",
-      "image": "assets/leaders/trump.jpg",
-      "description": "The president has expressed optimism, but reporting does not establish that a final trade settlement has been signed.",
-      "source": "Global News / The Canadian Press",
-      "url": "https://globalnews.ca/news/12121158/trump-trade-war-end-soon/",
-      "verified": true
-    }
-  ],
-  "europeNews": [
-    {
-      "title": "France faces further protests over living costs and public services",
-      "category": "Europe",
-      "date": "2026-10-27",
-      "image": "assets/leaders/macron.jpg",
-      "description": "Further demonstrations are planned for 31 October and strike action for 5 November, according to Le Monde.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html",
-      "verified": true
+    "canada": {
+      "title": "Canada",
+      "summary": "Trade discussions with the United States remain significant for businesses and workers. A possible settlement should not be described as concluded without confirmation.",
+      "source": "RadiantWaves Media newsroom",
+      "url": ""
     },
-    {
-      "title": "UK report raises questions about AI and immigration decisions",
-      "category": "Europe",
-      "date": "2026-10-27",
-      "image": "assets/leaders/andy.jpg",
-      "description": "A civil-rights report questions transparency around government AI systems; the Home Office says trained people remain responsible for asylum decisions.",
+    "europe": {
+      "title": "Europe",
+      "summary": "The Ukraine war and humanitarian access remain major concerns, while protests in France highlight continuing pressure over household costs and public services.",
+      "source": "Reuters and Le Monde",
+      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html"
+    },
+    "uk": {
+      "title": "United Kingdom",
+      "summary": "Debate over AI in immigration operations raises questions about transparency, accountability and the need for human oversight in consequential public decisions.",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
-      "verified": true
-    }
-  ],
-  "africaNews": [
-    {
-      "title": "WHO continues to monitor the Ebola outbreak in the Democratic Republic of the Congo",
-      "category": "Africa",
-      "date": "2026-10-27",
-      "description": "Health authorities are maintaining surveillance, contact tracing and infection-prevention measures. Check WHO for current risk assessments and official guidance.",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622",
-      "verified": true
+      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
     },
-    {
-      "title": "Nigeria's 2027 election campaign takes shape",
-      "category": "Africa",
-      "date": "2026-10-24",
-      "image": "assets/leaders/tinubu.jpg",
-      "description": "Tinubu has launched his re-election campaign in Kaduna. Economic conditions and security are expected to be major issues for voters.",
+    "africa": {
+      "title": "Africa",
+      "summary": "Reports of attacks affecting Ebola response workers in the Democratic Republic of the Congo underline the importance of protecting health personnel and maintaining access to communities. Confirm current details with health authorities.",
+      "source": "RadiantWaves Media newsroom",
+      "url": ""
+    },
+    "asia": {
+      "title": "Asia",
+      "summary": "Possible high-level diplomatic discussions involving the United States, Russia and China have been reported. The timing and participation should be treated as unconfirmed until officially announced.",
+      "source": "RadiantWaves Media newsroom",
+      "url": ""
+    },
+    "australia": {
+      "title": "Australia and the Pacific",
+      "summary": "Public spending accountability and the safety of political representatives are important democratic issues. Specific current developments require confirmation from reliable reporting.",
+      "source": "RadiantWaves Media newsroom",
+      "url": ""
+    },
+    "nigeria": {
+      "title": "Nigeria",
+      "summary": "The 2027 political contest is gathering momentum. Economic hardship, security, party strategy and the credibility of candidates are key issues for voters to examine.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "verified": true
+      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
     }
-  ],
-  "asiaNews": [
-    {
-      "title": "China could host a possible meeting of Trump, Putin and Xi next month",
-      "category": "Asia",
-      "date": "2026-10-27",
-      "image": "assets/leaders/xi.jpg",
-      "description": "The proposed meeting has been discussed but no final agreement has been confirmed. The possible summit should not be reported as scheduled.",
-      "source": "The Washington Post",
-      "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//",
-      "verified": true
-    }
-  ],
-  "businessNews": [
-    {
-      "title": "US–Canada trade negotiations remain unresolved",
-      "category": "Business",
-      "date": "2026-10-27",
-      "image": "assets/leaders/carney.jpg",
-      "description": "Trump has said the dispute could end soon. Canadian reporting describes renewed political-level discussions, but a completed agreement has not been announced.",
-      "source": "Global News / The Canadian Press",
-      "url": "https://globalnews.ca/news/12121158/canada-us-trade-talks-moving-quickly-midterms/",
-      "verified": true
-    },
-    {
-      "title": "France's unrest adds pressure to the economic outlook",
-      "category": "Business",
-      "date": "2026-10-27",
-      "image": "assets/leaders/macron.jpg",
-      "description": "Le Monde reports that social unrest, political uncertainty and higher energy costs are weighing on consumer confidence and business activity in France.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/economy/article/2026/10/26/social-unrest-further-darkens-france-s-economic-outlook_6764815_19.html",
-      "verified": true
-    }
-  ],
-  "technologyNews": [
-    {
-      "title": "UK report questions transparency of AI in immigration operations",
-      "category": "Technology",
-      "date": "2026-10-27",
-      "image": "assets/leaders/andy.jpg",
-      "description": "A report alleges that AI is being used in several Home Office immigration processes without sufficient public scrutiny. The Home Office says AI assists trained decision-makers. The debate highlights the need for transparency, oversight, safeguards and clear accountability.",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
-      "verified": true
-    }
-  ],
+  },
+  "technologyInnovation": {
+    "title": "AI in Government: Efficiency Must Not Replace Accountability",
+    "category": "Technology & Innovation",
+    "summary": "Artificial intelligence is increasingly discussed in public administration, including immigration processes. AI may assist staff with information and administrative tasks, but governments must explain how systems are used, how errors are challenged and who remains responsible for decisions.",
+    "keyPoints": [
+      "People should be able to understand when automated systems materially affect a decision.",
+      "High-impact decisions require appropriate human review and accountability.",
+      "Public authorities should test systems for errors and unfair outcomes.",
+      "Clear complaint and appeal processes are essential when a decision is challenged."
+    ],
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
+  },
   "leadersWatch": {
-    "note": "Leader photographs use the existing assets/leaders/ files. Updates and statements are attributed to the source linked in each entry. A summary is not a direct quotation unless quotation marks are used and the source records those exact words.",
+    "title": "Leaders Watch: Decisions, Statements and Accountability",
+    "description": "A concise overview of leaders in the international news cycle. The summaries below describe relevant policy or political issues; they are not fabricated direct quotations. Add an exact quote only after checking the original speech, interview or official statement.",
     "leaders": [
       {
         "name": "Donald Trump",
         "role": "President of the United States",
         "country": "United States",
         "image": "assets/leaders/trump.jpg",
-        "update": "More than 30 million Americans have already voted ahead of the 3 November midterm elections. Trump has also said the US–Canada trade dispute could be settled soon, although no final agreement has been confirmed.",
-        "statement": "On Canada trade, Trump said the dispute would be settled \"pretty soon,\" according to The Canadian Press. This is his prediction, not confirmation of a signed deal.",
-        "source": "Associated Press and Global News / The Canadian Press",
-        "url": "https://globalnews.ca/news/12121158/trump-trade-war-end-soon/",
-        "verified": true
+        "headline": "Trade discussions and the US midterm elections",
+        "update": "Trump has indicated that a US–Canada trade settlement could come soon. Separately, the approaching US midterm elections will test the political climate and the public response to national policy.",
+        "statement": "Summary of reported position: Trump has expressed optimism about the possibility of a trade settlement. This is not a verbatim quotation, and no final agreement should be assumed without confirmation.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Developing"
       },
       {
         "name": "Mark Carney",
         "role": "Prime Minister of Canada",
         "country": "Canada",
         "image": "assets/leaders/carney.jpg",
-        "update": "Canada remains engaged in trade discussions with the United States. Reports indicate renewed political-level engagement, but the dispute remains unresolved.",
-        "statement": "No new direct quotation from Carney is included because the cited report does not establish a fresh statement from him.",
-        "source": "Global News",
-        "url": "https://globalnews.ca/news/12121641/canada-us-trade-talks-moving-quickly-midterms/",
-        "verified": true
+        "headline": "Canada–US trade relations",
+        "update": "Trade relations with the United States are an important issue for Canadian businesses, workers and consumers. The details and status of any proposed settlement should be confirmed through official Canadian statements.",
+        "statement": "No direct quotation is included here because a specific, verified statement from Carney on the reported development has not been supplied.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Awaiting verified statement"
       },
       {
         "name": "Emmanuel Macron",
         "role": "President of France",
         "country": "France",
         "image": "assets/leaders/macron.jpg",
-        "update": "France faces renewed pressure over the cost of living and public services. Further demonstrations are planned for 31 October and strike action for 5 November.",
-        "statement": "Le Monde reports that Macron thanked law-enforcement personnel after the demonstrations but did not address the scale of the protests in that message.",
+        "headline": "Public services and the cost of living",
+        "update": "Protests over living costs and public services place pressure on French political leadership to respond to household concerns and explain government priorities.",
+        "statement": "Editorial observation: Macron's government faces questions about how it will respond to public discontent. This is a newsroom summary, not a direct quotation from Macron.",
         "source": "Le Monde",
-        "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html",
-        "verified": true
+        "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html",
+        "status": "Public debate"
       },
       {
         "name": "Bola Ahmed Tinubu",
         "role": "President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/tinubu.jpg",
-        "update": "Tinubu formally launched his re-election campaign in Kaduna on 24 October. The economy and security are expected to be central issues in the contest.",
-        "statement": "Reuters reported Tinubu telling supporters: \"Come 2027, January 16, you must go out massively and elect me again.\"",
+        "headline": "Re-election campaign begins in Kaduna",
+        "update": "Tinubu launched his re-election campaign in Kaduna on 24 October, according to Reuters. Economic hardship and insecurity are among the major issues facing the administration as the 2027 election approaches.",
+        "statement": "Reported political position: Tinubu is seeking another term. Voters will assess his administration's record and future promises against economic conditions, security and public-service delivery. This is a summary, not a verbatim quotation.",
         "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-        "verified": true
+        "sourceUrl": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
+        "status": "Campaign underway"
       },
       {
         "name": "Atiku Abubakar",
-        "role": "Former Vice-President and opposition politician",
+        "role": "Nigerian opposition politician",
         "country": "Nigeria",
         "image": "assets/leaders/atiku.jpg",
-        "update": "Atiku remains a major opposition figure ahead of Nigeria's 2027 presidential election. Claims about nationwide campaign plans or negotiations with other opposition figures should be linked to a direct campaign statement or reliable report.",
-        "statement": "No new direct statement about stepping aside for Peter Obi or accepting a coalition arrangement has been verified for this edition.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-        "verified": false
+        "headline": "Opposition strategy ahead of 2027",
+        "update": "Atiku's political camp is part of the opposition discussions surrounding the 2027 election. Coalition negotiations and disagreements over strategy remain important issues to follow.",
+        "statement": "Reported political position: Atiku and his political allies are involved in preparations and discussions about the next election. Do not attribute a decision to withdraw or step aside to him without a confirmed statement.",
+        "source": "The Guardian Nigeria",
+        "sourceUrl": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+        "status": "Opposition discussions"
       },
       {
         "name": "Peter Obi",
-        "role": "Former governor and opposition politician",
+        "role": "Nigerian opposition politician",
         "country": "Nigeria",
         "image": "assets/leaders/obi.jpg",
-        "update": "Peter Obi remains a prominent opposition figure. The possibility of a unified opposition strategy is an important political question, but no final agreement between Obi and Atiku is established by the sources used for this edition.",
-        "statement": "No new direct statement confirming that Obi has stepped aside or agreed to a particular coalition arrangement has been verified.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-        "verified": false
+        "headline": "Opposition unity and the question of a common ticket",
+        "update": "Obi and his supporters remain part of the wider debate about opposition coordination ahead of 2027. Questions over party structures, candidate selection and coalition terms remain unresolved in this briefing.",
+        "statement": "No verified decision by Obi to step aside is established in this bulletin. His position should be represented using his own verified statements or those of an authorised spokesperson.",
+        "source": "The Guardian Nigeria",
+        "sourceUrl": "https://guardian.ng/politics/2027-atiku-obi-camps-clash-as-opposition-considers-single-ticket/",
+        "status": "Coalition debate"
+      },
+      {
+        "name": "Keir Starmer",
+        "role": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "image": "assets/leaders/uk-government.jpg",
+        "headline": "AI, immigration and public accountability",
+        "update": "Questions about AI use in immigration operations have placed transparency and human oversight under scrutiny. The reported debate concerns how government systems are used and how decisions are reviewed.",
+        "statement": "No direct quotation from Starmer is included here. The story concerns reported questions about government practice and should not be presented as a personal statement by the Prime Minister.",
+        "source": "The Guardian",
+        "sourceUrl": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
+        "status": "Policy scrutiny"
       },
       {
         "name": "Andy Burnham",
-        "role": "Prime Minister of the United Kingdom",
+        "role": "Mayor of Greater Manchester",
         "country": "United Kingdom",
         "image": "assets/leaders/andy.jpg",
-        "update": "The UK government is debating public policy, economic growth and the use of artificial intelligence in immigration operations. A civil-rights report has raised concerns about transparency and oversight.",
-        "statement": "The Guardian reports the Home Office's position that AI assists trained decision-makers and does not replace caseworkers responsible for asylum decisions.",
-        "source": "The Guardian and UK Government",
-        "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
-        "verified": true
+        "headline": "Local leadership and public services",
+        "update": "Burnham is the Mayor of Greater Manchester, not the UK Prime Minister. Any current comment attributed to him should be tied to a specific verified interview, speech or official publication.",
+        "statement": "No verified statement on today's featured developments is included. This entry is a role and attribution note, not a quotation.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Awaiting verified update"
       },
       {
         "name": "Friedrich Merz",
         "role": "Chancellor of Germany",
         "country": "Germany",
         "image": "assets/leaders/merz.jpg",
-        "update": "Germany's economic policy, European cooperation and security partnerships remain important international watchpoints.",
-        "statement": "No fresh direct statement from Merz is quoted in this edition.",
-        "source": "German Federal Government",
-        "url": "https://www.bundesregierung.de/breg-en",
-        "verified": false
+        "headline": "European security and economic pressures",
+        "update": "Germany remains an important actor in European economic and security discussions. This bulletin does not attribute a new policy announcement to Merz without a specific verified source.",
+        "statement": "No direct quotation from Merz has been verified for this edition. Add his exact words only after checking an official statement or reliable report.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Awaiting verified update"
       },
       {
         "name": "Vladimir Putin",
         "role": "President of Russia",
         "country": "Russia",
         "image": "assets/leaders/putin.jpg",
-        "update": "Russia and Ukraine have begun a limited ceasefire around Oleshky for a humanitarian operation. Separately, a possible three-way meeting with Trump and Xi has been discussed, but no final arrangement has been confirmed.",
-        "statement": "The Kremlin has said the idea of a possible three-way meeting was raised, but no specific proposal or agreement was put forward.",
-        "source": "Reuters and The Washington Post",
-        "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//",
-        "verified": true
+        "headline": "Ukraine and possible diplomatic discussions",
+        "update": "The reported local humanitarian arrangement around Oleshky does not establish a general ceasefire. Any possible future meeting involving Russia and other major powers remains subject to confirmation.",
+        "statement": "No new direct quotation from Putin is included in this entry. The status of any proposed diplomatic meeting should be confirmed through reliable reporting or official announcements.",
+        "source": "Reuters",
+        "sourceUrl": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/",
+        "status": "Diplomacy and conflict"
       },
       {
         "name": "Xi Jinping",
         "role": "President of China",
         "country": "China",
         "image": "assets/leaders/xi.jpg",
-        "update": "China could be the venue for a possible meeting involving Trump and Putin next month. The meeting remains a proposal rather than a confirmed event.",
-        "statement": "No direct statement from Xi confirming the proposed meeting is included in the cited report.",
-        "source": "The Washington Post",
-        "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//",
-        "verified": true
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "role": "President of the European Commission",
-        "country": "European Union",
-        "image": "assets/leaders/von-der-leyen.jpg",
-        "update": "EU economic competitiveness, security and international partnerships remain important policy areas to monitor.",
-        "statement": "No new direct statement from von der Leyen is quoted in this edition.",
-        "source": "European Commission",
-        "url": "https://commission.europa.eu/",
-        "verified": false
-      },
-      {
-        "name": "Helen Haines",
-        "role": "Australian independent politician",
-        "country": "Australia",
-        "image": "assets/leaders/helen-haines.jpg",
-        "update": "Australian political debate has included the safety of MPs and security arrangements at Parliament House. ABC News reports that parliamentarians have discussed security following events involving Helen Haines.",
-        "statement": "Australian political leaders have stressed the need to improve safety while preserving the ability of elected representatives to remain accessible to the public.",
-        "source": "ABC News Australia",
-        "url": "https://www.abc.net.au/news/2026-10-26/helen-haines-parliament-returns-canberra-federal-politics/107306604",
-        "verified": true
+        "headline": "Possible high-level diplomatic meeting",
+        "update": "Reports have raised the possibility of a meeting involving Xi, Trump and Putin in China next month. Until confirmed by the governments concerned, the proposed meeting should remain labelled as unconfirmed.",
+        "statement": "No direct quotation from Xi has been verified for this development. This entry summarises the reported diplomatic possibility without implying that an invitation or meeting has been formally confirmed.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Unconfirmed reports"
       },
       {
         "name": "Anthony Albanese",
         "role": "Prime Minister of Australia",
         "country": "Australia",
+        "image": "assets/leaders/anthony-albanese.jpg",
+        "headline": "Public spending and political safety",
+        "update": "Public accountability and the safety of elected representatives are important democratic issues. Specific claims about current Australian developments require confirmation from an established news source or official publication.",
+        "statement": "No direct quotation from Albanese is included because a specific verified statement for this story has not been supplied. This entry does not use Helen Haines's image.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Awaiting verified update"
+      },
+      {
+        "name": "Helen Haines",
+        "role": "Independent Member of Australia's House of Representatives",
+        "country": "Australia",
         "image": "assets/leaders/helen-haines.jpg",
-        "update": "Albanese faces questions over public-spending accountability and the safety of politicians. The Guardian reports on political criticism of a government-funded project and proposed responses to threats against MPs.",
-        "statement": "This is a summary of the reported debate, not a direct quotation from Albanese.",
-        "source": "The Guardian",
-        "url": "https://www.theguardian.com/australia-news/live/2026/oct/27/one-nation-pauline-hanson-independent-jacqui-lambie-labor-anthony-albanese-coalition-ntwnfb",
-        "verified": true
+        "headline": "Independent representation and public accountability",
+        "update": "Helen Haines is an Australian independent politician. Her entry is kept separate from that of Prime Minister Anthony Albanese; no specific new statement from Haines is attributed in this edition.",
+        "statement": "No direct quotation is included without a verified source. Add a statement from Haines only when the original speech, interview or official publication is available.",
+        "source": "RadiantWaves Media newsroom",
+        "sourceUrl": "",
+        "status": "Awaiting verified statement"
       }
     ]
   },
-  "electionWatch": [
-    {
-      "country": "United States",
-      "election": "2026 midterm elections",
-      "date": "2026-11-03",
-      "status": "Campaigning and early voting",
-      "description": "More than 30 million Americans had already voted, according to the Associated Press. Control of Congress is at stake.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299",
-      "verified": true
-    },
-    {
-      "country": "Nigeria",
-      "election": "2027 presidential election",
-      "date": "2027-01-16",
-      "status": "Campaign activity underway",
-      "description": "Reuters reports that Tinubu launched his re-election campaign in Kaduna on 24 October and identifies Atiku Abubakar and Peter Obi among the major challengers. Confirm the official timetable and any subsequent changes with INEC.",
-      "source": "Reuters and INEC",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "verified": true
-    }
-  ],
-  "breakingHistory": [
-    {
-      "date": "1962-10-27",
-      "title": "Cuban Missile Crisis reaches a critical point",
-      "category": "History",
-      "description": "On 27 October 1962, the Cuban Missile Crisis reached one of its most dangerous moments. The confrontation demonstrated the risks of miscalculation between nuclear powers and the importance of communication, diplomacy and restraint.",
-      "source": "John F. Kennedy Presidential Library and Museum",
-      "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-cuban-missile-crisis",
-      "verified": true
-    }
-  ],
-  "innovationWatch": {
-    "title": "AI and public accountability: who checks the decisions?",
-    "description": "A UK civil-rights report has raised concerns about the transparency of AI tools used in immigration operations. The Home Office says AI assists trained decision-makers and that caseworkers remain responsible for asylum decisions. The wider issue is how governments can use technology while protecting privacy, fairness, human rights and the right to challenge decisions.",
-    "source": "The Guardian",
-    "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
-    "verified": true
+  "electionWatch": {
+    "title": "Election Watch",
+    "elections": [
+      {
+        "country": "Nigeria",
+        "election": "2027 General Election",
+        "status": "Political preparations and coalition discussions are underway.",
+        "keyIssues": [
+          "Cost of living and economic management",
+          "Security",
+          "Electricity and infrastructure",
+          "Public spending and accountability",
+          "Opposition coordination",
+          "Credibility of candidates and electoral institutions"
+        ],
+        "radiantWavesObservation": "Voters should compare candidates' records, funding plans and measurable policy proposals. Claims about withdrawals, endorsements or coalition agreements require confirmation."
+      },
+      {
+        "country": "United States",
+        "election": "2026 Midterm Elections",
+        "date": "3 November 2026",
+        "status": "Campaigning and early voting are underway, according to the cited report.",
+        "keyIssues": [
+          "Household costs",
+          "Economic policy",
+          "Congressional control",
+          "Government oversight",
+          "Voter participation"
+        ],
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
+      }
+    ]
   },
-  "todaysBigQuestion": {
-    "question": "When the cost of living rises and public services come under pressure, what should governments prioritise first: more public spending, tighter financial discipline or stronger accountability?",
-    "context": "France's demonstrations, Nigeria's economic debate and public-accountability questions in other countries show why citizens want evidence that policies improve daily life.",
-    "invite": "Join the discussion respectfully. Tell us which policy you would prioritise and what evidence would convince you that it is working."
+  "historyToday": {
+    "title": "On This Day in History",
+    "date": "27 October",
+    "headline": "The Cuban Missile Crisis: A critical moment in October 1962",
+    "summary": "The Cuban Missile Crisis brought the United States and the Soviet Union to the brink of nuclear conflict in October 1962. The crisis demonstrated the importance of communication, diplomacy and restraint when international tensions escalate.",
+    "lesson": "History reminds leaders that responsible communication and careful decisions can help prevent a dangerous confrontation from becoming a catastrophe.",
+    "verificationNote": "For a detailed historical timeline, consult established historical archives and official records."
   },
   "thoughtForToday": {
-    "title": "RadiantWaves Thought for Today",
-    "text": "A leader's real strength is not the ability to silence criticism, but the willingness to answer it with evidence, fairness and action.",
-    "attribution": "Original reflection by RadiantWaves Media",
-    "original": true
+    "title": "Thought for Today",
+    "quote": "A leader's real strength is not the ability to silence criticism, but the willingness to answer it with evidence, fairness and action.",
+    "author": "RadiantWaves Media",
+    "context": "Leadership is measured not only by promises, speeches or popularity, but also by transparency, responsibility and the results citizens can see.",
+    "socialCaption": "Leadership is not about avoiding questions. It is about answering them with evidence, fairness and action. What should citizens expect from those in power?",
+    "hashtags": [
+      "#RadiantWavesMedia",
+      "#Leadership",
+      "#Accountability",
+      "#PublicService",
+      "#GlobalNews"
+    ]
   },
-  "editorialStandards": {
-    "verification": "News summaries should be checked against their linked original sources before publication or republication.",
-    "quotes": "Quotation marks are reserved for words attributed directly to the speaker by the linked source. Summaries and observations are not direct quotes.",
-    "allegations": "Claims by governments, political parties, unions or campaign teams should be attributed to the party making the claim and not presented as independently established fact without corroboration.",
-    "images": "Use the existing local leader-image files. Check that each image matches the person or event described before publishing.",
-    "archives": "Do not add a story to the archive until that edition has actually been published."
+  "todaysBigQuestion": {
+    "title": "Today's Big Question",
+    "question": "When the cost of living rises, what should governments prioritise first: better public services, financial discipline, job creation or stronger accountability for public spending?",
+    "context": "From France to Nigeria and the United States, household costs and public confidence are major subjects of political debate. Different policies have different costs and consequences, so governments should explain their choices and provide evidence of results.",
+    "invite": "Join the discussion respectfully. Explain your choice and what evidence you would use to judge whether a government is delivering.",
+    "hashtags": [
+      "#TodaysBigQuestion",
+      "#PublicAccountability",
+      "#CostOfLiving",
+      "#RadiantWavesMedia"
+    ]
   },
-  "archives": [],
-  "archiveNote": "No earlier editions are added to this file. Preserve previously published archive records separately if your existing website relies on them.",
-  "sponsoredAdverts": [
+  "advertisements": [
     {
       "title": "Advertise with RadiantWaves Media",
-      "description": "Reach audiences through digital media placements and sponsored content. Contact our team to discuss advertising and partnership opportunities.",
-      "image": "assets/spices.jpeg",
-      "type": "sponsored",
-      "url": "mailto:info@radiantwavesmedia.com"
+      "description": "Reach audiences interested in global affairs, business, public policy, technology and current events.",
+      "image": "",
+      "link": "mailto:info@radiantwavesmedia.com",
+      "label": "Advertising and Media Partnerships"
     },
     {
-      "title": "Business and Product Promotion",
-      "description": "Ask RadiantWaves Media about advertising opportunities and promotional partnerships.",
+      "title": "Spices and Food Products",
+      "description": "Explore the featured product promotion.",
+      "image": "assets/spices.jpeg",
+      "link": "mailto:info@radiantwavesmedia.com",
+      "label": "Sponsored Advertisement"
+    },
+    {
+      "title": "Stonebreaker Product",
+      "description": "View the featured product promotion. Any health-related claims must be supported by appropriate evidence and comply with applicable advertising rules.",
       "image": "assets/stonebreaker.jpeg",
-      "type": "sponsored",
-      "url": "mailto:info@radiantwavesmedia.com"
+      "link": "mailto:info@radiantwavesmedia.com",
+      "label": "Sponsored Advertisement"
     }
   ],
   "contact": {
@@ -538,62 +483,19 @@
     "email": "info@radiantwavesmedia.com",
     "supportEmail": "support@radiantwavesmedia.com",
     "whatsapp": "+33 6 21 61 31 49",
-    "whatsappUrl": "https://wa.me/33621613149"
+    "website": "https://radiantwavesmedia.com"
   },
-  "socialLinks": {
+  "socialMedia": {
     "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
     "tiktok": "https://www.tiktok.com/@radiantwaves",
     "youtube": "https://www.youtube.com/@RADIANTWAVE-wv6",
     "x": "https://x.com/Radiant13528995"
   },
-  "sources": [
-    {
-      "name": "Reuters — Ukraine local ceasefire",
-      "url": "https://www.reuters.com/world/europe/russia-ukraine-begin-localised-ceasefire-allow-humanitarian-operation-oleshky-2026-10-27/"
-    },
-    {
-      "name": "Associated Press — US midterm elections",
-      "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
-    },
-    {
-      "name": "Le Monde — France protests",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html"
-    },
-    {
-      "name": "Global News — US–Canada trade talks",
-      "url": "https://globalnews.ca/news/12121158/trump-trade-war-end-soon/"
-    },
-    {
-      "name": "The Washington Post — proposed Trump–Putin–Xi meeting",
-      "url": "https://www.washingtonpost.com/world/2026/10/19/russia-proposes-trump-xi-putin-meeting-china-next-month//"
-    },
-    {
-      "name": "World Health Organization — Ebola outbreak information",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622"
-    },
-    {
-      "name": "Reuters — Nigeria's 2027 election campaign",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
-    },
-    {
-      "name": "The Guardian — UK AI and immigration report",
-      "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
-    },
-    {
-      "name": "The Guardian — Australian political developments",
-      "url": "https://www.theguardian.com/australia-news/live/2026/oct/27/one-nation-pauline-hanson-independent-jacqui-lambie-labor-anthony-albanese-coalition-ntwnfb"
-    },
-    {
-      "name": "ABC News Australia — Helen Haines and parliamentary security",
-      "url": "https://www.abc.net.au/news/2026-10-26/helen-haines-parliament-returns-canberra-federal-politics/107306604"
-    },
-    {
-      "name": "John F. Kennedy Presidential Library — Cuban Missile Crisis",
-      "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-cuban-missile-crisis"
-    },
-    {
-      "name": "Independent National Electoral Commission",
-      "url": "https://inecnigeria.org/"
-    }
-  ]
+  "archives": [],
+  "editorialStandards": {
+    "verification": "Confirm developing stories against reliable reporting and official sources before republishing or making stronger claims.",
+    "attribution": "Use quotation marks only for words verified against the original statement, speech, interview or transcript. Clearly label paraphrases and editorial observations.",
+    "corrections": "Correct material errors promptly and distinguish confirmed information from allegations, predictions and unverified reports.",
+    "politicalBalance": "Apply the same standards of evidence and accountability to government, opposition parties and other public figures."
+  }
 }

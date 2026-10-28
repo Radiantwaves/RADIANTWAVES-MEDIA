@@ -1,64 +1,83 @@
-
 {
   "edition": "RadiantWaves Morning News & Global Update",
   "date": "28 October 2026",
   "editionTime": "Morning",
-  "heroVideo": "./assets/video1.mp4",
+  "branding": {
+    "company": "RadiantWaves Media Nigeria Ltd",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "footer": "Connecting You Deeper to the World's Most Important Stories",
+    "email": "info@radiantwavesmedia.com",
+    "supportEmail": "support@radiantwavesmedia.com",
+    "whatsapp": "+33 6 21 61 31 49"
+  },
+  "hero": {
+    "title": "GLOBAL DIPLOMACY, ECONOMIC PRESSURE AND NIGERIA'S 2027 ELECTION",
+    "description": "Good morning. RadiantWaves Media brings you world news, Nigerian politics, business, technology, diplomacy and public accountability, with source links and clear distinctions between confirmed facts and developing reports.",
+    "marquee": "BREAKING: ISRAEL ELECTION DEADLOCK · NIGERIA BORROWING PROPOSAL · AI AND GLOBAL MARKETS · UK-EU RELATIONS",
+    "image": "assets/news-hero.jpg",
+    "video": "assets/video1.mp4"
+  },
   "headline": "Global Diplomacy, Economic Pressure and Nigeria's 2027 Election",
   "intro": "Good morning. RadiantWaves Media brings you a global news briefing covering politics, economics, diplomacy, technology, elections and public accountability. Stories are based on available reporting and are labelled carefully where details remain unconfirmed.",
+  "morningSummary": "Today's edition examines Israel's inconclusive election, Nigeria's proposed external borrowing, trade discussions between the United States and Canada, UK-EU relations, reports of attacks in Ethiopia, and the continuing influence of artificial intelligence on markets and public services. Nigeria's 2027 election and the responsibility of political leaders to explain their policies remain central to our coverage.",
+  "editorialNote": "RadiantWaves Media aims to publish independently written, balanced and source-led journalism. Allegations must be attributed, developing reports may change, and political commentary must not be confused with verified fact. Where an original source link has not been confirmed, this edition says so rather than inventing one.",
   "breaking": [
     {
-      "headline": "Israel election produces no immediate parliamentary majority",
-      "summary": "Initial results and exit polls indicate that rival political blocs have not secured the majority required to form a government. Counting and coalition negotiations remain important next steps.",
+      "headline": "Israel election ends without a clear parliamentary majority",
+      "summary": "Exit polls following Israel's 27 October election showed neither Prime Minister Benjamin Netanyahu's bloc nor the opposition led by Gadi Eisenkot with a clear route to the 61 seats needed for a majority. Final results and coalition negotiations remain crucial.",
       "category": "World",
-      "status": "Developing",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/52c6f5a0a720a4ffc08633229e796415"
+      "status": "Developing; exit polls are not final results",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/netanyahu-eisenkot-stake-rival-claims-lead-deadlocked-vote-2026-10-28/"
     },
     {
-      "headline": "Tinubu requests approval for approximately $21.7 billion in external borrowing",
-      "summary": "Reuters reports that the Nigerian president has asked the National Assembly to approve a supplementary external borrowing plan for 2026–2027. The proposal requires legislative approval.",
-      "category": "Nigeria",
-      "status": "Reported; approval pending",
+      "headline": "Nigeria: Tinubu seeks approval for a supplementary external borrowing plan",
+      "summary": "Reuters reports that President Bola Tinubu has asked the National Assembly to consider a 2026–2027 borrowing plan worth US$20.52 billion and €1.05 billion. The proposal requires legislative approval before the government can proceed with the proposed financing.",
+      "category": "Africa",
+      "status": "Proposal submitted; approval pending",
       "source": "Reuters via MarketScreener",
       "url": "https://www.marketscreener.com/news/nigeria-s-president-seeks-parliament-approval-for-about-21-7-billion-borrowing-ce785cdddf8ff227"
     },
     {
-      "headline": "Egypt's Mada Masr faces closure order",
-      "summary": "A report published on 28 October says authorities ordered the closure of independent news outlet Mada Masr. The case has renewed concern about press freedom.",
+      "headline": "Egypt: Report raises concern over the future of Mada Masr",
+      "summary": "DW, citing international news agencies, reports that Egyptian authorities ordered the closure of independent news outlet Mada Masr. The details, legal basis and any response or appeal should be followed through reliable reporting.",
       "category": "Africa",
-      "status": "Reported",
-      "source": "DW, with AFP, Reuters and AP",
+      "status": "Reported; further developments to be monitored",
+      "source": "DW",
       "url": "https://amp.dw.com/en/egypt-mada-masr-linah-attalah-press-freedom/a-79781842"
     },
     {
-      "headline": "Investors watch artificial intelligence earnings and the Federal Reserve",
-      "summary": "Asian markets rose following gains on Wall Street as investors weighed AI-related company earnings and the next US monetary-policy decision.",
-      "category": "Business and Technology",
+      "headline": "Global markets rise as investors continue to bet on artificial intelligence",
+      "summary": "Markets advanced as investors assessed technology-company earnings and the outlook for artificial intelligence. Stock-market gains are a snapshot of investor expectations, not proof that all sectors or households are experiencing economic improvement.",
+      "category": "Technology",
       "status": "Market update",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/10/28/global-stock-markets-rise-as-investors-continue-to-bet-on-ai"
+    },
+    {
+      "headline": "Ethiopia: Church reports deadly attacks in Oromia",
+      "summary": "The Ethiopian Orthodox Church reported that at least 60 people died in two attacks. Attribution has been disputed: a regional official blamed the Oromo Liberation Army, but the reporting cited no evidence provided for that allegation. Responsibility should not be presented as independently established.",
+      "category": "Africa",
+      "status": "Deaths reported; attribution unverified",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/2619e078e655a87f0f29cd1e8dd9db5d"
     }
   ],
-  "breakingHistory": {
-    "title": "Why press freedom matters",
-    "date": "28 October",
-    "script": "A free press helps citizens understand decisions made in their name. Across history, independent journalism has exposed corruption, documented human-rights abuses and challenged misinformation. Press freedom does not mean journalists are above the law; it means restrictions on reporting should be lawful, proportionate and open to scrutiny. Today's reports about pressure on independent media are a reminder that the public needs reliable information to hold power accountable.",
-    "editorialNote": "This is an original historical-context script, not a claim that a specific historical event occurred on this date.",
-    "source": "UNESCO: Freedom of Expression",
-    "url": "https://www.unesco.org/en/freedom-expression"
-  },
   "featured": {
-    "title": "Nigeria's borrowing plans: What will citizens receive in return?",
-    "category": "Featured Story",
+    "title": "Nigeria's Borrowing Plans: What Will Citizens Receive in Return?",
+    "subtitle": "Public finance, development priorities and accountability",
+    "category": "Nigeria Politics",
+    "date": "28 October 2026",
     "image": "assets/diplomacy.jpeg",
-    "summary": "Nigeria's proposed supplementary external borrowing plan puts public finance and accountability in focus. The government says the proposed funds would support areas including infrastructure, agriculture, healthcare, education, water, security and employment. The National Assembly must consider the request before the proposed financing can proceed.",
-    "script": "Nigeria's economic debate is about more than how much a government borrows. It is also about what the money delivers. If additional borrowing is approved, citizens should be able to track the projects funded, the terms of the loans, the implementation timetable and the results. Are hospitals better equipped? Are schools improving? Are roads completed? Are jobs being created? Borrowing can support development, but transparency and responsible debt management are essential. Nigerians deserve clear answers, independently verified figures and public reporting on the results.",
-    "questionsForCitizens": [
-      "Which projects will receive the funds?",
-      "What are the repayment terms and risks?",
-      "How will the public track spending and completed projects?",
-      "What independent checks will prevent waste and corruption?"
+    "summary": "President Bola Tinubu has asked the National Assembly to consider a supplementary external borrowing plan worth US$20.52 billion and €1.05 billion for 2026–2027. The government says the proposed financing would support infrastructure, agriculture, healthcare, education, water, security, employment and financial management reforms. Legislative approval is required before the proposal can proceed.",
+    "whyItMatters": "Borrowing can finance development, but the public needs to understand the repayment terms, the projects involved and how results will be measured. The key questions concern affordability, transparency, implementation and whether the proposed spending improves people's lives.",
+    "radiantWavesView": "Nigeria's economic debate should go beyond the headline amount. Citizens deserve to know which projects will receive funding, how contracts will be awarded, when projects are expected to be completed and what independent checks will measure results. These are questions of public accountability, not party loyalty.",
+    "keyQuestions": [
+      "Which projects will receive the proposed funds?",
+      "What are the repayment terms, interest costs and currency risks?",
+      "How will citizens track spending and completed projects?",
+      "What independent checks will help prevent waste and corruption?",
+      "How will the government report whether the funds create jobs or improve public services?"
     ],
     "source": "Reuters via MarketScreener",
     "url": "https://www.marketscreener.com/news/nigeria-s-president-seeks-parliament-approval-for-about-21-7-billion-borrowing-ce785cdddf8ff227",
@@ -66,209 +85,284 @@
   },
   "topStories": [
     {
-      "title": "Israel faces coalition talks after inconclusive election",
+      "title": "Israel faces coalition negotiations after an inconclusive election",
+      "category": "World",
       "region": "Middle East",
-      "summary": "Early reporting indicates neither Benjamin Netanyahu's bloc nor the opposition bloc led by Gadi Eisenkot has secured a clear parliamentary majority. The final outcome will depend on the completed count and negotiations among parties.",
+      "date": "28 October 2026",
+      "summary": "Exit polls showed rival blocs close to one another, without either reaching the 61 seats required for a Knesset majority. Final results, smaller parties and negotiations will determine the next stage. The exit polls should not be described as final election results.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/middle-east/netanyahu-eisenkot-stake-rival-claims-lead-deadlocked-vote-2026-10-28/",
       "status": "Developing"
     },
     {
-      "title": "US and Canada explore relief on steel and automobile tariffs",
+      "title": "US and Canada discuss possible relief from steel and automobile tariffs",
+      "category": "Business",
       "region": "North America",
-      "summary": "Reuters reported that Washington and Ottawa were discussing possible relief from tariffs affecting steel and automobiles. Sources described the talks as ongoing; no final comprehensive agreement was confirmed in the report.",
+      "date": "28 October 2026",
+      "summary": "Reuters reported discussions about possible relief from tariffs affecting steel and automobiles. The report described negotiations, not a completed comprehensive agreement. The effect on manufacturers, workers and consumers will depend on the final terms, if an agreement is reached.",
       "source": "Reuters via MarketScreener",
       "url": "https://www.marketscreener.com/news/us-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-ce785cdcdf80f321",
-      "status": "Negotiations reported; no final deal confirmed"
+      "status": "Negotiations reported; final agreement not confirmed"
     },
     {
-      "title": "UK and EU seek clarity over proposed 'Made in Europe' rules",
-      "region": "United Kingdom and Europe",
-      "summary": "British business minister Jonathan Reynolds said discussions were under way to address UK concerns about proposed EU rules favouring European-made goods in selected public procurement and clean-technology schemes. The final rules remain subject to the EU process.",
+      "title": "UK and EU discuss concerns over proposed Made in Europe rules",
+      "category": "Europe",
+      "region": "United Kingdom and European Union",
+      "date": "27 October 2026",
+      "summary": "British business minister Jonathan Reynolds said discussions were under way to address UK concerns about proposed EU rules favouring European-made goods in selected procurement and clean-technology schemes. The final rules remain subject to the EU process.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/uk/britain-eu-finding-way-through-made-in-europe-concerns-uk-minister-says-2026-10-27/",
       "status": "Policy discussions ongoing"
     },
     {
-      "title": "Nordic leaders speak with Putin as Ukraine diplomacy continues",
+      "title": "Nordic leaders hold discussions with Putin as Ukraine diplomacy continues",
+      "category": "Europe",
       "region": "Europe",
-      "summary": "Reporting on 27 October described a call between Finland's president Alexander Stubb, Norway's prime minister Jonas Gahr Støre and Russia's president Vladimir Putin. The discussion sought renewed momentum for Ukraine peace talks, but major differences remained and fighting continued elsewhere.",
+      "date": "27 October 2026",
+      "summary": "Reporting described a call involving Finland's President Alexander Stubb, Norway's Prime Minister Jonas Gahr Støre and Russia's President Vladimir Putin. The contact was part of continuing diplomatic efforts concerning Ukraine; it did not establish that a comprehensive peace agreement had been reached.",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates",
-      "status": "Diplomatic efforts; no comprehensive peace agreement confirmed"
+      "status": "Diplomatic contact reported; no comprehensive peace agreement confirmed"
     },
     {
-      "title": "Ethiopian church reports at least 60 deaths in attacks in Oromia",
+      "title": "Ethiopia: Church reports at least 60 deaths in attacks in Oromia",
+      "category": "Africa",
       "region": "Africa",
-      "summary": "The Ethiopian Orthodox Church reported that two attacks killed at least 60 Orthodox Christians. A regional official blamed the Oromo Liberation Army, but AP reported that evidence was not provided and the group could not be reached for comment. Attribution remains unverified.",
+      "date": "28 October 2026",
+      "summary": "The Ethiopian Orthodox Church reported at least 60 deaths in two attacks. A regional official blamed the Oromo Liberation Army, but the AP report said evidence had not been provided and the group could not be reached for comment. Responsibility remains unverified in the reporting cited here.",
       "source": "Associated Press",
       "url": "https://apnews.com/article/2619e078e655a87f0f29cd1e8dd9db5d",
-      "status": "Deaths reported; responsibility disputed and not independently established"
+      "status": "Deaths reported; attribution disputed"
     },
     {
-      "title": "Asian markets rise as investors focus on AI",
+      "title": "Asian markets rise as investors focus on AI earnings",
+      "category": "Technology",
       "region": "Asia and global markets",
-      "summary": "Asian markets advanced following Wall Street gains as investors watched technology-company earnings and the US Federal Reserve. Market movements can change rapidly and do not by themselves establish the direction of household prices or economic growth.",
+      "date": "28 October 2026",
+      "summary": "Global markets advanced as investors considered technology-company earnings and the continuing AI boom. Market performance may change quickly, and gains in share prices do not by themselves establish that living costs or employment conditions have improved.",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/10/28/global-stock-markets-rise-as-investors-continue-to-bet-on-ai",
       "status": "Market update"
+    },
+    {
+      "title": "Nigeria's borrowing proposal puts public spending under scrutiny",
+      "category": "Africa",
+      "region": "Nigeria",
+      "date": "28 October 2026",
+      "summary": "The proposed external borrowing plan is intended to finance projects across several sectors. The National Assembly's review and any subsequent approval will be important steps. The public interest questions concern debt sustainability, project selection, implementation and reporting.",
+      "source": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/news/nigeria-s-president-seeks-parliament-approval-for-about-21-7-billion-borrowing-ce785cdddf8ff227",
+      "status": "Approval pending"
+    },
+    {
+      "title": "Nigeria: Atiku questions the proposed borrowing plan",
+      "category": "Africa",
+      "region": "Nigeria",
+      "date": "28 October 2026",
+      "summary": "Punch reported that former Vice President Atiku Abubakar urged the National Assembly to suspend consideration of the proposed borrowing until details of the projects to be funded are published. His position is a political response to the proposal and should be distinguished from the government's explanation and the legislature's eventual decision.",
+      "source": "Punch Newspapers",
+      "url": "https://punchng.com/atiku-faults-tinubus-request-for-20-52bn-e1-05bn-loans/",
+      "status": "Political response reported"
+    },
+    {
+      "title": "Nigeria 2027: Campaign promises face a test of credibility",
+      "category": "Africa",
+      "region": "Nigeria",
+      "date": "28 October 2026",
+      "summary": "The 2027 presidential contest is developing around the incumbent's re-election campaign and the choices available to opposition voters. The economy, security, employment, public services and confidence in the electoral process will be important issues. The outcome should not be predicted from social-media claims or partisan confidence alone.",
+      "source": "DW",
+      "url": "https://amp.dw.com/en/nigeria-tinubu-launches-reelection-bid-amid-economic-woes/a-79753063",
+      "status": "Campaign coverage"
+    },
+    {
+      "title": "Artificial intelligence: Market enthusiasm must be matched by responsible use",
+      "category": "Technology",
+      "region": "Global",
+      "date": "28 October 2026",
+      "summary": "AI investment is influencing technology earnings and market sentiment. Beyond investment returns, the public debate includes data privacy, cybersecurity, job impacts, transparency and whether automated systems make reliable decisions.",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/28/global-stock-markets-rise-as-investors-continue-to-bet-on-ai",
+      "status": "Technology analysis"
     }
   ],
   "articles": [
     {
       "title": "Nigeria's 2027 presidential race: Campaign promises must meet public evidence",
-      "category": "Nigeria Politics",
-      "summary": "President Bola Tinubu formally launched his re-election campaign at a rally in Kaduna on 24 October, according to reporting by DW citing Reuters, AFP and local media. The campaign now faces the test of convincing voters that the government's economic direction will improve daily life.",
-      "script": "Nigeria's 2027 election will be about more than political slogans and rallies. Voters will be looking at prices, jobs, security, electricity, education, healthcare and the value of public spending. President Tinubu's campaign will need to explain what his administration has achieved, what remains unfinished and how its plans will improve living conditions. Opposition candidates, including Atiku Abubakar and Peter Obi, must also present credible, costed and practical alternatives. The most important question is not simply who can win an election, but who can offer a workable plan and be held accountable for delivering it.",
+      "category": "Africa",
+      "date": "28 October 2026",
+      "summary": "President Bola Tinubu launched his re-election campaign in Kaduna on 24 October, according to reporting by DW. The campaign now faces the test of convincing voters that the government's direction can improve daily life.",
+      "script": "Nigeria's 2027 election will be about more than slogans and rallies. Voters will be looking at prices, jobs, security, electricity, education, healthcare and the value of public spending. President Tinubu's campaign will need to explain what his administration has achieved, what remains unfinished and how its plans will improve living conditions. Opposition candidates, including Atiku Abubakar and Peter Obi, must also present credible and practical alternatives. The important question is not simply who can win an election, but who can offer a workable plan and be held accountable for delivering it.",
       "source": "DW",
       "url": "https://amp.dw.com/en/nigeria-tinubu-launches-reelection-bid-amid-economic-woes/a-79753063",
       "status": "Campaign reporting"
     },
     {
       "title": "Opposition politics: Unity, credibility and the voters",
-      "category": "Nigeria Politics",
-      "summary": "Nigeria's opposition faces strategic questions over alliances, candidate selection and how to build public confidence ahead of the 2027 election. Political statements about who has the strongest credentials are opinions, not proof of electoral support.",
+      "category": "Africa",
+      "date": "28 October 2026",
+      "summary": "Nigeria's opposition faces strategic questions about alliances, candidate selection and how to build public confidence ahead of the 2027 election. Claims that one candidate is certain to win are opinions unless supported by credible evidence.",
       "script": "For Nigeria's opposition, unity may improve electoral competitiveness, but an alliance alone does not guarantee victory. Parties need to agree on a credible candidate, a clear policy programme, internal transparency and a plan for protecting the integrity of the vote. Atiku Abubakar and Peter Obi each have supporters, but supporters' confidence should not be confused with verified evidence of national voting intentions. The test will be whether opposition leaders can resolve their differences and persuade voters with practical proposals rather than personal attacks.",
       "source": "RadiantWaves Media editorial analysis",
       "url": "https://www.channelstv.com/2026/08/28/atiku-does-not-need-coalition-to-win-2027-election-adc/",
-      "status": "Analysis; not a prediction of the election result"
+      "status": "Analysis; not an election prediction"
     },
     {
       "title": "Public accountability and the cost of living",
-      "category": "Governance",
-      "summary": "As governments face pressure to fund public services while managing debt and inflation, citizens can ask for transparent budgets, independently checked results and clear explanations of policy trade-offs.",
+      "category": "Business",
+      "date": "28 October 2026",
+      "summary": "Governments face pressure to fund essential services while managing borrowing, inflation and public expectations. Citizens can ask for transparent budgets, independently checked results and clear explanations of policy trade-offs.",
       "script": "Good governance is not measured only by the amount a government spends or the number of projects it announces. It should also be measured by outcomes. Citizens need access to understandable budgets, procurement information, delivery timelines and independent audits. Governments should explain difficult decisions honestly and publish evidence showing whether policies are working. Accountability is not a substitute for investment; it helps ensure that investment reaches the people it is meant to serve.",
-      "source": "RadiantWaves Media editorial"
+      "source": "RadiantWaves Media editorial",
+      "status": "Original editorial"
     }
   ],
-  "innovation": {
-    "title": "Innovation and Digital Change: AI investment and the public interest",
+  "technologyInnovation": {
+    "title": "AI, Investment and Public Accountability: Innovation Must Serve People",
     "category": "Technology",
-    "summary": "Investor enthusiasm for artificial intelligence continues to influence global markets as technology companies report results. The long-term public value of AI will depend on how safely and productively it is used.",
+    "date": "28 October 2026",
+    "summary": "Investors continue to focus on artificial intelligence as technology earnings influence global markets. At the same time, the growing use of AI in business and public services raises questions about privacy, transparency, security and human oversight.",
+    "keyPoints": [
+      "AI-related earnings are influencing investor expectations and market sentiment.",
+      "AI tools can assist with research, analysis and service delivery, but their outputs require appropriate checks.",
+      "Public bodies using automated systems should explain how consequential decisions are made and how people can challenge errors.",
+      "Newsrooms must verify AI-assisted information and retain editorial responsibility.",
+      "Innovation should be assessed by practical benefits, safety and accountability, not hype alone."
+    ],
+    "whyItMatters": "Technology can improve productivity and services, but public trust depends on responsible use. A system that operates quickly is not necessarily fair or accurate. Organisations should test their tools, protect personal data and make clear who remains responsible for decisions.",
     "script": "Artificial intelligence is changing how businesses analyse information, deliver services and develop products. But investment headlines are only one part of the story. Organisations must also consider data privacy, cybersecurity, transparency, job impacts and the reliability of automated decisions. For newsrooms, AI can assist with research and workflow, but journalists must verify claims, check sources and retain editorial responsibility. Innovation matters most when it solves real problems and benefits people beyond the technology sector.",
     "source": "Al Jazeera",
     "url": "https://www.aljazeera.com/news/2026/10/28/global-stock-markets-rise-as-investors-continue-to-bet-on-ai",
     "status": "Technology and market context"
   },
-  "leadersWatch": [
-    {
-      "name": "Donald Trump",
-      "role": "President of the United States",
-      "image": "assets/leaders/trump.jpg",
-      "observation": "US politics is approaching the 3 November 2026 midterm elections. Campaign debate includes economic pressures, immigration, healthcare and control of Congress. Separately, US trade policy remains relevant to relations with Canada.",
-      "script": "For President Trump, the coming midterm elections will test public opinion on his administration's policies. The central questions include the cost of living, energy, trade and national security. Campaign claims should be judged against verifiable results, while voters decide which issues matter most to them.",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299"
-        },
-        {
-          "name": "Reuters via MarketScreener",
-          "url": "https://www.marketscreener.com/news/us-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-ce785cdcdf80f321"
-        }
-      ],
-      "status": "Current reporting"
-    },
-    {
-      "name": "Mark Carney",
-      "role": "Prime Minister of Canada",
-      "image": "assets/leaders/carney.jpg",
-      "observation": "Canada is seeking a workable trade relationship with the United States amid tariffs affecting steel and automobiles. Negotiations were reported, but a final broad agreement was not confirmed.",
-      "script": "For Prime Minister Mark Carney, the challenge is to defend Canadian jobs and industry while maintaining a functional relationship with Canada's largest trading partner. Any tariff agreement should be judged by its actual terms, its effect on workers and businesses, and whether it creates lasting certainty.",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/us-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-ce785cdcdf80f321",
-      "status": "Trade negotiations reported"
-    },
-    {
-      "name": "Emmanuel Macron",
-      "role": "President of France",
-      "image": "assets/leaders/macron.jpg",
-      "observation": "European diplomacy and the future relationship between the UK and EU remain important policy issues. No new Macron-specific statement for this morning has been verified in the sources used for this edition.",
-      "script": "France's role in European affairs includes trade, security and diplomacy. The important measure for citizens is whether European cooperation produces practical benefits, strengthens security and supports economic opportunity. This edition does not attribute a new announcement to President Macron without a verified source.",
-      "status": "No new statement verified for this edition"
-    },
-    {
-      "name": "Bola Ahmed Tinubu",
-      "role": "President of Nigeria",
-      "image": "assets/leaders/tinubu.jpg",
-      "observation": "Tinubu launched his re-election campaign in Kaduna on 24 October, according to DW's report. Reuters also reported on 27 October that he requested legislative approval for a supplementary external borrowing plan worth about US$21.7 billion.",
-      "script": "President Tinubu's immediate political test is to convince Nigerians that his policies can improve economic conditions and public services. The borrowing proposal makes transparency especially important: citizens should be able to see the terms, intended projects, repayment implications and results. Campaign promises and government spending both deserve scrutiny based on evidence.",
-      "sources": [
-        {
-          "name": "DW",
-          "url": "https://amp.dw.com/en/nigeria-tinubu-launches-reelection-bid-amid-economic-woes/a-79753063"
-        },
-        {
-          "name": "Reuters via MarketScreener",
-          "url": "https://www.marketscreener.com/news/nigeria-s-president-seeks-parliament-approval-for-about-21-7-billion-borrowing-ce785cdddf8ff227"
-        }
-      ],
-      "status": "Current reporting"
-    },
-    {
-      "name": "Atiku Abubakar",
-      "role": "Nigerian opposition politician",
-      "image": "assets/leaders/atiku.jpg",
-      "observation": "Atiku remains part of the wider debate over opposition strategy ahead of the 2027 election. No new Atiku-specific announcement for this morning has been independently verified in the sources used for this edition.",
-      "script": "Atiku Abubakar and other opposition figures face a credibility test: can they agree on a practical programme, explain how it would be funded and show how they would improve security, jobs and public services? Electoral alliances may matter, but voters also need clear policies and accountable leadership.",
-      "source": "Channels Television, earlier reporting on ADC and coalition debate",
-      "url": "https://www.channelstv.com/2026/08/28/atiku-does-not-need-coalition-to-win-2027-election-adc/",
-      "status": "No new statement verified for this edition"
-    },
-    {
-      "name": "Peter Obi",
-      "role": "Nigerian opposition politician",
-      "image": "assets/leaders/obi.jpg",
-      "observation": "Peter Obi remains a prominent voice in Nigeria's political debate. Recent reporting has carried his criticism of the government's economic record and his emphasis on competence and leadership. Those remarks are political positions and should be assessed alongside evidence and policy proposals.",
-      "script": "Peter Obi's challenge, like that of other opposition figures, is to turn criticism into a detailed and credible governing plan. Voters need to understand how proposed policies would be financed, how implementation would be monitored and what outcomes could realistically be expected.",
-      "source": "Nigeria politics headline roundup",
-      "url": "https://headlines.ng/politics/",
-      "status": "Recent political debate; no new statement verified this morning"
-    },
-    {
-      "name": "Andy Burnham",
-      "role": "UK political leadership",
-      "image": "assets/leaders/uk-goverment.jpg",
-      "observation": "UK–EU relations and the question of future cooperation on movement remain in the political debate. This bulletin does not attribute a new policy decision to Burnham without a directly verified statement.",
-      "script": "The UK's relationship with Europe continues to raise questions about trade, employment and movement. Any proposal should be judged on its evidence, practical consequences and public support. The exact status and wording of political proposals should be checked against official UK government statements before publication.",
-      "source": "BBC European Union news coverage",
-      "url": "https://bbc.com.im/news/topics/cwlw3xz0ljmt",
-      "status": "Context only; verify official title and latest statement before publishing a role-specific claim"
-    },
-    {
-      "name": "Friedrich Merz",
-      "role": "German Chancellor",
-      "image": "assets/leaders/merz.jpg",
-      "observation": "Germany is part of wider European discussions about support for Ukraine and the EU's approach to trade and industrial policy. No new Merz-specific announcement for this morning has been verified in the sources used here.",
-      "script": "Germany's leadership faces the challenge of balancing European security, economic competitiveness and public spending. Decisions on Ukraine and industrial policy have consequences beyond Germany, making transparency and coordination with European partners important.",
-      "source": "The Guardian, Europe and Ukraine live coverage",
-      "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates",
-      "status": "No new statement verified for this edition"
-    },
-    {
-      "name": "Vladimir Putin",
-      "role": "President of Russia",
-      "image": "assets/leaders/putin.jpg",
-      "observation": "Finnish and Norwegian leaders reportedly held a call with Putin on 27 October as diplomatic efforts concerning Ukraine continued. The discussions did not amount to a confirmed comprehensive peace agreement.",
-      "script": "Diplomatic contact can create opportunities for negotiation, but a phone call is not the same as a peace settlement. The next meaningful indicators will be concrete agreements, reduced attacks, humanitarian access and the participation of Ukraine in decisions about its future.",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates",
-      "status": "Diplomacy ongoing"
-    },
-    {
-      "name": "Xi Jinping",
-      "role": "President of China",
-      "image": "assets/leaders/xi.jpg",
-      "observation": "Global trade and technology competition remain important to China's international economic environment. No new Xi-specific statement for this morning has been verified in the sources used for this edition.",
-      "script": "China's decisions on technology, trade and international relations can influence supply chains and global markets. Responsible analysis should distinguish confirmed government announcements from speculation about future policy. This edition does not attribute an unverified new statement to President Xi.",
-      "status": "No new statement verified for this edition"
-    }
-  ],
+  "innovation": {
+    "title": "AI, Investment and Public Accountability: Innovation Must Serve People",
+    "category": "Technology",
+    "summary": "Artificial intelligence is influencing technology investment and the way organisations deliver services. Its long-term value will depend on reliability, privacy, security and accountable use.",
+    "script": "Artificial intelligence can help people work more efficiently, but technology should not remove responsibility from the people and organisations deploying it. Reliable results require human judgement, safeguards and transparent procedures.",
+    "source": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/10/28/global-stock-markets-rise-as-investors-continue-to-bet-on-ai"
+  },
+  "leadersWatch": {
+    "title": "Leaders Watch: Decisions, Accountability and Public Impact",
+    "description": "Each entry provides a short newsroom observation and a presenter-ready script. Where no new statement has been verified, the entry says so rather than inventing a quotation or announcement.",
+    "leaders": [
+      {
+        "name": "Donald Trump",
+        "role": "President of the United States",
+        "country": "United States",
+        "image": "assets/leaders/trump.jpg",
+        "update": "The US midterm elections are approaching, and economic conditions, immigration, energy and control of Congress remain important political issues. Separately, trade discussions with Canada concern tariffs affecting steel and automobiles.",
+        "script": "For President Trump, the midterm elections will test public opinion on his administration's policies. The central questions include the cost of living, energy, trade and national security. Campaign claims should be judged against verifiable results, while voters decide which issues matter most to them.",
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/594f803fa578c450e38e5cb00410e299",
+        "status": "Current political context"
+      },
+      {
+        "name": "Mark Carney",
+        "role": "Prime Minister of Canada",
+        "country": "Canada",
+        "image": "assets/leaders/carney.jpg",
+        "update": "Reuters reported that Canada and the United States were discussing possible tariff relief for steel and automobiles. The report described ongoing discussions rather than a final comprehensive agreement.",
+        "script": "For Prime Minister Mark Carney, the challenge is to defend Canadian jobs and industry while maintaining a workable relationship with Canada's largest trading partner. Any tariff agreement should be judged by its actual terms and its effect on workers, businesses and consumers.",
+        "source": "Reuters via MarketScreener",
+        "url": "https://www.marketscreener.com/news/us-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-ce785cdcdf80f321",
+        "status": "Trade discussions reported"
+      },
+      {
+        "name": "Emmanuel Macron",
+        "role": "President of France",
+        "country": "France",
+        "image": "assets/leaders/macron.jpg",
+        "update": "France's political environment remains under scrutiny following protests reported on 24 October. The government's response, public concerns and prospects for dialogue are important developments to follow. No new Macron-specific statement is attributed here.",
+        "script": "France's role in European affairs includes diplomacy, security and economic policy. The important measure for citizens is whether government decisions address public concerns and produce practical results. Responsible reporting should distinguish confirmed developments from speculation.",
+        "source": "Le Monde",
+        "url": "https://www.lemonde.fr/en/politics/article/2026/10/26/after-october-24-protests-french-government-braces-for-long-fall-of-unrest_6764683_5.html",
+        "status": "Political context"
+      },
+      {
+        "name": "Bola Ahmed Tinubu",
+        "role": "President of Nigeria",
+        "country": "Nigeria",
+        "image": "assets/leaders/tinubu.jpg",
+        "update": "Tinubu's administration has requested legislative consideration of a supplementary external borrowing plan worth US$20.52 billion and €1.05 billion. The proposal requires approval. The government's stated development priorities include infrastructure, agriculture, healthcare, education, water and security.",
+        "script": "President Tinubu's political test is to convince Nigerians that government policies can improve economic conditions and public services. The borrowing proposal makes transparency especially important. Citizens should be able to examine the financing terms, intended projects, repayment implications and results. Public spending and campaign promises both deserve scrutiny based on evidence.",
+        "source": "Reuters via MarketScreener",
+        "url": "https://www.marketscreener.com/news/nigeria-s-president-seeks-parliament-approval-for-about-21-7-billion-borrowing-ce785cdddf8ff227",
+        "status": "Borrowing proposal pending approval"
+      },
+      {
+        "name": "Atiku Abubakar",
+        "role": "Former Vice President of Nigeria and opposition politician",
+        "country": "Nigeria",
+        "image": "assets/leaders/atiku.jpg",
+        "update": "Punch reported that Atiku urged the National Assembly to suspend consideration of Tinubu's borrowing proposal until the government publishes details of the projects to be financed. This is Atiku's reported political position; the legislative decision remains separate.",
+        "script": "Atiku Abubakar's response puts transparency and public debt under scrutiny. The public deserves project details, financing terms and safeguards before major borrowing commitments are made. Atiku and other opposition figures should also explain how their own policy proposals would be funded and how results would be measured.",
+        "source": "Punch Newspapers",
+        "url": "https://punchng.com/atiku-faults-tinubus-request-for-20-52bn-e1-05bn-loans/",
+        "status": "Political response reported"
+      },
+      {
+        "name": "Peter Obi",
+        "role": "Former Governor of Anambra State and opposition politician",
+        "country": "Nigeria",
+        "image": "assets/leaders/obi.jpg",
+        "update": "Peter Obi remains a prominent opposition figure in the debate over Nigeria's 2027 election. This edition does not attribute a new announcement or direct quotation to him without a specific, verified report.",
+        "script": "Peter Obi's challenge, like that of other opposition figures, is to turn criticism into a detailed and credible governing plan. Voters need to understand how proposed policies would be financed, how implementation would be monitored and what outcomes could realistically be expected. Opposition unity may matter, but it cannot replace clear policies and accountability.",
+        "source": "RadiantWaves Media — election analysis",
+        "url": "https://www.channelstv.com/2026/08/28/atiku-does-not-need-coalition-to-win-2027-election-adc/",
+        "status": "Election context; no new statement verified"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "image": "assets/leaders/andy.jpg",
+        "update": "Andy Burnham is the UK Prime Minister according to the official UK government profile. UK-EU discussions about proposed Made in Europe rules are an important current policy issue, although the trade report cited here concerns business minister Jonathan Reynolds rather than a new statement from Burnham.",
+        "script": "The UK's relationship with Europe continues to raise questions about trade, industrial policy and economic cooperation. Decisions should be judged by their effect on businesses, workers and consumers. This briefing does not attribute the EU trade statement to Prime Minister Burnham because the cited report identifies Jonathan Reynolds as the minister commenting on those discussions.",
+        "source": "UK Government; Reuters",
+        "url": "https://www.gov.uk/government/people/andy-burnham",
+        "status": "Official role confirmed; trade context reported separately"
+      },
+      {
+        "name": "Friedrich Merz",
+        "role": "Chancellor of Germany",
+        "country": "Germany",
+        "image": "assets/leaders/merz.jpg",
+        "update": "Germany remains an important participant in European discussions about security, economic competitiveness and support for Ukraine. No new Merz-specific announcement is attributed in this edition.",
+        "script": "Germany's leadership faces the challenge of balancing European security, economic competitiveness and public spending. Decisions on Ukraine and European industrial policy have consequences beyond Germany, making transparency and coordination with European partners important.",
+        "source": "The Guardian",
+        "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates",
+        "status": "European policy context"
+      },
+      {
+        "name": "Vladimir Putin",
+        "role": "President of Russia",
+        "country": "Russia",
+        "image": "assets/leaders/putin.jpg",
+        "update": "The Guardian reported diplomatic contact involving Putin, Finland's President Alexander Stubb and Norway's Prime Minister Jonas Gahr Støre as discussions concerning Ukraine continued. The contact did not amount to a confirmed comprehensive peace agreement.",
+        "script": "Diplomatic contact can create opportunities for negotiation, but a phone call is not the same as a peace settlement. The next meaningful indicators will be concrete agreements, reduced attacks, humanitarian access and the participation of Ukraine in decisions about its future.",
+        "source": "The Guardian",
+        "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates",
+        "status": "Diplomatic contact reported"
+      },
+      {
+        "name": "Xi Jinping",
+        "role": "President of China",
+        "country": "China",
+        "image": "assets/leaders/xi.jpg",
+        "update": "China remains an important actor in international trade, technology and regional security. No new Xi-specific announcement is attributed in this edition without a confirmed source.",
+        "script": "China's decisions on technology, trade and international relations can influence supply chains and global markets. Responsible analysis should distinguish confirmed government announcements from speculation about future policy. This edition does not attribute an unverified statement to President Xi.",
+        "source": "RadiantWaves Media — international watch",
+        "url": "https://english.www.gov.cn/",
+        "status": "International context"
+      }
+    ]
+  },
   "electionWatch": [
     {
       "country": "Nigeria",
       "title": "2027 presidential election",
-      "summary": "President Tinubu has begun his re-election campaign. Opposition strategy, economic performance, candidate credibility, security and election integrity will remain central issues. Campaign claims should be tested against verifiable evidence.",
+      "summary": "Tinubu has begun his re-election campaign. Opposition strategy, economic performance, candidate credibility, security and election integrity will remain central issues. Campaign claims should be tested against verifiable evidence.",
       "source": "DW",
       "url": "https://amp.dw.com/en/nigeria-tinubu-launches-reelection-bid-amid-economic-woes/a-79753063"
     },
@@ -282,76 +376,83 @@
     {
       "country": "Israel",
       "title": "Parliamentary election and coalition formation",
-      "summary": "Early reporting indicates no clear majority. The completed count and negotiations among parties will determine the next steps in forming a government.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/52c6f5a0a720a4ffc08633229e796415"
+      "summary": "Exit polls showed no clear majority. Final results and negotiations among parties will determine the next steps in forming a government.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/netanyahu-eisenkot-stake-rival-claims-lead-deadlocked-vote-2026-10-28/"
     }
   ],
-  "newsroomWatchlist": [
+  "breakingHistory": [
     {
-      "topic": "Nigeria borrowing plan",
-      "watchFor": "National Assembly debate, approval status, financing terms, project allocations and public reporting on results."
-    },
-    {
-      "topic": "Nigeria 2027 election",
-      "watchFor": "Verified party decisions, candidate announcements, INEC statements, campaign policy documents and election-integrity developments."
-    },
-    {
-      "topic": "Israel election",
-      "watchFor": "Official final results, parliamentary seat distribution and coalition negotiations."
-    },
-    {
-      "topic": "Ukraine diplomacy",
-      "watchFor": "Confirmed ceasefire arrangements, humanitarian access, further talks and statements from Ukraine and participating governments."
-    },
-    {
-      "topic": "Global economy and AI",
-      "watchFor": "Federal Reserve decision, major technology earnings, market reaction and verified effects on businesses and consumers."
-    },
-    {
-      "topic": "Press freedom",
-      "watchFor": "Official documents, statements from Mada Masr, independent press-freedom organisations and any appeal or legal response."
+      "title": "Why press freedom matters",
+      "date": "28 October",
+      "script": "A free press helps citizens understand decisions made in their name. Across history, independent journalism has exposed corruption, documented human-rights abuses and challenged misinformation. Press freedom does not mean journalists are above the law; it means restrictions on reporting should be lawful, proportionate and open to scrutiny. Today's reports about pressure on independent media are a reminder that the public needs reliable information to hold power accountable.",
+      "editorialNote": "This is an original historical-context script, not a claim that a specific historical event occurred on this date.",
+      "source": "UNESCO: Freedom of Expression",
+      "url": "https://www.unesco.org/en/freedom-expression"
     }
   ],
-  "quoteOfTheDay": {
-    "title": "RadiantWaves Thought for Today",
-    "text": "Leadership earns trust not through promises alone, but through decisions people can examine and results they can feel.",
-    "attribution": "Original RadiantWaves Media thought",
+  "thoughtForToday": {
+    "title": "Thought for Today",
+    "quote": "Leadership earns trust not through promises alone, but through decisions people can examine and results they can feel.",
+    "author": "RadiantWaves Media",
     "script": "As we begin this Wednesday, remember that leadership is measured not only by what is announced, but by what is delivered. In public life, business and our communities, trust grows when people can see the evidence, understand the decisions and ask questions without fear. Let us value facts, fairness and responsibility."
   },
-  "bigQuestion": {
+  "todaysBigQuestion": {
     "title": "Today's Big Question",
     "question": "When people face rising living costs and public services are under pressure, what should governments prioritise first?",
-    "options": [
-      "More investment in healthcare, education and essential services",
-      "Tighter financial discipline and better management of public money",
-      "Stronger accountability to ensure spending delivers real results"
-    ],
-    "script": "Governments often face difficult choices when resources are limited. But citizens have a right to ask whether public money is being spent wisely and whether it is improving everyday life. Should investment come first, should governments tighten financial discipline, or should stronger accountability lead the way? Perhaps all three are necessary. What practical evidence would convince you that a government is delivering for its people? Share your views respectfully. Good governance begins with informed citizens asking difficult questions.",
-    "source": "Original RadiantWaves Media discussion prompt"
+    "context": "There may be more than one reasonable answer, but public decisions should be judged by their results and their effect on ordinary people.",
+    "invite": "Share your view respectfully. Support your argument with evidence and practical solutions."
   },
   "sponsoredAdverts": [
     {
-      "title": "Sponsored Advert",
-      "image": "assets/spices.jpeg",
-      "description": "Discover the featured product. Contact the advertiser for product details, availability and pricing.",
-      "label": "Sponsored"
+      "title": "Advertise with RadiantWaves Media",
+      "description": "Reach audiences through digital news coverage, sponsored placements and media partnerships. Contact our team to discuss advertising options and availability.",
+      "image": "",
+      "label": "Advertising and Media Partnerships",
+      "url": "mailto:info@radiantwavesmedia.com",
+      "button": "Enquire about advertising"
     },
     {
-      "title": "Sponsored Advert",
+      "title": "Spices and Food Products",
+      "description": "Discover the featured spices and food products. Contact the advertiser for product details, availability, prices and delivery arrangements.",
+      "image": "assets/spices.jpeg",
+      "label": "Sponsored Advertisement",
+      "url": "mailto:info@radiantwavesmedia.com",
+      "button": "Enquire about this advert"
+    },
+    {
+      "title": "Stonebreaker Product",
+      "description": "View the advertised Stonebreaker product. Contact the advertiser for product information, intended use and availability. This listing does not claim medical benefits.",
       "image": "assets/stonebreaker.jpeg",
-      "description": "View the advertiser's featured product. Check the product details and seek qualified advice where relevant before using health-related products.",
-      "label": "Sponsored"
+      "label": "Sponsored Advertisement",
+      "url": "mailto:info@radiantwavesmedia.com",
+      "button": "Enquire about this advert"
     }
   ],
-  "branding": {
+  "contact": {
     "company": "RadiantWaves Media Nigeria Ltd",
-    "slogan": "Gateway to Your World News — Connecting You to the World",
-    "footer": "Connecting You Deeper to the World's Most Important Stories",
     "email": "info@radiantwavesmedia.com",
     "supportEmail": "support@radiantwavesmedia.com",
     "whatsapp": "+33 6 21 61 31 49",
-    "liveTv": "https://www.facebook.com/profile.php?id=100093982346090",
-    "editorialNote": "RadiantWaves Media aims to publish independently written, sourced and balanced reporting. Developing stories may change as new information becomes available. Allegations and political claims are not presented as established facts without supporting evidence."
+    "website": "https://radiantwavesmedia.com",
+    "advertisingMessage": "For advertising, media partnerships, interviews and newsroom enquiries, contact RadiantWaves Media."
+  },
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
+    "tiktok": "https://www.tiktok.com/@radiantwaves",
+    "youtube": "https://www.youtube.com/@RADIANTWAVE-wv6",
+    "x": "https://x.com/Radiant13528995",
+    "facebookLive": "https://www.facebook.com/profile.php?id=100093982346090"
+  },
+  "archives": [],
+  "editorialStandards": {
+    "verification": "Verify material claims against reliable sources before publication.",
+    "attribution": "Attribute reporting and statements to the original publisher or speaker.",
+    "corrections": "Correct factual errors promptly and transparently.",
+    "independence": "Distinguish news reporting, analysis, opinion and sponsored material.",
+    "fairness": "Represent relevant perspectives fairly and avoid presenting unverified allegations as established facts.",
+    "sourceLinks": "Provide original source links when available. Do not invent URLs when a reliable link has not been confirmed.",
+    "sponsoredContent": "Label paid placements and sponsored adverts clearly.",
+    "technology": "Explain the limitations of automated tools and avoid overstating what they can verify."
   }
 }

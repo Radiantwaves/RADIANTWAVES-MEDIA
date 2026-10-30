@@ -1,4 +1,4 @@
-
+ `/* RADIANTWAVES MEDIA` and ending at the final `}`. Do not add another opening or closing line.
 
 ```javascript
 /* =========================================================

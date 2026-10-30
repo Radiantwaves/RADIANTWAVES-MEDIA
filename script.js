@@ -3,7 +3,7 @@
 /* =========================================================
    RADIANTWAVES MEDIA NIGERIA LTD
    NEWSROOM WEBSITE JAVASCRIPT
-   Version 6000
+   Version 6001
    ========================================================= */
 
 const CONFIG = {
@@ -116,30 +116,6 @@ function formatDate(value) {
     });
 }
 
-function normaliseCategory(value) {
-    const category = cleanText(value).toLowerCase()
-        .replace(/&/g, "and")
-        .replace(/[^a-z0-9]/g, "");
-
-    const aliases = {
-        uk: "europe",
-        britain: "europe",
-        unitedkingdom: "europe",
-        europeanunion: "europe",
-        politics: "nigeria",
-        nigerianpolitics: "nigeria",
-        tech: "technology",
-        artificialintelligence: "technology",
-        factcheck: "factcheck",
-        factchecking: "factcheck",
-        beyondthestatement: "beyondstatement",
-        leaderswatch: "beyondstatement",
-        editorialopinion: "editorial"
-    };
-
-    return aliases[category] || category;
-}
-
 function getFirstValue(object, fields, fallback = "") {
     if (!object || typeof object !== "object") return fallback;
 
@@ -160,8 +136,156 @@ function getFirstValue(object, fields, fallback = "") {
 
 function getArray(value) {
     if (Array.isArray(value)) return value;
-    if (value && typeof value === "object") return [value];
+
+    if (value && typeof value === "object") {
+        return [value];
+    }
+
     return [];
+}
+
+/* =========================================================
+   IMPROVED CATEGORY RECOGNITION
+   ========================================================= */
+
+function normaliseCategory(value) {
+    const original = cleanText(value).toLowerCase();
+
+    if (!original) return "";
+
+    const category = original
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]/g, "");
+
+    const aliases = {
+        uk: "europe",
+        britain: "europe",
+        british: "europe",
+        unitedkingdom: "europe",
+        europeanunion: "europe",
+        eu: "europe",
+        france: "europe",
+        germany: "europe",
+        canada: "world",
+        australia: "world",
+        newzealand: "world",
+        politics: "nigeria",
+        nigerianpolitics: "nigeria",
+        tech: "technology",
+        artificialintelligence: "technology",
+        factcheck: "factcheck",
+        factchecking: "factcheck",
+        beyondthestatement: "beyondstatement",
+        leaderswatch: "beyondstatement",
+        editorialopinion: "editorial"
+    };
+
+    if (aliases[category]) {
+        return aliases[category];
+    }
+
+    /*
+       Recognise categories that contain a region or country.
+       Examples:
+       Nigeria Politics -> nigeria
+       Nigeria Economy -> nigeria
+       USA Politics -> usa
+       France Economy -> europe
+       South Africa Politics -> africa
+    */
+
+    if (
+        category.includes("nigeria") ||
+        category.includes("nigerian")
+    ) {
+        return "nigeria";
+    }
+
+    if (
+        category.includes("usa") ||
+        category.includes("unitedstates") ||
+        category.includes("america") ||
+        category.includes("uspolitics")
+    ) {
+        return "usa";
+    }
+
+    if (
+        category.includes("europe") ||
+        category.includes("european") ||
+        category.includes("france") ||
+        category.includes("germany") ||
+        category.includes("britain") ||
+        category.includes("british") ||
+        category.includes("uk") ||
+        category.includes("unitedkingdom")
+    ) {
+        return "europe";
+    }
+
+    if (
+        category.includes("africa") ||
+        category.includes("southafrica") ||
+        category.includes("kenya") ||
+        category.includes("ghana") ||
+        category.includes("uganda") ||
+        category.includes("senegal") ||
+        category.includes("ethiopia")
+    ) {
+        return "africa";
+    }
+
+    if (
+        category.includes("asia") ||
+        category.includes("china") ||
+        category.includes("india") ||
+        category.includes("japan") ||
+        category.includes("korea") ||
+        category.includes("pakistan")
+    ) {
+        return "asia";
+    }
+
+    if (
+        category.includes("technology") ||
+        category.includes("digital") ||
+        category.includes("artificialintelligence") ||
+        category.includes("innovation")
+    ) {
+        return "technology";
+    }
+
+    if (category.includes("business")) {
+        return "business";
+    }
+
+    if (category.includes("editorial")) {
+        return "editorial";
+    }
+
+    if (category.includes("analysis")) {
+        return "analysis";
+    }
+
+    if (
+        category.includes("factcheck") ||
+        category.includes("factchecking")
+    ) {
+        return "factcheck";
+    }
+
+    if (
+        category.includes("beyondstatement") ||
+        category.includes("leaderswatch")
+    ) {
+        return "beyondstatement";
+    }
+
+    if (category.includes("world")) {
+        return "world";
+    }
+
+    return category;
 }
 
 /* =========================================================
@@ -444,40 +568,68 @@ function renderCardCollection(containerId, items, emptyMessage) {
    ========================================================= */
 
 function collectArticles(data) {
+    /*
+       Each collection receives a fallback category.
+       This means a story can still appear in its correct
+       regional section even if its category wording differs.
+    */
+
     const collections = [
-        data.articles,
-        data.topStories,
-        data.worldNews,
-        data.usaNews,
-        data.europeNews,
-        data.africaNews,
-        data.nigeriaNews,
-        data.asiaNews,
-        data.businessNews,
-        data.technologyNews,
-        data.editorial,
-        data.analysis,
-        data.factCheck,
-        data.beyondStatement
+        { name: "articles", category: "" },
+        { name: "topStories", category: "" },
+        { name: "worldNews", category: "world" },
+        { name: "usaNews", category: "usa" },
+        { name: "europeNews", category: "europe" },
+        { name: "africaNews", category: "africa" },
+        { name: "nigeriaNews", category: "nigeria" },
+        { name: "asiaNews", category: "asia" },
+        { name: "businessNews", category: "business" },
+        { name: "technologyNews", category: "technology" },
+        { name: "editorial", category: "editorial" },
+        { name: "analysis", category: "analysis" },
+        { name: "factCheck", category: "factcheck" },
+        { name: "beyondStatement", category: "beyondstatement" }
     ];
 
     const combined = [];
 
     collections.forEach(collection => {
-        combined.push(...getArray(collection));
+        const items = getArray(data[collection.name]);
+
+        items.forEach(item => {
+            if (!item || typeof item !== "object") return;
+
+            const originalCategory = getFirstValue(
+                item,
+                ["category", "section"],
+                ""
+            );
+
+            const recognisedCategory = normaliseCategory(
+                originalCategory
+            );
+
+            const finalCategory = CATEGORY_TARGETS[recognisedCategory]
+                ? recognisedCategory
+                : collection.category;
+
+            combined.push({
+                ...item,
+                _rwCategory: finalCategory
+            });
+        });
     });
 
     const seen = new Set();
 
     return combined.filter(item => {
-        if (!item || typeof item !== "object") return false;
-
         const identity = [
             cleanText(item.title || item.headline).toLowerCase(),
             cleanText(item.url || item.link).toLowerCase()
         ].join("|");
 
         if (identity === "|") return false;
+
         if (seen.has(identity)) return false;
 
         seen.add(identity);
@@ -490,9 +642,10 @@ function renderCategories(data) {
 
     Object.entries(CATEGORY_TARGETS).forEach(([category, target]) => {
         const matching = allArticles.filter(item => {
-            const itemCategory = normaliseCategory(
-                item.category || item.section || ""
-            );
+            const itemCategory = item._rwCategory ||
+                normaliseCategory(
+                    item.category || item.section || ""
+                );
 
             return itemCategory === category;
         });
@@ -680,9 +833,36 @@ function renderTechnologyInnovation(data) {
 
     if (!container) return;
 
-    const items = getArray(
-        data.technologyInnovation || data.innovation
-    );
+    /*
+       Read both fields independently.
+       Do not let a non-empty array hide the innovation object.
+    */
+
+    const technologyItems = getArray(data.technologyInnovation);
+    const innovationItems = getArray(data.innovation);
+
+    const combined = [
+        ...technologyItems,
+        ...innovationItems
+    ];
+
+    const seen = new Set();
+
+    const items = combined.filter(item => {
+        if (!item || typeof item !== "object") return false;
+
+        const identity = [
+            cleanText(item.title || item.headline).toLowerCase(),
+            cleanText(item.url || item.link).toLowerCase()
+        ].join("|");
+
+        if (identity === "|") return false;
+
+        if (seen.has(identity)) return false;
+
+        seen.add(identity);
+        return true;
+    });
 
     if (!items.length) {
         container.innerHTML =

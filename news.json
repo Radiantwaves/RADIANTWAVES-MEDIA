@@ -11,297 +11,762 @@
     "whatsapp": "+33 6 21 61 31 49"
   },
   "hero": {
-    "title": "Midday News: Spain's Railway Investigation Reveals New Details",
-    "description": "Your midday international briefing on breaking developments, politics, business, technology and the decisions shaping our world.",
-    "marquee": "SPAIN RAIL DISASTER | NIGERIA 2027 | EU-CANADA SUMMIT | GLOBAL MARKETS | AI AND TECHNOLOGY",
+    "title": "Midday Global News: Nigeria's Borrowing Debate, France's Political Challenge and Global Power Shifts",
+    "description": "RadiantWaves examines the decisions, statements and political developments shaping Nigeria, France, Europe, America, Africa and Asia.",
+    "marquee": "NIGERIA OPPOSITION WATCH | TINUBU'S BORROWING REQUEST | MARINE LE PEN | TRUMP | EUROPEAN ECONOMY | ASIA | AI AND INNOVATION",
     "image": "assets/news-hero.jpg",
     "video": "assets/video2.mp4"
   },
-  "headline": "Spain's Deadly Train Collision: Preliminary Findings Raise Serious Safety Questions",
-  "intro": "Good afternoon and welcome to RadiantWaves Media. New preliminary findings have intensified scrutiny of Spain's deadly railway collision. In Nigeria, opposition groups are discussing a possible common candidate ahead of the 2027 election. Canada and the European Union are seeking closer economic and strategic cooperation, while global markets are reacting to concerns about artificial intelligence investment.",
-  "morningSummary": "The midday edition brings updated coverage of Spain's railway investigation, Nigeria's opposition discussions, the EU-Canada summit, international markets, developments in Britain and global technology.",
-  "editorialNote": "RadiantWaves Media distinguishes verified facts from allegations, preliminary findings and political claims. Developing stories will be updated as reliable information becomes available.",
+  "headline": "Nigeria's Opposition Faces a Test of Unity as Tinubu Seeks Fresh External Borrowing",
+  "intro": "Good afternoon and welcome to RadiantWaves Media. Nigeria's political and economic debate is intensifying following President Bola Tinubu's request for legislative approval to process more than $20.5 billion and €1 billion in external borrowing. Opposition leaders are also exploring cooperation ahead of the 2027 election, but questions remain about leadership, party interests and a common programme. In France, Marine Le Pen has launched a renewed presidential campaign with proposals on national sovereignty, security and energy. In the United States, Donald Trump has cancelled two planned campaign appearances and will instead participate in telephone rallies. Across Europe, economic growth is continuing despite inflation and energy pressures. Our reports examine not only what happened, but what these developments mean for citizens.",
+  "morningSummary": "Today's midday briefing focuses on Nigeria's borrowing request and opposition negotiations, France's presidential campaign, Trump's midterm strategy, the European economy, EU-Canada relations, developments in Asia, African security and the growing influence of artificial intelligence.",
+  "editorialNote": "RadiantWaves Media publishes independently written reporting, analysis and editorial observations. We distinguish confirmed developments from allegations, political claims and opinion. Statements are attributed to their speakers and context. Where information is incomplete or developing, we say so. Our objective is to inform the public, encourage accountability and promote meaningful debate.",
   "breaking": [
     {
-      "headline": "Spain Train Disaster: Preliminary Investigation Points to Signalling and Operational Failures",
-      "summary": "A preliminary investigation indicates that a Renfe train was travelling at an estimated 160–200 km/h when it struck a stationary Iryo train. Investigators are examining signalling failures and the decisions that allowed the train to continue at normal speed. The death toll remains at least 69 in current reports.",
-      "image": "assets/spain-train-disaster.jpg",
-      "category": "Breaking News",
-      "status": "Developing - preliminary investigation",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/"
+      "headline": "Tinubu Seeks Approval for $20.52 Billion and €1.045 Billion External Borrowing",
+      "summary": "President Bola Tinubu has asked the National Assembly to approve the processing of external loans worth approximately $20.52 billion and €1.045 billion under the 2026–2027 Supplementary External Borrowing Plan. The request was conveyed in a letter read by Senate President Godswill Akpabio on 27 October. The administration says the proposed financing would support infrastructure, agriculture, healthcare, education, water supply, security, employment and financial management reforms. The proposal is subject to legislative scrutiny and should not be described as money already approved or disbursed.",
+      "category": "Nigeria Economy",
+      "status": "Legislative consideration",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
+      "radiantWavesView": "Nigeria cannot treat another large borrowing request as an ordinary administrative exercise. Before granting approval, lawmakers should examine the proposed projects, repayment conditions, interest costs, previous borrowing approvals and the status of projects already financed by public debt. The government must show Nigerians how these loans will produce measurable benefits. Borrowing for development can be justified, but borrowing without transparent results places future generations at risk."
     },
     {
-      "headline": "Nigeria Opposition Groups Discuss a Possible Common Candidate",
-      "summary": "A coalition of opposition groups says it is working towards a single candidate for the 2027 presidential election. Cardinal John Onaiyekan has reportedly expressed support for efforts to create a credible opposition choice. No final agreement between the leading political figures has been confirmed.",
-      "category": "Nigeria Politics",
-      "status": "Political discussions ongoing",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/"
+      "headline": "Senator Questions Government's Use of Previous Borrowings",
+      "summary": "Senator Victor Umeh has questioned the government's record on previous borrowing, asking why contractors carrying out capital projects are reportedly still awaiting payment despite earlier borrowing approvals. He raised the concern following Tinubu's latest request for external loans.",
+      "category": "Nigeria Accountability",
+      "status": "Reported parliamentary criticism",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html",
+      "radiantWavesView": "This is precisely the kind of scrutiny Nigerians should expect from elected representatives. The Senate should request a detailed account of previous loans, project payments, completed infrastructure and outstanding obligations. Criticism alone is not enough; lawmakers must follow it with documents, hearings and public explanations."
+    },
+    {
+      "headline": "Trump Cancels Kansas and Iowa Campaign Rallies Ahead of Midterm Elections",
+      "summary": "US President Donald Trump cancelled planned in-person campaign appearances in Salina, Kansas, and Dubuque, Iowa. Instead, his allies plan telephone rallies across several states. Trump explained that he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well. The cancellations come after weeks of campaigning ahead of the midterm elections.",
+      "category": "USA Politics",
+      "status": "Reported on 29 October",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/",
+      "radiantWavesView": "Campaign strategy is a legitimate political decision, but the important question is whether the Republican Party can maintain support in competitive states. The decision to use telephone rallies should be assessed by its electoral impact, not by speculation about the President's health. Voters should focus on candidates' records, policies and the consequences of the midterm result."
+    },
+    {
+      "headline": "Marine Le Pen Launches Presidential Campaign with Energy and National Sovereignty Proposals",
+      "summary": "Marine Le Pen launched her presidential campaign at an event in Orléans on 25 October. She promised to revive domestic oil exploration if elected and criticised France's 2017 law restricting new hydrocarbon exploration permits. She also repeated her positions on national preference, immigration, security and the future direction of France.",
+      "category": "France Politics",
+      "status": "Campaign statements reported",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
+      "radiantWavesView": "Le Pen is presenting a clear challenge to France's existing political direction. Voters deserve an open debate about immigration, security, energy independence and national sovereignty. However, proposals to expand fossil fuel exploration must be examined against environmental commitments, energy costs and the long-term interests of French households. Political alternatives must explain not only what they oppose, but how their proposals would work."
     }
   ],
   "featured": {
-    "title": "Spain Mourns After Deadly Train Disaster: Questions Grow Over Railway Safety",
-    "subtitle": "New preliminary findings intensify scrutiny of signalling systems, railway operations and accountability.",
-    "category": "World News / Transport Safety",
+    "title": "Nigeria's Borrowing Question: Who Will Account for the Money?",
+    "subtitle": "A new external borrowing request puts transparency, parliamentary scrutiny and public accountability at the centre of national debate.",
+    "category": "Nigeria Politics and Economy",
     "date": "30 October 2026",
-    "image": "assets/spain-train-disaster.jpg",
-    "summary": "Spain is mourning after a devastating collision between two high-speed trains near Urda in central Spain. At least 69 people have been reported killed. A preliminary investigation indicates that the Renfe train may have been travelling at approximately 160–200 km/h when it struck a stationary Iryo train. Investigators are examining a sequence of signalling failures and operational decisions. The death toll and missing-person figures remain subject to official updates.",
-    "whyItMatters": "The disaster raises serious questions about railway safety, the reliability of signalling systems, operational procedures, maintenance and accountability. The investigation could have implications for passenger safety across high-speed rail networks.",
-    "radiantWavesView": "A tragedy of this scale demands more than expressions of sympathy. Spain's authorities must establish exactly what happened, examine the technical and human factors involved and make the findings public. Responsibility should be determined by evidence, not speculation. Passengers deserve a railway system where safety is never compromised.",
+    "image": "assets/leaders/tinubu.jpg",
+    "summary": "President Bola Tinubu has requested legislative approval to process external loans worth approximately $20.52 billion and €1.045 billion under the 2026–2027 Supplementary External Borrowing Plan. The administration says the money will support infrastructure and other development priorities. However, Senator Victor Umeh has raised questions about previous borrowing approvals and reported unpaid contractors. The Senate has a responsibility to examine the proposal carefully before reaching a decision.",
+    "background": "The request was conveyed to the National Assembly in a presidential letter read by Senate President Godswill Akpabio on 27 October. The proposed financing covers several sectors, including infrastructure, agriculture, healthcare, education, water supply and security. The committee review and the government's supporting project documentation are important to understanding the proposal.",
+    "whyItMatters": "Public borrowing creates obligations that may affect taxpayers and future budgets. Citizens need to understand the total cost, repayment terms, expected benefits and the status of previous loans.",
+    "whatHappensNext": "The Senate committees must examine the proposal, its financing structure, project list and relationship with existing borrowing plans. Nigerians should follow the committee's findings and any eventual legislative decision.",
+    "radiantWavesView": "A responsible government should welcome scrutiny of public borrowing. The National Assembly should demand a project-by-project explanation, publish relevant details and establish how the proposed loans will be monitored. The opposition should also offer practical alternatives for financing development and managing debt. Nigeria needs accountability from both government and opposition.",
     "keyQuestions": [
-      "Why did the signalling system fail?",
-      "Why was the train reportedly permitted to continue at normal speed?",
-      "Were existing safety procedures followed?",
-      "Were there wider maintenance or staffing problems?",
-      "What changes will prevent another tragedy?"
+      "What are the exact repayment periods and interest conditions?",
+      "Which specific projects will receive the proposed funds?",
+      "What measurable results have previous borrowing programmes delivered?",
+      "Are contractors owed money on projects financed by earlier loans?",
+      "How will the public monitor the use of the new funds?",
+      "What alternatives to additional external borrowing have been considered?"
     ],
-    "source": "Reuters and Associated Press",
-    "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
-    "status": "Developing - preliminary findings reported"
+    "source": "Premium Times and TheCable",
+    "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
+    "status": "Request submitted for legislative consideration"
   },
   "topStories": [
     {
-      "title": "Spain's Railway Disaster: Preliminary Findings Reveal More Details",
-      "category": "World",
-      "region": "Europe",
-      "date": "30 October 2026",
-      "image": "assets/spain-train-disaster.jpg",
-      "summary": "Investigators are examining a sequence of signalling failures and operational decisions following the collision that killed at least 69 people. The train's black box is expected to help establish its precise speed and the events before impact.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
-      "status": "Developing"
+      "title": "Nigeria 2027: Six Opposition Parties Have Held Consultations with Political Leaders",
+      "category": "Nigeria Opposition Watch",
+      "region": "Nigeria",
+      "date": "14 October 2026",
+      "image": "assets/leaders/atiku.jpg",
+      "summary": "TheCable reported that six opposition parties had consulted presidential figures including Atiku Abubakar, Peter Obi, Seyi Makinde, Adewole Adebayo and Donald Duke as part of efforts to explore cooperation ahead of 2027. The parties identified in the report were ADC, APM, NDC, SDP, PDP and PRP. The consultations do not amount to a final agreement on a joint candidate.",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+      "status": "Consultations reported",
+      "radiantWavesView": "This is an important development, but Nigerians should not confuse consultations with political unity. The parties must explain how they intend to choose a candidate, resolve disagreements and agree on a common programme. A credible coalition must be built around policies and public interest, not simply the desire to remove an incumbent."
     },
     {
-      "title": "EU and Canada Seek a Deeper Strategic Partnership",
-      "category": "Diplomacy",
+      "title": "Marine Le Pen Promises a Political Renaissance for France",
+      "category": "France Politics",
+      "region": "France",
+      "date": "25 October 2026",
+      "image": "assets/leaders/macron.jpg",
+      "summary": "At her Orléans rally, Marine Le Pen presented herself as an alternative to the existing political order. She called for a national renewal, stronger security measures and a change of direction in French policy. She also promoted national preference and a more assertive approach to sovereignty.",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/10/25/marine-le-pen-launches-presidential-campaign-with-vow-to-restore-rule-of-law",
+      "status": "Campaign launched",
+      "radiantWavesView": "The French electorate should examine the substance behind the campaign language. What would national preference mean in employment, housing and public services? How would proposed security measures respect constitutional rights? What would the economic and diplomatic consequences be for France and Europe?"
+    },
+    {
+      "title": "France's Economy Contracts as Inflation Accelerates",
+      "category": "France Economy",
+      "region": "Europe",
+      "date": "30 October 2026",
+      "summary": "France's economy contracted by 0.1% in the third quarter of 2026, while harmonised inflation accelerated to 3.8% in October. Higher energy, accommodation and transport costs are adding pressure on households and businesses. Investment also declined for a second consecutive quarter.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/",
+      "status": "Economic data reported",
+      "radiantWavesView": "Economic figures matter because they eventually affect household budgets, jobs and business confidence. French political leaders must explain how they intend to support purchasing power, encourage investment and control inflation without placing unsustainable pressure on public finances."
+    },
+    {
+      "title": "Eurozone Economy Grows Despite Energy and Inflation Pressures",
+      "category": "European Economy",
+      "region": "European Union",
+      "date": "30 October 2026",
+      "summary": "The eurozone economy grew by 0.4% in the third quarter, exceeding economists' expectations of 0.2%. Annual growth reached 1.3%. However, inflation remained above the European Central Bank's 2% target, while economic performance varied between member states.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/905619a8db70802b721fbe6ebefa32aa",
+      "status": "Economic figures reported",
+      "radiantWavesView": "Growth is encouraging, but it does not automatically mean households are feeling better off. European leaders must pay attention to inflation, energy affordability, employment and the differences between national economies. The quality of growth matters as much as the headline figure."
+    },
+    {
+      "title": "EU and Canada Debate a Deeper Strategic Partnership",
+      "category": "International Relations",
       "region": "Canada and Europe",
       "date": "30 October 2026",
       "image": "assets/leaders/von-der-leyen.jpg",
-      "summary": "The summit in Montreal is addressing trade, critical minerals, defence, digital cooperation, research and economic security. Discussions include how both sides can strengthen their partnership amid changing global trade relationships.",
-      "source": "European Council",
-      "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
-      "status": "Summit underway"
+      "summary": "European Commission President Ursula von der Leyen has promoted the idea of Canada becoming an EU associate member, describing a close association without full membership. Canadian Prime Minister Mark Carney has shown interest in the concept, while German Chancellor Friedrich Merz has expressed reservations about the label. Cooperation in trade, critical minerals, energy, security and technology remains central.",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
+      "status": "Diplomatic proposal under discussion",
+      "radiantWavesView": "The proposal reflects a changing international environment in which middle powers are looking for stronger economic and security relationships. The practical benefits matter more than the title. Any new arrangement must clarify market access, obligations, democratic accountability and the limits of participation in EU institutions."
     },
     {
-      "title": "Global Markets Mixed as AI Investment Concerns Grow",
-      "category": "Business and Finance",
-      "region": "Global",
+      "title": "China's Communist Party Announces Expulsions as Discipline Campaign Continues",
+      "category": "Asia Politics",
+      "region": "China",
       "date": "30 October 2026",
-      "summary": "Global financial markets are showing mixed movements. Concerns about the cost and returns of artificial intelligence investment have weighed on some technology shares. European markets have been modestly positive while several Asian markets have fallen.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
-      "status": "Reported"
+      "summary": "China's ruling party has announced that 33 people have been expelled as part of continuing disciplinary action. The development highlights the leadership's emphasis on party discipline and political control.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia",
+      "status": "Reported",
+      "radiantWavesView": "Anti-corruption and internal discipline can strengthen public institutions when they are transparent and applied fairly. However, citizens and observers also need clarity about due process, independent scrutiny and whether disciplinary action is applied consistently."
     },
     {
-      "title": "UK Prime Minister Andy Burnham Meets Devolved Leaders",
-      "category": "Politics",
-      "region": "United Kingdom",
+      "title": "North Korea Displays Military Drones and Calls for Faster AI Weapons Development",
+      "category": "Asia Security",
+      "region": "Korean Peninsula",
       "date": "30 October 2026",
-      "summary": "The Prime Minister is meeting devolved leaders in Glasgow at a National Economic Council session. Economic growth, regional devolution and the relationship between the UK government and devolved administrations are among the issues under discussion.",
-      "source": "Welsh Government",
-      "url": "https://media.service.gov.wales/news/national-economic-council-opportunity-for-pm-to-show-respect-agenda-works-both-ways",
-      "status": "Meeting scheduled"
+      "summary": "North Korean state media has reported displays of drones, missiles and military systems, with Kim Jong Un calling for accelerated development of drone and artificial intelligence capabilities.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia",
+      "status": "State media report",
+      "radiantWavesView": "The increasing use of artificial intelligence in military systems creates serious international security questions. Governments must consider the risks of escalation, miscalculation and reduced human control over weapons. Regional security depends on diplomacy as well as military preparedness."
     },
     {
-      "title": "North Korea Highlights Drone and AI Military Development",
-      "category": "Security and Technology",
-      "region": "Asia",
+      "title": "South Africa's Ramaphosa Warns ANC Candidates Against Arrogance and Corruption",
+      "category": "Africa Politics",
+      "region": "South Africa",
       "date": "30 October 2026",
-      "summary": "North Korean state media has reported a demonstration of drones, missiles and military systems. Kim Jong Un has called for accelerated development of drone and artificial intelligence capabilities.",
-      "source": "CNA",
-      "url": "https://www.channelnewsasia.com/east-asia/north-korea-drones-missiles-kim-jong-un-6505466",
-      "status": "Reported"
+      "summary": "South African reporting says President Cyril Ramaphosa has warned African National Congress candidates against arrogance and corruption. The comments come amid continuing scrutiny of political leadership and public trust.",
+      "source": "TimesLIVE via Africa Front Page",
+      "url": "https://www.africafrontpage.com/today",
+      "status": "Reported",
+      "radiantWavesView": "Political parties cannot rebuild public confidence through campaign promises alone. Their candidates must demonstrate integrity, explain their records and show how they will address unemployment, public services and corruption."
     },
     {
-      "title": "Nigeria's Opposition Faces Pressure to Unite Ahead of 2027",
-      "category": "Politics",
+      "title": "Nigeria Reports Deadly Attack in Kebbi State",
+      "category": "Nigeria Security",
+      "region": "Nigeria",
+      "date": "30 October 2026",
+      "summary": "Daily Trust reported that gunmen killed a police inspector and 11 other people in Kebbi State. Details about the circumstances, suspects and official response require continued verification and updates.",
+      "source": "Daily Trust via Africa Front Page",
+      "url": "https://www.africafrontpage.com/today",
+      "status": "Developing security report",
+      "radiantWavesView": "The safety of citizens must remain a central responsibility of government. Authorities should provide verified information, investigate the attack and explain what steps are being taken to protect communities. Political leaders should not turn victims' suffering into partisan talking points."
+    },
+    {
+      "title": "African Union Targets Digital Independence Through Native AI Initiative",
+      "category": "Africa Technology",
       "region": "Africa",
       "date": "30 October 2026",
-      "summary": "A coalition of opposition groups says it is working towards a common presidential candidate. Cardinal John Onaiyekan has reportedly encouraged efforts to build a credible opposition. The political negotiations remain ongoing.",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
-      "status": "Political discussions ongoing"
-    },
-    {
-      "title": "Nigeria's Proposed Borrowing Plans Prompt Debt Concerns",
-      "category": "Economy",
-      "region": "Africa",
-      "date": "30 October 2026",
-      "summary": "Broadcaster Reuben Abati has raised concerns about reported plans for fresh borrowing by the Nigerian government. His comments have renewed debate about debt sustainability, transparency and the benefits citizens receive from public borrowing. The government's proposals and official figures should be examined separately from commentary.",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/nigeria-borrowing-itself-into-slavery-reuben-abati-cries-out-over-fresh-20bn-loan-warns-tinubu/",
-      "status": "Commentary - official borrowing details require confirmation"
-    },
-    {
-      "title": "Australia and Asia-Pacific Markets Record Mixed Trading",
-      "category": "Business",
-      "region": "Asia-Pacific",
-      "date": "30 October 2026",
-      "summary": "Markets across the Asia-Pacific region have moved in different directions. Australia's market recorded a modest gain while Japan and South Korea experienced declines amid technology-sector concerns.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
-      "status": "Reported"
+      "summary": "An African technology report says the African Union is targeting greater digital independence through a native artificial intelligence initiative. The wider challenge is to develop local expertise, data capacity and infrastructure so African countries can participate more fully in the AI economy.",
+      "source": "Africa Front Page",
+      "url": "https://www.africafrontpage.com/today",
+      "status": "Reported initiative; programme details require further confirmation",
+      "radiantWavesView": "Africa should not remain only a consumer of technology developed elsewhere. Investment in research, education, local-language tools, digital infrastructure and responsible data governance could help African businesses and public institutions benefit from AI."
     }
   ],
   "articles": [
     {
-      "title": "Spain's Railway Disaster: What the Preliminary Investigation Reveals",
-      "category": "Featured Analysis",
-      "date": "30 October 2026",
-      "image": "assets/spain-train-disaster.jpg",
-      "summary": "Preliminary findings point to a sequence of signalling failures and operational decisions before the collision. The investigation must establish the precise causes and whether procedures were followed.",
-      "script": "Spain is still mourning after one of its deadliest railway disasters. New preliminary findings indicate that a train may have been travelling at up to 200 kilometres per hour when it struck another train that was stationary. Investigators are examining signalling failures and the decisions that allowed the train to continue. The death toll stands at at least 69 in current reports. But the most important questions remain: why did the safety system fail, who made the critical decisions, and what must change to protect passengers? Spain deserves answers, and families deserve accountability based on evidence.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
-      "status": "Developing"
-    },
-    {
-      "title": "Nigeria 2027: Can the Opposition Agree on One Candidate?",
+      "title": "Nigeria 2027: The Opposition's Biggest Challenge Is Not Tinubu — It Is Unity",
       "category": "Nigeria Politics",
       "date": "30 October 2026",
-      "summary": "Opposition groups are discussing a common candidate as they prepare to challenge President Tinubu. Cardinal John Onaiyekan has reportedly encouraged unity, while the coalition says it is developing a framework for cooperation.",
-      "script": "Nigeria's 2027 election is approaching, and the opposition faces a major political test. A coalition of opposition groups says it is working towards a single candidate, with Cardinal John Onaiyekan reportedly encouraging efforts to build a credible alternative. But unity is easier to announce than to achieve. Who will lead? What programme will they present? Can political ambitions be put aside for the national interest? Nigerians need more than an agreement between politicians. They need a credible plan for security, jobs, education, healthcare and the economy.",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
-      "status": "Political discussions ongoing"
+      "summary": "Opposition parties are exploring cooperation ahead of the 2027 presidential election. Consultations involving ADC, APM, NDC, SDP, PDP and PRP have included prominent political figures such as Atiku Abubakar, Peter Obi, Seyi Makinde, Adewole Adebayo and Donald Duke. However, discussions have not established a final joint candidate or a complete common manifesto.",
+      "background": "Nigeria's opposition landscape contains several parties and political personalities with different histories, voter bases and ambitions. Cooperation may improve their electoral prospects, but disagreements about party platforms, leadership, candidate selection and regional representation could complicate the process.",
+      "whyItMatters": "A divided opposition may struggle to present a convincing national alternative. But a coalition formed only to defeat the incumbent may also disappoint voters if it has no coherent policy programme.",
+      "whatHappensNext": "The parties need to explain their selection process, decision-making arrangements, policy priorities and how they intend to manage disagreements. Nigerians should look for formal resolutions rather than relying on political speculation.",
+      "radiantWavesView": "Atiku, Obi and other opposition figures must recognise that the country needs more than an agreement between political personalities. They need a transparent process, a credible candidate and a shared programme covering security, jobs, education, healthcare, the economy and national unity. If leaders cannot compromise before an election, voters have reason to question how they would govern together.",
+      "script": "Nigeria's 2027 election is approaching, and the opposition faces a major test. Several parties have held consultations with prominent political figures, including Atiku Abubakar and Peter Obi. But consultations are not the same as unity. Who will lead? How will a candidate be chosen? What happens if influential leaders disagree? Nigerians need more than a coalition designed simply to defeat the ruling party. They need a credible programme for security, jobs, education, healthcare and the economy. The real test is whether opposition leaders can put national interest ahead of personal ambition.",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+      "status": "Political consultations reported"
     },
     {
-      "title": "Canada and Europe: A Partnership Beyond Trade",
-      "category": "International Relations",
+      "title": "Tinubu's Borrowing Request: Development Financing or Another Debt Burden?",
+      "category": "Nigeria Analysis",
       "date": "30 October 2026",
-      "image": "assets/diplomacy.jpeg",
-      "summary": "The EU-Canada summit is considering deeper cooperation in trade, defence, technology, critical minerals and economic security.",
-      "script": "Canada and the European Union are working to strengthen their relationship at a time of changing global alliances. Their discussions in Montreal cover trade, security, technology, critical minerals and research. The bigger question is whether this partnership can deliver practical benefits for businesses, workers and citizens. Strong international relationships should be measured by what they achieve, not only by the statements leaders issue.",
-      "source": "European Council",
-      "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
-      "status": "Summit underway"
+      "summary": "The President's request for approval to process $20.52 billion and €1.045 billion in external borrowing has reopened the debate about the country's development priorities and debt sustainability.",
+      "background": "The proposed borrowing is intended to finance projects in infrastructure, agriculture, healthcare, education, water, security, employment and financial management. Senator Victor Umeh has questioned the government's handling of previous loans and reported unpaid contractors.",
+      "whyItMatters": "Borrowing affects future public budgets and the resources available for essential services. Nigerians need to know the cost, purpose and expected return of every major loan.",
+      "whatHappensNext": "The Senate must examine the proposal and request supporting documents, repayment conditions and evidence of previous project delivery.",
+      "radiantWavesView": "The government should publish a clear project-by-project explanation and allow lawmakers to scrutinise it. The opposition must also demonstrate what it would do differently. Criticism without a credible alternative is incomplete, but government borrowing without accountability is equally unacceptable.",
+      "script": "President Tinubu has asked the National Assembly to approve the processing of more than 20.5 billion dollars and one billion euros in external loans. The government says the money will support infrastructure, healthcare, education, agriculture, security and other development priorities. But a serious question has been raised by Senator Victor Umeh: what happened to previous borrowing approvals, especially when some contractors are reportedly still awaiting payment? The Senate must demand clear answers before making a decision. Nigerians deserve to know where the money will go, how it will be repaid and what results it will deliver.",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html",
+      "status": "Legislative scrutiny pending"
     },
     {
-      "title": "Nigeria's Debt Debate: Borrowing Must Deliver Results",
-      "category": "Economy and Accountability",
+      "title": "Marine Le Pen's French Presidential Campaign: What Her Proposals Mean",
+      "category": "France Analysis",
       "date": "30 October 2026",
-      "summary": "Fresh public commentary has raised concerns about reported government borrowing plans and the need for transparency about the use of public loans.",
-      "script": "Nigeria's borrowing debate is about more than the size of a loan. Citizens have a right to know why money is being borrowed, where it will be spent, how it will be repaid and what benefits the country will receive. Borrowing can support development when it is transparent and productive. But when citizens see rising debt alongside hardship, questions about accountability become unavoidable. Public money requires public answers.",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/nigeria-borrowing-itself-into-slavery-reuben-abati-cries-out-over-fresh-20bn-loan-warns-tinubu/",
-      "status": "Commentary and public debate"
+      "image": "assets/leaders/macron.jpg",
+      "summary": "Marine Le Pen has presented a campaign centred on national renewal, security, national preference and energy policy. She has also promised to revive domestic oil exploration and repeal France's 2017 restrictions on new hydrocarbon exploration permits.",
+      "background": "Her Orléans rally on 25 October marked a major campaign moment for the National Rally. Her proposals reflect a political approach that places national sovereignty and immigration controls at the centre of the debate.",
+      "whyItMatters": "The proposals could affect France's energy transition, immigration policy, public services, constitutional debate and relationship with the European Union.",
+      "whatHappensNext": "Voters will need more detailed policy commitments, costings and explanations of how proposals would be implemented within French and European legal frameworks.",
+      "radiantWavesView": "Opposition parties have a democratic right to challenge government policy. But voters must examine the practical consequences of every proposal. A promise of national renewal should be tested against economic evidence, constitutional rights, environmental responsibilities and the everyday needs of French residents.",
+      "script": "Marine Le Pen has launched a renewed presidential campaign in Orléans, promising a political change of direction for France. She has spoken about security, national preference and energy independence, including a proposal to revive domestic oil exploration. These are important issues for French voters. But the questions are equally important: how would these policies affect household costs, the environment, immigration and France's relationship with Europe? A strong political campaign must be judged not only by its promises, but by whether those promises can work.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
+      "status": "Campaign proposals reported"
+    },
+    {
+      "title": "Trump's Midterm Strategy: Why Cancel Two Campaign Rallies?",
+      "category": "USA Analysis",
+      "date": "30 October 2026",
+      "summary": "Donald Trump cancelled planned in-person campaign stops in Kansas and Iowa and is expected to participate in telephone rallies instead. He said he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well.",
+      "background": "The cancellations follow several weeks of campaigning in support of Republican candidates ahead of the midterm elections. The strategy allows Trump-aligned groups to reach voters in multiple states without additional travel.",
+      "whyItMatters": "The midterm elections will influence the balance of power in Congress and the ability of the President's party to advance its legislative agenda.",
+      "whatHappensNext": "The electoral performance of Republican candidates in competitive states will help establish whether the telephone rallies and wider campaign strategy were effective.",
+      "radiantWavesView": "A cancelled rally should not automatically be treated as evidence of a personal or medical problem. The public should distinguish confirmed explanations from speculation. The real political question is whether Trump's involvement helps candidates win support and whether voters agree with the policies being promoted.",
+      "script": "President Donald Trump has cancelled planned campaign appearances in Kansas and Iowa ahead of the midterm elections. Instead, his political allies plan telephone rallies across several states. Trump said he did not feel he needed to visit Kansas because the Republican candidate was doing well. This is a campaign decision, but its political impact remains to be seen. The midterm elections will test public confidence in the Republican Party and influence the balance of power in Congress.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/",
+      "status": "Campaign development"
+    },
+    {
+      "title": "Europe's Economic Resilience Faces an Inflation Test",
+      "category": "Europe Analysis",
+      "date": "30 October 2026",
+      "summary": "Eurozone economic growth reached 0.4% in the third quarter, above forecasts, while inflation remained elevated. France's economy contracted by 0.1%, showing that the overall European figures conceal different national experiences.",
+      "background": "Energy costs and geopolitical uncertainty continue to affect businesses and households. The European Central Bank has kept interest rates unchanged while warning about inflation risks.",
+      "whyItMatters": "Higher inflation can reduce household purchasing power and make borrowing more expensive. Slower growth can also affect investment and employment.",
+      "whatHappensNext": "European governments and the European Central Bank will have to monitor energy prices, inflation, wages and economic activity in the coming months.",
+      "radiantWavesView": "Europe's economic resilience should not be measured only through headline growth. Citizens need affordable energy, stable employment and manageable living costs. Policymakers must balance inflation control with the need to protect households and encourage productive investment.",
+      "script": "The eurozone economy has grown faster than expected, but the recovery remains uneven. France recorded a contraction, while other countries reported growth. Inflation is still above the European Central Bank's target, and higher energy costs remain a concern. For ordinary households, the important question is whether economic growth will translate into better living standards. Europe needs an economy that works not only for markets, but for its citizens.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/905619a8db70802b721fbe6ebefa32aa",
+      "status": "Economic data reported"
     }
   ],
-  "technologyInnovation": {
-    "title": "Artificial Intelligence: Investors Ask Where the Returns Will Come From",
-    "summary": "Global markets are reacting to concerns about the cost of AI infrastructure and the financial returns expected from major technology investments. The technology continues to attract substantial investment, but investors are increasingly examining whether spending can translate into sustainable profits.",
-    "script": "Artificial intelligence is transforming industries, but the global technology race is becoming more expensive. Investors are now asking whether the enormous spending on chips, data centres and AI services will produce lasting financial returns. The lesson for businesses is simple: innovation matters, but it must solve real problems, create value and be responsibly managed.",
-    "source": "Associated Press",
-    "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
-    "status": "Market development"
+  "worldNews": [
+    {
+      "title": "Trump Replaces Planned Kansas and Iowa Visits with Telephone Rallies",
+      "category": "USA",
+      "date": "29 October 2026",
+      "summary": "The President cancelled two planned in-person campaign events and will instead reach voters through telephone rallies organised by political allies.",
+      "radiantWavesView": "The campaign's effectiveness should be judged by voter response and election results, not speculation about the reason for the cancellations.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/"
+    },
+    {
+      "title": "Canada and the EU Consider a Closer Strategic Relationship",
+      "category": "International Relations",
+      "date": "30 October 2026",
+      "summary": "The debate over an EU associate-member concept reflects efforts to strengthen cooperation in trade, technology, security and critical minerals.",
+      "radiantWavesView": "International partnerships should be judged by practical outcomes, clear obligations and benefits for citizens.",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html"
+    }
+  ],
+  "usaNews": [
+    {
+      "title": "Trump Cancels Kansas and Iowa Rallies Ahead of Midterms",
+      "category": "USA Politics",
+      "date": "29 October 2026",
+      "summary": "Trump said he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well. Telephone rallies are planned instead.",
+      "radiantWavesView": "The decision is part of campaign strategy. The important test is whether Republican candidates can maintain support in competitive races.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/"
+    }
+  ],
+  "europeNews": [
+    {
+      "title": "French Economy Contracts by 0.1% as October Inflation Reaches 3.8%",
+      "category": "France Economy",
+      "date": "30 October 2026",
+      "summary": "France's economic output fell in the third quarter, while inflation accelerated. Higher energy, accommodation and transport costs contributed to pressure on households.",
+      "radiantWavesView": "The figures underline the need for credible economic policies that address purchasing power, investment and public finances. Political leaders should explain how their proposals will improve everyday living conditions.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/"
+    },
+    {
+      "title": "European Central Bank Holds Interest Rates Amid Inflation Concerns",
+      "category": "European Economy",
+      "date": "29 October 2026",
+      "summary": "The ECB kept interest rates unchanged but warned that rising energy costs could increase inflation risks and influence future rate decisions.",
+      "radiantWavesView": "Central-bank decisions affect mortgages, savings, business investment and household spending. Policymakers must communicate clearly about the trade-offs between controlling inflation and supporting economic activity.",
+      "source": "Reuters",
+      "url": "https://live.euronext.com/en/financial-news/ecb-keeps-rates-unchanged-euro-slips"
+    },
+    {
+      "title": "Marine Le Pen Presents Her Presidential Programme in Orléans",
+      "category": "France Politics",
+      "date": "25 October 2026",
+      "summary": "Le Pen promised a political renewal and set out proposals on security, national preference and domestic energy production.",
+      "radiantWavesView": "A democratic alternative must be judged by the legality, affordability and likely consequences of its proposals. France deserves detailed policy debate rather than slogans alone.",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/10/25/marine-le-pen-launches-presidential-campaign-with-vow-to-restore-rule-of-law"
+    }
+  ],
+  "africaNews": [
+    {
+      "title": "South African President Warns ANC Candidates Against Arrogance and Corruption",
+      "category": "South Africa Politics",
+      "date": "30 October 2026",
+      "summary": "Reports say Cyril Ramaphosa has warned ANC candidates to avoid arrogance and corruption as the party faces continuing public scrutiny.",
+      "radiantWavesView": "Political credibility depends on conduct as much as campaign promises. Citizens should demand transparent leadership and measurable improvements in public services.",
+      "source": "TimesLIVE via Africa Front Page",
+      "url": "https://www.africafrontpage.com/today"
+    },
+    {
+      "title": "African Union Digital Independence and Native AI Initiative",
+      "category": "African Technology",
+      "date": "30 October 2026",
+      "summary": "An African technology report highlights an initiative aimed at strengthening digital independence through locally developed artificial intelligence capabilities.",
+      "radiantWavesView": "African countries need to invest in research, skills, infrastructure and local-language technology so that the continent helps shape the future of AI rather than simply importing it.",
+      "source": "Africa Front Page",
+      "url": "https://www.africafrontpage.com/today"
+    },
+    {
+      "title": "Deadly Attack Reported in Kebbi State",
+      "category": "Nigeria Security",
+      "date": "30 October 2026",
+      "summary": "Daily Trust reported that gunmen killed a police inspector and 11 other people in Kebbi State. Details remain subject to further confirmation.",
+      "radiantWavesView": "Security agencies must investigate the attack, protect affected communities and communicate verified information. Citizens deserve effective protection, not only statements after tragedies.",
+      "source": "Daily Trust via Africa Front Page",
+      "url": "https://www.africafrontpage.com/today"
+    }
+  ],
+  "nigeriaNews": [
+    {
+      "title": "Tinubu Requests Approval for More Than $20.5 Billion and €1 Billion in External Loans",
+      "category": "Nigeria Economy",
+      "date": "27 October 2026",
+      "summary": "The President's request covers the 2026–2027 Supplementary External Borrowing Plan and is intended to support development projects across several sectors.",
+      "radiantWavesView": "The National Assembly must scrutinise the proposal and publish clear explanations of its cost, purpose, repayment conditions and expected benefits.",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
+    },
+    {
+      "title": "Senator Victor Umeh Questions the Use of Previous Borrowings",
+      "category": "Nigeria Accountability",
+      "date": "28 October 2026",
+      "summary": "Umeh questioned why contractors reportedly remain unpaid despite previous borrowing approvals.",
+      "radiantWavesView": "Lawmakers should demand an account of previous loans before approving further borrowing. Public money must be traceable to completed projects and measurable outcomes.",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html"
+    },
+    {
+      "title": "Opposition Parties Consult Presidential Figures Ahead of 2027",
+      "category": "Nigeria Opposition Watch",
+      "date": "14 October 2026",
+      "summary": "Six opposition parties reportedly consulted Atiku Abubakar, Peter Obi, Seyi Makinde, Adewole Adebayo and Donald Duke as part of efforts to explore cooperation.",
+      "radiantWavesView": "The public needs clarity about candidate selection, party commitments and the proposed national programme. A coalition must be built on more than electoral arithmetic.",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/"
+    }
+  ],
+  "asiaNews": [
+    {
+      "title": "China's Ruling Party Announces Expulsions as Discipline Campaign Continues",
+      "category": "China Politics",
+      "date": "30 October 2026",
+      "summary": "China's ruling party says 33 people have been expelled amid continuing disciplinary measures.",
+      "radiantWavesView": "Anti-corruption measures should be transparent, consistent and subject to due process. The public interest requires clarity about the evidence and procedures behind major disciplinary decisions.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
+    },
+    {
+      "title": "North Korea Highlights Drone and AI Military Development",
+      "category": "Korean Peninsula Security",
+      "date": "30 October 2026",
+      "summary": "North Korean state media has reported military demonstrations and calls for accelerated development of drones and artificial intelligence capabilities.",
+      "radiantWavesView": "The spread of AI-enabled military systems makes international dialogue and safeguards increasingly important. Technology should not make conflict easier to start or harder to control.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
+    },
+    {
+      "title": "Japan's Central Bank Keeps Interest Rates Steady",
+      "category": "Japan Economy",
+      "date": "30 October 2026",
+      "summary": "The Bank of Japan maintained its current interest-rate position and discussed progress towards its inflation objective.",
+      "radiantWavesView": "Monetary decisions must balance price stability, household purchasing power and economic growth. The consequences for businesses and consumers deserve close attention.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
+    }
+  ],
+  "businessNews": [
+    {
+      "title": "Eurozone Growth Exceeds Expectations but Inflation Remains High",
+      "category": "Global Business",
+      "date": "30 October 2026",
+      "summary": "The eurozone economy expanded by 0.4% in the third quarter, while inflation remained above the European Central Bank's target.",
+      "radiantWavesView": "Economic growth is welcome, but households need to see improvements in wages, affordability and employment. Policymakers should not mistake positive aggregate figures for universal prosperity.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/905619a8db70802b721fbe6ebefa32aa"
+    },
+    {
+      "title": "France's Economic Output Falls as Investment Weakens",
+      "category": "France Business",
+      "date": "30 October 2026",
+      "summary": "France's economy contracted by 0.1% in the third quarter, with investment falling for a second consecutive quarter.",
+      "radiantWavesView": "France needs a credible environment for business investment while protecting household purchasing power. Economic policy should be judged by jobs, productivity and living standards.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/"
+    }
+  ],
+  "technologyNews": [
+    {
+      "title": "AI's Role in Modern Warfare Raises Questions About Human Control",
+      "category": "Artificial Intelligence",
+      "date": "30 October 2026",
+      "summary": "Reuters reports that artificial intelligence systems are playing an increasingly significant role in US military operations, helping process intelligence and support decisions. The development raises concerns about errors, civilian harm, human oversight and accountability.",
+      "radiantWavesView": "AI can help people analyse information faster, but speed must never replace responsibility. Decisions involving human lives require meaningful human oversight, reliable data, independent review and clear accountability. Governments and technology companies must explain how errors are prevented and investigated.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/ais-rewiring-us-warfare-may-be-only-beginning-2026-10-30/"
+    },
+    {
+      "title": "China's AI Industry Faces Questions About Investment and Sustainability",
+      "category": "Technology and Business",
+      "date": "29 October 2026",
+      "summary": "Technology commentary in Asia is examining whether China's artificial intelligence investment boom can deliver sustainable commercial returns.",
+      "radiantWavesView": "The long-term success of AI should be measured by useful applications, productivity, safety and economic value rather than investment headlines alone.",
+      "source": "Channel NewsAsia",
+      "url": "https://www.channelnewsasia.com/east-asia"
+    }
+  ],
+  "editorial": [
+    {
+      "title": "Nigeria Needs Accountable Borrowing, Not Just Bigger Borrowing Plans",
+      "category": "Editorial",
+      "date": "30 October 2026",
+      "summary": "The proposed external borrowing plan raises an important question about how Nigeria finances development and protects future public finances.",
+      "radiantWavesView": "RadiantWaves believes that every major borrowing request should be accompanied by transparent project details, repayment conditions, public reporting and independent monitoring. Government must explain its proposal, while the National Assembly must demonstrate that it is scrutinising it properly. Opposition politicians should offer credible alternatives rather than simply criticising the government. The Nigerian public deserves accountability from everyone seeking political power.",
+      "status": "RadiantWaves editorial opinion"
+    },
+    {
+      "title": "A Political Alternative Must Be More Than Opposition to the Government",
+      "category": "Editorial",
+      "date": "30 October 2026",
+      "summary": "Nigeria's opposition parties have an opportunity to demonstrate that they can build a credible alternative ahead of 2027.",
+      "radiantWavesView": "A united opposition should publish its priorities, explain its economic plans, address insecurity and demonstrate how it will improve public services. Political leaders should be prepared to compromise, but voters must also be allowed to judge the process. A coalition without a programme is not yet a national alternative.",
+      "status": "RadiantWaves editorial opinion"
+    }
+  ],
+  "analysis": [
+    {
+      "title": "The 2027 Opposition Question: Can Atiku, Obi and Other Leaders Put Differences Aside?",
+      "category": "Political Analysis",
+      "date": "30 October 2026",
+      "summary": "The consultations among opposition parties indicate interest in cooperation, but the path towards a joint candidate remains uncertain.",
+      "radiantWavesView": "Atiku Abubakar, Peter Obi and other opposition figures have political experience, supporters and different electoral strengths. Their challenge is to agree on a credible process without creating the impression that the presidency is simply being negotiated among political elites. The public should ask who decides the candidate, what happens to party structures, how regional interests are balanced and whether the eventual programme is realistic. If leaders cannot agree on transparent rules, unity may collapse before the campaign properly begins.",
+      "status": "Analysis based on reported consultations"
+    },
+    {
+      "title": "Marine Le Pen's Energy Proposal: Independence, Costs and Climate Responsibilities",
+      "category": "Political Analysis",
+      "date": "30 October 2026",
+      "summary": "Le Pen's proposal to revive domestic oil exploration puts energy security and environmental policy at the centre of France's presidential debate.",
+      "radiantWavesView": "Energy independence is a legitimate policy objective, particularly when international conflict affects prices and supply. However, voters should ask whether new domestic exploration would materially reduce energy costs, how long projects would take and what environmental consequences would follow. A credible energy policy must consider affordability, reliability and the transition to cleaner energy.",
+      "status": "Analysis of reported campaign proposals"
+    }
+  ],
+  "factCheck": [
+    {
+      "title": "Fact Check: Has Tinubu Already Received Approval for the New External Loans?",
+      "category": "Fact Check",
+      "date": "30 October 2026",
+      "claim": "President Tinubu has already secured the new $20.52 billion and €1.045 billion loans.",
+      "verdict": "Misleading if stated as an approved or disbursed loan.",
+      "summary": "The available reporting says the President requested National Assembly approval for the proposed borrowing plan. The request was referred for legislative consideration. A request, committee review, legislative approval, loan agreement and actual disbursement are separate stages.",
+      "radiantWavesView": "Reports and social media posts must use the correct status. At this stage, the accurate description is that the President has requested approval to process the proposed borrowing. Do not tell readers that the money has already been received.",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
+      "status": "Checked against published reporting"
+    },
+    {
+      "title": "Fact Check: Have Nigeria's Opposition Parties Agreed on One Presidential Candidate?",
+      "category": "Fact Check",
+      "date": "30 October 2026",
+      "claim": "Atiku, Peter Obi and all opposition parties have agreed on one presidential candidate.",
+      "verdict": "Not established by the reports reviewed.",
+      "summary": "Reports describe consultations involving six opposition parties and several political figures. They do not establish a final agreement on one candidate, running mate or joint manifesto.",
+      "radiantWavesView": "Political meetings should not be presented as a concluded coalition agreement. Until the parties publish a formal decision, the correct description is that consultations and discussions have taken place.",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+      "status": "Checked against published reporting"
+    },
+    {
+      "title": "Fact Check: Does a Campaign Speech Automatically Change French Law?",
+      "category": "Fact Check",
+      "date": "30 October 2026",
+      "claim": "Marine Le Pen's campaign promises have already changed France's energy and immigration laws.",
+      "verdict": "False.",
+      "summary": "The proposals reported from her campaign rally are political commitments. They do not themselves amend existing legislation. Any change would require the appropriate legal and parliamentary process.",
+      "radiantWavesView": "Readers should distinguish campaign promises from enacted policy. A politician can announce an intention, but implementation depends on election results, legal powers and the legislative process.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
+      "status": "Checked against published reporting"
+    }
+  ],
+  "beyondStatement": [
+    {
+      "title": "Beyond the Statement: Tinubu Says Borrowing Will Support Development",
+      "category": "Beyond the Statement",
+      "date": "30 October 2026",
+      "statement": "The President's letter says the proposed borrowing is intended to support infrastructure, agriculture, healthcare, education, water supply, security, employment generation and financial management reforms.",
+      "context": "The request covers approximately $20.52 billion and €1.045 billion under the 2026–2027 Supplementary External Borrowing Plan. It is subject to legislative consideration.",
+      "radiantWavesView": "The government's stated objectives are important, but they must be supported by a detailed list of projects, financing terms, implementation dates and measurable outcomes. The public should be able to track where each part of the money goes.",
+      "keyQuestion": "Will the National Assembly publish enough information for Nigerians to assess the proposed loans before deciding whether to approve them?",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
+    },
+    {
+      "title": "Beyond the Statement: Marine Le Pen Promises a French Political Renaissance",
+      "category": "Beyond the Statement",
+      "date": "30 October 2026",
+      "statement": "At her Orléans rally, Le Pen promised a political renewal for France and promoted national preference, security and a change of direction. She also called France's 2017 restrictions on new hydrocarbon exploration permits the 'stupid Hulot law'.",
+      "context": "The comments were made during the launch of her presidential campaign. They represent campaign positions, not enacted government policy.",
+      "radiantWavesView": "The language of renewal can be politically powerful, but voters should ask for detailed answers. How would national preference operate in practice? What legal changes would be required? Would renewed oil exploration improve energy affordability, and at what environmental cost? These questions deserve open debate.",
+      "keyQuestion": "Can a promise of national renewal deliver economic security while respecting rights, legal obligations and environmental responsibilities?",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1"
+    }
+  ],
+  "publicInterestFeature": {
+    "title": "Nigeria's Debt: The Public Has a Right to Know",
+    "category": "Public Interest",
+    "date": "30 October 2026",
+    "summary": "The proposed external borrowing plan should prompt a national conversation about transparency, public spending and the long-term cost of government debt.",
+    "radiantWavesView": "Citizens should not have to wait until repayment becomes a crisis before learning how public loans were used. Government should publish project details and progress reports. Parliament should make its scrutiny visible. Civil society, journalists and citizens should follow the evidence and ask questions without spreading unverified claims.",
+    "keyQuestions": [
+      "Where can citizens find the full borrowing plan?",
+      "Which projects are expected to benefit?",
+      "How will delivery be independently monitored?",
+      "What is the repayment schedule?",
+      "What happens if projects are delayed or fail?"
+    ]
   },
+  "technologyInnovation": [
+    {
+      "title": "Artificial Intelligence Is Changing Modern Warfare — But Who Is Accountable for Mistakes?",
+      "summary": "A Reuters report describes the growing role of AI systems in US military operations, including the processing of intelligence information and support for operational decisions. The development raises concerns about inaccurate data, civilian harm, human oversight and accountability.",
+      "script": "Artificial intelligence is no longer limited to offices, phones and business applications. It is increasingly being used in military operations. AI can help analyse enormous amounts of information, but it can also make mistakes. When a decision affects human lives, who is responsible if the technology gets it wrong? Governments must maintain human oversight, reliable information and clear accountability. Technology should support responsible decisions, not replace human responsibility.",
+      "radiantWavesView": "The development of military AI requires strong safeguards. Systems used in decisions involving human lives should be subject to meaningful human control, independent scrutiny and clear accountability. Faster decisions are not automatically better decisions.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/ais-rewiring-us-warfare-may-be-only-beginning-2026-10-30/",
+      "status": "Reported development and analysis"
+    },
+    {
+      "title": "Africa's Opportunity to Build Its Own Artificial Intelligence Capacity",
+      "summary": "African digital independence requires investment in computing infrastructure, research, education, local data resources and tools that serve African languages and communities.",
+      "script": "Africa should not remain only a consumer of artificial intelligence developed elsewhere. The continent has talented researchers, entrepreneurs and young innovators. With investment in education, digital infrastructure and responsible data systems, African businesses can build solutions for agriculture, healthcare, education, finance and public services. The question is whether governments and investors will support that opportunity.",
+      "radiantWavesView": "African innovation should be supported by long-term investment and practical partnerships. Local solutions must be affordable, safe and relevant to the people they are intended to serve.",
+      "source": "Africa Front Page",
+      "url": "https://www.africafrontpage.com/today",
+      "status": "Developing initiative"
+    }
+  ],
   "innovation": {
-    "title": "Digital Transformation Must Deliver Real Value",
-    "summary": "AI, cloud computing, digital infrastructure and automation are changing how businesses operate. The challenge is to make innovation accessible, affordable, secure and useful.",
-    "radiantWavesView": "Technology should not be judged only by how advanced it looks. Its real value lies in whether it improves services, creates opportunities, raises productivity and makes everyday life better."
+    "title": "Innovation Must Solve Real Problems",
+    "summary": "Artificial intelligence, digital infrastructure, automation and local technology development are changing business and public services.",
+    "radiantWavesView": "RadiantWaves believes innovation should be judged by its contribution to society. Does it improve healthcare, education, productivity, public services or access to opportunity? Does it protect personal information and respect human rights? Technology is valuable when it makes life better, not simply when it is new.",
+    "presenterScript": "Innovation is changing the world, but progress should be measured by results. Artificial intelligence and digital tools can help businesses grow, improve public services and create new opportunities. Yet they also bring responsibilities involving privacy, security, fairness and employment. The challenge is not simply to adopt technology, but to use it wisely and make its benefits accessible."
   },
   "leadersWatch": {
-    "title": "Leaders Watch: The Decisions Shaping Our World",
-    "description": "A continuing newsroom watchlist of major international and Nigerian political figures. Updates are based on verified statements and reported developments. Where there is no new confirmed update, this is stated clearly.",
+    "title": "Leaders Watch: What They Said, What They Did and What It Means",
+    "description": "RadiantWaves follows political leaders through their actual statements, policy decisions and public actions. Each report distinguishes a leader's words from our independent assessment. When no fresh verified statement is available, the newsroom says so.",
     "leaders": [
+      {
+        "name": "Bola Ahmed Tinubu",
+        "role": "President of Nigeria",
+        "country": "Nigeria",
+        "image": "assets/leaders/tinubu.jpg",
+        "headline": "Tinubu Requests Legislative Approval for New External Borrowing",
+        "update": "On 27 October, Tinubu's letter requesting approval for the 2026–2027 Supplementary External Borrowing Plan was read in the Senate. The proposal covers approximately $20.52 billion and €1.045 billion.",
+        "statement": "The President's letter described the proposed financing as necessary to support development projects and programmes in infrastructure, agriculture, healthcare, education, water supply, security, employment generation and financial management reforms.",
+        "background": "The proposal is now subject to legislative scrutiny. It follows earlier borrowing programmes and has prompted questions from lawmakers about the management of previous loans.",
+        "implications": "The proposal could affect Nigeria's future debt obligations and public spending. Its value depends on the projects selected, financing conditions and successful implementation.",
+        "radiantWavesView": "The President should publish a transparent project list and explain how the proposed loans will be repaid. The National Assembly should not approve a major borrowing package without examining previous loan performance, outstanding obligations and expected returns. Nigerians deserve evidence that borrowing is producing development.",
+        "script": "President Bola Tinubu has asked the National Assembly to approve the processing of more than 20.5 billion dollars and one billion euros in external loans. The government says the money will support infrastructure, healthcare, education, agriculture, security and employment. But lawmakers have raised questions about previous borrowing and unpaid contractors. The National Assembly must examine the details carefully. Nigerians deserve to know where the money will go, how it will be repaid and what measurable results it will deliver.",
+        "source": "Premium Times",
+        "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
+        "status": "Request under legislative consideration"
+      },
+      {
+        "name": "Atiku Abubakar",
+        "role": "Former Vice-President of Nigeria and opposition political figure",
+        "country": "Nigeria",
+        "image": "assets/leaders/atiku.jpg",
+        "headline": "Atiku and Other Opposition Figures Face the Challenge of Coalition Building",
+        "update": "Atiku was among the political figures consulted by six opposition parties in discussions about cooperation ahead of the 2027 general election.",
+        "statement": "The report reviewed describes consultations and coalition discussions. It does not establish that Atiku has announced a final agreement with other opposition leaders on a joint presidential candidate.",
+        "background": "The consultations involved parties including ADC, APM, NDC, SDP, PDP and PRP, with several political figures taking part.",
+        "implications": "Atiku's political experience and support base may influence opposition negotiations, but the coalition's success will depend on transparent rules and willingness to compromise.",
+        "radiantWavesView": "Atiku should make his position on coalition leadership, candidate selection and a shared manifesto clear. Nigerians need to understand whether the opposition is building a genuine national programme or simply negotiating political positions. Leadership requires the ability to compromise when the public interest demands it.",
+        "script": "Former Vice-President Atiku Abubakar remains an important figure in Nigeria's opposition politics. Six opposition parties have reportedly held consultations with several political leaders, including Atiku. But the public still needs answers. Is there a common candidate? How will the decision be made? What policies will unite the parties? Atiku and other leaders must show Nigerians that cooperation is about national priorities, not only political ambition.",
+        "source": "TheCable",
+        "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+        "status": "Coalition consultations reported"
+      },
+      {
+        "name": "Peter Obi",
+        "role": "Former Governor of Anambra State and opposition political figure",
+        "country": "Nigeria",
+        "image": "assets/leaders/obi.jpg",
+        "headline": "Peter Obi's Position in Opposition Cooperation Remains Important",
+        "update": "Peter Obi was among the political figures consulted during reported discussions involving six opposition parties. No final joint candidacy agreement has been established in the reports reviewed.",
+        "statement": "The reporting confirms consultations involving Obi but does not provide a final agreement by him to accept a particular coalition arrangement or running-mate position.",
+        "background": "Obi has an established political following and is an important figure in discussions about opposition cooperation ahead of 2027.",
+        "implications": "His position may influence whether supporters of different opposition movements accept a common candidate and a shared programme.",
+        "radiantWavesView": "Obi should explain what kind of coalition he considers acceptable and whether he is prepared to support a transparent selection process. Equally, other opposition leaders should explain what compromises they are willing to make. The country needs a credible process, not pressure on one personality alone.",
+        "script": "Peter Obi remains an important figure in Nigeria's opposition politics. His participation in coalition discussions raises questions about the future direction of the opposition. Will the parties agree on a common candidate? Can supporters accept a decision made through a transparent process? Obi and other leaders should explain their positions clearly. Nigerians deserve a coalition built on policies and public interest.",
+        "source": "TheCable",
+        "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+        "status": "Consultations reported"
+      },
       {
         "name": "Donald Trump",
         "role": "President of the United States",
         "country": "USA",
         "image": "assets/leaders/trump.jpg",
-        "update": "No new independently verified leader-specific announcement added to this midday watch.",
-        "script": "President Donald Trump remains a major influence on American domestic and international policy. His administration's economic, diplomatic and security decisions continue to shape international discussions. RadiantWaves Media will monitor confirmed developments and their wider implications.",
-        "source": "White House",
-        "url": "https://www.whitehouse.gov/",
-        "status": "Monitoring"
+        "headline": "Trump Says He Does Not Need to Visit Kansas as Campaign Rallies Are Cancelled",
+        "update": "On 29 October, Trump cancelled planned campaign appearances in Kansas and Iowa. He said he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well.",
+        "statement": "Trump told reporters: \"I don't feel like I have to go to Kansas.\" He also said of Senator Marshall: \"He is doing very well.\"",
+        "background": "The cancellations came after several weeks of campaigning ahead of the US midterm elections. Telephone rallies are planned instead.",
+        "implications": "The decision changes the campaign's final-stage strategy in two states with competitive races.",
+        "radiantWavesView": "The President's explanation should be reported accurately. There is no basis in this report alone to claim that the cancellations prove a health problem. The political test is whether his campaign strategy helps Republican candidates and whether voters support their policies.",
+        "script": "President Donald Trump has cancelled planned campaign rallies in Kansas and Iowa. Explaining the Kansas decision, he said: 'I don't feel like I have to go to Kansas.' His allies plan telephone rallies instead. The cancellations come ahead of important midterm elections. The key question is whether this change in strategy will help Republican candidates maintain support. Voters will ultimately judge the party through its policies and performance.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/",
+        "status": "Statement reported on 29 October"
+      },
+      {
+        "name": "Marine Le Pen",
+        "role": "National Rally political leader and French presidential candidate",
+        "country": "France",
+        "image": "assets/leaders/macron.jpg",
+        "headline": "Le Pen Promises a National Renaissance and Changes to Energy Policy",
+        "update": "At her Orléans rally on 25 October, Le Pen promised a political renewal for France and proposed reviving domestic oil exploration if elected.",
+        "statement": "She described France's 2017 law restricting new hydrocarbon exploration permits as the \"stupid Hulot law\" and promised to repeal it. She also promoted national preference and stronger security measures.",
+        "background": "The rally marked a major campaign event for the National Rally ahead of the 2027 presidential election.",
+        "implications": "Her proposals could affect energy policy, environmental commitments, immigration, national sovereignty and France's relationship with the EU.",
+        "radiantWavesView": "Le Pen has put forward a recognisable political alternative, but voters deserve details about cost, legal implementation and environmental consequences. National sovereignty and energy security are legitimate subjects for debate; the proposals must nevertheless be tested against evidence and their practical effects.",
+        "script": "Marine Le Pen has launched a renewed presidential campaign in Orléans, promising a national renaissance for France. She has proposed reviving domestic oil exploration and changing existing energy restrictions. She has also made national preference and security central to her campaign. But voters should ask what these proposals mean in practice. Will they reduce energy costs? What would be the environmental consequences? How would the policies affect France's relationship with Europe? These are questions every serious candidate must answer.",
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
+        "status": "Campaign statements reported"
       },
       {
         "name": "Mark Carney",
         "role": "Prime Minister of Canada",
         "country": "Canada",
         "image": "assets/leaders/carney.jpg",
-        "update": "Canada is hosting the EU-Canada summit in Montreal, with economic and strategic cooperation on the agenda.",
-        "script": "Prime Minister Mark Carney is engaging European leaders in Montreal as Canada seeks a stronger relationship with the European Union. Trade, security, critical minerals and digital cooperation are central issues. The challenge is to turn diplomatic ambition into practical benefits for Canadian citizens and European partners.",
-        "source": "European Council",
-        "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
-        "status": "Summit underway"
+        "headline": "Canada and Europe Explore a Closer Strategic Relationship",
+        "update": "Canada's relationship with the EU is being discussed through a proposal for a closer associate-style partnership. The idea has received support from some leaders but faces differences over the terminology and institutional implications.",
+        "statement": "Carney has shown interest in the associate-member concept while emphasising the importance of Canada's sovereignty and practical cooperation.",
+        "background": "The discussions cover trade, critical minerals, energy, security, technology and economic resilience.",
+        "implications": "A closer relationship could diversify trade and reduce dependence on a narrow group of international partners.",
+        "radiantWavesView": "Canada and Europe should concentrate on practical cooperation, clear commitments and mutual benefits. Any new arrangement must respect Canadian sovereignty and explain what participation would mean in practice.",
+        "script": "Prime Minister Mark Carney is working to strengthen Canada's relationship with Europe. Discussions include trade, critical minerals, technology, energy and security. The proposal for a closer associate-style relationship has attracted interest, but questions remain about its meaning and institutional limits. The real test will be whether the partnership creates opportunities for citizens and businesses on both sides of the Atlantic.",
+        "source": "Le Monde",
+        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
+        "status": "Diplomatic discussions"
       },
       {
         "name": "Emmanuel Macron",
         "role": "President of France",
         "country": "France",
         "image": "assets/leaders/macron.jpg",
-        "update": "No new independently verified personal announcement added to this midday watch.",
-        "script": "President Emmanuel Macron remains an influential voice in European affairs. France's diplomatic, economic and security policies continue to matter to the wider European Union. RadiantWaves Media is monitoring developments for confirmed updates.",
-        "source": "Élysée",
-        "url": "https://www.elysee.fr/en/",
-        "status": "Monitoring"
-      },
-      {
-        "name": "Bola Ahmed Tinubu",
-        "role": "President of Nigeria",
-        "country": "Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "update": "Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign is taking place amid economic hardship and opposition political manoeuvring.",
-        "script": "President Bola Ahmed Tinubu has begun his campaign for another term. His record on economic reforms, living costs, employment and security will remain central to the debate. As Nigeria approaches the 2027 election, voters will need to assess both the government's achievements and the difficulties citizens continue to face.",
-        "source": "Associated Press",
-        "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e",
-        "status": "Campaign watch"
-      },
-      {
-        "name": "Atiku Abubakar",
-        "role": "Former Vice-President of Nigeria",
-        "country": "Nigeria",
-        "image": "assets/leaders/atiku.jpg",
-        "update": "Opposition coalition discussions are continuing. Salihu Lukman says Cardinal John Onaiyekan encouraged opposition parties to work towards a credible united challenge.",
-        "script": "Former Vice-President Atiku Abubakar remains a central figure in Nigeria's opposition politics. The latest discussions about a common candidate raise a familiar but important question: can opposition leaders agree on a strategy that places national interest above individual ambition? No final agreement should be assumed until the parties make a clear announcement.",
-        "source": "Daily Post Nigeria",
-        "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
-        "status": "Political discussions ongoing"
-      },
-      {
-        "name": "Peter Obi",
-        "role": "Former Governor of Anambra State",
-        "country": "Nigeria",
-        "image": "assets/leaders/obi.jpg",
-        "update": "Peter Obi is among the opposition figures discussed in the current coalition efforts. No final joint presidential candidacy agreement has been confirmed.",
-        "script": "Peter Obi remains an important figure in Nigeria's opposition politics. The ongoing discussions about a common candidate will test the willingness of political leaders to compromise and agree on a credible programme. Nigerians deserve clarity about the policies and leadership arrangements being proposed.",
-        "source": "Daily Post Nigeria",
-        "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
-        "status": "Political discussions ongoing"
-      },
-      {
-        "name": "Andy Burnham",
-        "role": "Prime Minister of the United Kingdom",
-        "country": "United Kingdom",
-        "image": "assets/leaders/andy.jpg",
-        "update": "The Prime Minister is due to meet devolved leaders in Glasgow to discuss economic growth and regional devolution.",
-        "script": "Prime Minister Andy Burnham faces the challenge of balancing economic growth with the interests of all four nations of the United Kingdom. Today's discussions in Glasgow focus on regional powers and economic cooperation. The effectiveness of the government's approach will depend on whether it delivers meaningful opportunities across the country.",
-        "source": "GOV.UK",
-        "url": "https://www.gov.uk/government/ministers/prime-minister",
-        "status": "Government meeting"
+        "headline": "France Faces Economic Pressure as Political Debate Intensifies",
+        "update": "France's economy contracted by 0.1% in the third quarter of 2026, while October inflation accelerated to 3.8%. The figures increase pressure on the government to address economic uncertainty and household costs.",
+        "statement": "Economy Minister Roland Lescure described the situation as an unprecedented combination of external and domestic shocks that had left the economy at a standstill. This is the minister's assessment, not a direct statement from Macron.",
+        "background": "The economic figures arrive amid political debate over public finances, energy prices and the direction of the country.",
+        "implications": "Economic weakness and rising prices may influence public confidence and the wider presidential campaign debate.",
+        "radiantWavesView": "The government must explain how it intends to support investment, employment and household purchasing power. Political opposition should also present realistic alternatives. France needs more than competing campaign slogans; it needs policies that can deliver economic stability.",
+        "script": "France's economy is facing fresh pressure. New figures show a 0.1 per cent contraction in the third quarter, while inflation has accelerated. Higher energy and transport costs are affecting households and businesses. The political question is how France's leaders will respond. Citizens need practical solutions on jobs, investment and the cost of living, not simply arguments about who is responsible.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/",
+        "status": "Economic development reported"
       },
       {
         "name": "Friedrich Merz",
         "role": "Chancellor of Germany",
         "country": "Germany",
         "image": "assets/leaders/merz.jpg",
-        "update": "Germany's position on the proposed EU-Canada associate-member label has been part of the wider debate about the future shape of the partnership.",
-        "script": "Chancellor Friedrich Merz is among the European leaders considering how to deepen cooperation with Canada. The debate highlights a wider question for Europe: how can the EU build stronger partnerships without confusing closer cooperation with formal membership?",
+        "headline": "Germany Questions the EU Associate-Member Label for Canada",
+        "update": "Germany's Chancellor Friedrich Merz has expressed reservations about describing Canada as an EU associate member, favouring a closer partnership without that specific label.",
+        "statement": "The reported position is that Germany supports stronger cooperation but does not favour the associate-member terminology.",
+        "background": "The debate is part of wider EU-Canada discussions about trade, security, energy and economic resilience.",
+        "implications": "Differences over terminology may influence how the partnership is described, even if both sides continue to deepen practical cooperation.",
+        "radiantWavesView": "The debate shows why diplomatic language matters. Leaders should explain the rights, responsibilities and limits of any proposed arrangement so that citizens understand what closer cooperation would actually mean.",
+        "script": "Germany is urging caution over the proposal to describe Canada as an associate member of the European Union. Chancellor Friedrich Merz favours closer cooperation without that specific label. The disagreement does not necessarily mean opposition to stronger EU-Canada relations. The important question is what practical commitments both sides are prepared to make.",
         "source": "Le Monde",
         "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
-        "status": "Diplomatic discussions"
+        "status": "Position reported"
+      },
+      {
+        "name": "Ursula von der Leyen",
+        "role": "President of the European Commission",
+        "country": "European Union",
+        "image": "assets/leaders/von-der-leyen.jpg",
+        "headline": "Von der Leyen Promotes a Closer EU-Canada Relationship",
+        "update": "Von der Leyen has promoted the idea of Canada becoming an EU associate member, describing a close association without full accession.",
+        "statement": "Her proposal is intended to deepen cooperation across areas including trade, industrial policy, critical materials, artificial intelligence, climate, energy and security.",
+        "background": "The proposal has received a mixed response among European leaders, with Germany expressing reservations about the associate-member label.",
+        "implications": "The idea could reshape the EU's approach to strategic partnerships beyond formal membership.",
+        "radiantWavesView": "The proposal is ambitious, but the public needs a clear explanation of what associate status would involve. Cooperation should strengthen economic security without creating confusion about EU membership, democratic accountability or national sovereignty.",
+        "script": "European Commission President Ursula von der Leyen has proposed a closer relationship between Canada and the European Union. The idea of associate membership has generated interest but also questions among member states. The discussions include trade, energy, critical minerals, technology and security. The challenge is to turn the proposal into a clear and workable partnership.",
+        "source": "Le Monde",
+        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
+        "status": "Proposal under discussion"
+      },
+      {
+        "name": "Andy Burnham",
+        "role": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "image": "assets/leaders/andy.jpg",
+        "headline": "No New Independently Verified Statement Added to This Edition",
+        "update": "No new leader-specific statement has been independently established for this edition. The newsroom will add a substantive report when a verifiable announcement or policy development is available.",
+        "radiantWavesView": "Leaders Watch should report actual decisions and statements rather than repeat general descriptions. A fresh update will be added when a reliable source confirms one.",
+        "script": "RadiantWaves is monitoring developments in the United Kingdom. We will report the Prime Minister's next significant policy announcement or public statement with its context and implications.",
+        "source": "GOV.UK",
+        "url": "https://www.gov.uk/government/ministers/prime-minister",
+        "status": "Awaiting verified update"
       },
       {
         "name": "Vladimir Putin",
         "role": "President of Russia",
         "country": "Russia",
         "image": "assets/leaders/putin.jpg",
-        "update": "No new independently verified leader-specific announcement added to this midday watch.",
-        "script": "President Vladimir Putin remains central to international security and Russia's relations with Europe, Ukraine and other global partners. RadiantWaves Media will monitor verified diplomatic and security developments.",
+        "headline": "No New Independently Verified Leader-Specific Statement Added",
+        "update": "No fresh leader-specific announcement has been established for this edition. International security and Russia's relations with other countries remain under newsroom monitoring.",
+        "radiantWavesView": "Reporting on Russia must distinguish official statements, independent evidence and claims made by parties to conflicts. We will not attribute a statement to Putin without a verifiable source.",
+        "script": "RadiantWaves continues to monitor Russia's international relations and security policy. Any new statement or decision by President Vladimir Putin will be examined in context and checked against reliable reporting.",
         "source": "Kremlin",
-        "url": "http://en.kremlin.ru/",
+        "url": "https://en.kremlin.ru/",
         "status": "Monitoring"
       },
       {
@@ -309,82 +774,83 @@
         "role": "President of China",
         "country": "China",
         "image": "assets/leaders/xi.jpg",
-        "update": "No new independently verified leader-specific announcement added to this midday watch.",
-        "script": "President Xi Jinping continues to lead China's economic, technological and diplomatic agenda. China's relationships with major global powers and its regional security policies remain important issues for international observers.",
-        "source": "Chinese Government",
-        "url": "https://english.www.gov.cn/",
-        "status": "Monitoring"
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "role": "President of the European Commission",
-        "country": "European Union",
-        "image": "assets/leaders/von-der-leyen.jpg",
-        "update": "Von der Leyen is representing the European Commission at the EU-Canada summit in Montreal.",
-        "script": "European Commission President Ursula von der Leyen is involved in discussions aimed at strengthening the EU's relationship with Canada. Trade, critical raw materials, technology, defence and economic security are important elements of the talks.",
-        "source": "European Council",
-        "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
-        "status": "Summit underway"
+        "headline": "China's Party Discipline Campaign Remains in Focus",
+        "update": "China's ruling party announced expulsions involving 33 people on 30 October as part of continuing disciplinary action.",
+        "statement": "The reported announcement came from the ruling party. It should not be presented as a direct personal quotation from Xi Jinping.",
+        "background": "China's leadership has continued to emphasise party discipline and anti-corruption measures.",
+        "implications": "The development raises questions about governance, internal party oversight and due process.",
+        "radiantWavesView": "Anti-corruption measures should be assessed by their evidence, fairness and consistency. Strong institutions require transparent procedures and accountability, not simply the announcement of disciplinary action.",
+        "script": "China's ruling party has announced the expulsion of 33 people as part of its continuing discipline campaign. The development highlights the importance the leadership places on internal control and anti-corruption measures. Observers will be watching how the cases are handled and whether the process provides clear evidence and due process.",
+        "source": "Channel NewsAsia",
+        "url": "https://www.channelnewsasia.com/east-asia",
+        "status": "Party announcement reported"
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027: Opposition Groups Explore a Common Candidate",
-      "summary": "The G100 coalition says it is working to bring opposition groups together and develop a common electoral strategy. Cardinal John Onaiyekan has reportedly encouraged the effort.",
-      "radiantWavesView": "A coalition must be built on more than the desire to defeat an incumbent. It needs a credible candidate, a clear national programme, transparent decision-making and a commitment to democratic accountability.",
-      "keyQuestion": "Can Atiku, Obi and other opposition figures agree on a candidate and a programme that Nigerians can trust?",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
-      "status": "Negotiations ongoing"
+      "title": "Nigeria 2027: Opposition Coalition Must Explain Its Rules",
+      "summary": "Six opposition parties have reportedly consulted political figures including Atiku Abubakar and Peter Obi. The consultations are part of efforts to explore cooperation ahead of the 2027 election, but no final joint candidate has been established by the reports reviewed.",
+      "radiantWavesView": "A credible coalition needs transparent candidate selection, a shared manifesto, internal democratic procedures and a plan for resolving disagreements. Nigerians should not be expected to support an arrangement whose rules remain unclear.",
+      "keyQuestion": "Can opposition leaders agree on a candidate and programme without allowing personal ambition to destroy the process?",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
+      "status": "Consultations reported"
     },
     {
-      "title": "Tinubu's Re-Election Campaign: The Test of Performance",
-      "summary": "President Tinubu launched his campaign in Kaduna on 24 October. The election debate will focus on economic reforms, cost of living, security and public confidence.",
-      "radiantWavesView": "An incumbent should be judged by the results of government policies, while challengers should be judged by the credibility and practicality of their alternatives. Voters deserve evidence and clear commitments from all candidates.",
-      "keyQuestion": "Will voters prioritise continuity, change or the credibility of the candidates?",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e",
-      "status": "Campaign underway"
+      "title": "Tinubu's Second-Term Bid Must Be Judged Against His Record",
+      "summary": "The administration's economic and security record will remain central to the debate ahead of 2027. The latest borrowing request has renewed questions about public spending and accountability.",
+      "radiantWavesView": "An incumbent should be judged by measurable results, including economic conditions, security, employment and public services. Opposition candidates should be judged by the practicality of their alternatives. The same standards must apply to everyone.",
+      "keyQuestion": "What evidence should Nigerians use to judge the government's performance and the opposition's readiness to govern?",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
+      "status": "Election accountability watch"
     }
   ],
   "breakingHistory": [
     {
       "date": "30 October 2026",
-      "headline": "Preliminary Findings Emerge in Spain Train Disaster",
-      "summary": "Investigators are examining signalling failures and operational decisions after a collision that killed at least 69 people.",
-      "image": "assets/spain-train-disaster.jpg",
-      "category": "Transport Disaster",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/"
+      "headline": "Tinubu Seeks Approval for $20.52 Billion and €1.045 Billion External Borrowing",
+      "summary": "The President submitted a request for legislative consideration under the 2026–2027 Supplementary External Borrowing Plan.",
+      "category": "Nigeria Economy",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
     },
     {
       "date": "30 October 2026",
-      "headline": "Nigeria Opposition Coalition Discusses Common Candidate",
-      "summary": "Opposition coalition figures say they are working towards a common candidate ahead of the 2027 presidential election.",
-      "category": "Nigeria Politics",
-      "source": "Daily Post Nigeria",
-      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/"
+      "headline": "Senator Victor Umeh Questions Previous Borrowing and Unpaid Contractors",
+      "summary": "The senator questioned the government's handling of previous loans following the new borrowing request.",
+      "category": "Nigeria Accountability",
+      "source": "Premium Times",
+      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html"
     },
     {
-      "date": "24 October 2026",
-      "headline": "Tinubu Launches Re-Election Campaign in Kaduna",
-      "summary": "Nigeria's president launched his re-election campaign amid economic challenges and opposition divisions.",
-      "category": "Nigeria Politics",
+      "date": "29 October 2026",
+      "headline": "Trump Cancels Kansas and Iowa Campaign Rallies",
+      "summary": "Trump said he did not feel he needed to visit Kansas and planned telephone rallies instead.",
+      "category": "USA Politics",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/"
+    },
+    {
+      "date": "25 October 2026",
+      "headline": "Marine Le Pen Launches Presidential Campaign in Orléans",
+      "summary": "Le Pen presented proposals on national renewal, security, national preference and domestic energy exploration.",
+      "category": "France Politics",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e"
+      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1"
     }
   ],
   "thoughtForToday": {
-    "title": "The Courage to Begin Again",
-    "subtitle": "Every sunrise offers another chance.",
-    "content": "Yesterday may have tested your strength, delayed your plans or left you with unanswered questions. But one difficult chapter does not have to define your whole story. You cannot change every event that comes your way, but you can choose the wisdom you carry forward, the kindness you offer and the courage with which you take your next step. Do not spend today trying to rewrite yesterday. Use today to create a better tomorrow.",
-    "attribution": "Original inspirational reflection — RadiantWaves Media"
+    "title": "The Value of Asking Difficult Questions",
+    "subtitle": "A responsible voice does not remain silent when answers matter.",
+    "content": "A society grows stronger when people are willing to ask questions, listen carefully and examine the evidence. Not every question is an accusation, and not every disagreement is an enemy. Progress begins when we replace fear with understanding, empty promises with action and blame with responsibility. Speak with courage, but also with fairness. Seek the truth, even when it challenges what you already believe.",
+    "attribution": "Original reflection — RadiantWaves Media"
   },
   "todaysBigQuestion": {
-    "title": "What Makes a Political Leader Worth Trusting?",
-    "question": "When choosing a president, should citizens place greater importance on past performance, integrity, economic plans, national unity or the ability to deliver real change?",
-    "discussion": "Elections should be about more than political popularity and campaign promises. What qualities should Nigerians demand from anyone seeking the country's highest office?",
+    "title": "Nigeria 2027: What Should Matter More — Unity or the Candidate?",
+    "question": "If opposition parties agree to form a coalition, should they choose the most popular individual, the candidate with the strongest national support, or the person most capable of uniting the country and delivering a workable programme?",
+    "discussion": "Nigeria's opposition leaders are discussing cooperation, but voters deserve to know how a candidate will be selected and what policies will unite the parties. Should any leader be expected to step aside for the sake of a credible national alternative? What process would make the decision fair?",
     "attribution": "RadiantWaves Media — Today's Big Question"
   },
   "sponsoredAdverts": [
@@ -426,24 +892,19 @@
       "edition": "Midday News",
       "date": "30 October 2026",
       "time": "Midday"
-    },
-    {
-      "edition": "Evening News",
-      "date": "30 October 2026",
-      "time": "Evening"
-    },
-    {
-      "edition": "Night News",
-      "date": "30 October 2026",
-      "time": "Night"
     }
   ],
   "editorialStandards": {
-    "verification": "RadiantWaves Media aims to verify facts through credible reporting and primary sources before publication.",
-    "accuracy": "Developing stories may change. Figures and details should be updated when reliable new information becomes available.",
-    "independence": "Editorial coverage is independently written and does not reproduce other publishers' articles.",
-    "balance": "Political coverage distinguishes confirmed facts, allegations, campaign claims and opinion.",
-    "corrections": "Material errors should be corrected transparently when identified.",
-    "attribution": "External reporting and official statements should be attributed to their original sources."
+    "verification": "RadiantWaves Media checks significant factual claims against reliable reporting, official documents and primary sources wherever possible.",
+    "accuracy": "Developing stories may change. The newsroom updates figures, dates and descriptions when reliable new information becomes available.",
+    "independence": "Reports and analysis are independently written in RadiantWaves Media's own words. Other publishers' articles are not reproduced as original RadiantWaves reporting.",
+    "quotation": "Direct quotations are used sparingly, reproduced accurately and attributed to the speaker and source. A paraphrase is not presented as a direct quotation.",
+    "balance": "Political coverage scrutinises both government and opposition. Allegations, campaign claims, confirmed facts and opinion are clearly distinguished.",
+    "factChecking": "Fact checks identify the claim being examined, the available evidence and the reason for the verdict. Unverified claims are not presented as established facts.",
+    "editorialIndependence": "RadiantWaves Media reserves the right to question public officials, political parties, businesses and institutions regardless of their position or influence.",
+    "corrections": "Material errors should be corrected transparently when identified. Updates should explain significant changes to a developing story.",
+    "attribution": "External reporting and official statements are attributed to their original publishers or issuing institutions. Links are provided so readers can consult the underlying material.",
+    "copyright": "RadiantWaves Media writes original reports and commentary. Short quotations may be used where justified by reporting, criticism or analysis, with attribution. Copyrighted photographs, video and other material must be used with permission or under an applicable legal exception.",
+    "freedomOfExpression": "RadiantWaves Media supports open debate, scrutiny of public power and the public's right to receive information. Freedom of expression is exercised with respect for accuracy, privacy, applicable law and the rights of others."
   }
 }

@@ -1,878 +1,1322 @@
-
 /* =========================================================
-   RADIANTWAVES MEDIA — SCRIPT.JS
-   Complete newsroom renderer
-   Supports news.json, Leaders Watch, Big Question,
-   public-interest feature, source links and sponsored adverts.
+   RADIANTWAVES MEDIA NIGERIA LTD
+   MAIN NEWSROOM STYLESHEET
+   Version 6000
    ========================================================= */
 
-(() => {
-  "use strict";
+/* 1. BRAND VARIABLES
+========================================================= */
 
-  const CONFIG = {
-    NEWS_FILE: "./news.json",
-    NEWS_REFRESH_INTERVAL: 0,
-    CONTACT_EMAIL: "info@radiantwavesmedia.com",
-    FORM_ACCESS_KEY: "",
-    FORM_ENDPOINT: "https://api.web3forms.com/submit"
-  };
+:root {
+    --rw-red: #c8102e;
+    --rw-red-dark: #990b22;
+    --rw-red-light: #e21d3d;
+    --rw-yellow: #f4c542;
 
-  const CATEGORY_TARGETS = {
-    world: "world-news",
-    usa: "usa-news",
-    europe: "europe-news",
-    africa: "africa-news",
-    asia: "asia-news",
-    business: "business-news",
-    technology: "technology-news"
-  };
+    --rw-black: #111111;
+    --rw-dark: #171717;
+    --rw-panel: #202020;
+    --rw-panel-light: #292929;
 
-  const CATEGORY_LABELS = {
-    world: "World", usa: "USA", europe: "Europe", africa: "Africa",
-    asia: "Asia", business: "Business", technology: "Technology"
-  };
+    --rw-white: #ffffff;
+    --rw-light: #f5f5f5;
+    --rw-grey: #aaaaaa;
+    --rw-border: #383838;
 
-  const $ = (id) => document.getElementById(id);
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    --rw-text: #eeeeee;
+    --rw-muted: #b8b8b8;
 
-  function makeElement(tag, className = "", text = "") {
-    const el = document.createElement(tag);
-    if (className) el.className = className;
-    if (text !== undefined && text !== null && text !== "") el.textContent = String(text);
-    return el;
-  }
+    --rw-font-heading: "Archivo", Arial, sans-serif;
+    --rw-font-body: "Inter", Arial, sans-serif;
 
-  function setText(id, value) {
-    const el = $(id);
-    if (el && value !== undefined && value !== null) el.textContent = String(value);
-  }
+    --rw-container: 1240px;
+    --rw-radius: 8px;
+    --rw-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
 
-  function safeUrl(value, allowMailto = false) {
-    if (typeof value !== "string" || !value.trim()) return "";
-    try {
-      const url = new URL(value.trim(), window.location.href);
-      if (["https:", "http:"].includes(url.protocol) ||
-          (allowMailto && url.protocol === "mailto:")) return url.href;
-    } catch (_) {}
-    return "";
-  }
+/* 2. RESET AND BASE STYLES
+========================================================= */
 
-  function formatDate(value) {
-    if (!value) return "";
-    const date = new Date(value);
-    if (Number.isNaN(date.getTime())) return String(value);
-    return date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  function isoDate(value) {
-    const date = new Date(value);
-    return Number.isNaN(date.getTime()) ? "" : date.toISOString();
-  }
+html {
+    scroll-behaviour: smooth;
+    scroll-padding-top: 100px;
+}
 
-  function makeTime(value, prefix = "") {
-    const time = makeElement("time", "", `${prefix ? prefix + " " : ""}${formatDate(value)}`);
-    const iso = isoDate(value);
-    if (iso) time.dateTime = iso;
-    return time;
-  }
+body {
+    background: var(--rw-black);
+    color: var(--rw-text);
+    font-family: var(--rw-font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
 
-  function makeLink(url, label, className = "text-link") {
-    const link = makeElement("a", className, label);
-    const valid = safeUrl(url, true);
-    if (valid) {
-      link.href = valid;
-      if (!valid.startsWith("mailto:")) {
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-      }
-    } else {
-      link.setAttribute("aria-disabled", "true");
-      link.tabIndex = -1;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--rw-yellow);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--rw-red-light);
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--rw-yellow);
+    outline-offset: 3px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--rw-font-heading);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+.container,
+.site-container {
+    width: min(94%, var(--rw-container));
+    margin: 0 auto;
+}
+
+.content-section {
+    width: min(94%, var(--rw-container));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.empty-news-message {
+    color: var(--rw-muted);
+    background: var(--rw-panel);
+    padding: 18px;
+    border-left: 3px solid var(--rw-red);
+    border-radius: 4px;
+}
+
+/* 3. ACCESSIBILITY
+========================================================= */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 9999;
+    background: var(--rw-yellow);
+    color: var(--rw-black);
+    padding: 12px 18px;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+/* 4. HEADER AND BRANDING
+========================================================= */
+
+.site-header {
+    background: #080808;
+    border-bottom: 3px solid var(--rw-red);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-inner {
+    width: min(94%, var(--rw-container));
+    margin: auto;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.brand img,
+.site-logo {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-text h1 {
+    color: var(--rw-white);
+    font-size: clamp(20px, 3vw, 30px);
+    letter-spacing: 0.5px;
+}
+
+.brand-text p {
+    color: var(--rw-yellow);
+    font-size: 12px;
+    margin: 4px 0 0;
+    line-height: 1.5;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 5. NAVIGATION
+========================================================= */
+
+.main-nav,
+#main-nav {
+    background: var(--rw-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.main-nav a,
+#main-nav a {
+    color: var(--rw-white);
+    padding: 13px 12px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.main-nav a:hover,
+#main-nav a:hover {
+    background: var(--rw-red-dark);
+    color: var(--rw-yellow);
+}
+
+.nav-toggle,
+#nav-toggle {
+    display: none;
+    background: var(--rw-red);
+    color: var(--rw-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* 6. BREAKING NEWS TICKER
+========================================================= */
+
+.breaking-bar {
+    background: #242424;
+    display: flex;
+    align-items: stretch;
+    min-height: 42px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rw-border);
+}
+
+.breaking-label {
+    background: var(--rw-red);
+    color: var(--rw-white);
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#breaking-ticker {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 7px 20px;
+    color: var(--rw-white);
+    font-size: 13px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.ticker-item::before {
+    content: "●";
+    color: var(--rw-yellow);
+    margin-right: 10px;
+}
+
+/* 7. SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--rw-red);
+    padding-bottom: 12px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--rw-yellow);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.section-title {
+    color: var(--rw-white);
+    font-size: clamp(23px, 3vw, 32px);
+}
+
+.section-description {
+    color: var(--rw-muted);
+    margin-top: 8px;
+    max-width: 850px;
+}
+
+/* 8. HERO SECTION
+========================================================= */
+
+.hero-section {
+    width: min(94%, var(--rw-container));
+    margin: 25px auto;
+    position: relative;
+    background: #151515;
+    border-radius: var(--rw-radius);
+    overflow: hidden;
+    box-shadow: var(--rw-shadow);
+}
+
+.hero-video-wrapper {
+    position: relative;
+    background: #000;
+    width: 100%;
+    min-height: 300px;
+}
+
+#heroVideo {
+    display: block;
+    width: 100%;
+    max-height: 570px;
+    min-height: 280px;
+    object-fit: cover;
+    background: #000;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(20px, 5vw, 55px);
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92),
+        rgba(0,0,0,0.35) 55%,
+        transparent
+    );
+    pointer-events: none;
+}
+
+.hero-overlay h2,
+.hero-overlay p {
+    max-width: 850px;
+}
+
+#hero-title {
+    color: var(--rw-white);
+    font-size: clamp(27px, 5vw, 46px);
+    margin: 10px 0;
+}
+
+#hero-description {
+    color: #eeeeee;
+    font-size: 15px;
+    max-width: 750px;
+}
+
+#hero-date {
+    color: var(--rw-yellow);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#hero-marquee {
+    color: var(--rw-yellow);
+    font-size: 13px;
+}
+
+.hero-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+}
+
+.hero-controls button,
+.video-selector button {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(0,0,0,0.75);
+    color: var(--rw-white);
+    padding: 9px 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.hero-controls button:hover,
+.video-selector button:hover {
+    background: var(--rw-red);
+}
+
+.video-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    background: #111;
+}
+
+/* 9. NEWS SUMMARY AND EDITORIAL NOTE
+========================================================= */
+
+.newsroom-briefing {
+    width: min(94%, var(--rw-container));
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+#morning-summary,
+#editorial-note {
+    background: var(--rw-panel);
+    border-left: 4px solid var(--rw-red);
+    padding: 22px;
+    border-radius: 5px;
+    box-shadow: var(--rw-shadow);
+}
+
+#morning-summary h2,
+#editorial-note h2 {
+    color: var(--rw-yellow);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* 10. FEATURED STORY
+========================================================= */
+
+#featured-news {
+    width: min(94%, var(--rw-container));
+    margin: 25px auto;
+}
+
+#featured-news .news-card {
+    display: grid;
+    grid-template-columns: minmax(240px, 42%) 1fr;
+    overflow: hidden;
+}
+
+#featured-news .news-card-image {
+    height: 100%;
+    min-height: 280px;
+}
+
+#featured-news .news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#featured-news .card-content {
+    padding: 25px;
+}
+
+#featured-news .card-content h3 {
+    font-size: clamp(22px, 3vw, 32px);
+}
+
+/* 11. NEWS GRIDS AND CARDS
+========================================================= */
+
+.news-grid,
+#top-stories-container,
+#world-news,
+#usa-news,
+#europe-news,
+#africa-news,
+#nigeria-news,
+#asia-news,
+#business-news,
+#technology-news,
+#editorial-news,
+#analysis-news,
+#fact-check-news,
+#beyond-statement-news,
+#technology-innovation,
+#election-watch-news {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-radius: var(--rw-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    box-shadow: var(--rw-shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--rw-red);
+}
+
+.news-card-image {
+    width: 100%;
+    height: 205px;
+    overflow: hidden;
+    background: #111;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-content h3 {
+    color: var(--rw-white);
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.card-content > p {
+    color: var(--rw-muted);
+    font-size: 14px;
+}
+
+.news-category {
+    color: var(--rw-yellow);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.story-meta {
+    color: #999;
+    font-size: 11px;
+    margin: 4px 0 10px;
+}
+
+.source-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--rw-yellow);
+}
+
+.source-link:hover {
+    color: var(--rw-red-light);
+}
+
+/* 12. EXPANDED ARTICLE REPORTS
+========================================================= */
+
+.article-expanded-content {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--rw-border);
+}
+
+.article-expanded-content.is-expanded {
+    display: block;
+}
+
+.article-detail-section {
+    margin-bottom: 18px;
+}
+
+.article-detail-section h4,
+.article-sources h4,
+.presenter-script h4 {
+    color: var(--rw-yellow);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.article-detail-section p,
+.presenter-script p {
+    color: #dedede;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.read-more-button {
+    margin-top: 12px;
+    align-self: flex-start;
+    background: var(--rw-red);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 9px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.read-more-button:hover {
+    background: var(--rw-red-dark);
+}
+
+.article-sources {
+    border-top: 1px solid var(--rw-border);
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.article-sources ul {
+    padding-left: 18px;
+}
+
+.article-sources li {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--rw-muted);
+}
+
+.presenter-script {
+    background: #151515;
+    border-left: 4px solid var(--rw-yellow);
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+/* 13. EDITORIAL, ANALYSIS AND FACT CHECK
+========================================================= */
+
+#editorial-news .news-card {
+    border-top: 3px solid var(--rw-yellow);
+}
+
+#analysis-news .news-card {
+    border-top: 3px solid #3587c8;
+}
+
+#fact-check-news .news-card {
+    border-top: 3px solid #37a66b;
+}
+
+#beyond-statement-news .news-card {
+    border-top: 3px solid var(--rw-red);
+}
+
+#nigeria-news .news-card {
+    border-top: 3px solid var(--rw-green, #22965a);
+}
+
+#election-watch-news .news-card {
+    border-top: 3px solid var(--rw-yellow);
+}
+
+/* 14. PUBLIC INTEREST FEATURE
+========================================================= */
+
+#public-interest-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#public-interest-feature .news-card {
+    border-left: 4px solid var(--rw-yellow);
+}
+
+/* 15. LEADERS WATCH
+========================================================= */
+
+#leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.leader-card {
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-radius: var(--rw-radius);
+    overflow: hidden;
+    box-shadow: var(--rw-shadow);
+}
+
+.leader-photo {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center top;
+    background: #111;
+}
+
+.leader-card-content {
+    padding: 18px;
+}
+
+.leader-name {
+    color: var(--rw-white);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.leader-role {
+    color: var(--rw-yellow);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.leader-headline {
+    color: var(--rw-white);
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.leader-status {
+    color: #d7d7d7;
+    font-size: 12px;
+    background: #151515;
+    border-left: 3px solid var(--rw-red);
+    padding: 8px 10px;
+}
+
+.leader-statement {
+    margin: 15px 0;
+    padding: 13px;
+    background: #151515;
+    border-left: 3px solid var(--rw-yellow);
+}
+
+.leader-statement h4 {
+    color: var(--rw-yellow);
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.leader-statement p {
+    font-size: 13px;
+}
+
+/* 16. HISTORY AND ARCHIVES
+========================================================= */
+
+#history-container,
+#archive-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.history-item,
+.archive-item {
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-left: 3px solid var(--rw-red);
+    border-radius: 5px;
+    padding: 18px;
+}
+
+.history-item h3,
+.archive-item h3 {
+    color: var(--rw-white);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.history-item p,
+.archive-item p {
+    color: var(--rw-muted);
+    font-size: 13px;
+}
+
+.archive-item a {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 17. THOUGHT FOR TODAY AND BIG QUESTION
+========================================================= */
+
+.community-panels {
+    width: min(94%, var(--rw-container));
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#quote-of-the-day,
+#big-question {
+    background: var(--rw-panel);
+    border-radius: 6px;
+    padding: 24px;
+    border-left: 4px solid var(--rw-yellow);
+    color: var(--rw-white);
+    font-size: 17px;
+}
+
+#big-question {
+    border-left-color: var(--rw-red);
+}
+
+/* 18. LIVE TV
+========================================================= */
+
+.live-tv-section {
+    width: min(94%, var(--rw-container));
+    margin: 35px auto;
+    background: var(--rw-panel);
+    padding: 25px;
+    border-radius: var(--rw-radius);
+    text-align: center;
+}
+
+.live-tv-section h2 {
+    color: var(--rw-white);
+    margin-bottom: 12px;
+}
+
+.live-tv-section p {
+    color: var(--rw-muted);
+}
+
+.live-tv-section iframe {
+    width: 100%;
+    min-height: 400px;
+    border: none;
+}
+
+/* 19. BUTTONS
+========================================================= */
+
+.button,
+.btn,
+.primary-button {
+    display: inline-block;
+    background: var(--rw-red);
+    color: var(--rw-white);
+    padding: 11px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover,
+.btn:hover,
+.primary-button:hover {
+    background: var(--rw-red-dark);
+    color: var(--rw-white);
+}
+
+/* 20. SPONSORED ADVERTISEMENTS
+========================================================= */
+
+.sponsored-section {
+    width: min(94%, var(--rw-container));
+    margin: 35px auto;
+}
+
+.sponsored-section h2 {
+    margin-bottom: 18px;
+}
+
+.sponsored-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.sponsored-ad,
+[id^="sponsored-ad-"] {
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-radius: 7px;
+    padding: 16px;
+    text-align: center;
+}
+
+.advert-content img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.advert-content h3 {
+    color: var(--rw-yellow);
+    margin-bottom: 8px;
+}
+
+.advert-content p {
+    color: var(--rw-muted);
+    font-size: 13px;
+}
+
+.advert-content a {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 21. BIRTHDAY WALL
+========================================================= */
+
+.birthday-wall {
+    width: min(94%, var(--rw-container));
+    margin: 35px auto;
+    padding: 25px;
+    background: var(--rw-panel);
+    border-radius: var(--rw-radius);
+}
+
+.birthday-wall h2 {
+    color: var(--rw-yellow);
+    margin-bottom: 15px;
+}
+
+/* 22. CONTACT FORM
+========================================================= */
+
+.contact-section {
+    width: min(94%, 800px);
+    margin: 40px auto;
+    padding: 25px;
+    background: var(--rw-panel);
+    border-radius: var(--rw-radius);
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+    color: var(--rw-white);
+}
+
+#contact-form {
+    display: grid;
+    gap: 13px;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    color: var(--rw-white);
+    border: 1px solid var(--rw-border);
+    border-radius: 4px;
+    font: inherit;
+}
+
+#contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background: var(--rw-red);
+    color: var(--rw-white);
+    border: none;
+    padding: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#contact-form button:hover {
+    background: var(--rw-red-dark);
+}
+
+/* 23. FOOTER
+========================================================= */
+
+.site-footer {
+    margin-top: 45px;
+    background: #080808;
+    border-top: 3px solid var(--rw-red);
+    padding: 35px 0 20px;
+}
+
+.footer-inner {
+    width: min(94%, var(--rw-container));
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.site-footer h3 {
+    color: var(--rw-yellow);
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.site-footer p,
+.site-footer li {
+    color: var(--rw-muted);
+    font-size: 13px;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer li {
+    margin-bottom: 7px;
+}
+
+.footer-bottom {
+    width: min(94%, var(--rw-container));
+    margin: 25px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--rw-border);
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.social-links a {
+    font-size: 13px;
+}
+
+/* 24. MOBILE AND TABLET RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .nav-toggle,
+    #nav-toggle {
+        display: block;
     }
-    return link;
-  }
 
-  function replaceContents(target, items) {
-    if (!target) return;
-    target.replaceChildren();
-    items.filter(Boolean).forEach(item => target.appendChild(item));
-  }
-
-  function placeholder(message) {
-    return makeElement("p", "empty-message", message);
-  }
-
-  function summaryOf(item) {
-    return item && typeof item === "object"
-      ? (item.summary || item.description || item.content || item.body || "")
-      : "";
-  }
-
-  function urlOf(item) {
-    return item && typeof item === "object"
-      ? safeUrl(item.url || item.sourceUrl || item.link)
-      : "";
-  }
-
-  function addMetadata(parent, item, includeDate = true) {
-    const bits = [];
-    if (item && item.source) bits.push(`Source: ${item.source}`);
-    const line = makeElement("p", "story-meta");
-    if (bits.length) line.appendChild(makeElement("span", "story-source", bits.join(" · ")));
-    if (includeDate && item && item.date) {
-      if (bits.length) line.appendChild(makeElement("span", "story-source", " · "));
-      line.appendChild(makeTime(item.date));
-    }
-    if (line.childNodes.length) parent.appendChild(line);
-  }
-
-  function articleCard(item, categoryLabel) {
-    const card = makeElement("article", "card news-card");
-    const imagePath = item && (item.image || item.photo || item.imageUrl || item.imagePath);
-    if (imagePath) {
-      const validImage = safeUrl(imagePath);
-      if (validImage) {
-        const img = makeElement("img", "news-image");
-        img.src = validImage;
-        img.alt = item.imageAlt || item.title || "News photograph";
-        img.loading = "lazy";
-        img.decoding = "async";
-        img.style.cssText = "display:block;width:100%;height:auto;max-height:300px;object-fit:cover;border-radius:8px";
-        img.addEventListener("error", () => { img.style.display = "none"; }, { once: true });
-        card.appendChild(img);
-      }
-    }
-    const content = makeElement("div", "card-content");
-    content.appendChild(makeElement("span", "news-category", categoryLabel || item.category || "News"));
-    content.appendChild(makeElement("h3", "", item.title || "News update"));
-    const summary = summaryOf(item);
-    if (summary) content.appendChild(makeElement("p", "", summary));
-    if (item.whyItMatters) content.appendChild(makeElement("p", "why-it-matters", item.whyItMatters));
-    addMetadata(content, item);
-    const url = urlOf(item);
-    content.appendChild(url
-      ? makeLink(url, item.linkText || "Read the original report ↗")
-      : makeElement("p", "small-note", "Original report link not supplied."));
-    card.appendChild(content);
-    return card;
-  }
-
-  function normaliseCategory(value) {
-    const raw = String(value || "").toLowerCase().trim();
-    const aliases = {
-      us: "usa", "united states": "usa", "u.s.": "usa", "u.s.a.": "usa",
-      uk: "europe", "united kingdom": "europe", britain: "europe",
-      "great britain": "europe", tech: "technology", "world news": "world",
-      "nigeria politics": "africa", politics: "africa", canada: "world", australia: "world",
-      "african news": "africa", "european news": "europe", "asian news": "asia"
-    };
-    return aliases[raw] || raw;
-  }
-
-  function renderCategories(articles) {
-    Object.entries(CATEGORY_TARGETS).forEach(([category, id]) => {
-      const container = $(id);
-      if (!container) return;
-      const matching = Array.isArray(articles)
-        ? articles.filter(item => normaliseCategory(item.category) === category)
-        : [];
-      replaceContents(container, matching.length
-        ? matching.map(item => articleCard(item, CATEGORY_LABELS[category]))
-        : [placeholder(`No ${CATEGORY_LABELS[category]} articles are available in this edition.`)]);
-    });
-  }
-
-  function renderLeaderPhoto(item, name) {
-    const frame = makeElement("div", "leader-image-wrap");
-    const imageUrl = safeUrl(item.image || item.photo || item.imageUrl || item.portrait);
-    if (!imageUrl) {
-      const initials = name.split(/\s+/).filter(Boolean).slice(0, 2)
-        .map(part => part.charAt(0).toUpperCase()).join("") || "RW";
-      const fallback = makeElement("div", "leader-photo-placeholder", initials);
-      fallback.setAttribute("role", "img");
-      fallback.setAttribute("aria-label", `No photograph supplied for ${name}`);
-      frame.appendChild(fallback);
-      return frame;
-    }
-    const img = makeElement("img", "leader-photo");
-    img.src = imageUrl;
-    img.alt = `Photograph of ${name}`;
-    img.loading = "lazy";
-    img.decoding = "async";
-    img.addEventListener("error", () => {
-      img.remove();
-      frame.appendChild(makeElement("div", "leader-photo-placeholder", "Photo unavailable"));
-    }, { once: true });
-    frame.appendChild(img);
-    return frame;
-  }
-
-  function renderLeaders(data) {
-    const grid = $("leaders-grid");
-    if (!grid) return;
-    let source = data.leadersWatch || data.leaders || [];
-    let leaders = [];
-    if (Array.isArray(source)) leaders = source.filter(item => item && typeof item === "object");
-    else if (source && typeof source === "object") {
-      if (Array.isArray(source.leaders)) leaders = source.leaders;
-      else leaders = Object.entries(source)
-        .filter(([key, value]) => key !== "note" && value && typeof value === "object")
-        .map(([name, value]) => ({ name, ...value }));
-    }
-    if (!leaders.length) {
-      replaceContents(grid, [placeholder("Leaders Watch is awaiting verified updates for this edition.")]);
-      return;
-    }
-    replaceContents(grid, leaders.map(item => {
-      const name = item.name || item.id || "World leader";
-      const card = makeElement("article", "card news-card leader-card");
-      card.appendChild(renderLeaderPhoto(item, name));
-      const content = makeElement("div", "card-content");
-      content.appendChild(makeElement("span", "news-category", "LEADERS WATCH"));
-      content.appendChild(makeElement("h3", "leader-name", name));
-      if (item.role) content.appendChild(makeElement("p", "leader-role", item.role));
-      if (item.country) content.appendChild(makeElement("p", "leader-country", item.country));
-      if (item.title || item.headline) content.appendChild(makeElement("h4", "leader-headline", item.title || item.headline));
-      if (item.date) {
-        const p = makeElement("p", "story-date");
-        p.appendChild(makeTime(item.date, "Update date:"));
-        content.appendChild(p);
-      }
-      const summary = item.update || item.summary || item.description || item.content || item.body || "";
-      if (summary) content.appendChild(makeElement("p", "leader-summary", summary));
-      const statement = item.statement || item.quote || item.remark || item.whatTheySaid || "";
-      if (statement) {
-        content.appendChild(makeElement("h4", "leader-statement-heading", "What they said"));
-        content.appendChild(makeElement("blockquote", "leader-statement", statement));
-      }
-      if (item.status) content.appendChild(makeElement("p", "leader-status", item.status));
-      if (item.source) content.appendChild(makeElement("p", "story-source", `Source: ${item.source}`));
-      const url = urlOf(item);
-      if (url) content.appendChild(makeLink(url, item.linkText || "Read the source report ↗"));
-      else content.appendChild(makeElement("p", "small-note", "No source link supplied for this update."));
-      card.appendChild(content);
-      return card;
-    }));
-  }
-
-  function installLayoutFixes() {
-    if (document.getElementById("rw-layout-fixes")) return;
-    const style = makeElement("style");
-    style.id = "rw-layout-fixes";
-    style.textContent = `
-      /* Breaking-news ticker: left aligned, continuous right-to-left movement */
-      .ticker-wrap { display:flex !important; align-items:center !important; justify-content:flex-start !important; text-align:left !important; }
-      .ticker-label { flex:0 0 auto !important; text-align:left !important; }
-      .ticker-viewport { flex:1 1 auto !important; min-width:0 !important; overflow:hidden !important; text-align:left !important; }
-      #breaking-ticker { display:block !important; width:100% !important; overflow:hidden !important; text-align:left !important; }
-      #breaking-ticker .ticker-track { display:flex; width:max-content; min-width:max-content; align-items:center; animation:rwBreakingScroll 38s linear infinite; will-change:transform; }
-      #breaking-ticker .ticker-sequence { display:flex; flex:0 0 auto; align-items:center; white-space:nowrap; }
-      #breaking-ticker .ticker-item { display:inline-block; white-space:nowrap; padding:0 1.1rem; }
-      #breaking-ticker .ticker-separator { white-space:pre; }
-      .ticker-toggle { flex:0 0 auto; margin-left:10px; padding:6px 10px; border:1px solid currentColor; border-radius:4px; background:transparent; color:inherit; font:inherit; font-size:.8rem; cursor:pointer; }
-      .ticker-toggle:focus-visible { outline:3px solid #f4c542; outline-offset:3px; }
-      @keyframes rwBreakingScroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-      .ticker-wrap:hover #breaking-ticker .ticker-track,
-      .ticker-wrap:focus-within #breaking-ticker .ticker-track,
-      #breaking-ticker.is-paused .ticker-track { animation-play-state:paused; }
-      /* Centre the complete footer on desktop and mobile */
-      .site-footer { text-align:center !important; }
-      .site-footer .footer-brand, .site-footer .footer-slogan,
-      .site-footer .footer-contact, .site-footer .footer-disclaimer { text-align:center !important; margin-left:auto !important; margin-right:auto !important; }
-      .site-footer .social { display:flex !important; justify-content:center !important; align-items:center !important; flex-wrap:wrap !important; }
-      @media (prefers-reduced-motion: reduce) {
-        #breaking-ticker .ticker-track { animation:none !important; transform:none !important; }
-        #breaking-ticker { overflow-x:auto !important; }
-      }
-      @media (max-width:600px) {
-        .ticker-wrap { flex-wrap:nowrap !important; }
-        .ticker-label { font-size:.75rem !important; }
-        .ticker-toggle { padding:5px 7px; font-size:.72rem; }
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  function renderTicker(items) {
-    const ticker = $("breaking-ticker");
-    if (!ticker) return;
-    const messages = Array.isArray(items)
-      ? items.map(item => typeof item === "string" ? item :
-          (item && typeof item === "object" ? [item.title, item.description || item.summary].filter(Boolean).join(" — ") : ""))
-        .filter(message => typeof message === "string" && message.trim())
-      : [];
-    const finalMessages = messages.length
-      ? messages
-      : ["Welcome to RadiantWaves Media — your global news update."];
-
-    const sequence = (clone = false) => {
-      const span = makeElement("span", "ticker-sequence" + (clone ? " ticker-sequence--clone" : ""));
-      if (clone) span.setAttribute("aria-hidden", "true");
-      finalMessages.forEach((message, index) => {
-        if (index) span.appendChild(makeElement("span", "ticker-separator", " ◆ "));
-        span.appendChild(makeElement("span", "ticker-item", message));
-      });
-      return span;
-    };
-
-    const track = makeElement("div", "ticker-track");
-    track.appendChild(sequence(false));
-    track.appendChild(sequence(true));
-    ticker.replaceChildren(track);
-    ticker.setAttribute("aria-label", "Breaking news headlines");
-
-    const wrap = ticker.closest(".ticker-wrap") || ticker.parentElement;
-    if (wrap && !wrap.querySelector(".ticker-toggle")) {
-      const button = makeElement("button", "ticker-toggle", "Pause");
-      button.type = "button";
-      button.setAttribute("aria-pressed", "false");
-      button.setAttribute("aria-label", "Pause breaking news headlines");
-      button.addEventListener("click", () => {
-        const paused = ticker.classList.toggle("is-paused");
-        button.textContent = paused ? "Play" : "Pause";
-        button.setAttribute("aria-pressed", String(paused));
-        button.setAttribute("aria-label", paused ? "Play breaking news headlines" : "Pause breaking news headlines");
-      });
-      wrap.appendChild(button);
-    }
-    if (reducedMotion.matches) ticker.classList.add("is-paused");
-  }
-    function renderSummary(data) {
-    setText("morning-summary", data.morningSummary ||
-      "The latest global summary will appear here when published.");
-    setText("editorial-note", data.editorialNote ||
-      "Check original sources and compare reliable reports before drawing conclusions.");
-  }
-
-  function findFirstElement(ids) {
-    for (const id of ids) {
-      const el = $(id);
-      if (el) return el;
-    }
-    return null;
-  }
-
-  function renderQuestionAndQuote(data) {
-    const question = findFirstElement(["big-question", "todays-big-question", "today-big-question", "big-question-text", "question-of-the-day"]);
-    if (question) {
-      const value = data.todaysBigQuestion || data.bigQuestion;
-      const text = typeof value === "string" ? value :
-        (value && typeof value === "object" ? (value.question || value.text || "") : "");
-      question.textContent = text || "What should governments prioritise when living costs rise and public services come under pressure?";
-      if (value && typeof value === "object" && value.context) {
-        const context = makeElement("p", "big-question-context", value.context);
-        const invite = value.invite ? makeElement("p", "big-question-invite", value.invite) : null;
-        const parent = question.parentElement;
-        if (parent) {
-          parent.querySelectorAll(".big-question-context,.big-question-invite").forEach(el => el.remove());
-          question.insertAdjacentElement("afterend", context);
-          if (invite) context.insertAdjacentElement("afterend", invite);
-        }
-      }
-    }
-    const quote = $("quote-of-the-day");
-    if (quote) {
-      const q = data.thoughtForToday || data.quoteOfTheDay || data.quote;
-      const quoteText = typeof q === "string" ? q : (q && (q.text || q.quote || q.statement)) || "";
-      const author = (q && typeof q === "object" && (q.author || q.attribution)) || "RadiantWaves Media";
-      quote.replaceChildren(makeElement("p", "", `“${quoteText || "Stay curious about the world, question what you hear, and look beyond the headline."}”`));
-      const credit = quote.parentElement && quote.parentElement.querySelector(".quote-credit");
-      if (credit) credit.textContent = author;
-      else quote.appendChild(makeElement("p", "quote-credit", author));
-    }
-  }
-
-  function renderPublicInterestFeature(feature) {
-    if (!feature || typeof feature !== "object") return;
-    // Prefer an existing section/container; otherwise create a visible section
-    // just before the top stories so the feature is not silently lost.
-    let container = findFirstElement([
-      "public-interest-feature", "public-interest-container",
-      "presidential-questions", "publicInterestFeature"
-    ]);
-    if (!container) {
-      container = makeElement("section", "public-interest-feature");
-      container.id = "public-interest-feature";
-      const heading = makeElement("h2", "", "Public-interest journalism");
-      container.appendChild(heading);
-      const anchor = $("top-stories-container") || $("featured-news");
-      if (anchor && anchor.parentElement) anchor.parentElement.insertBefore(container, anchor);
-      else document.body.appendChild(container);
-    }
-    container.classList.add("public-interest-feature");
-    const content = makeElement("div", "public-interest-content");
-    content.appendChild(makeElement("span", "news-category", feature.type || "PUBLIC-INTEREST FEATURE"));
-    content.appendChild(makeElement("h2", "", feature.title || "Questions that matter to the public"));
-    if (feature.introduction) content.appendChild(makeElement("p", "", feature.introduction));
-    if (feature.summary) content.appendChild(makeElement("p", "", feature.summary));
-    if (Array.isArray(feature.questions) && feature.questions.length) {
-      const list = makeElement("ol", "public-interest-questions");
-      feature.questions.forEach(question => list.appendChild(makeElement("li", "", String(question))));
-      content.appendChild(list);
-    }
-    if (feature.invitation) {
-      content.appendChild(makeElement("h3", "", feature.invitation.heading || "Invitation to respond"));
-      const text = feature.invitation.text || feature.invitation.body;
-      if (text) content.appendChild(makeElement("p", "", text));
-      if (feature.invitation.contact) {
-        const contact = feature.invitation.contact;
-        const email = typeof contact === "string" ? contact : contact.email;
-        if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          content.appendChild(makeLink(`mailto:${email}`, `Respond by email: ${email}`));
-        }
-      }
-    }
-    if (feature.fairnessNote) content.appendChild(makeElement("p", "small-note", feature.fairnessNote));
-    if (feature.source) content.appendChild(makeElement("p", "story-source", `Source: ${feature.source}`));
-    const featureUrl = urlOf(feature);
-    if (featureUrl) content.appendChild(makeLink(featureUrl, feature.linkText || "Read the full feature ↗"));
-    const existingHeading = container.querySelector(":scope > h2");
-    container.replaceChildren();
-    if (existingHeading && existingHeading.textContent !== (feature.title || "")) {
-      container.appendChild(existingHeading);
-    }
-    container.appendChild(content);
-  }
-
-  function renderHistory(items) {
-    const container = $("history-container");
-    if (!container) return;
-    if (!Array.isArray(items) || !items.length) {
-      replaceContents(container, [placeholder("No breaking news briefs are available.")]);
-      return;
-    }
-    replaceContents(container, items.map(item => {
-      const card = makeElement("article", "history-card");
-      if (typeof item === "string") {
-        card.appendChild(makeElement("p", "", item));
-        return card;
-      }
-      if (!item || typeof item !== "object") return card;
-      if (item.date) {
-        const p = makeElement("p", "story-date");
-        p.appendChild(makeTime(item.date));
-        card.appendChild(p);
-      }
-      card.appendChild(makeElement("h3", "", item.title || "News development"));
-      const summary = summaryOf(item);
-      if (summary) card.appendChild(makeElement("p", "", summary));
-      if (item.source) card.appendChild(makeElement("p", "story-source", `Source: ${item.source}`));
-      const url = urlOf(item);
-      if (url) card.appendChild(makeLink(url, "Read source report ↗"));
-      return card;
-    }));
-  }
-
-  function renderArchive(data) {
-    const container = findFirstElement(["archive-container", "archive-list"]);
-    if (!container) return;
-    const archives = data.archives || data.archiveRecords || data.archive || [];
-    const stories = Array.isArray(archives) ? archives : [];
-    if (!stories.length) {
-      replaceContents(container, [placeholder("No previous editions have been added to the archive yet.")]);
-      return;
-    }
-    replaceContents(container, stories.map(item => {
-      const card = makeElement("article", "archive-card");
-      card.appendChild(makeElement("h3", "", item.title || item.edition || "News edition"));
-      const meta = makeElement("p", "story-meta");
-      const parts = [item.category || item.edition || "Global news", item.source || ""].filter(Boolean);
-      if (parts.length) meta.appendChild(makeElement("span", "", parts.join(" · ")));
-      if (item.date) {
-        if (parts.length) meta.appendChild(makeElement("span", "", " · "));
-        meta.appendChild(makeTime(item.date));
-      }
-      if (meta.childNodes.length) card.appendChild(meta);
-      const summary = summaryOf(item);
-      if (summary) card.appendChild(makeElement("p", "", summary));
-      const url = urlOf(item);
-      if (url) card.appendChild(makeLink(url, "Open original source ↗"));
-      return card;
-    }));
-  }
-
-  function renderAdverts(items) {
-    const container = $("sponsored-adverts");
-    if (!container) return;
-    if (!Array.isArray(items) || !items.length) return;
-    replaceContents(container, items.map(item => {
-      const card = makeElement("article", "advert-card");
-      card.appendChild(makeElement("span", "advert-label", item.label || "Sponsored"));
-      if (item.image) {
-        const imageUrl = safeUrl(item.image);
-        if (imageUrl) {
-          const img = makeElement("img", "advert-image");
-          img.src = imageUrl;
-          img.alt = item.imageAlt || item.title || "Sponsored advert";
-          img.loading = "lazy";
-          img.decoding = "async";
-          img.style.cssText = "display:block;width:100%;max-width:100%;height:auto;max-height:260px;object-fit:contain;margin:12px 0;border-radius:8px";
-          img.addEventListener("error", () => { img.style.display = "none"; }, { once: true });
-          card.appendChild(img);
-        }
-      }
-      card.appendChild(makeElement("h3", "", item.title || "Advertise with RadiantWaves Media"));
-      if (item.subtitle) card.appendChild(makeElement("h4", "advert-subtitle", item.subtitle));
-      const description = summaryOf(item);
-      if (description) card.appendChild(makeElement("p", "", description));
-      if (Array.isArray(item.products) && item.products.length) {
-        const list = makeElement("ul", "advert-products");
-        item.products.forEach(product => list.appendChild(makeElement("li", "", String(product))));
-        card.appendChild(list);
-      }
-      const supplied = String(item.url || item.link || "").trim();
-      const usable = supplied && supplied !== "#" ? safeUrl(supplied, true) : "";
-      card.appendChild(usable
-        ? makeLink(usable, item.button || item.linkText || "Find out more ↗")
-        : makeLink(`mailto:${CONFIG.CONTACT_EMAIL}`, item.button || "Contact our advertising team ↗"));
-      return card;
-    }));
-  }
-
-  function renderHero(data) {
-    const hero = data.hero && typeof data.hero === "object" ? data.hero : {};
-    setText("hero-title", hero.title || "Gateway to Your World News");
-    setText("hero-desc", hero.description || "Connecting you to the stories shaping our world.");
-    setText("hero-date", [data.edition, data.date].filter(Boolean).join(" · ") || "Global News Edition");
-    setText("edition-date", [data.edition, data.date].filter(Boolean).join(" · ") || "Global News Edition");
-
-    const marquee = findFirstElement(["hero-marquee", "marquee-text", "hero-marquee-text"]);
-    if (marquee && hero.marquee) marquee.textContent = hero.marquee;
-
-    const video = $("heroVideo");
-    if (video && hero.video) {
-      const validVideo = safeUrl(hero.video);
-      if (validVideo && video.getAttribute("src") !== validVideo) {
-        video.src = validVideo;
-        video.load();
-      }
+    #main-nav,
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: var(--rw-red-dark);
+        flex-direction: column;
+        align-items: stretch;
+        max-height: 75vh;
+        overflow-y: auto;
+        box-shadow: var(--rw-shadow);
     }
 
-    const heroImage = findFirstElement(["hero-image", "heroImage"]);
-    if (heroImage && hero.image) {
-      const valid = safeUrl(hero.image);
-      if (valid) {
-        if (heroImage.tagName === "IMG") heroImage.src = valid;
-        else heroImage.style.backgroundImage = `url("${valid.replace(/["\\]/g, "")}")`;
-      }
-    }
-  }
-
-  function renderFeatured(item) {
-    const container = $("featured-news");
-    if (!container) return;
-    if (!item || typeof item !== "object") {
-      replaceContents(container, [placeholder("The featured story will appear here when published.")]);
-      return;
-    }
-    replaceContents(container, [articleCard(item, item.category || "Featured")]);
-  }
-
-  function renderTopStories(items) {
-    const container = $("top-stories-container");
-    if (!container) return;
-    if (!Array.isArray(items) || !items.length) {
-      replaceContents(container, [placeholder("Top stories will appear here when published.")]);
-      return;
-    }
-    replaceContents(container, items.map(item => articleCard(item, item.category || "Top Story")));
-  }
-
-  function renderAll(data) {
-    renderHero(data);
-    renderFeatured(data.featured || data.featuredStory);
-    renderTopStories(data.topStories || data.articles || []);
-
-    const combined = [];
-    [data.articles, data.worldNews, data.usaNews, data.europeNews, data.africaNews,
-      data.asiaNews, data.businessNews, data.technologyNews, data.topStories].forEach(list => {
-      if (Array.isArray(list)) list.forEach(item => {
-        if (item && typeof item === "object") combined.push(item);
-      });
-    });
-
-    const unique = [];
-    const seen = new Set();
-    combined.forEach(item => {
-      const key = item.id || `${item.title || ""}|${item.url || item.sourceUrl || item.link || ""}`;
-      if (!seen.has(key)) {
-        seen.add(key);
-        unique.push(item);
-      }
-    });
-
-    renderCategories(unique);
-    renderLeaders(data);
-    renderTicker(data.breaking || data.breakingNews || []);
-    renderSummary(data);
-    renderQuestionAndQuote(data);
-    renderPublicInterestFeature(data.publicInterestFeature);
-    renderHistory(data.breakingHistory || data.breakingNewsHistory || data.history || []);
-    renderArchive(data);
-    renderAdverts(data.sponsoredAdverts);
-    setText("copyright-year", String(new Date().getFullYear()));
-
-    document.dispatchEvent(new CustomEvent("radiantwaves:newsloaded", {
-      detail: { edition: data.edition || data.date || "" }
-    }));
-  }
-
-  async function loadNews() {
-    try {
-      const response = await fetch(CONFIG.NEWS_FILE, { cache: "no-store" });
-      if (!response.ok) throw new Error(`Could not load news.json (HTTP ${response.status}).`);
-
-      const data = await response.json();
-      if (!data || typeof data !== "object" || Array.isArray(data)) {
-        throw new Error("news.json must contain a JSON object.");
-      }
-
-      renderAll(data);
-      console.info("RadiantWaves Media news loaded:", data.edition || data.date || "Edition");
-    } catch (error) {
-      console.error("RadiantWaves news loading error:", error);
-      const message = "The news feed could not be loaded. Check that news.json is valid JSON and that changes have been committed.";
-
-      ["featured-news", "top-stories-container", "leaders-grid", "history-container",
-        "archive-container", "archive-list", "sponsored-adverts", "big-question",
-        "todays-big-question", "today-big-question"].forEach(id => {
-        const el = $(id);
-        if (el && ["featured-news", "top-stories-container", "leaders-grid",
-          "history-container", "archive-container", "archive-list", "sponsored-adverts"].includes(id)) {
-          replaceContents(el, [placeholder(message)]);
-        }
-      });
-
-      Object.values(CATEGORY_TARGETS).forEach(id => {
-        if ($(id)) replaceContents($(id), [placeholder(message)]);
-      });
-      setText("breaking-ticker", "News feed temporarily unavailable.");
-    }
-  }
-
-  function setupSoundButton() {
-    const button = $("sound-button");
-    const video = $("heroVideo");
-    if (!button || !video) return;
-
-    video.muted = true;
-    video.playsInline = true;
-
-    const update = () => {
-      button.replaceChildren();
-      const icon = makeElement("i", video.muted
-        ? "fa-solid fa-volume-xmark"
-        : "fa-solid fa-volume-high");
-      icon.setAttribute("aria-hidden", "true");
-      button.appendChild(icon);
-      button.appendChild(document.createTextNode(
-        video.muted ? " Enable sound" : " Turn sound off"
-      ));
-      button.setAttribute("aria-pressed", String(!video.muted));
-    };
-
-    button.addEventListener("click", async () => {
-      video.muted = !video.muted;
-      if (!video.muted) {
-        try {
-          await video.play();
-        } catch (error) {
-          console.warn("Video playback could not start.", error);
-        }
-      }
-      update();
-    });
-
-    update();
-  }
-
-  function setupVideoButtons() {
-    const video = $("heroVideo");
-    if (!video) return;
-
-    const buttons = document.querySelectorAll("[data-video]");
-    buttons.forEach(button => {
-      button.setAttribute("aria-pressed", String(button.classList.contains("is-active")));
-
-      button.addEventListener("click", async () => {
-        const path = button.getAttribute("data-video");
-        const valid = safeUrl(path);
-        if (!valid) return;
-
-        video.src = valid;
-        video.load();
-
-        buttons.forEach(item => {
-          item.classList.remove("is-active");
-          item.setAttribute("aria-pressed", "false");
-        });
-
-        button.classList.add("is-active");
-        button.setAttribute("aria-pressed", "true");
-
-        if (reducedMotion.matches) {
-          video.pause();
-          return;
-        }
-
-        try {
-          await video.play();
-        } catch (error) {
-          console.warn("Selected video could not autoplay.", error);
-        }
-      });
-    });
-  }
-
-  function setupVideoPoliteness() {
-    const video = $("heroVideo");
-    if (!video) return;
-
-    if (reducedMotion.matches) {
-      video.removeAttribute("autoplay");
-      video.pause();
+    #main-nav.active,
+    .main-nav.active {
+        display: flex;
     }
 
-    reducedMotion.addEventListener("change", event => {
-      if (event.matches) video.pause();
-    });
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) video.pause();
-    });
-  }
-
-  function setupAdvertForm() {
-    const form = $("advert-request-form");
-    if (!form) return;
-
-    function mailtoFrom(data) {
-      const fields = [
-        ["Name", data.get("name")],
-        ["Email", data.get("email")],
-        ["WhatsApp", data.get("whatsapp")],
-        ["Business / Organisation", data.get("company")],
-        ["Service required", data.get("subject")],
-        ["Details", data.get("message")]
-      ];
-
-      const service = String(data.get("subject") || "Website enquiry").trim();
-      const body = fields.map(([label, value]) =>
-        `${label}: ${String(value || "").trim()}`
-      ).join("\n");
-
-      return `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent("RadiantWaves Media — " + service)}&body=${encodeURIComponent(body)}`;
+    #main-nav a,
+    .main-nav a {
+        display: block;
+        width: 100%;
+        padding: 13px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
-    function status(message, isError = false) {
-      let el = form.querySelector(".form-status");
-      if (!el) {
-        el = makeElement("p", "form-status");
-        el.setAttribute("role", "status");
-        form.appendChild(el);
-      }
-      el.textContent = message;
-      el.classList.toggle("form-status--error", isError);
+    .news-grid,
+    #top-stories-container,
+    #world-news,
+    #usa-news,
+    #europe-news,
+    #africa-news,
+    #nigeria-news,
+    #asia-news,
+    #business-news,
+    #technology-news,
+    #editorial-news,
+    #analysis-news,
+    #fact-check-news,
+    #beyond-statement-news,
+    #technology-innovation,
+    #election-watch-news,
+    #leaders-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 15px;
     }
 
-    form.addEventListener("submit", async event => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-
-      const data = new FormData(form);
-      if (!CONFIG.FORM_ACCESS_KEY) {
-        window.location.href = mailtoFrom(data);
-        return;
-      }
-
-      const button = form.querySelector('button[type="submit"]');
-      if (button) button.disabled = true;
-      status("Sending your request…");
-
-      try {
-        const payload = {
-          access_key: CONFIG.FORM_ACCESS_KEY,
-          subject: "RadiantWaves Media — " + String(data.get("subject") || "Website enquiry"),
-          from_name: String(data.get("name") || ""),
-          name: String(data.get("name") || ""),
-          email: String(data.get("email") || ""),
-          whatsapp: String(data.get("whatsapp") || ""),
-          organisation: String(data.get("company") || ""),
-          service: String(data.get("subject") || ""),
-          details: String(data.get("message") || "")
-        };
-
-        const response = await fetch(CONFIG.FORM_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: JSON.stringify(payload)
-        });
-
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok || !result.success) {
-          throw new Error(result.message || "Form service rejected the request.");
-        }
-
-        status("Thank you — your request has been sent. Our team will reply to your email address.");
-        form.reset();
-      } catch (error) {
-        console.error("Advert form error:", error);
-        status("Sending failed. Your email application will open so you can still send the request.", true);
-        window.location.href = mailtoFrom(data);
-      } finally {
-        if (button) button.disabled = false;
-      }
-    });
-  }
-
-  function setupMobileNavigation() {
-    const toggle = $("nav-toggle");
-    const menu = $("nav-menu");
-    if (!toggle || !menu) return;
-
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      toggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
-      menu.classList.toggle("is-open", !open);
-      document.body.classList.toggle("nav-open", !open);
-    });
-
-    menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-      menu.classList.remove("is-open");
-      document.body.classList.remove("nav-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open menu");
-    }));
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && menu.classList.contains("is-open")) {
-        menu.classList.remove("is-open");
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
-        toggle.focus();
-      }
-    });
-  }
-
-  function start() {
-    installLayoutFixes();
-    setupSoundButton();
-    setupVideoButtons();
-    setupVideoPoliteness();
-    setupMobileNavigation();
-    setupAdvertForm();
-    loadNews();
-
-    if (CONFIG.NEWS_REFRESH_INTERVAL > 0) {
-      window.setInterval(loadNews, CONFIG.NEWS_REFRESH_INTERVAL);
+    .header-inner {
+        min-height: 82px;
+        gap: 10px;
     }
-  }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
-  else start();
-})();
+    .brand img,
+    .site-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .brand-text p {
+        font-size: 10px;
+    }
+
+    .breaking-bar {
+        min-height: 38px;
+    }
+
+    .breaking-label {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+    #breaking-ticker {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .hero-section {
+        margin: 15px auto;
+    }
+
+    #heroVideo {
+        min-height: 250px;
+        max-height: 420px;
+    }
+
+    .hero-overlay {
+        padding: 16px;
+    }
+
+    #hero-title {
+        font-size: 25px;
+    }
+
+    #hero-description {
+        font-size: 12px;
+    }
+
+    .content-section {
+        padding: 30px 0;
+    }
+
+    .newsroom-briefing,
+    .community-panels {
+        grid-template-columns: 1fr;
+    }
+
+    #featured-news .news-card {
+        grid-template-columns: 1fr;
+    }
+
+    #featured-news .news-card-image {
+        min-height: 190px;
+        height: 190px;
+    }
+
+    .news-grid,
+    #top-stories-container,
+    #world-news,
+    #usa-news,
+    #europe-news,
+    #africa-news,
+    #nigeria-news,
+    #asia-news,
+    #business-news,
+    #technology-news,
+    #editorial-news,
+    #analysis-news,
+    #fact-check-news,
+    #beyond-statement-news,
+    #technology-innovation,
+    #election-watch-news,
+    #leaders-grid,
+    #history-container,
+    #archive-container,
+    .sponsored-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card-image {
+        height: 215px;
+    }
+
+    .leader-photo {
+        height: 250px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .live-tv-section iframe {
+        min-height: 250px;
+    }
+}
+
+/* 25. SMALL MOBILE SCREENS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand img,
+    .site-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-text h1 {
+        font-size: 16px;
+    }
+
+    .brand-text p {
+        font-size: 9px;
+    }
+
+    .nav-toggle,
+    #nav-toggle {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #hero-title {
+        font-size: 21px;
+    }
+
+    .card-content {
+        padding: 14px;
+    }
+}
+
+/* 26. REDUCED MOTION AND ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behaviour: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 27. PRINT
+========================================================= */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .site-header,
+    .main-nav,
+    #main-nav,
+    .breaking-bar,
+    .hero-controls,
+    .video-selector,
+    .site-footer,
+    .read-more-button,
+    .contact-section {
+        display: none !important;
+    }
+
+    .news-card,
+    .leader-card,
+    .history-item,
+    .archive-item {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .article-expanded-content {
+        display: block !important;
+    }
+
+    .card-content h3,
+    .leader-name,
+    .section-title {
+        color: black;
+    }
+}

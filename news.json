@@ -1,7 +1,7 @@
 {
-  "edition": "RadiantWaves Morning News & Global Update",
+  "edition": "RadiantWaves Midday News & Global Update",
   "date": "30 October 2026",
-  "editionTime": "Morning",
+  "editionTime": "Midday",
   "branding": {
     "company": "RadiantWaves Media Nigeria Ltd",
     "slogan": "Gateway to Your World News — Connecting You to the World",
@@ -11,286 +11,218 @@
     "whatsapp": "+33 6 21 61 31 49"
   },
   "hero": {
-    "title": "Morning News: Spain Mourns as Railway Safety Comes Under Scrutiny",
-    "description": "Your global briefing on breaking developments, international diplomacy, economic decisions, technology, security and the political issues shaping our world.",
-    "marquee": "SPAIN TRAIN DISASTER | NORTH KOREA MISSILE DEVELOPMENTS | CANADA-EU SUMMIT | US ECONOMIC GROWTH | RUSSIA-AFRICA SUMMIT | NIGERIA 2027 ELECTION WATCH",
+    "title": "Midday News: Spain's Railway Investigation Reveals New Details",
+    "description": "Your midday international briefing on breaking developments, politics, business, technology and the decisions shaping our world.",
+    "marquee": "SPAIN RAIL DISASTER | NIGERIA 2027 | EU-CANADA SUMMIT | GLOBAL MARKETS | AI AND TECHNOLOGY",
     "image": "assets/news-hero.jpg",
-    "video": "assets/video1.mp4"
+    "video": "assets/video2.mp4"
   },
-  "headline": "Spain Mourns 69 Victims as Railway Disaster Raises Questions About Safety and Accountability",
-  "intro": "Good morning and welcome to RadiantWaves Media. Spain is observing national mourning following a devastating high-speed train collision in Toledo province that has claimed at least 69 lives. Investigators are examining the circumstances surrounding the disaster. Elsewhere, North Korea's missile activity is raising regional security concerns, Canada and the European Union are strengthening their relationship, and the United States has reported stronger economic growth. In Africa, Russia is seeking deeper partnerships with African countries, while Nigeria's political parties are preparing for the 2027 presidential election.",
-  "morningSummary": "Today's global briefing examines Spain's railway tragedy, North Korea's missile activity, the Canada-EU summit, American economic growth, Britain's budget pressures, Asian markets and technology investment, the Russia-Africa summit, Somalia's political and humanitarian challenges, and Nigeria's approaching election campaign.",
-  "editorialNote": "RadiantWaves Media reports developments with an emphasis on verified information, public accountability and balanced journalism. Figures in developing stories may change as authorities release further information. Reports, official statements, allegations and editorial analysis are clearly distinguished.",
+  "headline": "Spain's Deadly Train Collision: Preliminary Findings Raise Serious Safety Questions",
+  "intro": "Good afternoon and welcome to RadiantWaves Media. New preliminary findings have intensified scrutiny of Spain's deadly railway collision. In Nigeria, opposition groups are discussing a possible common candidate ahead of the 2027 election. Canada and the European Union are seeking closer economic and strategic cooperation, while global markets are reacting to concerns about artificial intelligence investment.",
+  "morningSummary": "The midday edition brings updated coverage of Spain's railway investigation, Nigeria's opposition discussions, the EU-Canada summit, international markets, developments in Britain and global technology.",
+  "editorialNote": "RadiantWaves Media distinguishes verified facts from allegations, preliminary findings and political claims. Developing stories will be updated as reliable information becomes available.",
   "breaking": [
     {
-      "headline": "Spain Begins National Mourning After Deadly High-Speed Train Collision",
-      "summary": "Spain has begun three days of national mourning after a collision involving two high-speed trains in Toledo province killed at least 69 people. Reuters reported that 57 injured people remained in hospital in its latest update. Investigators are examining the sequence of events, including signalling and railway operational decisions.",
+      "headline": "Spain Train Disaster: Preliminary Investigation Points to Signalling and Operational Failures",
+      "summary": "A preliminary investigation indicates that a Renfe train was travelling at an estimated 160–200 km/h when it struck a stationary Iryo train. Investigators are examining signalling failures and the decisions that allowed the train to continue at normal speed. The death toll remains at least 69 in current reports.",
+      "image": "assets/spain-train-disaster.jpg",
       "category": "Breaking News",
-      "status": "Developing - investigation ongoing",
+      "status": "Developing - preliminary investigation",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-rescuers-search-trains-hope-finding-survivors-deadly-crash-2026-10-29/"
+      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/"
     },
     {
-      "headline": "North Korea Fires Around Ten Ballistic Missiles Towards the East Sea",
-      "summary": "South Korea's military reported that North Korea fired around ten short-range ballistic missiles from the Wonsan area towards the East Sea on 29 October. The missiles travelled approximately 250 kilometres. South Korea, the United States and Japan are monitoring the situation.",
-      "category": "International Security",
-      "status": "Reported - regional developments being monitored",
-      "source": "Associated Press and South Korean authorities",
-      "url": "https://apnews.com/article/b1a2feff5944a71c716ed37fd94e8aa5"
-    },
-    {
-      "headline": "G20 Foreign Ministers Prepare for Talks Amid International Disagreements",
-      "summary": "The G20 foreign ministers' meeting is taking place against a backdrop of disagreements over international security, trade and economic cooperation. The discussions form part of preparations for the December leaders' summit. Specific outcomes should be confirmed through official meeting statements.",
-      "category": "International Diplomacy",
-      "status": "Meeting coverage - outcomes to be confirmed",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/ed4ab8ad9fedd628c39ac05bc5092cac"
+      "headline": "Nigeria Opposition Groups Discuss a Possible Common Candidate",
+      "summary": "A coalition of opposition groups says it is working towards a single candidate for the 2027 presidential election. Cardinal John Onaiyekan has reportedly expressed support for efforts to create a credible opposition choice. No final agreement between the leading political figures has been confirmed.",
+      "category": "Nigeria Politics",
+      "status": "Political discussions ongoing",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/"
     }
   ],
   "featured": {
-    "title": "Spain's Railway Disaster: 69 Lives Lost as Investigators Examine the Collision",
-    "subtitle": "Spain is mourning the victims of a devastating railway collision as investigators work to establish what happened and whether safety failures contributed.",
-    "category": "Breaking News / Europe",
+    "title": "Spain Mourns After Deadly Train Disaster: Questions Grow Over Railway Safety",
+    "subtitle": "New preliminary findings intensify scrutiny of signalling systems, railway operations and accountability.",
+    "category": "World News / Transport Safety",
     "date": "30 October 2026",
     "image": "assets/spain-train-disaster.jpg",
-    "summary": "Spain has begun three days of national mourning following a deadly collision involving two high-speed trains in Toledo province. At least 69 people have been reported dead, while Reuters reported 57 injured people remained in hospital. Investigators are examining the circumstances surrounding the collision, including signalling and operational decisions. Railway safety and accountability are now central to the national discussion.",
-    "whyItMatters": "The disaster raises urgent questions about passenger safety, railway infrastructure, operational procedures and accountability. The investigation must establish the facts and identify any failures so that lessons can be learned and future tragedies prevented.",
-    "radiantWavesView": "A transport disaster of this scale demands transparency, careful investigation and accountability. Authorities must establish exactly what happened before drawing conclusions about responsibility. Families affected by the tragedy deserve answers, and passengers deserve confidence that railway safety is treated as a priority. The focus must remain on the victims, the investigation and practical measures to prevent another disaster.",
+    "summary": "Spain is mourning after a devastating collision between two high-speed trains near Urda in central Spain. At least 69 people have been reported killed. A preliminary investigation indicates that the Renfe train may have been travelling at approximately 160–200 km/h when it struck a stationary Iryo train. Investigators are examining a sequence of signalling failures and operational decisions. The death toll and missing-person figures remain subject to official updates.",
+    "whyItMatters": "The disaster raises serious questions about railway safety, the reliability of signalling systems, operational procedures, maintenance and accountability. The investigation could have implications for passenger safety across high-speed rail networks.",
+    "radiantWavesView": "A tragedy of this scale demands more than expressions of sympathy. Spain's authorities must establish exactly what happened, examine the technical and human factors involved and make the findings public. Responsibility should be determined by evidence, not speculation. Passengers deserve a railway system where safety is never compromised.",
     "keyQuestions": [
-      "What caused the collision between the two trains?",
-      "Were railway signalling and safety procedures operating correctly?",
-      "Could earlier safety measures have prevented the disaster?",
-      "What changes will authorities introduce to protect passengers?"
+      "Why did the signalling system fail?",
+      "Why was the train reportedly permitted to continue at normal speed?",
+      "Were existing safety procedures followed?",
+      "Were there wider maintenance or staffing problems?",
+      "What changes will prevent another tragedy?"
     ],
-    "source": "Reuters",
-    "url": "https://www.reuters.com/world/europe/spanish-rescuers-search-trains-hope-finding-survivors-deadly-crash-2026-10-29/",
-    "status": "Developing - investigation ongoing"
+    "source": "Reuters and Associated Press",
+    "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
+    "status": "Developing - preliminary findings reported"
   },
   "topStories": [
     {
-      "title": "Spain's Railway Disaster: Death Toll Reaches 69",
+      "title": "Spain's Railway Disaster: Preliminary Findings Reveal More Details",
       "category": "World",
       "region": "Europe",
       "date": "30 October 2026",
       "image": "assets/spain-train-disaster.jpg",
-      "summary": "Spain has begun three days of national mourning after a deadly collision involving two high-speed trains in Toledo province. At least 69 people have died, and 57 injured people remained in hospital in Reuters' latest report. Investigators are examining signalling and operational decisions.",
+      "summary": "Investigators are examining a sequence of signalling failures and operational decisions following the collision that killed at least 69 people. The train's black box is expected to help establish its precise speed and the events before impact.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-rescuers-search-trains-hope-finding-survivors-deadly-crash-2026-10-29/",
+      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
       "status": "Developing"
     },
     {
-      "title": "Canada and European Union Hold Summit in Montreal",
+      "title": "EU and Canada Seek a Deeper Strategic Partnership",
       "category": "Diplomacy",
-      "region": "Canada / Europe",
+      "region": "Canada and Europe",
       "date": "30 October 2026",
       "image": "assets/diplomacy.jpeg",
-      "summary": "Canadian and European leaders are discussing trade, digital cooperation, critical raw materials, defence and economic security. The summit is intended to strengthen relations through a proposed Alliance for the Future. Canada remains outside the European Union.",
+      "summary": "The summit in Montreal is addressing trade, critical minerals, defence, digital cooperation, research and economic security. Discussions include how both sides can strengthen their partnership amid changing global trade relationships.",
       "source": "European Council",
       "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
       "status": "Summit underway"
     },
     {
-      "title": "US Economy Records Stronger Third-Quarter Growth",
-      "category": "USA",
-      "region": "United States",
+      "title": "Global Markets Mixed as AI Investment Concerns Grow",
+      "category": "Business and Finance",
+      "region": "Global",
       "date": "30 October 2026",
-      "summary": "The United States economy grew at an annualised rate of 3.4% in the third quarter of 2026, according to the first estimate reported by the Associated Press. Consumer spending and business investment, including investment connected with artificial intelligence, supported growth. Housing investment remained weak.",
+      "summary": "Global financial markets are showing mixed movements. Concerns about the cost and returns of artificial intelligence investment have weighed on some technology shares. European markets have been modestly positive while several Asian markets have fallen.",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/ca48d86b723cc52fe14d142ee033316a",
-      "status": "Economic report"
-    },
-    {
-      "title": "US Court Rejects Administration Request on California Ballot Counting",
-      "category": "USA",
-      "region": "United States",
-      "date": "30 October 2026",
-      "summary": "A federal judge rejected an attempt by the Trump administration to require California to pause the counting of ballots involving voters alleged to be non-citizens. The case raises questions about election administration, legal authority and the protection of eligible voters.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/481bed64919ad193e80e051d28beb2c0",
-      "status": "Legal proceedings"
-    },
-    {
-      "title": "UK Autumn Budget Focuses on Public Finances and Household Costs",
-      "category": "Politics and Economy",
-      "region": "United Kingdom",
-      "date": "30 October 2026",
-      "summary": "The Chancellor presented the 2026 Autumn Budget to Parliament on 28 October. The accompanying economic forecasts address growth, public finances and the government's fiscal plans. The impact of the measures on households and businesses will become clearer as the details are implemented.",
-      "source": "UK House of Commons Library",
-      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12252/",
-      "status": "Budget analysis"
-    },
-    {
-      "title": "North Korea's Missile Activity Raises Regional Security Concerns",
-      "category": "Asia",
-      "region": "East Asia",
-      "date": "30 October 2026",
-      "summary": "South Korean authorities reported that North Korea fired around ten short-range ballistic missiles towards the East Sea on 29 October. The missiles reportedly travelled about 250 kilometres. Regional governments are monitoring the situation.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/b1a2feff5944a71c716ed37fd94e8aa5",
+      "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
       "status": "Reported"
     },
     {
-      "title": "Asian Markets React to Technology Investment Concerns",
-      "category": "Asia",
+      "title": "UK Prime Minister Andy Burnham Meets Devolved Leaders",
+      "category": "Politics",
+      "region": "United Kingdom",
+      "date": "30 October 2026",
+      "summary": "The Prime Minister is meeting devolved leaders in Glasgow at a National Economic Council session. Economic growth, regional devolution and the relationship between the UK government and devolved administrations are among the issues under discussion.",
+      "source": "Welsh Government",
+      "url": "https://media.service.gov.wales/news/national-economic-council-opportunity-for-pm-to-show-respect-agenda-works-both-ways",
+      "status": "Meeting scheduled"
+    },
+    {
+      "title": "North Korea Highlights Drone and AI Military Development",
+      "category": "Security and Technology",
+      "region": "Asia",
+      "date": "30 October 2026",
+      "summary": "North Korean state media has reported a demonstration of drones, missiles and military systems. Kim Jong Un has called for accelerated development of drone and artificial intelligence capabilities.",
+      "source": "CNA",
+      "url": "https://www.channelnewsasia.com/east-asia/north-korea-drones-missiles-kim-jong-un-6505466",
+      "status": "Reported"
+    },
+    {
+      "title": "Nigeria's Opposition Faces Pressure to Unite Ahead of 2027",
+      "category": "Politics",
+      "region": "Africa",
+      "date": "30 October 2026",
+      "summary": "A coalition of opposition groups says it is working towards a common presidential candidate. Cardinal John Onaiyekan has reportedly encouraged efforts to build a credible opposition. The political negotiations remain ongoing.",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
+      "status": "Political discussions ongoing"
+    },
+    {
+      "title": "Nigeria's Proposed Borrowing Plans Prompt Debt Concerns",
+      "category": "Economy",
+      "region": "Africa",
+      "date": "30 October 2026",
+      "summary": "Broadcaster Reuben Abati has raised concerns about reported plans for fresh borrowing by the Nigerian government. His comments have renewed debate about debt sustainability, transparency and the benefits citizens receive from public borrowing. The government's proposals and official figures should be examined separately from commentary.",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/nigeria-borrowing-itself-into-slavery-reuben-abati-cries-out-over-fresh-20bn-loan-warns-tinubu/",
+      "status": "Commentary - official borrowing details require confirmation"
+    },
+    {
+      "title": "Australia and Asia-Pacific Markets Record Mixed Trading",
+      "category": "Business",
       "region": "Asia-Pacific",
       "date": "30 October 2026",
-      "summary": "Investors are assessing the cost of artificial intelligence investment, data-centre expansion and technology infrastructure. The central question is whether the scale of spending by major technology companies will produce sustainable commercial returns.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-29/",
-      "status": "Market update"
-    },
-    {
-      "title": "Putin Seeks Stronger Russia-Africa Relations at Moscow Summit",
-      "category": "Africa",
-      "region": "Africa / Russia",
-      "date": "30 October 2026",
-      "summary": "Russia is using its Moscow summit to promote stronger political and economic ties with African countries. Discussions include trade, energy, education, agriculture, security and Africa's representation in international institutions. African governments will be assessing the practical value of these partnerships.",
+      "summary": "Markets across the Asia-Pacific region have moved in different directions. Australia's market recorded a modest gain while Japan and South Korea experienced declines amid technology-sector concerns.",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/7fa56468d33f98dade1996202fb1f469",
-      "status": "Summit coverage"
-    },
-    {
-      "title": "Somalia Faces Political and Humanitarian Uncertainty",
-      "category": "Africa",
-      "region": "East Africa",
-      "date": "30 October 2026",
-      "summary": "Political disagreements, security concerns and humanitarian needs remain significant challenges for Somalia. Changes to international political support and the country's ongoing political transition are important issues to monitor.",
-      "source": "Africa Center",
-      "url": "https://africacenter.org/daily-media-review/africa-media-review-for-october-29-2026/",
-      "status": "Regional monitoring"
-    },
-    {
-      "title": "Nigeria's 2027 Presidential Campaign Begins to Take Shape",
-      "category": "Nigeria",
-      "region": "West Africa",
-      "date": "30 October 2026",
-      "image": "assets/leaders/tinubu.jpg",
-      "summary": "President Bola Ahmed Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign comes amid economic hardship and continuing security concerns. Opposition figures Atiku Abubakar and Peter Obi remain central to the national political debate.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "status": "Campaign underway"
-    },
-    {
-      "title": "Artificial Intelligence Investment Raises Questions About Costs and Returns",
-      "category": "Technology and Business",
-      "region": "Global",
-      "date": "30 October 2026",
-      "summary": "Major technology companies are investing heavily in artificial intelligence, data centres and computing infrastructure. Investors are increasingly asking how quickly these investments can produce sustainable commercial returns and what their wider energy and economic costs will be.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/economy/article/2026/10/29/google-hit-by-the-ai-revolution-it-helped-spark_6766796_19.html",
-      "status": "Analysis"
-    },
-    {
-      "title": "Australia Seeks a Stronger Role in Global Affairs",
-      "category": "International Diplomacy",
-      "region": "Australia / Pacific",
-      "date": "30 October 2026",
-      "summary": "Australian Prime Minister Anthony Albanese is preparing to engage Commonwealth leaders on international priorities. Australia's diplomatic ambitions and domestic energy policy remain among the issues attracting attention.",
-      "source": "ABC News Australia",
-      "url": "https://www.abc.net.au/news/2026-10-29/federal-politics-live-blog-oct-29/107320104",
+      "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
       "status": "Reported"
     }
   ],
   "articles": [
     {
-      "title": "Spain's Railway Tragedy: Safety, Systems and Accountability",
+      "title": "Spain's Railway Disaster: What the Preliminary Investigation Reveals",
       "category": "Featured Analysis",
       "date": "30 October 2026",
       "image": "assets/spain-train-disaster.jpg",
-      "summary": "At least 69 people have died in Spain's high-speed train disaster. The investigation must establish how the collision occurred and whether technical failures, operational decisions or wider weaknesses in railway safety contributed.",
-      "script": "Spain is mourning after a devastating railway disaster that has claimed at least 69 lives. The collision involved two high-speed trains in Toledo province. Authorities have begun three days of national mourning, while investigators examine the signalling system and the decisions made before the crash. Reuters reports that 57 injured people remained in hospital in its latest update. This is not a moment for speculation. Spain's investigation must establish the facts, identify any failures and ensure that lessons are acted upon. Passengers everywhere deserve a railway system where safety comes first. Our thoughts are with the victims, their families and everyone affected.",
+      "summary": "Preliminary findings point to a sequence of signalling failures and operational decisions before the collision. The investigation must establish the precise causes and whether procedures were followed.",
+      "script": "Spain is still mourning after one of its deadliest railway disasters. New preliminary findings indicate that a train may have been travelling at up to 200 kilometres per hour when it struck another train that was stationary. Investigators are examining signalling failures and the decisions that allowed the train to continue. The death toll stands at at least 69 in current reports. But the most important questions remain: why did the safety system fail, who made the critical decisions, and what must change to protect passengers? Spain deserves answers, and families deserve accountability based on evidence.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-rescuers-search-trains-hope-finding-survivors-deadly-crash-2026-10-29/",
+      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/",
       "status": "Developing"
     },
     {
-      "title": "Canada and Europe Seek Stronger Economic Cooperation",
-      "category": "Diplomacy",
+      "title": "Nigeria 2027: Can the Opposition Agree on One Candidate?",
+      "category": "Nigeria Politics",
+      "date": "30 October 2026",
+      "summary": "Opposition groups are discussing a common candidate as they prepare to challenge President Tinubu. Cardinal John Onaiyekan has reportedly encouraged unity, while the coalition says it is developing a framework for cooperation.",
+      "script": "Nigeria's 2027 election is approaching, and the opposition faces a major political test. A coalition of opposition groups says it is working towards a single candidate, with Cardinal John Onaiyekan reportedly encouraging efforts to build a credible alternative. But unity is easier to announce than to achieve. Who will lead? What programme will they present? Can political ambitions be put aside for the national interest? Nigerians need more than an agreement between politicians. They need a credible plan for security, jobs, education, healthcare and the economy.",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
+      "status": "Political discussions ongoing"
+    },
+    {
+      "title": "Canada and Europe: A Partnership Beyond Trade",
+      "category": "International Relations",
       "date": "30 October 2026",
       "image": "assets/diplomacy.jpeg",
-      "summary": "The Montreal summit brings together Canadian and European leaders to discuss trade, investment, security, digital policy and critical raw materials.",
-      "script": "Canada and the European Union are meeting in Montreal at a time when economic security and international partnerships are becoming increasingly important. Discussions include trade, defence, critical minerals, digital cooperation and clean energy. Both sides are seeking a closer relationship, but this is not the same as Canada joining the European Union. The real test will be whether the summit produces practical agreements that benefit businesses, workers and citizens.",
+      "summary": "The EU-Canada summit is considering deeper cooperation in trade, defence, technology, critical minerals and economic security.",
+      "script": "Canada and the European Union are working to strengthen their relationship at a time of changing global alliances. Their discussions in Montreal cover trade, security, technology, critical minerals and research. The bigger question is whether this partnership can deliver practical benefits for businesses, workers and citizens. Strong international relationships should be measured by what they achieve, not only by the statements leaders issue.",
       "source": "European Council",
       "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
       "status": "Summit underway"
     },
     {
-      "title": "US Economic Growth: Strong Figures, Continuing Household Concerns",
-      "category": "USA Economy",
+      "title": "Nigeria's Debt Debate: Borrowing Must Deliver Results",
+      "category": "Economy and Accountability",
       "date": "30 October 2026",
-      "summary": "The United States economy grew at an annualised rate of 3.4% in the third quarter, according to the first estimate. Consumer spending and business investment supported growth, while housing investment remained weak.",
-      "script": "The United States has reported stronger economic growth in the third quarter, with the economy expanding at an annualised rate of 3.4%. Consumer spending and business investment have helped support activity. But economic growth figures do not tell the whole story. Families still face questions about prices, housing, borrowing costs and the affordability of everyday life. The real test of economic performance is whether growth improves the living conditions of ordinary people.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/ca48d86b723cc52fe14d142ee033316a",
-      "status": "Economic report"
-    },
-    {
-      "title": "North Korea's Missile Activity and Regional Security",
-      "category": "Asia / Security",
-      "date": "30 October 2026",
-      "summary": "South Korea's military reported that North Korea launched around ten short-range ballistic missiles towards the East Sea on 29 October.",
-      "script": "North Korea's military activity is attracting renewed international attention. South Korean authorities have reported that around ten short-range ballistic missiles were launched towards the East Sea. The missiles reportedly travelled approximately 250 kilometres. The development raises concerns about regional stability and the risk of further escalation. Diplomatic engagement and responsible international security measures remain important.",
-      "source": "Associated Press and South Korean authorities",
-      "url": "https://apnews.com/article/b1a2feff5944a71c716ed37fd94e8aa5",
-      "status": "Reported"
-    },
-    {
-      "title": "Russia-Africa Summit: Partnership, Influence and African Representation",
-      "category": "Africa / International Relations",
-      "date": "30 October 2026",
-      "summary": "Russia is using its Moscow summit to deepen relations with African countries, with discussions covering trade, energy, agriculture, education and international representation.",
-      "script": "African representatives from across the continent are meeting Russian leaders in Moscow. The discussions include trade, energy, agriculture, education and security. Russia is also promoting stronger African representation in global institutions. But African governments must assess every partnership on its practical benefits, transparency and long-term value. The continent needs relationships that support development, investment and the interests of its people.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7fa56468d33f98dade1996202fb1f469",
-      "status": "Summit coverage"
-    },
-    {
-      "title": "Nigeria 2027: What Should Voters Expect From Their Leaders?",
-      "category": "Nigeria Politics",
-      "date": "30 October 2026",
-      "image": "assets/leaders/tinubu.jpg",
-      "summary": "The presidential campaign is developing amid economic pressures, security challenges and debate about the strength and unity of the opposition.",
-      "script": "Nigeria's 2027 election is approaching, and political activity is gathering momentum. President Tinubu launched his re-election campaign in Kaduna on 24 October, while opposition figures including Atiku Abubakar and Peter Obi remain part of the national debate. But the most important question is not simply who wants power. Nigerians should ask what each candidate has achieved, what they intend to change and how they will deliver. Political unity matters, but credibility and a practical programme matter just as much. The country deserves a serious debate about its future.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
-      "status": "Campaign underway"
+      "summary": "Fresh public commentary has raised concerns about reported government borrowing plans and the need for transparency about the use of public loans.",
+      "script": "Nigeria's borrowing debate is about more than the size of a loan. Citizens have a right to know why money is being borrowed, where it will be spent, how it will be repaid and what benefits the country will receive. Borrowing can support development when it is transparent and productive. But when citizens see rising debt alongside hardship, questions about accountability become unavoidable. Public money requires public answers.",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/nigeria-borrowing-itself-into-slavery-reuben-abati-cries-out-over-fresh-20bn-loan-warns-tinubu/",
+      "status": "Commentary and public debate"
     }
   ],
   "technologyInnovation": {
-    "title": "Artificial Intelligence: The Race for Innovation and the Question of Responsibility",
-    "summary": "AI investment is reshaping technology, business and global competition. Major companies are expanding data-centre capacity and computing infrastructure, but investors are questioning the cost, energy demands and financial returns of these projects. Military applications of AI also raise important security and ethical questions.",
-    "script": "Artificial intelligence is changing how people work, communicate and do business. Technology companies are investing enormous sums in computing power and data centres, while governments are considering how AI could affect national security. But innovation must come with responsibility. Companies and governments should explain how these systems are used, how risks are managed and how the public benefits. Technology should improve lives, strengthen productivity and create opportunity. Progress should never come at the expense of transparency, safety or accountability.",
-    "source": "Le Monde",
-    "url": "https://www.lemonde.fr/en/economy/article/2026/10/29/google-hit-by-the-ai-revolution-it-helped-spark_6766796_19.html",
-    "status": "Analysis"
+    "title": "Artificial Intelligence: Investors Ask Where the Returns Will Come From",
+    "summary": "Global markets are reacting to concerns about the cost of AI infrastructure and the financial returns expected from major technology investments. The technology continues to attract substantial investment, but investors are increasingly examining whether spending can translate into sustainable profits.",
+    "script": "Artificial intelligence is transforming industries, but the global technology race is becoming more expensive. Investors are now asking whether the enormous spending on chips, data centres and AI services will produce lasting financial returns. The lesson for businesses is simple: innovation matters, but it must solve real problems, create value and be responsibly managed.",
+    "source": "Associated Press",
+    "url": "https://apnews.com/article/16c266731fdf64178f38070af2b42497",
+    "status": "Market development"
   },
   "innovation": {
-    "title": "The Future of Digital Infrastructure",
-    "summary": "Investment in artificial intelligence, cloud computing, data centres and digital networks is becoming a major part of economic competition. The challenge is to balance innovation with affordability, energy requirements, cybersecurity and responsible governance.",
-    "radiantWavesView": "Digital transformation should not be measured only by the number of new technologies launched. Its real value should be seen in better public services, stronger productivity, wider access to opportunity and improved quality of life. African countries should also focus on digital skills, reliable electricity, secure infrastructure and local innovation."
+    "title": "Digital Transformation Must Deliver Real Value",
+    "summary": "AI, cloud computing, digital infrastructure and automation are changing how businesses operate. The challenge is to make innovation accessible, affordable, secure and useful.",
+    "radiantWavesView": "Technology should not be judged only by how advanced it looks. Its real value lies in whether it improves services, creates opportunities, raises productivity and makes everyday life better."
   },
   "leadersWatch": {
-    "title": "Leaders Watch: Decisions Shaping the World",
-    "description": "A newsroom watchlist of major political and international figures. Updates are included where relevant developments have been verified. Where no fresh leader-specific announcement has been confirmed, the newsroom clearly identifies the entry as monitoring.",
+    "title": "Leaders Watch: The Decisions Shaping Our World",
+    "description": "A continuing newsroom watchlist of major international and Nigerian political figures. Updates are based on verified statements and reported developments. Where there is no new confirmed update, this is stated clearly.",
     "leaders": [
       {
         "name": "Donald Trump",
         "role": "President of the United States",
         "country": "USA",
         "image": "assets/leaders/trump.jpg",
-        "update": "A federal judge has rejected the administration's request concerning ballot counting in California. The case remains part of wider legal and political debate.",
-        "script": "President Donald Trump's administration continues to face legal and political scrutiny over its policies. A federal judge has rejected an administration request concerning ballot counting in California. The case highlights the importance of due process, election integrity and public confidence in democratic institutions.",
-        "source": "Associated Press",
-        "url": "https://apnews.com/article/481bed64919ad193e80e051d28beb2c0",
-        "status": "Legal and political developments"
+        "update": "No new independently verified leader-specific announcement added to this midday watch.",
+        "script": "President Donald Trump remains a major influence on American domestic and international policy. His administration's economic, diplomatic and security decisions continue to shape international discussions. RadiantWaves Media will monitor confirmed developments and their wider implications.",
+        "source": "White House",
+        "url": "https://www.whitehouse.gov/",
+        "status": "Monitoring"
       },
       {
         "name": "Mark Carney",
         "role": "Prime Minister of Canada",
         "country": "Canada",
         "image": "assets/leaders/carney.jpg",
-        "update": "Canada is hosting the EU-Canada summit in Montreal, with trade, security and economic cooperation on the agenda.",
-        "script": "Prime Minister Mark Carney is hosting European leaders in Montreal as Canada seeks deeper cooperation with the European Union. Trade, security, critical minerals and economic resilience are among the important issues. The outcome will be judged by the practical agreements and opportunities that follow.",
+        "update": "Canada is hosting the EU-Canada summit in Montreal, with economic and strategic cooperation on the agenda.",
+        "script": "Prime Minister Mark Carney is engaging European leaders in Montreal as Canada seeks a stronger relationship with the European Union. Trade, security, critical minerals and digital cooperation are central issues. The challenge is to turn diplomatic ambition into practical benefits for Canadian citizens and European partners.",
         "source": "European Council",
         "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
         "status": "Summit underway"
@@ -300,8 +232,8 @@
         "role": "President of France",
         "country": "France",
         "image": "assets/leaders/macron.jpg",
-        "update": "No new independently verified personal announcement has been added to this morning's watch. France's European and international policy developments remain under monitoring.",
-        "script": "President Emmanuel Macron remains an influential voice in European and international affairs. France's position on European security, economic cooperation and international diplomacy continues to attract attention. RadiantWaves Media will monitor verified statements and decisions rather than rely on speculation.",
+        "update": "No new independently verified personal announcement added to this midday watch.",
+        "script": "President Emmanuel Macron remains an influential voice in European affairs. France's diplomatic, economic and security policies continue to matter to the wider European Union. RadiantWaves Media is monitoring developments for confirmed updates.",
         "source": "Élysée",
         "url": "https://www.elysee.fr/en/",
         "status": "Monitoring"
@@ -311,10 +243,10 @@
         "role": "President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/tinubu.jpg",
-        "update": "Tinubu launched his re-election campaign in Kaduna on 24 October amid economic hardship and continuing security concerns.",
-        "script": "President Bola Ahmed Tinubu has begun his campaign for another term. His government will face questions about economic reforms, living costs, employment, security and public confidence. As the 2027 election approaches, voters will be looking beyond campaign promises to the results of government policies in their daily lives.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
+        "update": "Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign is taking place amid economic hardship and opposition political manoeuvring.",
+        "script": "President Bola Ahmed Tinubu has begun his campaign for another term. His record on economic reforms, living costs, employment and security will remain central to the debate. As Nigeria approaches the 2027 election, voters will need to assess both the government's achievements and the difficulties citizens continue to face.",
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e",
         "status": "Campaign watch"
       },
       {
@@ -322,63 +254,63 @@
         "role": "Former Vice-President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/atiku.jpg",
-        "update": "No new independently verified statement or announcement from Atiku Abubakar has been added to this morning's watch.",
-        "script": "Former Vice-President Atiku Abubakar remains one of the major figures in Nigeria's opposition politics. The coming election will test the opposition's ability to agree on a credible programme, build public trust and present a convincing alternative. RadiantWaves Media will follow verified announcements rather than political speculation.",
-        "source": "African Democratic Congress",
-        "url": "https://adcnigeria.org/",
-        "status": "Monitoring"
+        "update": "Opposition coalition discussions are continuing. Salihu Lukman says Cardinal John Onaiyekan encouraged opposition parties to work towards a credible united challenge.",
+        "script": "Former Vice-President Atiku Abubakar remains a central figure in Nigeria's opposition politics. The latest discussions about a common candidate raise a familiar but important question: can opposition leaders agree on a strategy that places national interest above individual ambition? No final agreement should be assumed until the parties make a clear announcement.",
+        "source": "Daily Post Nigeria",
+        "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
+        "status": "Political discussions ongoing"
       },
       {
         "name": "Peter Obi",
         "role": "Former Governor of Anambra State",
         "country": "Nigeria",
         "image": "assets/leaders/obi.jpg",
-        "update": "No new independently verified campaign announcement from Peter Obi has been added to this morning's watch.",
-        "script": "Peter Obi remains an important figure in Nigeria's opposition debate. His political direction, policy proposals and approach to possible cooperation with other opposition leaders will be closely watched. Voters deserve clarity about candidates, programmes and commitments.",
-        "source": "INEC",
-        "url": "https://www.inecnigeria.org/",
-        "status": "Monitoring"
+        "update": "Peter Obi is among the opposition figures discussed in the current coalition efforts. No final joint presidential candidacy agreement has been confirmed.",
+        "script": "Peter Obi remains an important figure in Nigeria's opposition politics. The ongoing discussions about a common candidate will test the willingness of political leaders to compromise and agree on a credible programme. Nigerians deserve clarity about the policies and leadership arrangements being proposed.",
+        "source": "Daily Post Nigeria",
+        "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
+        "status": "Political discussions ongoing"
       },
       {
         "name": "Andy Burnham",
-        "role": "Political figure - United Kingdom",
+        "role": "Prime Minister of the United Kingdom",
         "country": "United Kingdom",
         "image": "assets/leaders/andy.jpg",
-        "update": "No verified basis has been established in this edition for describing Andy Burnham as the UK's Prime Minister. The UK budget is being monitored separately.",
-        "script": "Andy Burnham remains a prominent British political figure. RadiantWaves Media will distinguish his own verified statements and political activity from decisions made by the UK government. The latest budget and its effects on households and businesses remain important national issues.",
+        "update": "The Prime Minister is due to meet devolved leaders in Glasgow to discuss economic growth and regional devolution.",
+        "script": "Prime Minister Andy Burnham faces the challenge of balancing economic growth with the interests of all four nations of the United Kingdom. Today's discussions in Glasgow focus on regional powers and economic cooperation. The effectiveness of the government's approach will depend on whether it delivers meaningful opportunities across the country.",
         "source": "GOV.UK",
-        "url": "https://www.gov.uk/",
-        "status": "Monitoring"
+        "url": "https://www.gov.uk/government/ministers/prime-minister",
+        "status": "Government meeting"
       },
       {
         "name": "Friedrich Merz",
         "role": "Chancellor of Germany",
         "country": "Germany",
         "image": "assets/leaders/merz.jpg",
-        "update": "Germany's diplomatic and economic engagement with Asian partners remains an important area of international monitoring.",
-        "script": "Chancellor Friedrich Merz remains a central figure in Germany's economic and European policy debates. Germany's engagement with Asian partners reflects its interest in trade, industry, technology and international cooperation. RadiantWaves Media will monitor verified outcomes of diplomatic meetings.",
-        "source": "German Federal Government",
-        "url": "https://www.bundeskanzler.de/bk-en/",
-        "status": "International policy watch"
+        "update": "Germany's position on the proposed EU-Canada associate-member label has been part of the wider debate about the future shape of the partnership.",
+        "script": "Chancellor Friedrich Merz is among the European leaders considering how to deepen cooperation with Canada. The debate highlights a wider question for Europe: how can the EU build stronger partnerships without confusing closer cooperation with formal membership?",
+        "source": "Le Monde",
+        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
+        "status": "Diplomatic discussions"
       },
       {
         "name": "Vladimir Putin",
         "role": "President of Russia",
         "country": "Russia",
         "image": "assets/leaders/putin.jpg",
-        "update": "Putin is using the Russia-Africa summit in Moscow to promote stronger political and economic ties with African countries.",
-        "script": "President Vladimir Putin is using the Russia-Africa summit to promote closer political and economic relations with African countries. Discussions include trade, energy, agriculture, education and security. African governments will need to assess the benefits, obligations and long-term implications of their relationships with Moscow.",
-        "source": "Associated Press",
-        "url": "https://apnews.com/article/7fa56468d33f98dade1996202fb1f469",
-        "status": "Summit coverage"
+        "update": "No new independently verified leader-specific announcement added to this midday watch.",
+        "script": "President Vladimir Putin remains central to international security and Russia's relations with Europe, Ukraine and other global partners. RadiantWaves Media will monitor verified diplomatic and security developments.",
+        "source": "Kremlin",
+        "url": "http://en.kremlin.ru/",
+        "status": "Monitoring"
       },
       {
         "name": "Xi Jinping",
         "role": "President of China",
         "country": "China",
         "image": "assets/leaders/xi.jpg",
-        "update": "No new independently verified personal announcement has been added to this morning's watch. China's economic, technology and regional security policies remain under monitoring.",
-        "script": "President Xi Jinping continues to lead China through major economic, technological and diplomatic challenges. China's relationship with other global powers, its technology ambitions and regional security policies remain important areas of international attention.",
+        "update": "No new independently verified leader-specific announcement added to this midday watch.",
+        "script": "President Xi Jinping continues to lead China's economic, technological and diplomatic agenda. China's relationships with major global powers and its regional security policies remain important issues for international observers.",
         "source": "Chinese Government",
         "url": "https://english.www.gov.cn/",
         "status": "Monitoring"
@@ -388,8 +320,8 @@
         "role": "President of the European Commission",
         "country": "European Union",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "update": "The European Commission is represented at the EU-Canada summit in Montreal, where trade, digital policy and strategic cooperation are on the agenda.",
-        "script": "European Commission President Ursula von der Leyen is part of the EU leadership engaging Canada on economic and strategic cooperation. The summit provides an opportunity to strengthen transatlantic partnerships at a time of global economic and security uncertainty.",
+        "update": "Von der Leyen is representing the European Commission at the EU-Canada summit in Montreal.",
+        "script": "European Commission President Ursula von der Leyen is involved in discussions aimed at strengthening the EU's relationship with Canada. Trade, critical raw materials, technology, defence and economic security are important elements of the talks.",
         "source": "European Council",
         "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/",
         "status": "Summit underway"
@@ -398,78 +330,61 @@
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027: Tinubu Begins Re-Election Campaign",
-      "image": "assets/leaders/tinubu.jpg",
-      "summary": "President Tinubu launched his re-election campaign in Kaduna on 24 October. The campaign comes amid a cost-of-living crisis and continuing security challenges.",
-      "radiantWavesView": "The election should be about credibility, performance, security, economic opportunity and the quality of leadership. Political parties must explain how their proposals will improve people's lives.",
-      "keyQuestion": "Will the opposition find common ground, or will political divisions strengthen the incumbent's chances?",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
+      "title": "Nigeria 2027: Opposition Groups Explore a Common Candidate",
+      "summary": "The G100 coalition says it is working to bring opposition groups together and develop a common electoral strategy. Cardinal John Onaiyekan has reportedly encouraged the effort.",
+      "radiantWavesView": "A coalition must be built on more than the desire to defeat an incumbent. It needs a credible candidate, a clear national programme, transparent decision-making and a commitment to democratic accountability.",
+      "keyQuestion": "Can Atiku, Obi and other opposition figures agree on a candidate and a programme that Nigerians can trust?",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/",
+      "status": "Negotiations ongoing"
+    },
+    {
+      "title": "Tinubu's Re-Election Campaign: The Test of Performance",
+      "summary": "President Tinubu launched his campaign in Kaduna on 24 October. The election debate will focus on economic reforms, cost of living, security and public confidence.",
+      "radiantWavesView": "An incumbent should be judged by the results of government policies, while challengers should be judged by the credibility and practicality of their alternatives. Voters deserve evidence and clear commitments from all candidates.",
+      "keyQuestion": "Will voters prioritise continuity, change or the credibility of the candidates?",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e",
       "status": "Campaign underway"
-    },
-    {
-      "title": "Opposition Unity and the Search for a Credible Alternative",
-      "summary": "Nigeria's opposition faces the challenge of building a convincing electoral alternative while managing disagreements over candidates, party structures and political strategy.",
-      "radiantWavesView": "Unity alone is not enough. Any coalition must present a clear programme, credible leadership and a commitment to democratic accountability. Voters should not be asked to support an alliance without knowing what it stands for.",
-      "keyQuestion": "Can opposition leaders put national interest ahead of individual political ambition?",
-      "source": "RadiantWaves Media Editorial Desk",
-      "url": "https://www.inecnigeria.org/",
-      "status": "Political analysis"
-    },
-    {
-      "title": "The Cost of Living and the Voter's Decision",
-      "summary": "Economic hardship, food prices, fuel costs, employment and security will remain central issues in the 2027 election debate.",
-      "radiantWavesView": "Candidates should explain how they will address the pressures facing households, support businesses, create jobs and improve public services. Campaign slogans cannot replace practical policies.",
-      "keyQuestion": "Which candidate has the clearest and most realistic plan to improve everyday life?",
-      "source": "RadiantWaves Media Editorial Desk",
-      "url": "https://www.inecnigeria.org/",
-      "status": "Editorial analysis"
     }
   ],
   "breakingHistory": [
     {
-      "date": "29 October 2026",
-      "headline": "Deadly High-Speed Train Collision in Spain",
-      "summary": "A collision between two high-speed trains in Toledo province killed at least 69 people. Investigators continue to examine the circumstances surrounding the disaster.",
+      "date": "30 October 2026",
+      "headline": "Preliminary Findings Emerge in Spain Train Disaster",
+      "summary": "Investigators are examining signalling failures and operational decisions after a collision that killed at least 69 people.",
+      "image": "assets/spain-train-disaster.jpg",
       "category": "Transport Disaster",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/spanish-rescuers-search-trains-hope-finding-survivors-deadly-crash-2026-10-29/"
+      "url": "https://www.reuters.com/world/europe/spanish-train-was-travelling-160-kph-when-it-smashed-into-second-one-report-2026-10-30/"
     },
     {
-      "date": "29 October 2026",
-      "headline": "North Korea Fires Ballistic Missiles Towards the East Sea",
-      "summary": "South Korean authorities reported that North Korea launched around ten short-range ballistic missiles towards the East Sea.",
-      "category": "International Security",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/b1a2feff5944a71c716ed37fd94e8aa5"
-    },
-    {
-      "date": "29 October 2026",
-      "headline": "Canada-EU Summit Opens in Montreal",
-      "summary": "Canadian and European leaders met to discuss a closer strategic partnership covering trade, security, digital cooperation and critical raw materials.",
-      "category": "International Diplomacy",
-      "source": "European Council",
-      "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/"
+      "date": "30 October 2026",
+      "headline": "Nigeria Opposition Coalition Discusses Common Candidate",
+      "summary": "Opposition coalition figures say they are working towards a common candidate ahead of the 2027 presidential election.",
+      "category": "Nigeria Politics",
+      "source": "Daily Post Nigeria",
+      "url": "https://dailypost.ng/2026/10/30/2027-presidency-what-cardinal-onaiyekan-told-atiku-peter-obi-others-about-uniting-against-tinubu-lukman/"
     },
     {
       "date": "24 October 2026",
       "headline": "Tinubu Launches Re-Election Campaign in Kaduna",
-      "summary": "Nigeria's president launched his re-election campaign amid economic challenges and continuing security concerns.",
+      "summary": "Nigeria's president launched his re-election campaign amid economic challenges and opposition divisions.",
       "category": "Nigeria Politics",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/fdc2c405ddcf1b9e47bb805586be366e"
     }
   ],
   "thoughtForToday": {
-    "title": "The Courage to Keep Moving",
-    "subtitle": "A difficult yesterday does not have to define tomorrow.",
-    "content": "Life does not always move according to our plans. Some days bring disappointment, unexpected challenges and unanswered questions. But every new morning gives us another opportunity to learn, make better choices and take a meaningful step forward. Do not allow yesterday's difficulties to steal today's hope. Move with patience, work with purpose and treat others with kindness. Progress may be slow, but every honest step matters.",
+    "title": "The Courage to Begin Again",
+    "subtitle": "Every sunrise offers another chance.",
+    "content": "Yesterday may have tested your strength, delayed your plans or left you with unanswered questions. But one difficult chapter does not have to define your whole story. You cannot change every event that comes your way, but you can choose the wisdom you carry forward, the kindness you offer and the courage with which you take your next step. Do not spend today trying to rewrite yesterday. Use today to create a better tomorrow.",
     "attribution": "Original inspirational reflection — RadiantWaves Media"
   },
   "todaysBigQuestion": {
-    "title": "What Should We Expect From Those Who Seek Political Power?",
-    "question": "When politicians ask citizens to trust them with another term or a new mandate, should voters judge them mainly by their promises, their past performance, their integrity or their ability to unite the country?",
-    "discussion": "Democracy gives citizens the opportunity to question leadership and demand accountability. What should matter most when choosing the next leader: promises, proven results, character or a realistic plan for the future?",
+    "title": "What Makes a Political Leader Worth Trusting?",
+    "question": "When choosing a president, should citizens place greater importance on past performance, integrity, economic plans, national unity or the ability to deliver real change?",
+    "discussion": "Elections should be about more than political popularity and campaign promises. What qualities should Nigerians demand from anyone seeking the country's highest office?",
     "attribution": "RadiantWaves Media — Today's Big Question"
   },
   "sponsoredAdverts": [
@@ -525,11 +440,10 @@
   ],
   "editorialStandards": {
     "verification": "RadiantWaves Media aims to verify facts through credible reporting and primary sources before publication.",
-    "accuracy": "Figures and details in developing stories may change. The newsroom will update reports when reliable new information becomes available.",
+    "accuracy": "Developing stories may change. Figures and details should be updated when reliable new information becomes available.",
     "independence": "Editorial coverage is independently written and does not reproduce other publishers' articles.",
-    "balance": "Political coverage should distinguish confirmed facts, allegations, opinion and campaign claims.",
+    "balance": "Political coverage distinguishes confirmed facts, allegations, campaign claims and opinion.",
     "corrections": "Material errors should be corrected transparently when identified.",
-    "attribution": "External reporting and official statements should be attributed to their original sources.",
-    "developingStories": "Where official investigations or legal proceedings remain open, reports should be labelled as developing and must not present unconfirmed explanations as established facts."
+    "attribution": "External reporting and official statements should be attributed to their original sources."
   }
 }

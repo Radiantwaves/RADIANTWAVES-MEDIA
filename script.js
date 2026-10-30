@@ -3,7 +3,7 @@
 /* =========================================================
    RADIANTWAVES MEDIA NIGERIA LTD
    NEWSROOM WEBSITE JAVASCRIPT
-   Version 6001
+   Version 6002
    ========================================================= */
 
 const CONFIG = {
@@ -145,7 +145,7 @@ function getArray(value) {
 }
 
 /* =========================================================
-   IMPROVED CATEGORY RECOGNITION
+   CATEGORY RECOGNITION
    ========================================================= */
 
 function normaliseCategory(value) {
@@ -169,7 +169,6 @@ function normaliseCategory(value) {
         canada: "world",
         australia: "world",
         newzealand: "world",
-        politics: "nigeria",
         nigerianpolitics: "nigeria",
         tech: "technology",
         artificialintelligence: "technology",
@@ -183,16 +182,6 @@ function normaliseCategory(value) {
     if (aliases[category]) {
         return aliases[category];
     }
-
-    /*
-       Recognise categories that contain a region or country.
-       Examples:
-       Nigeria Politics -> nigeria
-       Nigeria Economy -> nigeria
-       USA Politics -> usa
-       France Economy -> europe
-       South Africa Politics -> africa
-    */
 
     if (
         category.includes("nigeria") ||
@@ -217,7 +206,6 @@ function normaliseCategory(value) {
         category.includes("germany") ||
         category.includes("britain") ||
         category.includes("british") ||
-        category.includes("uk") ||
         category.includes("unitedkingdom")
     ) {
         return "europe";
@@ -255,17 +243,9 @@ function normaliseCategory(value) {
         return "technology";
     }
 
-    if (category.includes("business")) {
-        return "business";
-    }
-
-    if (category.includes("editorial")) {
-        return "editorial";
-    }
-
-    if (category.includes("analysis")) {
-        return "analysis";
-    }
+    if (category.includes("business")) return "business";
+    if (category.includes("editorial")) return "editorial";
+    if (category.includes("analysis")) return "analysis";
 
     if (
         category.includes("factcheck") ||
@@ -281,9 +261,7 @@ function normaliseCategory(value) {
         return "beyondstatement";
     }
 
-    if (category.includes("world")) {
-        return "world";
-    }
+    if (category.includes("world")) return "world";
 
     return category;
 }
@@ -301,9 +279,7 @@ function renderParagraphs(value) {
 
     return paragraphs
         .filter(Boolean)
-        .map(paragraph =>
-            `<p>${escapeHTML(paragraph)}</p>`
-        )
+        .map(paragraph => `<p>${escapeHTML(paragraph)}</p>`)
         .join("");
 }
 
@@ -500,6 +476,7 @@ function renderNewsCard(item, options = {}) {
                 ${renderPresenterScript(item)}
                 ${renderSources(item)}
             </div>
+
             <button class="read-more-button"
                     type="button"
                     aria-expanded="false"
@@ -531,7 +508,6 @@ function renderNewsCard(item, options = {}) {
                 ` : ""}
 
                 ${detailsHTML}
-
                 ${sourceHTML}
             </div>
         </article>
@@ -568,12 +544,6 @@ function renderCardCollection(containerId, items, emptyMessage) {
    ========================================================= */
 
 function collectArticles(data) {
-    /*
-       Each collection receives a fallback category.
-       This means a story can still appear in its correct
-       regional section even if its category wording differs.
-    */
-
     const collections = [
         { name: "articles", category: "" },
         { name: "topStories", category: "" },
@@ -629,7 +599,6 @@ function collectArticles(data) {
         ].join("|");
 
         if (identity === "|") return false;
-
         if (seen.has(identity)) return false;
 
         seen.add(identity);
@@ -681,17 +650,15 @@ function renderFeatured(data) {
 }
 
 function renderTopStories(data) {
-    const stories = getArray(data.topStories);
-
     renderCardCollection(
         "top-stories-container",
-        stories,
+        data.topStories,
         "No verified top stories have been added yet."
     );
 }
 
 /* =========================================================
-   HERO AND BREAKING NEWS
+   HERO
    ========================================================= */
 
 function renderHero(data) {
@@ -710,10 +677,17 @@ function renderHero(data) {
     );
 
     const titleElement = getElement("hero-title");
-    const descriptionElement = getElement("hero-description");
+
+    // Correct HTML ID: hero-desc
+    const descriptionElement =
+        getElement("hero-desc") ||
+        getElement("hero-description");
+
     const dateElement = getElement("hero-date");
 
-    if (titleElement) titleElement.textContent = title;
+    if (titleElement) {
+        titleElement.textContent = title;
+    }
 
     if (descriptionElement) {
         descriptionElement.textContent = description;
@@ -736,8 +710,12 @@ function renderHero(data) {
     const heroVideo = getElement("heroVideo");
 
     if (hero.video && videoSource && heroVideo) {
-        videoSource.src = safeImage(hero.video);
-        heroVideo.load();
+        const videoPath = safeImage(hero.video);
+
+        if (videoPath) {
+            videoSource.src = videoPath;
+            heroVideo.load();
+        }
     }
 
     const heroImage = getElement("hero-image");
@@ -747,26 +725,92 @@ function renderHero(data) {
     }
 }
 
-function renderBreaking(data) {
-    const container = getElement("breaking-ticker");
+/* =========================================================
+   BREAKING NEWS — CONTINUOUS MOVING TICKER
+   ========================================================= */
 
-    if (!container) return;
+function renderBreaking(data) {
+    const originalContainer = getElement("breaking-ticker");
+
+    if (!originalContainer) return;
 
     const breaking = getArray(data.breaking);
 
-    if (!breaking.length) {
-        container.textContent =
-            "RadiantWaves Media — Connecting You to the World's Most Important Stories.";
-        return;
+    const headlines = breaking
+        .map(item => {
+            if (typeof item === "string") {
+                return cleanText(item);
+            }
+
+            return cleanText(
+                getFirstValue(
+                    item,
+                    ["title", "headline", "text"],
+                    ""
+                )
+            );
+        })
+        .filter(Boolean);
+
+    const viewport = originalContainer.closest(".ticker-viewport") ||
+        originalContainer.parentElement;
+
+    if (!viewport) return;
+
+    // Remove any old ticker track before rebuilding it.
+    const oldTrack = viewport.querySelector(".ticker-track");
+
+    if (oldTrack) {
+        oldTrack.remove();
     }
 
-    container.innerHTML = breaking.map(item => {
-        const title = typeof item === "string"
-            ? item
-            : getFirstValue(item, ["title", "headline", "text"], "");
+    const track = document.createElement("div");
+    track.className = "ticker-track";
 
-        return `<span class="ticker-item">${escapeHTML(title)}</span>`;
-    }).join("");
+    const sequenceOne = document.createElement("div");
+    sequenceOne.className = "ticker";
+
+    const sequenceTwo = document.createElement("div");
+    sequenceTwo.className = "ticker";
+    sequenceTwo.setAttribute("aria-hidden", "true");
+
+    const messages = headlines.length
+        ? headlines
+        : [
+            "RadiantWaves Media — Connecting You to the World's Most Important Stories."
+        ];
+
+    function populateSequence(sequence) {
+        messages.forEach((headline, index) => {
+            const item = document.createElement("span");
+            item.className = "ticker-item";
+            item.textContent = headline;
+
+            sequence.appendChild(item);
+
+            if (index < messages.length - 1) {
+                const separator = document.createElement("span");
+                separator.className = "ticker-separator";
+                separator.textContent = " ◆ ";
+                separator.setAttribute("aria-hidden", "true");
+                sequence.appendChild(separator);
+            }
+        });
+    }
+
+    populateSequence(sequenceOne);
+    populateSequence(sequenceTwo);
+
+    track.appendChild(sequenceOne);
+    track.appendChild(sequenceTwo);
+
+    // Replace the old ticker element with the animated track.
+    originalContainer.replaceWith(track);
+
+    // Ensure the ticker starts at the beginning after each edition loads.
+    track.style.animation = "none";
+    void track.offsetWidth;
+    track.style.animation = "";
 }
 
 /* =========================================================
@@ -821,7 +865,24 @@ function renderPublicInterestFeature(data) {
         return;
     }
 
-    container.innerHTML = renderNewsCard(feature);
+    const featureHTML = renderNewsCard(feature);
+
+    const questions = getArray(feature.keyQuestions);
+
+    const questionsHTML = questions.length
+        ? `
+            <div class="public-interest-questions">
+                <h4>Key questions for the public</h4>
+                <ul>
+                    ${questions.map(question =>
+                        `<li>${escapeHTML(question)}</li>`
+                    ).join("")}
+                </ul>
+            </div>
+        `
+        : "";
+
+    container.innerHTML = featureHTML + questionsHTML;
 }
 
 /* =========================================================
@@ -832,11 +893,6 @@ function renderTechnologyInnovation(data) {
     const container = getElement("technology-innovation");
 
     if (!container) return;
-
-    /*
-       Read both fields independently.
-       Do not let a non-empty array hide the innovation object.
-    */
 
     const technologyItems = getArray(data.technologyInnovation);
     const innovationItems = getArray(data.innovation);
@@ -857,7 +913,6 @@ function renderTechnologyInnovation(data) {
         ].join("|");
 
         if (identity === "|") return false;
-
         if (seen.has(identity)) return false;
 
         seen.add(identity);
@@ -1135,29 +1190,53 @@ function renderArchives(data) {
    THOUGHT FOR TODAY AND BIG QUESTION
    ========================================================= */
 
+function getEditorialText(value, fields) {
+    if (typeof value === "string" || typeof value === "number") {
+        return cleanText(value);
+    }
+
+    if (value && typeof value === "object") {
+        return cleanText(
+            getFirstValue(value, fields, "")
+        );
+    }
+
+    return "";
+}
+
 function renderQuestionAndQuote(data) {
     const question = getElement("big-question");
     const quote = getElement("quote-of-the-day");
 
     if (question) {
-        const value = getFirstValue(
+        const questionData = getFirstValue(
             data,
             ["todaysBigQuestion", "bigQuestion"],
             ""
         );
 
-        question.textContent = value ||
+        const questionText = getEditorialText(
+            questionData,
+            ["question", "content", "title"]
+        );
+
+        question.textContent = questionText ||
             "What questions should the public be asking about today's news?";
     }
 
     if (quote) {
-        const value = getFirstValue(
+        const quoteData = getFirstValue(
             data,
             ["thoughtForToday", "quoteOfTheDay"],
             ""
         );
 
-        quote.textContent = value ||
+        const quoteText = getEditorialText(
+            quoteData,
+            ["content", "quote", "thought", "text", "title"]
+        );
+
+        quote.textContent = quoteText ||
             "A well-informed society is better equipped to question, understand and shape its future.";
     }
 }
@@ -1172,6 +1251,8 @@ function renderAdverts(data) {
     adverts.forEach((advert, index) => {
         const container = getElement("sponsored-ad-" + (index + 1));
 
+        // The current website has static sponsored advert cards.
+        // Do not replace or remove those cards if these IDs do not exist.
         if (!container) return;
 
         const title = getFirstValue(
@@ -1217,6 +1298,8 @@ function renderAdverts(data) {
    ========================================================= */
 
 function initialiseContactForm() {
+    // The current HTML uses advert-request-form and its own
+    // mailto action. Leave that existing form behaviour intact.
     const form = getElement("contact-form");
 
     if (!form) return;
@@ -1262,79 +1345,133 @@ function initialiseContactForm() {
             "\n\nMessage:\n" + message
         );
 
-        const mailto =
+        window.location.href =
             "mailto:" + CONFIG.CONTACT_EMAIL +
             "?subject=" + mailSubject +
             "&body=" + mailBody;
-
-        window.location.href = mailto;
     });
 }
 
 /* =========================================================
-   VIDEO CONTROLS
+   STUDIO VIDEO CONTROLS — FIXED
    ========================================================= */
 
 function initialiseVideoControls() {
     const video = getElement("heroVideo");
     const soundButton = getElement("sound-button");
+    const source = getElement("video-source");
 
-    if (!video) return;
+    if (!video || !source) return;
+
+    const videoPaths = [
+        "./assets/video1.mp4",
+        "./assets/video2.mp4",
+        "./assets/video3.mp4"
+    ];
 
     video.muted = true;
     video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
 
-    const playVideo = () => {
+    function playVideo() {
         const playPromise = video.play();
 
-        if (playPromise && typeof playPromise.catch === "function") {
-            playPromise.catch(() => {
-                // Autoplay may be restricted by the browser.
+        if (
+            playPromise &&
+            typeof playPromise.catch === "function"
+        ) {
+            playPromise.catch(error => {
+                console.info(
+                    "Video playback is waiting for browser permission:",
+                    error
+                );
             });
         }
-    };
+    }
 
-    playVideo();
+    function updateSoundButton() {
+        if (!soundButton) return;
 
-    if (soundButton) {
-        soundButton.addEventListener("click", () => {
-            video.muted = !video.muted;
+        soundButton.textContent = video.muted
+            ? "Turn sound on"
+            : "Mute video";
 
-            soundButton.textContent = video.muted
-                ? "Turn sound on"
-                : "Mute video";
+        soundButton.setAttribute(
+            "aria-label",
+            video.muted ? "Turn sound on" : "Mute video"
+        );
+    }
 
-            if (!video.paused) return;
+    function selectVideo(path, selectedButton) {
+        if (!videoPaths.includes(path)) return;
 
-            playVideo();
+        // Set the exact path supplied by the HTML button.
+        source.src = path;
+
+        video.load();
+
+        document.querySelectorAll("[data-video]").forEach(button => {
+            const isActive = button === selectedButton;
+
+            button.classList.toggle("is-active", isActive);
+            button.setAttribute(
+                "aria-pressed",
+                String(isActive)
+            );
         });
+
+        // Start the selected video after loading its source.
+        video.addEventListener("canplay", playVideo, {
+            once: true
+        });
+
+        // Also attempt playback immediately; the canplay event
+        // provides another attempt once the new source is ready.
+        playVideo();
     }
 
     document.querySelectorAll("[data-video]").forEach(button => {
+        const path = button.getAttribute("data-video");
+
+        button.setAttribute(
+            "aria-pressed",
+            String(path === source.getAttribute("src"))
+        );
+
         button.addEventListener("click", () => {
-            const videoNumber = button.getAttribute("data-video");
-
-            if (!["1", "2", "3"].includes(videoNumber)) return;
-
-            const source = getElement("video-source");
-
-            if (!source) return;
-
-            source.src = `assets/video${videoNumber}.mp4`;
-
-            video.load();
-            playVideo();
+            selectVideo(path, button);
         });
     });
+
+    if (soundButton) {
+        updateSoundButton();
+
+        soundButton.addEventListener("click", () => {
+            video.muted = !video.muted;
+            updateSoundButton();
+
+            if (video.paused) {
+                playVideo();
+            }
+        });
+    }
+
+    // Start the initial video muted. Some browsers restrict autoplay.
+    playVideo();
 }
 
 /* =========================================================
-   MOBILE NAVIGATION
+   MOBILE NAVIGATION — CORRECTED HTML ID
    ========================================================= */
 
 function initialiseNavigation() {
     const toggle = getElement("nav-toggle");
-    const navigation = getElement("main-nav");
+
+    // Correct HTML ID: nav-menu
+    const navigation =
+        getElement("nav-menu") ||
+        getElement("main-nav");
 
     if (!toggle || !navigation) return;
 
@@ -1436,7 +1573,9 @@ async function loadNews() {
     const loading = getElement("news-loading");
     const errorBox = getElement("news-error");
 
-    if (errorBox) errorBox.textContent = "";
+    if (errorBox) {
+        errorBox.textContent = "";
+    }
 
     try {
         const response = await fetch(
@@ -1458,7 +1597,9 @@ async function loadNews() {
 
         renderAll(data);
 
-        if (loading) loading.style.display = "none";
+        if (loading) {
+            loading.style.display = "none";
+        }
 
     } catch (error) {
         console.error("RadiantWaves newsroom error:", error);

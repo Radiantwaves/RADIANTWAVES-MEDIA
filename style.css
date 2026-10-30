@@ -1,11 +1,11 @@
+
 /* =========================================================
    RADIANTWAVES MEDIA NIGERIA LTD
    MAIN NEWSROOM STYLESHEET
-   Version 6000
+   Version 6001
    ========================================================= */
 
-/* 1. BRAND VARIABLES
-========================================================= */
+/* 1. BRAND VARIABLES */
 
 :root {
     --rw-red: #c8102e;
@@ -34,8 +34,7 @@
     --rw-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* 2. RESET AND BASE STYLES
-========================================================= */
+/* 2. RESET AND BASE STYLES */
 
 * {
     box-sizing: border-box;
@@ -44,7 +43,7 @@
 }
 
 html {
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
 
@@ -73,14 +72,18 @@ a:hover {
     color: var(--rw-red-light);
 }
 
-button {
+button,
+input,
+textarea,
+select {
     font: inherit;
 }
 
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
     outline: 3px solid var(--rw-yellow);
     outline-offset: 3px;
 }
@@ -120,10 +123,10 @@ ul {
     padding: 18px;
     border-left: 3px solid var(--rw-red);
     border-radius: 4px;
+    grid-column: 1 / -1;
 }
 
-/* 3. ACCESSIBILITY
-========================================================= */
+/* 3. ACCESSIBILITY */
 
 .skip-link {
     position: absolute;
@@ -139,8 +142,7 @@ ul {
     left: 10px;
 }
 
-/* 4. HEADER AND BRANDING
-========================================================= */
+/* 4. HEADER AND BRANDING */
 
 .site-header {
     background: #080808;
@@ -168,22 +170,27 @@ ul {
 }
 
 .brand img,
+.brand-logo,
 .site-logo {
     width: 78px;
     height: 78px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
+.brand-copy,
 .brand-text {
     min-width: 0;
 }
 
+.brand-name,
 .brand-text h1 {
     color: var(--rw-white);
     font-size: clamp(20px, 3vw, 30px);
     letter-spacing: 0.5px;
 }
 
+.header-slogan,
 .brand-text p {
     color: var(--rw-yellow);
     font-size: 12px;
@@ -197,9 +204,9 @@ ul {
     gap: 12px;
 }
 
-/* 5. NAVIGATION
-========================================================= */
+/* 5. NAVIGATION */
 
+#nav-menu,
 .main-nav,
 #main-nav {
     background: var(--rw-red);
@@ -210,6 +217,7 @@ ul {
     gap: 0;
 }
 
+#nav-menu a,
 .main-nav a,
 #main-nav a {
     color: var(--rw-white);
@@ -222,6 +230,7 @@ ul {
     border-right: 1px solid rgba(255,255,255,0.12);
 }
 
+#nav-menu a:hover,
 .main-nav a:hover,
 #main-nav a:hover {
     background: var(--rw-red-dark);
@@ -240,9 +249,9 @@ ul {
     font-weight: 700;
 }
 
-/* 6. BREAKING NEWS TICKER
-========================================================= */
+/* 6. BREAKING NEWS TICKER */
 
+.ticker-wrap,
 .breaking-bar {
     background: #242424;
     display: flex;
@@ -252,6 +261,7 @@ ul {
     border-bottom: 1px solid var(--rw-border);
 }
 
+.ticker-label,
 .breaking-label {
     background: var(--rw-red);
     color: var(--rw-white);
@@ -260,9 +270,18 @@ ul {
     font-weight: 800;
     text-transform: uppercase;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-#breaking-ticker {
+.ticker-viewport {
+    min-width: 0;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+#breaking-ticker,
+.ticker {
     display: flex;
     align-items: center;
     gap: 35px;
@@ -273,14 +292,14 @@ ul {
     white-space: nowrap;
 }
 
-.ticker-item::before {
+.ticker-item::before,
+.ticker span::before {
     content: "●";
     color: var(--rw-yellow);
     margin-right: 10px;
 }
 
-/* 7. SECTION HEADINGS
-========================================================= */
+/* 7. SECTION HEADINGS */
 
 .section-heading {
     margin-bottom: 24px;
@@ -309,10 +328,10 @@ ul {
     max-width: 850px;
 }
 
-/* 8. HERO SECTION
-========================================================= */
+/* 8. HERO SECTION */
 
-.hero-section {
+.hero-section,
+#home {
     width: min(94%, var(--rw-container));
     margin: 25px auto;
     position: relative;
@@ -365,6 +384,7 @@ ul {
     margin: 10px 0;
 }
 
+#hero-desc,
 #hero-description {
     color: #eeeeee;
     font-size: 15px;
@@ -416,8 +436,7 @@ ul {
     background: #111;
 }
 
-/* 9. NEWS SUMMARY AND EDITORIAL NOTE
-========================================================= */
+/* 9. NEWS SUMMARY AND EDITORIAL NOTE */
 
 .newsroom-briefing {
     width: min(94%, var(--rw-container));
@@ -443,8 +462,7 @@ ul {
     margin-bottom: 12px;
 }
 
-/* 10. FEATURED STORY
-========================================================= */
+/* 10. FEATURED STORY */
 
 #featured-news {
     width: min(94%, var(--rw-container));
@@ -476,8 +494,7 @@ ul {
     font-size: clamp(22px, 3vw, 32px);
 }
 
-/* 11. NEWS GRIDS AND CARDS
-========================================================= */
+/* 11. NEWS GRIDS AND CARDS */
 
 .news-grid,
 #top-stories-container,
@@ -493,7 +510,6 @@ ul {
 #analysis-news,
 #fact-check-news,
 #beyond-statement-news,
-#technology-innovation,
 #election-watch-news {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -574,8 +590,7 @@ ul {
     color: var(--rw-red-light);
 }
 
-/* 12. EXPANDED ARTICLE REPORTS
-========================================================= */
+/* 12. EXPANDED ARTICLE REPORTS */
 
 .article-expanded-content {
     display: none;
@@ -648,8 +663,7 @@ ul {
     border-radius: 4px;
 }
 
-/* 13. EDITORIAL, ANALYSIS AND FACT CHECK
-========================================================= */
+/* 13. EDITORIAL, ANALYSIS AND FACT CHECK */
 
 #editorial-news .news-card {
     border-top: 3px solid var(--rw-yellow);
@@ -675,8 +689,7 @@ ul {
     border-top: 3px solid var(--rw-yellow);
 }
 
-/* 14. PUBLIC INTEREST FEATURE
-========================================================= */
+/* 14. PUBLIC INTEREST AND TECHNOLOGY */
 
 #public-interest-feature {
     display: grid;
@@ -688,8 +701,23 @@ ul {
     border-left: 4px solid var(--rw-yellow);
 }
 
-/* 15. LEADERS WATCH
-========================================================= */
+#technology-innovation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#technology-innovation h2,
+#technology-innovation h3,
+#technology-innovation > p {
+    grid-column: 1 / -1;
+}
+
+#technology-innovation .news-card {
+    min-width: 0;
+}
+
+/* 15. LEADERS WATCH */
 
 #leaders-grid {
     display: grid;
@@ -703,6 +731,7 @@ ul {
     border-radius: var(--rw-radius);
     overflow: hidden;
     box-shadow: var(--rw-shadow);
+    min-width: 0;
 }
 
 .leader-photo {
@@ -760,8 +789,7 @@ ul {
     font-size: 13px;
 }
 
-/* 16. HISTORY AND ARCHIVES
-========================================================= */
+/* 16. HISTORY AND ARCHIVES */
 
 #history-container,
 #archive-container {
@@ -797,8 +825,7 @@ ul {
     font-weight: 700;
 }
 
-/* 17. THOUGHT FOR TODAY AND BIG QUESTION
-========================================================= */
+/* 17. THOUGHT FOR TODAY AND BIG QUESTION */
 
 .community-panels {
     width: min(94%, var(--rw-container));
@@ -822,8 +849,7 @@ ul {
     border-left-color: var(--rw-red);
 }
 
-/* 18. LIVE TV
-========================================================= */
+/* 18. LIVE TV */
 
 .live-tv-section {
     width: min(94%, var(--rw-container));
@@ -849,8 +875,7 @@ ul {
     border: none;
 }
 
-/* 19. BUTTONS
-========================================================= */
+/* 19. BUTTONS */
 
 .button,
 .btn,
@@ -872,8 +897,7 @@ ul {
     color: var(--rw-white);
 }
 
-/* 20. SPONSORED ADVERTISEMENTS
-========================================================= */
+/* 20. SPONSORED ADVERTISEMENTS */
 
 .sponsored-section {
     width: min(94%, var(--rw-container));
@@ -891,6 +915,7 @@ ul {
 }
 
 .sponsored-ad,
+.advert-card,
 [id^="sponsored-ad-"] {
     background: var(--rw-panel);
     border: 1px solid var(--rw-border);
@@ -899,7 +924,8 @@ ul {
     text-align: center;
 }
 
-.advert-content img {
+.advert-content img,
+.advert-card img {
     width: 100%;
     max-height: 230px;
     object-fit: cover;
@@ -907,23 +933,25 @@ ul {
     margin-bottom: 12px;
 }
 
-.advert-content h3 {
+.advert-content h3,
+.advert-card h3 {
     color: var(--rw-yellow);
     margin-bottom: 8px;
 }
 
-.advert-content p {
+.advert-content p,
+.advert-card p {
     color: var(--rw-muted);
     font-size: 13px;
 }
 
-.advert-content a {
+.advert-content a,
+.advert-card a {
     font-size: 13px;
     font-weight: 700;
 }
 
-/* 21. BIRTHDAY WALL
-========================================================= */
+/* 21. BIRTHDAY WALL */
 
 .birthday-wall {
     width: min(94%, var(--rw-container));
@@ -938,10 +966,10 @@ ul {
     margin-bottom: 15px;
 }
 
-/* 22. CONTACT FORM
-========================================================= */
+/* 22. ADVERTISING AND CONTACT FORM */
 
-.contact-section {
+.contact-section,
+.advert-section {
     width: min(94%, 800px);
     margin: 40px auto;
     padding: 25px;
@@ -949,16 +977,21 @@ ul {
     border-radius: var(--rw-radius);
 }
 
-.contact-section h2 {
+.contact-section h2,
+.advert-section h2 {
     margin-bottom: 15px;
     color: var(--rw-white);
 }
 
+#advert-request-form,
 #contact-form {
     display: grid;
     gap: 13px;
 }
 
+#advert-request-form input,
+#advert-request-form textarea,
+#advert-request-form select,
 #contact-form input,
 #contact-form textarea,
 #contact-form select {
@@ -971,11 +1004,13 @@ ul {
     font: inherit;
 }
 
+#advert-request-form textarea,
 #contact-form textarea {
     min-height: 140px;
     resize: vertical;
 }
 
+#advert-request-form button,
 #contact-form button {
     background: var(--rw-red);
     color: var(--rw-white);
@@ -986,12 +1021,12 @@ ul {
     font-weight: 700;
 }
 
+#advert-request-form button:hover,
 #contact-form button:hover {
     background: var(--rw-red-dark);
 }
 
-/* 23. FOOTER
-========================================================= */
+/* 23. FOOTER */
 
 .site-footer {
     margin-top: 45px;
@@ -1039,18 +1074,19 @@ ul {
     font-size: 12px;
 }
 
+.social,
 .social-links {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
 }
 
+.social a,
 .social-links a {
     font-size: 13px;
 }
 
-/* 24. MOBILE AND TABLET RESPONSIVENESS
-========================================================= */
+/* 24. MOBILE AND TABLET RESPONSIVENESS */
 
 @media (max-width: 1024px) {
 
@@ -1059,6 +1095,7 @@ ul {
         display: block;
     }
 
+    #nav-menu,
     #main-nav,
     .main-nav {
         display: none;
@@ -1070,16 +1107,19 @@ ul {
         background: var(--rw-red-dark);
         flex-direction: column;
         align-items: stretch;
+        flex-wrap: nowrap;
         max-height: 75vh;
         overflow-y: auto;
         box-shadow: var(--rw-shadow);
     }
 
+    #nav-menu.active,
     #main-nav.active,
     .main-nav.active {
         display: flex;
     }
 
+    #nav-menu a,
     #main-nav a,
     .main-nav a {
         display: block;
@@ -1121,34 +1161,41 @@ ul {
     }
 
     .brand img,
+    .brand-logo,
     .site-logo {
         width: 58px;
         height: 58px;
     }
 
+    .brand-name,
     .brand-text h1 {
         font-size: 19px;
     }
 
+    .header-slogan,
     .brand-text p {
         font-size: 10px;
     }
 
-    .breaking-bar {
+    .breaking-bar,
+    .ticker-wrap {
         min-height: 38px;
     }
 
-    .breaking-label {
+    .breaking-label,
+    .ticker-label {
         padding: 9px 10px;
         font-size: 10px;
     }
 
-    #breaking-ticker {
+    #breaking-ticker,
+    .ticker {
         font-size: 11px;
         padding: 7px 10px;
     }
 
-    .hero-section {
+    .hero-section,
+    #home {
         margin: 15px auto;
     }
 
@@ -1165,6 +1212,7 @@ ul {
         font-size: 25px;
     }
 
+    #hero-desc,
     #hero-description {
         font-size: 12px;
     }
@@ -1226,23 +1274,35 @@ ul {
     .live-tv-section iframe {
         min-height: 250px;
     }
+
+    .hero-controls {
+        top: 8px;
+        right: 8px;
+    }
+
+    .hero-controls button {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
 }
 
-/* 25. SMALL MOBILE SCREENS
-========================================================= */
+/* 25. SMALL MOBILE SCREENS */
 
 @media (max-width: 380px) {
 
     .brand img,
+    .brand-logo,
     .site-logo {
         width: 48px;
         height: 48px;
     }
 
+    .brand-name,
     .brand-text h1 {
         font-size: 16px;
     }
 
+    .header-slogan,
     .brand-text p {
         font-size: 9px;
     }
@@ -1262,23 +1322,21 @@ ul {
     }
 }
 
-/* 26. REDUCED MOTION AND ACCESSIBILITY
-========================================================= */
+/* 26. REDUCED MOTION AND ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
-        scroll-behaviour: auto !important;
+        scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
 }
 
-/* 27. PRINT
-========================================================= */
+/* 27. PRINT */
 
 @media print {
 
@@ -1288,14 +1346,17 @@ ul {
     }
 
     .site-header,
+    #nav-menu,
     .main-nav,
     #main-nav,
+    .ticker-wrap,
     .breaking-bar,
     .hero-controls,
     .video-selector,
     .site-footer,
     .read-more-button,
-    .contact-section {
+    .contact-section,
+    .advert-section {
         display: none !important;
     }
 

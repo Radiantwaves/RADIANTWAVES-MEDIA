@@ -1,4 +1,4 @@
-
+Copy everything inside this 
 /* =========================================================
    RADIANTWAVES MEDIA — SCRIPT.JS
    Complete newsroom renderer

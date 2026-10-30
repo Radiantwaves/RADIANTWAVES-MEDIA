@@ -2,39 +2,32 @@
 /* =========================================================
    RADIANTWAVES MEDIA NIGERIA LTD
    MAIN NEWSROOM STYLESHEET
-   Version 6001
+   Version 6002
    ========================================================= */
-
-/* 1. BRAND VARIABLES */
 
 :root {
     --rw-red: #c8102e;
     --rw-red-dark: #990b22;
     --rw-red-light: #e21d3d;
     --rw-yellow: #f4c542;
-
     --rw-black: #111111;
     --rw-dark: #171717;
     --rw-panel: #202020;
     --rw-panel-light: #292929;
-
     --rw-white: #ffffff;
     --rw-light: #f5f5f5;
     --rw-grey: #aaaaaa;
     --rw-border: #383838;
-
     --rw-text: #eeeeee;
     --rw-muted: #b8b8b8;
-
     --rw-font-heading: "Archivo", Arial, sans-serif;
     --rw-font-body: "Inter", Arial, sans-serif;
-
     --rw-container: 1240px;
     --rw-radius: 8px;
     --rw-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* 2. RESET AND BASE STYLES */
+/* RESET */
 
 * {
     box-sizing: border-box;
@@ -126,7 +119,7 @@ ul {
     grid-column: 1 / -1;
 }
 
-/* 3. ACCESSIBILITY */
+/* ACCESSIBILITY */
 
 .skip-link {
     position: absolute;
@@ -142,7 +135,7 @@ ul {
     left: 10px;
 }
 
-/* 4. HEADER AND BRANDING */
+/* HEADER */
 
 .site-header {
     background: #080808;
@@ -151,7 +144,8 @@ ul {
     z-index: 1000;
 }
 
-.header-inner {
+.header-inner,
+.header-top {
     width: min(94%, var(--rw-container));
     margin: auto;
     min-height: 105px;
@@ -204,7 +198,7 @@ ul {
     gap: 12px;
 }
 
-/* 5. NAVIGATION */
+/* NAVIGATION */
 
 #nav-menu,
 .main-nav,
@@ -249,7 +243,9 @@ ul {
     font-weight: 700;
 }
 
-/* 6. BREAKING NEWS TICKER */
+/* =========================================================
+   BREAKING NEWS - CONTINUOUS ROLLING TICKER
+   ========================================================= */
 
 .ticker-wrap,
 .breaking-bar {
@@ -271,14 +267,22 @@ ul {
     text-transform: uppercase;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .ticker-viewport {
     min-width: 0;
     flex: 1;
-    overflow-x: auto;
-    scrollbar-width: thin;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
+
+/* The ticker track is animated only when JS creates it. */
 
 #breaking-ticker,
 .ticker {
@@ -288,8 +292,40 @@ ul {
     padding: 7px 20px;
     color: var(--rw-white);
     font-size: 13px;
-    overflow-x: auto;
     white-space: nowrap;
+    width: max-content;
+    min-width: max-content;
+    overflow: visible;
+}
+
+/* Support for a continuous duplicated ticker track. */
+
+.ticker-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    min-width: max-content;
+    flex-shrink: 0;
+    animation: rw-ticker-scroll 35s linear infinite;
+    will-change: transform;
+}
+
+.ticker-track #breaking-ticker,
+.ticker-track .ticker {
+    display: flex;
+    flex-shrink: 0;
+    width: max-content;
+    min-width: max-content;
+}
+
+.ticker-viewport:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .ticker-item::before,
@@ -299,7 +335,17 @@ ul {
     margin-right: 10px;
 }
 
-/* 7. SECTION HEADINGS */
+@keyframes rw-ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* SECTION HEADINGS */
 
 .section-heading {
     margin-bottom: 24px;
@@ -328,7 +374,7 @@ ul {
     max-width: 850px;
 }
 
-/* 8. HERO SECTION */
+/* HERO */
 
 .hero-section,
 #home {
@@ -436,7 +482,7 @@ ul {
     background: #111;
 }
 
-/* 9. NEWS SUMMARY AND EDITORIAL NOTE */
+/* NEWSROOM BRIEFING */
 
 .newsroom-briefing {
     width: min(94%, var(--rw-container));
@@ -462,7 +508,7 @@ ul {
     margin-bottom: 12px;
 }
 
-/* 10. FEATURED STORY */
+/* FEATURED STORY */
 
 #featured-news {
     width: min(94%, var(--rw-container));
@@ -494,7 +540,7 @@ ul {
     font-size: clamp(22px, 3vw, 32px);
 }
 
-/* 11. NEWS GRIDS AND CARDS */
+/* NEWS GRIDS AND CARDS */
 
 .news-grid,
 #top-stories-container,
@@ -590,7 +636,7 @@ ul {
     color: var(--rw-red-light);
 }
 
-/* 12. EXPANDED ARTICLE REPORTS */
+/* EXPANDED REPORTS */
 
 .article-expanded-content {
     display: none;
@@ -663,7 +709,7 @@ ul {
     border-radius: 4px;
 }
 
-/* 13. EDITORIAL, ANALYSIS AND FACT CHECK */
+/* EDITORIAL, ANALYSIS AND FACT CHECK */
 
 #editorial-news .news-card {
     border-top: 3px solid var(--rw-yellow);
@@ -689,7 +735,7 @@ ul {
     border-top: 3px solid var(--rw-yellow);
 }
 
-/* 14. PUBLIC INTEREST AND TECHNOLOGY */
+/* PUBLIC INTEREST AND TECHNOLOGY */
 
 #public-interest-feature {
     display: grid;
@@ -717,7 +763,7 @@ ul {
     min-width: 0;
 }
 
-/* 15. LEADERS WATCH */
+/* LEADERS WATCH */
 
 #leaders-grid {
     display: grid;
@@ -789,7 +835,7 @@ ul {
     font-size: 13px;
 }
 
-/* 16. HISTORY AND ARCHIVES */
+/* HISTORY AND ARCHIVES */
 
 #history-container,
 #archive-container {
@@ -825,9 +871,10 @@ ul {
     font-weight: 700;
 }
 
-/* 17. THOUGHT FOR TODAY AND BIG QUESTION */
+/* THOUGHT FOR TODAY AND BIG QUESTION */
 
-.community-panels {
+.community-panels,
+.community-panel {
     width: min(94%, var(--rw-container));
     margin: 30px auto;
     display: grid;
@@ -849,9 +896,10 @@ ul {
     border-left-color: var(--rw-red);
 }
 
-/* 18. LIVE TV */
+/* LIVE TV */
 
-.live-tv-section {
+.live-tv-section,
+.live-tv-box {
     width: min(94%, var(--rw-container));
     margin: 35px auto;
     background: var(--rw-panel);
@@ -860,22 +908,25 @@ ul {
     text-align: center;
 }
 
-.live-tv-section h2 {
+.live-tv-section h2,
+.live-tv-box h2 {
     color: var(--rw-white);
     margin-bottom: 12px;
 }
 
-.live-tv-section p {
+.live-tv-section p,
+.live-tv-box p {
     color: var(--rw-muted);
 }
 
-.live-tv-section iframe {
+.live-tv-section iframe,
+.live-tv-box iframe {
     width: 100%;
     min-height: 400px;
     border: none;
 }
 
-/* 19. BUTTONS */
+/* BUTTONS */
 
 .button,
 .btn,
@@ -897,7 +948,7 @@ ul {
     color: var(--rw-white);
 }
 
-/* 20. SPONSORED ADVERTISEMENTS */
+/* SPONSORED ADVERTISEMENTS */
 
 .sponsored-section {
     width: min(94%, var(--rw-container));
@@ -908,7 +959,8 @@ ul {
     margin-bottom: 18px;
 }
 
-.sponsored-grid {
+.sponsored-grid,
+.sponsored-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
@@ -951,7 +1003,7 @@ ul {
     font-weight: 700;
 }
 
-/* 21. BIRTHDAY WALL */
+/* BIRTHDAY WALL */
 
 .birthday-wall {
     width: min(94%, var(--rw-container));
@@ -966,7 +1018,7 @@ ul {
     margin-bottom: 15px;
 }
 
-/* 22. ADVERTISING AND CONTACT FORM */
+/* ADVERTISING AND CONTACT FORM */
 
 .contact-section,
 .advert-section {
@@ -1026,13 +1078,16 @@ ul {
     background: var(--rw-red-dark);
 }
 
-/* 23. FOOTER */
+/* =========================================================
+   FOOTER - CENTRED LAYOUT
+   ========================================================= */
 
 .site-footer {
     margin-top: 45px;
     background: #080808;
     border-top: 3px solid var(--rw-red);
     padding: 35px 0 20px;
+    text-align: center;
 }
 
 .footer-inner {
@@ -1041,6 +1096,14 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
+    text-align: center;
+    justify-items: center;
+    align-items: start;
+}
+
+.footer-inner > div {
+    width: 100%;
+    text-align: center;
 }
 
 .site-footer h3 {
@@ -1058,6 +1121,7 @@ ul {
 .site-footer ul {
     list-style: none;
     padding: 0;
+    margin: 0 auto;
 }
 
 .site-footer li {
@@ -1078,6 +1142,7 @@ ul {
 .social-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
 }
 
@@ -1086,7 +1151,7 @@ ul {
     font-size: 13px;
 }
 
-/* 24. MOBILE AND TABLET RESPONSIVENESS */
+/* TABLET */
 
 @media (max-width: 1024px) {
 
@@ -1149,13 +1214,16 @@ ul {
     }
 }
 
+/* MOBILE */
+
 @media (max-width: 700px) {
 
     body {
         font-size: 15px;
     }
 
-    .header-inner {
+    .header-inner,
+    .header-top {
         min-height: 82px;
         gap: 10px;
     }
@@ -1192,6 +1260,11 @@ ul {
     .ticker {
         font-size: 11px;
         padding: 7px 10px;
+        gap: 25px;
+    }
+
+    .ticker-track {
+        animation-duration: 28s;
     }
 
     .hero-section,
@@ -1222,7 +1295,8 @@ ul {
     }
 
     .newsroom-briefing,
-    .community-panels {
+    .community-panels,
+    .community-panel {
         grid-template-columns: 1fr;
     }
 
@@ -1254,7 +1328,8 @@ ul {
     #leaders-grid,
     #history-container,
     #archive-container,
-    .sponsored-grid {
+    .sponsored-grid,
+    .sponsored-list {
         grid-template-columns: 1fr;
     }
 
@@ -1269,9 +1344,15 @@ ul {
     .footer-inner {
         grid-template-columns: 1fr;
         gap: 20px;
+        justify-items: center;
     }
 
-    .live-tv-section iframe {
+    .footer-inner > div {
+        text-align: center;
+    }
+
+    .live-tv-section iframe,
+    .live-tv-box iframe {
         min-height: 250px;
     }
 
@@ -1284,9 +1365,14 @@ ul {
         padding: 7px 10px;
         font-size: 11px;
     }
+
+    .social,
+    .social-links {
+        justify-content: center;
+    }
 }
 
-/* 25. SMALL MOBILE SCREENS */
+/* SMALL MOBILE */
 
 @media (max-width: 380px) {
 
@@ -1322,7 +1408,7 @@ ul {
     }
 }
 
-/* 26. REDUCED MOTION AND ACCESSIBILITY */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1336,7 +1422,7 @@ ul {
     }
 }
 
-/* 27. PRINT */
+/* PRINT */
 
 @media print {
 

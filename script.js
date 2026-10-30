@@ -1,6 +1,4 @@
 
-
-javascript
 /* =========================================================
    RADIANTWAVES MEDIA — SCRIPT.JS
    Complete newsroom renderer

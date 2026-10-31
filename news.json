@@ -1,950 +1,639 @@
 {
-  "edition": "RadiantWaves Night News & Global Update",
-  "date": "30 October 2026",
-  "editionTime": "Night",
+  "edition": "Morning",
+  "date": "2026-10-31",
+  "editionTime": "Morning",
   "branding": {
-    "company": "RadiantWaves Media Nigeria Ltd",
-    "slogan": "Gateway to Your World News — Connecting You to the World",
+    "company": "RADIANTWAVES MEDIA NIGERIA LTD",
+    "slogan": "GATEWAY TO YOUR WORLD NEWS — CONNECTING YOU TO THE WORLD",
     "footer": "Connecting You Deeper to the World's Most Important Stories",
-    "email": "info@radiantwavesmedia.com",
-    "supportEmail": "support@radiantwavesmedia.com",
-    "whatsapp": "+33 6 21 61 31 49"
+    "location": "Nigeria | France | Global"
   },
   "hero": {
-    "title": "Night Global News: Spain's Rail Disaster, Nigeria's Accountability Debate and Rising International Tensions",
-    "description": "RadiantWaves brings you the major developments shaping Nigeria, Europe, America, Africa and Asia, with a focus on public accountability, security and international affairs.",
-    "marquee": "SPAIN RAIL DISASTER | NIGERIA BORROWING DEBATE | IGBOHO SECURITY NETWORK | KANU APPEAL | EL-RUFAI CASE | UKRAINE | CHINA | MIDDLE EAST",
-    "image": "assets/news-hero.jpg",
-    "video": "assets/video2.mp4"
+    "title": "Morning Global News Update",
+    "subtitle": "Nigeria, Africa and the World",
+    "image": "assets/diplomacy.jpeg",
+    "video": "assets/video1.mp4"
   },
-  "headline": "Spain Rail Disaster Leads Global Headlines as Nigeria Faces Fresh Questions on Debt, Security and Accountability",
-  "intro": "Good evening and welcome to RadiantWaves Media. Tonight's global briefing leads with the devastating railway disaster in Spain, where the reported death toll has risen sharply and investigators are working to establish what happened. In Nigeria, President Bola Tinubu's proposed external borrowing has intensified questions about public debt and accountability. Security developments involving Sunday Igboho's announced security network, the cases involving Nnamdi Kanu and Nasir El-Rufai, and continuing insecurity have also drawn attention. Ukraine remains under pressure from the war, while developments in China and Europe underline the changing international environment. Our reports distinguish confirmed developments from claims, allegations and matters still under investigation.",
-  "morningSummary": "The Night edition brings together the day's major developments: Spain's deadly railway disaster, Nigeria's proposed external borrowing, security and legal developments involving prominent Nigerian figures, Ukraine's continuing war, China’s disciplinary campaign and international tensions. The Middle East update appears at the end of this edition.",
-  "editorialNote": "RadiantWaves Media publishes independently written reporting, analysis and editorial observations. We distinguish confirmed developments from allegations, political claims and opinion. Statements are attributed to their speakers and context. Figures in developing stories may change as authorities release further information. Our objective is to inform the public, encourage accountability and promote meaningful debate.",
+  "headline": "Nigeria's 2027 political debate intensifies as Sunday Igboho, Nnamdi Kanu and national unity return to the spotlight",
+  "intro": "Good morning, and welcome to RadiantWaves Media. Today's edition examines Nigeria's political developments, the Yoruba Nation campaign, Nnamdi Kanu's legal history, the 2027 elections, economic accountability, international diplomacy, technology and global affairs.",
+  "morningSummary": [
+    "Sunday Igboho and the Yoruba Nation campaign return to the national conversation.",
+    "The contrasting experiences of Sunday Igboho and Nnamdi Kanu raise questions about separatist movements, justice and national unity.",
+    "Nigeria's 2027 election preparations continue amid candidate eligibility disputes and opposition discussions.",
+    "Families demand accountability over the deaths of 37 detained artisanal miners in Niger State.",
+    "Canada and the European Union announce closer strategic cooperation.",
+    "Nigeria's proposed external borrowing faces scrutiny over transparency and economic returns.",
+    "The United States prepares for its November midterm elections.",
+    "Ukraine and international security remain major concerns for European governments.",
+    "Artificial intelligence, semiconductors and digital infrastructure remain central to global economic competition."
+  ],
+  "editorialNote": "This edition distinguishes reported developments, official statements, political opinions and editorial analysis. Background reporting on Sunday Igboho and Nnamdi Kanu is not presented as a new legal development. Figures and developing reports should be checked against primary sources before publication.",
   "breaking": [
     {
-      "headline": "Spain Railway Disaster: Death Toll Reported at 69 as Investigation Continues",
-      "summary": "A major railway disaster in Spain has reportedly left at least 69 people dead, with more than 200 injured according to reports available during the day. Investigators are examining the circumstances surrounding the collision, including railway communications, signalling and operational decisions. The cause has not been conclusively established. Authorities are expected to provide further information as the investigation progresses.",
-      "category": "Europe Breaking News",
-      "status": "Developing investigation; casualty figures may change",
-      "source": "The Guardian and international reporting",
-      "radiantWavesView": "The immediate priority must be emergency care for survivors, support for affected families and a transparent investigation. Authorities should publish verified information about the sequence of events and any safety failures. It would be irresponsible to announce a definitive cause before investigators have completed their work."
+      "category": "Nigeria Politics",
+      "headline": "Sunday Igboho and the Yoruba Nation campaign return to the national conversation",
+      "summary": "Sunday Adeyemo, popularly known as Sunday Igboho, remains associated with the Yoruba Nation self-determination campaign. His history during the Buhari administration continues to raise questions about regional grievances, national unity and the government's response to separatist movements.",
+      "status": "Background and analysis",
+      "image": "assets/leaders/igboho.jpg"
     },
     {
-      "headline": "Tinubu's Proposed External Borrowing Faces Continued Questions",
-      "summary": "President Bola Tinubu's request for legislative approval to process approximately $20.52 billion and €1.045 billion in external borrowing continues to attract scrutiny. The administration says the proposed financing will support infrastructure and development priorities. The request remains subject to legislative consideration and must not be described as money already approved or disbursed.",
-      "category": "Nigeria Economy",
-      "status": "Legislative consideration",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
-      "radiantWavesView": "The National Assembly should demand project details, financing terms, repayment schedules and evidence of what previous loans have delivered. Nigeria needs development investment, but public borrowing must be transparent and accountable."
+      "category": "Nigeria Justice",
+      "headline": "Families demand justice over the deaths of 37 detained miners",
+      "summary": "Families of artisanal miners who died while in detention in Niger State are demanding accountability. A presidential panel reportedly linked the deaths to overcrowding, extreme heat, dehydration and neglect.",
+      "status": "Developing",
+      "image": "assets/diplomacy.jpeg"
     },
     {
-      "headline": "Sunday Igboho Announces Iru Ekun Security Network",
-      "summary": "Yoruba Nation activist Sunday Igboho has announced the formation of a security network known as Iru Ekun. Reports attribute to him or the organisers a claim that the network could involve 20,000 volunteers. That figure has not been independently established. Questions remain about the organisation's legal status, authorisation, command structure, training and operational powers.",
-      "category": "Nigeria Security",
-      "status": "Announcement reported; official status requires clarification",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/",
-      "radiantWavesView": "Community safety is important, particularly where residents feel exposed to insecurity. However, every security organisation must operate within the law, respect human rights and remain accountable. Federal and state authorities should clarify the legal position and explain how community security initiatives can work lawfully alongside established security agencies."
+      "category": "Nigeria Elections",
+      "headline": "INEC's revised timetable places presidential election on 16 January 2027",
+      "summary": "Preparations for the 2027 general elections continue amid party disputes, candidate eligibility questions and calls for credible electoral processes.",
+      "status": "Election monitoring"
     },
     {
-      "headline": "Nnamdi Kanu's Legal Appeal Remains in Focus",
-      "summary": "The legal proceedings involving detained IPOB leader Nnamdi Kanu remain a matter of national interest. Reports concerning his conviction, sentence and appeal have continued to generate debate about national security, due process and the rights of defendants. The current position of the appeal should be established from the relevant court records before any new ruling or outcome is reported.",
-      "category": "Nigeria Judiciary",
-      "status": "Legal proceedings; appeal developments require court-record confirmation",
-      "source": "Court proceedings and Nigerian news reporting",
-      "radiantWavesView": "The government has a responsibility to protect national security, while the courts must ensure that every defendant receives due process. Public debate should be based on court records, not speculation or political pressure."
-    },
-    {
-      "headline": "El-Rufai Legal Proceedings Continue to Raise Questions About Due Process",
-      "summary": "Former Kaduna State Governor Nasir El-Rufai remains at the centre of legal and political scrutiny. Reports describe separate proceedings involving allegations of financial mismanagement and unlawful interception of communications. He has denied allegations in the relevant proceedings. Allegations must not be presented as proven facts, and each case must be assessed on its evidence and court decisions.",
-      "category": "Nigeria Politics and Judiciary",
-      "status": "Legal proceedings; allegations remain subject to judicial determination",
-      "source": "Nigerian court and media reporting",
-      "radiantWavesView": "The rule of law requires transparent investigations, access to legal representation and fair hearings. Public officials and former officeholders should be accountable under the same laws as everyone else. Accountability must not become a substitute for due process."
+      "category": "International",
+      "headline": "Canada and the European Union deepen strategic cooperation",
+      "summary": "The new Canada-EU Alliance for the Future covers artificial intelligence, energy, critical minerals, trade, defence and security cooperation.",
+      "status": "Reported development"
     }
   ],
   "featured": {
-    "title": "Spain's Railway Disaster: Questions Mount as Investigators Search for Answers",
-    "subtitle": "A devastating railway incident has left dozens dead and many injured, prompting questions about safety, communications and accountability.",
-    "category": "International Breaking News",
-    "date": "30 October 2026",
-    "image": "assets/spain-train-disaster.jpg",
-    "summary": "Spain is facing a major railway tragedy after a collision that has reportedly killed at least 69 people and injured more than 200. The incident has prompted an investigation into the events leading up to the disaster. Officials and investigators are examining railway operations and communications, but the precise cause has not yet been established.",
-    "background": "The disaster has placed railway safety and emergency response under intense scrutiny. Reports have raised questions about signalling, communications and operational procedures. Investigators must establish the sequence of events using technical records, witness accounts and other evidence.",
-    "whyItMatters": "Railway safety depends on reliable infrastructure, effective communication, maintenance, staff procedures and independent oversight. When a major accident occurs, the public deserves a clear explanation of what failed and whether the incident could have been prevented.",
-    "whatHappensNext": "Investigators will examine available technical records and operational evidence. Authorities are expected to update casualty figures, identify the circumstances of the collision and explain any immediate safety measures.",
-    "radiantWavesView": "Our thoughts are with the victims, survivors and families affected by this tragedy. The investigation must be independent and thorough. If failures are identified, the responsible institutions must explain what happened and what will change to prevent another disaster.",
-    "keyQuestions": [
-      "What sequence of events led to the collision?",
-      "Were signalling and communications systems operating correctly?",
-      "Were safety procedures followed?",
-      "What support is being provided to survivors and affected families?",
-      "What immediate steps are being taken to protect railway passengers?",
-      "Will the investigation publish its findings transparently?"
+    "category": "Nigeria Politics and National Unity",
+    "headline": "SUNDAY IGBOHO AND NNAMDI KANU: TWO SEPARATIST CAMPAIGNS, DIFFERENT LEGAL EXPERIENCES",
+    "summary": "The experiences of Sunday Igboho and Nnamdi Kanu have become important reference points in Nigeria's debate about self-determination, national security, constitutional rights and national unity.",
+    "body": "Nigeria has experienced movements demanding greater regional autonomy or outright independence. Among the most prominent are the Yoruba Nation campaign associated with Sunday Igboho and the Biafran independence campaign associated with Nnamdi Kanu. Igboho became a prominent voice in the Yoruba Nation campaign during the administration of former President Muhammadu Buhari. Following a security operation at his Ibadan residence in July 2021, he left Nigeria and was arrested in the Republic of Benin while attempting to travel onwards. Kanu, associated with IPOB and the Biafran independence campaign, was arrested in Kenya in 2021 and brought to Nigeria, where he faced criminal charges connected with his activities and statements. Their legal experiences are different and should not be treated as identical. Their supporters have raised questions about political grievances and self-determination, while Nigerian authorities have cited national security and the law. The larger question is why some citizens believe their future can only be secured outside the Nigerian state, and what peaceful political solutions can address those grievances.",
+    "radiantWavesView": "Popularity does not remove the need for accountability, and political grievances should not automatically be treated as proof of criminal conduct. Nigeria needs fair institutions, due process, dialogue and peaceful channels for resolving political disagreements.",
+    "image": "assets/leaders/igboho.jpg",
+    "relatedImages": [
+      "assets/leaders/igboho.jpg",
+      "assets/leaders/kanu.jpg"
     ],
-    "source": "The Guardian and international reporting",
-    "status": "Developing story; casualty figures and investigation findings may change"
+    "verification": "Historical background and editorial analysis. Verify current legal status separately before publication."
   },
   "topStories": [
     {
-      "title": "Spain Railway Disaster Leaves at Least 69 Dead, Reports Say",
-      "category": "Europe Breaking News",
-      "region": "Spain",
-      "date": "30 October 2026",
-      "image": "assets/spain-train-disaster.jpg",
-      "summary": "Reports put the death toll at at least 69, with more than 200 people injured. Investigators are examining the circumstances of the collision, including communications and railway operations. The cause has not been conclusively established.",
-      "source": "The Guardian and international reporting",
-      "status": "Developing",
-      "radiantWavesView": "The families affected deserve accurate information and support. The investigation must establish the facts before responsibility is assigned."
+      "category": "Nigeria Politics",
+      "headline": "Sunday Igboho and the Yoruba Nation campaign remain subjects of national debate",
+      "summary": "The campaign raises questions about regional grievances, self-determination, constitutional rights and national unity.",
+      "image": "assets/leaders/igboho.jpg"
     },
     {
-      "title": "Tinubu's New Borrowing Proposal Faces Questions About Previous Loans",
+      "category": "Nigeria Justice",
+      "headline": "Families demand accountability over 37 miners' deaths in custody",
+      "summary": "A presidential panel reportedly identified overcrowding, extreme heat, dehydration and neglect among the factors behind the deaths.",
+      "image": "assets/diplomacy.jpeg"
+    },
+    {
       "category": "Nigeria Economy",
-      "region": "Nigeria",
-      "date": "30 October 2026",
-      "image": "assets/leaders/tinubu.jpg",
-      "summary": "The proposed external borrowing of approximately $20.52 billion and €1.045 billion remains subject to legislative scrutiny. Senator Victor Umeh has questioned the government's record on previous borrowing and reported unpaid contractors.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html",
-      "status": "Legislative scrutiny pending",
-      "radiantWavesView": "Lawmakers should demand a full account of previous borrowing before considering another major package. Nigerians need transparent records and measurable results."
+      "headline": "Tinubu defends proposed foreign borrowing",
+      "summary": "The administration argues that infrastructure investment can create economic opportunities, while citizens seek transparency over costs and repayment.",
+      "image": "assets/leaders/tinubu.jpg"
     },
     {
-      "title": "Sunday Igboho Announces Iru Ekun Security Network",
-      "category": "Nigeria Security",
-      "region": "Nigeria",
-      "date": "30 October 2026",
-      "image": "assets/leaders/igboho.jpg",
-      "summary": "Sunday Igboho has announced a new security network. Organisers reportedly claim that it could involve 20,000 volunteers, but the number has not been independently verified. The network's legal authority and operational structure require clarification.",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/",
-      "status": "Announcement reported; legal position unclear",
-      "radiantWavesView": "Community participation in safety must remain lawful, properly supervised and respectful of human rights. Authorities should clarify the rules governing the initiative."
+      "category": "Canada and Europe",
+      "headline": "Canada and EU launch Alliance for the Future",
+      "summary": "The partnership expands cooperation in technology, energy, trade and security.",
+      "image": "assets/leaders/carney.jpg"
     },
     {
-      "title": "Nnamdi Kanu's Appeal and the Question of Due Process",
-      "category": "Nigeria Judiciary",
-      "region": "Nigeria",
-      "date": "30 October 2026",
-      "image": "assets/leaders/kanu.jpg",
-      "summary": "Kanu's legal case continues to attract public attention. Reporting has described his conviction and sentence, as well as subsequent appeal developments. The latest position should be checked against the court record before any new decision is announced.",
-      "source": "Court proceedings and Nigerian news reporting",
-      "status": "Legal proceedings",
-      "radiantWavesView": "Security concerns and constitutional rights must both be taken seriously. The courts must determine the case through due process and the evidence before them."
+      "category": "International Diplomacy",
+      "headline": "G20 meeting exposes continuing diplomatic divisions",
+      "summary": "Disagreements over Russia's participation highlight the impact of the Ukraine war on international relations.",
+      "image": "assets/diplomacy.jpeg"
     },
     {
-      "title": "El-Rufai's Detention and Court Proceedings Remain Under Scrutiny",
-      "category": "Nigeria Politics and Judiciary",
-      "region": "Nigeria",
-      "date": "30 October 2026",
-      "image": "assets/leaders/el-rufai.jpg",
-      "summary": "Former Kaduna Governor Nasir El-Rufai faces legal proceedings involving allegations that he has denied. Reports have also raised questions about bail decisions and the progress of separate cases. Each allegation remains subject to judicial determination.",
-      "source": "Nigerian court and media reporting",
-      "status": "Proceedings ongoing",
-      "radiantWavesView": "Public accountability must be pursued through fair legal procedures. The public deserves clarity about the charges, evidence, court decisions and rights of the accused."
-    },
-    {
-      "title": "Ukraine: Russian Drone Strike Reported at Dnipro Railway Platform",
-      "category": "Europe Security",
-      "region": "Ukraine",
-      "date": "30 October 2026",
-      "image": "assets/dnipro-railway-attack.jpg",
-      "summary": "Reports say a Russian drone struck a crowded railway platform in Dnipro, with 14 people reportedly killed. The situation remains part of the wider war in Ukraine. Casualty figures and details should be treated as reported information pending confirmation from relevant authorities and independent reporting.",
-      "source": "International news reporting",
-      "status": "Developing conflict report",
-      "radiantWavesView": "Attacks affecting civilians and public transport underline the human cost of the war. All parties must comply with international humanitarian law and protect civilians."
-    },
-    {
-      "title": "China Announces Further Expulsions in Continuing Party Discipline Campaign",
-      "category": "Asia Politics",
-      "region": "China",
-      "date": "30 October 2026",
-      "summary": "Reports say China's ruling Communist Party has expelled 33 people as part of continuing disciplinary measures. The announcement highlights the leadership's emphasis on internal discipline and political control.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia",
-      "status": "Reported",
-      "radiantWavesView": "Anti-corruption measures should be assessed through transparent evidence, consistent procedures and due process."
-    },
-    {
-      "title": "Italy Sees Further Public Demonstrations Amid Political and Economic Debate",
-      "category": "Europe Politics",
-      "region": "Italy",
-      "date": "30 October 2026",
-      "summary": "Reports of demonstrations in Italy reflect continuing public debate over political and economic issues. The specific demands and scale of individual protests should be assessed from verified local reporting.",
-      "source": "International reporting",
-      "status": "Developing",
-      "radiantWavesView": "Peaceful public protest is an important democratic means of expressing concerns. Authorities should protect the right to demonstrate while ensuring public safety."
-    },
-    {
-      "title": "Cost-of-Living Concerns Continue to Shape Debate in France and Germany",
-      "category": "Europe Economy",
-      "region": "France and Germany",
-      "date": "30 October 2026",
-      "summary": "Household purchasing power, energy costs and economic uncertainty remain important issues in public debate across parts of Europe. France's reported third-quarter contraction adds to concerns about growth and investment.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/",
-      "status": "Economic and political developments",
-      "radiantWavesView": "Economic policy should be judged by its effect on employment, household costs, investment and public services. Governments need practical answers to the pressures citizens face."
-    },
-    {
-      "title": "Marine Le Pen's Presidential Campaign Puts National Sovereignty and Energy Back in Focus",
-      "category": "France Politics",
-      "region": "France",
-      "date": "30 October 2026",
-      "image": "assets/leaders/marine-le-pen.jpg",
-      "summary": "Marine Le Pen's campaign has focused on national renewal, security, national preference and domestic energy production. Her proposals remain campaign commitments and would require the relevant legal and political processes to become policy.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
-      "status": "Campaign proposals",
-      "radiantWavesView": "French voters deserve detailed explanations of how campaign proposals would affect the economy, rights, energy policy and France's relationship with Europe."
+      "category": "Ukraine",
+      "headline": "Western support and European security remain major concerns",
+      "summary": "Military assistance, air defence and diplomatic efforts continue to shape the international response to the war.",
+      "image": "assets/dnipro-railway-attack.jpg"
     }
   ],
   "articles": [
     {
-      "title": "Spain's Railway Disaster: The Questions Investigators Must Answer",
-      "category": "International Analysis",
-      "date": "30 October 2026",
-      "image": "assets/spain-train-disaster.jpg",
-      "summary": "The railway disaster in Spain has left families grieving and raised urgent questions about transport safety. Reports put the death toll at at least 69, with more than 200 injured. Investigators are examining the circumstances of the collision, including communications and railway operations.",
-      "background": "Major railway accidents require a careful examination of technical systems, operating procedures, infrastructure, staff decisions and emergency response. Early reports can provide important leads, but they do not replace a formal investigation.",
-      "whyItMatters": "Railway networks carry millions of passengers. Public confidence depends on reliable safety systems, proper maintenance, effective communication and transparent oversight.",
-      "whatHappensNext": "Investigators will need to reconstruct the sequence of events and publish findings supported by technical evidence. Authorities should also explain what immediate safety measures are being taken.",
-      "radiantWavesView": "The human cost must remain at the centre of this story. The public deserves an honest investigation, not premature conclusions. If failures are identified, institutions must accept responsibility and explain how they will prevent a repeat.",
-      "script": "Spain is mourning after a devastating railway disaster that has reportedly killed at least 69 people and injured more than 200. Investigators are examining the circumstances surrounding the collision, including railway communications and operational procedures. The cause has not yet been conclusively established. The priority now is support for survivors and families, followed by a transparent investigation. The public deserves to know what happened, whether safety systems failed and what will change to prevent another tragedy.",
-      "source": "The Guardian and international reporting",
-      "status": "Developing investigation"
-    },
-    {
-      "title": "Nigeria's Borrowing Debate: Who Will Account for the Money?",
-      "category": "Nigeria Analysis",
-      "date": "30 October 2026",
-      "summary": "President Bola Tinubu's request for approval to process approximately $20.52 billion and €1.045 billion in external borrowing has reopened the debate about public debt, development financing and accountability.",
-      "background": "The administration says the proposed financing will support infrastructure, agriculture, healthcare, education, water supply, security and other development priorities. Senator Victor Umeh has questioned the government's record on previous borrowing and reported unpaid contractors.",
-      "whyItMatters": "Public borrowing creates obligations that may affect future budgets and taxpayers. Citizens need to understand the cost, purpose, repayment conditions and expected results of major loans.",
-      "whatHappensNext": "The National Assembly must examine the proposal and request supporting documents, project details, financing terms and evidence of previous project delivery.",
-      "radiantWavesView": "The government should publish a project-by-project explanation and allow lawmakers to scrutinise it. The opposition must also demonstrate what it would do differently. Criticism without a credible alternative is incomplete, but borrowing without accountability is equally unacceptable.",
-      "script": "President Tinubu has asked the National Assembly to approve the processing of more than 20.5 billion dollars and one billion euros in external loans. The government says the money will support infrastructure, healthcare, education, agriculture and security. But lawmakers have raised questions about previous borrowing and reported unpaid contractors. Before approving another major package, the National Assembly must demand clear answers. Nigerians deserve to know where the money will go, how it will be repaid and what measurable results it will deliver.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
-      "status": "Legislative scrutiny pending"
-    },
-    {
-      "title": "Sunday Igboho's Security Network: Community Protection Must Follow the Law",
-      "category": "Nigeria Security Analysis",
-      "date": "30 October 2026",
+      "category": "Nigeria Politics",
+      "headline": "Sunday Igboho and the Yoruba Nation campaign: The questions Nigeria must not ignore",
+      "summary": "Sunday Adeyemo, popularly known as Sunday Igboho, became a prominent figure in the Yoruba Nation self-determination campaign during the Buhari administration.",
+      "body": "His campaign attracted attention amid concerns about insecurity, alleged attacks on communities, farmers' safety and the wider debate about Nigeria's political structure. In July 2021, Nigerian security operatives raided his residence in Ibadan. He subsequently left Nigeria and was arrested in the Republic of Benin while attempting to travel onwards. His supporters have presented him as a defender of Yoruba interests and self-determination. Critics have questioned the methods, rhetoric and political consequences associated with the movement. A person's popularity does not remove the need for accountability. Equally, a demand for self-determination should not automatically be treated as proof of criminal conduct. Nigerians deserve a serious discussion about insecurity, regional grievances, constitutional rights and national unity.",
       "image": "assets/leaders/igboho.jpg",
-      "summary": "Sunday Igboho has announced the Iru Ekun Security Network. Reports attribute to organisers a claim that the initiative could involve 20,000 volunteers. The figure and the network's legal and operational arrangements require independent clarification.",
-      "background": "Community security initiatives often emerge where residents feel that existing security arrangements are insufficient. However, the powers of private or community groups are governed by law and cannot simply be assumed.",
-      "whyItMatters": "Unregulated security structures can create risks involving vigilantism, abuse, mistaken identity and conflict with established security agencies. Effective community protection requires clear rules and accountability.",
-      "whatHappensNext": "Authorities should clarify whether the organisation has the necessary approvals, what activities it may lawfully undertake and how it will coordinate with recognised security agencies.",
-      "radiantWavesView": "The desire for safer communities is understandable. However, security must be lawful, professional and accountable. No organisation should be above the law, regardless of its political, cultural or regional identity.",
-      "script": "Sunday Igboho has announced a new security initiative called Iru Ekun. Reports say organisers have spoken of a possible 20,000 volunteers, although that number has not been independently verified. The important questions are about legality, training, leadership and accountability. Community safety matters, but security operations must respect the law and human rights. Authorities should explain how the initiative will operate and whether it has the necessary approval.",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/",
-      "status": "Announcement reported; legal details unclear"
+      "verification": "Historical background. No new legal decision is asserted."
     },
     {
-      "title": "Kanu and El-Rufai: Why Due Process Must Apply to Every High-Profile Case",
-      "category": "Nigeria Judiciary Analysis",
-      "date": "30 October 2026",
+      "category": "Nigeria Justice",
+      "headline": "Sunday Igboho and Nnamdi Kanu: Different legal experiences",
+      "summary": "The two prominent separatist figures have different histories, legal circumstances and political campaigns.",
+      "body": "Igboho became a leading voice in the Yoruba Nation campaign, while Kanu became the most internationally recognised figure associated with IPOB and the Biafran independence campaign. Igboho left Nigeria following the 2021 security operation against him and subsequent events in Benin Republic. Kanu was arrested in Kenya in 2021 and brought back to Nigeria, where he faced criminal charges connected with his activities and statements concerning IPOB. Kanu's prosecution and detention have generated extensive legal and political controversy. The two cases should not be treated as legally identical. Their circumstances, charges, court proceedings and legal outcomes must be examined separately. Nigeria must address political grievances through fair institutions, due process and peaceful dialogue.",
       "image": "assets/leaders/kanu.jpg",
-      "summary": "The legal cases involving Nnamdi Kanu and Nasir El-Rufai continue to attract public attention. They concern different allegations, proceedings and legal questions, and should not be treated as identical cases.",
-      "background": "Kanu's case concerns national security and terrorism-related proceedings, while El-Rufai faces separate legal proceedings involving allegations that he has denied. The precise status of each case must be established from court records and reliable reporting.",
-      "whyItMatters": "High-profile cases test public confidence in the justice system. Fair hearings, access to legal representation, transparent procedures and judicial independence are essential regardless of the identity or political position of the person involved.",
-      "whatHappensNext": "The relevant courts will determine the matters before them. News reports should be updated when verified rulings, filings or official statements become available.",
-      "radiantWavesView": "Nigeria must not apply one standard of justice to political allies and another to opponents. Allegations should be investigated, evidence tested and court decisions respected. Security concerns are real, but due process is not optional.",
-      "script": "Two high-profile Nigerian cases continue to attract public attention: that of Nnamdi Kanu and the legal proceedings involving former Kaduna Governor Nasir El-Rufai. These are separate cases with different allegations and legal processes. But one principle should apply to both: due process. The authorities must follow the law, the courts must examine the evidence, and the rights of the accused must be respected. Accountability and justice should never depend on political identity.",
-      "source": "Nigerian court and media reporting",
-      "status": "Legal proceedings; verify latest court records before reporting new outcomes"
+      "verification": "Historical background. Confirm current court status before publishing any new legal development."
     },
     {
-      "title": "Ukraine's Railway and Civilian Infrastructure Remain Exposed to War",
-      "category": "International Security",
-      "date": "30 October 2026",
+      "category": "Nigeria Elections",
+      "headline": "2027 elections: INEC's revised timetable",
+      "summary": "INEC's revised timetable sets the presidential and National Assembly elections for 16 January 2027 and governorship and State Assembly elections for 6 February 2027.",
+      "body": "Preparations for Nigeria's 2027 general elections continue. Candidate eligibility, party disputes, campaign conduct, voter registration and public confidence in the electoral process remain important issues. The commission's decisions and any subsequent court proceedings will be important to the final position of affected candidates. Nigerians should pay attention not only to the personalities contesting elections but also to the credibility of the process, the quality of candidates and the policies being offered.",
+      "image": "assets/leaders/tinubu.jpg",
+      "verification": "Check the latest INEC timetable and notices before publication."
+    },
+    {
+      "category": "Nigeria Economy",
+      "headline": "Tinubu defends borrowing plans",
+      "summary": "President Bola Ahmed Tinubu has defended his administration's proposed foreign borrowing, arguing that infrastructure investment should be judged by the economic opportunities and jobs it creates.",
+      "body": "Projects mentioned include the Lagos-Calabar Coastal Highway, Sokoto-Badagry Superhighway and port modernisation. The proposed borrowing still requires the relevant legislative approval. The debate goes beyond the amount borrowed. Nigerians need clear information about project costs, procurement, implementation timelines, repayment obligations and the economic benefits expected. Borrowing is not automatically wrong, but transparency and measurable results are essential.",
+      "image": "assets/leaders/tinubu.jpg",
+      "verification": "Confirm the latest loan amounts, legislative status and official documents."
+    },
+    {
+      "category": "Nigeria Justice",
+      "headline": "Families demand justice over 37 miners' deaths",
+      "summary": "Families of artisanal miners who died while in detention in Niger State are demanding accountability and the return of seized property.",
+      "body": "A presidential panel reportedly attributed the deaths to overcrowding, extreme heat, dehydration and neglect in custody. The findings raise serious questions about detention conditions, institutional responsibility and the protection of people held by state authorities. The government has said the panel's report was forwarded to the Attorney-General. Every person in custody is entitled to humane treatment. An investigation must establish responsibility, and any wrongdoing must be addressed through the law.",
+      "image": "assets/diplomacy.jpeg",
+      "verification": "Reported panel findings. Attribute findings to the panel and verify subsequent official responses."
+    },
+    {
+      "category": "Nigeria Politics",
+      "headline": "Tinubu's Umrah attracts political attention",
+      "summary": "President Tinubu travelled to Saudi Arabia to perform Umrah. Former Vice-President Atiku Abubakar called for daily photographs and video evidence of the pilgrimage.",
+      "body": "The exchange has generated political discussion. However, public attention should also remain on governance, economic performance, security, public spending and the responsibilities of elected officials.",
+      "image": "assets/leaders/tinubu.jpg",
+      "verification": "Check the original public statements and travel dates."
+    },
+    {
+      "category": "Nigeria Politics",
+      "headline": "Peter Obi questions Tinubu's continued leadership",
+      "summary": "Peter Obi has called on President Tinubu to step down, questioning his administration's performance and capacity to continue governing.",
+      "body": "His remarks add to the growing political debate ahead of the 2027 election. This is an opposition political position, not a constitutional determination. The wider debate should examine the government's record, the opposition's proposals and the constitutional procedures governing presidential tenure and removal.",
+      "image": "assets/leaders/obi.jpg",
+      "verification": "Attribute the position to Obi and verify the original statement."
+    },
+    {
+      "category": "Nigeria Labour",
+      "headline": "Labour divided over proposed N70,000 transport allowance",
+      "summary": "The proposed six-month transport allowance for public workers has reportedly divided organised labour.",
+      "body": "The reported disagreement centres on whether temporary financial support is sufficient or whether workers need more permanent improvements in pay. The debate reflects continuing pressure on workers' purchasing power. Temporary allowances may offer short-term relief, but the longer-term question concerns wages, inflation and the cost of living.",
+      "image": "assets/diplomacy.jpeg",
+      "verification": "Verify the final positions of the Nigeria Labour Congress and Trade Union Congress."
+    },
+    {
+      "category": "International Diplomacy",
+      "headline": "G20 meeting exposes diplomatic divisions",
+      "summary": "A G20 foreign ministers' meeting in Atlanta highlighted disagreements over Russia's participation in international diplomacy.",
+      "body": "European representatives reportedly objected to appearing in a traditional group photograph alongside Russian Foreign Minister Sergei Lavrov. The incident reflects the continuing impact of the war in Ukraine on international relations. Diplomatic cooperation remains important even when governments disagree over major international conflicts.",
+      "image": "assets/diplomacy.jpeg",
+      "verification": "Reported international development. Confirm the meeting details and official statements."
+    },
+    {
+      "category": "Europe Economy",
+      "headline": "France faces continuing economic and political pressure",
+      "summary": "Public finances, household purchasing power, employment and public services remain important issues in France.",
+      "body": "The government faces the challenge of balancing public finances with the need to protect living standards. Economic policy should be judged by its practical impact on households, workers and businesses.",
+      "image": "assets/diplomacy.jpeg",
+      "verification": "Confirm the latest INSEE economic figures and demonstration information."
+    },
+    {
+      "category": "Canada and Europe",
+      "headline": "Canada and the EU launch Alliance for the Future",
+      "summary": "The new partnership covers artificial intelligence, energy, critical minerals, digital trade, defence and security.",
+      "body": "Canadian Prime Minister Mark Carney and European leaders announced closer cooperation through the Alliance for the Future. The partnership focuses on technology, energy, critical minerals, digital trade, research and security. Canada and the EU are also exploring deeper institutional cooperation. The details of any associate-member arrangement remain subject to negotiation.",
+      "image": "assets/leaders/carney.jpg",
+      "verification": "Check the Canadian government and EU joint statements."
+    },
+    {
+      "category": "Ukraine Security",
+      "headline": "Ukraine remains central to European security discussions",
+      "summary": "Military assistance, air defence, sanctions and diplomatic negotiations continue to shape the international response to the war.",
+      "body": "The war between Russia and Ukraine remains a major security issue for Europe. Canada and the EU reaffirmed support for Ukraine's sovereignty and territorial integrity in their recent joint statement. The conflict continues to have wider implications for European defence, energy security and international relations.",
       "image": "assets/dnipro-railway-attack.jpg",
-      "summary": "Reports say a Russian drone struck a crowded railway platform in Dnipro, with 14 people reportedly killed. The incident highlights the continuing risks to civilians and public infrastructure during the war.",
-      "background": "Railways remain important for civilian movement, logistics and essential services in Ukraine. Attacks affecting public transport can have serious consequences for civilians.",
-      "whyItMatters": "International humanitarian law requires parties to a conflict to distinguish civilians from combatants and take precautions to protect civilian life.",
-      "whatHappensNext": "Further details should be checked against official Ukrainian statements and independent reporting. Casualty figures and the circumstances of the incident may be updated.",
-      "radiantWavesView": "Civilian lives must not become an accepted cost of war. Attacks must be investigated and all parties must comply with international humanitarian law.",
-      "script": "Reports from Ukraine say a Russian drone struck a crowded railway platform in Dnipro, killing 14 people. The details remain subject to confirmation, but the report again highlights the danger civilians face during the war. Railway stations are part of everyday civilian life. The protection of civilians and essential infrastructure must remain a priority under international humanitarian law.",
-      "source": "International news reporting",
-      "status": "Developing conflict report"
+      "verification": "Check the latest official statements and battlefield reporting."
     }
   ],
   "worldNews": [
     {
-      "title": "Spain Investigates Deadly Railway Disaster",
-      "category": "Europe",
-      "date": "30 October 2026",
-      "summary": "Reports put the death toll at at least 69, with more than 200 injured. Investigators are examining the circumstances of the collision.",
-      "radiantWavesView": "The investigation must establish the facts and identify any safety failures without premature conclusions.",
-      "source": "The Guardian and international reporting"
+      "category": "International Diplomacy",
+      "headline": "G20 meeting exposes diplomatic divisions",
+      "summary": "Disagreements over Russia's participation highlight the impact of the Ukraine war on international relations.",
+      "image": "assets/diplomacy.jpeg"
     },
     {
-      "title": "Ukraine Reports Deadly Drone Strike at Dnipro Railway Platform",
-      "category": "International Security",
-      "date": "30 October 2026",
-      "summary": "Reports say 14 people were killed after a drone struck a crowded railway platform in Dnipro. Details remain subject to confirmation.",
-      "radiantWavesView": "Civilians and civilian infrastructure must be protected under international humanitarian law.",
-      "source": "International news reporting"
-    },
-    {
-      "title": "China Continues Party Discipline Campaign",
-      "category": "Asia",
-      "date": "30 October 2026",
-      "summary": "Reports say China's Communist Party has expelled 33 people as part of continuing disciplinary measures.",
-      "radiantWavesView": "The public interest requires transparent procedures, evidence and due process.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
+      "category": "Global Economy",
+      "headline": "Governments navigate inflation, debt and trade uncertainty",
+      "summary": "Economic pressures continue to affect household finances, investment decisions and international trade."
     }
   ],
   "usaNews": [
     {
-      "title": "Trump's Midterm Campaign Strategy Shifts to Telephone Rallies",
       "category": "USA Politics",
-      "date": "29 October 2026",
-      "summary": "Trump cancelled planned campaign appearances in Kansas and Iowa and said he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well. Telephone rallies are planned instead.",
-      "radiantWavesView": "The cancellations should be assessed as a campaign decision. The political test will be voter response and the performance of candidates.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/"
+      "headline": "United States midterm elections approach",
+      "summary": "The November 2026 midterm elections will determine control of seats in Congress and provide voters with an opportunity to assess elected representatives.",
+      "body": "Economic conditions, immigration, healthcare, foreign policy and the direction of the federal government are among the issues shaping the political debate. The reported figure of 48 million early votes in the supplied draft should be checked against official state election data before publication.",
+      "image": "assets/leaders/trump.jpg",
+      "verification": "Verify current early-voting figures using official election sources."
     }
   ],
   "europeNews": [
     {
-      "title": "Spain Railway Disaster Leaves Dozens Dead",
-      "category": "Spain Breaking News",
-      "date": "30 October 2026",
-      "summary": "At least 69 deaths and more than 200 injuries have been reported. Investigators are examining communications and railway operations. The cause remains under investigation.",
-      "radiantWavesView": "Families deserve support and the public deserves a transparent investigation.",
-      "source": "The Guardian and international reporting"
-    },
-    {
-      "title": "France's Economy Contracts as Inflation Accelerates",
       "category": "France Economy",
-      "date": "30 October 2026",
-      "summary": "France's economy contracted by 0.1% in the third quarter, while harmonised inflation accelerated to 3.8% in October. Investment also declined for a second consecutive quarter.",
-      "radiantWavesView": "The figures underline the need for credible policies on purchasing power, investment and public finances.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/"
+      "headline": "France faces economic and public spending challenges",
+      "summary": "Household purchasing power, public services and economic confidence remain central policy concerns.",
+      "image": "assets/leaders/macron.jpg"
     },
     {
-      "title": "Eurozone Growth Exceeds Expectations but Inflation Remains a Concern",
-      "category": "European Economy",
-      "date": "30 October 2026",
-      "summary": "The eurozone economy grew by 0.4% in the third quarter, above expectations, while inflation remained above the European Central Bank's target.",
-      "radiantWavesView": "Growth matters when it translates into better living standards, affordable energy and stable employment.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/905619a8db70802b721fbe6ebefa32aa"
+      "category": "Canada and Europe",
+      "headline": "Canada and EU launch Alliance for the Future",
+      "summary": "The partnership covers technology, trade, energy, critical minerals and security.",
+      "image": "assets/leaders/carney.jpg"
     },
     {
-      "title": "Marine Le Pen's Campaign Places Energy and Sovereignty at the Centre of Debate",
-      "category": "France Politics",
-      "date": "25 October 2026",
-      "image": "assets/leaders/marine-le-pen.jpg",
-      "summary": "Le Pen has promoted national renewal, security, national preference and a proposal to revive domestic oil exploration. These are campaign proposals, not enacted law.",
-      "radiantWavesView": "Voters should examine the legal, economic and environmental implications of each proposal.",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/10/25/marine-le-pen-launches-presidential-campaign-with-vow-to-restore-rule-of-law"
+      "category": "Germany Economy",
+      "headline": "Germany focuses on industrial competitiveness",
+      "summary": "Industrial strength, economic growth and European security remain important issues for the German government.",
+      "image": "assets/leaders/merz.jpg"
+    },
+    {
+      "category": "United Kingdom",
+      "headline": "UK economic and political developments",
+      "summary": "Public spending, inflation, housing, wages and public services remain important issues.",
+      "verification": "Verify the current Prime Minister and latest economic figures through official sources."
     }
   ],
   "africaNews": [
     {
-      "title": "Sunday Igboho Announces Iru Ekun Security Network",
+      "category": "Africa Diplomacy",
+      "headline": "African countries face strategic partnership choices",
+      "summary": "African governments continue to engage global powers over trade, security, energy, technology and investment.",
+      "body": "African countries need partnerships that build local industries, create employment, transfer skills and improve infrastructure."
+    },
+    {
       "category": "Nigeria Security",
-      "date": "30 October 2026",
-      "image": "assets/leaders/igboho.jpg",
-      "summary": "Igboho has announced a security network. The reported claim of 20,000 volunteers has not been independently verified, and the organisation's legal status requires clarification.",
-      "radiantWavesView": "Community safety initiatives must be lawful, properly supervised and accountable.",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/"
-    },
-    {
-      "title": "South African President Warns ANC Candidates Against Arrogance and Corruption",
-      "category": "South Africa Politics",
-      "date": "30 October 2026",
-      "summary": "Reports say Cyril Ramaphosa has warned ANC candidates to avoid arrogance and corruption amid continuing scrutiny of political leadership.",
-      "radiantWavesView": "Political credibility depends on conduct, integrity and measurable improvements in public services.",
-      "source": "TimesLIVE via Africa Front Page",
-      "url": "https://www.africafrontpage.com/today"
-    },
-    {
-      "title": "African Union Digital Independence and Native AI Initiative",
-      "category": "African Technology",
-      "date": "30 October 2026",
-      "summary": "An African technology report highlights an initiative aimed at strengthening digital independence through locally developed artificial intelligence capabilities.",
-      "radiantWavesView": "Africa needs investment in research, skills, infrastructure and local-language technology.",
-      "source": "Africa Front Page",
-      "url": "https://www.africafrontpage.com/today"
+      "headline": "Security and justice remain important regional concerns",
+      "summary": "The deaths of detained miners and continuing insecurity highlight the need for accountable security institutions and civilian protection."
     }
   ],
   "nigeriaNews": [
     {
-      "title": "Tinubu's External Borrowing Request Remains Under Legislative Consideration",
+      "category": "Nigeria Politics",
+      "headline": "Sunday Igboho and the Yoruba Nation campaign",
+      "summary": "His role in the self-determination campaign continues to raise questions about regional grievances, constitutional rights and national unity.",
+      "image": "assets/leaders/igboho.jpg"
+    },
+    {
+      "category": "Nigeria Justice",
+      "headline": "Nnamdi Kanu and the IPOB legal debate",
+      "summary": "His prosecution remains a major subject in discussions about separatism, national security, due process and constitutional rights.",
+      "image": "assets/leaders/kanu.jpg"
+    },
+    {
+      "category": "Nigeria Elections",
+      "headline": "INEC prepares for the 2027 elections",
+      "summary": "Candidate eligibility, party disputes and public confidence in the electoral process remain important issues."
+    },
+    {
       "category": "Nigeria Economy",
-      "date": "30 October 2026",
-      "summary": "The President has requested approval to process approximately $20.52 billion and €1.045 billion in external borrowing. The request has not been described here as approved or disbursed.",
-      "radiantWavesView": "The National Assembly should scrutinise the proposal and publish clear explanations of its cost, purpose, repayment conditions and expected benefits.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
+      "headline": "Tinubu defends proposed external borrowing",
+      "summary": "The administration argues that infrastructure investment can support economic growth, while citizens seek transparency and measurable results.",
+      "image": "assets/leaders/tinubu.jpg"
     },
     {
-      "title": "Senator Victor Umeh Questions the Use of Previous Borrowings",
-      "category": "Nigeria Accountability",
-      "date": "30 October 2026",
-      "summary": "Umeh questioned the government's handling of previous loans and reported unpaid contractors following the latest borrowing request.",
-      "radiantWavesView": "Lawmakers should demand an account of previous loans before approving further borrowing.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920930-senator-questions-tinubus-fresh-loan-request-use-of-previous-borrowings.html"
+      "category": "Nigeria Justice",
+      "headline": "Families seek accountability over miners' deaths",
+      "summary": "Families are demanding justice following the deaths of 37 artisanal miners in detention.",
+      "image": "assets/diplomacy.jpeg"
     },
     {
-      "title": "Sunday Igboho Announces Iru Ekun Security Network",
-      "category": "Nigeria Security",
-      "date": "30 October 2026",
-      "image": "assets/leaders/igboho.jpg",
-      "summary": "The announced network has been described as a community security initiative. Its reported volunteer numbers, legal authority and command arrangements require confirmation.",
-      "radiantWavesView": "Authorities should clarify the legal framework and ensure that all security activity respects human rights and the law.",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/"
-    },
-    {
-      "title": "Nnamdi Kanu's Legal Appeal Remains a National Issue",
-      "category": "Nigeria Judiciary",
-      "date": "30 October 2026",
-      "image": "assets/leaders/kanu.jpg",
-      "summary": "Kanu's case continues to generate debate about national security, the courts and due process. The latest appeal position should be confirmed from court records.",
-      "radiantWavesView": "Security and due process must both be respected. Any new ruling should be reported accurately and in context.",
-      "source": "Court proceedings and Nigerian news reporting"
-    },
-    {
-      "title": "Nasir El-Rufai's Legal Proceedings Remain Under Scrutiny",
-      "category": "Nigeria Judiciary",
-      "date": "30 October 2026",
-      "image": "assets/leaders/el-rufai.jpg",
-      "summary": "El-Rufai faces separate legal proceedings involving allegations he has denied. The progress of each case and any bail decisions should be reported from court records.",
-      "radiantWavesView": "Accountability must be pursued through transparent investigations and fair hearings. Allegations are not convictions.",
-      "source": "Nigerian court and media reporting"
-    },
-    {
-      "title": "Opposition Parties Consult Presidential Figures Ahead of 2027",
-      "category": "Nigeria Opposition Watch",
-      "date": "14 October 2026",
-      "summary": "Six opposition parties reportedly consulted Atiku Abubakar, Peter Obi, Seyi Makinde, Adewole Adebayo and Donald Duke as part of efforts to explore cooperation.",
-      "radiantWavesView": "The public needs clarity about candidate selection, party commitments and the proposed national programme.",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/"
+      "category": "Nigeria Politics",
+      "headline": "Atiku and Obi remain central to opposition discussions",
+      "summary": "Opposition coordination, leadership ambitions and the search for a credible electoral alternative remain central to the 2027 debate.",
+      "image": "assets/leaders/atiku.jpg"
     }
   ],
   "asiaNews": [
     {
-      "title": "China's Ruling Party Announces Expulsions as Discipline Campaign Continues",
-      "category": "China Politics",
-      "date": "30 October 2026",
-      "summary": "Reports say China's ruling party has expelled 33 people amid continuing disciplinary measures.",
-      "radiantWavesView": "Anti-corruption measures should be transparent, consistent and subject to due process.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
+      "category": "Asia Technology",
+      "headline": "Artificial intelligence and semiconductor competition continue",
+      "summary": "Advanced processors, AI infrastructure and edge computing are increasingly important to manufacturing, healthcare, finance and telecommunications.",
+      "verification": "Specific company acquisition claims should be checked against company filings and official announcements."
     },
     {
-      "title": "North Korea Highlights Drone and AI Military Development",
-      "category": "Korean Peninsula Security",
-      "date": "30 October 2026",
-      "summary": "North Korean state media has reported military demonstrations and calls for accelerated development of drones and artificial intelligence capabilities.",
-      "radiantWavesView": "The spread of AI-enabled military systems makes international dialogue and safeguards increasingly important.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
-    },
-    {
-      "title": "Japan's Central Bank Keeps Interest Rates Steady",
-      "category": "Japan Economy",
-      "date": "30 October 2026",
-      "summary": "The Bank of Japan maintained its current interest-rate position and discussed progress towards its inflation objective.",
-      "radiantWavesView": "Monetary decisions must balance price stability, household purchasing power and economic growth.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
+      "category": "Middle East Security",
+      "headline": "Regional security remains a concern",
+      "summary": "Developments involving Israel, Palestine, Iran and armed groups continue to affect civilian safety, humanitarian operations, aviation and energy markets.",
+      "verification": "Add specific incidents only after confirmation from reliable reporting and relevant authorities."
     }
   ],
   "businessNews": [
     {
-      "title": "Eurozone Growth Exceeds Expectations but Inflation Remains High",
-      "category": "Global Business",
-      "date": "30 October 2026",
-      "summary": "The eurozone economy expanded by 0.4% in the third quarter, while inflation remained above the European Central Bank's target.",
-      "radiantWavesView": "Economic growth is welcome, but households need to see improvements in wages, affordability and employment.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/905619a8db70802b721fbe6ebefa32aa"
+      "category": "Global Economy",
+      "headline": "Global economy faces competing pressures",
+      "summary": "Governments are navigating inflation, public debt, energy costs and uncertainty in international trade.",
+      "body": "For developing economies such as Nigeria, priorities include currency stability, employment, affordable food, reliable electricity and productive investment."
     },
     {
-      "title": "France's Economic Output Falls as Investment Weakens",
-      "category": "France Business",
-      "date": "30 October 2026",
-      "summary": "France's economy contracted by 0.1% in the third quarter, with investment falling for a second consecutive quarter.",
-      "radiantWavesView": "France needs a credible environment for business investment while protecting household purchasing power.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/"
+      "category": "Nigeria Economy",
+      "headline": "Borrowing versus economic results",
+      "summary": "The debate over external borrowing raises questions about project costs, delivery timelines, repayment obligations and jobs created.",
+      "body": "Roads, ports and electricity infrastructure can support economic growth. Citizens also need transparent project costs, clear delivery timelines and evidence of jobs created."
+    },
+    {
+      "category": "Canada and Europe",
+      "headline": "Canada-EU cooperation targets trade and investment",
+      "summary": "The new strategic alliance seeks stronger cooperation in energy, critical minerals, digital trade and research."
     }
   ],
   "technologyNews": [
     {
-      "title": "AI's Role in Modern Warfare Raises Questions About Human Control",
       "category": "Artificial Intelligence",
-      "date": "30 October 2026",
-      "summary": "Reuters reports that artificial intelligence systems are playing an increasingly significant role in US military operations, helping process intelligence and support decisions. The development raises concerns about errors, civilian harm, human oversight and accountability.",
-      "radiantWavesView": "AI can help people analyse information faster, but speed must never replace responsibility. Decisions involving human lives require meaningful human oversight, reliable data, independent review and clear accountability.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology/artificial-intelligence/ais-rewiring-us-warfare-may-be-only-beginning-2026-10-30/"
+      "headline": "Canada and EU deepen artificial intelligence cooperation",
+      "summary": "The Canada-EU partnership includes cooperation on artificial intelligence, high-performance computing, digital infrastructure and research."
     },
     {
-      "title": "China's AI Industry Faces Questions About Investment and Sustainability",
-      "category": "Technology and Business",
-      "date": "29 October 2026",
-      "summary": "Technology commentary in Asia is examining whether China's artificial intelligence investment boom can deliver sustainable commercial returns.",
-      "radiantWavesView": "The long-term success of AI should be measured by useful applications, productivity, safety and economic value rather than investment headlines alone.",
-      "source": "Channel NewsAsia",
-      "url": "https://www.channelnewsasia.com/east-asia"
+      "category": "Africa Digital Economy",
+      "headline": "Africa's digital opportunity",
+      "summary": "Investment in digital skills, reliable broadband, local innovation and technology education could create employment and support new businesses."
     }
   ],
   "editorial": [
     {
-      "title": "Nigeria Needs Accountable Borrowing, Not Just Bigger Borrowing Plans",
-      "category": "Editorial",
-      "date": "30 October 2026",
-      "summary": "The proposed external borrowing plan raises an important question about how Nigeria finances development and protects future public finances.",
-      "radiantWavesView": "Every major borrowing request should be accompanied by transparent project details, repayment conditions, public reporting and independent monitoring. Government must explain its proposal, while the National Assembly must demonstrate that it is scrutinising it properly. Opposition politicians should offer credible alternatives rather than simply criticising the government. The Nigerian public deserves accountability from everyone seeking political power.",
-      "status": "RadiantWaves editorial opinion"
+      "title": "Nigeria 2027: The election may be decided by credibility, not political noise",
+      "body": "The political conversation in Nigeria is increasingly dominated by arguments about who can defeat the ruling party. But the more important question is what happens after the election. Nigerians should examine the records, policies, leadership experience and accountability of every presidential contender. The opposition faces difficult decisions. Political ambition, personal interests and disagreements over leadership could weaken the possibility of a united challenge. However, unity alone is not enough. Nigerians need a credible alternative with a clear economic and security programme. The ruling party equally has a responsibility to demonstrate measurable progress. An election should not become a competition of personalities alone.",
+      "radiantWavesView": "Nigeria deserves an election decided by informed voters, credible candidates and transparent democratic institutions."
     },
     {
-      "title": "A Political Alternative Must Be More Than Opposition to the Government",
-      "category": "Editorial",
-      "date": "30 October 2026",
-      "summary": "Nigeria's opposition parties have an opportunity to demonstrate that they can build a credible alternative ahead of 2027.",
-      "radiantWavesView": "A united opposition should publish its priorities, explain its economic plans, address insecurity and demonstrate how it will improve public services. Political leaders should be prepared to compromise, but voters must also be allowed to judge the process. A coalition without a programme is not yet a national alternative.",
-      "status": "RadiantWaves editorial opinion"
-    },
-    {
-      "title": "Spain's Railway Tragedy Demands Answers, Not Speculation",
-      "category": "Editorial",
-      "date": "30 October 2026",
-      "summary": "The devastating railway disaster has raised urgent questions about transport safety and institutional accountability.",
-      "radiantWavesView": "The public deserves a full and independent investigation. Authorities should provide accurate casualty information, support victims and explain any failures established by the evidence. Speculation about the cause must not replace the investigation.",
-      "status": "RadiantWaves editorial opinion"
+      "title": "Sunday Igboho, Nnamdi Kanu and the unresolved question of national unity",
+      "body": "Nigeria has experienced movements demanding greater regional autonomy or outright independence. The Yoruba Nation campaign associated with Sunday Igboho and the Biafran independence campaign associated with Nnamdi Kanu have different histories and political arguments. Their supporters have raised questions about regional grievances and self-determination. Their legal experiences are also different and must be examined separately. Nigeria cannot build lasting unity through force alone. Nor can any movement claim that political grievances justify violence or attacks on innocent people.",
+      "radiantWavesView": "A united Nigeria must be a country where citizens feel protected, represented and treated fairly. The rule of law must apply equally, and political disagreements must have peaceful channels for resolution."
     }
   ],
   "analysis": [
     {
-      "title": "Nigeria's Security Debate: Community Protection Must Remain Within the Law",
-      "category": "Nigeria Analysis",
-      "date": "30 October 2026",
-      "summary": "The announcement of the Iru Ekun Security Network has renewed debate about community security, state responsibility and the legal limits of private security initiatives.",
-      "radiantWavesView": "People have a right to demand protection from insecurity. However, community security initiatives must have clear legal authority, training, oversight and accountability. The government should explain what role such organisations can lawfully play and how abuses will be prevented.",
-      "status": "Analysis of reported announcement"
+      "title": "Nigeria's political future and the challenge of opposition cooperation",
+      "summary": "Opposition parties face decisions about leadership, policy priorities and electoral cooperation ahead of 2027.",
+      "body": "Political cooperation may improve coordination, but unity alone cannot replace a credible programme. Voters need clear proposals on security, employment, education, healthcare, infrastructure and the cost of living."
     },
     {
-      "title": "Kanu and El-Rufai: Different Cases, One Essential Principle of Due Process",
-      "category": "Nigeria Judiciary Analysis",
-      "date": "30 October 2026",
-      "summary": "The proceedings involving Nnamdi Kanu and Nasir El-Rufai concern different allegations and legal questions, but both have prompted public discussion about fairness and the justice system.",
-      "radiantWavesView": "The cases must not be conflated. Each should be judged on its own evidence and legal process. The same principles of fair hearing, lawful detention, access to legal representation and judicial independence should apply to all defendants.",
-      "status": "Analysis; check current court records for new rulings"
-    },
-    {
-      "title": "Spain's Railway Disaster: Why Independent Safety Investigations Matter",
-      "category": "International Analysis",
-      "date": "30 October 2026",
-      "summary": "The disaster highlights the importance of transport infrastructure, communications, maintenance and independent safety oversight.",
-      "radiantWavesView": "A transparent investigation should identify the sequence of events, technical failures if any, and the institutional changes required to protect passengers. Accountability must be based on evidence.",
-      "status": "Developing investigation"
+      "title": "Separatist movements and the Nigerian state",
+      "summary": "The experiences of Sunday Igboho and Nnamdi Kanu highlight questions about national unity, constitutional rights and due process.",
+      "body": "Their campaigns and legal experiences are not identical. A serious national conversation should examine the grievances that fuel separatist movements, the government's response and the role of peaceful political solutions."
     }
   ],
   "factCheck": [
     {
-      "title": "Fact Check: Has Tinubu Already Received the New External Loans?",
-      "category": "Fact Check",
-      "date": "30 October 2026",
-      "claim": "President Tinubu has already secured and received the new $20.52 billion and €1.045 billion loans.",
-      "verdict": "Misleading if stated as approved or disbursed.",
-      "summary": "The available reporting says the President requested National Assembly approval for the proposed borrowing plan. A request, legislative approval, loan agreement and actual disbursement are separate stages.",
-      "radiantWavesView": "The accurate description is that the President has requested approval to process the proposed borrowing. Do not tell readers that the money has already been received.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
-      "status": "Checked against published reporting"
+      "claim": "Andy Burnham is the UK Prime Minister",
+      "status": "Not verified",
+      "explanation": "Do not publish this title without confirmation from the official UK government website."
     },
     {
-      "title": "Fact Check: Has Sunday Igboho's Network Confirmed 20,000 Active Volunteers?",
-      "category": "Fact Check",
-      "date": "30 October 2026",
-      "claim": "The Iru Ekun Security Network has 20,000 verified and operational volunteers.",
-      "verdict": "Not independently established.",
-      "summary": "Reports attribute the figure to the announcement or organisers. The number should not be presented as independently verified without confirmation from reliable records or relevant authorities.",
-      "radiantWavesView": "Use wording such as 'organisers reportedly claim' until the figure and operational details are independently confirmed.",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/",
-      "status": "Verification required"
+      "claim": "Sunday Igboho has received a new legal clearance or government decision",
+      "status": "Not verified",
+      "explanation": "This edition covers his established historical role and campaign. No new legal decision is asserted."
     },
     {
-      "title": "Fact Check: Are the Allegations Against El-Rufai Proven?",
-      "category": "Fact Check",
-      "date": "30 October 2026",
-      "claim": "Allegations reported in proceedings involving Nasir El-Rufai are established facts.",
-      "verdict": "Not unless determined by a competent court.",
-      "summary": "Legal allegations and charges must be distinguished from findings of guilt. El-Rufai has denied allegations in the relevant proceedings. The status of each case should be checked against current court records.",
-      "radiantWavesView": "A fair report must identify the allegation, the response, the court process and any ruling. Allegations must not be presented as convictions.",
-      "source": "Court proceedings and Nigerian news reporting",
-      "status": "Ongoing legal matters"
+      "claim": "Nnamdi Kanu has received a new court decision",
+      "status": "Not verified",
+      "explanation": "Check the latest court record and official statements before publishing any new development."
+    },
+    {
+      "claim": "48 million people have already voted in the US midterm elections",
+      "status": "Requires confirmation",
+      "explanation": "Check official state election data and current early-voting totals."
+    },
+    {
+      "claim": "France's economy contracted by 0.1 percent in the third quarter of 2026",
+      "status": "Requires confirmation",
+      "explanation": "Check the latest INSEE publication before using this figure."
     }
   ],
   "beyondStatement": [
     {
-      "title": "Beyond the Statement: Tinubu Says Borrowing Will Support Development",
-      "category": "Beyond the Statement",
-      "date": "30 October 2026",
-      "statement": "The President's letter says the proposed borrowing is intended to support infrastructure, agriculture, healthcare, education, water supply, security, employment generation and financial management reforms.",
-      "context": "The request covers approximately $20.52 billion and €1.045 billion under the 2026–2027 Supplementary External Borrowing Plan. It is subject to legislative consideration.",
-      "radiantWavesView": "The government's stated objectives are important, but they must be supported by a detailed list of projects, financing terms, implementation dates and measurable outcomes. The public should be able to track where each part of the money goes.",
-      "keyQuestion": "Will the National Assembly publish enough information for Nigerians to assess the proposed loans before deciding whether to approve them?",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
+      "title": "Why Nigeria's separatist movements continue to attract attention",
+      "summary": "The debate involves identity, political representation, security, economic opportunity and trust in national institutions.",
+      "body": "The public conversation should go beyond personalities and examine the conditions that allow separatist movements to gain support."
     },
     {
-      "title": "Beyond the Statement: Igboho's Security Network and the Question of Legal Authority",
-      "category": "Beyond the Statement",
-      "date": "30 October 2026",
-      "statement": "Sunday Igboho has announced the Iru Ekun Security Network. Reports attribute to organisers a claim that the initiative could involve 20,000 volunteers.",
-      "context": "The number, legal status, command structure and powers of the network require clarification. An announcement does not itself establish legal authority to conduct security operations.",
-      "radiantWavesView": "Community safety is important, but any security initiative must operate within the law, respect human rights and be subject to appropriate oversight.",
-      "keyQuestion": "What legal authorisation, training and accountability arrangements will govern the proposed network?",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/"
+      "title": "What should Nigerians expect from the 2027 election?",
+      "summary": "Voters should assess candidates on their records, policies, integrity, leadership experience and accountability."
     }
   ],
   "publicInterestFeature": {
-    "title": "Nigeria's Justice System: Equal Treatment Must Be More Than a Promise",
-    "category": "Public Interest",
-    "date": "30 October 2026",
-    "summary": "The high-profile proceedings involving public figures have renewed discussion about due process, accountability and public confidence in the justice system.",
-    "radiantWavesView": "The law must apply equally, regardless of political influence, regional identity or public popularity. Investigations should be transparent, allegations should be tested in court and defendants should receive fair hearings. Public officials must be accountable, but accountability must never be confused with punishment without due process.",
-    "keyQuestions": [
-      "Are legal proceedings being conducted transparently?",
-      "Are defendants receiving access to legal representation?",
-      "Are allegations clearly distinguished from proven findings?",
-      "Are court decisions and reasons made publicly available?",
-      "Are the same legal standards applied regardless of political influence?"
-    ]
+    "title": "The right to fair treatment: Why accountability matters in custody",
+    "summary": "The reported deaths of 37 detained miners in Niger State raise questions about the treatment of people held by state authorities.",
+    "body": "People held in custody remain entitled to humane treatment and protection under the law. Independent investigations, transparent findings and accountability are essential to public trust.",
+    "image": "assets/diplomacy.jpeg"
   },
   "technologyInnovation": [
     {
-      "title": "Artificial Intelligence Is Changing Modern Warfare — But Who Is Accountable for Mistakes?",
-      "summary": "A Reuters report describes the growing role of AI systems in US military operations, including the processing of intelligence information and support for operational decisions. The development raises concerns about inaccurate data, civilian harm, human oversight and accountability.",
-      "script": "Artificial intelligence is no longer limited to offices, phones and business applications. It is increasingly being used in military operations. AI can help analyse enormous amounts of information, but it can also make mistakes. When a decision affects human lives, who is responsible if the technology gets it wrong? Governments must maintain human oversight, reliable information and clear accountability. Technology should support responsible decisions, not replace human responsibility.",
-      "radiantWavesView": "The development of military AI requires strong safeguards. Systems used in decisions involving human lives should be subject to meaningful human control, independent scrutiny and clear accountability. Faster decisions are not automatically better decisions.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology/artificial-intelligence/ais-rewiring-us-warfare-may-be-only-beginning-2026-10-30/",
-      "status": "Reported development and analysis"
+      "title": "Artificial intelligence and advanced computing",
+      "summary": "Canada and Europe are strengthening cooperation in AI, high-performance computing and digital infrastructure.",
+      "script": "Artificial intelligence is becoming a strategic economic resource. Countries investing in computing infrastructure, research and digital skills will influence how industries develop. Africa must also invest in local skills and innovation so that it can participate in this transformation."
     },
     {
-      "title": "Africa's Opportunity to Build Its Own Artificial Intelligence Capacity",
-      "summary": "African digital independence requires investment in computing infrastructure, research, education, local data resources and tools that serve African languages and communities.",
-      "script": "Africa should not remain only a consumer of artificial intelligence developed elsewhere. The continent has talented researchers, entrepreneurs and young innovators. With investment in education, digital infrastructure and responsible data systems, African businesses can build solutions for agriculture, healthcare, education, finance and public services. The question is whether governments and investors will support that opportunity.",
-      "radiantWavesView": "African innovation should be supported by long-term investment and practical partnerships. Local solutions must be affordable, safe and relevant to the people they are intended to serve.",
-      "source": "Africa Front Page",
-      "url": "https://www.africafrontpage.com/today",
-      "status": "Developing initiative"
+      "title": "Africa's digital opportunity",
+      "summary": "Reliable broadband, technology education and local innovation can support employment and new businesses.",
+      "script": "Africa's digital future should not depend entirely on imported solutions. Investment in digital education, local technology companies and reliable internet access can create opportunities for young people and businesses."
     }
   ],
   "innovation": {
-    "title": "Innovation Must Solve Real Problems",
-    "summary": "Artificial intelligence, digital infrastructure, automation and local technology development are changing business and public services.",
-    "radiantWavesView": "RadiantWaves believes innovation should be judged by its contribution to society. Does it improve healthcare, education, productivity, public services or access to opportunity? Does it protect personal information and respect human rights? Technology is valuable when it makes life better, not simply when it is new.",
-    "presenterScript": "Innovation is changing the world, but progress should be measured by results. Artificial intelligence and digital tools can help businesses grow, improve public services and create new opportunities. Yet they also bring responsibilities involving privacy, security, fairness and employment. The challenge is not simply to adopt technology, but to use it wisely and make its benefits accessible."
+    "title": "Technology must serve people",
+    "summary": "Digital transformation should improve access to services, support productivity and create economic opportunity.",
+    "body": "Artificial intelligence is changing the way people work, communicate and access information. However, digital transformation must also address misinformation, data protection, cybercrime and unequal access to technology.",
+    "radiantWavesView": "Innovation should be measured by the problems it solves and the opportunities it creates for ordinary people."
   },
   "leadersWatch": {
-    "title": "Leaders Watch: What They Said, What They Did and What It Means",
-    "description": "RadiantWaves follows political leaders through their actual statements, policy decisions and public actions. Each report distinguishes a leader's words from our independent assessment. When no fresh verified statement is available, the newsroom says so.",
+    "title": "Global Leaders Watch",
+    "description": "Monitoring leadership decisions, public statements and policy developments. These are editorial observations, not claims of new announcements by each leader.",
     "leaders": [
       {
-        "name": "Bola Ahmed Tinubu",
-        "role": "President of Nigeria",
-        "country": "Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "headline": "Tinubu's Proposed External Borrowing Remains Under Legislative Scrutiny",
-        "update": "The President's request for approval to process the 2026–2027 Supplementary External Borrowing Plan covers approximately $20.52 billion and €1.045 billion.",
-        "statement": "The administration says the proposed financing will support development projects and programmes in infrastructure, agriculture, healthcare, education, water supply, security and employment.",
-        "background": "The proposal is subject to legislative scrutiny and has prompted questions about previous loans and reported unpaid contractors.",
-        "implications": "The proposal could affect Nigeria's future debt obligations and public spending. Its value depends on project selection, financing conditions and successful implementation.",
-        "radiantWavesView": "The President should publish a transparent project list and explain how the proposed loans will be repaid. The National Assembly should examine previous loan performance, outstanding obligations and expected returns.",
-        "script": "President Bola Tinubu has asked the National Assembly to approve the processing of more than 20.5 billion dollars and one billion euros in external loans. The government says the money will support development. But lawmakers have raised questions about previous borrowing and unpaid contractors. The National Assembly must examine the details carefully. Nigerians deserve to know where the money will go, how it will be repaid and what measurable results it will deliver.",
-        "source": "Premium Times",
-        "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
-        "status": "Request under legislative consideration"
-      },
-      {
-        "name": "Atiku Abubakar",
-        "role": "Former Vice-President of Nigeria and opposition political figure",
-        "country": "Nigeria",
-        "image": "assets/leaders/atiku.jpg",
-        "headline": "Atiku and Other Opposition Figures Face the Challenge of Coalition Building",
-        "update": "Atiku was among the political figures consulted by six opposition parties in discussions about cooperation ahead of the 2027 general election.",
-        "statement": "The report describes consultations and coalition discussions. It does not establish a final agreement on a joint presidential candidate.",
-        "background": "The consultations involved parties including ADC, APM, NDC, SDP, PDP and PRP.",
-        "implications": "Atiku's political experience and support base may influence opposition negotiations, but the coalition's success will depend on transparent rules and willingness to compromise.",
-        "radiantWavesView": "Atiku should make his position on coalition leadership, candidate selection and a shared manifesto clear. Nigerians need to understand whether the opposition is building a genuine national programme.",
-        "script": "Former Vice-President Atiku Abubakar remains an important figure in Nigeria's opposition politics. Six opposition parties have reportedly held consultations with several political leaders, including Atiku. But the public still needs answers. Is there a common candidate? How will the decision be made? What policies will unite the parties? Atiku and other leaders must show Nigerians that cooperation is about national priorities, not only political ambition.",
-        "source": "TheCable",
-        "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
-        "status": "Coalition consultations reported"
-      },
-      {
-        "name": "Peter Obi",
-        "role": "Former Governor of Anambra State and opposition political figure",
-        "country": "Nigeria",
-        "image": "assets/leaders/obi.jpg",
-        "headline": "Peter Obi's Position in Opposition Cooperation Remains Important",
-        "update": "Peter Obi was among the political figures consulted during reported discussions involving six opposition parties. No final joint candidacy agreement has been established in the reports reviewed.",
-        "statement": "The reporting confirms consultations involving Obi but does not provide a final agreement by him to accept a particular coalition arrangement or running-mate position.",
-        "background": "Obi has an established political following and is an important figure in discussions about opposition cooperation ahead of 2027.",
-        "implications": "His position may influence whether supporters of different opposition movements accept a common candidate and a shared programme.",
-        "radiantWavesView": "Obi should explain what kind of coalition he considers acceptable and whether he is prepared to support a transparent selection process. Other opposition leaders should also explain what compromises they are willing to make.",
-        "script": "Peter Obi remains an important figure in Nigeria's opposition politics. His participation in coalition discussions raises questions about the future direction of the opposition. Will the parties agree on a common candidate? Can supporters accept a decision made through a transparent process? Obi and other leaders should explain their positions clearly. Nigerians deserve a coalition built on policies and public interest.",
-        "source": "TheCable",
-        "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
-        "status": "Consultations reported"
-      },
-      {
         "name": "Donald Trump",
-        "role": "President of the United States",
-        "country": "USA",
+        "country": "United States",
+        "role": "President",
         "image": "assets/leaders/trump.jpg",
-        "headline": "Trump Replaces Planned Campaign Visits with Telephone Rallies",
-        "update": "Trump cancelled planned campaign appearances in Kansas and Iowa. He said he did not feel he needed to visit Kansas because Republican Senator Roger Marshall was doing well.",
-        "statement": "Trump said: \"I don't feel like I have to go to Kansas.\"",
-        "background": "The cancellations came ahead of the US midterm elections. Telephone rallies are planned instead.",
-        "implications": "The decision changes the campaign's final-stage strategy in two states.",
-        "radiantWavesView": "The President's explanation should be reported accurately. The political test is whether the campaign strategy helps Republican candidates and whether voters support their policies.",
-        "script": "President Donald Trump has cancelled planned campaign rallies in Kansas and Iowa. He said he did not feel he needed to visit Kansas because the Republican candidate was doing well. His allies plan telephone rallies instead. The cancellations come ahead of important midterm elections. The key question is whether this change in strategy will help Republican candidates maintain support.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/",
-        "status": "Statement reported"
-      },
-      {
-        "name": "Marine Le Pen",
-        "role": "National Rally political leader and French presidential candidate",
-        "country": "France",
-        "image": "assets/leaders/marine-le-pen.jpg",
-        "headline": "Le Pen Promotes National Renewal and Changes to Energy Policy",
-        "update": "At her Orléans rally on 25 October, Le Pen promised a political renewal for France and proposed reviving domestic oil exploration if elected.",
-        "statement": "She criticised France's 2017 law restricting new hydrocarbon exploration permits and promoted national preference and stronger security measures.",
-        "background": "The rally marked a major campaign event for the National Rally ahead of the 2027 presidential election.",
-        "implications": "Her proposals could affect energy policy, environmental commitments, immigration, national sovereignty and France's relationship with the EU.",
-        "radiantWavesView": "Voters deserve details about cost, legal implementation and environmental consequences. National sovereignty and energy security are legitimate subjects for debate; the proposals must be tested against evidence and practical effects.",
-        "script": "Marine Le Pen has launched a renewed presidential campaign in Orléans, promising a national renaissance for France. She has proposed reviving domestic oil exploration and changing existing energy restrictions. She has also made national preference and security central to her campaign. But voters should ask what these proposals mean in practice. Will they reduce energy costs? What would be the environmental consequences? How would the policies affect France's relationship with Europe?",
-        "source": "Associated Press",
-        "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1",
-        "status": "Campaign statements reported"
+        "update": "The approaching midterm elections will provide an important opportunity for voters to assess the administration's policies and performance.",
+        "statement": "Economic conditions, immigration and foreign policy remain important issues in the political debate.",
+        "background": "The US midterm elections determine seats in Congress and influence the balance of power in Washington.",
+        "implications": "The result will shape domestic policy and the administration's relationship with Congress.",
+        "radiantWavesView": "The election should be assessed through verified results, voter participation and documented policy debates.",
+        "script": "In the United States, the approaching midterm elections will test public confidence in elected representatives. Economic conditions, immigration and foreign policy remain central issues."
       },
       {
         "name": "Mark Carney",
-        "role": "Prime Minister of Canada",
         "country": "Canada",
+        "role": "Prime Minister",
         "image": "assets/leaders/carney.jpg",
-        "headline": "Canada and Europe Explore a Closer Strategic Relationship",
-        "update": "Canada's relationship with the EU is being discussed through a proposal for a closer associate-style partnership.",
-        "statement": "The discussions have focused on practical cooperation while respecting Canada's sovereignty.",
-        "background": "The discussions cover trade, critical minerals, energy, security, technology and economic resilience.",
-        "implications": "A closer relationship could diversify trade and strengthen cooperation between Canada and European countries.",
-        "radiantWavesView": "Canada and Europe should concentrate on practical cooperation, clear commitments and mutual benefits. Any new arrangement must respect Canadian sovereignty and explain what participation would mean in practice.",
-        "script": "Prime Minister Mark Carney is working to strengthen Canada's relationship with Europe. Discussions include trade, critical minerals, technology, energy and security. The proposal for a closer associate-style relationship has attracted interest, but questions remain about its meaning and institutional limits. The real test will be whether the partnership creates opportunities for citizens and businesses on both sides of the Atlantic.",
-        "source": "Le Monde",
-        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
-        "status": "Diplomatic discussions"
+        "update": "Canada has announced deeper strategic cooperation with the European Union.",
+        "statement": "The Alliance for the Future focuses on trade, energy, critical minerals, artificial intelligence and security.",
+        "background": "Canada is seeking to strengthen international partnerships and diversify economic cooperation.",
+        "implications": "The partnership could expand opportunities in research, investment, technology and trade.",
+        "radiantWavesView": "The value of international partnerships should be measured by practical economic and social benefits.",
+        "script": "Canada is deepening its relationship with Europe through cooperation on technology, trade, energy and security. The next question is how these agreements translate into practical opportunities."
       },
       {
         "name": "Emmanuel Macron",
-        "role": "President of France",
         "country": "France",
+        "role": "President",
         "image": "assets/leaders/macron.jpg",
-        "headline": "France Faces Economic Pressure as Political Debate Intensifies",
-        "update": "France's economy contracted by 0.1% in the third quarter of 2026, while October inflation accelerated to 3.8%.",
-        "statement": "Economy Minister Roland Lescure described the situation as an unprecedented combination of external and domestic shocks. This is the minister's assessment, not a direct statement from Macron.",
-        "background": "The economic figures arrive amid political debate over public finances, energy prices and the direction of the country.",
-        "implications": "Economic weakness and rising prices may influence public confidence and the wider presidential campaign debate.",
-        "radiantWavesView": "The government must explain how it intends to support investment, employment and household purchasing power. Political opposition should also present realistic alternatives.",
-        "script": "France's economy is facing fresh pressure. New figures show a 0.1 per cent contraction in the third quarter, while inflation has accelerated. Higher energy and transport costs are affecting households and businesses. The political question is how France's leaders will respond. Citizens need practical solutions on jobs, investment and the cost of living.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/business/french-economy-unexpectedly-contracts-exports-slump-third-quarter-2026-10-30/",
-        "status": "Economic development reported"
+        "update": "France continues to face economic and political challenges.",
+        "statement": "Public finances, household purchasing power and public services remain important issues.",
+        "background": "France is navigating difficult economic and political decisions.",
+        "implications": "Government decisions will affect household finances, public confidence and economic activity.",
+        "radiantWavesView": "Economic policy should be judged by its practical impact on citizens and businesses.",
+        "script": "France faces continuing questions about public finances, living costs and public confidence. The challenge is to balance economic stability with the needs of households."
+      },
+      {
+        "name": "Bola Ahmed Tinubu",
+        "country": "Nigeria",
+        "role": "President",
+        "image": "assets/leaders/tinubu.jpg",
+        "update": "The administration faces scrutiny over proposed borrowing, living costs, security and preparations for the 2027 elections.",
+        "statement": "The President has defended infrastructure investment as a means of supporting economic opportunities and jobs.",
+        "background": "The administration's economic and security policies remain central to public debate.",
+        "implications": "The public will look for measurable improvements in infrastructure, employment, security and household welfare.",
+        "radiantWavesView": "Government announcements should be assessed against delivery, transparency and measurable results.",
+        "script": "President Tinubu's administration faces questions about borrowing, economic pressure and security. Nigerians will want to see clear evidence of progress and accountability."
+      },
+      {
+        "name": "Atiku Abubakar",
+        "country": "Nigeria",
+        "role": "Former Vice-President and opposition figure",
+        "image": "assets/leaders/atiku.jpg",
+        "update": "Opposition coordination and the search for a credible electoral alternative remain central to the 2027 debate.",
+        "statement": "His criticism of government policy and calls for accountability continue to feature in political discussion.",
+        "background": "Atiku has remained an influential figure in Nigeria's opposition politics.",
+        "implications": "Opposition cooperation and candidate selection could influence the political landscape.",
+        "radiantWavesView": "Political experience should be considered alongside policy proposals, public record and accountability.",
+        "script": "Atiku Abubakar remains part of the debate about opposition cooperation ahead of 2027. The challenge for opposition figures is to present a credible programme that addresses Nigerians' concerns."
+      },
+      {
+        "name": "Peter Obi",
+        "country": "Nigeria",
+        "role": "Former Anambra State Governor and opposition figure",
+        "image": "assets/leaders/obi.jpg",
+        "update": "His criticism of the Tinubu administration continues to feature in the opposition debate.",
+        "statement": "His public comments have focused on governance, economic performance and leadership accountability.",
+        "background": "Obi remains a prominent figure in national opposition discussions.",
+        "implications": "Coalition-building, political strategy and policy proposals remain important questions.",
+        "radiantWavesView": "Voters should examine policy detail and implementation plans alongside political messaging.",
+        "script": "Peter Obi continues to challenge the government's performance. The question for the opposition is how criticism can be translated into a clear and workable national programme."
+      },
+      {
+        "name": "Sunday Igboho",
+        "country": "Nigeria",
+        "role": "Yoruba Nation campaign figure",
+        "image": "assets/leaders/igboho.jpg",
+        "update": "His role in the Yoruba Nation self-determination campaign remains a subject of national discussion.",
+        "statement": "His public campaign has been associated with calls for Yoruba self-determination.",
+        "background": "He became prominent during the Buhari administration and left Nigeria following the 2021 security operation against him.",
+        "implications": "His history raises questions about regional grievances, constitutional rights, security and national unity.",
+        "radiantWavesView": "The campaign should be examined through documented events, peaceful political debate and the rule of law.",
+        "script": "Sunday Igboho became a prominent voice in the Yoruba Nation campaign during the Buhari administration. His story raises difficult questions about regional grievances, national unity and the peaceful resolution of political disagreements."
+      },
+      {
+        "name": "Nnamdi Kanu",
+        "country": "Nigeria",
+        "role": "IPOB leader",
+        "image": "assets/leaders/kanu.jpg",
+        "update": "His prosecution remains central to discussions about separatism, national security and due process.",
+        "statement": "His supporters have continued to call for his release and challenge the government's handling of the case.",
+        "background": "Kanu became the most prominent figure associated with IPOB and the Biafran independence campaign.",
+        "implications": "The case remains important to debates about constitutional rights, national security and the rule of law.",
+        "radiantWavesView": "Legal questions should be determined through fair proceedings and verified court records.",
+        "script": "Nnamdi Kanu's legal history remains a major national issue. His case should be examined through the court record, due process and the wider debate about Nigeria's separatist movements."
       },
       {
         "name": "Friedrich Merz",
-        "role": "Chancellor of Germany",
         "country": "Germany",
+        "role": "Chancellor",
         "image": "assets/leaders/merz.jpg",
-        "headline": "Germany Questions the EU Associate-Member Label for Canada",
-        "update": "Germany's Chancellor Friedrich Merz has expressed reservations about describing Canada as an EU associate member, favouring a closer partnership without that specific label.",
-        "statement": "The reported position is that Germany supports stronger cooperation but does not favour the associate-member terminology.",
-        "background": "The debate is part of wider EU-Canada discussions about trade, security, energy and economic resilience.",
-        "implications": "Differences over terminology may influence how the partnership is described, even if both sides continue to deepen practical cooperation.",
-        "radiantWavesView": "The debate shows why diplomatic language matters. Leaders should explain the rights, responsibilities and limits of any proposed arrangement.",
-        "script": "Germany is urging caution over the proposal to describe Canada as an associate member of the European Union. Chancellor Friedrich Merz favours closer cooperation without that specific label. The disagreement does not necessarily mean opposition to stronger EU-Canada relations. The important question is what practical commitments both sides are prepared to make.",
-        "source": "Le Monde",
-        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
-        "status": "Position reported"
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "role": "President of the European Commission",
-        "country": "European Union",
-        "image": "assets/leaders/von-der-leyen.jpg",
-        "headline": "Von der Leyen Promotes a Closer EU-Canada Relationship",
-        "update": "Von der Leyen has promoted the idea of a closer relationship between Canada and the European Union.",
-        "statement": "The proposal is intended to deepen cooperation across trade, industrial policy, critical materials, artificial intelligence, climate, energy and security.",
-        "background": "The proposal has received a mixed response among European leaders, with Germany expressing reservations about the associate-member label.",
-        "implications": "The idea could reshape the EU's approach to strategic partnerships beyond formal membership.",
-        "radiantWavesView": "The proposal needs a clear explanation of what associate status would involve. Cooperation should strengthen economic security without creating confusion about EU membership or democratic accountability.",
-        "script": "European Commission President Ursula von der Leyen has proposed a closer relationship between Canada and the European Union. The idea of associate membership has generated interest but also questions among member states. The discussions include trade, energy, critical minerals, technology and security. The challenge is to turn the proposal into a clear and workable partnership.",
-        "source": "Le Monde",
-        "url": "https://www.lemonde.fr/en/international/article/2026/10/30/canada-and-eu-strengthen-ties-despite-divisions-among-member-states-over-associate-member-status_6767455_4.html",
-        "status": "Proposal under discussion"
-      },
-      {
-        "name": "Andy Burnham",
-        "role": "Prime Minister of the United Kingdom",
-        "country": "United Kingdom",
-        "image": "assets/leaders/andy.jpg",
-        "headline": "No New Independently Verified Statement Added to This Edition",
-        "update": "No new leader-specific statement has been independently established for this edition. The newsroom will add a substantive report when a verifiable announcement or policy development is available.",
-        "radiantWavesView": "Leaders Watch should report actual decisions and statements rather than repeat general descriptions. A fresh update will be added when a reliable source confirms one.",
-        "script": "RadiantWaves is monitoring developments in the United Kingdom. We will report the Prime Minister's next significant policy announcement or public statement with its context and implications.",
-        "source": "GOV.UK",
-        "url": "https://www.gov.uk/government/ministers/prime-minister",
-        "status": "Awaiting verified update"
+        "update": "Germany continues to focus on industrial competitiveness, economic growth and European security.",
+        "statement": "Economic competitiveness and the future of European trade remain important policy issues.",
+        "background": "Germany remains a major European industrial and economic power.",
+        "implications": "German economic policy has implications for European manufacturing and trade.",
+        "radiantWavesView": "Industrial policy should be assessed through investment, productivity, employment and economic resilience.",
+        "script": "Germany faces the challenge of strengthening its industrial base while navigating changes in global trade and European security."
       },
       {
         "name": "Vladimir Putin",
-        "role": "President of Russia",
         "country": "Russia",
+        "role": "President",
         "image": "assets/leaders/putin.jpg",
-        "headline": "No New Independently Verified Leader-Specific Statement Added",
-        "update": "No fresh leader-specific announcement has been established for this edition. International security and Russia's relations with other countries remain under newsroom monitoring.",
-        "radiantWavesView": "Reporting on Russia must distinguish official statements, independent evidence and claims made by parties to conflicts. We will not attribute a statement to Putin without a verifiable source.",
-        "script": "RadiantWaves continues to monitor Russia's international relations and security policy. Any new statement or decision by President Vladimir Putin will be examined in context and checked against reliable reporting.",
-        "source": "Kremlin",
-        "url": "https://en.kremlin.ru/",
-        "status": "Monitoring"
+        "update": "The war in Ukraine and Russia's international relationships continue to shape European and global security.",
+        "statement": "Russian policy and diplomatic positions remain subjects of international scrutiny.",
+        "background": "Russia's war against Ukraine has had major consequences for European security and international relations.",
+        "implications": "The conflict affects defence policy, sanctions, energy and diplomatic relations.",
+        "radiantWavesView": "Developments should be reported with attention to verified facts, civilian consequences and international law.",
+        "script": "Russia's war in Ukraine continues to shape European security. Diplomatic developments and military activity remain important to monitor."
       },
       {
         "name": "Xi Jinping",
-        "role": "President of China",
         "country": "China",
+        "role": "President",
         "image": "assets/leaders/xi.jpg",
-        "headline": "China's Party Discipline Campaign Remains in Focus",
-        "update": "China's ruling party reportedly announced expulsions involving 33 people on 30 October as part of continuing disciplinary action.",
-        "statement": "The reported announcement came from the ruling party. It should not be presented as a direct personal quotation from Xi Jinping.",
-        "background": "China's leadership has continued to emphasise party discipline and anti-corruption measures.",
-        "implications": "The development raises questions about governance, internal party oversight and due process.",
-        "radiantWavesView": "Anti-corruption measures should be assessed by their evidence, fairness and consistency. Strong institutions require transparent procedures and accountability.",
-        "script": "China's ruling party has announced the expulsion of 33 people as part of its continuing discipline campaign. The development highlights the importance the leadership places on internal control and anti-corruption measures. Observers will be watching how the cases are handled and whether the process provides clear evidence and due process.",
-        "source": "Channel NewsAsia",
-        "url": "https://www.channelnewsasia.com/east-asia",
-        "status": "Party announcement reported"
+        "update": "China's technology ambitions, trade relationships and strategic position in the global economy remain important international considerations.",
+        "statement": "China continues to pursue international trade and technology partnerships.",
+        "background": "China is a major global economic and technological power.",
+        "implications": "Its trade and technology policies affect global supply chains and international competition.",
+        "radiantWavesView": "International cooperation should balance economic opportunity with transparency and national interests.",
+        "script": "China's technology ambitions and international trade relationships continue to shape the global economy. Its decisions have implications for manufacturing, digital infrastructure and international competition."
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027: Opposition Coalition Must Explain Its Rules",
-      "summary": "Six opposition parties have reportedly consulted political figures including Atiku Abubakar and Peter Obi. The consultations are part of efforts to explore cooperation ahead of the 2027 election, but no final joint candidate has been established by the reports reviewed.",
-      "radiantWavesView": "A credible coalition needs transparent candidate selection, a shared manifesto, internal democratic procedures and a plan for resolving disagreements. Nigerians should not be expected to support an arrangement whose rules remain unclear.",
-      "keyQuestion": "Can opposition leaders agree on a candidate and programme without allowing personal ambition to destroy the process?",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/six-opposition-parties-consult-atiku-obi-donald-duke-adewole-adebayo-ahead-of-2027/",
-      "status": "Consultations reported"
+      "title": "Nigeria 2027 election preparations",
+      "summary": "INEC's timetable, candidate eligibility, party nominations and public confidence remain central issues.",
+      "watchPoints": [
+        "INEC announcements and official election timetable",
+        "Candidate eligibility and court proceedings",
+        "Party nominations and coalition discussions",
+        "Voter registration and participation",
+        "Campaign finance and electoral conduct"
+      ]
     },
     {
-      "title": "Tinubu's Second-Term Bid Must Be Judged Against His Record",
-      "summary": "The administration's economic and security record will remain central to the debate ahead of 2027. The latest borrowing request has renewed questions about public spending and accountability.",
-      "radiantWavesView": "An incumbent should be judged by measurable results, including economic conditions, security, employment and public services. Opposition candidates should be judged by the practicality of their alternatives. The same standards must apply to everyone.",
-      "keyQuestion": "What evidence should Nigerians use to judge the government's performance and the opposition's readiness to govern?",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html",
-      "status": "Election accountability watch"
+      "title": "Opposition cooperation",
+      "summary": "The opposition faces decisions about leadership, candidate selection and policy coordination.",
+      "watchPoints": [
+        "Party leadership decisions",
+        "Coalition negotiations",
+        "Presidential and running-mate selection",
+        "Policy commitments and campaign promises"
+      ]
     }
   ],
   "breakingHistory": [
     {
-      "date": "30 October 2026",
-      "headline": "Spain Railway Disaster Leaves Dozens Dead",
-      "summary": "Reports put the death toll at at least 69, with more than 200 injured. Investigators are examining the circumstances of the collision.",
-      "category": "International Breaking News",
-      "source": "The Guardian and international reporting"
+      "date": "2021-07",
+      "headline": "Security operation at Sunday Igboho's Ibadan residence",
+      "summary": "Nigerian security operatives raided the residence of the Yoruba Nation campaign figure during the Buhari administration."
     },
     {
-      "date": "30 October 2026",
-      "headline": "Tinubu Seeks Approval for $20.52 Billion and €1.045 Billion External Borrowing",
-      "summary": "The President submitted a request for legislative consideration under the 2026–2027 Supplementary External Borrowing Plan.",
-      "category": "Nigeria Economy",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/920673-tinubu-writes-nass-seeks-fresh-approval-to-borrow-20-5bn-e1-05bn.html"
+      "date": "2021",
+      "headline": "Nnamdi Kanu returned to Nigeria from Kenya",
+      "summary": "Kanu was brought back to Nigeria and faced criminal proceedings connected with his activities and statements concerning IPOB."
     },
     {
-      "date": "30 October 2026",
-      "headline": "Sunday Igboho Announces Iru Ekun Security Network",
-      "summary": "Igboho announced a security network, with organisers reportedly claiming a possible 20,000 volunteers. The number and legal status require clarification.",
-      "category": "Nigeria Security",
-      "source": "Leadership Nigeria",
-      "url": "https://leadership.ng/nsa-police-others-keep-mum-over-igbohos-20000-man-security-outfit/"
-    },
-    {
-      "date": "30 October 2026",
-      "headline": "Ukraine Reports Deadly Drone Strike at Dnipro Railway Platform",
-      "summary": "Reports say 14 people were killed in a drone strike at a crowded railway platform. Details remain subject to confirmation.",
-      "category": "International Security",
-      "source": "International news reporting"
-    },
-    {
-      "date": "29 October 2026",
-      "headline": "Trump Cancels Kansas and Iowa Campaign Rallies",
-      "summary": "Trump said he did not feel he needed to visit Kansas and planned telephone rallies instead.",
-      "category": "USA Politics",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/trump-cancels-weekend-rallies-plans-phone-other-midterm-campaign-events-2026-10-29/"
-    },
-    {
-      "date": "25 October 2026",
-      "headline": "Marine Le Pen Launches Presidential Campaign in Orléans",
-      "summary": "Le Pen presented proposals on national renewal, security, national preference and domestic energy exploration.",
-      "category": "France Politics",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/f7be845d572b9cf21acdf269ec90eae1"
+      "date": "2026-10",
+      "headline": "Families demand accountability over miners' deaths",
+      "summary": "Families seek justice following reports that 37 artisanal miners died while in detention in Niger State."
     }
   ],
   "thoughtForToday": {
-    "title": "The Courage to Demand Accountability",
-    "subtitle": "Questions are not enemies of progress; they are part of the path towards it.",
-    "content": "A responsible society does not fear questions. It welcomes honest scrutiny, listens to different voices and insists that those entrusted with power explain their decisions. Accountability should not depend on political loyalty, wealth, influence or popularity. We must speak with courage, examine evidence with care and treat others with fairness. A better future begins when responsibility becomes everyone's expectation.",
-    "attribution": "Original reflection — RadiantWaves Media"
+    "quote": "Leadership is not measured by the promises made before gaining power, but by the lives improved after gaining it.",
+    "author": "RadiantWaves Media",
+    "type": "Original editorial thought"
   },
   "todaysBigQuestion": {
-    "title": "Nigeria: Should Security Initiatives Be Allowed Outside Established Government Structures?",
-    "question": "When communities feel unsafe, should they be allowed to organise their own security networks, and what legal safeguards must be in place to protect citizens?",
-    "discussion": "Community safety is a legitimate concern, but security activity must operate within the law. What level of authorisation, training, supervision and accountability should be required? How can local knowledge support recognised security agencies without creating parallel forces or exposing citizens to abuse?",
-    "attribution": "RadiantWaves Media — Today's Big Question"
+    "question": "Sunday Igboho and Nnamdi Kanu represent two major separatist movements in Nigeria. What should government do when citizens demand self-determination: pursue dialogue, enforce the law, reform the political system or combine all three?",
+    "description": "Democracy is stronger when citizens can discuss difficult national questions peacefully and demand meaningful answers."
   },
   "sponsoredAdverts": [
     {
-      "title": "Spices and Natural Products",
-      "image": "assets/spices.jpeg",
-      "description": "Discover the advertised range of spices and natural products.",
-      "category": "Sponsored Advert",
-      "contact": "Contact the advertiser for product details."
+      "title": "Stone Breaker Herbal Product",
+      "description": "Sponsored promotional feature.",
+      "image": "assets/stonebreaker.jpeg",
+      "type": "Sponsored Advertisement"
     },
     {
-      "title": "Stonebreaker Product",
-      "image": "assets/stonebreaker.jpeg",
-      "description": "View the advertised product and contact the supplier for verified product information.",
-      "category": "Sponsored Advert",
-      "contact": "Contact the advertiser for product details."
+      "title": "Premium Nigerian Spices — From Nigeria to the World",
+      "description": "Discover Nigerian spices and products for local and international markets.",
+      "image": "assets/spices.jpeg",
+      "type": "Sponsored Advertisement"
     }
   ],
   "contact": {
@@ -957,37 +646,41 @@
   "socialMedia": {
     "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
     "tiktok": "https://www.tiktok.com/@radiantwaves",
-    "youtubeHandle": "@RADIANTWAVE=wv6",
+    "youtube": "https://www.youtube.com/@RADIANTWAVE=wv6",
     "x": "https://x.com/Radiant13528995"
   },
   "archives": [
     {
-      "edition": "Morning News",
-      "date": "30 October 2026",
-      "time": "Morning"
+      "edition": "Morning",
+      "date": "2026-10-31",
+      "status": "Prepared"
     },
     {
-      "edition": "Midday News",
-      "date": "30 October 2026",
-      "time": "Midday"
+      "edition": "Midday",
+      "date": "2026-10-31",
+      "status": "Awaiting update"
     },
     {
-      "edition": "Night News",
-      "date": "30 October 2026",
-      "time": "Night"
+      "edition": "Evening",
+      "date": "2026-10-31",
+      "status": "Awaiting update"
+    },
+    {
+      "edition": "Night",
+      "date": "2026-10-31",
+      "status": "Awaiting update"
     }
   ],
   "editorialStandards": {
-    "verification": "RadiantWaves Media checks significant factual claims against reliable reporting, official documents and primary sources wherever possible.",
-    "accuracy": "Developing stories may change. The newsroom updates figures, dates and descriptions when reliable new information becomes available.",
-    "independence": "Reports and analysis are independently written in RadiantWaves Media's own words. Other publishers' articles are not reproduced as original RadiantWaves reporting.",
-    "quotation": "Direct quotations are used sparingly, reproduced accurately and attributed to the speaker and source. A paraphrase is not presented as a direct quotation.",
-    "balance": "Political coverage scrutinises both government and opposition. Allegations, campaign claims, confirmed facts and opinion are clearly distinguished.",
-    "factChecking": "Fact checks identify the claim being examined, the available evidence and the reason for the verdict. Unverified claims are not presented as established facts.",
-    "editorialIndependence": "RadiantWaves Media reserves the right to question public officials, political parties, businesses and institutions regardless of their position or influence.",
-    "corrections": "Material errors should be corrected transparently when identified. Updates should explain significant changes to a developing story.",
-    "attribution": "External reporting and official statements are attributed to their original publishers or issuing institutions. Links are provided so readers can consult the underlying material.",
-    "copyright": "RadiantWaves Media writes original reports and commentary. Short quotations may be used where justified by reporting, criticism or analysis, with attribution. Copyrighted photographs, video and other material must be used with permission or under an applicable legal exception.",
-    "freedomOfExpression": "RadiantWaves Media supports open debate, scrutiny of public power and the public's right to receive information. Freedom of expression is exercised with respect for accuracy, privacy, applicable law and the rights of others."
+    "publication": "RadiantWaves Media Nigeria Ltd",
+    "principles": [
+      "Independent reporting",
+      "Accuracy and verification",
+      "Fairness and balance",
+      "Clear distinction between fact, allegation and opinion",
+      "Respect for human rights and due process",
+      "Correction of errors when identified"
+    ],
+    "verificationNote": "This edition includes background reporting and developing stories. Verify current legal proceedings, official statements, election information, figures and breaking developments before presenting them as confirmed news."
   }
 }

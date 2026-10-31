@@ -1,677 +1,757 @@
 {
-  "edition": "Midday",
+  "edition": "Evening",
   "date": "2026-10-31",
-  "editionTime": "Midday",
+  "editionTime": "Evening",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "GATEWAY TO YOUR WORLD NEWS — CONNECTING YOU TO THE WORLD",
     "footer": "Connecting You Deeper to the World's Most Important Stories"
   },
   "hero": {
-    "title": "Midday Global News Update",
-    "description": "Nigeria's political developments, France's demonstrations, Canada–EU cooperation, Ukraine and the international issues shaping today's world.",
-    "image": "",
-    "video": "assets/video1.mp4",
-    "marquee": "RADIANTWAVES MIDDAY NEWS — SATURDAY, 31 OCTOBER 2026"
+    "title": "Global Leaders Face Growing Pressure as Economic, Political and Security Challenges Intensify",
+    "subtitle": "From France's demonstrations to Nigeria's electoral preparations, international diplomacy and global technology markets, the world faces another eventful day.",
+    "image": ""
   },
-  "headline": "Midday News: Nigeria's 2027 Election Debate, France's Protests and a New Canada–EU Partnership",
-  "intro": "Good afternoon, and welcome to RadiantWaves Media. Our midday edition examines major political, economic and international developments across Nigeria, Europe, North America and the wider world.",
-  "morningSummary": [
-    "Nigeria's 2027 electoral preparations face renewed scrutiny following allegations concerning the integrity of the voter register.",
-    "France has deployed approximately 70,000 police and gendarmes ahead of demonstrations and other public gatherings.",
-    "Canada and the European Union have announced a strategic partnership covering technology, energy, defence and trade.",
-    "Ukraine continues to seek additional air-defence equipment as questions remain about the delivery of Patriot interceptors.",
-    "European governments are taking further measures to strengthen energy security amid uncertainty in international fuel markets."
-  ],
-  "editorialNote": "RadiantWaves Media separates verified developments from political claims, allegations and proposals. Our reporting aims to provide context, identify the sources of important claims and help audiences understand why these developments matter.",
+  "headline": "GLOBAL NEWS: LEADERSHIP, ECONOMIC PRESSURE AND INTERNATIONAL SECURITY DOMINATE THE EVENING",
+  "intro": "Good evening. Governments across the world are facing growing pressure over economic conditions, public confidence, national security and international cooperation. France is dealing with demonstrations and financial concerns, Nigeria is preparing for the 2027 elections, and international tensions continue to shape developments in Ukraine and the Gulf. RadiantWaves Media brings you the major stories and the issues behind them.",
+  "morningSummary": "Today's developments include protests and economic pressure in France, updated Nigerian election candidate lists, renewed debate about voter-register transparency, a new Canada–European Union strategic partnership, continuing concerns over Ukraine and Gulf maritime security, and uncertainty in global technology markets.",
+  "editorialNote": "This edition distinguishes confirmed developments from allegations and statements made by individual authorities. Reports that remain unconfirmed are clearly attributed. Readers should consult the linked original sources for further updates.",
   "breaking": [
     {
-      "title": "Nigeria: Atiku calls for an independent forensic audit of the voter register."
+      "category": "Nigeria",
+      "title": "INEC publishes updated 2027 election candidate information",
+      "summary": "Updated candidate information published by the Independent National Electoral Commission is attracting attention as political parties and candidates prepare for the 2027 general elections.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Independent National Electoral Commission",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
     },
     {
-      "title": "France: Approximately 70,000 police and gendarmes deployed ahead of demonstrations."
-    },
-    {
-      "title": "Canada and EU announce the Alliance for the Future."
-    },
-    {
-      "title": "Ukraine welcomes proposed US Patriot interceptor sale but raises delivery concerns."
-    },
-    {
-      "title": "European countries pledge diesel from strategic reserves."
-    },
-    {
-      "title": "G20 diplomatic divisions emerge over Russia's participation."
+      "category": "Middle East",
+      "title": "Gulf maritime security remains under close watch",
+      "summary": "A vessel reportedly struck by an unidentified projectile south of Iran's Lavan Island has renewed attention on shipping security in the region. The crew were reported safe.",
+      "image": "",
+      "sources": [
+        {
+          "name": "UK Maritime Trade Operations",
+          "url": "https://www.ukmto.org/"
+        }
+      ]
     }
   ],
   "featured": {
-    "title": "Canada and Europe Launch a New Strategic Partnership",
-    "category": "International Diplomacy",
-    "image": "",
-    "date": "2026-10-31",
-    "summary": "Canada and the European Union have announced a strategic partnership intended to deepen cooperation in technology, energy security, trade and defence.",
+    "category": "World",
+    "title": "A Changing World: Governments Face Demands for Security, Accountability and Economic Results",
+    "subtitle": "From Europe to Africa and the Middle East, public confidence and international cooperation are being tested.",
     "content": [
-      "Canadian Prime Minister Mark Carney and European Commission President Ursula von der Leyen have announced a new strategic partnership following a summit in Montreal.",
-      "The Alliance for the Future is intended to strengthen cooperation in artificial intelligence, advanced technology, critical minerals, energy security, digital trade, cybersecurity, defence and scientific research.",
-      "Canada has also pledged additional support for Ukraine. Discussions are continuing on a closer institutional relationship between Canada and the European Union, but any proposed associate status remains under negotiation.",
-      "The partnership reflects efforts by Canada and European countries to diversify economic relationships and strengthen cooperation during a period of international trade and security uncertainty."
+      "Across several regions, governments are facing difficult questions about their ability to deliver economic stability, protect citizens and maintain public confidence.",
+      "In France, demonstrations and concerns about public finances are placing renewed pressure on the government. In Nigeria, electoral preparations are bringing transparency and institutional credibility into sharper focus.",
+      "Internationally, the war in Ukraine, tensions around Iran and the Gulf, and the growing importance of technology and cybersecurity are influencing diplomatic and economic decisions.",
+      "The developments share a common theme: citizens and international partners increasingly expect measurable results, transparent institutions and responsible leadership."
     ],
-    "whyItMatters": "The partnership could influence future trade, technology investment, energy supply and security cooperation between Europe and North America.",
-    "radiantWavesView": "The announcement demonstrates the growing importance of international partnerships. Its practical significance will depend on the agreements, funding and implementation measures that follow.",
-    "sources": [
-      {
-        "name": "European Commission",
-        "url": "https://commission.europa.eu/"
-      },
-      {
-        "name": "Government of Canada",
-        "url": "https://www.canada.ca/"
-      }
-    ]
+    "image": "",
+    "sources": []
   },
   "topStories": [
     {
-      "title": "Atiku Demands Independent Forensic Audit of Nigeria's Voter Register",
-      "category": "Nigeria Politics",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "Former Vice-President Atiku Abubakar has called for an independent forensic audit following allegations of irregularities involving registration records and photographs in the voter database.",
-      "content": [
-        "Nigeria's electoral process is facing renewed scrutiny following disclosures by an INEC official concerning alleged irregularities in the voter registration database.",
-        "Atiku Abubakar has demanded an independent forensic audit, identification of officials involved and disclosure of contractors handling sensitive election materials.",
-        "INEC says it has identified irregularities and is undertaking corrections before certification of the final register.",
-        "The allegations concerning AI-generated photographs must be distinguished from independently established findings. The commission's response and any final audit findings remain important."
-      ],
-      "whyItMatters": "The accuracy of the voter register is central to electoral credibility and public confidence ahead of the 2027 elections.",
-      "radiantWavesView": "INEC should communicate its findings transparently. Political parties should also avoid presenting unverified allegations as established facts.",
+      "category": "France",
+      "title": "Nationwide protests put French government under pressure",
+      "summary": "Demonstrations over living costs, public services and the country's future are adding to political pressure on President Emmanuel Macron's government.",
+      "image": "assets/france-protests.jpg",
+      "url": "",
+      "sources": []
+    },
+    {
+      "category": "Nigeria",
+      "title": "INEC releases updated 2027 election candidate lists",
+      "summary": "Updated candidate information has renewed attention on nomination disputes, electoral transparency and preparations for the next general election.",
+      "image": "",
+      "url": "https://www.inecnigeria.org/",
       "sources": [
         {
-          "name": "Independent National Electoral Commission",
+          "name": "INEC",
           "url": "https://www.inecnigeria.org/"
         }
       ]
     },
     {
-      "title": "Seyi Makinde Takes Presidential Campaign Message to Enugu",
-      "category": "Nigeria Politics",
+      "category": "Canada and Europe",
+      "title": "Canada and EU announce Alliance for the Future",
+      "summary": "The new strategic partnership is intended to strengthen cooperation in trade, technology, critical minerals, energy and security.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "Oyo State Governor Seyi Makinde has taken his campaign message to Enugu, challenging assumptions about political loyalties in the South-East.",
-      "content": [
-        "Governor Seyi Makinde has taken his presidential campaign message to Enugu, where he urged voters to consider policy proposals rather than ethnic or religious identity.",
-        "His stated priorities include economic reform, security restructuring, education and political reform.",
-        "The campaign has announced plans to unveil its manifesto on 4 November.",
-        "The development adds another dimension to opposition politics, particularly as Peter Obi maintains an established political following in the South-East."
-      ],
-      "whyItMatters": "The development highlights the competition for support across Nigeria's regions and the importance of policy-based political engagement.",
-      "radiantWavesView": "Political support should not be treated as belonging permanently to any candidate or region. Voters should have the freedom to assess competing programmes.",
+      "url": "",
       "sources": []
     },
     {
-      "title": "Tinubu's Campaign Organisation Faces Public Scrutiny",
-      "category": "Nigeria Politics",
-      "image": "assets/leaders/tinubu.jpg",
-      "date": "2026-10-31",
-      "summary": "President Bola Tinubu's political organisation continues its mobilisation ahead of the 2027 presidential election.",
-      "content": [
-        "President Bola Tinubu's political organisation continues to demonstrate mobilisation capacity ahead of the 2027 presidential election.",
-        "Opposition parties argue that rallies and campaign organisation cannot replace measurable improvements in economic conditions.",
-        "The administration faces public expectations concerning food affordability, employment, security and household income.",
-        "Opposition parties also face pressure to explain how their proposed alternatives would improve the country's economic position."
-      ],
-      "whyItMatters": "The election debate is increasingly focused on the relationship between political organisation, governing records and economic performance.",
-      "radiantWavesView": "All candidates should be assessed against measurable policies and public records rather than campaign appearances alone.",
+      "category": "Ukraine",
+      "title": "Zelenskyy welcomes US Patriot missile agreement",
+      "summary": "Ukraine has welcomed a reported US-approved missile arrangement while warning that delivery timelines remain a major concern.",
+      "image": "assets/leaders/zelensky.jpg",
+      "url": "",
       "sources": []
     },
     {
-      "title": "APC Campaign Flag-Off: Elections Are Not Won Through Rallies Alone",
-      "category": "Nigeria Politics",
-      "image": "assets/leaders/tinubu.jpg",
-      "date": "2026-10-31",
-      "summary": "Political commentator Chekwas Okorie has argued that large campaign rallies do not automatically translate into electoral victory.",
-      "content": [
-        "Political commentator Chekwas Okorie has highlighted the distinction between crowd mobilisation and genuine voter confidence.",
-        "Political rallies can demonstrate organisational strength, but they do not independently establish the level of support a candidate will receive at the ballot box.",
-        "Voters will ultimately assess candidates through their records, policies and ability to address national challenges."
-      ],
-      "whyItMatters": "Campaign visibility is only one part of the electoral process.",
-      "radiantWavesView": "The quality of political debate should be measured by the seriousness of the policies presented and the accountability demanded of candidates.",
+      "category": "Global Technology",
+      "title": "AI investment concerns weigh on technology shares",
+      "summary": "Investors are reassessing whether large artificial intelligence investments will deliver sustainable commercial returns.",
+      "image": "",
+      "url": "",
       "sources": []
-    },
-    {
-      "title": "INEC Reports 66 Successful Nomination Petitions",
-      "category": "Nigeria Politics",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "INEC reports that 66 of 130 governorship and State Assembly nomination petitions reviewed were successful.",
-      "content": [
-        "INEC reported that 41 of 69 governorship petitions and 25 of 61 State Assembly petitions were successful.",
-        "The decisions may affect candidate lists in several states.",
-        "Affected political parties and candidates may continue to pursue available legal remedies."
-      ],
-      "whyItMatters": "Candidate nomination disputes can affect party preparations and the composition of the ballot.",
-      "radiantWavesView": "The commission should make the relevant decisions and legal procedures accessible to the public.",
-      "sources": [
-        {
-          "name": "Independent National Electoral Commission",
-          "url": "https://www.inecnigeria.org/"
-        }
-      ]
-    },
-    {
-      "title": "France Deploys Approximately 70,000 Police Ahead of Demonstrations",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "French authorities have mobilised approximately 70,000 police and gendarmes ahead of demonstrations and other public gatherings.",
-      "content": [
-        "French authorities have announced a major security deployment ahead of nationwide demonstrations and public gatherings on Saturday, 31 October.",
-        "The mobilisation comes amid concerns about public order following earlier incidents of unrest and damage to businesses.",
-        "Demonstrators have raised concerns about living costs, public services, education, university admissions and fuel prices.",
-        "Authorities have warned against violence and say they will respond to public-order incidents."
-      ],
-      "whyItMatters": "The demonstrations highlight continuing pressure over household finances, public services and confidence in political leadership.",
-      "radiantWavesView": "The right to peaceful demonstration and the responsibility to protect public safety must be respected together.",
-      "sources": [
-        {
-          "name": "French Ministry of the Interior",
-          "url": "https://www.interieur.gouv.fr/"
-        }
-      ]
-    },
-    {
-      "title": "France's Economic Outlook Faces Renewed Pressure",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Economic uncertainty, political divisions and energy costs are adding to pressure on France's government.",
-      "content": [
-        "France faces continuing economic and political challenges, including pressure on public finances and household purchasing power.",
-        "Businesses and households remain concerned about energy costs, investment conditions and the direction of government economic policy.",
-        "Claims concerning the precise third-quarter GDP figure and Fitch's sovereign debt outlook should be checked against the original publications before being treated as confirmed."
-      ],
-      "whyItMatters": "France's economic position affects employment, public spending, investment and the wider European economy.",
-      "radiantWavesView": "Economic reporting should distinguish official statistical releases from forecasts, market commentary and political interpretation.",
-      "sources": [
-        {
-          "name": "INSEE",
-          "url": "https://www.insee.fr/"
-        },
-        {
-          "name": "Fitch Ratings",
-          "url": "https://www.fitchratings.com/"
-        }
-      ]
-    },
-    {
-      "title": "Canada and the European Union Launch the Alliance for the Future",
-      "category": "World",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Canada and the EU announce closer cooperation in technology, energy, trade and defence.",
-      "content": [
-        "Canadian Prime Minister Mark Carney and European Commission President Ursula von der Leyen have announced a strategic partnership following their Montreal summit.",
-        "The partnership covers artificial intelligence, critical minerals, energy security, digital trade, cybersecurity, defence and research.",
-        "Discussions about a closer institutional relationship are continuing. No associate membership arrangement should be described as completed until formal details are announced."
-      ],
-      "whyItMatters": "The partnership could influence transatlantic economic and security cooperation.",
-      "radiantWavesView": "The long-term importance of the agreement will depend on the practical commitments and implementation that follow.",
-      "sources": [
-        {
-          "name": "European Commission",
-          "url": "https://commission.europa.eu/"
-        },
-        {
-          "name": "Government of Canada",
-          "url": "https://www.canada.ca/"
-        }
-      ]
-    },
-    {
-      "title": "Ukraine Welcomes US Patriot Interceptor Agreement but Warns of Delivery Delays",
-      "category": "World",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Ukraine has welcomed a proposed US sale of 500 Patriot interceptor missiles while warning that delivery could take years.",
-      "content": [
-        "Ukraine has repeatedly requested additional air-defence systems to protect cities and critical infrastructure from Russian missile and drone attacks.",
-        "President Volodymyr Zelenskyy has welcomed the proposed agreement involving 500 Patriot interceptors but warned that delivery schedules remain a concern.",
-        "The approaching winter increases the importance of protecting energy infrastructure and urban centres."
-      ],
-      "whyItMatters": "The availability and timing of air-defence equipment are important factors in Ukraine's ability to protect its population and infrastructure.",
-      "radiantWavesView": "Military assistance should be assessed not only by announced quantities but also by delivery schedules, operational needs and the wider diplomatic situation.",
-      "sources": [
-        {
-          "name": "US Defense Security Cooperation Agency",
-          "url": "https://www.dsca.mil/"
-        },
-        {
-          "name": "President of Ukraine",
-          "url": "https://www.president.gov.ua/en"
-        }
-      ]
     }
   ],
   "articles": [
     {
-      "title": "G20 Diplomatic Divisions: Planned Group Photograph Cancelled",
-      "category": "World",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "A planned group photograph of G20 foreign ministers in Atlanta was cancelled after disagreements over Russia's participation.",
+      "category": "France",
+      "region": "Europe",
+      "title": "France – Nationwide protests put government under pressure",
+      "excerpt": "Demonstrations over living costs, public services and the country's future are adding to pressure on the French government.",
       "content": [
-        "A planned group photograph at the G20 foreign ministers' meeting in Atlanta was cancelled after European representatives objected to appearing alongside Russian Foreign Minister Sergei Lavrov.",
-        "US Secretary of State Marco Rubio removed the photograph from the programme to prevent the disagreement from overshadowing the meeting.",
-        "The incident reflects continuing divisions over Russia's war in Ukraine and wider disagreements about international security."
+        "France has experienced another period of demonstrations, with thousands of people taking to the streets over the cost of living, public services, education and concerns about the country's future.",
+        "Authorities reportedly deployed approximately 70,000 police officers and gendarmes as security forces prepared for possible unrest. The deployment figure should be read as a reported security estimate, rather than evidence that every officer was involved in direct crowd control.",
+        "The demonstrations form part of a wider youth-led movement that has also attracted attention in other European countries. Although many gatherings remained peaceful, reports of clashes and injuries have emerged.",
+        "The protests present a challenge for President Emmanuel Macron's government, which is also dealing with economic and political pressure."
       ],
-      "whyItMatters": "Diplomatic disagreements can affect the ability of major economies to coordinate on international challenges.",
+      "analysis": "Demonstrations can bring public concerns into the political debate, but lasting stability requires more than security deployments. Governments must address the underlying issues through dialogue, practical policy and credible public services.",
+      "image": "assets/france-protests.jpg",
       "sources": []
     },
     {
-      "title": "European Countries Pledge Diesel From Strategic Reserves",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Eleven EU countries have pledged to release diesel from strategic reserves as European governments consider winter energy security.",
+      "category": "France",
+      "region": "Europe",
+      "title": "France – Credit outlook downgraded as economic concerns deepen",
+      "excerpt": "Concerns about growth, borrowing costs and public finances are keeping France's economic outlook under scrutiny.",
       "content": [
-        "Eleven European Union countries have pledged to release 20.5 million barrels of diesel from strategic reserves by the end of January 2027.",
-        "The participating countries include France, Germany, Belgium, Italy, the Netherlands and Sweden.",
-        "The measure reflects concerns about fuel supplies, refinery capacity and international energy market instability."
+        "France has faced another financial setback after Fitch changed the country's sovereign debt outlook from stable to negative while maintaining its A+ rating, according to the information supplied for this edition.",
+        "The decision reflects concerns about weaker economic growth, rising borrowing costs, political fragmentation and the country's public finances.",
+        "The reported contraction of 0.1 per cent in the third quarter adds to questions about the country's economic direction. The figure should be checked against the latest official INSEE release before being treated as a final national-accounts estimate.",
+        "The government faces the difficult task of reducing the budget deficit while protecting public services and supporting households already under pressure from living costs."
       ],
-      "whyItMatters": "Fuel availability affects transport, industry, household costs and European economic resilience.",
+      "analysis": "A negative outlook is a warning about financial risks, not the same as an immediate downgrade of the credit rating. The challenge for France is to restore confidence in its public finances without placing disproportionate pressure on households and essential services.",
+      "image": "assets/europe-energy.jpg",
       "sources": []
     },
     {
-      "title": "Ukraine's Wounded Veterans Turn to Sport for Recovery",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "A report on Ukrainian veterans using competitive sport as part of their recovery and rehabilitation.",
+      "category": "Nigeria",
+      "region": "Africa",
+      "title": "Nigeria – INEC releases updated 2027 election candidate lists",
+      "excerpt": "Updated candidate information brings renewed attention to nomination disputes and electoral transparency.",
       "content": [
-        "Ukrainian veterans who have lost limbs during the war are reported to have participated in an international HYROX endurance competition in Valencia, Spain.",
-        "Competitive sport can support physical rehabilitation, confidence and social inclusion for people recovering from serious injuries.",
-        "The specific event and participants should be checked against organiser or reliable media confirmation before publication."
+        "Nigeria's preparations for the 2027 general elections have entered another important stage following the publication of updated candidate information by the Independent National Electoral Commission.",
+        "The commission's website lists updated information for presidential, senatorial, National Assembly and governorship elections dated 31 October 2026.",
+        "The publication follows disputes and complaints concerning candidate nominations and omissions from earlier lists. Political parties, candidates and civil society organisations are expected to scrutinise the updated information.",
+        "The publication of candidate lists is an administrative step. It does not, by itself, settle every dispute relating to nominations or establish that all electoral concerns have been resolved."
       ],
-      "whyItMatters": "The long-term consequences of war include rehabilitation, accessibility, employment and social reintegration for wounded veterans.",
+      "analysis": "Electoral credibility requires more than publishing names. Nigerians need transparency, equal treatment of political parties, clear procedures for correcting errors and confidence that every candidate has been assessed according to the law.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Independent National Electoral Commission",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
+    },
+    {
+      "category": "Nigeria",
+      "region": "Africa",
+      "title": "Atiku's demand for voter-register audit remains a major political issue",
+      "excerpt": "Opposition concerns about the accuracy of the voter register have kept electoral transparency in the national debate.",
+      "content": [
+        "Former Vice-President Atiku Abubakar and other opposition voices have called for greater scrutiny of Nigeria's voter register following concerns about irregular entries, including photographs alleged to have been generated using artificial intelligence.",
+        "INEC has acknowledged concerns surrounding the preliminary register and has issued clarifications and updates. Allegations about manipulated photographs should not be treated as proof of widespread electoral fraud without independent verification.",
+        "The central issue is whether the commission can demonstrate that the final register is accurate, transparent and free from manipulation.",
+        "The matter is particularly important ahead of the 2027 general election, when public confidence in the electoral process will be essential."
+      ],
+      "analysis": "Electoral transparency should not be treated as a demand belonging to one political party. A credible voter register protects every eligible Nigerian, whether they support the ruling party or the opposition. INEC should explain its verification procedures and make appropriate corrections accessible to the public.",
+      "image": "assets/leaders/atiku.jpg",
+      "sources": [
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
+    },
+    {
+      "category": "Canada and Europe",
+      "region": "World",
+      "title": "Canada and Europe announce new strategic alliance",
+      "excerpt": "The Canada–EU partnership is intended to deepen cooperation in trade, technology, energy and security.",
+      "content": [
+        "Canada and the European Union have announced a new strategic partnership known as the Alliance for the Future, intended to strengthen economic, technological and security cooperation.",
+        "Canadian Prime Minister Mark Carney met European Commission President Ursula von der Leyen and European Council President António Costa during the summit in Montreal.",
+        "The partnership covers critical minerals, artificial intelligence, digital trade, energy, security and support for Ukraine.",
+        "Canada has indicated an initial contribution of €500 million to the EU's €90 billion Ukraine Support Loan, according to the information supplied for this edition. The precise financial arrangements and implementation should be checked against the official summit documents.",
+        "The two sides have also discussed developing a closer relationship beyond their existing trade agreement. This does not mean Canada is becoming a member of the European Union."
+      ],
+      "analysis": "The agreement reflects an international environment in which traditional allies are seeking to diversify economic and security relationships. It could create opportunities for research, investment and technology cooperation, while its practical impact will depend on implementation.",
+      "image": "",
       "sources": []
     },
     {
-      "title": "France Diesel Prices: Proposed Reduction Requires Official Confirmation",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Motorists are watching for possible changes in diesel prices, but the reported 18-cent reduction requires further confirmation.",
+      "category": "Ukraine",
+      "region": "Europe",
+      "title": "Ukraine – Zelenskyy welcomes US Patriot missile agreement",
+      "excerpt": "Ukraine has welcomed a reported US-approved missile arrangement but says delivery timelines remain a concern.",
       "content": [
-        "Reports have circulated about a possible diesel price reduction in France from 1 November.",
-        "The exact amount and timing should be confirmed through an official government announcement or a reliable fuel-market report before publication.",
-        "RadiantWaves Media will update this report when the details are verified."
+        "Ukrainian President Volodymyr Zelenskyy has welcomed a reported US-approved Patriot missile sale valued at approximately US$2.1 billion.",
+        "The arrangement reportedly involves 500 interceptor missiles. Zelenskyy has warned that delivery could take years, raising questions about how quickly the equipment can support Ukraine's air defences.",
+        "Ukraine continues to depend on international military assistance as it seeks to defend its cities and infrastructure against Russian attacks.",
+        "The announcement is significant, but the delivery timetable remains a concern for Kyiv. The precise procurement and delivery arrangements should be confirmed through official statements."
       ],
-      "whyItMatters": "Fuel prices directly affect households, transport operators and businesses.",
-      "radiantWavesView": "Consumers should be given accurate information about actual pump prices rather than unconfirmed reductions.",
+      "analysis": "Military assistance is not measured only by the value of an agreement. Delivery schedules, operational readiness, maintenance and the ability to replenish supplies all influence its practical effect on Ukraine's defence.",
+      "image": "assets/leaders/zelensky.jpg",
+      "sources": []
+    },
+    {
+      "category": "United States",
+      "region": "North America",
+      "title": "G20 talks end without agreement on key security issues",
+      "excerpt": "Disagreements over international conflicts have complicated efforts to reach a common diplomatic position.",
+      "content": [
+        "Foreign ministers from major economies have met in Atlanta for discussions on international security and global cooperation.",
+        "Disagreements, particularly over Russia's war in Ukraine, have reportedly prevented the group from reaching consensus on several important issues.",
+        "The meeting was expected to conclude without a joint communiqué, with a chair's statement expected instead.",
+        "US Secretary of State Marco Rubio reportedly cancelled the traditional group photograph after European diplomats objected to appearing alongside Russian Foreign Minister Sergey Lavrov.",
+        "The disagreement illustrates the difficulty of achieving diplomatic unity when major powers remain divided over international conflicts."
+      ],
+      "analysis": "Diplomatic meetings can remain useful even when participants cannot agree on a joint statement. However, the absence of consensus highlights the limits of multilateral cooperation when national positions and security interests sharply diverge.",
+      "image": "assets/g20-meeting.jpg",
+      "sources": []
+    },
+    {
+      "category": "United States and Iran",
+      "region": "Middle East",
+      "title": "Iran reports alleged incident involving fishing boats near Qeshm Island",
+      "excerpt": "Iranian state media has reported an alleged attack by US forces, but independent confirmation was not available at the time of publication.",
+      "content": [
+        "Iranian state media has reported that US forces attacked two fishing boats near Qeshm Island, with one fisherman reportedly wounded.",
+        "The allegation was attributed to a provincial official in Iran. The United States had not confirmed the reported attack at the time of publication.",
+        "Reuters reported that the White House and Pentagon had not immediately responded to requests for comment.",
+        "The allegation comes amid wider tensions between Washington and Tehran."
+      ],
+      "verificationNote": "This is an allegation reported by Iranian state media and attributed to a local official. It must not be presented as an independently confirmed US military attack. RadiantWaves will update this report if reliable independent confirmation becomes available.",
+      "analysis": "In periods of heightened tension, unverified military claims can spread quickly and increase the risk of misunderstanding. Independent confirmation and clear attribution are essential.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Middle East",
+      "region": "Middle East",
+      "title": "Gulf maritime security – Vessel reportedly hit by unidentified projectile",
+      "excerpt": "UKMTO has reported an incident south of Iran's Lavan Island, with the crew reported safe.",
+      "content": [
+        "The United Kingdom Maritime Trade Operations organisation has reported an incident involving a vessel approximately 40 nautical miles south of Iran's Lavan Island.",
+        "The vessel was reportedly struck by an unidentified projectile, causing a fire. The crew were reported safe.",
+        "UKMTO has advised vessels operating in the area to exercise caution and report suspicious activity.",
+        "The incident adds to concerns about maritime security in the Gulf and the wider Strait of Hormuz region, an important route for international energy supplies."
+      ],
+      "analysis": "Any disruption to shipping routes in this region can have consequences beyond the immediate incident. Shipping operators, insurers and energy markets monitor developments closely because prolonged disruption could affect transport costs and international trade.",
+      "image": "",
+      "sources": [
+        {
+          "name": "UK Maritime Trade Operations",
+          "url": "https://www.ukmto.org/"
+        }
+      ]
+    },
+    {
+      "category": "Asia",
+      "region": "Asia",
+      "title": "Myanmar – UN investigator raises alarm over attacks on civilians",
+      "excerpt": "A United Nations investigator has warned about alleged attacks on civilians and the humanitarian consequences of the conflict.",
+      "content": [
+        "A United Nations investigator has accused Myanmar's military authorities of deliberately attacking civilians in an effort to spread fear and suppress the population.",
+        "The investigator also warned that weapons supplies from foreign countries are contributing to the conflict and worsening the humanitarian situation.",
+        "Myanmar has experienced prolonged political instability and armed conflict since the military takeover in 2021.",
+        "The allegations underline the continuing need for international attention, civilian protection and accountability."
+      ],
+      "analysis": "The protection of civilians remains a central concern in conflicts where access for humanitarian organisations and independent investigators can be difficult. Allegations should be investigated and documented through credible international mechanisms.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Africa",
+      "region": "Africa",
+      "title": "Senegal hosts first Olympic event on African soil",
+      "excerpt": "The 2026 Youth Olympic Games mark a major milestone for African sport.",
+      "content": [
+        "Senegal is preparing to open the 2026 Youth Olympic Games, marking the first time an Olympic event has been hosted on African soil.",
+        "Approximately 2,700 athletes aged between 14 and 17 are expected to compete in Dakar, Diamniadio and Saly.",
+        "The competition is scheduled to run from 31 October to 13 November.",
+        "The event offers Senegal an opportunity to showcase its sporting infrastructure, culture and hospitality to an international audience.",
+        "It also represents an important milestone for African sport and the continent's participation in international sporting competitions."
+      ],
+      "analysis": "Hosting an international sporting event is an achievement, but its long-term value will depend on whether facilities are maintained and used to support young athletes, schools and local communities after the competition.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Asia",
+      "region": "Asia",
+      "title": "Japan investigates possible foreign cyber intrusion",
+      "excerpt": "Japan's Foreign Ministry has reported unauthorised access to computer systems that may have exposed personal information.",
+      "content": [
+        "Japan's Foreign Ministry has reported unauthorised access to its computer systems that may have exposed approximately 3,600 records containing personal information.",
+        "The affected information reportedly includes names and email addresses. The ministry's account indicated that the information was not confidential.",
+        "The incident highlights the growing cybersecurity challenges facing governments and international institutions.",
+        "As diplomatic and public services become increasingly digital, protecting sensitive information is becoming an important national security priority."
+      ],
+      "analysis": "Cybersecurity is no longer only an IT issue. Government institutions need strong access controls, rapid incident reporting, staff awareness and regular security reviews to protect public information.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Technology and Business",
+      "region": "Global",
+      "title": "AI investment fears trigger stock market sell-off",
+      "excerpt": "Investors are reassessing the cost of artificial intelligence investment and the returns expected from technology companies.",
+      "content": [
+        "US financial markets ended Friday sharply lower as investors reacted to concerns about the cost of artificial intelligence investment and whether technology companies will generate sufficient returns.",
+        "The Nasdaq fell approximately 2.9 per cent, while the S&P 500 dropped 1.8 per cent, according to the market figures supplied for this edition.",
+        "Intel shares reportedly plunged nearly 29 per cent after the company issued a weaker-than-expected profit forecast. Amazon's results also intensified concerns about the scale of spending on artificial intelligence.",
+        "The sell-off demonstrates that investors are demanding stronger evidence that enormous AI investments will translate into sustainable profits."
+      ],
+      "analysis": "Artificial intelligence remains one of the most important technologies shaping the global economy. However, investment enthusiasm must be matched by commercial results, responsible development and long-term value. Companies must demonstrate that spending is producing measurable benefits.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Technology and Finance",
+      "region": "Global",
+      "title": "Binance investigates major cryptocurrency security incident",
+      "excerpt": "The exchange is investigating a reported security incident with an estimated financial impact of approximately US$6.3 billion.",
+      "content": [
+        "Cryptocurrency exchange Binance is investigating a major security incident with an estimated impact of approximately US$6.3 billion.",
+        "The company has not confirmed that the full amount represents stolen funds. Initial findings suggest that a compromised employee device may have been involved.",
+        "Binance says it has not found evidence that wallet private keys were exposed. The company has said it is working with law enforcement and industry partners while reviewing the incident.",
+        "The incident has renewed concerns about cybersecurity, digital asset protection and the risks facing cryptocurrency investors.",
+        "Investors should rely on official exchange announcements and avoid unverified claims circulating online."
+      ],
+      "verificationNote": "The estimated impact should not automatically be described as a confirmed amount of stolen cryptocurrency. The investigation and the exchange's subsequent statements should be followed before publishing a definitive loss figure.",
+      "analysis": "The incident highlights the importance of independent security audits, employee-device protection, transparent incident reporting and safeguards for customer assets. Cryptocurrency users should be cautious about unofficial recovery offers and messages requesting wallet credentials.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Middle East",
+      "region": "Middle East",
+      "title": "Regional security concerns continue across the Gulf",
+      "excerpt": "Maritime incidents and continuing regional tensions remain a concern for shipping operators and international energy markets.",
+      "content": [
+        "Maritime incidents in the Gulf and continuing tensions involving Iran, Israel and neighbouring countries remain a concern for international security.",
+        "Reports of attacks on vessels and military incidents have increased uncertainty for shipping operators.",
+        "The region remains strategically important because of its role in international oil and gas transportation.",
+        "Any prolonged disruption could affect energy prices, insurance costs, shipping routes and global trade."
+      ],
+      "analysis": "The economic consequences of regional instability can reach countries far beyond the Middle East. Governments and shipping companies need reliable information, contingency planning and diplomatic engagement to reduce the risk of wider disruption.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "category": "Humanitarian",
+      "region": "Global",
+      "title": "UN seeks winter support for vulnerable displaced communities",
+      "excerpt": "A reported US$50 million winter appeal seeks support for vulnerable people facing conflict, displacement and extreme weather.",
+      "content": [
+        "The United Nations refugee agency has launched a reported US$50 million winter appeal, warning that vulnerable people in Afghanistan, Ukraine, Syria and Lebanon will need additional assistance in the coming months.",
+        "The appeal highlights the impact of conflict, displacement and extreme winter conditions on families already facing difficult living conditions.",
+        "Humanitarian organisations are calling for additional funding to provide shelter, heating, food and essential support.",
+        "For displaced families, winter conditions can make already difficult circumstances more dangerous, particularly where access to adequate housing and heating is limited."
+      ],
+      "analysis": "Humanitarian appeals require timely funding and transparent delivery. Support should reach vulnerable families through accountable organisations, with particular attention to children, older people and people living in inadequate shelter.",
+      "image": "",
       "sources": []
     }
   ],
   "worldNews": [
     {
-      "title": "Canada and Europe Strengthen Strategic Cooperation",
-      "category": "World",
+      "title": "Canada and the European Union deepen strategic cooperation",
+      "summary": "The Alliance for the Future is intended to strengthen economic, technological and security cooperation between Canada and the EU.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "The Alliance for the Future is intended to strengthen trade, technology, energy and security cooperation.",
-      "content": "Canada and the European Union are seeking closer cooperation as international trade and security relationships continue to evolve."
+      "sources": []
     },
     {
-      "title": "G20 Meeting Highlights International Divisions",
-      "category": "World",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Disagreement over Russia's participation has affected the diplomatic programme in Atlanta.",
-      "content": "The incident illustrates the continuing challenge of maintaining diplomatic cooperation amid international conflict."
-    }
-  ],
-  "usaNews": [
+      "title": "Ukraine continues to seek international defence support",
+      "summary": "The reported Patriot missile arrangement highlights the continuing importance of international military assistance and delivery schedules.",
+      "image": "assets/leaders/zelensky.jpg",
+      "sources": []
+    },
     {
-      "title": "US Midterm Elections Approach Amid Intense Political Competition",
-      "category": "USA",
-      "image": "assets/leaders/trump.jpg",
-      "date": "2026-10-31",
-      "summary": "Political attention is increasing as the November 2026 midterm elections approach.",
-      "content": [
-        "The United States is approaching its November midterm elections, with political parties focusing on turnout, economic conditions and control of Congress.",
-        "Claims that early voting has reached unprecedented participation levels should be supported by official state election figures before publication.",
-        "The election will provide an important measure of public opinion on the administration and the direction of national policy."
-      ],
+      "title": "Gulf maritime security remains a global concern",
+      "summary": "A reported vessel incident south of Lavan Island has renewed attention on a strategically important international shipping region.",
+      "image": "",
       "sources": [
         {
-          "name": "Federal Election Commission",
-          "url": "https://www.fec.gov/"
+          "name": "UKMTO",
+          "url": "https://www.ukmto.org/"
         }
       ]
     }
   ],
+  "usaNews": [
+    {
+      "title": "G20 diplomatic divisions emerge during Atlanta talks",
+      "summary": "Disagreements over international security and Ukraine have reportedly prevented consensus on several issues.",
+      "image": "assets/g20-meeting.jpg",
+      "sources": []
+    },
+    {
+      "title": "AI investment concerns weigh on US technology shares",
+      "summary": "Investors are reassessing the cost and expected returns of major technology investments.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "title": "Iranian allegation about incident near Qeshm Island remains unconfirmed by Washington",
+      "summary": "Iranian state media reported an alleged attack involving fishing boats. The claim had not been independently confirmed at publication.",
+      "image": "",
+      "sources": []
+    }
+  ],
   "europeNews": [
     {
-      "title": "France Deploys 70,000 Police Ahead of Demonstrations",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "French authorities have mobilised approximately 70,000 police and gendarmes ahead of public demonstrations.",
-      "content": "The deployment comes amid concerns about public order and continuing public debate over living costs and public services."
+      "title": "France faces renewed demonstrations and economic pressure",
+      "summary": "Public concerns about living costs and public services are adding to pressure on the government.",
+      "image": "assets/france-protests.jpg",
+      "sources": []
     },
     {
-      "title": "European Governments Address Energy Security",
-      "category": "Europe",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Eleven EU countries have pledged to release diesel from strategic reserves.",
-      "content": "The measure is intended to strengthen fuel supply resilience as European governments prepare for winter."
+      "title": "France's public finances remain under scrutiny",
+      "summary": "Credit outlook concerns and economic growth figures are keeping attention on government borrowing and the budget deficit.",
+      "image": "assets/europe-energy.jpg",
+      "sources": []
     },
     {
-      "title": "Ukraine Continues to Seek Additional Air Defence",
-      "category": "Europe",
+      "title": "European Union expands strategic cooperation with Canada",
+      "summary": "The new partnership includes technology, critical minerals, energy and security cooperation.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "Ukraine has welcomed a proposed Patriot interceptor sale but remains concerned about delivery schedules.",
-      "content": "Air defence remains central to Ukraine's efforts to protect cities and critical infrastructure."
+      "sources": []
     }
   ],
   "africaNews": [
     {
-      "title": "Nigeria's Electoral Integrity Debate Continues",
-      "category": "Africa",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "Questions about voter registration and electoral transparency remain central to Nigeria's political debate.",
-      "content": "The accuracy of electoral records is important for public confidence and credible elections."
+      "title": "Senegal prepares to host the Youth Olympic Games",
+      "summary": "The event marks the first time an Olympic competition has been hosted on African soil.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "title": "Nigeria's 2027 election preparations enter another stage",
+      "summary": "Updated candidate information published by INEC is being closely watched by political parties and civil society.",
+      "image": "",
+      "sources": [
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
     }
   ],
   "nigeriaNews": [
     {
-      "title": "Atiku Calls for Forensic Audit of Voter Register",
-      "category": "Nigeria",
+      "title": "INEC publishes updated candidate information for 2027 elections",
+      "summary": "The updated lists have renewed attention on nominations, omissions and the need for transparent electoral administration.",
+      "image": "",
+      "sources": [
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
+    },
+    {
+      "title": "Atiku calls for greater scrutiny of voter register",
+      "summary": "Concerns about alleged irregular entries and photographs have kept the accuracy of the register in the national debate.",
       "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "The former Vice-President wants independent examination of alleged irregularities in the voter database.",
-      "content": "INEC's response and the publication of verifiable findings will be important to public confidence."
-    },
-    {
-      "title": "Seyi Makinde Takes Campaign Message to Enugu",
-      "category": "Nigeria",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "The Oyo State governor has taken his political message to the South-East.",
-      "content": "The visit highlights the competition for support across Nigeria's political regions."
-    },
-    {
-      "title": "Tinubu's Political Organisation Mobilises Ahead of 2027",
-      "category": "Nigeria",
-      "image": "assets/leaders/tinubu.jpg",
-      "date": "2026-10-31",
-      "summary": "The President's campaign organisation continues its political preparations.",
-      "content": "Voters will assess the administration's record and the proposals presented by competing parties."
-    },
-    {
-      "title": "INEC Reports Successful Nomination Petitions",
-      "category": "Nigeria",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "The commission reports 66 successful petitions among 130 governorship and State Assembly cases reviewed.",
-      "content": "The decisions may affect candidate lists in several states."
+      "sources": [
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
     }
   ],
   "asiaNews": [
     {
-      "title": "Asian Economies Watch Global Trade and Energy Developments",
-      "category": "Asia",
+      "title": "Myanmar conflict remains a serious civilian protection concern",
+      "summary": "A UN investigator has raised allegations about attacks on civilians and the impact of foreign weapons supplies.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "Trade and energy security remain important concerns for Asian economies amid international uncertainty.",
-      "content": "Developments in Europe and North America could affect supply chains, investment and energy markets across Asia."
+      "sources": []
+    },
+    {
+      "title": "Japan investigates unauthorised access to ministry systems",
+      "summary": "The incident may have exposed approximately 3,600 records containing personal information.",
+      "image": "",
+      "sources": []
     }
   ],
   "businessNews": [
     {
-      "title": "Energy Security and Strategic Fuel Reserves Return to Focus",
-      "category": "Business & Economy",
+      "title": "France faces pressure over public finances and economic growth",
+      "summary": "Credit outlook concerns and reported economic contraction are adding to the government's fiscal challenge.",
+      "image": "assets/europe-energy.jpg",
+      "sources": []
+    },
+    {
+      "title": "AI spending faces greater scrutiny from investors",
+      "summary": "Technology companies are under pressure to demonstrate that large investments can generate sustainable returns.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "European governments are taking steps to reinforce fuel supply resilience.",
-      "content": "Energy availability and prices remain important factors for industrial competitiveness, transport and household purchasing power."
+      "sources": []
+    },
+    {
+      "title": "Cryptocurrency security incident renews investor concerns",
+      "summary": "Binance is investigating a reported incident with a stated estimated impact of approximately US$6.3 billion.",
+      "image": "",
+      "sources": []
     }
   ],
   "technologyNews": [
     {
-      "title": "Artificial Intelligence and Critical Minerals Feature in Canada–EU Partnership",
-      "category": "Technology",
+      "title": "Artificial intelligence investment enters a new period of scrutiny",
+      "summary": "Investors are increasingly focused on commercial returns, infrastructure costs and sustainable business models.",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "The new partnership includes artificial intelligence, advanced technology and critical mineral supply chains.",
-      "content": "The initiative highlights the growing connection between technology policy, industrial development and strategic resource security."
+      "sources": []
+    },
+    {
+      "title": "Japan's reported cyber intrusion highlights government security risks",
+      "summary": "The incident reinforces the need for stronger protection of public-sector information systems.",
+      "image": "",
+      "sources": []
+    },
+    {
+      "title": "Binance investigates major security incident",
+      "summary": "The investigation has renewed debate about digital asset protection and cybersecurity safeguards.",
+      "image": "",
+      "sources": []
     }
   ],
   "editorial": [
     {
-      "title": "Electoral Credibility Requires More Than Political Promises",
-      "category": "Editorial",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "Nigeria's electoral institutions must provide transparent explanations when questions arise about voter registration.",
+      "title": "The world is changing, but are leaders listening?",
       "content": [
-        "Electoral credibility depends on accurate records, transparent procedures and public confidence.",
-        "Political parties have a responsibility to raise concerns through evidence and lawful procedures.",
-        "INEC must respond to credible allegations with clear explanations and independently verifiable information."
+        "From France's demonstrations to Nigeria's electoral preparations, from the war in Ukraine to growing tensions in the Gulf, today's developments reveal a common challenge: public confidence in leadership.",
+        "Citizens want more than political promises. They want affordable living, security, reliable public services, employment opportunities and institutions they can trust.",
+        "The international economy is also changing. Countries are seeking new partnerships, businesses are reassessing technology investments, and governments are facing growing cybersecurity and security threats.",
+        "For developing countries, these changes present both risks and opportunities. Nigeria and other African nations must position themselves to benefit from new economic and technological partnerships rather than remain passive observers.",
+        "The responsibility of leadership is not simply to respond to crises, but to build institutions capable of preventing them."
       ],
-      "radiantWavesView": "A credible election is a shared responsibility. Political competition must never become an excuse to weaken public trust in democratic institutions."
+      "image": ""
     }
   ],
   "analysis": [
     {
-      "title": "Canada and Europe: Why Strategic Partnerships Matter",
-      "category": "Analysis",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "The Canada–EU partnership reflects a changing international environment in which economic security and defence cooperation increasingly overlap.",
+      "title": "Public confidence is becoming a central test of leadership",
       "content": [
-        "The partnership brings together trade, technology, energy and security priorities.",
-        "Canada and Europe are seeking to diversify economic relationships and reduce exposure to disruptions in strategic supply chains.",
-        "The success of the initiative will depend on implementation, investment and the ability to translate political commitments into practical agreements."
-      ]
+        "The stories in this evening's edition point to a growing challenge for governments: the distance between political promises and the daily experiences of citizens.",
+        "Economic pressure, insecurity, political disagreements and concerns about public institutions can weaken confidence when citizens do not see practical responses.",
+        "The challenge is not limited to one country or political system. Governments in established democracies and developing economies alike face demands for transparency, accountability and measurable results.",
+        "For Nigeria, the 2027 election preparations offer an opportunity to strengthen public confidence through transparent procedures, credible institutions and equal treatment under the law."
+      ],
+      "image": ""
+    },
+    {
+      "title": "AI investment: innovation must deliver measurable value",
+      "content": [
+        "The global technology sector is entering a period in which investors are asking harder questions about the cost of artificial intelligence.",
+        "AI has the potential to transform healthcare, education, manufacturing, finance and public administration. However, high investment does not automatically guarantee commercial success or social benefit.",
+        "Businesses and governments need to consider infrastructure costs, data protection, workforce development, accountability and the long-term effects of automation.",
+        "The next phase of AI development will be judged not only by technological capability, but also by the value it delivers to organisations and ordinary people."
+      ],
+      "image": ""
     }
   ],
   "factCheck": [
     {
-      "title": "Fact Check: Has the Canada–EU Partnership Already Made Canada an EU Member?",
-      "category": "Fact Check",
+      "title": "Qeshm Island incident: allegation, not independently confirmed fact",
+      "claim": "US forces attacked two fishing boats near Qeshm Island.",
+      "assessment": "The allegation was reported by Iranian state media and attributed to a local official. It had not been independently confirmed by the United States at the time of publication.",
+      "verdict": "UNCONFIRMED ALLEGATION",
       "image": "",
-      "date": "2026-10-31",
-      "summary": "No. The announcement concerns a strategic partnership and discussions about closer institutional cooperation.",
-      "content": [
-        "Canada has not become a member of the European Union.",
-        "Any proposed associate status or closer institutional arrangement remains subject to further discussions and formal decisions.",
-        "The announcement should therefore be described as a strategic partnership, not EU membership."
-      ]
+      "sources": []
     },
     {
-      "title": "Fact Check: Are All Allegations About AI-Generated Voter Photographs Proven?",
-      "category": "Fact Check",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "Claims about AI-generated photographs must be distinguished from independently verified findings.",
-      "content": [
-        "Atiku Abubakar has called for a forensic audit of Nigeria's voter register.",
-        "Allegations about AI-generated photographs should be attributed to the people or organisations making them.",
-        "INEC's official findings and any independent audit are necessary before the claims can be described as proven."
-      ]
+      "title": "Canada joining the European Union?",
+      "claim": "Canada's new partnership with the EU means it is becoming an EU member.",
+      "assessment": "The reported agreement is a strategic partnership. It does not make Canada a member of the European Union.",
+      "verdict": "MISLEADING",
+      "image": "",
+      "sources": []
+    },
+    {
+      "title": "Binance security incident: estimated impact is not automatically confirmed stolen funds",
+      "claim": "The entire estimated US$6.3 billion represents confirmed stolen funds.",
+      "assessment": "The exchange is investigating the incident. The estimated impact should not be presented as a confirmed amount of stolen assets without a definitive statement and supporting evidence.",
+      "verdict": "NOT ESTABLISHED",
+      "image": "",
+      "sources": []
     }
   ],
   "beyondStatement": [
     {
-      "title": "Beyond the Statement: What a Forensic Audit of Nigeria's Voter Register Should Establish",
-      "category": "Beyond the Statement",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "An examination of the questions an independent audit should answer.",
+      "title": "Why voter-register transparency matters beyond party politics",
       "content": [
-        "A forensic audit should examine the integrity of registration records, the source of suspicious entries, the systems used to process data and the responsibilities of contractors and officials.",
-        "The public should be informed about the methodology, findings and corrective measures.",
-        "The objective should be to protect the credibility of the electoral register rather than serve the political interests of any individual party."
-      ]
+        "A credible voter register is a foundation of electoral trust. It determines who is eligible to vote and helps protect the integrity of the process.",
+        "Concerns about inaccurate or irregular entries should be investigated through transparent procedures. Equally, allegations should be supported by evidence rather than circulated as established facts.",
+        "INEC has a responsibility to explain how the register is compiled, how errors can be corrected and how eligible voters can confirm their information.",
+        "The right to a credible election belongs to every Nigerian, regardless of political affiliation."
+      ],
+      "image": "assets/leaders/atiku.jpg"
     }
   ],
   "publicInterestFeature": {
-    "title": "Nigeria's Mining Deaths: Questions of Detention, Accountability and Justice",
-    "category": "Public Interest",
-    "image": "",
-    "date": "2026-10-31",
-    "summary": "An investigation has raised serious questions following the deaths of 37 suspected illegal miners in detention facilities in Niger State.",
+    "title": "The cost of insecurity and instability reaches ordinary people",
     "content": [
-      "A government investigation into the deaths of 37 suspected illegal miners in Niger State identified serious problems involving detention conditions, overcrowding, heat, dehydration and neglect.",
-      "The deaths have raised questions about the treatment of detainees, institutional supervision and the protection of people held in custody.",
-      "Families are seeking accountability and answers about the circumstances surrounding the deaths.",
-      "The government has indicated that the investigation's report has been forwarded to the Attorney-General."
+      "When conflict, maritime disruption or political instability makes international headlines, the consequences are often felt most directly by ordinary households.",
+      "Higher transport costs can affect food prices. Shipping delays can disrupt supplies. Insecurity can discourage investment and reduce employment opportunities.",
+      "The effects are especially difficult for communities already facing economic hardship.",
+      "Public policy should therefore consider not only immediate security responses but also the economic and humanitarian consequences for families and local businesses."
     ],
-    "whyItMatters": "People held in state custody remain entitled to humane treatment and protection. Allegations of neglect or abuse require transparent investigation.",
-    "radiantWavesView": "The right to due process does not disappear when a person is suspected of a crime. Accountability and humane detention standards are essential to public trust.",
-    "sources": []
+    "image": ""
   },
   "technologyInnovation": [
     {
-      "title": "Artificial Intelligence Becomes a Strategic Priority in Canada–EU Cooperation",
-      "category": "Technology & Innovation",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Artificial intelligence and advanced technology are among the areas covered by the new strategic partnership.",
-      "content": "Cooperation in AI research, infrastructure and innovation could influence future competitiveness and digital policy."
+      "title": "Artificial intelligence and the next stage of economic transformation",
+      "content": "AI is changing how businesses analyse information, manage operations and develop services. The challenge for governments and businesses is to encourage innovation while protecting privacy, strengthening skills and ensuring that technological benefits are widely shared.",
+      "image": ""
+    },
+    {
+      "title": "Cybersecurity is now a public-sector priority",
+      "content": "The reported incident involving Japan's Foreign Ministry demonstrates why public institutions need strong cybersecurity procedures, staff training, secure devices and effective incident response.",
+      "image": ""
     }
   ],
   "innovation": [
     {
-      "title": "Critical Minerals and Clean Energy Supply Chains",
-      "category": "Innovation",
-      "image": "",
-      "date": "2026-10-31",
-      "summary": "Critical minerals and energy security feature prominently in the Canada–EU partnership.",
-      "content": "Secure supplies of essential materials are increasingly important for batteries, electric vehicles, renewable energy and advanced manufacturing."
+      "title": "Digital transformation must include digital protection",
+      "content": "As public services move online, institutions must invest in secure systems, reliable data management and digital skills. Access to technology should be matched by protection against cybercrime and misuse of personal information.",
+      "image": ""
     }
   ],
   "leadersWatch": {
     "leaders": [
       {
-        "name": "Bola Ahmed Tinubu",
-        "role": "President",
-        "country": "Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "headline": "Political mobilisation ahead of the 2027 election",
-        "report": "The administration faces public expectations concerning economic performance, security, employment and household purchasing power.",
-        "radiantWavesView": "The administration should be assessed against measurable results and its ability to address citizens' concerns."
-      },
-      {
-        "name": "Atiku Abubakar",
-        "role": "Former Vice-President",
-        "country": "Nigeria",
-        "image": "assets/leaders/atiku.jpg",
-        "headline": "Calls for independent voter register audit",
-        "report": "Atiku has demanded an independent forensic audit of the voter register following allegations of irregularities.",
-        "radiantWavesView": "The allegations should be examined through transparent procedures and verifiable evidence."
-      },
-      {
-        "name": "Peter Obi",
-        "role": "Former Governor and political figure",
-        "country": "Nigeria",
-        "image": "assets/leaders/obi.jpg",
-        "headline": "Opposition competition and the South-East",
-        "report": "The political competition in the South-East remains important as opposition figures seek support across the country.",
-        "radiantWavesView": "Political support should be earned through credible policies and public engagement."
-      },
-      {
-        "name": "Seyi Makinde",
-        "role": "Governor of Oyo State",
-        "country": "Nigeria",
-        "image": "",
-        "headline": "Campaign message reaches Enugu",
-        "report": "Makinde's reported visit to Enugu adds another dimension to political competition ahead of 2027."
+        "name": "Donald Trump",
+        "country": "United States",
+        "position": "President of the United States",
+        "summary": "The US administration faces domestic political pressure ahead of the midterm elections and continuing international tensions.",
+        "image": "assets/leaders/trump.jpg"
       },
       {
         "name": "Mark Carney",
-        "role": "Prime Minister",
         "country": "Canada",
-        "image": "",
-        "headline": "Canada strengthens strategic cooperation with Europe",
-        "report": "Carney has announced a new strategic partnership with European leaders covering technology, trade, energy and security."
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "role": "President of the European Commission",
-        "country": "European Union",
-        "image": "",
-        "headline": "New Canada–EU strategic partnership",
-        "report": "The European Commission President has participated in the announcement of closer cooperation between Canada and the EU."
-      },
-      {
-        "name": "Volodymyr Zelenskyy",
-        "role": "President",
-        "country": "Ukraine",
-        "image": "",
-        "headline": "Ukraine seeks stronger air defence",
-        "report": "Zelenskyy has welcomed the proposed Patriot interceptor agreement while raising concerns about delivery times."
+        "position": "Prime Minister of Canada",
+        "summary": "His government's strategic partnership with the European Union marks a major development in Canada's international economic and diplomatic policy.",
+        "image": ""
       },
       {
         "name": "Emmanuel Macron",
-        "role": "President",
         "country": "France",
-        "image": "assets/leaders/macron.jpg",
-        "headline": "France faces demonstrations and economic pressure",
-        "report": "The French government faces continuing public debate over living costs, public services and economic policy."
+        "position": "President of France",
+        "summary": "The French president faces renewed pressure over demonstrations, public finances and economic performance.",
+        "image": "assets/leaders/macron.jpg"
       },
       {
-        "name": "Donald Trump",
-        "role": "President",
-        "country": "United States",
-        "image": "assets/leaders/trump.jpg",
-        "headline": "US political attention turns to midterm elections",
-        "report": "The approaching midterm elections are bringing renewed attention to economic policy, turnout and control of Congress."
+        "name": "Volodymyr Zelenskyy",
+        "country": "Ukraine",
+        "position": "President of Ukraine",
+        "summary": "Ukraine continues to seek military and financial assistance while pursuing diplomatic engagement with international partners.",
+        "image": "assets/leaders/zelensky.jpg"
+      },
+      {
+        "name": "Bola Ahmed Tinubu",
+        "country": "Nigeria",
+        "position": "President of Nigeria",
+        "summary": "The administration faces scrutiny over economic conditions, national security and preparations for the 2027 elections.",
+        "image": "assets/leaders/tinubu.jpg"
+      },
+      {
+        "name": "Atiku Abubakar",
+        "country": "Nigeria",
+        "position": "Former Vice-President of Nigeria",
+        "summary": "His call for greater scrutiny of the voter register keeps electoral transparency high on the national political agenda.",
+        "image": "assets/leaders/atiku.jpg"
+      },
+      {
+        "name": "Peter Obi",
+        "country": "Nigeria",
+        "position": "Former presidential candidate",
+        "summary": "The former presidential candidate remains an important figure in opposition discussions ahead of the next general election.",
+        "image": "assets/leaders/obi.jpg"
+      },
+      {
+        "name": "Xi Jinping",
+        "country": "China",
+        "position": "President of China",
+        "summary": "China's investment in advanced technology, artificial intelligence and military capabilities continues to influence international relations.",
+        "image": "assets/leaders/xi.jpg"
+      },
+      {
+        "name": "Vladimir Putin",
+        "country": "Russia",
+        "position": "President of Russia",
+        "summary": "Russia's war in Ukraine remains a central issue in international diplomacy and European security.",
+        "image": "assets/leaders/putin.jpg"
+      },
+      {
+        "name": "Ursula von der Leyen",
+        "country": "European Union",
+        "position": "President of the European Commission",
+        "summary": "The Commission president is working to deepen Europe's economic and strategic partnerships, including the new agreement with Canada.",
+        "image": "assets/leaders/von-der-leyen.jpg"
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027: Electoral Register Integrity Under Scrutiny",
-      "category": "Election Watch",
-      "image": "assets/leaders/atiku.jpg",
-      "date": "2026-10-31",
-      "summary": "INEC faces calls for transparency and independent verification of voter registration records.",
-      "content": "The credibility of the 2027 elections depends on accurate records, transparent procedures and public confidence."
+      "title": "Nigeria 2027 – Electoral transparency under scrutiny",
+      "content": "Updated candidate information and continuing debate about the voter register have placed INEC's transparency and administrative procedures under close public scrutiny. Political parties, candidates and voters will be watching how disputes and corrections are handled.",
+      "image": "",
+      "sources": [
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        }
+      ]
     }
   ],
   "breakingHistory": [
     {
-      "title": "Nigeria's Mining Detention Deaths Raise Accountability Questions",
-      "date": "2026-10-30",
-      "summary": "An investigation into the deaths of 37 suspected illegal miners in Niger State has raised questions about detention conditions and institutional responsibility."
+      "date": "31 October",
+      "title": "A historic milestone for African sport",
+      "content": "The 2026 Youth Olympic Games in Senegal mark the first time an Olympic event has been hosted on African soil. The event provides an opportunity to showcase African sporting talent and infrastructure to a global audience.",
+      "image": ""
     }
   ],
   "thoughtForToday": {
-    "content": "Democracy is not strengthened by the size of a rally, but by the quality of leadership, the integrity of institutions and the freedom of citizens to make informed choices."
+    "title": "Thought for Tonight",
+    "text": "Leadership is not measured by the power a person holds, but by the difference that power makes in the lives of ordinary people.",
+    "author": "RadiantWaves Media"
   },
   "todaysBigQuestion": {
-    "question": "As Nigeria approaches the 2027 elections, what should matter most to voters: campaign promises, political alliances, governing records or the credibility of electoral institutions?"
+    "title": "Today's Big Question",
+    "question": "As the world faces economic uncertainty, political division and growing security challenges, what should citizens demand first from their leaders: economic results, national security, transparency or responsible leadership?",
+    "callToAction": "Join the conversation. Share your perspective respectfully."
   },
   "sponsoredAdverts": [
     {
-      "title": "Natural Spices",
-      "description": "Discover natural spices for your kitchen.",
-      "image": "assets/spices.jpeg"
+      "title": "Sponsored Feature",
+      "image": "assets/spices.jpeg",
+      "description": "Discover the advertised product. Contact the advertiser for further information."
     },
     {
-      "title": "Stonebreaker",
-      "description": "Explore the advertised stonebreaker product.",
-      "image": "assets/stonebreaker.jpeg"
+      "title": "Sponsored Feature",
+      "image": "assets/stonebreaker.jpeg",
+      "description": "Discover the advertised product. Contact the advertiser for further information."
     }
   ],
   "contact": {
+    "company": "RadiantWaves Media Nigeria Ltd",
     "email": "info@radiantwavesmedia.com",
     "supportEmail": "support@radiantwavesmedia.com",
-    "whatsapp": "+33 6 21 61 31 49"
+    "whatsapp": "+33 6 21 61 31 49",
+    "website": "https://radiantwavesmedia.com"
   },
   "socialMedia": {
     "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
@@ -680,11 +760,11 @@
     "x": "https://x.com/Radiant13528995"
   },
   "archives": [],
-  "editorialStandards": [
-    "RadiantWaves Media distinguishes confirmed facts from allegations, political statements and developing reports.",
-    "Claims are attributed to their original speakers or institutions.",
-    "Images must accurately represent the people, places and events described in each story.",
-    "Where an image is unavailable, the newsroom should leave the image field empty rather than use an unrelated leader's photograph.",
-    "Corrections and material updates should be made transparently."
-  ]
+  "editorialStandards": {
+    "verification": "RadiantWaves Media distinguishes confirmed information from allegations, official claims and developing reports.",
+    "attribution": "Claims are attributed to the relevant officials, institutions or media organisations wherever possible.",
+    "corrections": "Material errors will be corrected when reliable information becomes available.",
+    "independence": "Editorial coverage is separate from sponsored advertising.",
+    "originality": "Articles are independently written and do not reproduce source material verbatim."
+  }
 }

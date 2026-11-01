@@ -1,88 +1,115 @@
 {
-  "edition": "Morning",
+  "edition": "Midday",
   "date": "2026-11-01",
-  "editionTime": "Morning",
+  "editionTime": "Midday",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "GATEWAY TO YOUR WORLD NEWS — CONNECTING YOU TO THE WORLD",
-    "footer": "Connecting the world. Informing the people. Holding power accountable.",
+    "footer": "Connecting You Deeper to the World's Most Important Stories",
     "website": "https://radiantwavesmedia.com",
     "email": "info@radiantwavesmedia.com"
   },
   "hero": {
-    "title": "Morning News & Global Update",
-    "subtitle": "The stories shaping Nigeria, Africa and the wider world",
+    "title": "Midday News & Global Update",
+    "subtitle": "The latest developments shaping Nigeria, Africa and the wider world",
     "image": ""
   },
-  "headline": "Nigeria's Ebola surveillance update, questions over electoral transparency, accountability following miners' deaths and major international developments lead Sunday's global news.",
-  "intro": "Good morning and welcome to RadiantWaves Media. This Sunday, we examine the latest developments in public health, politics, international relations, security, business, technology and the global economy. Our coverage separates confirmed developments from allegations and issues that remain under investigation.",
+  "headline": "Nigeria's Ebola update, 2027 election preparations, opposition disagreements, India's voter-register protests and major international developments lead Sunday's midday news.",
+  "intro": "Good afternoon and welcome to RadiantWaves Media. Here are the latest developments shaping Nigeria, Africa and the wider world, covering politics, security, public health, international relations, business, technology and the global economy.",
   "morningSummary": [
-    "Nigeria's two additional suspected Ebola cases have reportedly tested negative, while public-health surveillance continues following an earlier confirmed imported case.",
-    "INEC faces continued scrutiny over the preliminary voters' register ahead of Nigeria's 2027 general elections.",
-    "A federal investigative panel has reported preventable failures surrounding the deaths of detained artisanal miners in Niger State.",
-    "France witnessed another major round of demonstrations, with different attendance estimates from government officials and organisers.",
-    "The FBI has attributed a major Binance cryptocurrency theft to North Korean hackers.",
-    "Saudi Arabia reported intercepting a drone in the Riyadh region.",
-    "A road collision in Egypt's Giza governorate has reportedly killed ten people and injured 24 others.",
-    "Australia's annual inflation rate rose to 4.3% in September, adding pressure to household budgets and monetary policy."
+    "NCDC confirms that two suspected Ebola cases in Adamawa State tested negative after two rounds of laboratory testing.",
+    "INEC has ruled out postponement of the 2027 general elections and says preparations are continuing according to its published timetable.",
+    "Some ADC South-West leaders have reportedly complained of marginalisation in the party's political arrangements.",
+    "A 10,000-member canvassing team has been inaugurated in Osun State to mobilise support for President Bola Tinubu's re-election.",
+    "Thousands of opposition supporters have demonstrated in New Delhi over revisions to India's voter register.",
+    "Bulgaria is holding a presidential runoff, with the result still awaited at midday.",
+    "Germany has experienced disorder following youth-led demonstrations.",
+    "The United Nations political mission in Somalia completed its closure on 31 October.",
+    "A US federal judge has dismissed Donald Trump's $10 billion defamation lawsuit against The Wall Street Journal and Rupert Murdoch.",
+    "Bangladesh has established a six-member wage board following garment-worker protests."
   ],
-  "editorialNote": "RadiantWaves Media distinguishes confirmed facts, official statements, reported allegations and developing stories. Figures may change as authorities publish further information. Where accounts differ, the relevant sources are identified.",
+  "editorialNote": "RadiantWaves Media distinguishes verified developments from allegations, political claims and reports that remain under investigation. Figures and official positions are attributed to their sources. Developing stories will be updated when further reliable information becomes available.",
   "breaking": [
     {
-      "title": "NIGERIA: Two additional suspected Ebola cases reportedly test negative",
-      "summary": "Reports indicate that two additional suspected cases have tested negative following laboratory testing. Health surveillance continues after Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
+      "title": "NIGERIA: NCDC confirms two suspected Ebola cases in Adamawa tested negative",
+      "summary": "The two individuals tested negative after two rounds of laboratory testing. Nigeria's earlier confirmed imported case remains separate.",
+      "category": "Health",
+      "image": "",
+      "status": "Confirmed update"
+    },
+    {
+      "title": "NIGERIA: INEC rules out postponement of 2027 elections",
+      "summary": "The commission says it remains committed to the published timetable and is processing requests to correct the preliminary voters' register.",
+      "category": "Politics",
+      "image": "",
+      "status": "Developing"
+    },
+    {
+      "title": "NIGERIA: ADC South-West leaders reportedly complain of marginalisation",
+      "summary": "Some party figures have expressed dissatisfaction with the region's representation in emerging political arrangements.",
+      "category": "Politics",
+      "image": "assets/leaders/atiku.jpg",
+      "status": "Reported"
+    },
+    {
+      "title": "INDIA: Opposition supporters demonstrate over voter-register revisions",
+      "summary": "Opposition parties are demanding the resignation of Chief Election Commissioner Gyanesh Kumar. The Election Commission rejects allegations of political manipulation.",
+      "category": "Asia",
+      "image": "",
+      "status": "Developing"
+    },
+    {
+      "title": "BULGARIA: Presidential runoff voting underway",
+      "summary": "Voters are choosing between the two leading tickets from the first round. Official results are awaited.",
+      "category": "Europe",
+      "image": "",
+      "status": "Awaiting results"
+    },
+    {
+      "title": "SOMALIA: UN political mission closes after more than three decades of engagement",
+      "summary": "The United Nations says responsibilities have been transferred to Somali institutions and other UN structures.",
       "category": "Africa",
       "image": "",
-      "status": "Developing"
+      "status": "Confirmed"
     },
     {
-      "title": "NIGERIA: Investigative panel reports preventable failures in detained miners' deaths",
-      "summary": "A federal investigative panel has identified serious failures in detention conditions and recommended accountability measures.",
-      "category": "Nigeria",
-      "image": "assets/mining-investigation.jpg",
-      "status": "Developing"
-    },
-    {
-      "title": "FRANCE: Demonstrations continue amid pressure over living costs and public services",
-      "summary": "Government and organisers have published different estimates of nationwide participation. Authorities also reported hundreds of arrests.",
-      "category": "Europe",
-      "image": "assets/france-protests.jpg",
-      "status": "Developing"
-    },
-    {
-      "title": "BINANCE: FBI attributes major cryptocurrency theft to North Korean hackers",
-      "summary": "The FBI has attributed the theft to the North Korean-linked TraderTraitor operation. Binance says it has replaced most of the estimated stolen assets.",
-      "category": "Technology",
-      "image": "",
-      "status": "Developing"
-    },
-    {
-      "title": "SAUDI ARABIA: Authorities report interception of drone in Riyadh region",
-      "summary": "Saudi authorities say air defences intercepted a hostile drone. The identity of whoever launched it has not been established publicly.",
+      "title": "UNITED STATES: Judge dismisses Trump's $10 billion lawsuit against The Wall Street Journal",
+      "summary": "The case concerning reporting about Donald Trump's alleged connection to Jeffrey Epstein has been dismissed with prejudice.",
       "category": "World",
+      "image": "assets/leaders/trump.jpg",
+      "status": "Confirmed"
+    },
+    {
+      "title": "BANGLADESH: Government establishes garment-sector wage board",
+      "summary": "The six-member board will review minimum pay following protests and disruption in garment-producing areas.",
+      "category": "Business",
       "image": "",
-      "status": "Developing"
+      "status": "Confirmed"
     }
   ],
   "featured": {
-    "title": "Nigeria's Public Institutions Face a Test of Accountability",
-    "subtitle": "From electoral transparency to deaths in detention, public confidence depends on institutions demonstrating that failures are investigated and corrected.",
-    "content": "Nigeria enters November with important questions facing its public institutions. The electoral commission must demonstrate that the voters' register is accurate and that concerns raised during the verification process are addressed. Separately, the findings concerning the deaths of detained artisanal miners in Niger State raise questions about detention conditions, oversight and the treatment of people in state custody. These are different issues, but both underline the importance of transparency, accountability and respect for citizens' rights.",
+    "title": "Nigeria's 2027 Elections: INEC Faces the Test of Public Confidence",
+    "subtitle": "The electoral commission has ruled out postponement, but accuracy, transparency and operational readiness remain essential.",
+    "content": "INEC has reaffirmed its commitment to the published 2027 election timetable and ruled out postponement. The commission says it has received more than 5,000 requests for corrections to voter details and more than 600 objections during the preliminary register verification process. The final voters' register is scheduled for publication on 15 December 2026. With the presidential and National Assembly elections scheduled for 16 January 2027, public confidence will depend on accurate records, transparent procedures and effective election administration. The commission's assurance is important, but its delivery will be judged by the credibility of the process.",
     "category": "RadiantWaves Special Report",
-    "image": "assets/mining-investigation.jpg",
+    "image": "",
     "sources": [
       {
         "name": "Independent National Electoral Commission",
         "url": "https://www.inecnigeria.org/"
+      },
+      {
+        "name": "Punch Nigeria",
+        "url": "https://punchng.com/inec-rules-out-shifting-2027-polls/"
       }
     ]
   },
   "topStories": [
     {
-      "title": "Nigeria: Two additional suspected Ebola cases reportedly test negative",
-      "category": "Health",
-      "summary": "The latest laboratory reports provide reassurance, although health authorities continue surveillance following an earlier confirmed imported case.",
-      "content": "Nigeria's public-health authorities have continued monitoring after two additional suspected Ebola cases were investigated in the North-East. Reports on Sunday indicate that the two suspected cases tested negative following laboratory testing. The development is separate from Nigeria's earlier confirmed imported Bundibugyo Ebola case involving a traveller who had returned from Uganda. Health authorities must continue surveillance, contact identification where appropriate and transparent public communication. Members of the public should rely on official health guidance rather than circulate unverified claims.",
+      "title": "NCDC confirms two suspected Ebola cases in Adamawa tested negative",
+      "category": "Nigeria Health",
+      "summary": "The two individuals tested negative after two rounds of laboratory testing. The NCDC says there is no laboratory-confirmed Ebola case in Adamawa.",
+      "content": "The Nigeria Centre for Disease Control and Prevention has confirmed that two suspected Ebola cases reported in Adamawa State tested negative after two rounds of laboratory testing. The individuals had been isolated while samples were collected and public-health investigations carried out. The NCDC says the earlier confirmed imported case in the Federal Capital Territory remains Nigeria's only confirmed case. The latest results are reassuring for Adamawa, but surveillance and monitoring of contacts linked to the confirmed case continue. The public is encouraged to rely on official health information and avoid spreading unverified claims.",
       "image": "",
       "sources": [
         {
@@ -90,162 +117,178 @@
           "url": "https://ncdc.gov.ng/"
         },
         {
-          "name": "The ICIR",
-          "url": "https://www.icirnigeria.org/"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
+        },
+        {
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/suspected-ebola-cases-in-adamawa-tested-negative-says-ncdc/"
         }
       ]
     },
     {
-      "title": "Nigeria: Electoral register scrutiny intensifies ahead of 2027",
+      "title": "INEC rules out postponement of Nigeria's 2027 general elections",
       "category": "Politics",
-      "summary": "Questions about preliminary voter-registration entries have placed renewed attention on INEC's verification process.",
-      "content": "The Independent National Electoral Commission is under pressure to demonstrate the accuracy of its preliminary voters' register ahead of the 2027 general elections. Concerns raised in public reporting include questionable entries, photographs and personal registration details. Allegations involving artificial intelligence-generated photographs and registration officers should be assessed against evidence and official findings. INEC has outlined a timetable for the electoral process, with the final register scheduled for publication on 15 December 2026. The presidential and National Assembly elections are scheduled for 16 January 2027, while governorship and state assembly elections are scheduled for 6 February 2027. Electoral credibility requires accurate records, transparent correction procedures and equal treatment of eligible voters.",
+      "summary": "INEC says the election timetable remains in place and that requests for corrections to the preliminary voters' register are being processed.",
+      "content": "The Independent National Electoral Commission has reaffirmed that Nigeria's 2027 general elections will take place according to its published timetable. Chairman Professor Joash Amupitan reportedly made the assurance during an interactive meeting with electoral officials in Port Harcourt. The commission says it has received more than 5,000 requests for corrections, including changes to names and dates of birth, alongside more than 600 objections. The final voters' register is scheduled for publication on 15 December 2026. Presidential and National Assembly elections are scheduled for 16 January 2027, followed by governorship and state assembly elections on 6 February 2027. The commission's challenge is to demonstrate that the register is accurate and that all eligible voters are treated fairly.",
       "image": "",
       "sources": [
         {
           "name": "INEC",
           "url": "https://www.inecnigeria.org/"
-        }
-      ]
-    },
-    {
-      "title": "Nigeria: Families seek accountability following deaths of detained miners",
-      "category": "Human Rights",
-      "summary": "A federal investigative panel has reported serious failures in detention conditions and called for accountability measures.",
-      "content": "The deaths of artisanal miners held in detention in Niger State have raised serious questions about the treatment of suspects and the responsibility of security agencies. A federal investigative panel reportedly identified preventable failures involving overcrowding, extreme heat, dehydration and inadequate detention conditions. Its findings have increased calls for disciplinary action, compensation for affected families and improvements to detention oversight. The final death toll should be reported using the panel's definitive published figure, as some reports have differed over the number. The central issue remains the need for a transparent process and accountability for any proven wrongdoing.",
-      "image": "assets/mining-investigation.jpg",
-      "sources": [
-        {
-          "name": "Federal Government of Nigeria",
-          "url": "https://statehouse.gov.ng/"
-        }
-      ]
-    },
-    {
-      "title": "France: Large demonstrations continue over economic and public-service concerns",
-      "category": "Europe",
-      "summary": "Government estimates put participation at approximately 320,000 nationwide, while organisers gave a higher estimate. Authorities reported 565 arrests by 21:00.",
-      "content": "France experienced another major round of demonstrations on Saturday, 31 October, amid public concerns about living costs, inequality, education, housing and public services. The French Interior Ministry estimated nationwide participation at approximately 320,000. Organisers gave a higher estimate, illustrating the difference between official and union assessments of turnout. Authorities reported 565 arrests by 21:00. Most demonstrations were reported to be peaceful, although clashes involving police and masked groups occurred in some locations. Peaceful protest is a democratic right, while violence and attacks on public property remain matters for law enforcement. The government faces the challenge of addressing public concerns while protecting public safety.",
-      "image": "assets/france-protests.jpg",
-      "sources": [
-        {
-          "name": "French Ministry of the Interior",
-          "url": "https://www.interieur.gouv.fr/"
         },
         {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/"
+          "name": "Punch Nigeria",
+          "url": "https://punchng.com/inec-rules-out-shifting-2027-polls/"
         }
       ]
     },
     {
-      "title": "Saudi Arabia: Air defences reportedly intercept drone in Riyadh region",
-      "category": "Security",
-      "summary": "Saudi authorities announced that a drone had been intercepted. The launcher's identity has not been publicly established.",
-      "content": "Saudi Arabia has reported that its air defence systems intercepted and destroyed a hostile drone in the Riyadh region. The announcement was made by a spokesman for the Saudi-led military coalition involved in Yemen. Authorities said debris fell without causing injuries. The spokesman did not publicly identify who launched the drone. The incident comes amid continuing regional security tensions. Any escalation affecting Saudi infrastructure or shipping routes could have wider consequences for energy markets and regional stability.",
-      "image": "",
+      "title": "ADC South-West leaders reportedly complain of marginalisation",
+      "category": "Nigeria Politics",
+      "summary": "Some regional party figures have expressed dissatisfaction with the way political consultations and structures are being handled.",
+      "content": "Reports published on Sunday indicate that some African Democratic Congress leaders in the South-West are unhappy with what they describe as marginalisation of the region's party structure. The complaints reportedly concern consultation, representation and the role of regional party officials in emerging campaign arrangements. The reports come as opposition figures seek to consolidate political alliances ahead of the 2027 general election. Atiku Abubakar is a central figure in the opposition discussions, while Peter Obi and other political actors remain part of the wider debate about cooperation. The allegations represent reported views from party figures and should not be treated as a formal finding of wrongdoing. The development nevertheless illustrates the challenge of building a coalition across different political interests and regions.",
+      "image": "assets/leaders/atiku.jpg",
       "sources": [
         {
-          "name": "Saudi Press Agency",
-          "url": "https://www.spa.gov.sa/"
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/newspaper-headlines-south-west-adc-leaders-revolt-against-atiku-over-alleged-marginalisation/"
+        },
+        {
+          "name": "Punch Nigeria",
+          "url": "https://punchng.com/2027-swest-adc-leaders-revolt-against-atiku/"
         }
       ]
     },
     {
-      "title": "Binance: FBI attributes major cryptocurrency theft to North Korean hackers",
-      "category": "Technology",
-      "summary": "The FBI has attributed the reported theft to the North Korean-linked TraderTraitor operation. Binance says it has replaced approximately $6 billion of the estimated $6.3 billion.",
-      "content": "The Federal Bureau of Investigation has attributed a major theft of virtual assets from cryptocurrency exchange Binance to a North Korean-linked hacking operation known as TraderTraitor. The reported theft is estimated at approximately $6.3 billion. Binance says it has replaced approximately $6 billion of the affected assets through company resources and financial arrangements. The exchange and its partners are working to trace and freeze funds. Reports about the incident have also raised questions about service disruption and the timing of the resumption of normal operations. The case highlights the security risks facing digital financial institutions and the importance of international cooperation against cybercrime.",
+      "title": "Osun: 10,000-member canvassing team inaugurated for Tinubu re-election campaign",
+      "category": "Nigeria Politics",
+      "summary": "Political figures from different groups attended the inauguration of a door-to-door mobilisation team in Osogbo.",
+      "content": "A 10,000-member door-to-door canvassing team has reportedly been inaugurated in Osun State to mobilise support for President Bola Tinubu ahead of the 2027 general election. The event in Osogbo brought together Governor Ademola Adeleke, APC figures, Minister Adegboyega Oyetola and representatives of political and business interests. The initiative demonstrates an effort to build a broad mobilisation structure for the president's re-election campaign. However, the presence of political figures at a campaign event should not be interpreted as proof that every participant or supporter has formally changed political affiliation. Electoral support will ultimately be determined by voters.",
+      "image": "assets/leaders/tinubu.jpg",
+      "sources": [
+        {
+          "name": "THISDAY",
+          "url": "https://www.thisdaylive.com/2026/11/01/adeleke-oyetola-inaugurate-10000-canvassers-for-tinubus-re-election-tompolo-donates-30-vehicles/"
+        },
+        {
+          "name": "Radio Nigeria",
+          "url": "https://radionigeriaibadan.gov.ng/2026/11/01/adeleke-osun-apc-inaugurate-10000-tinubu-canvassers/"
+        }
+      ]
+    },
+    {
+      "title": "India: Opposition rallies in New Delhi over voter-register revisions",
+      "category": "International Politics",
+      "summary": "Opposition parties are demanding the resignation of Chief Election Commissioner Gyanesh Kumar over changes to voter lists.",
+      "content": "Thousands of opposition supporters gathered in New Delhi on Sunday for a demonstration organised by opposition parties against revisions to India's voter registers. Congress leader Rahul Gandhi was among the prominent figures involved. Opposition parties say more than 130 million names have been removed since the previous year and argue that the process risks excluding eligible voters, including members of minority communities. India's Election Commission and the government reject allegations of political manipulation, saying the exercise is intended to remove duplicate and ineligible registrations. The dispute has become a major issue in India's political debate. A credible electoral process requires clear explanations of changes to voter records and accessible procedures for people who believe they have been wrongly removed.",
       "image": "",
       "sources": [
         {
-          "name": "Federal Bureau of Investigation",
-          "url": "https://www.fbi.gov/"
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/cb532b4811eea64c51f61cd4199fb64e"
         },
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/"
+          "url": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
         }
       ]
     },
     {
-      "title": "Egypt: Ten reportedly killed in Giza minibus and truck collision",
+      "title": "Bulgaria holds presidential runoff amid political divisions",
+      "category": "Europe",
+      "summary": "Voters are choosing between Iliana Yotova and Andrey Gyurov after neither ticket secured a majority in the first round.",
+      "content": "Bulgaria is holding a presidential runoff on Sunday, 1 November, following the first round of voting on 25 October. The leading tickets are Iliana Yotova with running mate Kiril Valchev and Andrey Gyurov with running mate Georgi Kandev. The campaign has taken place amid political divisions, economic concerns and regional security questions linked to the war in Ukraine and Black Sea security. The result was not yet available at midday. RadiantWaves Media will update this report when the Central Election Commission publishes official results.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Bulgarian National Radio",
+          "url": "https://bnrnews.bg/en/"
+        },
+        {
+          "name": "Central Election Commission of Bulgaria",
+          "url": "https://www.cik.bg/"
+        }
+      ]
+    },
+    {
+      "title": "Germany: Youth demonstrations followed by clashes and disorder in several cities",
+      "category": "Europe",
+      "summary": "Large peaceful demonstrations over education and conscription were followed by incidents of looting and clashes in some locations.",
+      "content": "Germany experienced youth-led demonstrations concerning education, military conscription and the future facing younger generations. Tens of thousands reportedly took part in peaceful demonstrations during the day. Later, disorder and clashes were reported in several cities, particularly Frankfurt, where shops were reportedly looted. German reporting also described incidents in other urban areas. The distinction between peaceful demonstrators and those involved in violence is important. The protests reflect wider questions about education, employment, public services and the role of young people in decisions affecting their future.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Tagesschau",
+          "url": "https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html"
+        }
+      ]
+    },
+    {
+      "title": "Somalia: United Nations political mission closes after more than three decades",
       "category": "Africa",
-      "summary": "Emergency services reportedly transported 24 injured people to hospitals following the collision.",
-      "content": "A serious road collision involving a minibus and a heavy truck in Giza, west of Cairo, has reportedly killed ten people and injured 24 others. Egypt's Ministry of Health said emergency services dispatched ambulances to the scene and transported injured passengers to nearby hospitals. Authorities are responding to the incident. The accident has renewed attention on road safety, vehicle inspections, driver training and the enforcement of traffic regulations.",
+      "summary": "The UN says the mission's responsibilities have been transferred to Somali institutions and other United Nations structures.",
+      "content": "The United Nations Transitional Assistance Mission in Somalia completed its transition and ceased operations on 31 October 2026. The closure marks the end of more than three decades of UN political mission engagement in the country, beginning with the UN Political Office for Somalia in 1995. The transition was carried out at the request of the Somali government and under an agreed roadmap. Responsibilities have been transferred to Somali institutions, UN agencies and other support structures. Somalia continues to face political disagreements, security challenges and attacks by al-Shabaab. The closure of the political mission does not mean that all UN humanitarian and development operations in the country have ended.",
       "image": "",
       "sources": [
         {
-          "name": "Egyptian Ministry of Health and Population",
-          "url": "https://www.mohp.gov.eg/"
+          "name": "United Nations",
+          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+        },
+        {
+          "name": "United Nations in Somalia",
+          "url": "https://somalia.un.org/en/325191-statement-attributable-spokesperson-secretary-general-conclusion-mandate-united-nations"
         }
       ]
     },
     {
-      "title": "Global biodiversity: COP17 assessment warns that nature targets remain at risk",
-      "category": "Environment",
-      "summary": "The global assessment warns that countries need to accelerate action to meet 2030 biodiversity commitments.",
-      "content": "Countries attending the United Nations biodiversity conference in Yerevan, Armenia, have considered the first global assessment of progress towards the 2030 nature-protection targets. The assessment warns that current efforts are insufficient to achieve the agreed goals without faster action. Discussions include biodiversity financing, protection of forests and oceans, indigenous communities and the links between climate change and biodiversity loss. Developing countries continue to call for stronger financial support to protect ecosystems. Commitments will need to be translated into measurable national action and transparent progress reporting.",
-      "image": "",
+      "title": "United States: Judge dismisses Trump's $10 billion lawsuit against The Wall Street Journal",
+      "category": "United States",
+      "summary": "A federal judge dismissed the president's defamation case against the newspaper, Rupert Murdoch and reporters.",
+      "content": "A federal judge in the United States has dismissed President Donald Trump's $10 billion defamation lawsuit against The Wall Street Journal, Rupert Murdoch and the newspaper's reporters. The case concerned reporting about a letter bearing Trump's name that was reportedly included in an album for Jeffrey Epstein's 50th birthday. Trump denied writing the letter and described the reporting as false. The judge ruled that the amended complaint failed to adequately establish that the defendants published the story with actual malice, a key legal requirement in the case. The dismissal was with prejudice, meaning the same complaint cannot simply be refiled. The ruling highlights the relationship between press freedom, defamation law and the legal responsibilities of media organisations.",
+      "image": "assets/leaders/trump.jpg",
       "sources": [
         {
-          "name": "Convention on Biological Diversity",
-          "url": "https://www.cbd.int/"
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/f27c9fa832044f2f9edea9b1fbbba061"
         },
         {
-          "name": "United Nations Environment Programme",
-          "url": "https://www.unep.org/"
+          "name": "The Washington Post",
+          "url": "https://www.washingtonpost.com/national/2026/10/31/trump-media-lawsuit-wall-street-journal-dismissed/658c1a84-d565-11f1-9931-2a41b76fc976_story"
         }
       ]
     },
     {
-      "title": "Australia: Inflation rises to 4.3% in September",
-      "category": "Business",
-      "summary": "Annual consumer price inflation increased from 4.0% in August to 4.3% in September.",
-      "content": "Australia's annual consumer price inflation rose to 4.3% in September 2026, compared with 4.0% in August, according to the Australian Bureau of Statistics. Higher fuel costs have contributed to pressure on household budgets. The figures will be considered by economists and the Reserve Bank of Australia as they assess the outlook for interest rates. The inflation data does not itself establish that another rate increase will occur. Households and businesses will be watching the effect of prices and borrowing costs on spending and investment.",
-      "image": "",
+      "title": "Russia–Ukraine: Both sides report further drone strikes",
+      "category": "International Security",
+      "summary": "Russia and Ukraine have reported attacks involving industrial and energy-related facilities. Independent verification of damage remains important.",
+      "content": "The Russia–Ukraine conflict continues to involve long-range drone operations. Russian authorities have reported a drone strike on an industrial facility near Moscow, while Ukraine has claimed to have struck a major Russian refinery. Both sides regularly publish claims about military operations, and details about damage and casualties can be difficult to verify independently during an active conflict. The attacks underline the continuing importance of energy infrastructure and industrial facilities in the war. RadiantWaves Media will distinguish official claims from independently confirmed information as further reporting becomes available.",
+      "image": "assets/dnipro-railway-attack.jpg",
       "sources": [
         {
-          "name": "Australian Bureau of Statistics",
-          "url": "https://www.abs.gov.au/"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/"
         },
         {
-          "name": "Reserve Bank of Australia",
-          "url": "https://www.rba.gov.au/"
+          "name": "BBC News",
+          "url": "https://www.bbc.com/news"
         }
       ]
     },
     {
-      "title": "Germany: Trade imbalance with Asia-Pacific draws attention to industrial competitiveness",
-      "category": "Business",
-      "summary": "Reports point to a widening trade imbalance, reflecting changes in manufacturing, imports and international supply chains.",
-      "content": "Germany faces continuing challenges in its trade relationship with the Asia-Pacific region. Reports have suggested that the trade deficit could reach a record level in 2026. The development reflects the importance of Asian manufacturing and supply chains, alongside pressure on German industry from energy costs, competition and changing global demand. The precise projected figure should be treated as an estimate until confirmed in the relevant official trade statistics. Germany's ability to maintain industrial competitiveness remains an important issue for the wider European economy.",
-      "image": "assets/europe-energy.jpg",
-      "sources": [
-        {
-          "name": "Destatis",
-          "url": "https://www.destatis.de/"
-        },
-        {
-          "name": "Deutsche Bundesbank",
-          "url": "https://www.bundesbank.de/"
-        }
-      ]
-    },
-    {
-      "title": "Quad: United States, Australia, India and Japan discuss supply-chain cooperation",
-      "category": "International Relations",
-      "summary": "The four countries have emphasised cooperation on economic security and resilient supply chains.",
-      "content": "Foreign ministers from the United States, Australia, India and Japan have discussed closer cooperation on supply chains and regional economic security. The Quad partners have raised concerns about arbitrary export restrictions and disruptions to international trade. Their discussions reflect growing competition over strategic resources, advanced technology and manufacturing capacity in the Indo-Pacific. Cooperation on reliable supply chains has become an important part of the group's wider regional agenda.",
+      "title": "Bangladesh: Government establishes six-member garment workers' wage board",
+      "category": "Business and Labour",
+      "summary": "The board will review minimum wages following demonstrations and factory disruption.",
+      "content": "Bangladesh has established a six-member wage board to review minimum pay in the garment industry following worker demonstrations. Workers have been demanding a monthly minimum wage of 30,000 taka, arguing that the current rate has been eroded by rising living costs. The protests disrupted roads and factory operations in industrial areas including Dhaka, Gazipur and Ashulia. The government has urged workers to return to work while the board begins its task. The garment sector is central to Bangladesh's export economy and employs millions of people. The outcome will be important for workers, manufacturers and international clothing buyers.",
       "image": "",
       "sources": [
         {
-          "name": "United States Department of State",
-          "url": "https://www.state.gov/"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/world-at-work/bangladesh-form-wage-board-after-garment-protests-shut-factories-2026-11-01/"
         },
         {
-          "name": "Ministry of External Affairs, India",
-          "url": "https://www.mea.gov.in/"
+          "name": "The Daily Star",
+          "url": "https://www.thedailystar.net/news/bangladesh/news/rmg-workers-protests-shut-factories-choke-roads-4312386"
         }
       ]
     }
@@ -253,294 +296,298 @@
   "articles": [],
   "worldNews": [
     {
-      "title": "Saudi Arabia reports interception of drone near Riyadh",
-      "summary": "Authorities say air defences intercepted a drone, but have not identified its launch source.",
-      "content": "The incident adds to regional security concerns. Further independent confirmation and details about the origin of the drone remain important.",
+      "title": "United States: Trump defamation lawsuit dismissed",
+      "summary": "A federal judge dismissed the $10 billion case against The Wall Street Journal and Rupert Murdoch.",
+      "content": "The judge concluded that the amended complaint did not adequately establish actual malice. The ruling is an important development in the continuing dispute between the president and the newspaper.",
+      "image": "assets/leaders/trump.jpg"
+    },
+    {
+      "title": "Somalia: UN political mission completes its transition",
+      "summary": "The political mission ceased operations on 31 October.",
+      "content": "The United Nations says its responsibilities have been transferred to Somali institutions and other UN structures. Humanitarian and development operations continue.",
       "image": ""
     },
     {
-      "title": "Quad countries discuss stronger economic and supply-chain cooperation",
-      "summary": "The United States, Australia, India and Japan are seeking greater resilience in strategic supply chains.",
-      "content": "The discussions reflect concerns about dependence on limited suppliers for critical materials and advanced technologies.",
-      "image": ""
-    },
-    {
-      "title": "Biodiversity: Countries face pressure to turn 2030 commitments into action",
-      "summary": "The global assessment warns that progress towards nature-protection targets remains insufficient.",
-      "content": "Financing, implementation and measurable national commitments will be central to protecting biodiversity.",
-      "image": ""
+      "title": "Russia–Ukraine: Drone attacks continue",
+      "summary": "Both sides have reported attacks involving industrial and energy-related targets.",
+      "content": "Claims about damage and casualties require independent confirmation.",
+      "image": "assets/dnipro-railway-attack.jpg"
     }
   ],
   "usaNews": [
     {
-      "title": "FBI links Binance cryptocurrency theft to North Korean hacking operation",
-      "summary": "The FBI has attributed the major digital-asset theft to the TraderTraitor operation.",
-      "content": "The investigation highlights the international dimension of cybercrime and the need for cooperation between law-enforcement agencies and financial platforms.",
-      "image": ""
-    },
-    {
-      "title": "Quad discussions place supply-chain security in focus",
-      "summary": "US officials joined partners from Australia, India and Japan in discussions about economic security.",
-      "content": "The talks focused on resilient supply chains and strategic economic cooperation in the Indo-Pacific.",
-      "image": ""
+      "title": "Judge dismisses Trump's $10 billion lawsuit against The Wall Street Journal",
+      "summary": "The court dismissed the case concerning the newspaper's reporting about Jeffrey Epstein.",
+      "content": "The judge ruled that the amended complaint did not adequately establish actual malice. The dismissal was with prejudice.",
+      "image": "assets/leaders/trump.jpg"
     }
   ],
   "europeNews": [
     {
-      "title": "France: Demonstrations continue over living costs and public services",
-      "summary": "The Interior Ministry estimated 320,000 participants nationwide, while organisers gave a higher figure.",
-      "content": "The demonstrations reflect public concerns about household costs, inequality, housing and public services. Authorities reported 565 arrests by 21:00.",
-      "image": "assets/france-protests.jpg"
-    },
-    {
-      "title": "Germany faces pressure to strengthen industrial competitiveness",
-      "summary": "Trade and manufacturing challenges remain important issues for Europe's largest economy.",
-      "content": "Energy costs, international competition and changing supply chains continue to shape Germany's economic outlook.",
-      "image": "assets/europe-energy.jpg"
-    },
-    {
-      "title": "Canada and European Union pursue closer strategic cooperation",
-      "summary": "The Alliance for the Future is intended to strengthen cooperation in trade, technology, energy and security.",
-      "content": "Canada and the European Union have announced a strategic partnership. Discussions about closer association are not an announcement that Canada will become an EU member.",
+      "title": "Bulgaria holds presidential runoff",
+      "summary": "The result between the Yotova and Gyurov tickets remains awaited at midday.",
+      "content": "The runoff follows the first round of voting on 25 October. Official results should be taken from Bulgaria's Central Election Commission.",
       "image": ""
+    },
+    {
+      "title": "Germany: Youth protests followed by disorder in several cities",
+      "summary": "Peaceful demonstrations were followed by clashes and reports of looting in some locations.",
+      "content": "The demonstrations raised concerns about education, military conscription and the future of young people.",
+      "image": ""
+    },
+    {
+      "title": "France: Public demonstrations and economic concerns remain in focus",
+      "summary": "The previous day's nationwide demonstrations reflected concerns about living costs and public services.",
+      "content": "Government and organiser attendance estimates differed. Authorities reported arrests following demonstrations.",
+      "image": "assets/france-protests.jpg"
     }
   ],
   "africaNews": [
     {
-      "title": "Nigeria: Additional suspected Ebola cases reportedly test negative",
-      "summary": "Laboratory reports indicate that the two additional suspected cases tested negative.",
-      "content": "Public-health surveillance continues following Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
+      "title": "Nigeria: Adamawa suspected Ebola cases test negative",
+      "summary": "NCDC confirms negative results after two rounds of laboratory testing.",
+      "content": "The earlier confirmed imported case remains Nigeria's only confirmed case. Surveillance continues.",
       "image": ""
     },
     {
-      "title": "Egypt: Road collision in Giza reportedly kills ten",
-      "summary": "Twenty-four people were reportedly injured in a collision involving a minibus and a truck.",
-      "content": "Emergency services transported injured people to hospitals as authorities responded to the accident.",
+      "title": "Somalia: UN political mission closes",
+      "summary": "The transition was completed on 31 October after more than three decades of UN political engagement.",
+      "content": "The mission's responsibilities have been transferred to Somali institutions and other UN structures.",
       "image": ""
     },
     {
-      "title": "The Gambia: Solar energy investment aims to strengthen electricity supply",
-      "summary": "A reported $169 million solar project includes generation capacity and battery storage.",
-      "content": "The Soma Solar Park Phase 2 project is intended to expand renewable electricity generation and support energy reliability.",
-      "image": ""
-    },
-    {
-      "title": "Democratic Republic of Congo: Digital registration resumes in Beni",
-      "summary": "Registration activity has reportedly resumed following an interruption linked to public-health concerns.",
-      "content": "The development highlights the connection between public health, administration and access to essential public services.",
-      "image": ""
-    },
-    {
-      "title": "Burundi: Cholera reports underline continuing public-health challenges",
-      "summary": "Reports of cholera cases highlight the need for safe water, sanitation and disease surveillance.",
-      "content": "Health authorities and humanitarian organisations continue to face challenges in disease prevention and response.",
-      "image": ""
+      "title": "Nigeria: Political disagreements reported within ADC South-West structures",
+      "summary": "Some regional leaders reportedly complain of inadequate consultation and representation.",
+      "content": "The complaints highlight the difficulty of building a broad opposition coalition ahead of 2027.",
+      "image": "assets/leaders/atiku.jpg"
     }
   ],
   "nigeriaNews": [
     {
-      "title": "Ebola surveillance: Two additional suspected cases reportedly test negative",
-      "summary": "The results are reassuring, but monitoring continues after an earlier confirmed imported case.",
-      "content": "The public should follow NCDC guidance and avoid sharing unverified claims about suspected infections.",
+      "title": "NCDC confirms two suspected Ebola cases in Adamawa tested negative",
+      "summary": "There is no laboratory-confirmed Ebola case in Adamawa State.",
+      "content": "The individuals tested negative after two rounds of laboratory testing. Monitoring continues following the earlier confirmed imported case in the FCT.",
       "image": ""
     },
     {
-      "title": "INEC faces questions over preliminary voters' register",
-      "summary": "The commission is expected to address concerns before publication of the final register on 15 December 2026.",
-      "content": "Transparent verification and correction procedures are essential to protecting eligible voters and public confidence.",
+      "title": "INEC rules out postponement of 2027 general elections",
+      "summary": "The commission says the published timetable remains in place.",
+      "content": "The final voters' register is scheduled for publication on 15 December 2026. The commission says it is processing correction requests and objections.",
       "image": ""
     },
     {
-      "title": "Deaths of detained miners: Panel findings raise accountability questions",
-      "summary": "The federal panel reported serious detention failures and recommended action.",
-      "content": "The next steps include consideration of the panel's recommendations, compensation and accountability for any proven wrongdoing.",
-      "image": "assets/mining-investigation.jpg"
+      "title": "ADC South-West leaders reportedly complain of marginalisation",
+      "summary": "Some regional party figures have raised concerns about consultation and representation.",
+      "content": "The reported disagreement comes as opposition figures continue discussions about political alliances.",
+      "image": "assets/leaders/atiku.jpg"
+    },
+    {
+      "title": "Osun inaugurates 10,000-member Tinubu canvassing team",
+      "summary": "Political figures from different groups attended the door-to-door mobilisation launch.",
+      "content": "The initiative is intended to mobilise support for President Tinubu ahead of the 2027 election.",
+      "image": "assets/leaders/tinubu.jpg"
     }
   ],
   "asiaNews": [
     {
-      "title": "Saudi Arabia reports interception of drone in Riyadh region",
-      "summary": "The launch source has not been publicly identified.",
-      "content": "The incident comes amid wider regional security concerns.",
+      "title": "India: Opposition demonstrates over voter-register revisions",
+      "summary": "Opposition parties are demanding the resignation of Chief Election Commissioner Gyanesh Kumar.",
+      "content": "The Election Commission rejects allegations of political manipulation and says the review is intended to remove duplicate and ineligible registrations.",
       "image": ""
     },
     {
-      "title": "North Korean-linked hackers blamed for major cryptocurrency theft",
-      "summary": "The FBI has attributed the Binance theft to the TraderTraitor operation.",
-      "content": "The case underlines the importance of cybersecurity and international cooperation against digital crime.",
-      "image": ""
-    },
-    {
-      "title": "Asia-Pacific supply chains remain a strategic priority",
-      "summary": "Quad partners have discussed economic security and cooperation on strategic materials.",
-      "content": "The discussions reflect the growing importance of reliable supply chains for technology, energy and manufacturing.",
+      "title": "Bangladesh establishes garment workers' wage board",
+      "summary": "The six-member board will review minimum pay after protests.",
+      "content": "Workers have demanded higher wages in response to rising living costs. The demonstrations disrupted factories and transport.",
       "image": ""
     }
   ],
   "businessNews": [
     {
-      "title": "Australia's annual inflation rises to 4.3%",
-      "summary": "September's annual CPI figure increased from 4.0% in August.",
-      "content": "Higher inflation may place further pressure on household budgets and influence monetary-policy discussions. A future interest-rate decision remains uncertain.",
+      "title": "Bangladesh: Wage board established following garment-sector protests",
+      "summary": "The board will review the minimum wage after workers demanded 30,000 taka per month.",
+      "content": "The outcome could affect workers, manufacturers and international clothing supply chains.",
       "image": ""
     },
     {
-      "title": "Germany's trade relationship with Asia-Pacific under scrutiny",
-      "summary": "The trade imbalance highlights challenges for German industry and European supply chains.",
-      "content": "The reported projection should be checked against official trade statistics before the precise amount is treated as final.",
-      "image": "assets/europe-energy.jpg"
-    },
-    {
-      "title": "Binance cyberattack raises questions about digital financial security",
-      "summary": "The exchange says it has replaced most of the estimated stolen assets.",
-      "content": "Financial institutions and cryptocurrency platforms face increasing pressure to strengthen safeguards, incident reporting and customer protection.",
+      "title": "Nigeria: Export value addition remains a major policy debate",
+      "summary": "Proposals requiring greater local processing have renewed discussion about infrastructure and manufacturing capacity.",
+      "content": "Exporters need reliable electricity, finance, processing facilities and transport infrastructure to increase value addition. Figures attributed to the Lilypond Export Command should be checked against official customs releases before publication.",
       "image": ""
     },
     {
-      "title": "Africa's renewable energy investment opportunity",
-      "summary": "Solar power, storage and grid investment remain important to the continent's development.",
-      "content": "Projects such as the reported expansion of the Soma Solar Park in The Gambia demonstrate the importance of financing, reliable infrastructure and regional energy planning.",
+      "title": "Global supply chains face continued labour and security pressures",
+      "summary": "Developments in Bangladesh and the wider international economy highlight the importance of resilient and responsible supply chains.",
+      "content": "Businesses face pressure to manage labour costs, energy supply, cybersecurity and geopolitical uncertainty.",
       "image": ""
     }
   ],
   "technologyNews": [
     {
-      "title": "Cybersecurity: Binance theft highlights risks facing digital finance",
-      "summary": "The FBI has attributed the theft to North Korean-linked hackers.",
-      "content": "Digital financial institutions need strong identity controls, secure employee devices, transaction monitoring and transparent incident response.",
+      "title": "Artificial intelligence and electoral integrity",
+      "summary": "Voter-register controversies underline the need for accurate digital records and transparent verification.",
+      "content": "AI tools can improve public administration, but electoral authorities must protect databases, detect manipulated material and provide accessible procedures for correcting inaccurate entries.",
       "image": ""
     },
     {
-      "title": "Artificial intelligence and electoral integrity",
-      "summary": "Concerns about questionable voter-register images highlight the need for reliable verification.",
-      "content": "Artificial intelligence can support public administration, but institutions must guard against manipulated material, inaccurate records and misinformation. Allegations should be tested through evidence and transparent procedures.",
+      "title": "Cybersecurity and digital financial systems",
+      "summary": "Recent cryptocurrency security incidents have renewed attention on digital asset protection.",
+      "content": "Financial platforms need strong authentication, secure employee devices, transaction monitoring and clear incident-response procedures.",
+      "image": ""
+    },
+    {
+      "title": "Africa's digital opportunity",
+      "summary": "Investment in digital skills, research and cybersecurity can strengthen local technology capacity.",
+      "content": "African countries should build local software and technology expertise rather than rely entirely on imported systems.",
       "image": ""
     }
   ],
   "editorial": {
-    "title": "Accountability Must Not Be Selective",
-    "content": "The events making headlines this morning demonstrate why accountability is essential in every society. In Nigeria, questions surrounding deaths in detention and the integrity of the preliminary voters' register demand serious answers. In France, citizens are expressing dissatisfaction with economic conditions and public services. In the international financial sector, the Binance cyberattack has demonstrated the scale of threats facing digital institutions. These developments may appear unrelated, but they reveal a common responsibility shared by governments and institutions: protecting the people who depend on them. Accountability should not depend on political affiliation, economic influence or social status. When people die in custody, investigations must lead to justice. When electoral institutions identify irregularities, the public deserves transparency. When financial institutions suffer serious security breaches, customers deserve clear information and effective protection. A society becomes stronger when institutions accept responsibility and correct their failures.",
+    "title": "Democracy Must Be Built on Trust",
+    "content": "Today's developments across Nigeria, India, Bulgaria and Somalia reveal a common challenge: the relationship between political institutions and public confidence. In Nigeria, INEC is preparing for the 2027 elections while responding to concerns about the voters' register. In India, opposition parties are challenging changes to voter registration. In Bulgaria, citizens are choosing between competing political visions. In Somalia, the closure of the United Nations political mission comes amid unresolved political disagreements. These developments demonstrate that democracy requires more than election dates and political campaigns. It requires transparent institutions, accessible legal processes, credible elections and leaders who respect public accountability. For Nigeria, the lesson is particularly important. Political parties may disagree over candidates, alliances and leadership positions, but the integrity of the electoral process must remain a national priority. The opposition must demonstrate unity through credible policy alternatives rather than personal competition. The ruling government must equally demonstrate that its performance justifies the confidence it seeks from voters. Democracy is strengthened when citizens believe their voices matter.",
     "image": ""
   },
   "analysis": [
     {
-      "title": "Nigeria's electoral credibility begins with the voters' register",
-      "content": "An election cannot be credible if eligible voters are missing from the register or if inaccurate entries remain uncorrected. INEC should explain its verification methods, publish clear correction procedures and provide political parties with a fair opportunity to scrutinise the process. Parties also have a responsibility to distinguish evidence from speculation. The public interest is served by accurate records, transparent institutions and peaceful participation.",
-      "category": "Nigeria"
+      "title": "Nigeria's opposition: Unity requires more than an agreement on candidates",
+      "content": "The reported dissatisfaction among some ADC South-West leaders illustrates the difficulty of building a coalition from different political interests. A sustainable opposition structure requires consultation, fair representation, transparent decision-making and agreement on policy priorities. Political leaders must resolve internal disagreements without allowing personal competition to undermine the wider political project.",
+      "category": "Nigeria Politics"
     },
     {
-      "title": "Deaths in detention require more than official statements",
-      "content": "The reported findings concerning detained miners raise questions about supervision, detention standards and institutional responsibility. A credible response requires publication of findings, consideration of recommendations, appropriate legal processes and safeguards against repetition. The rights of people in custody must be protected regardless of the allegations against them.",
-      "category": "Human Rights"
+      "title": "INEC's timetable is only one part of electoral credibility",
+      "content": "The commission's assurance that elections will not be postponed provides clarity about the timetable. However, credibility also depends on accurate voter records, secure election technology, trained personnel, transparent results procedures and effective dispute resolution.",
+      "category": "Democracy"
     },
     {
-      "title": "Cybersecurity is now a matter of public trust",
-      "content": "The reported Binance theft illustrates how a security failure at a major digital platform can have international consequences. Financial institutions must invest in prevention, detection, recovery planning and clear communication with customers. Governments also need effective cross-border cooperation to investigate cybercrime.",
-      "category": "Technology"
+      "title": "Somalia after the UN political mission",
+      "content": "The end of a political mission represents a transition in international engagement, not the end of Somalia's political and security challenges. National institutions will need to sustain dialogue, manage constitutional disagreements and protect civilians while continuing cooperation with international partners.",
+      "category": "Africa"
+    },
+    {
+      "title": "Bangladesh garment workers and responsible global supply chains",
+      "content": "The wage-board decision highlights the relationship between workers' living standards and the international clothing trade. Sustainable supply chains require fair pay, safe workplaces, reliable production and responsible purchasing practices.",
+      "category": "Global Business"
     }
   ],
   "factCheck": [
     {
-      "claim": "The two additional suspected Ebola cases in Nigeria are confirmed infections.",
-      "verdict": "Not supported by the latest reports",
-      "explanation": "The two additional suspected cases reportedly tested negative. They must not be confused with Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Nigeria Centre for Disease Control and Prevention",
-          "url": "https://ncdc.gov.ng/"
-        }
-      ]
-    },
-    {
-      "claim": "Canada is becoming a member of the European Union.",
+      "claim": "The two suspected Ebola cases in Adamawa tested positive.",
       "verdict": "False",
-      "explanation": "The Canada-EU Alliance for the Future is a strategic cooperation initiative. Closer association has been discussed, but Canada has not been announced as an EU member.",
+      "explanation": "The NCDC says samples from both individuals tested negative after two rounds of laboratory testing. The earlier confirmed imported case in the FCT is separate.",
       "image": "",
       "sources": [
         {
-          "name": "European Council",
-          "url": "https://www.consilium.europa.eu/"
+          "name": "NCDC",
+          "url": "https://ncdc.gov.ng/"
         },
         {
-          "name": "Government of Canada",
-          "url": "https://www.pm.gc.ca/"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
         }
       ]
     },
     {
-      "claim": "The Saudi authorities have identified who launched the intercepted drone.",
-      "verdict": "Not established in the public announcement",
-      "explanation": "The announcement reported an interception but did not publicly identify the launch source. Responsibility should not be assigned without further evidence.",
+      "claim": "INEC has postponed the 2027 general elections.",
+      "verdict": "False according to the commission's latest reported position",
+      "explanation": "INEC Chairman Joash Amupitan has reportedly ruled out postponement and reaffirmed the published timetable.",
       "image": "",
       "sources": [
         {
-          "name": "Saudi Press Agency",
-          "url": "https://www.spa.gov.sa/"
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
+        },
+        {
+          "name": "Punch Nigeria",
+          "url": "https://punchng.com/inec-rules-out-shifting-2027-polls/"
         }
       ]
     },
     {
-      "claim": "Australia's inflation increase guarantees another interest-rate rise.",
-      "verdict": "Misleading",
-      "explanation": "The annual CPI figure rose to 4.3% in September. This may influence monetary-policy decisions, but it does not guarantee a particular decision by the Reserve Bank.",
+      "claim": "All ADC South-West leaders have formally left the party.",
+      "verdict": "Not established",
+      "explanation": "Reports describe dissatisfaction and complaints among some regional leaders. They do not establish that all South-West leaders have resigned or left the party.",
       "image": "",
       "sources": [
         {
-          "name": "Australian Bureau of Statistics",
-          "url": "https://www.abs.gov.au/"
-        },
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/newspaper-headlines-south-west-adc-leaders-revolt-against-atiku-over-alleged-marginalisation/"
+        }
+      ]
+    },
+    {
+      "claim": "Bulgaria has already announced the winner of its presidential runoff.",
+      "verdict": "Not established at midday",
+      "explanation": "Voting is taking place on 1 November. Official results should be taken from the Central Election Commission after the count.",
+      "image": "",
+      "sources": [
         {
-          "name": "Reserve Bank of Australia",
-          "url": "https://www.rba.gov.au/"
+          "name": "Central Election Commission of Bulgaria",
+          "url": "https://www.cik.bg/"
+        }
+      ]
+    },
+    {
+      "claim": "The closure of the UN political mission means all UN operations in Somalia have ended.",
+      "verdict": "False",
+      "explanation": "The political mission has closed, but UN agencies, funds, programmes and other support structures continue operating in Somalia.",
+      "image": "",
+      "sources": [
+        {
+          "name": "United Nations",
+          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
         }
       ]
     }
   ],
   "beyondStatement": [
     {
-      "title": "What happens after an investigative panel publishes its findings?",
-      "content": "Public investigations matter only when their findings lead to appropriate action. In the case of the detained miners, the public will need to see whether recommendations are considered, families receive appropriate support and any proven misconduct is addressed through lawful procedures.",
-      "category": "Accountability"
+      "title": "What does opposition unity mean in practice?",
+      "content": "Political cooperation requires more than public declarations. It needs fair consultation, a shared programme, agreed decision-making procedures and respect for regional representation. Internal disagreements are normal, but they must be managed transparently.",
+      "category": "Political Accountability"
     },
     {
-      "title": "Why an accurate voters' register matters",
-      "content": "The register determines who can participate in an election. Errors can exclude eligible voters or undermine confidence in the process. Transparent verification is therefore a central part of electoral integrity.",
+      "title": "Why voter-register accuracy matters",
+      "content": "The voters' register is the foundation of electoral participation. Eligible citizens must be able to verify their details, correct errors and understand how objections are handled. Public confidence depends on an open and reliable process.",
       "category": "Democracy"
+    },
+    {
+      "title": "What follows the closure of Somalia's UN political mission?",
+      "content": "The transition places greater responsibility on Somali institutions to sustain political dialogue and state-building. International cooperation remains important, particularly in humanitarian support and security.",
+      "category": "International Relations"
     }
   ],
   "publicInterestFeature": {
-    "title": "The Human Cost of Institutional Failure",
-    "subtitle": "Public institutions exist to protect people, not expose them to avoidable harm.",
-    "content": "Whether the issue is detention conditions, electoral administration, health surveillance or digital financial security, institutional failures can affect ordinary people directly. The public deserves transparent explanations, independent scrutiny where appropriate and meaningful corrective action.",
-    "image": "assets/mining-investigation.jpg"
+    "title": "The Voters' Register: A Foundation of Democratic Participation",
+    "subtitle": "An election begins with the right of eligible citizens to be accurately registered.",
+    "content": "Nigeria's electoral preparations place renewed attention on the accuracy of the voters' register. INEC says it is processing correction requests and objections before the final register is published on 15 December 2026. The process matters because inaccurate records can exclude eligible citizens or undermine confidence in the election. Transparency, accessible correction procedures and consistent communication will be essential.",
+    "image": ""
   },
   "technologyInnovation": [
     {
-      "title": "Cybersecurity and the protection of digital finance",
-      "content": "The Binance incident highlights the need for stronger authentication, secure employee devices, transaction monitoring and international cooperation against cybercrime.",
+      "title": "AI and the protection of electoral records",
+      "content": "Artificial intelligence can assist with data processing, but electoral authorities must ensure that digital records are accurate, secure and open to scrutiny. Citizens need a clear process to challenge errors.",
       "image": ""
     },
     {
-      "title": "Artificial intelligence and responsible public administration",
-      "content": "AI can help governments process information and improve services, but public institutions must ensure that records are accurate, decisions can be reviewed and manipulated material is detected.",
+      "title": "Cybersecurity and digital financial systems",
+      "content": "Digital financial platforms must invest in secure systems, employee training, identity verification and rapid incident response.",
       "image": ""
     },
     {
-      "title": "Africa's digital opportunity",
-      "content": "African countries can strengthen their technological independence by investing in digital skills, software development, cybersecurity, research and reliable digital infrastructure.",
+      "title": "Africa's digital independence",
+      "content": "Local software development, cybersecurity training, research and technology infrastructure can help African economies build greater digital capacity.",
       "image": ""
     }
   ],
   "innovation": [
     {
-      "title": "Renewable energy and battery storage",
-      "content": "Solar generation combined with battery storage can help improve electricity reliability, reduce exposure to fuel-price volatility and support economic development. Financing and grid connections remain essential.",
+      "title": "Digital identity and public administration",
+      "content": "Secure digital identity systems can improve public services when supported by privacy protection, accurate data and accessible correction mechanisms.",
       "image": ""
     },
     {
-      "title": "Digital identity and electoral administration",
-      "content": "Secure digital systems can improve public records, but their credibility depends on data quality, privacy protection, independent verification and accessible correction procedures.",
+      "title": "Renewable energy and industrial development",
+      "content": "Solar generation and battery storage can support electricity reliability and industrial productivity, provided that projects are properly financed and connected to functioning grids.",
       "image": ""
     }
   ],
@@ -552,49 +599,77 @@
         "country": "United States",
         "role": "President",
         "image": "assets/leaders/trump.jpg",
-        "summary": "The US administration faces international security, economic and cybersecurity challenges. Further official statements and policy developments remain under observation."
+        "summary": "A federal judge has dismissed his $10 billion defamation lawsuit against The Wall Street Journal and Rupert Murdoch. The administration continues to face domestic and international policy challenges."
       },
       {
         "name": "Mark Carney",
         "country": "Canada",
         "role": "Prime Minister",
         "image": "",
-        "summary": "Canada's strategic partnership with the European Union is an important development in its international economic and diplomatic policy."
+        "summary": "Canada's strategic partnership with the European Union remains an important development in international economic and diplomatic cooperation."
       },
       {
         "name": "Emmanuel Macron",
         "country": "France",
         "role": "President",
         "image": "assets/leaders/macron.jpg",
-        "summary": "Public demonstrations and economic pressures continue to test the French government's response to citizens' concerns."
+        "summary": "Public demonstrations and economic pressures continue to challenge the French government."
       },
       {
         "name": "Bola Ahmed Tinubu",
         "country": "Nigeria",
         "role": "President",
         "image": "assets/leaders/tinubu.jpg",
-        "summary": "His administration faces questions about economic conditions, national security, public institutions and preparations for the 2027 elections."
+        "summary": "Political mobilisation for the 2027 election is continuing, while his administration faces scrutiny over economic performance, security and public services."
       },
       {
         "name": "Atiku Abubakar",
         "country": "Nigeria",
         "role": "Opposition political figure",
         "image": "assets/leaders/atiku.jpg",
-        "summary": "Electoral transparency and opposition political discussions remain important subjects in the lead-up to the 2027 elections."
+        "summary": "Reports of dissatisfaction among some ADC South-West leaders have placed attention on opposition consultation and coalition-building."
       },
       {
         "name": "Peter Obi",
         "country": "Nigeria",
         "role": "Opposition political figure",
         "image": "assets/leaders/obi.jpg",
-        "summary": "His political position and possible opposition cooperation remain subjects of national political discussion."
+        "summary": "His political position and possible opposition cooperation remain important subjects ahead of the 2027 election."
+      },
+      {
+        "name": "Narendra Modi",
+        "country": "India",
+        "role": "Prime Minister",
+        "image": "",
+        "summary": "His government faces opposition criticism over voter-register revisions. The Election Commission rejects allegations of political manipulation."
+      },
+      {
+        "name": "Iliana Yotova",
+        "country": "Bulgaria",
+        "role": "President",
+        "image": "",
+        "summary": "She is contesting the presidential runoff with running mate Kiril Valchev. The result remains awaited at midday."
+      },
+      {
+        "name": "Andrey Gyurov",
+        "country": "Bulgaria",
+        "role": "Presidential candidate",
+        "image": "",
+        "summary": "He is contesting the presidential runoff with running mate Georgi Kandev. The result remains awaited at midday."
       },
       {
         "name": "Volodymyr Zelenskyy",
         "country": "Ukraine",
         "role": "President",
         "image": "",
-        "summary": "Ukraine continues to seek international military assistance and diplomatic support amid the continuing war."
+        "summary": "Ukraine continues to face military and diplomatic challenges amid the continuing war with Russia."
+      },
+      {
+        "name": "Hassan Sheikh Mohamud",
+        "country": "Somalia",
+        "role": "President",
+        "image": "",
+        "summary": "Somalia enters a new phase following the closure of the UN political mission, with domestic dialogue and institution-building remaining important challenges."
       },
       {
         "name": "Xi Jinping",
@@ -608,50 +683,66 @@
         "country": "Russia",
         "role": "President",
         "image": "assets/leaders/putin.jpg",
-        "summary": "The war in Ukraine continues to shape Russia's international relations and European security."
+        "summary": "The war in Ukraine and reports of drone attacks continue to shape Russia's international relations and security environment."
       },
       {
         "name": "Ursula von der Leyen",
         "country": "European Union",
         "role": "President of the European Commission",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "summary": "The European Commission is pursuing closer cooperation with Canada and other international partners."
+        "summary": "The European Commission continues to pursue international partnerships and cooperation on trade, energy and security."
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027: Voters' register verification",
-      "content": "INEC's planned publication of the final voters' register on 15 December 2026 will be an important milestone. Attention remains on the correction of questionable entries and transparent access to the verification process.",
+      "title": "Nigeria 2027: INEC rules out postponement",
+      "content": "The commission says the published election timetable remains in place. The final voters' register is scheduled for 15 December 2026.",
       "image": ""
     },
     {
-      "title": "Nigeria 2027: Election timetable",
-      "content": "The presidential and National Assembly elections are scheduled for 16 January 2027. Governorship and state assembly elections are scheduled for 6 February 2027. Readers should consult INEC for any official timetable changes.",
+      "title": "Nigeria 2027: Correction requests and objections",
+      "content": "INEC says it has received more than 5,000 requests for corrections and over 600 objections during the preliminary register verification process.",
+      "image": ""
+    },
+    {
+      "title": "Bulgaria: Presidential runoff",
+      "content": "Voting is taking place on 1 November. The official result is awaited and will be updated when released by the Central Election Commission.",
+      "image": ""
+    },
+    {
+      "title": "India: Voter-register revision dispute",
+      "content": "Opposition parties are challenging changes to voter records. The Election Commission says the exercise is intended to remove duplicate and ineligible entries.",
       "image": ""
     }
   ],
   "breakingHistory": [
     {
       "date": "2026-11-01",
-      "title": "Nigeria's public-health surveillance following Ebola reports",
-      "content": "Two additional suspected cases reportedly tested negative, while monitoring continued following an earlier confirmed imported case.",
-      "category": "Health"
+      "title": "NCDC reports negative results in two suspected Adamawa Ebola cases",
+      "content": "The samples tested negative after two rounds of laboratory testing.",
+      "category": "Public Health"
     },
     {
       "date": "2026-11-01",
-      "title": "Federal panel findings on deaths of detained miners",
-      "content": "The reported findings have renewed national attention on detention conditions and institutional accountability.",
-      "category": "Human Rights"
+      "title": "INEC reaffirms the 2027 election timetable",
+      "content": "The commission has ruled out postponement and is processing requests and objections concerning the preliminary voters' register.",
+      "category": "Democracy"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "United Nations political mission in Somalia completes its transition",
+      "content": "The mission ceased operations following a two-year transition process.",
+      "category": "International Relations"
     }
   ],
   "thoughtForToday": {
-    "quote": "Accountability is not a weakness in leadership. It is the foundation of public trust.",
+    "quote": "A credible democracy does not fear questions. It earns public confidence by answering them with transparency, fairness and accountability.",
     "author": "RadiantWaves Media"
   },
   "todaysBigQuestion": {
-    "question": "Should public officials and government institutions be held personally accountable when failures in their systems lead to loss of life, electoral irregularities or serious financial damage?",
-    "followUp": "Where should the line between institutional responsibility and individual accountability be drawn?",
+    "question": "What should matter most when Nigerians choose their next president: political experience, a credible economic plan, a proven record of performance, the ability to unite the country, or the capacity to strengthen security and democratic institutions?",
+    "followUp": "Should Nigerians prioritise political loyalty or measurable results?",
     "invitation": "Join the conversation. Share your perspective respectfully."
   },
   "sponsoredAdverts": [
@@ -686,6 +777,11 @@
       "date": "2026-11-01",
       "edition": "Morning",
       "title": "Morning News & Global Update"
+    },
+    {
+      "date": "2026-11-01",
+      "edition": "Midday",
+      "title": "Midday News & Global Update"
     }
   ],
   "editorialStandards": {
@@ -697,6 +793,6 @@
       "Public-interest journalism",
       "Accountability and transparency"
     ],
-    "verificationNote": "Suspected Ebola cases are not to be described as confirmed infections. Conflicting protest attendance estimates must be attributed to their respective sources. Allegations of responsibility for security incidents must not be presented as established facts without evidence. Economic projections should be distinguished from official final statistics. Developing stories will be updated when reliable confirmation becomes available."
+    "verificationNote": "The two suspected Ebola cases in Adamawa tested negative after two rounds of laboratory testing. Nigeria's earlier confirmed imported case is separate. ADC South-West complaints are attributed to reports from party figures and are not presented as formal findings. The 10,000-member Osun canvassing initiative is reported as a campaign mobilisation event, not proof of a change in every participant's political affiliation. India's voter-register allegations are attributed to opposition parties, while the Election Commission's response is also included. Bulgaria's runoff result was not available at midday. Russia–Ukraine military claims require independent confirmation. The closure of Somalia's political mission does not mean all United Nations operations in the country have ended."
   }
 }

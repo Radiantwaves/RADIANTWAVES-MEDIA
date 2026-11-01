@@ -1,280 +1,105 @@
 {
-  "edition": "Night",
-  "date": "2026-10-31",
-  "editionTime": "Night",
+  "edition": "Morning",
+  "date": "2026-11-01",
+  "editionTime": "Morning",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "GATEWAY TO YOUR WORLD NEWS — CONNECTING YOU TO THE WORLD",
-    "footer": "Connecting You Deeper to the World's Most Important Stories"
+    "footer": "Connecting the world. Informing the people. Holding power accountable.",
+    "website": "https://radiantwavesmedia.com",
+    "email": "info@radiantwavesmedia.com"
   },
   "hero": {
-    "title": "Global Night News: Ebola Concerns, European Protests and a Changing International Order",
-    "subtitle": "Nigeria investigates two suspected Ebola cases as France faces nationwide demonstrations, Europe strengthens strategic partnerships and international security concerns continue.",
+    "title": "Morning News & Global Update",
+    "subtitle": "The stories shaping Nigeria, Africa and the wider world",
     "image": ""
   },
-  "headline": "NIGHT NEWS – GLOBAL NEWS ROUND-UP",
-  "intro": "Good evening, and welcome to the RadiantWaves Media Night Edition for Saturday, 31 October 2026. Tonight's coverage focuses on the major political, economic, security, humanitarian and international developments affecting Nigeria and the wider world.",
-  "morningSummary": "The major developments include two suspected Ebola cases under investigation in Nigeria's North-East, nationwide demonstrations in France, the rescue of 38 people from a rubber boat off the Netherlands coast, updated Nigerian election candidate lists, the Canada–EU strategic partnership, continuing support for Ukraine and the opening of the Youth Olympic Games in Senegal.",
-  "editorialNote": "RadiantWaves Media distinguishes confirmed developments from allegations and preliminary reports. The two Ebola cases in Nigeria remain suspected, not confirmed. Claims concerning military incidents and other developing security matters are attributed to their sources and will be updated as reliable information becomes available.",
+  "headline": "Nigeria's Ebola surveillance update, questions over electoral transparency, accountability following miners' deaths and major international developments lead Sunday's global news.",
+  "intro": "Good morning and welcome to RadiantWaves Media. This Sunday, we examine the latest developments in public health, politics, international relations, security, business, technology and the global economy. Our coverage separates confirmed developments from allegations and issues that remain under investigation.",
+  "morningSummary": [
+    "Nigeria's two additional suspected Ebola cases have reportedly tested negative, while public-health surveillance continues following an earlier confirmed imported case.",
+    "INEC faces continued scrutiny over the preliminary voters' register ahead of Nigeria's 2027 general elections.",
+    "A federal investigative panel has reported preventable failures surrounding the deaths of detained artisanal miners in Niger State.",
+    "France witnessed another major round of demonstrations, with different attendance estimates from government officials and organisers.",
+    "The FBI has attributed a major Binance cryptocurrency theft to North Korean hackers.",
+    "Saudi Arabia reported intercepting a drone in the Riyadh region.",
+    "A road collision in Egypt's Giza governorate has reportedly killed ten people and injured 24 others.",
+    "Australia's annual inflation rate rose to 4.3% in September, adding pressure to household budgets and monetary policy."
+  ],
+  "editorialNote": "RadiantWaves Media distinguishes confirmed facts, official statements, reported allegations and developing stories. Figures may change as authorities publish further information. Where accounts differ, the relevant sources are identified.",
   "breaking": [
     {
-      "category": "Nigeria",
-      "title": "Two suspected Ebola cases under investigation in North-East",
-      "summary": "The NCDC says two individuals have been isolated while laboratory testing and contact identification continue. The cases are not yet confirmed.",
+      "title": "NIGERIA: Two additional suspected Ebola cases reportedly test negative",
+      "summary": "Reports indicate that two additional suspected cases have tested negative following laboratory testing. Health surveillance continues after Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
+      "category": "Africa",
       "image": "",
-      "sources": [
-        {
-          "name": "Nigeria Centre for Disease Control",
-          "url": "https://ncdc.gov.ng/"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://theprint.in/world/nigeria-reports-two-suspected-ebola-cases-in-northeast-region/3087275/"
-        }
-      ]
+      "status": "Developing"
     },
     {
-      "category": "France",
-      "title": "320,000 people take part in nationwide demonstrations",
-      "summary": "The French Interior Ministry's reported estimate puts nationwide participation at approximately 320,000. Authorities mobilised 70,000 police officers and gendarmes.",
+      "title": "NIGERIA: Investigative panel reports preventable failures in detained miners' deaths",
+      "summary": "A federal investigative panel has identified serious failures in detention conditions and recommended accountability measures.",
+      "category": "Nigeria",
+      "image": "assets/mining-investigation.jpg",
+      "status": "Developing"
+    },
+    {
+      "title": "FRANCE: Demonstrations continue amid pressure over living costs and public services",
+      "summary": "Government and organisers have published different estimates of nationwide participation. Authorities also reported hundreds of arrests.",
+      "category": "Europe",
       "image": "assets/france-protests.jpg",
-      "sources": [
-        {
-          "name": "French Interior Ministry",
-          "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/mobilisation-nationale-du-31-octobre-fermete-face-aux-troubles-pour-preserver-liberte-de-manifester"
-        }
-      ]
+      "status": "Developing"
     },
     {
-      "category": "Netherlands",
-      "title": "38 people rescued from motorless rubber boat off Zeeland",
-      "summary": "Dutch authorities rescued 38 people from a drifting boat near Breskens. Two people were detained on suspicion of people smuggling.",
+      "title": "BINANCE: FBI attributes major cryptocurrency theft to North Korean hackers",
+      "summary": "The FBI has attributed the theft to the North Korean-linked TraderTraitor operation. Binance says it has replaced most of the estimated stolen assets.",
+      "category": "Technology",
       "image": "",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183"
-        }
-      ]
+      "status": "Developing"
     },
     {
-      "category": "Nigeria",
-      "title": "INEC publishes updated 2027 candidate lists",
-      "summary": "Updated information for presidential, senatorial, National Assembly and governorship elections has been published.",
+      "title": "SAUDI ARABIA: Authorities report interception of drone in Riyadh region",
+      "summary": "Saudi authorities say air defences intercepted a hostile drone. The identity of whoever launched it has not been established publicly.",
+      "category": "World",
       "image": "",
-      "sources": [
-        {
-          "name": "INEC",
-          "url": "https://www.inecnigeria.org/"
-        }
-      ]
-    },
-    {
-      "category": "Canada and Europe",
-      "title": "Canada and EU launch Alliance for the Future",
-      "summary": "The new partnership covers trade, artificial intelligence, critical resources, energy, security and research.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Government of Canada",
-          "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater"
-        }
-      ]
-    },
-    {
-      "category": "Senegal",
-      "title": "Youth Olympic Games open in Senegal",
-      "summary": "Dakar 2026 marks the first Olympic sporting event held on African soil.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Association of National Olympic Committees",
-          "url": "https://www.anocolympic.org/anoc-new/dakar-2026-to-make-history-as-2655-young-athletes-gather-for-africas-first-olympic-event/"
-        }
-      ]
+      "status": "Developing"
     }
   ],
   "featured": {
-    "category": "Nigeria",
-    "title": "Nigeria Investigates Two Suspected Ebola Cases as Health Authorities Strengthen Surveillance",
-    "subtitle": "The NCDC says both individuals have been isolated and laboratory investigations are under way.",
-    "content": [
-      "Nigeria's health authorities are investigating two suspected Ebola cases in the North-East region.",
-      "The Nigeria Centre for Disease Control and Prevention says both individuals have been isolated. Contact identification and listing are ongoing, while laboratory testing is being conducted to establish whether the individuals have contracted the virus.",
-      "The NCDC has stressed that suspected cases are not confirmed cases. Confirmation depends on laboratory results.",
-      "The development comes amid heightened public health surveillance following Nigeria's earlier response to an imported case of Bundibugyo virus disease, an Ebola virus disease strain.",
-      "Health authorities are expected to provide further information as investigations progress."
-    ],
-    "analysis": "The immediate priority is accurate testing, contact identification and calm public communication. Public health authorities must provide timely updates while protecting the privacy and dignity of affected individuals.",
-    "image": "",
+    "title": "Nigeria's Public Institutions Face a Test of Accountability",
+    "subtitle": "From electoral transparency to deaths in detention, public confidence depends on institutions demonstrating that failures are investigated and corrected.",
+    "content": "Nigeria enters November with important questions facing its public institutions. The electoral commission must demonstrate that the voters' register is accurate and that concerns raised during the verification process are addressed. Separately, the findings concerning the deaths of detained artisanal miners in Niger State raise questions about detention conditions, oversight and the treatment of people in state custody. These are different issues, but both underline the importance of transparency, accountability and respect for citizens' rights.",
+    "category": "RadiantWaves Special Report",
+    "image": "assets/mining-investigation.jpg",
     "sources": [
       {
-        "name": "NCDC",
-        "url": "https://ncdc.gov.ng/"
-      },
-      {
-        "name": "Reuters",
-        "url": "https://theprint.in/world/nigeria-reports-two-suspected-ebola-cases-in-northeast-region/3087275/"
+        "name": "Independent National Electoral Commission",
+        "url": "https://www.inecnigeria.org/"
       }
     ]
   },
   "topStories": [
     {
-      "category": "Nigeria",
-      "title": "Two suspected Ebola cases under investigation",
-      "summary": "The NCDC has isolated two individuals in the North-East while laboratory testing continues.",
-      "image": "",
-      "url": "https://ncdc.gov.ng/",
-      "sources": [
-        {
-          "name": "NCDC",
-          "url": "https://ncdc.gov.ng/"
-        }
-      ]
-    },
-    {
-      "category": "France",
-      "title": "320,000 attend nationwide protests, according to government figures",
-      "summary": "The third weekend of demonstrations brought together protesters across France amid continuing social and economic concerns.",
-      "image": "assets/france-protests.jpg",
-      "url": "https://www.euronews.com/2026/10/31/frances-third-weekend-of-social-protests-sees-lower-turnout-and-early-clashes-in-major-cit",
-      "sources": [
-        {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/2026/10/31/frances-third-weekend-of-social-protests-sees-lower-turnout-and-early-clashes-in-major-cit"
-        }
-      ]
-    },
-    {
-      "category": "Netherlands",
-      "title": "38 people rescued from boat off Zeeland coast",
-      "summary": "The boat had no engine and those aboard were taken ashore for checks. Two people were arrested on suspicion of people smuggling.",
-      "image": "",
-      "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183"
-        }
-      ]
-    },
-    {
-      "category": "Canada and Europe",
-      "title": "Canada and EU launch new strategic alliance",
-      "summary": "The Alliance for the Future seeks closer cooperation across trade, technology, energy and security.",
-      "image": "",
-      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater",
-      "sources": [
-        {
-          "name": "Government of Canada",
-          "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater"
-        }
-      ]
-    },
-    {
-      "category": "Africa",
-      "title": "Senegal opens Africa's first Olympic sporting event",
-      "summary": "The Youth Olympic Games bring together young athletes from around the world.",
-      "image": "",
-      "url": "https://www.anocolympic.org/anoc-new/dakar-2026-to-make-history-as-2655-young-athletes-gather-for-africas-first-olympic-event/",
-      "sources": [
-        {
-          "name": "ANOC",
-          "url": "https://www.anocolympic.org/anoc-new/dakar-2026-to-make-history-as-2655-young-athletes-gather-for-africas-first-olympic-event/"
-        }
-      ]
-    }
-  ],
-  "articles": [
-    {
-      "category": "Nigeria",
-      "region": "Africa",
-      "title": "Nigeria – Two suspected Ebola cases under investigation in the North-East",
-      "excerpt": "Health authorities have isolated two individuals while laboratory testing and contact identification continue.",
-      "content": [
-        "Nigeria's health authorities are investigating two suspected Ebola cases in the country's North-East region.",
-        "The Nigeria Centre for Disease Control and Prevention says the two individuals have been isolated while contact identification and listing are ongoing. Laboratory testing is being conducted to determine whether they have contracted the virus.",
-        "The NCDC has emphasised that suspected cases must not be confused with confirmed infections. Confirmation depends on laboratory results.",
-        "The development comes amid heightened surveillance following Nigeria's earlier response to an imported case of Bundibugyo virus disease involving a traveller from Uganda.",
-        "The agency has urged the public to follow official health guidance, maintain good hygiene and avoid spreading unverified information."
-      ],
-      "analysis": "Nigeria must act quickly to strengthen surveillance, laboratory testing and public health communication. Authorities should provide clear updates while avoiding unnecessary alarm or stigmatisation of affected communities.",
-      "verificationNote": "The two cases are suspected, not confirmed. The NCDC has not disclosed the specific states where the individuals were identified.",
+      "title": "Nigeria: Two additional suspected Ebola cases reportedly test negative",
+      "category": "Health",
+      "summary": "The latest laboratory reports provide reassurance, although health authorities continue surveillance following an earlier confirmed imported case.",
+      "content": "Nigeria's public-health authorities have continued monitoring after two additional suspected Ebola cases were investigated in the North-East. Reports on Sunday indicate that the two suspected cases tested negative following laboratory testing. The development is separate from Nigeria's earlier confirmed imported Bundibugyo Ebola case involving a traveller who had returned from Uganda. Health authorities must continue surveillance, contact identification where appropriate and transparent public communication. Members of the public should rely on official health guidance rather than circulate unverified claims.",
       "image": "",
       "sources": [
         {
-          "name": "NCDC",
+          "name": "Nigeria Centre for Disease Control and Prevention",
           "url": "https://ncdc.gov.ng/"
         },
         {
-          "name": "Reuters",
-          "url": "https://theprint.in/world/nigeria-reports-two-suspected-ebola-cases-in-northeast-region/3087275/"
+          "name": "The ICIR",
+          "url": "https://www.icirnigeria.org/"
         }
       ]
     },
     {
-      "category": "France",
-      "region": "Europe",
-      "title": "France – Third weekend of protests draws approximately 320,000 participants",
-      "excerpt": "Demonstrations over living costs, public services and economic pressures continued across France.",
-      "content": [
-        "France experienced another major weekend of demonstrations, with approximately 320,000 participants nationwide, according to figures attributed to the Interior Ministry.",
-        "The protests centred on rising living costs, fuel prices, education, housing and public services.",
-        "Authorities mobilised approximately 70,000 police officers and gendarmes. The Interior Ministry described the security deployment as necessary to maintain public order and protect authorised demonstrations.",
-        "Many marches proceeded peacefully, although tensions and clashes were reported during dispersal in Paris, Marseille, Lyon and other locations.",
-        "The demonstrations reflect dissatisfaction among sections of the population, particularly younger generations, over economic and social conditions."
-      ],
-      "analysis": "Security measures may contain disorder, but lasting stability requires political dialogue and practical solutions to the problems affecting ordinary citizens. The government must also distinguish peaceful protest from violence and protect the right to lawful assembly.",
-      "image": "assets/france-protests.jpg",
-      "sources": [
-        {
-          "name": "French Interior Ministry",
-          "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/mobilisation-nationale-du-31-octobre-fermete-face-aux-troubles-pour-preserver-liberte-de-manifester"
-        },
-        {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/2026/10/31/frances-third-weekend-of-social-protests-sees-lower-turnout-and-early-clashes-in-major-cit"
-        }
-      ]
-    },
-    {
-      "category": "Netherlands",
-      "region": "Europe",
-      "title": "Netherlands – 38 people rescued from rubber boat off Zeeland coast",
-      "excerpt": "Dutch coast guard and military police rescued 38 people from a drifting boat without an engine.",
-      "content": [
-        "Dutch coast guard personnel and military police rescued 38 people found aboard a rubber boat drifting off the Zeeland coast near Breskens.",
-        "The vessel had no engine and was reportedly drifting without the ability to navigate safely. Those aboard were not wearing life jackets.",
-        "Two people were detained on suspicion of people smuggling. Authorities have not yet established where the boat departed from or where the passengers intended to travel.",
-        "The rescued people were taken ashore for checks and assistance. Authorities are investigating their identities and migration status.",
-        "The incident highlights the continuing risks associated with irregular sea crossings and the activities of suspected people-smuggling networks."
-      ],
-      "analysis": "The incident should be understood first as a rescue at sea involving people exposed to serious danger. The investigation into suspected smuggling is separate from the treatment and rights of those rescued.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183"
-        },
-        {
-          "name": "NL Times",
-          "url": "https://nltimes.nl/2026/10/31/38-rescued-rubber-boat-coast-cadzand-2-arrested-smuggling-probe"
-        }
-      ]
-    },
-    {
-      "category": "Nigeria",
-      "region": "Africa",
-      "title": "Nigeria – INEC publishes updated 2027 candidate lists",
-      "excerpt": "Updated information for several categories of elections has been published by the electoral commission.",
-      "content": [
-        "The Independent National Electoral Commission has published updated candidate information for several elections scheduled for 2027.",
-        "The commission's website includes information relating to presidential, senatorial, National Assembly and governorship elections.",
-        "The publication follows complaints and disputes involving candidate nominations and omissions from earlier lists.",
-        "Political parties and candidates are expected to examine the published information and use the appropriate legal channels if they have objections.",
-        "The publication is an administrative step and should not be interpreted as proof that every nomination dispute has been resolved."
-      ],
-      "analysis": "Electoral transparency is essential. Nigerians must be able to trust that the process is fair, that eligible candidates are treated equally and that the final lists reflect the law.",
+      "title": "Nigeria: Electoral register scrutiny intensifies ahead of 2027",
+      "category": "Politics",
+      "summary": "Questions about preliminary voter-registration entries have placed renewed attention on INEC's verification process.",
+      "content": "The Independent National Electoral Commission is under pressure to demonstrate the accuracy of its preliminary voters' register ahead of the 2027 general elections. Concerns raised in public reporting include questionable entries, photographs and personal registration details. Allegations involving artificial intelligence-generated photographs and registration officers should be assessed against evidence and official findings. INEC has outlined a timetable for the electoral process, with the final register scheduled for publication on 15 December 2026. The presidential and National Assembly elections are scheduled for 16 January 2027, while governorship and state assembly elections are scheduled for 6 February 2027. Electoral credibility requires accurate records, transparent correction procedures and equal treatment of eligible voters.",
       "image": "",
       "sources": [
         {
@@ -284,530 +109,563 @@
       ]
     },
     {
-      "category": "Canada and Europe",
-      "region": "World",
-      "title": "Canada and EU announce Alliance for the Future",
-      "excerpt": "The partnership is designed to deepen cooperation in technology, trade, critical minerals, energy and security.",
-      "content": [
-        "Canada and the European Union have launched an Alliance for the Future following their summit in Montreal.",
-        "Canadian Prime Minister Mark Carney met European Commission President Ursula von der Leyen and European Council President António Costa.",
-        "The partnership covers trade and regulatory cooperation, digital and research technologies, critical resources, energy, financial services, security and preparedness, and people-to-people ties.",
-        "The leaders also agreed to work towards an even closer association between Canada and the EU, with further work expected towards their 2027 summit.",
-        "Canada is not becoming an EU member. The proposed closer association is a future objective and remains short of full membership."
-      ],
-      "analysis": "The agreement reflects a changing international environment in which traditional allies are seeking to diversify their economic and security relationships. Its practical value will depend on implementation, investment and measurable cooperation.",
-      "image": "",
+      "title": "Nigeria: Families seek accountability following deaths of detained miners",
+      "category": "Human Rights",
+      "summary": "A federal investigative panel has reported serious failures in detention conditions and called for accountability measures.",
+      "content": "The deaths of artisanal miners held in detention in Niger State have raised serious questions about the treatment of suspects and the responsibility of security agencies. A federal investigative panel reportedly identified preventable failures involving overcrowding, extreme heat, dehydration and inadequate detention conditions. Its findings have increased calls for disciplinary action, compensation for affected families and improvements to detention oversight. The final death toll should be reported using the panel's definitive published figure, as some reports have differed over the number. The central issue remains the need for a transparent process and accountability for any proven wrongdoing.",
+      "image": "assets/mining-investigation.jpg",
       "sources": [
         {
-          "name": "Government of Canada",
-          "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater"
+          "name": "Federal Government of Nigeria",
+          "url": "https://statehouse.gov.ng/"
+        }
+      ]
+    },
+    {
+      "title": "France: Large demonstrations continue over economic and public-service concerns",
+      "category": "Europe",
+      "summary": "Government estimates put participation at approximately 320,000 nationwide, while organisers gave a higher estimate. Authorities reported 565 arrests by 21:00.",
+      "content": "France experienced another major round of demonstrations on Saturday, 31 October, amid public concerns about living costs, inequality, education, housing and public services. The French Interior Ministry estimated nationwide participation at approximately 320,000. Organisers gave a higher estimate, illustrating the difference between official and union assessments of turnout. Authorities reported 565 arrests by 21:00. Most demonstrations were reported to be peaceful, although clashes involving police and masked groups occurred in some locations. Peaceful protest is a democratic right, while violence and attacks on public property remain matters for law enforcement. The government faces the challenge of addressing public concerns while protecting public safety.",
+      "image": "assets/france-protests.jpg",
+      "sources": [
+        {
+          "name": "French Ministry of the Interior",
+          "url": "https://www.interieur.gouv.fr/"
         },
         {
-          "name": "European Council",
-          "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/"
+          "name": "Euronews",
+          "url": "https://www.euronews.com/"
         }
       ]
     },
     {
-      "category": "Ukraine",
-      "region": "Europe",
-      "title": "Ukraine – United States approves proposed Patriot missile sale",
-      "excerpt": "Ukraine has welcomed a reported US-approved Patriot interceptor sale, although delivery delays remain a concern.",
-      "content": [
-        "The United States has approved a proposed US$2.1 billion sale of 500 Patriot air-defence interceptors to Ukraine, according to the information supplied for this edition.",
-        "The purchase is reportedly being funded by Canada, Germany and Norway through a US programme.",
-        "Ukrainian President Volodymyr Zelenskyy has welcomed the decision but expressed concern about delivery delays, warning that the missiles could take years to arrive.",
-        "Ukraine continues to depend on international military assistance to protect its cities and infrastructure against Russian attacks.",
-        "The timing of deliveries remains a major concern for Kyiv."
-      ],
-      "analysis": "The value of military assistance depends not only on the agreement but also on delivery schedules, operational readiness and the ability to maintain equipment. Ukraine's immediate air-defence needs remain a central issue for its international partners.",
-      "image": "assets/leaders/zelensky.jpg",
-      "sources": []
-    },
-    {
-      "category": "United States",
-      "region": "North America",
-      "title": "G20 – Foreign ministers fail to reach consensus on major issues",
-      "excerpt": "The Atlanta meeting exposed continuing divisions over international security and geopolitical conflicts.",
-      "content": [
-        "The G20 foreign ministers' meeting in Atlanta has ended without agreement on several major international security issues.",
-        "The ministers issued a chair's statement rather than a joint communiqué.",
-        "Disagreements over Russia's war in Ukraine, tensions involving Iran, US tariffs and China's actions in the South China Sea contributed to divisions.",
-        "European diplomats had objected to appearing in a traditional group photograph alongside Russian Foreign Minister Sergey Lavrov. The photograph was not held.",
-        "The meeting illustrates the difficulties facing international cooperation at a time when geopolitical tensions remain high."
-      ],
-      "analysis": "The absence of a joint communiqué demonstrates the limits of diplomatic consensus when major powers hold conflicting positions. However, bilateral meetings and continued dialogue can still provide opportunities for cooperation.",
-      "image": "assets/g20-meeting.jpg",
-      "sources": [
-        {
-          "name": "Anadolu Agency",
-          "url": "https://www.aa.com.tr/en/world/g20-foreign-ministers-meeting-enters-final-day-in-us-amid-global-tensions/4107410"
-        }
-      ]
-    },
-    {
-      "category": "Africa",
-      "region": "Africa",
-      "title": "Senegal – Youth Olympic Games open in historic African first",
-      "excerpt": "Dakar 2026 marks the first Olympic sporting event hosted on African soil.",
-      "content": [
-        "Senegal is hosting the 2026 Youth Olympic Games, marking the first time an Olympic sporting event has taken place on African soil.",
-        "The competition runs from 31 October to 13 November, with events in Dakar, Diamniadio and Saly.",
-        "The Association of National Olympic Committees reports that 2,655 young athletes representing 204 National Olympic Committees are expected to participate, alongside the Youth Refugee Olympic Team.",
-        "For Senegal and the wider continent, the event is an opportunity to demonstrate sporting talent, organisational capacity and Africa's place in international sport.",
-        "The long-term test will be whether the investment leaves a lasting sporting legacy for young Africans."
-      ],
-      "analysis": "The success of the Games should be measured not only by the opening ceremony but also by the opportunities created for local athletes, coaches, schools and sporting organisations after the event.",
+      "title": "Saudi Arabia: Air defences reportedly intercept drone in Riyadh region",
+      "category": "Security",
+      "summary": "Saudi authorities announced that a drone had been intercepted. The launcher's identity has not been publicly established.",
+      "content": "Saudi Arabia has reported that its air defence systems intercepted and destroyed a hostile drone in the Riyadh region. The announcement was made by a spokesman for the Saudi-led military coalition involved in Yemen. Authorities said debris fell without causing injuries. The spokesman did not publicly identify who launched the drone. The incident comes amid continuing regional security tensions. Any escalation affecting Saudi infrastructure or shipping routes could have wider consequences for energy markets and regional stability.",
       "image": "",
       "sources": [
         {
-          "name": "ANOC",
-          "url": "https://www.anocolympic.org/anoc-new/dakar-2026-to-make-history-as-2655-young-athletes-gather-for-africas-first-olympic-event/"
+          "name": "Saudi Press Agency",
+          "url": "https://www.spa.gov.sa/"
         }
       ]
     },
     {
-      "category": "Asia",
-      "region": "Asia",
-      "title": "Myanmar – UN warns over civilian suffering",
-      "excerpt": "International concern remains high over allegations of attacks on civilians and the humanitarian situation.",
-      "content": [
-        "A United Nations investigator has raised serious allegations against Myanmar's military authorities, accusing them of attacks on civilians and efforts to suppress opposition.",
-        "Myanmar has continued to experience armed conflict and political instability since the military takeover in 2021.",
-        "The international community faces continued pressure to support civilian protection, humanitarian access and accountability.",
-        "The investigator has also raised concerns about foreign weapons supplies and their contribution to the conflict."
-      ],
-      "analysis": "Independent monitoring, humanitarian access and accountability are essential in conflicts where civilians face displacement, violence and restrictions on basic services. Allegations should be assessed through credible investigations.",
-      "image": "",
-      "sources": []
-    },
-    {
+      "title": "Binance: FBI attributes major cryptocurrency theft to North Korean hackers",
       "category": "Technology",
-      "region": "Global",
-      "title": "Artificial intelligence investment comes under greater scrutiny",
-      "excerpt": "Investors are examining whether major AI spending can deliver sustainable commercial returns.",
-      "content": [
-        "Artificial intelligence remains a major driver of investment in the global technology sector.",
-        "However, investors are increasingly examining whether enormous expenditure on data centres, computing infrastructure and AI development will generate sustainable profits.",
-        "Technology companies face pressure to demonstrate that their investments can deliver commercial returns rather than simply fuel market expectations.",
-        "For Africa, the AI revolution presents opportunities in education, healthcare, financial services, agriculture and public administration.",
-        "Reliable electricity, digital infrastructure, skills development and responsible regulation remain essential if African countries are to benefit."
-      ],
-      "analysis": "AI investment must be assessed by its practical value. African governments and businesses should focus on infrastructure, skills, data protection and solutions that address local needs rather than simply following global investment trends.",
+      "summary": "The FBI has attributed the reported theft to the North Korean-linked TraderTraitor operation. Binance says it has replaced approximately $6 billion of the estimated $6.3 billion.",
+      "content": "The Federal Bureau of Investigation has attributed a major theft of virtual assets from cryptocurrency exchange Binance to a North Korean-linked hacking operation known as TraderTraitor. The reported theft is estimated at approximately $6.3 billion. Binance says it has replaced approximately $6 billion of the affected assets through company resources and financial arrangements. The exchange and its partners are working to trace and freeze funds. Reports about the incident have also raised questions about service disruption and the timing of the resumption of normal operations. The case highlights the security risks facing digital financial institutions and the importance of international cooperation against cybercrime.",
       "image": "",
-      "sources": []
+      "sources": [
+        {
+          "name": "Federal Bureau of Investigation",
+          "url": "https://www.fbi.gov/"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/"
+        }
+      ]
+    },
+    {
+      "title": "Egypt: Ten reportedly killed in Giza minibus and truck collision",
+      "category": "Africa",
+      "summary": "Emergency services reportedly transported 24 injured people to hospitals following the collision.",
+      "content": "A serious road collision involving a minibus and a heavy truck in Giza, west of Cairo, has reportedly killed ten people and injured 24 others. Egypt's Ministry of Health said emergency services dispatched ambulances to the scene and transported injured passengers to nearby hospitals. Authorities are responding to the incident. The accident has renewed attention on road safety, vehicle inspections, driver training and the enforcement of traffic regulations.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Egyptian Ministry of Health and Population",
+          "url": "https://www.mohp.gov.eg/"
+        }
+      ]
+    },
+    {
+      "title": "Global biodiversity: COP17 assessment warns that nature targets remain at risk",
+      "category": "Environment",
+      "summary": "The global assessment warns that countries need to accelerate action to meet 2030 biodiversity commitments.",
+      "content": "Countries attending the United Nations biodiversity conference in Yerevan, Armenia, have considered the first global assessment of progress towards the 2030 nature-protection targets. The assessment warns that current efforts are insufficient to achieve the agreed goals without faster action. Discussions include biodiversity financing, protection of forests and oceans, indigenous communities and the links between climate change and biodiversity loss. Developing countries continue to call for stronger financial support to protect ecosystems. Commitments will need to be translated into measurable national action and transparent progress reporting.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Convention on Biological Diversity",
+          "url": "https://www.cbd.int/"
+        },
+        {
+          "name": "United Nations Environment Programme",
+          "url": "https://www.unep.org/"
+        }
+      ]
+    },
+    {
+      "title": "Australia: Inflation rises to 4.3% in September",
+      "category": "Business",
+      "summary": "Annual consumer price inflation increased from 4.0% in August to 4.3% in September.",
+      "content": "Australia's annual consumer price inflation rose to 4.3% in September 2026, compared with 4.0% in August, according to the Australian Bureau of Statistics. Higher fuel costs have contributed to pressure on household budgets. The figures will be considered by economists and the Reserve Bank of Australia as they assess the outlook for interest rates. The inflation data does not itself establish that another rate increase will occur. Households and businesses will be watching the effect of prices and borrowing costs on spending and investment.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Australian Bureau of Statistics",
+          "url": "https://www.abs.gov.au/"
+        },
+        {
+          "name": "Reserve Bank of Australia",
+          "url": "https://www.rba.gov.au/"
+        }
+      ]
+    },
+    {
+      "title": "Germany: Trade imbalance with Asia-Pacific draws attention to industrial competitiveness",
+      "category": "Business",
+      "summary": "Reports point to a widening trade imbalance, reflecting changes in manufacturing, imports and international supply chains.",
+      "content": "Germany faces continuing challenges in its trade relationship with the Asia-Pacific region. Reports have suggested that the trade deficit could reach a record level in 2026. The development reflects the importance of Asian manufacturing and supply chains, alongside pressure on German industry from energy costs, competition and changing global demand. The precise projected figure should be treated as an estimate until confirmed in the relevant official trade statistics. Germany's ability to maintain industrial competitiveness remains an important issue for the wider European economy.",
+      "image": "assets/europe-energy.jpg",
+      "sources": [
+        {
+          "name": "Destatis",
+          "url": "https://www.destatis.de/"
+        },
+        {
+          "name": "Deutsche Bundesbank",
+          "url": "https://www.bundesbank.de/"
+        }
+      ]
+    },
+    {
+      "title": "Quad: United States, Australia, India and Japan discuss supply-chain cooperation",
+      "category": "International Relations",
+      "summary": "The four countries have emphasised cooperation on economic security and resilient supply chains.",
+      "content": "Foreign ministers from the United States, Australia, India and Japan have discussed closer cooperation on supply chains and regional economic security. The Quad partners have raised concerns about arbitrary export restrictions and disruptions to international trade. Their discussions reflect growing competition over strategic resources, advanced technology and manufacturing capacity in the Indo-Pacific. Cooperation on reliable supply chains has become an important part of the group's wider regional agenda.",
+      "image": "",
+      "sources": [
+        {
+          "name": "United States Department of State",
+          "url": "https://www.state.gov/"
+        },
+        {
+          "name": "Ministry of External Affairs, India",
+          "url": "https://www.mea.gov.in/"
+        }
+      ]
     }
   ],
+  "articles": [],
   "worldNews": [
     {
-      "title": "Canada and EU launch Alliance for the Future",
-      "summary": "The new partnership aims to strengthen cooperation in trade, technology, energy and security.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Government of Canada",
-          "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater"
-        }
-      ]
+      "title": "Saudi Arabia reports interception of drone near Riyadh",
+      "summary": "Authorities say air defences intercepted a drone, but have not identified its launch source.",
+      "content": "The incident adds to regional security concerns. Further independent confirmation and details about the origin of the drone remain important.",
+      "image": ""
     },
     {
-      "title": "Ukraine continues to seek international defence support",
-      "summary": "The reported Patriot missile arrangement highlights the continuing importance of international military assistance and delivery schedules.",
-      "image": "assets/leaders/zelensky.jpg",
-      "sources": []
+      "title": "Quad countries discuss stronger economic and supply-chain cooperation",
+      "summary": "The United States, Australia, India and Japan are seeking greater resilience in strategic supply chains.",
+      "content": "The discussions reflect concerns about dependence on limited suppliers for critical materials and advanced technologies.",
+      "image": ""
     },
     {
-      "title": "Gulf maritime security remains a global concern",
-      "summary": "Maritime incidents and regional tensions continue to raise questions about international shipping security.",
-      "image": "",
-      "sources": [
-        {
-          "name": "UKMTO",
-          "url": "https://www.ukmto.org/"
-        }
-      ]
+      "title": "Biodiversity: Countries face pressure to turn 2030 commitments into action",
+      "summary": "The global assessment warns that progress towards nature-protection targets remains insufficient.",
+      "content": "Financing, implementation and measurable national commitments will be central to protecting biodiversity.",
+      "image": ""
     }
   ],
   "usaNews": [
     {
-      "title": "G20 diplomatic divisions emerge during Atlanta talks",
-      "summary": "Disagreements over international security and Ukraine have complicated efforts to reach a common position.",
-      "image": "assets/g20-meeting.jpg",
-      "sources": [
-        {
-          "name": "Anadolu Agency",
-          "url": "https://www.aa.com.tr/en/world/g20-foreign-ministers-meeting-enters-final-day-in-us-amid-global-tensions/4107410"
-        }
-      ]
+      "title": "FBI links Binance cryptocurrency theft to North Korean hacking operation",
+      "summary": "The FBI has attributed the major digital-asset theft to the TraderTraitor operation.",
+      "content": "The investigation highlights the international dimension of cybercrime and the need for cooperation between law-enforcement agencies and financial platforms.",
+      "image": ""
     },
     {
-      "title": "AI investment faces greater scrutiny",
-      "summary": "Technology companies are under pressure to demonstrate that large investments can generate sustainable returns.",
-      "image": "",
-      "sources": []
+      "title": "Quad discussions place supply-chain security in focus",
+      "summary": "US officials joined partners from Australia, India and Japan in discussions about economic security.",
+      "content": "The talks focused on resilient supply chains and strategic economic cooperation in the Indo-Pacific.",
+      "image": ""
     }
   ],
   "europeNews": [
     {
-      "title": "France faces another weekend of demonstrations",
-      "summary": "Approximately 320,000 people participated nationwide according to government estimates.",
-      "image": "assets/france-protests.jpg",
-      "sources": [
-        {
-          "name": "French Interior Ministry",
-          "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/mobilisation-nationale-du-31-octobre-fermete-face-aux-troubles-pour-preserver-liberte-de-manifester"
-        }
-      ]
+      "title": "France: Demonstrations continue over living costs and public services",
+      "summary": "The Interior Ministry estimated 320,000 participants nationwide, while organisers gave a higher figure.",
+      "content": "The demonstrations reflect public concerns about household costs, inequality, housing and public services. Authorities reported 565 arrests by 21:00.",
+      "image": "assets/france-protests.jpg"
     },
     {
-      "title": "38 people rescued from boat off the Netherlands coast",
-      "summary": "The motorless boat was found off Zeeland. Two people were arrested on suspicion of people smuggling.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183"
-        }
-      ]
+      "title": "Germany faces pressure to strengthen industrial competitiveness",
+      "summary": "Trade and manufacturing challenges remain important issues for Europe's largest economy.",
+      "content": "Energy costs, international competition and changing supply chains continue to shape Germany's economic outlook.",
+      "image": "assets/europe-energy.jpg"
     },
     {
-      "title": "Canada and EU announce strategic partnership",
-      "summary": "The Alliance for the Future includes trade, technology, critical resources and security.",
-      "image": "",
-      "sources": [
-        {
-          "name": "European Council",
-          "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/"
-        }
-      ]
+      "title": "Canada and European Union pursue closer strategic cooperation",
+      "summary": "The Alliance for the Future is intended to strengthen cooperation in trade, technology, energy and security.",
+      "content": "Canada and the European Union have announced a strategic partnership. Discussions about closer association are not an announcement that Canada will become an EU member.",
+      "image": ""
     }
   ],
   "africaNews": [
     {
-      "title": "Nigeria investigates two suspected Ebola cases",
-      "summary": "The NCDC says both individuals have been isolated and laboratory testing is under way.",
-      "image": "",
-      "sources": [
-        {
-          "name": "NCDC",
-          "url": "https://ncdc.gov.ng/"
-        }
-      ]
+      "title": "Nigeria: Additional suspected Ebola cases reportedly test negative",
+      "summary": "Laboratory reports indicate that the two additional suspected cases tested negative.",
+      "content": "Public-health surveillance continues following Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
+      "image": ""
     },
     {
-      "title": "Senegal hosts Africa's first Olympic sporting event",
-      "summary": "The Youth Olympic Games opened on 31 October and run until 13 November.",
-      "image": "",
-      "sources": [
-        {
-          "name": "ANOC",
-          "url": "https://www.anocolympic.org/anoc-new/dakar-2026-to-make-history-as-2655-young-athletes-gather-for-africas-first-olympic-event/"
-        }
-      ]
+      "title": "Egypt: Road collision in Giza reportedly kills ten",
+      "summary": "Twenty-four people were reportedly injured in a collision involving a minibus and a truck.",
+      "content": "Emergency services transported injured people to hospitals as authorities responded to the accident.",
+      "image": ""
+    },
+    {
+      "title": "The Gambia: Solar energy investment aims to strengthen electricity supply",
+      "summary": "A reported $169 million solar project includes generation capacity and battery storage.",
+      "content": "The Soma Solar Park Phase 2 project is intended to expand renewable electricity generation and support energy reliability.",
+      "image": ""
+    },
+    {
+      "title": "Democratic Republic of Congo: Digital registration resumes in Beni",
+      "summary": "Registration activity has reportedly resumed following an interruption linked to public-health concerns.",
+      "content": "The development highlights the connection between public health, administration and access to essential public services.",
+      "image": ""
+    },
+    {
+      "title": "Burundi: Cholera reports underline continuing public-health challenges",
+      "summary": "Reports of cholera cases highlight the need for safe water, sanitation and disease surveillance.",
+      "content": "Health authorities and humanitarian organisations continue to face challenges in disease prevention and response.",
+      "image": ""
     }
   ],
   "nigeriaNews": [
     {
-      "title": "Two suspected Ebola cases identified in North-East",
-      "summary": "Health authorities have isolated two individuals while laboratory testing and contact identification continue.",
-      "image": "",
-      "sources": [
-        {
-          "name": "NCDC",
-          "url": "https://ncdc.gov.ng/"
-        }
-      ]
+      "title": "Ebola surveillance: Two additional suspected cases reportedly test negative",
+      "summary": "The results are reassuring, but monitoring continues after an earlier confirmed imported case.",
+      "content": "The public should follow NCDC guidance and avoid sharing unverified claims about suspected infections.",
+      "image": ""
     },
     {
-      "title": "INEC publishes updated 2027 election candidate lists",
-      "summary": "The updated information has renewed attention on nominations and electoral transparency.",
-      "image": "",
-      "sources": [
-        {
-          "name": "INEC",
-          "url": "https://www.inecnigeria.org/"
-        }
-      ]
+      "title": "INEC faces questions over preliminary voters' register",
+      "summary": "The commission is expected to address concerns before publication of the final register on 15 December 2026.",
+      "content": "Transparent verification and correction procedures are essential to protecting eligible voters and public confidence.",
+      "image": ""
+    },
+    {
+      "title": "Deaths of detained miners: Panel findings raise accountability questions",
+      "summary": "The federal panel reported serious detention failures and recommended action.",
+      "content": "The next steps include consideration of the panel's recommendations, compensation and accountability for any proven wrongdoing.",
+      "image": "assets/mining-investigation.jpg"
     }
   ],
   "asiaNews": [
     {
-      "title": "Myanmar conflict remains a serious civilian protection concern",
-      "summary": "A UN investigator has raised allegations concerning attacks on civilians and foreign weapons supplies.",
-      "image": "",
-      "sources": []
+      "title": "Saudi Arabia reports interception of drone in Riyadh region",
+      "summary": "The launch source has not been publicly identified.",
+      "content": "The incident comes amid wider regional security concerns.",
+      "image": ""
+    },
+    {
+      "title": "North Korean-linked hackers blamed for major cryptocurrency theft",
+      "summary": "The FBI has attributed the Binance theft to the TraderTraitor operation.",
+      "content": "The case underlines the importance of cybersecurity and international cooperation against digital crime.",
+      "image": ""
+    },
+    {
+      "title": "Asia-Pacific supply chains remain a strategic priority",
+      "summary": "Quad partners have discussed economic security and cooperation on strategic materials.",
+      "content": "The discussions reflect the growing importance of reliable supply chains for technology, energy and manufacturing.",
+      "image": ""
     }
   ],
   "businessNews": [
     {
-      "title": "France faces pressure over public finances and economic growth",
-      "summary": "Credit outlook concerns and reported economic contraction are adding to the government's fiscal challenge.",
-      "image": "assets/europe-energy.jpg",
-      "sources": []
+      "title": "Australia's annual inflation rises to 4.3%",
+      "summary": "September's annual CPI figure increased from 4.0% in August.",
+      "content": "Higher inflation may place further pressure on household budgets and influence monetary-policy discussions. A future interest-rate decision remains uncertain.",
+      "image": ""
     },
     {
-      "title": "AI spending faces greater scrutiny from investors",
-      "summary": "Technology companies are being asked to demonstrate that major investments can generate sustainable returns.",
-      "image": "",
-      "sources": []
+      "title": "Germany's trade relationship with Asia-Pacific under scrutiny",
+      "summary": "The trade imbalance highlights challenges for German industry and European supply chains.",
+      "content": "The reported projection should be checked against official trade statistics before the precise amount is treated as final.",
+      "image": "assets/europe-energy.jpg"
+    },
+    {
+      "title": "Binance cyberattack raises questions about digital financial security",
+      "summary": "The exchange says it has replaced most of the estimated stolen assets.",
+      "content": "Financial institutions and cryptocurrency platforms face increasing pressure to strengthen safeguards, incident reporting and customer protection.",
+      "image": ""
+    },
+    {
+      "title": "Africa's renewable energy investment opportunity",
+      "summary": "Solar power, storage and grid investment remain important to the continent's development.",
+      "content": "Projects such as the reported expansion of the Soma Solar Park in The Gambia demonstrate the importance of financing, reliable infrastructure and regional energy planning.",
+      "image": ""
     }
   ],
   "technologyNews": [
     {
-      "title": "Artificial intelligence investment enters a period of scrutiny",
-      "summary": "Investors are increasingly focused on commercial returns, infrastructure costs and sustainable business models.",
-      "image": "",
-      "sources": []
+      "title": "Cybersecurity: Binance theft highlights risks facing digital finance",
+      "summary": "The FBI has attributed the theft to North Korean-linked hackers.",
+      "content": "Digital financial institutions need strong identity controls, secure employee devices, transaction monitoring and transparent incident response.",
+      "image": ""
     },
     {
-      "title": "Cybersecurity remains essential for governments and businesses",
-      "summary": "The growing dependence on digital systems makes data protection and secure infrastructure increasingly important.",
-      "image": "",
-      "sources": []
-    }
-  ],
-  "editorial": [
-    {
-      "title": "The world needs responsible leadership",
-      "content": [
-        "Tonight's developments reveal how interconnected the world's challenges have become.",
-        "Nigeria is confronting a serious public health concern while preparing for another important electoral cycle.",
-        "France is experiencing demonstrations over economic and social pressures. Ukraine continues to seek protection against military attacks, while Canada and Europe are strengthening their strategic partnership.",
-        "These are different stories, but they share one important theme: the responsibility of leadership.",
-        "Governments must communicate honestly, respond quickly to public concerns and protect the interests of their citizens.",
-        "In Nigeria, the suspected Ebola cases require calm, transparency and effective public health action. Electoral institutions must also maintain public confidence through credible and transparent processes.",
-        "Across Europe and beyond, leaders must recognise that economic growth means little if ordinary citizens cannot afford basic necessities.",
-        "The world does not lack political promises. It needs measurable results."
-      ],
+      "title": "Artificial intelligence and electoral integrity",
+      "summary": "Concerns about questionable voter-register images highlight the need for reliable verification.",
+      "content": "Artificial intelligence can support public administration, but institutions must guard against manipulated material, inaccurate records and misinformation. Allegations should be tested through evidence and transparent procedures.",
       "image": ""
     }
   ],
+  "editorial": {
+    "title": "Accountability Must Not Be Selective",
+    "content": "The events making headlines this morning demonstrate why accountability is essential in every society. In Nigeria, questions surrounding deaths in detention and the integrity of the preliminary voters' register demand serious answers. In France, citizens are expressing dissatisfaction with economic conditions and public services. In the international financial sector, the Binance cyberattack has demonstrated the scale of threats facing digital institutions. These developments may appear unrelated, but they reveal a common responsibility shared by governments and institutions: protecting the people who depend on them. Accountability should not depend on political affiliation, economic influence or social status. When people die in custody, investigations must lead to justice. When electoral institutions identify irregularities, the public deserves transparency. When financial institutions suffer serious security breaches, customers deserve clear information and effective protection. A society becomes stronger when institutions accept responsibility and correct their failures.",
+    "image": ""
+  },
   "analysis": [
     {
-      "title": "Public health preparedness is a test of institutional responsibility",
-      "content": [
-        "The investigation into two suspected Ebola cases in Nigeria's North-East places public health preparedness in the spotlight.",
-        "The distinction between suspected and confirmed cases is essential. Clear communication can prevent panic while encouraging people to follow official guidance.",
-        "Effective surveillance, laboratory capacity, contact identification and public trust are all important parts of outbreak response.",
-        "The authorities should provide timely updates and ensure that communities receive accurate information."
-      ],
-      "image": ""
+      "title": "Nigeria's electoral credibility begins with the voters' register",
+      "content": "An election cannot be credible if eligible voters are missing from the register or if inaccurate entries remain uncorrected. INEC should explain its verification methods, publish clear correction procedures and provide political parties with a fair opportunity to scrutinise the process. Parties also have a responsibility to distinguish evidence from speculation. The public interest is served by accurate records, transparent institutions and peaceful participation.",
+      "category": "Nigeria"
     },
     {
-      "title": "The world is changing, but are leaders listening?",
-      "content": [
-        "From France's demonstrations to Nigeria's electoral preparations, the common challenge is public confidence.",
-        "Citizens want affordable living, security, reliable public services, employment opportunities and institutions they can trust.",
-        "Countries are seeking new partnerships, businesses are reassessing technology investments and governments are facing growing cybersecurity and security threats.",
-        "For developing countries, these changes present both risks and opportunities. Nigeria and other African nations must position themselves to benefit from new economic and technological partnerships.",
-        "The responsibility of leadership is not simply to respond to crises, but to build institutions capable of preventing them."
-      ],
-      "image": ""
+      "title": "Deaths in detention require more than official statements",
+      "content": "The reported findings concerning detained miners raise questions about supervision, detention standards and institutional responsibility. A credible response requires publication of findings, consideration of recommendations, appropriate legal processes and safeguards against repetition. The rights of people in custody must be protected regardless of the allegations against them.",
+      "category": "Human Rights"
+    },
+    {
+      "title": "Cybersecurity is now a matter of public trust",
+      "content": "The reported Binance theft illustrates how a security failure at a major digital platform can have international consequences. Financial institutions must invest in prevention, detection, recovery planning and clear communication with customers. Governments also need effective cross-border cooperation to investigate cybercrime.",
+      "category": "Technology"
     }
   ],
   "factCheck": [
     {
-      "title": "Nigeria Ebola reports – suspected does not mean confirmed",
-      "claim": "Two people in Nigeria's North-East have confirmed Ebola infections.",
-      "assessment": "The NCDC has described the individuals as suspected cases and says laboratory testing is under way.",
-      "verdict": "NOT CONFIRMED",
+      "claim": "The two additional suspected Ebola cases in Nigeria are confirmed infections.",
+      "verdict": "Not supported by the latest reports",
+      "explanation": "The two additional suspected cases reportedly tested negative. They must not be confused with Nigeria's earlier confirmed imported Bundibugyo Ebola case.",
       "image": "",
       "sources": [
         {
-          "name": "NCDC",
+          "name": "Nigeria Centre for Disease Control and Prevention",
           "url": "https://ncdc.gov.ng/"
         }
       ]
     },
     {
-      "title": "France protest figures – government estimate",
-      "claim": "320,000 people participated in the demonstrations.",
-      "assessment": "The figure is attributed to the French Interior Ministry. Organisers and authorities may publish different estimates.",
-      "verdict": "ATTRIBUTED FIGURE",
-      "image": "assets/france-protests.jpg",
-      "sources": [
-        {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/2026/10/31/frances-third-weekend-of-social-protests-sees-lower-turnout-and-early-clashes-in-major-cit"
-        }
-      ]
-    },
-    {
-      "title": "Canada joining the European Union?",
-      "claim": "Canada's new partnership means it is becoming an EU member.",
-      "assessment": "The agreement is a strategic partnership. The leaders have agreed to work towards a closer association, explicitly short of full membership.",
-      "verdict": "MISLEADING",
+      "claim": "Canada is becoming a member of the European Union.",
+      "verdict": "False",
+      "explanation": "The Canada-EU Alliance for the Future is a strategic cooperation initiative. Closer association has been discussed, but Canada has not been announced as an EU member.",
       "image": "",
       "sources": [
         {
           "name": "European Council",
-          "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2026/10/29-30/"
+          "url": "https://www.consilium.europa.eu/"
+        },
+        {
+          "name": "Government of Canada",
+          "url": "https://www.pm.gc.ca/"
+        }
+      ]
+    },
+    {
+      "claim": "The Saudi authorities have identified who launched the intercepted drone.",
+      "verdict": "Not established in the public announcement",
+      "explanation": "The announcement reported an interception but did not publicly identify the launch source. Responsibility should not be assigned without further evidence.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Saudi Press Agency",
+          "url": "https://www.spa.gov.sa/"
+        }
+      ]
+    },
+    {
+      "claim": "Australia's inflation increase guarantees another interest-rate rise.",
+      "verdict": "Misleading",
+      "explanation": "The annual CPI figure rose to 4.3% in September. This may influence monetary-policy decisions, but it does not guarantee a particular decision by the Reserve Bank.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Australian Bureau of Statistics",
+          "url": "https://www.abs.gov.au/"
+        },
+        {
+          "name": "Reserve Bank of Australia",
+          "url": "https://www.rba.gov.au/"
         }
       ]
     }
   ],
   "beyondStatement": [
     {
-      "title": "Why public health and electoral transparency both matter",
-      "content": [
-        "Public health and democratic institutions may appear to be separate issues, but both depend on public trust.",
-        "During a disease investigation, people need accurate information from health authorities. During an election, voters need confidence in the institutions responsible for administering the process.",
-        "In both situations, transparency, timely communication and accountability are essential.",
-        "Public confidence is strengthened when institutions explain what they know, what remains uncertain and what steps they are taking."
-      ],
-      "image": ""
+      "title": "What happens after an investigative panel publishes its findings?",
+      "content": "Public investigations matter only when their findings lead to appropriate action. In the case of the detained miners, the public will need to see whether recommendations are considered, families receive appropriate support and any proven misconduct is addressed through lawful procedures.",
+      "category": "Accountability"
+    },
+    {
+      "title": "Why an accurate voters' register matters",
+      "content": "The register determines who can participate in an election. Errors can exclude eligible voters or undermine confidence in the process. Transparent verification is therefore a central part of electoral integrity.",
+      "category": "Democracy"
     }
   ],
   "publicInterestFeature": {
-    "title": "People at sea: rescue, safety and the risks of irregular migration",
-    "content": [
-      "The rescue of 38 people from a motorless rubber boat off the Netherlands coast is a reminder of the human risks associated with dangerous sea journeys.",
-      "Authorities have detained two people on suspicion of people smuggling. The investigation into those arrests is separate from the need to provide assistance and assess the welfare of those rescued.",
-      "The identities, nationalities and intended destination of the passengers had not been established in the initial reports.",
-      "European governments face the challenge of addressing smuggling networks while respecting the rights and safety of people rescued at sea."
-    ],
-    "image": "",
-    "sources": [
-      {
-        "name": "Associated Press",
-        "url": "https://apnews.com/article/f9541a0b4a67d8bcc26034f7a4302183"
-      }
-    ]
+    "title": "The Human Cost of Institutional Failure",
+    "subtitle": "Public institutions exist to protect people, not expose them to avoidable harm.",
+    "content": "Whether the issue is detention conditions, electoral administration, health surveillance or digital financial security, institutional failures can affect ordinary people directly. The public deserves transparent explanations, independent scrutiny where appropriate and meaningful corrective action.",
+    "image": "assets/mining-investigation.jpg"
   },
   "technologyInnovation": [
     {
-      "title": "Artificial intelligence and the next stage of economic transformation",
-      "content": "AI has the potential to transform healthcare, education, agriculture, financial services and public administration. The challenge is to develop the infrastructure, skills, safeguards and reliable electricity needed to turn technological potential into practical benefits.",
+      "title": "Cybersecurity and the protection of digital finance",
+      "content": "The Binance incident highlights the need for stronger authentication, secure employee devices, transaction monitoring and international cooperation against cybercrime.",
       "image": ""
     },
     {
-      "title": "Cybersecurity must accompany digital transformation",
-      "content": "As governments and businesses become more dependent on digital systems, protecting personal information and critical infrastructure must become a central priority.",
+      "title": "Artificial intelligence and responsible public administration",
+      "content": "AI can help governments process information and improve services, but public institutions must ensure that records are accurate, decisions can be reviewed and manipulated material is detected.",
+      "image": ""
+    },
+    {
+      "title": "Africa's digital opportunity",
+      "content": "African countries can strengthen their technological independence by investing in digital skills, software development, cybersecurity, research and reliable digital infrastructure.",
       "image": ""
     }
   ],
   "innovation": [
     {
-      "title": "Africa's opportunity in the AI economy",
-      "content": "African countries can benefit from AI in agriculture, healthcare, education and financial services. Progress will depend on reliable electricity, affordable connectivity, digital skills and responsible regulation.",
+      "title": "Renewable energy and battery storage",
+      "content": "Solar generation combined with battery storage can help improve electricity reliability, reduce exposure to fuel-price volatility and support economic development. Financing and grid connections remain essential.",
+      "image": ""
+    },
+    {
+      "title": "Digital identity and electoral administration",
+      "content": "Secure digital systems can improve public records, but their credibility depends on data quality, privacy protection, independent verification and accessible correction procedures.",
       "image": ""
     }
   ],
   "leadersWatch": {
+    "intro": "RadiantWaves Media monitors the decisions, public statements and policy responsibilities of leaders whose actions influence national and international developments.",
     "leaders": [
       {
         "name": "Donald Trump",
         "country": "United States",
-        "position": "President of the United States",
-        "summary": "The US administration faces domestic political pressure ahead of the midterm elections and continuing international security challenges.",
-        "image": "assets/leaders/trump.jpg"
+        "role": "President",
+        "image": "assets/leaders/trump.jpg",
+        "summary": "The US administration faces international security, economic and cybersecurity challenges. Further official statements and policy developments remain under observation."
       },
       {
         "name": "Mark Carney",
         "country": "Canada",
-        "position": "Prime Minister of Canada",
-        "summary": "Canada's strategic partnership with the European Union marks a major development in the country's international economic and diplomatic policy.",
-        "image": ""
+        "role": "Prime Minister",
+        "image": "",
+        "summary": "Canada's strategic partnership with the European Union is an important development in its international economic and diplomatic policy."
       },
       {
         "name": "Emmanuel Macron",
         "country": "France",
-        "position": "President of France",
-        "summary": "The French president faces continued demonstrations, economic pressure and public dissatisfaction.",
-        "image": "assets/leaders/macron.jpg"
+        "role": "President",
+        "image": "assets/leaders/macron.jpg",
+        "summary": "Public demonstrations and economic pressures continue to test the French government's response to citizens' concerns."
       },
       {
         "name": "Bola Ahmed Tinubu",
         "country": "Nigeria",
-        "position": "President of Nigeria",
-        "summary": "The administration faces scrutiny over governance, economic conditions, national security and preparations for the 2027 elections.",
-        "image": "assets/leaders/tinubu.jpg"
+        "role": "President",
+        "image": "assets/leaders/tinubu.jpg",
+        "summary": "His administration faces questions about economic conditions, national security, public institutions and preparations for the 2027 elections."
       },
       {
         "name": "Atiku Abubakar",
         "country": "Nigeria",
-        "position": "Former Vice-President of Nigeria",
-        "summary": "Electoral transparency remains a major opposition concern, particularly following demands for greater scrutiny of the voter register.",
-        "image": "assets/leaders/atiku.jpg"
+        "role": "Opposition political figure",
+        "image": "assets/leaders/atiku.jpg",
+        "summary": "Electoral transparency and opposition political discussions remain important subjects in the lead-up to the 2027 elections."
       },
       {
         "name": "Peter Obi",
         "country": "Nigeria",
-        "position": "Former presidential candidate",
-        "summary": "Opposition strategy and political alignment remain important issues ahead of the 2027 elections.",
-        "image": "assets/leaders/obi.jpg"
+        "role": "Opposition political figure",
+        "image": "assets/leaders/obi.jpg",
+        "summary": "His political position and possible opposition cooperation remain subjects of national political discussion."
       },
       {
         "name": "Volodymyr Zelenskyy",
         "country": "Ukraine",
-        "position": "President of Ukraine",
-        "summary": "Ukraine continues to seek timely delivery of international air-defence support.",
-        "image": "assets/leaders/zelensky.jpg"
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "country": "European Union",
-        "position": "President of the European Commission",
-        "summary": "The EU Commission president is advancing closer economic and strategic cooperation with Canada.",
-        "image": "assets/leaders/von-der-leyen.jpg"
-      },
-      {
-        "name": "Vladimir Putin",
-        "country": "Russia",
-        "position": "President of Russia",
-        "summary": "Russia's war in Ukraine continues to shape international diplomacy and European security.",
-        "image": "assets/leaders/putin.jpg"
+        "role": "President",
+        "image": "",
+        "summary": "Ukraine continues to seek international military assistance and diplomatic support amid the continuing war."
       },
       {
         "name": "Xi Jinping",
         "country": "China",
-        "position": "President of China",
-        "summary": "China's international economic and security position remains influential.",
-        "image": "assets/leaders/xi.jpg"
+        "role": "President",
+        "image": "assets/leaders/xi.jpg",
+        "summary": "China's economic and technological influence remains central to international trade and security discussions."
+      },
+      {
+        "name": "Vladimir Putin",
+        "country": "Russia",
+        "role": "President",
+        "image": "assets/leaders/putin.jpg",
+        "summary": "The war in Ukraine continues to shape Russia's international relations and European security."
+      },
+      {
+        "name": "Ursula von der Leyen",
+        "country": "European Union",
+        "role": "President of the European Commission",
+        "image": "assets/leaders/von-der-leyen.jpg",
+        "summary": "The European Commission is pursuing closer cooperation with Canada and other international partners."
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria 2027 – Candidate lists and electoral transparency",
-      "content": "INEC's updated candidate information is attracting attention as political parties and candidates prepare for the 2027 elections. The commission's handling of nominations, corrections and disputes will be important to public confidence.",
-      "image": "",
-      "sources": [
-        {
-          "name": "INEC",
-          "url": "https://www.inecnigeria.org/"
-        }
-      ]
+      "title": "Nigeria 2027: Voters' register verification",
+      "content": "INEC's planned publication of the final voters' register on 15 December 2026 will be an important milestone. Attention remains on the correction of questionable entries and transparent access to the verification process.",
+      "image": ""
+    },
+    {
+      "title": "Nigeria 2027: Election timetable",
+      "content": "The presidential and National Assembly elections are scheduled for 16 January 2027. Governorship and state assembly elections are scheduled for 6 February 2027. Readers should consult INEC for any official timetable changes.",
+      "image": ""
     }
   ],
   "breakingHistory": [
     {
-      "date": "31 October 2026",
-      "title": "Africa hosts its first Olympic sporting event",
-      "content": "The opening of the Youth Olympic Games in Senegal marks a historic milestone for the Olympic Movement and African sport.",
-      "image": ""
+      "date": "2026-11-01",
+      "title": "Nigeria's public-health surveillance following Ebola reports",
+      "content": "Two additional suspected cases reportedly tested negative, while monitoring continued following an earlier confirmed imported case.",
+      "category": "Health"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Federal panel findings on deaths of detained miners",
+      "content": "The reported findings have renewed national attention on detention conditions and institutional accountability.",
+      "category": "Human Rights"
     }
   ],
   "thoughtForToday": {
-    "title": "Thought for Tonight",
-    "text": "History remembers leaders not for the promises they made, but for the lives they improved and the institutions they strengthened.",
+    "quote": "Accountability is not a weakness in leadership. It is the foundation of public trust.",
     "author": "RadiantWaves Media"
   },
   "todaysBigQuestion": {
-    "title": "Today's Big Question",
-    "question": "When a country faces multiple crises at the same time, what should its government prioritise first: public health, economic stability, national security or democratic accountability? Can a government succeed if it neglects any one of these responsibilities?",
-    "callToAction": "Join the conversation. Share your perspective respectfully."
+    "question": "Should public officials and government institutions be held personally accountable when failures in their systems lead to loss of life, electoral irregularities or serious financial damage?",
+    "followUp": "Where should the line between institutional responsibility and individual accountability be drawn?",
+    "invitation": "Join the conversation. Share your perspective respectfully."
   },
   "sponsoredAdverts": [
     {
-      "title": "Sponsored Feature",
+      "title": "Discover Quality Spices",
       "image": "assets/spices.jpeg",
-      "description": "Discover the advertised product. Contact the advertiser for further information."
+      "description": "Explore our featured spices and products.",
+      "url": ""
     },
     {
-      "title": "Sponsored Feature",
+      "title": "Stonebreaker Product Feature",
       "image": "assets/stonebreaker.jpeg",
-      "description": "Discover the advertised product. Contact the advertiser for further information."
+      "description": "See the featured product information.",
+      "url": ""
     }
   ],
   "contact": {
@@ -823,12 +681,22 @@
     "youtube": "https://www.youtube.com/@RADIANTWAVE=wv6",
     "x": "https://x.com/Radiant13528995"
   },
-  "archives": [],
+  "archives": [
+    {
+      "date": "2026-11-01",
+      "edition": "Morning",
+      "title": "Morning News & Global Update"
+    }
+  ],
   "editorialStandards": {
-    "verification": "RadiantWaves Media distinguishes confirmed information from allegations, official claims and developing reports.",
-    "attribution": "Claims are attributed to the relevant officials, institutions or media organisations wherever possible.",
-    "corrections": "Material errors will be corrected when reliable information becomes available.",
-    "independence": "Editorial coverage is separate from sponsored advertising.",
-    "originality": "Articles are independently written and do not reproduce source material verbatim."
+    "principles": [
+      "Independent reporting",
+      "Balanced analysis",
+      "Accuracy and verification",
+      "Clear attribution",
+      "Public-interest journalism",
+      "Accountability and transparency"
+    ],
+    "verificationNote": "Suspected Ebola cases are not to be described as confirmed infections. Conflicting protest attendance estimates must be attributed to their respective sources. Allegations of responsibility for security incidents must not be presented as established facts without evidence. Economic projections should be distinguished from official final statistics. Developing stories will be updated when reliable confirmation becomes available."
   }
 }

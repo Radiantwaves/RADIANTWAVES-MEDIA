@@ -1,7 +1,7 @@
 {
-  "edition": "Night",
-  "date": "2026-11-01",
-  "editionTime": "Night",
+  "edition": "Morning",
+  "date": "2026-11-02",
+  "editionTime": "Morning",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "GATEWAY TO YOUR WORLD NEWS — CONNECTING YOU TO THE WORLD",
@@ -12,279 +12,273 @@
     "whatsapp": "+33 6 21 61 31 49"
   },
   "hero": {
-    "title": "Night News & Global Update",
-    "subtitle": "The day's most important developments, explained with context and accountability.",
+    "title": "Morning News & Global Update",
+    "subtitle": "The latest developments from Nigeria, Africa and the world, reported with context, verification and accountability.",
     "image": "",
     "video": "",
-    "date": "Sunday, 1 November 2026",
-    "editionTime": "20:24 France time | 19:24 UTC"
+    "date": "Monday, 2 November 2026",
+    "editionTime": "Morning | France time"
   },
-  "headline": "Global developments: Nigeria's election register under scrutiny, Ebola alert update, Gaza conflict, international diplomacy and economic developments.",
-  "intro": "Good evening. This RadiantWaves Media global briefing brings together important developments from Nigeria, Africa and around the world. We distinguish confirmed information from allegations, official statements and developments that remain unresolved.",
-  "morningSummary": "Sunday's developments include an update from Nigeria's health authorities on suspected Ebola cases in Adamawa, renewed questions about voter-register integrity ahead of the 2027 elections, political and economic developments, continuing conflict in the Middle East and Ukraine, and international election and diplomatic developments.",
-  "editorialNote": "News desk cut-off: 20:24 France time | 19:24 UTC. Reports are attributed to the organisations and individuals making them. Where investigations, election counts or diplomatic discussions remain ongoing, no outcome is presented as settled.",
+  "headline": "Global developments: Spain investigates deadly train collision, Bulgaria's Yotova wins presidential runoff, Ukraine faces cyberattacks and renewed fighting, and Nigeria addresses public-health and accountability concerns.",
+  "intro": "Good morning. Welcome to the RadiantWaves Media global morning briefing for Monday, 2 November 2026. Today's coverage includes major developments in Europe, the Middle East, Ukraine, the United States and Africa, alongside important Nigerian public-health, policing and civil-service updates. We distinguish official statements from allegations, preliminary results and claims that have not been independently verified.",
+  "morningSummary": "Spain continues identifying victims of a deadly high-speed train collision. Bulgaria's Iliana Yotova has won the presidential runoff according to preliminary results, with her opponent conceding. Ukraine reports a cyberattack on its public air-raid alert application as a temporary local ceasefire expires and civilians are evacuated. Iran's military has claimed that two tankers struck mines in the Strait of Hormuz, a report not independently verified. In Nigeria, the NCDC says two suspected Ebola cases in Adamawa tested negative, while police have recovered a vehicle allegedly stolen from a retired professor's residence. Mauritania has rescued 134 migrants attempting to reach the Canary Islands.",
+  "editorialNote": "News desk: Monday, 2 November 2026. This edition reflects reports available at the morning publication cut-off. Preliminary election figures are not presented as final certified results. Claims made by parties to armed conflicts are attributed, and allegations concerning criminal investigations are not treated as convictions.",
   "breaking": [
     {
-      "title": "Nigeria: Adamawa suspected Ebola cases test negative",
-      "summary": "The Nigeria Centre for Disease Control and Prevention says samples from two suspected cases in Adamawa State tested negative after two rounds of laboratory testing. Nigeria's previously confirmed case remains a separate matter.",
-      "category": "Health",
+      "title": "Ukraine: False nuclear and chemical warnings follow cyberattack on public alert app",
+      "summary": "Ukraine's Air Force says its public air-raid alert application was hacked and briefly displayed false warnings. Officials said there was no radiation threat and urged the public to follow verified emergency channels.",
+      "category": "Cybersecurity | Ukraine",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/nov/02/ukraine-war-briefing-kyiv-says-air-raid-warning-app-likely-hacked-after-users-receive-false-alerts"
+        }
+      ]
+    },
+    {
+      "title": "Bulgaria: Iliana Yotova wins presidential runoff in preliminary results",
+      "summary": "Preliminary figures put Yotova comfortably ahead of Andrey Gyurov, who has conceded defeat. Official certification remains the formal conclusion of the election process.",
+      "category": "Europe | Elections",
+      "image": "assets/news/bulgaria-election.jpg",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        },
+        {
+          "name": "RTE",
+          "url": "https://www.rte.ie/news/2026/1102/1597575-bulgaria-runoff/"
+        }
+      ]
+    },
+    {
+      "title": "Strait of Hormuz: Iran claims two tankers struck mines",
+      "summary": "Iran's Revolutionary Guard Navy says two oil tankers exploded after striking mines while using what it described as an unauthorised route. The claim has not been independently verified.",
+      "category": "Middle East | Shipping",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+        }
+      ]
+    },
+    {
+      "title": "Nigeria: NCDC says Adamawa suspected Ebola cases tested negative",
+      "summary": "The NCDC says samples from two suspected cases in Yola tested negative after two rounds of laboratory testing. The previously confirmed FCT case remains separate.",
+      "category": "Nigeria | Public Health",
       "image": "assets/news/nigeria-public-health.jpg",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
-        },
-        {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/2026/11/01/ebola-suspected-cases-in-adamawa-tested-negative-says-ncdc/"
+          "name": "Nigeria Centre for Disease Control and Prevention",
+          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
         }
       ]
     },
     {
-      "title": "Nigeria: Questions raised over voter-register records",
-      "summary": "INEC is reviewing questionable records and suspected AI-generated photographs identified during the public display of the preliminary voter register. SERAP has called for an independent investigation.",
-      "category": "Nigeria Politics",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "Mauritania rescues 134 migrants attempting to reach the Canary Islands",
+      "summary": "The Mauritanian navy rescued 118 men, 14 women and two children from a boat travelling towards Spain's Canary Islands, according to the military statement cited by AFP.",
+      "category": "Africa | Migration",
+      "image": "",
       "sources": [
         {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/"
-        },
-        {
-          "name": "SERAP",
-          "url": "https://serap-nigeria.org/"
-        }
-      ]
-    },
-    {
-      "title": "Gaza: New deaths reported amid continuing ceasefire tensions",
-      "summary": "Reuters reported that at least eight Palestinians were killed in Israeli strikes on Sunday, citing medical sources and the Hamas-run interior ministry. Israel's military said it had targeted militants in Khan Younis.",
-      "category": "Middle East",
-      "image": "assets/news/gaza-update-nov-2026.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/"
+          "name": "AFP",
+          "url": "https://marine-oceans.com/actualites/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie/"
         }
       ]
     }
   ],
   "featured": {
-    "title": "Nigeria's 2027 elections: Voter-register integrity becomes a central public concern",
-    "category": "Nigeria | Democracy",
-    "summary": "The accuracy and security of the voter register are essential to public confidence in the 2027 general election. INEC says it is reviewing questionable records and suspected AI-generated photographs identified during the public display of the preliminary register. SERAP has called for an independent investigation into possible data-protection breaches.",
-    "content": "The credibility of an election begins long before polling day. It depends on the accuracy of the voter register, the transparency of the registration process and the ability of citizens to challenge errors through fair procedures.\n\nNigeria's electoral process is facing renewed scrutiny following reports of questionable records and suspected AI-generated photographs in the preliminary voter register. INEC has acknowledged that issues were identified during the public display and says it is reviewing the matter and taking corrective action before the final register is certified.\n\nThe Socio-Economic Rights and Accountability Project has called for an independent investigation. It wants the relevant authorities to examine whether personal information was unlawfully accessed or altered and whether data-protection rules were breached.\n\nThese concerns deserve transparent examination. However, the reported irregularities should not be treated as proof that the entire voter register has been manipulated. The number of affected records, the nature of the irregularities and any responsibility for them must be established through evidence.\n\nFor Nigeria's democratic institutions, the priority should be clear: investigate credible concerns, publish findings, correct errors and ensure that eligible citizens are not unfairly excluded.",
-    "image": "assets/news/inec-voter-registration.jpg",
+    "title": "Ukraine's emergency alert system targeted as false warnings spread during wartime",
+    "category": "World | Cybersecurity",
+    "summary": "A cyberattack on Ukraine's public air-raid alert application briefly generated false warnings about nuclear and chemical threats. The incident highlights the risks of disrupting public information systems during an active war.",
+    "content": "Ukraine's Air Force has reported that the country's public air-raid alert application was compromised, briefly displaying false warnings about nuclear and chemical threats, street fighting and an alleged deployment of Russia's Oreshnik missile.\n\nThe Air Force said there was no radiation threat and urged residents to remain calm and follow its official communications. Ukraine's Ministry for Digital Transformation said the application had temporarily stopped operating, while other warning channels and air-raid sirens remained available.\n\nThe incident was followed by a separate announcement from Russia's Emergencies Ministry that its own mobile application had suffered a cyberattack which spread false information. It is not yet clear whether the two incidents were connected.\n\nThe timing is particularly sensitive. Ukraine remains exposed to missile and drone attacks, and residents depend on reliable warnings to make decisions about shelter and personal safety.\n\nA false emergency alert can cause panic, divert attention from genuine threats and undermine public confidence in official communications. Governments therefore need resilient systems, alternative warning channels and rapid public clarification when digital services are disrupted.\n\nUkraine has blamed hostile interference, but responsibility should be attributed to the authorities making that assessment unless independently established. The incident is a reminder that cybersecurity is also a matter of public safety.",
+    "image": "",
     "sources": [
       {
-        "name": "Channels Television",
-        "url": "https://www.channelstv.com/"
+        "name": "Reuters",
+        "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
       },
       {
-        "name": "SERAP",
-        "url": "https://serap-nigeria.org/"
+        "name": "The Guardian",
+        "url": "https://www.theguardian.com/world/2026/nov/02/ukraine-war-briefing-kyiv-says-air-raid-warning-app-likely-hacked-after-users-receive-false-alerts"
       }
     ]
   },
   "topStories": [
     {
-      "title": "Adamawa suspected Ebola cases test negative",
-      "category": "Nigeria | Health",
-      "summary": "The NCDC says laboratory samples from two suspected cases in Yola tested negative after two rounds of testing. The individuals had been isolated while health officials conducted investigations and public-health procedures.",
-      "content": "Nigeria's public health authorities have provided an important update following the suspected Ebola alert in Adamawa State. The Nigeria Centre for Disease Control and Prevention says samples from the two individuals identified in Yola tested negative after two rounds of laboratory testing.\n\nThe individuals had been isolated while health officials carried out investigations and public-health procedures. The NCDC says the previously confirmed case in the Federal Capital Territory remains Nigeria's only confirmed case reported so far.\n\nThe result is reassuring, but it does not mean public-health monitoring should stop. Authorities continue to urge Nigerians to rely on official health information and seek medical attention if they experience concerning symptoms, particularly after relevant travel or contact exposure.",
-      "image": "assets/news/nigeria-public-health.jpg",
+      "title": "Spain continues identification of victims after deadly high-speed train collision",
+      "category": "Europe | Transport",
+      "summary": "A collision involving a Renfe train and a stationary Iryo train near Urda has killed at least 68 people, according to Reuters' latest report located for this edition. Authorities are continuing identification work and investigating the circumstances.",
+      "content": "Spanish authorities are continuing the difficult process of identifying victims following a deadly collision involving two high-speed trains near Urda, south of Madrid.\n\nThe collision on the Madrid-Seville line involved a Renfe train striking a stationary Iryo train. Reuters reported at least 68 deaths in its latest report located for this edition, alongside dozens of injured passengers. Other reports have cited different figures as the identification and casualty updates have developed. RadiantWaves Media is therefore using the Reuters figure and will update it when a newer official count is confirmed.\n\nInvestigators are examining how the Renfe service was authorised to continue after a safety-related signal had stopped trains on part of the route. Spain's transport authorities have described a sequence involving a communications or signalling failure, but the full cause remains under investigation.\n\nThe disaster has renewed questions about railway signalling, operational procedures, maintenance and the effectiveness of automatic protection systems.\n\nAuthorities are also working to identify foreign nationals among the victims and notify families. The identification process is essential before nationality totals and individual details can be treated as confirmed.\n\nThis is an update to last week's accident, not a separate new train crash. The investigation will be important for determining what happened and whether safety procedures or operational decisions contributed to the collision.",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
+          "url": "https://www.reuters.com/world/two-high-speed-trains-rear-end-spain-rail-operator-says-2026-10-28/"
         },
         {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/2026/11/01/ebola-suspected-cases-in-adamawa-tested-negative-says-ncdc/"
+          "name": "ABC News",
+          "url": "https://abcnews.com/International/story?id=137633323"
         }
       ]
     },
     {
-      "title": "SERAP calls for independent investigation into Nigeria voter-register concerns",
-      "category": "Nigeria | Elections",
-      "summary": "SERAP wants an independent investigation into suspected AI-generated photographs and questionable records identified in INEC's preliminary voter register.",
-      "content": "Questions about the integrity of Nigeria's voter register have returned to public debate ahead of the 2027 general election.\n\nINEC has acknowledged that questionable registration records and suspected AI-generated photographs were identified during the public display of the preliminary register. The commission says it is reviewing the matter and taking corrective action before the final register is certified.\n\nSERAP has called on President Bola Tinubu to direct an independent investigation and has asked for scrutiny of possible data-protection breaches.\n\nThe concerns require transparent investigation. They do not, by themselves, establish that the entire voter register has been manipulated. The public deserves clear information about the number of affected records, the verification process and any corrective measures taken.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/"
-        },
-        {
-          "name": "SERAP",
-          "url": "https://serap-nigeria.org/"
-        }
-      ]
-    },
-    {
-      "title": "Nigeria Customs seeks stronger cooperation against financial crime",
-      "category": "Nigeria | Security",
-      "summary": "The Nigeria Customs Service is seeking stronger intelligence sharing with security and regulatory agencies to tackle cross-border money laundering, terrorism financing and related financial crimes.",
-      "content": "The Nigeria Customs Service is seeking stronger cooperation with six security and regulatory agencies to tackle cross-border money laundering, terrorism financing and other financial crimes.\n\nThe agencies named in reports include the Economic and Financial Crimes Commission, the National Drug Law Enforcement Agency, the Nigeria Police Force, the Nigeria Financial Intelligence Unit, the Nigeria Immigration Service and the National Counter-Terrorism Centre.\n\nThe engagement reportedly examined ways to improve intelligence sharing, border controls and the detection of suspicious financial transactions.\n\nThe effectiveness of this initiative will depend on whether cooperation produces measurable investigations, prosecutions and disruption of criminal networks. Public reporting on outcomes will be important in assessing its impact.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/"
-        }
-      ]
-    },
-    {
-      "title": "Nigeria's private sector remains in expansion",
-      "category": "Business | Nigeria",
-      "summary": "The Stanbic IBTC Purchasing Managers' Index stood at 55.7 points in October, down from 56.4 in September. A reading above 50 indicates expansion.",
-      "content": "Nigeria's private sector recorded another month of expansion in October, according to the Stanbic IBTC Bank Purchasing Managers' Index.\n\nThe PMI stood at 55.7 points, compared with 56.4 in September. A reading above 50 indicates expansion. The survey points to continued growth in business activity and new orders, although the pace moderated slightly.\n\nThe figures also point to continuing cost pressures, including fuel, transport, food and building materials.\n\nThe data suggests that business activity is expanding, but it should not be confused with proof that household living costs have fallen or that every business is experiencing improved conditions. The challenge for policymakers is to turn economic expansion into more jobs, stronger purchasing power and more affordable essentials.",
-      "image": "assets/news/nigeria-public-health.jpg",
-      "sources": [
-        {
-          "name": "Leadership",
-          "url": "https://leadership.ng/"
-        },
-        {
-          "name": "Stanbic IBTC",
-          "url": "https://www.stanbicibtcbank.com/"
-        }
-      ]
-    },
-    {
-      "title": "INEC says it will not postpone Nigeria's 2027 elections",
-      "category": "Nigeria | Election Watch",
-      "summary": "INEC Chairman Professor Joash Amupitan has said the commission is working to its published timetable and has ruled out shifting the 2027 elections.",
-      "content": "Nigeria's electoral commission has reiterated that preparations for the 2027 general election are proceeding according to its published timetable.\n\nINEC Chairman Professor Joash Amupitan has ruled out postponing the elections. The commission's position comes as public attention focuses on voter registration, the accuracy of the preliminary register and the need for credible election administration.\n\nINEC's statement represents the commission's position on its preparations. Public confidence will also depend on transparent implementation, timely communication and the effective resolution of legitimate complaints.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-rules-out-shifting-2027-polls/"
-        }
-      ]
-    },
-    {
-      "title": "India opposition protests voter-register revisions",
-      "category": "Asia | Democracy",
-      "summary": "Opposition demonstrators in New Delhi called for the resignation of Chief Election Commissioner Gyanesh Kumar over voter-list revisions. The Election Commission rejects claims of political bias.",
-      "content": "Thousands of people joined an opposition-led protest in New Delhi demanding the resignation of Chief Election Commissioner Gyanesh Kumar.\n\nThe demonstration concerns a revision of India's voter lists. Opposition parties allege that more than 130 million names have been removed and argue that the process could disproportionately affect minority communities and voters opposed to the governing BJP.\n\nThe Election Commission rejects claims of political bias. It says the exercise is intended to remove duplicate and ineligible entries and that people wrongly removed can seek re-enrolment.\n\nThe dispute has become a major political issue, raising questions about electoral transparency, citizens' voting rights and public confidence in election administration. The allegations made by opposition parties remain contested and should not be reported as proven wrongdoing.",
-      "image": "assets/news/india-voter-protest.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
-        },
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/cb532b4811eea64c51f61cd4199fb64e"
-        }
-      ]
-    },
-    {
-      "title": "Bulgaria votes in presidential runoff",
+      "title": "Bulgaria: Yotova wins presidential runoff as Gyurov concedes",
       "category": "Europe | Elections",
-      "summary": "Bulgarians voted in a runoff between Iliana Yotova and Andrey Gyurov. Exit polls placed Yotova ahead, but the official count remains decisive.",
-      "content": "Bulgarians went to the polls on Sunday in a presidential runoff between incumbent Iliana Yotova and Andrey Gyurov.\n\nExit polls reported Yotova ahead. However, exit polls are not official election results and may differ from the final count. The election authorities' certified result will determine the winner.\n\nThe contest has attracted attention over Bulgaria's political direction, its relationship with the European Union and Russia, and security concerns linked to the war in Ukraine.",
+      "summary": "Preliminary results give Iliana Yotova a clear lead over Andrey Gyurov. Gyurov has accepted the outcome, while election authorities continue the formal counting and certification process.",
+      "content": "Bulgaria's incumbent President Iliana Yotova has won Sunday's presidential runoff, according to preliminary results and exit-poll estimates reported by several news organisations.\n\nBulgarian National Television reported that, with 52.42 per cent of polling-station protocols processed, Yotova and her running mate Kiril Valchev had received 57.95 per cent, compared with 39.01 per cent for Andrey Gyurov and his running mate Georgi Kandev.\n\nGyurov conceded defeat, saying his side accepted the results. The preliminary figures indicate a clear margin, although the official certification process remains important.\n\nThe contest has attracted attention because of its implications for Bulgaria's domestic political balance and foreign-policy direction. Yotova has advocated diplomacy in relation to the war in Ukraine and opposed additional military support, while Gyurov's campaign took a more pro-Western position.\n\nThe result is also significant for the political grouping associated with former president Rumen Radev. However, the presidency's constitutional role and the wider parliamentary balance should be considered when assessing what the result may mean for government policy.\n\nYotova's victory should be reported as a result supported by preliminary figures and concession, with final certification treated separately.",
       "image": "assets/news/bulgaria-election.jpg",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        },
+        {
+          "name": "RTE",
+          "url": "https://www.rte.ie/news/2026/1102/1597575-bulgaria-runoff/"
+        },
+        {
+          "name": "Anadolu Agency",
+          "url": "https://mobil.aa.com.tr/en/europe/bulgaria-s-yotova-wins-presidential-runoff-with-clear-lead-in-exit-polls/4108180"
+        }
+      ]
+    },
+    {
+      "title": "Ukraine evacuates civilians as temporary Oleshky ceasefire expires",
+      "category": "Europe | War and Humanitarian Affairs",
+      "summary": "Ukraine's military says 167 people were evacuated from threatened areas in the Kherson region as a six-day local ceasefire around Oleshky came to an end.",
+      "content": "Ukraine's military says it evacuated 167 civilians from threatened areas in the southern Kherson region as a temporary local ceasefire around the Russian-controlled town of Oleshky expired.\n\nThe six-day arrangement had allowed humanitarian supplies and evacuation operations in and around the area. The evacuation effort was intended to move residents away from locations where renewed fighting could place them at risk.\n\nThe arrangement was limited in geography and purpose. It did not amount to a general ceasefire or a peace agreement between Russia and Ukraine.\n\nThe end of the local pause raises concerns about the safety of civilians who remain in areas close to the front line. Ukrainian officials warned residents to remain alert to possible renewed attacks.\n\nTemporary humanitarian arrangements can save lives, but they remain vulnerable when the wider conflict continues. The priority for civilians is access to safe evacuation routes, reliable warnings and humanitarian assistance.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.investing.com/news/world-news/ukraine-evacuates-civilians-from-parts-of-kherson-region-as-expiry-of-oleshky-ceasefire-nears-4989775"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/nov/02/ukraine-war-briefing-kyiv-says-air-raid-warning-app-likely-hacked-after-users-receive-false-alerts"
+        }
+      ]
+    },
+    {
+      "title": "Iran says two oil tankers struck mines in the Strait of Hormuz",
+      "category": "Middle East | Energy and Security",
+      "summary": "Iran's IRGC Navy says two tankers exploded after hitting mines while using a route it described as unauthorised. Independent confirmation and details about the vessels were not available in the reports reviewed.",
+      "content": "Iran's Islamic Revolutionary Guard Corps Navy has said that two oil tankers exploded after striking mines while travelling through what it described as an unauthorised route in the Strait of Hormuz.\n\nThe statement was carried by Iranian state media and reported by Reuters. Iran has imposed restrictions on vessel movements through the strategic waterway and says it is seeking to enforce those restrictions.\n\nThe claim has not been independently verified in the reporting available for this edition. Details about the tankers, their operators, the extent of any damage and possible casualties were not independently established.\n\nThe Strait of Hormuz is one of the world's most important energy shipping routes. A sustained disruption could affect oil and gas shipments, maritime insurance, freight costs and energy prices.\n\nShipping companies and governments will be watching for independent confirmation, information from the vessels' operators and any response from maritime authorities.\n\nUntil more evidence becomes available, the reported explosions should be treated as an Iranian military claim rather than an independently established account.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+        }
+      ]
+    },
+    {
+      "title": "US midterm campaign enters its final full day",
+      "category": "United States | Elections",
+      "summary": "Republicans and Democrats are making final appeals before Tuesday's congressional elections. The vote will determine control of the House and Senate, but the outcome remains uncertain.",
+      "content": "The United States is approaching its midterm elections on Tuesday, 3 November, with both major parties making their final efforts to mobilise voters.\n\nPresident Donald Trump has campaigned for Republican candidates, including appearances in Iowa and Kansas. Republicans are seeking to defend their congressional position, while Democrats are hoping to gain seats and increase their influence in Washington.\n\nThe campaign has focused on the economy, tariffs, immigration, public services and the administration's foreign-policy decisions. The result will determine control of the House of Representatives and the Senate, shaping the legislative environment for the remainder of the presidential term.\n\nMore than 54 million ballots had reportedly been cast before election day, according to Associated Press reporting cited in the supplied briefing. Early voting totals do not determine the final outcome, and turnout patterns vary between states.\n\nA change in control of either chamber could affect congressional investigations, budget negotiations, trade policy and the president's ability to advance legislation.\n\nThe election is scheduled for Tuesday. No party's victory should be presented as certain before votes are counted and results are declared.",
+      "image": "assets/leaders/trump.jpg",
       "sources": [
         {
           "name": "Associated Press",
           "url": "https://apnews.com/"
         },
         {
-          "name": "Radio Bulgaria",
-          "url": "https://bnrnews.bg/en/post/547988/bulgarian-presidential-election-results-with-9994percent-of-votes-counted"
-        }
-      ]
-    },
-    {
-      "title": "Gaza: Deaths reported in Israeli strikes",
-      "category": "Middle East | Conflict",
-      "summary": "Reuters reported at least eight Palestinians killed in Israeli strikes, citing medical sources and the Hamas-run interior ministry. Israel's military said it targeted militants in Khan Younis.",
-      "content": "At least eight Palestinians were reported killed in Israeli strikes in the Gaza Strip on Sunday, according to medical sources and the Hamas-run interior ministry cited by Reuters.\n\nThe reported deaths included people killed in an airstrike in Gaza City and five police officers in a separate strike in western Khan Younis. Israel's military said it had targeted militants in Khan Younis. It had not immediately commented on the Gaza City attack in the Reuters report.\n\nThe incident comes amid continuing disputes over the implementation of the ceasefire and stalled negotiations concerning security arrangements, reconstruction and the future of Gaza.\n\nCasualty figures and accounts of the incidents are attributed to the sources cited. The parties continue to dispute responsibility and the circumstances of attacks.",
-      "image": "assets/news/gaza-update-nov-2026.jpg",
-      "sources": [
-        {
           "name": "Reuters",
           "url": "https://www.reuters.com/"
         }
       ]
     },
     {
-      "title": "Somalia: UN political mission formally closes",
-      "category": "Africa | United Nations",
-      "summary": "The United Nations political mission in Somalia concluded its mandate after a two-year transition. The closure does not mean the UN is leaving Somalia.",
-      "content": "The United Nations political mission in Somalia formally closed on 31 October after a transition process that transferred responsibilities to Somali institutions, UN agencies and other international structures.\n\nThe closure marks the end of more than three decades of UN political mission engagement in the country. It does not mean that the United Nations is leaving Somalia. Humanitarian, development and security-related support continues through other UN entities and arrangements.\n\nSomalia continues to face significant political and security challenges, including the threat posed by al-Shabaab. The transition raises questions about how political support and institutional cooperation will be maintained.",
-      "image": "assets/news/somalia-un-mission.jpg",
+      "title": "Anambra police recover car allegedly stolen from retired professor",
+      "category": "Nigeria | Crime and Policing",
+      "summary": "Police say two suspects have been arrested and a Toyota Camry recovered after it was reportedly stolen from the residence of a 90-year-old retired University of Nigeria professor. A third suspect is being sought.",
+      "content": "The Anambra State Police Command says it has arrested two suspects and recovered a Toyota Camry reportedly stolen from the residence of a 90-year-old retired professor of the University of Nigeria, Nsukka.\n\nAccording to a report by The Punch, the recovery followed an alert from Federal Road Safety Corps personnel who detected irregularities during a vehicle-registration verification exercise.\n\nPolice identified the arrested suspects as Umeh Thankgod, 32, and Sunday Ozor, 24. The police statement said preliminary investigations indicated that the vehicle may have been stolen with the assistance of the professor's gateman, identified as Bassey Etim, who is being sought.\n\nThe police investigation remains ongoing. The allegations against the arrested suspects and the person being sought have not been established by a court.\n\nThe case highlights the role of vehicle-document checks and cooperation between road-safety personnel and the police in identifying suspected stolen vehicles. Further updates should be based on police statements and court proceedings.",
+      "image": "",
       "sources": [
         {
-          "name": "United Nations",
-          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+          "name": "The Punch",
+          "url": "https://punchng.com/police-hunt-gateman-over-anambra-professors-stolen-car/"
+        }
+      ]
+    },
+    {
+      "title": "Nigeria's Head of Service says civil-service reforms target corruption and inefficiency",
+      "category": "Nigeria | Governance",
+      "summary": "Head of Service Olumuyiwa Enitan says the Federal Civil Service is undergoing reforms aimed at improving productivity, integrity and citizen-centred service delivery.",
+      "content": "Nigeria's Head of the Civil Service of the Federation, Olumuyiwa Enitan, says the Federal Civil Service is undergoing reforms intended to make public institutions more efficient, productive, incorruptible and responsive to citizens.\n\nThe statement was made at a ceremony marking the completion of the tenure of Professor Kayode Adebowale as Vice-Chancellor of the University of Ibadan.\n\nThe reform agenda comes amid long-standing public concerns about administrative delays, procurement practices, service delivery and the effective use of government resources.\n\nThe announcement sets out an ambition, but the real test will be implementation. Citizens will want to see whether reforms reduce delays, improve access to public services, strengthen accountability and produce measurable improvements in the performance of government departments.\n\nPublic-sector reform should be assessed through outcomes rather than policy statements alone. Transparent reporting on targets, implementation and results will be important in determining whether the changes make a practical difference.",
+      "image": "",
+      "sources": [
+        {
+          "name": "The Punch",
+          "url": "https://punchng.com/civil-service-reforms-target-corruption-inefficiency-hos/"
+        }
+      ]
+    },
+    {
+      "title": "Mauritania rescues 134 migrants bound for the Canary Islands",
+      "category": "Africa | Migration and Humanitarian Affairs",
+      "summary": "The navy rescued 134 people, including women and children, from a boat travelling towards the Canary Islands. Their nationalities and detailed medical condition were not disclosed.",
+      "content": "Mauritania's navy has rescued 134 people from a boat attempting to reach Spain's Canary Islands, according to a statement by the Mauritanian military cited by Agence France-Presse.\n\nThe group included 118 men, 14 women and two children. The rescue took place off the coast near Nouadhibou, a major port city in north-western Mauritania.\n\nThe military did not disclose the nationalities of those rescued or provide detailed information about their health. The operation was described as part of efforts to save lives at sea, combat migrant smuggling and improve maritime security.\n\nThe Atlantic route towards the Canary Islands remains dangerous. People attempting the crossing may travel in overcrowded and poorly equipped boats, exposing them to the risk of drowning, dehydration and exploitation by trafficking networks.\n\nThe rescue highlights the need for regional cooperation, effective action against criminal smuggling networks and safer, lawful migration pathways. It also underlines the importance of humanitarian assistance for people rescued at sea.",
+      "image": "",
+      "sources": [
+        {
+          "name": "AFP",
+          "url": "https://marine-oceans.com/actualites/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie/"
         },
         {
-          "name": "United Nations Transition Mission in Somalia",
-          "url": "https://untmis.unmissions.org/en/node/137227"
+          "name": "The News International",
+          "url": "https://www.thenews.pk/print/1446384-more-than-130-migrants-rescued-off-mauritania"
         }
       ]
     },
     {
-      "title": "Bangladesh forms wage board amid garment-worker protests",
-      "category": "Asia | Labour",
-      "summary": "A six-member wage board has been formed to review garment workers' pay as protests continue over wages and working conditions.",
-      "content": "Bangladesh has formed a six-member wage board to review pay for garment workers amid continuing protests.\n\nWorkers have demanded a monthly minimum wage of 30,000 taka, compared with the current 12,500 taka figure reported in coverage of the dispute. Protests have continued, with reports of clashes, factory closures and traffic disruption.\n\nThe formation of a wage board creates a formal process for reviewing pay, but it does not mean that an agreement has been reached or that protests have ended. The outcome will matter to workers, factory owners and Bangladesh's major export industry.",
-      "image": "assets/news/bangladesh-garment-workers.jpg",
-      "sources": [
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/amp/news/2026/11/1/bangladesh-forms-wage-board-amid-garment-worker-protests"
-        },
-        {
-          "name": "Dhaka Tribune",
-          "url": "https://www.dhakatribune.com/bangladesh/423421/govt-forms-six-member-wage-board-for-garment"
-        }
-      ]
-    },
-    {
-      "title": "Germany: Youth demonstrations followed by unrest in some cities",
-      "category": "Europe | Society",
-      "summary": "Large youth-led demonstrations were mostly peaceful, while later violence and looting were reported in some locations, including Frankfurt.",
-      "content": "Germany experienced large demonstrations involving young people and campaigners concerned about education, conscription and wider social issues.\n\nReports from German media described many peaceful participants, alongside later violent incidents in several cities. Frankfurt was among the locations where shops were reportedly looted and police faced confrontations.\n\nIt is important to distinguish between peaceful demonstrators and individuals involved in criminal acts. The actions of those responsible for violence should not automatically be attributed to everyone who attended the demonstrations.",
-      "image": "assets/news/bulgaria-election.jpg",
-      "sources": [
-        {
-          "name": "Tagesschau",
-          "url": "https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html"
-        }
-      ]
-    },
-    {
-      "title": "Trump's Wall Street Journal defamation case dismissed",
-      "category": "United States | Courts",
-      "summary": "A federal judge dismissed President Donald Trump's multibillion-dollar defamation lawsuit against The Wall Street Journal and Rupert Murdoch. The ruling concerned the legal standard for the claim.",
-      "content": "A US federal judge has dismissed President Donald Trump's multibillion-dollar defamation lawsuit against The Wall Street Journal and Rupert Murdoch over a report concerning Trump's alleged links to Jeffrey Epstein.\n\nThe judge ruled that the complaint failed to sufficiently establish the actual-malice standard required for a public figure's defamation claim. The dismissal is a court development; it is not a finding that every disputed detail in the original reporting has been independently established.\n\nThe legal position may develop further if an appeal or other court action follows.",
-      "image": "assets/leaders/trump.jpg",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f27c9fa832044f2f9edea9b1fbbba061"
-        },
-        {
-          "name": "The Washington Post",
-          "url": "https://www.washingtonpost.com/national/2026/10/31/trump-media-lawsuit-wall-street-journal-dismissed/658c1a84-d565-11f1-9931-2a41b76fc976_story"
-        }
-      ]
-    },
-    {
-      "title": "BYD reports continued sales growth",
-      "category": "Business | Technology",
-      "summary": "China's BYD reported October sales growth, with overseas shipments rising sharply as competition in the global electric-vehicle market continues.",
-      "content": "Chinese electric-vehicle manufacturer BYD reported another period of sales growth in October, supported by overseas shipments.\n\nThe development comes as global vehicle manufacturers compete over electric mobility, battery technology, pricing and access to international markets.\n\nThe growth of Chinese electric-vehicle exports continues to influence competition in Europe and other markets, where governments are balancing affordable transport, industrial policy and concerns about trade fairness.",
-      "image": "assets/news/byd-electric-vehicles.jpg",
+      "title": "Serbia marks anniversary of railway disaster that fuelled anti-corruption movement",
+      "category": "Europe | Politics and Accountability",
+      "summary": "Tens of thousands gathered in Novi Sad to remember the 16 people killed in a station roof collapse. The disaster became a focus of protests demanding accountability and political change.",
+      "content": "Tens of thousands of people gathered at Novi Sad railway station on Sunday to mark two years since a concrete awning collapsed, killing 16 people.\n\nThe disaster became a turning point in Serbia's political debate. Student-led demonstrations and wider protests demanded accountability, transparency and action against corruption. Protesters argued that failures surrounding public infrastructure projects reflected deeper problems in public administration.\n\nReuters reported that a student-led political bloc won a parliamentary election held on 25 October, defeating the party associated with Aleksandar Vučić. Preliminary results gave the student-led bloc a majority of seats, while the outgoing political leadership acknowledged the defeat.\n\nThe anniversary gathering connected remembrance of the victims with continuing demands for accountability. The legal proceedings relating to the collapse remain an important part of the public debate.\n\nThe case illustrates how a public tragedy can become a national political issue when citizens believe institutions have failed to provide answers. The legal responsibility of individuals must nevertheless be established through due process.",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/"
+          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/serbias-new-leaders-face-host-tough-challenges-2026-10-26/"
+        }
+      ]
+    },
+    {
+      "title": "US reportedly supports proposal to restore Russian gas exports to Europe through Ukraine",
+      "category": "Business | Energy and Geopolitics",
+      "summary": "The Wall Street Journal reports that Washington is supporting discussions about restarting Russian gas exports to Europe through Ukrainian pipelines. Reuters says it could not immediately verify the report.",
+      "content": "A report by The Wall Street Journal says the United States is supporting a proposal for Russian natural gas exports to Europe to resume through pipelines crossing Ukraine.\n\nAccording to the newspaper, the proposal forms part of discussions intended to secure an energy ceasefire before winter. The reported idea would have major implications for Europe's energy security, Ukraine's position and relations between Russia and Western governments.\n\nEuropean countries have spent recent years reducing their dependence on Russian energy following Russia's full-scale invasion of Ukraine. Any proposal to restore gas flows would therefore raise difficult political, commercial and security questions.\n\nReuters reported the Wall Street Journal account but said it could not immediately verify the report. No agreement to restart gas deliveries should be inferred from the reported discussions.\n\nThe proposal, if pursued, would require clarity on the role of Ukraine, the terms of any arrangement, sanctions and the security of energy infrastructure. For now, it remains a reported initiative rather than a confirmed policy or resumption of supply.",
+      "image": "assets/europe-energy.jpg",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/energy/us-pushes-restore-russian-gas-sales-europe-via-ukraine-wsj-reports-2026-11-02/"
+        }
+      ]
+    },
+    {
+      "title": "China's robotics industry shifts focus from impressive movement to practical intelligence",
+      "category": "Technology | Artificial Intelligence",
+      "summary": "Chinese robotics companies are investing in embodied artificial intelligence that can help machines understand surroundings, learn tasks and adapt to real working environments.",
+      "content": "China's robotics industry is moving beyond demonstrations of impressive physical movement towards the more difficult challenge of developing machines that can understand their surroundings and perform useful tasks reliably.\n\nReuters reports that Chinese companies are competing to improve embodied artificial intelligence, combining sensors, software, computing power and physical machines. The aim is to help robots interpret their environments, respond to instructions and adapt when conditions change.\n\nThe sector is attracting substantial investment, while companies are gathering training data through human demonstrations, wearable sensors and simulations. However, reliable performance in unfamiliar environments remains a major technical challenge.\n\nRobots are being tested in settings such as factories and pharmacies, but successful demonstrations do not automatically mean that machines are ready to replace human workers across complex workplaces.\n\nFor manufacturers, healthcare providers and logistics companies, the commercial value of robotics will depend on safety, reliability, affordability and the ability to complete practical tasks consistently.\n\nThe global competition is increasingly about what machines can understand and accomplish, rather than how impressive they look in a demonstration.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
         }
       ]
     }
@@ -292,33 +286,55 @@
   "articles": [],
   "worldNews": [
     {
-      "title": "Gaza conflict continues amid ceasefire tensions",
-      "summary": "Reports of new deaths in Gaza underline the fragility of the ceasefire arrangements and the continuing humanitarian concerns.",
-      "image": "assets/news/gaza-update-nov-2026.jpg",
+      "title": "Ukraine's public warning application hit by cyberattack",
+      "summary": "False nuclear and chemical threat messages appeared briefly on Ukraine's air-raid alert application. Officials said there was no radiation threat.",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/"
+          "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
         }
       ]
     },
     {
-      "title": "Somalia enters a new phase after UN political mission closure",
-      "summary": "The end of the UN political mission marks a transition in international engagement, not the end of UN support to Somalia.",
-      "image": "assets/news/somalia-un-mission.jpg",
+      "title": "Iran reports tanker explosions in the Strait of Hormuz",
+      "summary": "Iran's IRGC Navy says two tankers struck mines. Independent verification of the claim was not available in the reporting reviewed.",
+      "image": "",
       "sources": [
         {
-          "name": "United Nations",
-          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+        }
+      ]
+    },
+    {
+      "title": "US midterm elections approach",
+      "summary": "The 3 November congressional elections will determine control of the House and Senate. The final outcome remains uncertain.",
+      "image": "assets/leaders/trump.jpg",
+      "sources": [
+        {
+          "name": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ]
+    },
+    {
+      "title": "Serbia remembers victims of Novi Sad railway disaster",
+      "summary": "The anniversary gathering renewed attention to public accountability and the student-led movement that followed the tragedy.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
         }
       ]
     }
   ],
   "usaNews": [
     {
-      "title": "US midterm campaign enters final week",
-      "summary": "The campaign is approaching Tuesday's vote, which will determine control of Congress. The result should not be assumed before votes are counted.",
-      "content": "The US midterm election campaign has entered its final stretch ahead of Tuesday's vote. The elections will determine control of Congress and are being closely watched as a test of public opinion on President Donald Trump's administration.\n\nIssues including the economy, tariffs, immigration, the Iran conflict and the direction of US foreign policy are featuring prominently in the political debate.\n\nThe outcome could affect the administration's ability to advance its legislative agenda and influence the balance of power in Washington. No result should be assumed before votes are counted.",
+      "title": "US midterm elections: parties make final appeals before Tuesday's vote",
+      "summary": "Republicans and Democrats are campaigning ahead of the 3 November elections, which will determine control of Congress.",
+      "content": "The US midterm campaign is entering its final full day before voters choose members of the House of Representatives and the Senate on Tuesday, 3 November.\n\nPresident Donald Trump has campaigned for Republican candidates, while Democrats are seeking gains in both chambers. The economy, tariffs, immigration and foreign policy remain central issues.\n\nThe outcome will influence the legislative balance in Washington and could affect oversight, budget negotiations and the administration's ability to advance its agenda. The result remains uncertain until votes are counted.",
       "image": "assets/leaders/trump.jpg",
       "sources": [
         {
@@ -332,195 +348,136 @@
       ]
     },
     {
-      "title": "Judge dismisses Trump lawsuit against Wall Street Journal",
-      "summary": "The court dismissed Trump's defamation claim, ruling that the complaint did not sufficiently meet the legal standard for actual malice.",
+      "title": "Trump administration's voter-list effort faces legal scrutiny ahead of midterms",
+      "summary": "Reuters reports that federal efforts to identify suspected non-citizen voters have faced resistance from state officials and court challenges over voter eligibility and the risk of disenfranchising eligible citizens.",
+      "content": "A Reuters report says the Trump administration has compiled lists of suspected non-citizen voters and sent them to election officials in five states. The administration has sought to prevent some ballots from being counted, but state officials have rejected requests and courts have blocked parts of the effort.\n\nNon-citizen voting in federal elections is illegal. However, Reuters reports that reviews have found many people included on the administration's lists are citizens, raising concerns about data matching and the risk of eligible voters being wrongly challenged.\n\nThe issue highlights the tension between election-security efforts and the protection of eligible citizens' voting rights. Any challenge to a voter's eligibility must follow the law and rely on accurate evidence.",
       "image": "assets/leaders/trump.jpg",
       "sources": [
         {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/f27c9fa832044f2f9edea9b1fbbba061"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/legal/government/how-trumps-noncitizen-voter-lists-could-affect-midterms-2026-11-01/"
         }
       ]
     }
   ],
   "europeNews": [
     {
-      "title": "Bulgaria presidential runoff awaits official result",
-      "summary": "Exit polls placed Iliana Yotova ahead of Andrey Gyurov, but the official count will determine the outcome.",
-      "image": "assets/news/bulgaria-election.jpg",
+      "title": "Spain investigates deadly high-speed train collision",
+      "summary": "At least 68 deaths were reported by Reuters in the latest report located for this edition. Investigators are examining signalling and operational decisions.",
+      "image": "",
       "sources": [
         {
-          "name": "Radio Bulgaria",
-          "url": "https://bnrnews.bg/en/post/547988/bulgarian-presidential-election-results-with-9994percent-of-votes-counted"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/two-high-speed-trains-rear-end-spain-rail-operator-says-2026-10-28/"
         }
       ]
     },
     {
-      "title": "Germany youth demonstrations and unrest",
-      "summary": "Large demonstrations were mostly peaceful, although violence and looting were reported in some locations.",
+      "title": "Bulgaria's Iliana Yotova wins presidential runoff",
+      "summary": "Preliminary official figures show Yotova ahead of Andrey Gyurov, who has conceded defeat.",
       "image": "assets/news/bulgaria-election.jpg",
       "sources": [
         {
-          "name": "Tagesschau",
-          "url": "https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html"
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        }
+      ]
+    },
+    {
+      "title": "Germany vows action after Frankfurt unrest",
+      "summary": "German ministers have promised a response after looting and clashes in Frankfurt. Reports say more than 100 police officers were injured.",
+      "image": "",
+      "sources": [
+        {
+          "name": "ABC News Australia",
+          "url": "https://www.abc.net.au/news/2026-11-02/protests-europe-germany-frankfurt/107334774"
+        }
+      ]
+    },
+    {
+      "title": "France assesses aftermath of weekend demonstrations",
+      "summary": "Reports describe largely peaceful marches alongside isolated clashes in several cities. Further demonstrations and disruption remain possible.",
+      "image": "assets/france-protests.jpg",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/france-braces-fresh-unrest-government-vows-tough-response-2026-10-31/"
+        }
+      ]
+    },
+    {
+      "title": "Serbia remembers victims of Novi Sad railway disaster",
+      "summary": "The anniversary of the station collapse has renewed public demands for accountability and institutional reform.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
         }
       ]
     }
   ],
   "africaNews": [
     {
-      "title": "Somalia: UN political mission closes after transition",
-      "summary": "The UN political mission has concluded its mandate, while other UN humanitarian and development operations continue.",
-      "image": "assets/news/somalia-un-mission.jpg",
+      "title": "Mauritania rescues 134 migrants at sea",
+      "summary": "The rescued group included 118 men, 14 women and two children travelling towards the Canary Islands.",
+      "image": "",
       "sources": [
         {
-          "name": "United Nations",
-          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+          "name": "AFP",
+          "url": "https://marine-oceans.com/actualites/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie/"
         }
       ]
     },
     {
-      "title": "Nigeria: Adamawa suspected Ebola samples test negative",
-      "summary": "The NCDC says the two suspected cases tested negative after two rounds of testing.",
+      "title": "Nigeria's Adamawa suspected Ebola cases test negative",
+      "summary": "The NCDC says samples from two suspected cases tested negative after two rounds of laboratory testing.",
       "image": "assets/news/nigeria-public-health.jpg",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
+          "name": "NCDC",
+          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
         }
       ]
     }
   ],
   "nigeriaNews": [
     {
-      "title": "Voter-register integrity draws scrutiny ahead of 2027 elections",
-      "summary": "INEC says it is reviewing questionable records and suspected AI-generated photographs identified during the preliminary register display.",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "NCDC confirms Adamawa suspected Ebola samples tested negative",
+      "summary": "The two suspected cases in Yola tested negative after two rounds of laboratory testing. The previously confirmed FCT case remains separate.",
+      "image": "assets/news/nigeria-public-health.jpg",
       "sources": [
         {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/"
-        },
-        {
-          "name": "SERAP",
-          "url": "https://serap-nigeria.org/"
+          "name": "NCDC",
+          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
         }
       ]
     },
     {
-      "title": "Customs seeks stronger inter-agency cooperation against financial crime",
-      "summary": "The Nigeria Customs Service is seeking improved intelligence sharing and border controls with security and regulatory agencies.",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "Police recover Toyota Camry allegedly stolen from retired professor",
+      "summary": "Anambra police say two suspects have been arrested and a third person is being sought in connection with the alleged theft.",
+      "image": "",
       "sources": [
         {
           "name": "The Punch",
-          "url": "https://punchng.com/"
+          "url": "https://punchng.com/police-hunt-gateman-over-anambra-professors-stolen-car/"
         }
       ]
     },
     {
-      "title": "Nigeria's private sector expands in October",
-      "summary": "The Stanbic IBTC PMI stood at 55.7, indicating expansion, although the pace moderated from September.",
-      "image": "assets/news/nigeria-public-health.jpg",
+      "title": "Civil-service reforms target corruption and inefficiency",
+      "summary": "The Head of Service says reforms are intended to improve productivity, integrity and citizen-centred public services.",
+      "image": "",
       "sources": [
         {
-          "name": "Leadership",
-          "url": "https://leadership.ng/"
-        }
-      ]
-    }
-  ],
-  "asiaNews": [
-    {
-      "title": "India opposition protests voter-list revision",
-      "summary": "Opposition parties allege unfair deletions, while the Election Commission says the process is intended to remove duplicate and ineligible entries.",
-      "image": "assets/news/india-voter-protest.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
+          "name": "The Punch",
+          "url": "https://punchng.com/civil-service-reforms-target-corruption-inefficiency-hos/"
         }
       ]
     },
     {
-      "title": "Bangladesh forms wage board amid garment-worker protests",
-      "summary": "A six-member board will review garment workers' pay as demonstrations continue.",
-      "image": "assets/news/bangladesh-garment-workers.jpg",
-      "sources": [
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/amp/news/2026/11/1/bangladesh-forms-wage-board-amid-garment-worker-protests"
-        }
-      ]
-    }
-  ],
-  "businessNews": [
-    {
-      "title": "Nigeria private sector records another month of expansion",
-      "summary": "The October Stanbic IBTC PMI reading of 55.7 indicates continued expansion, though input-cost pressures remain.",
-      "image": "assets/news/nigeria-public-health.jpg",
-      "sources": [
-        {
-          "name": "Leadership",
-          "url": "https://leadership.ng/"
-        }
-      ]
-    },
-    {
-      "title": "BYD reports continued sales growth",
-      "summary": "The Chinese electric-vehicle maker reported October sales growth, with overseas shipments supporting its performance.",
-      "image": "assets/news/byd-electric-vehicles.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/"
-        }
-      ]
-    },
-    {
-      "title": "Bangladesh garment sector faces wage pressure",
-      "summary": "A new wage board has been established amid worker demands for higher pay and continuing disruption in parts of the industry.",
-      "image": "assets/news/bangladesh-garment-workers.jpg",
-      "sources": [
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/amp/news/2026/11/1/bangladesh-forms-wage-board-amid-garment-worker-protests"
-        }
-      ]
-    }
-  ],
-  "technologyNews": [
-    {
-      "title": "AI-generated photographs raise questions about electoral data security",
-      "summary": "The reported appearance of suspected AI-generated photographs in Nigeria's preliminary voter register highlights the need for robust identity verification and data protection.",
-      "content": "The use of artificial intelligence in image generation is creating new challenges for institutions responsible for verifying identity and maintaining public records.\n\nNigeria's voter-register concerns illustrate why electoral bodies need reliable identity checks, secure data systems and transparent correction procedures. Any suspected irregularity must be investigated carefully, without assuming that every questionable record is fraudulent.\n\nThe wider lesson is that technology can strengthen public administration, but only when supported by accountability, human oversight and clear safeguards.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/"
-        },
-        {
-          "name": "SERAP",
-          "url": "https://serap-nigeria.org/"
-        }
-      ]
-    }
-  ],
-  "editorial": [
-    {
-      "title": "Democracy must be measured by accountability",
-      "summary": "Public trust grows when institutions explain their decisions, investigate credible concerns and accept scrutiny.",
-      "content": "Democracy is not strengthened by political slogans, campaign rallies or promises alone.\n\nIt is strengthened when institutions are transparent, public officials answer legitimate questions and citizens can participate without fear or discrimination.\n\nFrom Nigeria's voter-register concerns to India's electoral dispute, the lesson is clear: confidence in elections depends on public trust in the process.\n\nGovernments and election authorities must investigate credible concerns openly. Opposition parties must support their allegations with evidence. Citizens must be able to question power without being treated as enemies of the state.\n\nA credible electoral process is not a favour granted by those in office. It is a public responsibility.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": []
-    }
-  ],
-  "analysis": [
-    {
-      "title": "The credibility of elections begins before polling day",
-      "summary": "Accurate voter registers, transparent procedures and effective complaints mechanisms are central to public confidence.",
-      "content": "Election credibility is not determined only by the conduct of voting on election day. It also depends on how citizens are registered, how personal data is protected, how errors are corrected and how electoral authorities communicate with the public.\n\nNigeria's current voter-register concerns and India's dispute over voter-list revisions demonstrate why election administration requires transparency and independent scrutiny.\n\nAllegations should be investigated rather than automatically accepted or dismissed. Authorities should publish clear findings, while political actors should provide evidence for claims they make. Citizens must be able to challenge errors through accessible and fair processes.",
+      "title": "Voter-register integrity remains under scrutiny ahead of 2027",
+      "summary": "Questions about questionable records and suspected AI-generated photographs remain part of the public debate. Allegations require transparent investigation.",
       "image": "assets/news/inec-voter-registration.jpg",
       "sources": [
         {
@@ -528,99 +485,214 @@
           "url": "https://www.inecnigeria.org/"
         },
         {
+          "name": "SERAP",
+          "url": "https://serap-nigeria.org/"
+        }
+      ]
+    }
+  ],
+  "asiaNews": [
+    {
+      "title": "China's robotics industry races to develop more capable artificial intelligence",
+      "summary": "Companies are working to improve robots' ability to understand surroundings, learn tasks and operate reliably in real environments.",
+      "image": "",
+      "sources": [
+        {
           "name": "Reuters",
-          "url": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
+          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
+        }
+      ]
+    }
+  ],
+  "businessNews": [
+    {
+      "title": "Potential Russia-Europe gas proposal raises energy-security questions",
+      "summary": "A reported US-backed proposal to restore Russian gas exports through Ukraine remains unverified and is not an announced agreement.",
+      "image": "assets/europe-energy.jpg",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/energy/us-pushes-restore-russian-gas-sales-europe-via-ukraine-wsj-reports-2026-11-02/"
+        }
+      ]
+    },
+    {
+      "title": "Strait of Hormuz tensions raise concerns for global shipping",
+      "summary": "Iran's claim that two tankers struck mines has renewed concern about a strategic energy route. The reported incident has not been independently verified.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+        }
+      ]
+    }
+  ],
+  "technologyNews": [
+    {
+      "title": "Cyberattack disrupts Ukraine's public air-raid alert application",
+      "summary": "False warnings about nuclear and chemical threats appeared briefly. Officials urged residents to rely on verified channels and functioning sirens.",
+      "content": "The cyberattack on Ukraine's public warning application shows how digital disruption can become a direct public-safety issue during wartime.\n\nEmergency alert systems must be secure, resilient and supported by alternative channels. When false messages appear, authorities need to correct them quickly and explain which warnings remain reliable.\n\nThe incident also highlights the need for public awareness about suspicious links and unofficial messages during emergencies.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
+        }
+      ]
+    },
+    {
+      "title": "China's robotics sector focuses on embodied AI",
+      "summary": "The next challenge for robotics companies is making machines understand their surroundings and perform practical tasks safely and reliably.",
+      "content": "Robotics companies are increasingly focusing on embodied artificial intelligence: systems that connect digital reasoning with physical action.\n\nThe challenge is not simply to make a robot walk or perform a rehearsed demonstration. It is to enable the machine to understand unfamiliar surroundings, follow instructions, respond to unexpected events and complete tasks safely.\n\nThe technology could have applications in manufacturing, healthcare, logistics and other sectors, but reliable deployment will require testing, affordability and strong safety standards.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
+        }
+      ]
+    }
+  ],
+  "editorial": [
+    {
+      "title": "The cost of losing public trust",
+      "summary": "Public trust is built when institutions explain decisions, investigate credible concerns and accept responsibility for their actions.",
+      "content": "Public trust is one of the most important assets a government can possess.\n\nWhen citizens believe institutions are transparent, fair and accountable, they are more likely to participate constructively in national development. When trust disappears, even genuine achievements can be met with suspicion.\n\nFrom election administration to public safety, economic reform and the protection of citizens' rights, institutions must be prepared to explain their decisions and accept scrutiny.\n\nAccountability should not depend on whether criticism comes from supporters or opponents. Governments must be judged by evidence, performance and the real conditions experienced by citizens.\n\nPublic institutions do not earn trust by demanding silence. They earn it by showing that questions are welcome, mistakes are corrected and public resources are used responsibly.",
+      "image": "",
+      "sources": []
+    }
+  ],
+  "analysis": [
+    {
+      "title": "Cybersecurity is now part of civilian protection in modern warfare",
+      "summary": "The disruption of Ukraine's public warning application demonstrates how attacks on information systems can create risks for civilians even without a physical strike.",
+      "content": "Modern conflict increasingly involves more than weapons, territory and infrastructure. Digital systems that civilians depend on can also become targets or points of vulnerability.\n\nA public air-raid application is not merely a convenience. It can influence whether people seek shelter, remain indoors or move to safer locations. False warnings can cause panic, while a disabled system can leave people uncertain about where to obtain reliable information.\n\nThe Ukraine incident also illustrates why emergency services need more than one communication channel. Mobile applications, sirens, radio, official websites and local authorities should be capable of supporting one another.\n\nThe responsibility of governments is to secure critical systems, communicate quickly when failures occur and avoid overstating what is known about the source of an attack. Public confidence depends on both technical resilience and honest communication.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
+        }
+      ]
+    },
+    {
+      "title": "Elections require trust before, during and after polling day",
+      "summary": "Bulgaria's runoff and Nigeria's voter-register debate show why transparent procedures and credible official communication matter to democratic confidence.",
+      "content": "Election credibility depends on more than the final announcement of a winner. It requires accurate voter records, clear procedures, accessible complaints mechanisms and transparent counting.\n\nBulgaria's preliminary results and concession illustrate the importance of distinguishing between early figures and formal certification. Nigeria's voter-register concerns underline the need to investigate irregularities without assuming that allegations have already been proved.\n\nElection authorities should publish clear information, correct errors and explain how disputes are handled. Political parties should support their claims with evidence, while citizens should be able to question the process without intimidation.\n\nPublic confidence is strengthened when institutions are open to scrutiny and when the same standards apply regardless of which political party benefits.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        },
+        {
+          "name": "INEC",
+          "url": "https://www.inecnigeria.org/"
         }
       ]
     }
   ],
   "factCheck": [
     {
-      "claim": "The two suspected Ebola cases in Adamawa tested positive.",
-      "verdict": "False according to the NCDC update reported on 1 November 2026.",
-      "explanation": "The NCDC said samples from the two suspected cases tested negative after two rounds of testing. This is separate from Nigeria's previously confirmed case.",
+      "claim": "The two suspected Ebola cases in Adamawa were confirmed as Ebola.",
+      "verdict": "False according to the NCDC statement.",
+      "explanation": "The NCDC said samples from the two suspected cases tested negative after two rounds of laboratory testing. The previously confirmed case in the FCT is separate.",
+      "sources": [
+        {
+          "name": "NCDC",
+          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
+        }
+      ]
+    },
+    {
+      "claim": "Bulgaria's exit polls alone are the certified final election result.",
+      "verdict": "False.",
+      "explanation": "Exit polls are estimates. Preliminary official counts provide more direct information, but the election authorities' final certification remains the formal result.",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        }
+      ]
+    },
+    {
+      "claim": "The reported tanker explosions in the Strait of Hormuz have been independently confirmed.",
+      "verdict": "Not established in the reports reviewed.",
+      "explanation": "The report is based on a statement by Iran's IRGC Navy carried by Iranian state media and reported by Reuters. Independent confirmation and further details were not available in the material reviewed.",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
+          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
         }
       ]
     },
     {
-      "claim": "Nigeria's entire voter register has been proven to be manipulated.",
-      "verdict": "Not established.",
-      "explanation": "INEC has acknowledged questionable records and suspected AI-generated photographs identified during the preliminary register display and says it is reviewing them. This does not establish that the entire register has been manipulated.",
-      "sources": [
-        {
-          "name": "Channels Television",
-          "url": "https://www.channelstv.com/"
-        },
-        {
-          "name": "SERAP",
-          "url": "https://serap-nigeria.org/"
-        }
-      ]
-    },
-    {
-      "claim": "Exit polls are the official result of Bulgaria's presidential runoff.",
+      "claim": "The temporary ceasefire around Oleshky ended the war between Russia and Ukraine.",
       "verdict": "False.",
-      "explanation": "Exit polls are estimates based on voter surveys. The official result must be established by the election authorities' count and certification.",
+      "explanation": "The arrangement was a temporary, local humanitarian pause. It did not establish a general ceasefire or a peace agreement.",
       "sources": [
         {
-          "name": "Radio Bulgaria",
-          "url": "https://bnrnews.bg/en/post/547988/bulgarian-presidential-election-results-with-9994percent-of-votes-counted"
+          "name": "Reuters",
+          "url": "https://www.investing.com/news/world-news/ukraine-evacuates-civilians-from-parts-of-kherson-region-as-expiry-of-oleshky-ceasefire-nears-4989775"
         }
       ]
     },
     {
-      "claim": "The closure of the UN political mission means the United Nations has left Somalia.",
+      "claim": "The United States midterm elections take place on Monday, 2 November.",
       "verdict": "False.",
-      "explanation": "The political mission concluded its mandate, but UN humanitarian, development and other operations continue in Somalia.",
+      "explanation": "The election is scheduled for Tuesday, 3 November 2026. Monday is the final full campaign day.",
       "sources": [
         {
-          "name": "United Nations",
-          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+          "name": "Associated Press",
+          "url": "https://apnews.com/"
         }
       ]
     }
   ],
   "beyondStatement": [
     {
-      "title": "What voter-register transparency means for ordinary citizens",
-      "summary": "A credible voter register is not simply an administrative document. It is the mechanism through which eligible citizens exercise their democratic rights.",
-      "content": "When a voter register contains errors, the consequences can be personal and immediate. An eligible citizen may find their details missing, incorrect or duplicated. That is why transparent verification and accessible correction procedures matter.\n\nElectoral authorities should explain how records are checked, how suspected irregularities are investigated and how citizens can challenge mistakes. Public confidence is strengthened when institutions provide evidence and accept independent scrutiny."
+      "title": "What the Mauritania rescue tells us about migration across the Atlantic",
+      "summary": "The rescue of 134 people highlights the human risks of irregular migration and the importance of safe routes and regional cooperation.",
+      "content": "The rescue of 134 people off Mauritania is more than a maritime-security story. It is also a reminder of the risks faced by people attempting to reach Europe in unsafe boats.\n\nThe reasons behind migration are complex and can include insecurity, unemployment, poverty, family circumstances and hopes for better opportunities. A single rescue does not explain the motivations of every person on board.\n\nGovernments have responsibilities to protect life at sea, investigate trafficking networks and ensure that migration procedures respect human dignity. Safer legal pathways and regional cooperation are important parts of a sustainable response."
     }
   ],
   "publicInterestFeature": {
-    "title": "Why voter-register accuracy matters to every eligible Nigerian",
-    "category": "Public Interest",
-    "summary": "The accuracy of the voter register affects citizens' ability to participate in elections and the public's confidence in electoral institutions.",
-    "content": "Every eligible citizen should be able to confirm their registration details and seek correction where an error is found. Election authorities have a responsibility to protect personal data, prevent fraudulent entries and explain how the register is verified.\n\nThe current concerns should be examined through evidence and transparent procedures. The public needs clear answers about the nature and scale of any irregularities, the corrective steps being taken and the safeguards that will prevent a recurrence.",
-    "image": "assets/news/inec-voter-registration.jpg",
+    "title": "Nigeria's public-service reforms: citizens will judge results, not promises",
+    "category": "Public Interest | Governance",
+    "summary": "The government's stated ambition to improve civil-service efficiency and integrity will matter most if citizens experience better services, shorter delays and stronger accountability.",
+    "content": "Nigeria's Head of Service says reforms are under way to make the Federal Civil Service more efficient, productive, incorruptible and citizen-centred.\n\nThese are important objectives, but citizens will ultimately assess the reforms through their daily experiences. Are public services easier to access? Are administrative delays reduced? Are procurement decisions transparent? Are public officials held responsible when standards are not met?\n\nReform should be measured through clear targets, independent oversight and public reporting. A policy announcement is a starting point, not proof that the intended changes have been achieved.\n\nThe public interest lies in seeing institutions that work fairly, use public resources responsibly and provide services that improve people's lives.",
+    "image": "",
     "sources": [
       {
-        "name": "INEC",
-        "url": "https://www.inecnigeria.org/"
+        "name": "The Punch",
+        "url": "https://punchng.com/civil-service-reforms-target-corruption-inefficiency-hos/"
       }
     ]
   },
   "technologyInnovation": [
     {
-      "title": "AI and public records: why identity verification matters",
-      "summary": "The reported use of suspected AI-generated photographs in a preliminary voter register highlights the need for strong identity verification and responsible use of artificial intelligence.",
-      "content": "Artificial intelligence can support public services, but it can also make it harder to distinguish authentic records from manipulated or synthetic material.\n\nInstitutions responsible for identity and electoral data need clear verification procedures, secure systems, human oversight and transparent ways to correct errors. Technology should strengthen public trust, not weaken it.",
-      "image": "assets/news/inec-voter-registration.jpg"
+      "title": "Embodied AI: the next challenge for robotics",
+      "summary": "Robotics companies are working to connect artificial intelligence with physical machines that can understand surroundings and perform useful tasks.",
+      "content": "The next stage of robotics is not simply about creating machines that can walk, dance or perform rehearsed movements. It is about developing systems that can interpret their surroundings, learn tasks and respond safely to unexpected situations.\n\nEmbodied AI combines software, sensors, computing and physical movement. Its potential applications include manufacturing, logistics, healthcare and hazardous work.\n\nHowever, dependable commercial use requires more than impressive demonstrations. Robots must be affordable, reliable, safe and capable of working consistently in environments that change.\n\nThe technology could transform some industries, but the pace and scale of adoption will depend on practical performance rather than publicity.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
+        }
+      ]
     }
   ],
   "innovation": [
     {
-      "title": "Electric mobility continues to reshape global competition",
-      "summary": "BYD's reported sales growth highlights the changing competitive landscape in electric vehicles, battery technology and international trade.",
-      "image": "assets/news/byd-electric-vehicles.jpg",
+      "title": "Robotics competition moves towards practical intelligence",
+      "summary": "China's robotics companies are investing in systems designed to understand environments and complete useful tasks, rather than relying only on physical demonstrations.",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/"
+          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
         }
       ]
     }
@@ -632,61 +704,70 @@
         "country": "Nigeria",
         "position": "President of Nigeria",
         "image": "assets/leaders/tinubu.jpg",
-        "update": "Public attention remains focused on the administration's economic and security performance as political mobilisation builds ahead of the 2027 general election. Questions over voter-register integrity also underline the importance of credible institutions.",
-        "source": "RadiantWaves Media newsroom summary",
-        "sourceUrl": "https://www.inecnigeria.org/"
+        "update": "The administration faces continuing scrutiny over public-sector reform, economic conditions, security and preparations for the 2027 general election. The latest civil-service reform statement places implementation and measurable service improvements in focus.",
+        "source": "The Punch",
+        "sourceUrl": "https://punchng.com/civil-service-reforms-target-corruption-inefficiency-hos/"
       },
       {
         "name": "Donald Trump",
         "country": "United States",
         "position": "President of the United States",
         "image": "assets/leaders/trump.jpg",
-        "update": "The US president faces the final stage of the midterm campaign. Domestic economic concerns and foreign-policy developments remain among the issues shaping the political debate. A federal judge has also dismissed his defamation lawsuit against The Wall Street Journal.",
+        "update": "Trump is campaigning for Republican candidates ahead of Tuesday's midterm elections. The result could affect the balance of power in Congress and the administration's legislative agenda.",
         "source": "Associated Press",
-        "sourceUrl": "https://apnews.com/article/f27c9fa832044f2f9edea9b1fbbba061"
+        "sourceUrl": "https://apnews.com/"
       },
       {
         "name": "Iliana Yotova",
         "country": "Bulgaria",
         "position": "President of Bulgaria",
         "image": "assets/news/bulgaria-election.jpg",
-        "update": "Exit polls placed the incumbent ahead in the presidential runoff. The official result remains the determining outcome.",
-        "source": "Radio Bulgaria",
-        "sourceUrl": "https://bnrnews.bg/en/post/547988/bulgarian-presidential-election-results-with-9994percent-of-votes-counted"
+        "update": "Preliminary official figures place Yotova ahead in the presidential runoff, and Andrey Gyurov has conceded. Final certification remains part of the formal process.",
+        "source": "Bulgarian National Television",
+        "sourceUrl": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
       },
       {
-        "name": "Narendra Modi",
-        "country": "India",
-        "position": "Prime Minister of India",
-        "image": "assets/news/india-voter-protest.jpg",
-        "update": "The government faces renewed opposition criticism over voter-list revisions. The Election Commission denies political bias and says the process is intended to improve register accuracy.",
+        "name": "Volodymyr Zelenskyy",
+        "country": "Ukraine",
+        "position": "President of Ukraine",
+        "image": "",
+        "update": "Ukraine faces continuing military and humanitarian pressure following the expiry of a local ceasefire around Oleshky. The cyberattack on the public alert application has also raised concerns about civilian protection and emergency communications.",
         "source": "Reuters",
-        "sourceUrl": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
+        "sourceUrl": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
       },
       {
         "name": "Vladimir Putin",
         "country": "Russia",
         "position": "President of Russia",
         "image": "assets/leaders/putin.jpg",
-        "update": "The war in Ukraine continues, with attacks on infrastructure and temporary humanitarian arrangements drawing international attention.",
-        "source": "RadiantWaves Media global desk",
-        "sourceUrl": "https://www.reuters.com/"
+        "update": "The war in Ukraine continues, with renewed attention on local ceasefire arrangements, civilian evacuations and cyber incidents affecting emergency information systems.",
+        "source": "Reuters",
+        "sourceUrl": "https://www.investing.com/news/world-news/ukraine-evacuates-civilians-from-parts-of-kherson-region-as-expiry-of-oleshky-ceasefire-nears-4989775"
+      },
+      {
+        "name": "Narendra Modi",
+        "country": "India",
+        "position": "Prime Minister of India",
+        "image": "",
+        "update": "The Indian government continues to face opposition criticism over voter-list revisions. The Election Commission has disputed allegations of political bias and says the process is intended to improve register accuracy.",
+        "source": "Reuters",
+        "sourceUrl": "https://www.reuters.com/world/india/indian-authorities-tighten-security-ahead-big-opposition-march-delhi-2026-11-01/"
       },
       {
         "name": "Friedrich Merz",
         "country": "Germany",
         "position": "Chancellor of Germany",
         "image": "assets/leaders/merz.jpg",
-        "update": "Germany has seen large youth demonstrations, with reports of violence and looting in some locations. Peaceful demonstrators should be distinguished from individuals involved in criminal acts.",
-        "source": "Tagesschau",
-        "sourceUrl": "https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html"
+        "update": "German ministers have promised action after looting and clashes in Frankfurt during youth-led demonstrations. Reports say more than 100 police officers were injured. Peaceful demonstrators should be distinguished from those involved in violence.",
+        "source": "ABC News Australia",
+        "sourceUrl": "https://www.abc.net.au/news/2026-11-02/protests-europe-germany-frankfurt/107334774"
       },
       {
         "name": "Mark Carney",
         "country": "Canada",
         "position": "Prime Minister of Canada",
         "image": "assets/leaders/carney.jpg",
-        "update": "No separate verified development concerning the Canadian prime minister is included in this evening's briefing.",
+        "update": "No separate verified development concerning the Canadian prime minister is included in this morning's briefing.",
         "source": "RadiantWaves Media newsroom",
         "sourceUrl": "https://radiantwavesmedia.com/"
       },
@@ -695,36 +776,60 @@
         "country": "France",
         "position": "President of France",
         "image": "assets/leaders/macron.jpg",
-        "update": "Public-order concerns and social grievances remain part of the French political and public debate. This edition does not attribute unverified protest figures to the president.",
-        "source": "RadiantWaves Media newsroom",
-        "sourceUrl": "https://radiantwavesmedia.com/"
+        "update": "France continues to assess the aftermath of demonstrations over living costs and public services. Reports describe mostly peaceful marches alongside isolated clashes in several cities.",
+        "source": "Reuters",
+        "sourceUrl": "https://www.reuters.com/world/europe/france-braces-fresh-unrest-government-vows-tough-response-2026-10-31/"
       },
       {
         "name": "Xi Jinping",
         "country": "China",
         "position": "President of China",
         "image": "assets/leaders/xi.jpg",
-        "update": "China's electric-vehicle industry remains a major force in international trade and industrial competition, with BYD reporting continued sales growth.",
+        "update": "China's robotics industry is investing in embodied artificial intelligence and practical machine capabilities, as competition develops in advanced manufacturing and automation.",
         "source": "Reuters",
-        "sourceUrl": "https://www.reuters.com/"
+        "sourceUrl": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
       },
       {
         "name": "Ursula von der Leyen",
         "country": "European Union",
         "position": "President of the European Commission",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "update": "The European Union continues to face questions around industrial competitiveness, trade and the transition to electric mobility.",
-        "source": "RadiantWaves Media global desk",
-        "sourceUrl": "https://commission.europa.eu/"
+        "update": "The European Union faces continuing questions about energy security, industrial competitiveness and its relationship with Russia following reports of a possible gas-export proposal.",
+        "source": "Reuters",
+        "sourceUrl": "https://www.reuters.com/business/energy/us-pushes-restore-russian-gas-sales-europe-via-ukraine-wsj-reports-2026-11-02/"
       }
     ]
   },
   "electionWatch": [
     {
+      "country": "United States",
+      "title": "2026 midterm elections",
+      "summary": "Voters go to the polls on Tuesday, 3 November, to elect members of the House of Representatives and the Senate. The result will determine control of Congress.",
+      "status": "Final campaign day",
+      "sources": [
+        {
+          "name": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ]
+    },
+    {
+      "country": "Bulgaria",
+      "title": "Presidential runoff",
+      "summary": "Preliminary official figures show Iliana Yotova ahead of Andrey Gyurov, who has conceded defeat. Final certification remains important.",
+      "status": "Preliminary result reported; certification pending",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        }
+      ]
+    },
+    {
       "country": "Nigeria",
       "title": "2027 general election preparations",
-      "summary": "INEC says it is reviewing questionable records and suspected AI-generated photographs identified during the preliminary voter-register display. The commission's final verification process will be important to public confidence.",
-      "status": "Preparations ongoing",
+      "summary": "Questions about voter-register integrity and the verification of questionable records remain part of the public debate.",
+      "status": "Preparations and public scrutiny ongoing",
       "sources": [
         {
           "name": "INEC",
@@ -737,33 +842,9 @@
       ]
     },
     {
-      "country": "Bulgaria",
-      "title": "Presidential runoff",
-      "summary": "Exit polls placed Iliana Yotova ahead of Andrey Gyurov. The official count is required to establish the final result.",
-      "status": "Official result pending at edition cut-off",
-      "sources": [
-        {
-          "name": "Radio Bulgaria",
-          "url": "https://bnrnews.bg/en/post/547988/bulgarian-presidential-election-results-with-9994percent-of-votes-counted"
-        }
-      ]
-    },
-    {
-      "country": "United States",
-      "title": "Midterm elections",
-      "summary": "The campaign has entered its final week ahead of Tuesday's congressional elections. The outcome will determine control of Congress.",
-      "status": "Campaign period",
-      "sources": [
-        {
-          "name": "Associated Press",
-          "url": "https://apnews.com/"
-        }
-      ]
-    },
-    {
       "country": "India",
       "title": "Dispute over voter-list revisions",
-      "summary": "Opposition parties are challenging the revision process, while the Election Commission rejects claims of political bias.",
+      "summary": "Opposition parties have challenged the revision process, while the Election Commission rejects claims of political bias.",
       "status": "Public and political dispute ongoing",
       "sources": [
         {
@@ -775,37 +856,73 @@
   ],
   "breakingHistory": [
     {
-      "date": "2026-11-01",
-      "title": "Nigeria's suspected Ebola cases in Adamawa test negative",
-      "summary": "The NCDC reported that samples from two suspected cases tested negative after two rounds of testing.",
-      "category": "Public Health",
+      "date": "2026-11-02",
+      "title": "Ukraine reports cyberattack on public air-raid alert application",
+      "summary": "False nuclear and chemical threat messages appeared briefly. Officials said there was no radiation threat.",
+      "category": "Cybersecurity",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/samples-two-suspected-ebola-cases-nigeria-turn-out-negative-2026-11-01/"
+          "url": "https://theprint.in/world/ukraine-says-public-air-raid-alert-app-sent-false-alerts-after-being-hacked/3087858/"
         }
       ]
     },
     {
-      "date": "2026-10-31",
-      "title": "UN political mission in Somalia concludes its mandate",
-      "summary": "The UN political mission formally closed after a transition process, while other UN operations continue.",
-      "category": "International Affairs",
+      "date": "2026-11-02",
+      "title": "Mauritania rescues 134 migrants attempting to reach the Canary Islands",
+      "summary": "The rescue involved 118 men, 14 women and two children, according to the military statement cited by AFP.",
+      "category": "Migration and Humanitarian Affairs",
       "sources": [
         {
-          "name": "United Nations",
-          "url": "https://www.un.org/en/somalia-looks-future-uns-political-mission-closes"
+          "name": "AFP",
+          "url": "https://marine-oceans.com/actualites/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Bulgaria's Iliana Yotova wins presidential runoff",
+      "summary": "Preliminary official figures show Yotova with a clear lead, and her opponent has conceded defeat.",
+      "category": "Elections",
+      "sources": [
+        {
+          "name": "Bulgarian National Television",
+          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Nigeria's suspected Ebola cases in Adamawa test negative",
+      "summary": "The NCDC said samples from two suspected cases tested negative after two rounds of laboratory testing.",
+      "category": "Public Health",
+      "sources": [
+        {
+          "name": "NCDC",
+          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Deadly high-speed train collision in Spain",
+      "summary": "A Renfe train collided with a stationary Iryo train near Urda. The investigation into the causes continues.",
+      "category": "Transport Safety",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/two-high-speed-trains-rear-end-spain-rail-operator-says-2026-10-28/"
         }
       ]
     }
   ],
   "thoughtForToday": {
     "title": "Thought for Today",
-    "content": "Public trust is not built by asking citizens to believe every promise. It is earned when leaders are willing to explain their decisions, accept scrutiny and take responsibility for results."
+    "content": "Leadership earns respect not by avoiding difficult questions, but by having the courage to answer them honestly and take responsibility for the consequences."
   },
   "todaysBigQuestion": {
     "title": "Today's Big Question",
-    "content": "When Nigerians choose their next president, what should matter most: political experience, a credible economic plan, a proven record of performance, the ability to unite the country, or the capacity to strengthen security and democratic institutions?"
+    "content": "With elections approaching in several countries and public trust under pressure, what should citizens demand most from their leaders: transparency, economic results, security, respect for democratic institutions or personal accountability?"
   },
   "sponsoredAdverts": [
     {
@@ -836,9 +953,9 @@
   },
   "archives": [
     {
-      "date": "2026-11-01",
-      "edition": "Night",
-      "title": "Night News & Global Update"
+      "date": "2026-11-02",
+      "edition": "Morning",
+      "title": "Morning News & Global Update"
     }
   ],
   "editorialStandards": {
@@ -848,18 +965,23 @@
       "Fairness",
       "Public accountability",
       "Clear attribution",
-      "Correction of errors"
+      "Correction of errors",
+      "Respect for due process",
+      "Distinguishing verified facts from allegations"
     ],
-    "verificationNote": "This edition reflects reports available by the stated Sunday evening cut-off. Some developments remain subject to official confirmation or further investigation.",
+    "verificationNote": "This edition reflects reports available at the Monday morning publication cut-off. Preliminary election figures are identified as preliminary. Claims made by parties to armed conflicts are attributed. Where independent confirmation was unavailable, the report says so.",
     "notes": [
-      "The Adamawa suspected Ebola cases tested negative; Nigeria's previously confirmed case remains a separate matter.",
-      "The voter-register concerns in Nigeria and India include allegations that are disputed or under review.",
-      "Bulgaria's exit polls are not a substitute for official election results.",
-      "The Iran-Qatar discussions do not mean the Strait of Hormuz has reopened; no sufficiently verified update has been included in this edition.",
-      "The temporary Ukraine ceasefire around Oleshky is not a general peace agreement; no sufficiently verified update has been included in this edition.",
-      "Casualty figures in conflict zones are attributed to the sources reporting them.",
-      "No political party's campaign claim or prediction is presented as an election result.",
-      "Unverified reports have been omitted rather than presented as established facts."
+      "The NCDC said the two suspected Adamawa Ebola cases tested negative after two rounds of laboratory testing. The previously confirmed FCT case is separate.",
+      "The latest Reuters report located for the Spain train collision stated at least 68 deaths. The figure should be updated only when a newer official count is confirmed.",
+      "Bulgaria's preliminary official figures show Yotova ahead and Gyurov has conceded. Formal certification remains important.",
+      "Iran's statement about two tankers striking mines in the Strait of Hormuz has not been independently verified in the reports reviewed.",
+      "The Oleshky ceasefire was a temporary local humanitarian arrangement, not a general peace agreement.",
+      "The US midterm elections are scheduled for Tuesday, 3 November 2026. Monday is the final full campaign day.",
+      "The Anambra police investigation remains ongoing. Allegations against suspects are not convictions.",
+      "The reported Binance incident involving 778.7 billion Kenyan shillings was not included because reliable independent confirmation was not established.",
+      "The reported US-backed proposal concerning Russian gas exports through Ukraine remains unverified as an agreement; Reuters said it could not immediately verify the report.",
+      "Conflict casualty figures and claims are attributed to the sources reporting them.",
+      "Unverified claims have been omitted rather than presented as established facts."
     ],
     "closingStatement": "Independent Journalism. Global Perspective. Public Accountability. Gateway to Your World News — Connecting You to the World."
   }

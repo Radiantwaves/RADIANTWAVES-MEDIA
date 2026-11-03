@@ -1,7 +1,7 @@
 {
-  "edition": "Night",
-  "date": "2026-11-02",
-  "editionTime": "Night",
+  "edition": "Morning",
+  "date": "2026-11-03",
+  "editionTime": "Morning",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "location": "Nigeria | France | Global",
@@ -9,20 +9,19 @@
     "website": "https://radiantwavesmedia.com"
   },
   "hero": {
-    "title": "GLOBAL NIGHT NEWS",
-    "subtitle": "World developments, Nigeria politics, security, diplomacy, business and technology.",
+    "title": "Morning News, Breaking News & Global Update",
+    "subtitle": "Tuesday, 3 November 2026",
     "image": "assets/dnipro-railway-attack.jpg"
   },
-  "headline": "Ukraine attack, Belgium political uncertainty, Hormuz tensions and Nigeria's electoral integrity debate dominate global developments.",
-  "intro": "Good evening. This is the RadiantWaves Media global news update for Monday, 2 November 2026. Tonight's coverage examines the latest developments in Ukraine, growing uncertainty over the Strait of Hormuz, political changes in Europe, Nigeria's electoral register review and the accountability questions facing political leaders ahead of the country's next election cycle.",
-  "morningSummary": "International attention remains focused on the war in Ukraine and tensions around the Strait of Hormuz. Belgium's prime minister has offered his resignation following a coalition budget disagreement, while Nigeria's electoral commission is reviewing 268 preliminary voter-register records flagged for suspected irregularities. In Nigeria, public procurement oversight, electoral transparency, security and opposition accountability remain important public-interest issues.",
-  "editorialNote": "RadiantWaves Media distinguishes verified developments from statements made by governments, political parties, military authorities and other interested parties. Allegations are attributed to their sources and are not presented as established facts. Figures and investigations may change as authorities publish further information.",
+  "headline": "Ukraine reports 26 deaths after bombing of humanitarian aid centre as global attention turns to US elections and Middle East tensions",
+  "intro": "Good morning. RadiantWaves Media brings you the latest international developments, political updates and public-interest reporting. Today's coverage examines the continuing war in Ukraine, tensions surrounding the Strait of Hormuz, the United States midterm elections, political developments in France and Nigeria, and the growing debate over the future of Nigeria's opposition.",
+  "morningSummary": "Ukraine reports that 26 people were killed in a bombing of a humanitarian aid distribution centre in Zaporizhzhia. The United States is holding midterm elections, while the Supreme Court has rejected an administration request concerning disputed California mail-in ballots. Iran says it has proposed a two-day plan to reopen the Strait of Hormuz, although no agreement has been confirmed. In Nigeria, Atiku Abubakar has challenged the Tinubu administration's electricity record and proposed replacing the existing five-band tariff system. Peter Obi has separately pledged a 10,000MW electricity target if elected. Opposition cooperation remains unresolved.",
+  "editorialNote": "RadiantWaves Media supports informed public debate, democratic accountability and scrutiny of those seeking public office. Political reporting gives appropriate attention to Atiku Abubakar's campaign and policy proposals, while also reporting the positions of other political actors. Campaign promises are identified as proposals, allegations are attributed, and no candidate's claims are presented as independently proven without evidence.",
   "breaking": [
     {
-      "title": "Ukraine: Deadly Russian strike hits school being used for aid distribution",
-      "summary": "Ukrainian authorities say a Russian bombing struck a school in Komyshuvakha, in the Zaporizhzhia region, which was being used as an aid distribution centre. Authorities reported 24 deaths and approximately 20 people missing as rescue efforts continued.",
-      "content": "The attack has renewed international concern about civilian protection in Ukraine. Ukrainian President Volodymyr Zelenskyy condemned the strike and said it demonstrated that Moscow was not pursuing de-escalation. The reported casualty figures remain subject to updates as emergency teams continue their work. The Russian government’s response should be considered separately from the Ukrainian authorities' account.",
-      "category": "Breaking World News",
+      "title": "Ukraine reports 26 deaths after bombing of humanitarian aid centre",
+      "summary": "Ukrainian authorities say Russian strikes hit an aid distribution centre and neighbouring shelter in Komyshuvakha, Zaporizhzhia. Twenty-six people were reported killed, with rescue operations continuing.",
+      "category": "World",
       "image": "assets/dnipro-railway-attack.jpg",
       "sources": [
         {
@@ -32,168 +31,237 @@
       ]
     },
     {
-      "title": "Belgian prime minister offers resignation after budget talks collapse",
-      "summary": "Belgian Prime Minister Bart De Wever has offered his resignation after coalition partners failed to reach agreement on the country's 2027 budget.",
-      "content": "The dispute followed overnight negotiations involving Belgium's five-party governing coalition. King Philippe has not yet decided whether to accept the resignation. The monarch is expected to consult political leaders before making a decision. Belgium's public finances and rising debt remain central to the political disagreement. The situation creates uncertainty over the government's next steps, but it does not mean a successor has already been appointed.",
-      "category": "Breaking Europe",
-      "image": "assets/europe-energy.jpg",
+      "title": "US midterm elections take place today",
+      "summary": "American voters are choosing members of Congress in elections that will determine the balance of power in Washington. Results are not yet available.",
+      "category": "USA",
+      "image": "",
       "sources": [
         {
-          "name": "Associated Press",
-          "url": "https://apnews.com/article/d6e28f97ddcf13c3b358201c4d45cf7e"
-        },
-        {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/2026/11/02/belgiums-pm-bart-de-wever-to-offer-resignation-to-king-after-overnight-budget-talks-fail"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/"
         }
       ]
     },
     {
-      "title": "Strait of Hormuz: Iran makes proposal for reopening as tanker incident raises tensions",
-      "summary": "Iranian officials say a two-day proposal for reopening the Strait of Hormuz and resuming nuclear negotiations has been discussed through diplomatic channels. Separately, Iran's Revolutionary Guard has claimed that two tankers caught fire after striking mines.",
-      "content": "The tanker incident and the diplomatic proposal have heightened attention on one of the world's most important energy shipping routes. The claim that mines caused the tanker explosions has not been independently established in the reporting cited here. Iranian Foreign Minister Abbas Araghchi has referred to contacts with mediators and a proposal involving the reopening of the waterway. The reported Iranian conditions include changes to the US blockade and sanctions arrangements. There is no confirmation in the cited reporting that Washington has accepted the proposal. Any prolonged disruption could affect shipping costs, insurance and international energy markets.",
-      "category": "Breaking International",
-      "image": "assets/europe-energy.jpg",
+      "title": "Supreme Court rejects administration request over California ballots",
+      "summary": "The US Supreme Court rejected an emergency request to prevent California from counting mail-in ballots involving more than 20,000 registered voters whose citizenship was questioned by federal officials.",
+      "category": "USA",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+          "url": "https://www.reuters.com/world/trump-administration-takes-california-ballot-fight-supreme-court-2026-11-02/"
+        }
+      ]
+    },
+    {
+      "title": "Atiku challenges Tinubu over electricity reforms",
+      "summary": "The ADC presidential candidate has pledged to replace the five-band electricity tariff system with a framework he describes as fairer, more transparent and affordable.",
+      "category": "Nigeria",
+      "image": "assets/leaders/atiku.jpg",
+      "sources": [
+        {
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/atiku-vows-to-abolish-five-band-electricity-tariff-system-accuses-tinubu-of-broken-promise/"
+        }
+      ]
+    },
+    {
+      "title": "Obi makes 10,000MW electricity pledge",
+      "summary": "Peter Obi has made a campaign commitment to generate, transmit and distribute 10,000 megawatts of electricity if elected. The proposal requires further details on funding and implementation.",
+      "category": "Nigeria",
+      "image": "assets/leaders/obi.jpg",
+      "sources": [
+        {
+          "name": "The Guardian Nigeria",
+          "url": "https://guardian.ng/"
+        }
+      ]
+    },
+    {
+      "title": "France prepares for further student and trade union mobilisation",
+      "summary": "Student organisations are calling for further action, while unions are preparing a nationwide mobilisation on 5 November over wages, public services and purchasing power.",
+      "category": "France",
+      "image": "assets/france-protests.jpg",
+      "sources": [
+        {
+          "name": "TF1 Info",
+          "url": "https://www.tf1info.fr/societe/appels-a-la-greve-blocage-des-lycees-acte-iv-a-quelles-mobilisations-s-attendre-cette-semaine-2473431.html"
         },
         {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-hormuz-trump-again-says-conflict-to-end-soon"
-        },
-        {
-          "name": "The Washington Post",
-          "url": "https://www.washingtonpost.com/national/2026/11/02/mideast-news-november-2-2026/322cb65a-d6b2-11f1-930a-e08f8086f5ac_story.html"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/"
         }
       ]
     }
   ],
   "featured": {
-    "title": "Nigeria's electoral register: INEC flags 268 records for further examination",
-    "summary": "Nigeria's electoral commission says its technology system flagged 268 preliminary voter-register records for suspected irregularities, including photographs believed to have been generated using artificial intelligence.",
-    "content": "The Independent National Electoral Commission says its Automated Biometric Identification System flagged 268 records for further examination. INEC's ICT Director, Lawrence Bayode, explained that the review includes records with suspected AI-generated photographs and other irregularities. The commission has also explained that some registration cases involve people with incomplete or missing fingers who used a special registration option. This distinction matters: the 268 records have been flagged for review, but that does not mean 268 cases of electoral fraud have been proven. INEC says the preliminary register was displayed for public scrutiny from 26 October, allowing claims and objections to be submitted. The final register is expected to be certified on 15 December. The development has prompted public-interest and political calls for a transparent investigation. Former Kano governor Rabiu Kwankwaso has reportedly called for an independent and thorough examination, with findings made public. The central issue is whether INEC can demonstrate that its register is accurate, inclusive and protected against manipulation before future elections.",
+    "title": "Nigeria's electricity challenge: Atiku puts Tinubu's record under scrutiny",
     "category": "Nigeria Politics",
-    "image": "assets/news/inec-voter-registration.jpg",
+    "image": "assets/leaders/atiku.jpg",
+    "summary": "Electricity is one of the most important tests of Nigeria's economic development. Atiku Abubakar has challenged the Tinubu administration over the five-band electricity tariff system and pledged to replace it with a fairer and more affordable framework. His intervention places power supply, household bills and industrial productivity at the centre of the 2027 debate.",
+    "content": "Reliable electricity is not simply an infrastructure issue. It affects the cost of production, the survival of small businesses, employment, education, healthcare and the competitiveness of Nigerian industries.\n\nFormer Vice-President Atiku Abubakar, the ADC presidential candidate, has criticised the existing five-band electricity tariff arrangement. He argues that consumers should not be expected to pay higher tariffs without receiving the service levels promised under the system.\n\nAtiku has pledged to replace the existing arrangement with a framework that he describes as fair, transparent and affordable. His criticism also raises questions about the proposed removal of electricity subsidies and the financial burden that could place on households and businesses.\n\nThe APC has defended the Tinubu administration's electricity policies, pointing to reforms, metering initiatives, transmission investments and measures to address legacy debts in the sector.\n\nThe debate should therefore move beyond political exchanges. Nigerians need to know how many hours of electricity different communities receive, how tariffs are calculated, how much public money is being spent, and whether the reforms are producing measurable improvements.\n\nAtiku's proposal deserves public examination, just as the government's existing programme deserves scrutiny. A serious alternative should explain how it will finance electricity generation, improve transmission, strengthen distribution companies, expand metering and protect lower-income consumers.\n\nFor Nigeria, the central question is not simply who makes the strongest campaign statement. It is which programme can deliver dependable electricity at a cost households and businesses can sustain.",
     "sources": [
       {
-        "name": "The Punch",
-        "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+        "name": "TheCable",
+        "url": "https://www.thecable.ng/atiku-vows-to-abolish-five-band-electricity-tariff-system-accuses-tinubu-of-broken-promise/"
+      },
+      {
+        "name": "Premium Times",
+        "url": "https://www.premiumtimesng.com/news/headlines/922071-2027-politics-watch-sundays-roundup-atiku-challenges-tinubu-on-power-as-kwankwaso-tells-him-to-stand-down.html"
       }
     ]
   },
   "topStories": [
     {
-      "title": "Nigeria: Government warns against inflated public contracts",
-      "summary": "The Federal Government has warned heads of agencies against inflated contract costs and breaches of public procurement rules.",
-      "content": "A circular issued through the Office of the Secretary to the Government of the Federation, George Akume, warns public institutions against procurement practices that undermine competition and transparency. The government has referred to compliance with the Public Procurement Act 2007 and the possibility of sanctions for violations. The public-interest question is how consistently these rules will be enforced and whether investigations and sanctions will be made transparent.",
-      "category": "Nigeria Governance",
-      "image": "assets/mining-investigation.jpg",
+      "title": "Ukraine: 26 reported dead after strike on humanitarian aid centre",
+      "summary": "Ukrainian officials say the bombing hit a school building being used to distribute humanitarian assistance and provide shelter. Rescue teams continue to search the affected area.",
+      "content": "The reported death toll from the attack in Komyshuvakha, in the Zaporizhzhia region, has risen to 26, according to Ukrainian authorities. The building was being used for humanitarian assistance and shelter. Ukrainian President Volodymyr Zelenskyy condemned the attack. The Associated Press reported that around 20 people were missing and that further drone attacks complicated rescue operations. Russia's response to the specific allegations should be included if and when it becomes available.",
+      "category": "World",
+      "image": "assets/dnipro-railway-attack.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/fg-vows-crackdown-on-inflated-public-contracts/"
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/717372f7bbf4e8a805bc918f06f9730f"
         }
       ]
     },
     {
-      "title": "Nigeria: NCDC monitors contacts linked to imported Ebola case",
-      "summary": "Health authorities have identified contacts for monitoring following an imported confirmed Ebola case. The monitoring process is a precautionary public-health measure.",
-      "content": "The Nigeria Centre for Disease Control has reported contact tracing and monitoring following an imported confirmed case. Reports indicate that 62 contacts were identified, with monitoring expected to continue through 13 November. Separately, suspected cases investigated in Adamawa reportedly tested negative after laboratory assessment. These suspected cases should not be confused with confirmed infections. The NCDC remains the appropriate source for official case numbers and public-health guidance.",
-      "category": "Nigeria Health",
-      "image": "assets/news/nigeria-public-health.jpg",
-      "sources": [
-        {
-          "name": "Nigeria Centre for Disease Control",
-          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
-        },
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/morning-recap-fg-targets-inflated-contracts-inec-flags-ai-photos-other-top-stories/"
-        }
-      ]
-    },
-    {
-      "title": "Civil service reforms focus on productivity and integrity",
-      "summary": "Nigeria's Head of Service has described reforms intended to improve efficiency, productivity and public-sector integrity.",
-      "content": "The reform discussion places renewed attention on how public institutions deliver services to citizens. Measures aimed at reducing inefficiency and corruption require clear performance standards, transparent procedures and consistent accountability. The practical test will be whether citizens experience improvements in service delivery.",
-      "category": "Nigeria Governance",
+      "title": "Iran proposes a two-day plan to reopen the Strait of Hormuz",
+      "summary": "Tehran says a proposal could allow the Strait of Hormuz to reopen and nuclear discussions with Washington to resume, subject to conditions. No final agreement has been confirmed.",
+      "content": "Iran has described a proposal intended to reopen the Strait of Hormuz and create conditions for renewed nuclear discussions with the United States. The proposal is linked to demands concerning the US blockade of Iranian ports, sanctions and a wider ceasefire arrangement. The United States has not confirmed acceptance of the conditions. The waterway remains strategically important to international energy shipments, and any prolonged disruption could affect oil prices, shipping insurance and global trade.",
+      "category": "Middle East",
       "image": "",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/civil-service-reforms-target-corruption-inefficiency-hos/"
+          "name": "Associated Press",
+          "url": "https://www.washingtonpost.com/national/2026/11/02/mideast-news-november-2-2026/322cb65a-d6b2-11f1-930a-e08f8086f5ac_story.html"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-hormuz-trump-again-says-conflict-to-end-soon"
         }
       ]
     },
     {
-      "title": "Serbia: Student movement marks anniversary of railway station disaster",
-      "summary": "Serbia's student-led political movement continues to draw attention to corruption and accountability following the deadly Novi Sad railway station canopy collapse.",
-      "content": "The disaster killed 16 people and became a major focus of public anger and anti-corruption campaigning. Reuters reports that a student-led bloc won 141 of 250 seats in the parliamentary election held on 25 October, defeating the ruling Serbian Progressive Party. The political development is part of a wider debate about public accountability and institutional trust.",
-      "category": "Europe Politics",
-      "image": "assets/news/bulgaria-election.jpg",
+      "title": "US Supreme Court rejects request to block California mail-in ballots",
+      "summary": "The court's decision leaves the disputed ballots eligible to be counted. The case raises questions about federal and state authority over election administration.",
+      "content": "The US Supreme Court rejected an emergency request from the Trump administration to stop California from counting mail-in ballots involving more than 20,000 registered voters whose citizenship was questioned by federal officials. The court issued its decision without a detailed explanation. California argued that the federal data was unreliable and that eligible citizens could be wrongly excluded. The decision does not establish that non-citizens voted; it allows the state's ballot-counting arrangements to proceed.",
+      "category": "USA",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
+          "url": "https://www.reuters.com/world/trump-administration-takes-california-ballot-fight-supreme-court-2026-11-02/"
         }
       ]
     },
     {
-      "title": "Bulgaria: Iliana Yotova leads presidential runoff count",
-      "summary": "Bulgaria's public broadcaster reported Iliana Yotova ahead in the presidential runoff based on more than half of tally sheets processed.",
-      "content": "With 52.42 per cent of tally sheets processed, the Bulgarian National Television report placed Iliana Yotova on 57.95 per cent and Gyurov on 39.01 per cent. The reported figures represent the count at that stage and should not be confused with final certified results. Further confirmation from the electoral authorities is required before treating the result as final.",
-      "category": "Europe Elections",
-      "image": "assets/news/bulgaria-election.jpg",
+      "title": "Belgium's prime minister offers resignation after budget talks fail",
+      "summary": "Bart De Wever offered his resignation after coalition parties failed to reach agreement on the 2027 budget. The King had not yet decided whether to accept it in the report.",
+      "content": "Belgian Prime Minister Bart De Wever offered his resignation after overnight negotiations failed to produce agreement among the coalition parties on the 2027 budget. The constitutional process requires the King to consider the offer. The development reflects pressure on the governing coalition over public finances and the country's debt position. An offer of resignation should not be confused with a confirmed departure from office until the King makes a decision.",
+      "category": "Europe",
+      "image": "",
       "sources": [
         {
-          "name": "Bulgarian National Television",
-          "url": "https://bntnews.bg/news/presidential-elections-runoff-results-based-on-5242-of-tally-sheets-processed-iliana-iotova-wins-5795-of-the-votes-gyuro-1420153news.html"
-        },
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/d6e28f97ddcf13c3b358201c4d45cf7e"
+        }
+      ]
+    },
+    {
+      "title": "European supermarkets face disruption after refrigeration cyberattacks",
+      "summary": "Reported cyber incidents affecting refrigeration systems have raised concerns about the security of essential commercial infrastructure.",
+      "content": "Reports describe cyber incidents affecting supermarket refrigeration systems in several European countries. The incidents highlight the risks of connecting physical infrastructure to digital control systems. The identity of those responsible and whether all incidents are linked remain unconfirmed. Retailers and authorities will need to establish the scale of the disruption and whether food safety was affected.",
+      "category": "Technology",
+      "image": "",
+      "sources": [
         {
-          "name": "RTÉ",
-          "url": "https://www.rte.ie/news/2026/1102/1597575-bulgaria-runoff/"
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/world/live/2026/nov/02/ukraine-russia-emergency-warning-systems-hack-zelenskyy-streeting-eu-latest-news-updates"
         }
       ]
     }
   ],
   "articles": [
     {
-      "title": "Why Nigeria's electoral register matters beyond the 268 flagged records",
-      "summary": "The integrity of an electoral register is fundamental to public confidence in elections. INEC's explanation and the review process deserve careful scrutiny.",
-      "content": "An electoral register is not simply an administrative list. It determines who can participate in an election and provides the foundation for credible voter participation. The 268 records flagged by INEC should therefore be examined carefully, but the public must not confuse a preliminary alert with proof of wrongdoing. INEC should explain the criteria used to flag records, how genuine registration photographs are distinguished from manipulated images, and how people whose records are affected can challenge an incorrect decision. Political parties and civic organisations also have a responsibility to submit evidence rather than circulate unverified allegations. The process should protect both electoral integrity and the rights of eligible voters. Transparency, independent scrutiny and a clear appeals process can help strengthen confidence before the final register is certified.",
-      "category": "RadiantWaves Reports",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "What does Atiku Abubakar offer Nigeria?",
+      "summary": "A closer look at Atiku's public record, economic arguments and the questions voters should ask before deciding whether to support his 2027 campaign.",
+      "content": "Atiku Abubakar's case for leadership rests on his experience in public office, his private-sector background and his argument for a more competitive Nigerian economy.\n\nHe served as Nigeria's Vice-President from 1999 to 2007. During that period, he was associated with the administration's economic reform agenda and the promotion of private-sector participation in parts of the economy. Supporters point to this experience as evidence that he understands the relationship between government policy, investment and business development.\n\nHis political argument for 2027 centres on economic opportunity, restructuring, job creation, investment, education and the need for more effective public institutions. He has also made electricity reform a prominent campaign issue, challenging the existing tariff-band system and promising a different framework.\n\nHis supporters can reasonably argue that his experience gives him a basis from which to present an alternative to the current administration. However, voters should also examine the outcomes of his previous time in office, the limits of his authority as Vice-President, his record in business and politics, and the detail of his current proposals.\n\nA credible presidential programme should explain how it will create jobs, improve power supply, reduce insecurity, manage public debt, strengthen education and healthcare, and make government more accountable.\n\nAtiku's strongest campaign case will be one supported by clear policies, realistic financing, measurable targets and a team capable of implementation. The responsibility of journalism is to make those proposals understandable to the public and to test them against evidence.",
+      "category": "Nigeria Politics",
+      "image": "assets/leaders/atiku2.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+          "name": "Atiku Abubakar official website",
+          "url": "https://atiku.org/"
+        },
+        {
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/"
         }
       ]
     },
     {
-      "title": "Nigeria's opposition and the challenge of building public confidence",
-      "summary": "As Nigeria looks towards its next election cycle, opposition parties face questions about unity, policy credibility, internal democracy and accountability.",
-      "content": "Nigeria's opposition has an important constitutional role: scrutinising government decisions, presenting alternative policies and offering voters a credible choice. But public frustration alone is not an electoral programme. Political figures including Atiku Abubakar and Peter Obi remain part of the wider national opposition conversation, while other political actors and parties also shape the debate. The challenge is whether opposition leaders can move beyond personalities and competing ambitions to explain how they would address insecurity, unemployment, inflation, public debt, electricity, education and healthcare. Electoral integrity must also remain central. Recent questions surrounding INEC's preliminary voter register show why transparent institutions matter to every political party, whether in government or opposition. Calls for independent scrutiny should be accompanied by evidence, due process and respect for eligible voters. Any opposition arrangement will ultimately be judged by the quality of its policies, the credibility of its candidates, its internal democratic standards and its ability to hold itself accountable.",
-      "category": "Nigeria Political Analysis",
+      "title": "Atiku's electricity proposal puts affordability at the centre of the 2027 debate",
+      "summary": "The ADC candidate says the existing five-band tariff arrangement should be replaced. The proposal now faces questions about its design and financing.",
+      "content": "Electricity costs affect homes, small businesses, manufacturers and public institutions. Atiku's proposal to replace the five-band tariff structure gives his campaign an opportunity to explain how a different pricing system could work.\n\nThe key issues include the relationship between tariffs and actual supply, the cost of subsidies, metering, transmission investment and the financial position of distribution companies.\n\nThe government has defended its reforms and says investment and metering are part of its strategy. The opposition argues that consumers should not carry the burden of a system that does not consistently deliver the service expected.\n\nAtiku should publish a detailed framework showing how his proposed system would protect vulnerable households while ensuring that electricity providers can maintain and expand infrastructure. This would allow Nigerians to compare the proposal with the government's programme on evidence rather than slogans.",
+      "category": "Nigeria Politics",
+      "image": "assets/leaders/atiku3.jpg",
+      "sources": [
+        {
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/atiku-vows-to-abolish-five-band-electricity-tariff-system-accuses-tinubu-of-broken-promise/"
+        }
+      ]
+    },
+    {
+      "title": "Opposition cooperation: Atiku, Obi and Kwankwaso face difficult choices",
+      "summary": "The opposition debate is about candidate selection, party structures, regional representation and whether a shared programme can be agreed.",
+      "content": "Opposition cooperation remains one of the central questions ahead of Nigeria's 2027 election. Atiku Abubakar and Peter Obi are associated with separate political platforms, while Rabiu Kwankwaso has raised questions about regional rotation and the choice of candidate.\n\nKwankwaso's argument for a southern candidate is a political position based on an informal understanding of regional rotation. It is not a constitutional rule. Nigeria's Constitution does not reserve the presidency for either the North or the South.\n\nAtiku's supporters can argue that experience, national reach and the ability to organise a broad coalition should be considered when selecting a candidate. Obi's supporters can point to his emphasis on public spending, productivity and his proposed electricity target. Kwankwaso's supporters may emphasise his political organisation and regional support.\n\nA coalition will require transparent rules. It must explain how a candidate would be selected, how party structures would be respected, how disagreements would be resolved and what policy programme all participants would support.\n\nThe public should not be told that a joint ticket exists until the parties formally announce and explain one.",
+      "category": "Nigeria Politics",
       "image": "assets/leaders/atiku.jpg",
       "sources": [
         {
-          "name": "The Punch",
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/news/headlines/922071-2027-politics-watch-sundays-roundup-atiku-challenges-tinubu-on-power-as-kwankwaso-tells-him-to-stand-down.html"
+        }
+      ]
+    },
+    {
+      "title": "Peter Obi's 10,000MW pledge: What Nigerians should ask",
+      "summary": "Obi's electricity target puts generation, transmission and distribution in focus, but voters will need a financing and delivery plan.",
+      "content": "Peter Obi has pledged a 10,000MW electricity target if elected. The commitment covers generation, transmission and distribution, making it broader than a promise to increase power generation alone.\n\nThe target raises important questions. What new generation capacity would be built? How would transmission bottlenecks be addressed? What role would state governments and private investors play? How much would the programme cost, and over what period would it be delivered?\n\nObi's proposal should be examined alongside other candidates' electricity policies. Nigerians need clear timelines, funding assumptions and measurable service improvements before they can assess the feasibility of any campaign target.",
+      "category": "Nigeria Politics",
+      "image": "assets/leaders/obi.jpg",
+      "sources": [
+        {
+          "name": "The Guardian Nigeria",
+          "url": "https://guardian.ng/"
+        }
+      ]
+    },
+    {
+      "title": "INEC's 268 flagged voter records require transparent investigation",
+      "summary": "The commission says 268 records were flagged for suspected AI-generated photographs and other irregularities. They remain subject to examination.",
+      "content": "The Independent National Electoral Commission has said its biometric system flagged 268 records for further examination over suspected AI-generated photographs and other irregularities.\n\nThe records should not automatically be described as proven electoral fraud. INEC needs to explain the verification process, publish appropriate findings and ensure that genuine voters are not wrongly excluded.\n\nThe issue is important for every political party, including the ADC and other opposition groups. Electoral confidence depends on transparent procedures, equal treatment and an accurate register. Opposition parties have a responsibility to scrutinise the process and provide evidence where they identify problems. INEC has a responsibility to respond clearly and correct any confirmed irregularities.",
+      "category": "Nigeria",
+      "image": "assets/news/inec-voter-registration.jpg",
+      "sources": [
+        {
+          "name": "Punch",
           "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
         }
       ]
     },
     {
-      "title": "Public procurement: A warning is not the same as enforcement",
-      "summary": "The Federal Government's warning on inflated contracts raises a wider question about transparency and consequences in public spending.",
-      "content": "Public procurement affects roads, hospitals, schools, security equipment and essential services. Inflated contracts and non-competitive awards can reduce the value citizens receive from public funds. A warning to government agencies is an important administrative step, but effective reform requires open contract information, independent audits, clear conflict-of-interest rules and consequences when violations are established. Citizens should be able to see whether the rules are being applied consistently across institutions.",
-      "category": "Governance Analysis",
-      "image": "assets/mining-investigation.jpg",
+      "title": "Nigeria's public procurement: Government warns against inflated contracts",
+      "summary": "The Federal Government has warned public agencies against inflated contract costs and procurement violations.",
+      "content": "The Federal Government has warned heads of agencies against inflated contracts and breaches of procurement rules. The warning places renewed attention on public spending, competitive bidding and accountability.\n\nFor Nigerians, the issue is practical: inflated contracts reduce the value of public money and can leave communities without the roads, hospitals, schools and infrastructure they need.\n\nThe warning should be followed by transparent contract information, independent audits and appropriate sanctions where wrongdoing is established. Political parties should also explain how their own administrations would strengthen procurement oversight.",
+      "category": "Nigeria",
+      "image": "",
       "sources": [
         {
-          "name": "The Punch",
+          "name": "Punch",
           "url": "https://punchng.com/fg-vows-crackdown-on-inflated-public-contracts/"
         }
       ]
@@ -201,9 +269,8 @@
   ],
   "worldNews": [
     {
-      "title": "Ukraine reports 24 deaths after strike on aid distribution centre",
-      "summary": "Ukrainian authorities say a school being used for aid distribution in Komyshuvakha was hit, with around 20 people still missing at the time of reporting.",
-      "content": "Rescue operations continued after the reported bombing in the Zaporizhzhia region. The casualty figures are attributed to Ukrainian authorities and may change as further information becomes available.",
+      "title": "Ukraine: Aid centre bombing leaves 26 dead, according to Ukrainian authorities",
+      "summary": "Rescue operations continue in Komyshuvakha after a strike on a school building used for humanitarian assistance.",
       "image": "assets/dnipro-railway-attack.jpg",
       "sources": [
         {
@@ -213,54 +280,57 @@
       ]
     },
     {
-      "title": "Middle East: Iran proposal puts Hormuz and nuclear talks back in focus",
-      "summary": "Iran says it has discussed a proposal to reopen the Strait of Hormuz and resume negotiations, while the United States has not confirmed acceptance.",
-      "content": "The proposal reportedly includes conditions involving sanctions, maritime access and a ceasefire. The positions of the parties remain subject to further diplomatic developments.",
-      "image": "assets/europe-energy.jpg",
+      "title": "Iran's Hormuz proposal remains conditional",
+      "summary": "Tehran says it has proposed a route and conditions for reopening the Strait, but Washington has not confirmed an agreement.",
+      "image": "",
       "sources": [
         {
-          "name": "The Washington Post",
+          "name": "Associated Press",
           "url": "https://www.washingtonpost.com/national/2026/11/02/mideast-news-november-2-2026/322cb65a-d6b2-11f1-930a-e08f8086f5ac_story.html"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-hormuz-trump-again-says-conflict-to-end-soon"
         }
       ]
     },
     {
-      "title": "Gaza and the occupied West Bank remain under severe pressure",
-      "summary": "Reports from the region describe continued Israeli military operations and Palestinian casualties amid an unstable security situation.",
-      "content": "Al Jazeera's live coverage reported at least nine Palestinians killed across Gaza on Sunday. Its reporting also described continuing Israeli operations in Hebron in the occupied West Bank. Casualty claims and operational details should be attributed to the reporting organisations and relevant authorities as investigations continue.",
-      "image": "assets/news/gaza-update-nov-2026.jpg",
+      "title": "Yemen remains exposed to conflict and displacement",
+      "summary": "Reports of attacks and civilian casualties remain difficult to independently verify. Humanitarian needs continue to be a major concern.",
+      "image": "",
       "sources": [
         {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-hormuz-trump-again-says-conflict-to-end-soon"
+          "name": "Associated Press",
+          "url": "https://apnews.com/"
         }
       ]
     }
   ],
   "usaNews": [
     {
-      "title": "United States: Midterm election debate intensifies ahead of voting",
-      "summary": "The approaching US midterm elections have renewed debate about election administration, voter eligibility and political rhetoric.",
-      "content": "A Reuters report examined the Trump administration's efforts to compile and circulate lists of people suspected of being non-citizen voters. State officials challenged aspects of the effort, and legal disputes raised concerns about the possibility of eligible citizens being wrongly affected. Non-citizen voting in federal elections is illegal, but the existence of a list or allegation does not establish that an individual has voted unlawfully. Election authorities must distinguish verified cases from inaccurate records and protect eligible voters' rights.",
-      "image": "assets/leaders/trump.jpg",
+      "title": "US voters go to the polls in midterm elections",
+      "summary": "Control of the House and Senate is at stake. No final results are available at the morning publication cut-off.",
+      "image": "",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/legal/government/how-trumps-noncitizen-voter-lists-could-affect-midterms-2026-11-01/"
+          "url": "https://www.reuters.com/"
+        }
+      ]
+    },
+    {
+      "title": "Supreme Court leaves disputed California ballots eligible to be counted",
+      "summary": "The court rejected the administration's emergency request concerning more than 20,000 registered voters.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/trump-administration-takes-california-ballot-fight-supreme-court-2026-11-02/"
         }
       ]
     }
   ],
   "europeNews": [
     {
-      "title": "Belgium faces government uncertainty after budget dispute",
-      "summary": "Prime Minister Bart De Wever has offered his resignation, but King Philippe has not yet decided whether to accept it.",
-      "content": "The disagreement between coalition partners centres on the 2027 budget and the country's financial position. Consultations with political leaders are expected before a decision.",
-      "image": "assets/europe-energy.jpg",
+      "title": "Belgian prime minister offers resignation after budget negotiations fail",
+      "summary": "King Philippe had not yet decided whether to accept Bart De Wever's resignation offer.",
+      "image": "",
       "sources": [
         {
           "name": "Associated Press",
@@ -269,456 +339,372 @@
       ]
     },
     {
-      "title": "France: Protests continue amid pressure over living costs",
-      "summary": "Demonstrations over living costs, fuel, inflation and public services have continued, with reports of mostly peaceful gatherings and smaller clashes in some cities.",
-      "content": "The scale of demonstrations has varied between successive protest days. The debate reflects continuing pressure on household budgets and public services. Protest numbers and incidents should be treated as estimates from the organisations and authorities reporting them.",
+      "title": "France faces renewed student protests",
+      "summary": "Student organisations are calling for further mobilisation, with unions preparing a nationwide action on 5 November.",
       "image": "assets/france-protests.jpg",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/europe/france-braces-fresh-unrest-government-vows-tough-response-2026-10-31/"
+          "name": "TF1 Info",
+          "url": "https://www.tf1info.fr/societe/appels-a-la-greve-blocage-des-lycees-acte-iv-a-quelles-mobilisations-s-attendre-cette-semaine-2473431.html"
         }
       ]
     },
     {
-      "title": "Serbia: Anti-corruption movement remains a major political force",
-      "summary": "The student-led movement has gained parliamentary representation following the election reported on 25 October.",
-      "content": "The movement emerged from public anger following the Novi Sad railway station disaster, which killed 16 people. The political debate continues to focus on public accountability and institutional responsibility.",
-      "image": "assets/news/bulgaria-election.jpg",
+      "title": "France's 2027 political landscape takes shape",
+      "summary": "The RN, LFI, centre-left and centre-right are positioning themselves ahead of the next presidential election. Their programmes and alliances remain under development.",
+      "image": "assets/france-protests.jpg",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/"
         }
       ]
     }
   ],
   "africaNews": [
     {
-      "title": "Nigeria: Electoral register review places INEC under public scrutiny",
-      "summary": "The commission says 268 preliminary records were flagged for examination, prompting calls for transparency and an independent review.",
-      "content": "The review concerns suspected irregularities, including photographs believed to be AI-generated. The records have not all been established as fraudulent. INEC's explanation, public claims process and final certification will be important in assessing the integrity of the register.",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "Uganda's role in Somalia's security mission faces transition",
+      "summary": "Reports of a phased troop withdrawal raise questions about the future security arrangements and the capacity of Somali forces.",
+      "image": "assets/news/somalia-un-mission.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/"
         }
       ]
     },
     {
-      "title": "Mauritania: More than 130 migrants rescued off the coast",
-      "summary": "Reports say 134 migrants travelling towards the Canary Islands were rescued off Mauritania.",
-      "content": "The reported group included men, women and children. The incident highlights the continuing risks faced by people attempting dangerous Atlantic crossings. Rescue figures and the circumstances of each operation should be confirmed by the relevant maritime authorities.",
+      "title": "West Africa's security and governance remain regional priorities",
+      "summary": "Governments across the region continue to face pressure to improve security, public services and economic opportunity.",
       "image": "",
       "sources": [
         {
-          "name": "Marine & Oceans",
-          "url": "https://marine-oceans.com/actualites/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie/"
+          "name": "African Union",
+          "url": "https://au.int/"
         }
       ]
     }
   ],
   "nigeriaNews": [
     {
-      "title": "INEC flags 268 preliminary voter records for review",
-      "summary": "The electoral commission says its biometric system identified records requiring further examination, including suspected AI-generated photographs.",
-      "content": "INEC says the flagged records are under review and should not automatically be treated as proven cases of fraud. The commission has opened the preliminary register to public scrutiny and expects final certification on 15 December. Political parties, civil society and eligible voters have a stake in ensuring that genuine registrations are protected and irregular records are addressed transparently.",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "title": "Atiku challenges the five-band electricity tariff system",
+      "summary": "The ADC presidential candidate says Nigerians need a fairer and more affordable electricity framework.",
+      "image": "assets/leaders/atiku.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/atiku-vows-to-abolish-five-band-electricity-tariff-system-accuses-tinubu-of-broken-promise/"
         }
       ]
     },
     {
-      "title": "Federal Government warns agencies against inflated contracts",
-      "summary": "The government has directed public institutions to comply with procurement rules and warned of sanctions for violations.",
-      "content": "The directive highlights the need for competition, transparency and value for money in government spending. Enforcement and public reporting will be essential to determine whether the warning leads to measurable improvements.",
-      "image": "assets/mining-investigation.jpg",
+      "title": "ADC prepares for Sokoto campaign flag-off",
+      "summary": "The party has scheduled its presidential campaign launch for 4 November after postponing the original date.",
+      "image": "assets/leaders/atiku2.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/fg-vows-crackdown-on-inflated-public-contracts/"
+          "name": "Punch",
+          "url": "https://punchng.com/adc-shifts-sokoto-campaign-flag-off-to-november-4/"
         }
       ]
     },
     {
-      "title": "NCDC continues contact monitoring following imported Ebola case",
-      "summary": "Health authorities are monitoring identified contacts as a precaution following an imported confirmed case.",
-      "content": "The reported 62 contacts are being monitored through the stated follow-up period. Separate suspected cases investigated in Adamawa were reported negative. The public should rely on NCDC updates for confirmed case information and official health advice.",
-      "image": "assets/news/nigeria-public-health.jpg",
-      "sources": [
-        {
-          "name": "Nigeria Centre for Disease Control",
-          "url": "https://www.ncdc.gov.ng/news/press_1210841/"
-        }
-      ]
-    },
-    {
-      "title": "Opposition faces pressure to turn criticism into a credible programme",
-      "summary": "Nigeria's opposition parties face public questions about unity, policy alternatives and their ability to hold government accountable.",
-      "content": "The next election cycle will test whether opposition parties can present coherent proposals on the economy, security, education, healthcare, electricity and public-sector reform. Atiku Abubakar, Peter Obi and other opposition figures remain part of the national political conversation, but this report does not attribute any new statement to them. Voters will need more than campaign slogans: they will need clear policy commitments, realistic implementation plans and transparent records of performance.",
+      "title": "Obi pledges 10,000MW electricity target",
+      "summary": "The NDC candidate has placed electricity infrastructure at the centre of his campaign message.",
       "image": "assets/leaders/obi.jpg",
       "sources": [
         {
-          "name": "The Punch",
+          "name": "The Guardian Nigeria",
+          "url": "https://guardian.ng/"
+        }
+      ]
+    },
+    {
+      "title": "INEC examines 268 flagged voter records",
+      "summary": "The commission says the records are undergoing checks. The process must protect genuine voters and address confirmed irregularities.",
+      "image": "assets/news/inec-voter-registration.jpg",
+      "sources": [
+        {
+          "name": "Punch",
           "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+        }
+      ]
+    },
+    {
+      "title": "Kwankwaso raises regional rotation argument in opposition debate",
+      "summary": "The former Kano governor's position has added another issue to discussions about a possible opposition candidate. Regional rotation is a political convention, not a constitutional requirement.",
+      "image": "",
+      "sources": [
+        {
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/news/headlines/922071-2027-politics-watch-sundays-roundup-atiku-challenges-tinubu-on-power-as-kwankwaso-tells-him-to-stand-down.html"
         }
       ]
     }
   ],
   "asiaNews": [
     {
-      "title": "China's robotics industry shifts attention from movement to artificial intelligence",
-      "summary": "Chinese robotics companies are increasingly focusing on the intelligence and practical applications of humanoid machines.",
-      "content": "The next stage of development involves reliability, data, decision-making and the ability to perform useful tasks outside controlled demonstrations. Investment in the sector has been substantial, but commercial deployment remains a challenge.",
+      "title": "China plans diplomatic engagement with Iran and Gulf states",
+      "summary": "Beijing's proposed diplomatic outreach comes amid continuing regional tensions and concerns about shipping through the Strait of Hormuz.",
       "image": "",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
+          "name": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ]
+    },
+    {
+      "title": "Japan and other Asian economies monitor energy security",
+      "summary": "The uncertainty surrounding Gulf shipping continues to place energy security and supply diversification in focus.",
+      "image": "",
+      "sources": [
+        {
+          "name": "International Energy Agency",
+          "url": "https://www.iea.org/"
         }
       ]
     }
   ],
   "businessNews": [
     {
-      "title": "Hormuz uncertainty keeps energy shipping risks in focus",
-      "summary": "Developments around the Strait of Hormuz are being closely watched by energy traders, shipping companies and governments.",
-      "content": "The waterway is a strategically important route for global oil and gas shipments. Any prolonged disruption could increase shipping insurance costs, delay cargoes and place pressure on energy prices. Market reactions will depend on the duration of disruption, the availability of alternative routes and diplomatic progress.",
+      "title": "Energy markets monitor developments in the Strait of Hormuz",
+      "summary": "Shipping disruption and regional tensions could affect oil prices, freight, insurance and the cost of energy-intensive production.",
       "image": "assets/europe-energy.jpg",
       "sources": [
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+          "url": "https://www.reuters.com/"
         }
       ]
     },
     {
-      "title": "US reportedly discusses possible return of Russian gas flows to Europe",
-      "summary": "A report says US officials have supported discussions about restoring Russian gas exports to Europe through Ukrainian pipelines as part of wider energy diplomacy.",
-      "content": "Reuters reported on a Wall Street Journal account of the proposal but said it could not independently verify the report. The proposal should not be presented as an agreed policy or an implemented deal. Any change in European energy imports would involve major political, commercial and security considerations.",
-      "image": "assets/europe-energy.jpg",
+      "title": "Nigeria's electricity costs remain central to business competitiveness",
+      "summary": "Manufacturers and small businesses need predictable power supply and transparent tariffs to plan investment and employment.",
+      "image": "",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/energy/us-pushes-restore-russian-gas-sales-europe-via-ukraine-wsj-reports-2026-11-02/"
+          "name": "TheCable",
+          "url": "https://www.thecable.ng/atiku-vows-to-abolish-five-band-electricity-tariff-system-accuses-tinubu-of-broken-promise/"
         }
       ]
     }
   ],
   "technologyNews": [
     {
-      "title": "Cyberattack targets supermarket refrigeration systems in several European countries",
-      "summary": "A reported cyber incident affected refrigeration systems at more than 100 stores across several European countries.",
-      "content": "The Guardian reported that the incident affected retailers in Belgium, Luxembourg, Sweden, Ireland and Estonia. The attackers and their motives have not been established. European officials have expressed concern about deliberate disruption of food-supply infrastructure, while the reporting indicated that food security was not considered at immediate risk. The incident highlights the need for stronger protection of operational technology in essential services.",
+      "title": "Cybersecurity risks extend to supermarket refrigeration and public infrastructure",
+      "summary": "Recent reported incidents underline the need to protect digital systems controlling essential physical services.",
       "image": "",
       "sources": [
         {
           "name": "The Guardian",
           "url": "https://www.theguardian.com/world/live/2026/nov/02/ukraine-russia-emergency-warning-systems-hack-zelenskyy-streeting-eu-latest-news-updates"
-        }
-      ]
-    },
-    {
-      "title": "China's robotics firms pursue more capable embodied AI",
-      "summary": "The robotics industry is moving beyond demonstrations of movement towards machines capable of understanding and completing practical tasks.",
-      "content": "The next challenge for manufacturers is to make systems reliable, safe and useful in real-world environments. Progress will depend on artificial intelligence, data quality, hardware performance and commercial applications.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
         }
       ]
     }
   ],
   "editorial": [
     {
-      "title": "Nigeria needs transparent institutions, not political slogans",
-      "summary": "The INEC register review and the Federal Government's procurement warning raise a common question: will public institutions be accountable in practice?",
-      "content": "Trust in government is built through consistent standards, transparent decisions and consequences when rules are broken. Electoral administration and public procurement may appear to be separate issues, but both affect the relationship between citizens and the state. Nigerians deserve clear explanations, accessible evidence and fair procedures. The same standards should apply to government officials, opposition figures, political parties and public institutions. Accountability should not depend on political loyalty.",
-      "category": "Editorial",
-      "image": "assets/leaders/tinubu.jpg",
+      "title": "Nigeria's opposition must offer a credible alternative, not merely an electoral alliance",
+      "summary": "A coalition will be meaningful only if it agrees on policies, transparent candidate selection and measurable national priorities.",
+      "content": "Nigeria's opposition parties face a major test ahead of 2027. They must decide whether cooperation can produce a credible alternative government or remain a series of political consultations.\n\nAtiku Abubakar's experience in national government and his current economic arguments form an important part of the debate. Peter Obi has presented his own policy priorities, including a 10,000MW electricity target. Rabiu Kwankwaso has raised regional representation and candidate selection. Other opposition figures, including Omoyele Sowore, have continued to challenge the political establishment from a different ideological position.\n\nThese differences should be discussed openly. A coalition should not be built only around opposition to President Tinubu. It should explain what it intends to do differently, how it will finance its proposals and how it will be held accountable.\n\nAtiku's supporters have an opportunity to make a clear case for his experience and programme. That case will be stronger when supported by specific proposals, public debate and answers to difficult questions.",
+      "image": "assets/leaders/atiku3.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
-        },
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/fg-vows-crackdown-on-inflated-public-contracts/"
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/news/headlines/922071-2027-politics-watch-sundays-roundup-atiku-challenges-tinubu-on-power-as-kwankwaso-tells-him-to-stand-down.html"
         }
       ]
     }
   ],
   "analysis": [
     {
-      "title": "Nigeria's opposition: Unity must be built around policy and accountability",
-      "summary": "Opposition cooperation may attract public attention, but lasting credibility requires a shared programme and transparent leadership.",
-      "content": "Nigeria's political opposition faces a difficult task. Different parties and political figures have their own support bases, ambitions and policy positions. Any cooperation must address how candidates are selected, how disagreements are resolved and how the proposed government would be held accountable. A credible alternative should explain how it would improve security, reduce the cost of living, strengthen electricity supply, create employment and improve public services. It should also explain how it would fund its promises. Atiku Abubakar, Peter Obi and other national political figures may feature in public discussions about opposition strategy, but no unverified agreement or alliance should be treated as established. The electorate needs evidence of serious preparation, not simply announcements of political meetings.",
-      "category": "Nigeria Political Analysis",
+      "title": "What Atiku's experience could mean for Nigeria's next administration",
+      "summary": "Atiku's supporters point to his experience as Vice-President and his private-sector background. Voters should assess both that experience and the practical detail of his current proposals.",
+      "content": "Atiku Abubakar served as Vice-President from 1999 to 2007. His supporters argue that this experience gives him an understanding of federal government, economic policy and the relationship between public institutions and private investment.\n\nExperience, however, should be assessed alongside outcomes. A presidential candidate must explain what lessons have been learned from previous administrations and how those lessons would shape a new programme.\n\nFor Atiku, the central opportunity is to turn his argument for economic reform into a detailed plan covering electricity, jobs, industrial development, education, healthcare, security and public finance.\n\nA convincing programme should include measurable targets, implementation timelines, financing arrangements and clear accountability mechanisms. These are the standards Nigerians should apply to every candidate.",
       "image": "assets/leaders/atiku.jpg",
       "sources": [
         {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
+          "name": "Atiku Abubakar official website",
+          "url": "https://atiku.org/"
         }
       ]
     },
     {
-      "title": "The Strait of Hormuz: Why a regional crisis can affect households worldwide",
-      "summary": "Disruption to a major shipping route can influence energy costs, transport and the prices paid by consumers.",
-      "content": "The economic consequences of a shipping crisis extend beyond the countries directly involved. Oil and gas cargoes, shipping insurance, freight costs and market expectations can all be affected. Governments and businesses will be watching whether diplomatic proposals lead to a sustained reopening of the route. Claims about individual attacks and military developments must be independently checked before they are treated as established facts.",
-      "category": "Global Analysis",
-      "image": "assets/europe-energy.jpg",
+      "title": "Atiku, Obi, Kwankwaso and Sowore: Different approaches to opposition politics",
+      "summary": "Nigeria's opposition contains different political traditions and strategies. Their proposals should be compared on policy, implementation and accountability.",
+      "content": "Atiku Abubakar's campaign places emphasis on experience, economic reform and private-sector-led growth. Peter Obi's public message has focused on productivity, public expenditure and investment in essential services. Rabiu Kwankwaso brings a political organisation with a strong base in Kano and has raised the question of regional rotation. Omoyele Sowore has pursued an activist and reform-oriented approach, frequently challenging established political structures.\n\nThese figures do not represent one unified political programme. Their supporters and parties must explain where their policies agree and where they differ.\n\nA serious comparison should examine the cost of each proposal, its implementation timetable, the institutions required and the evidence that it can work. Voters should be able to make that comparison before deciding which candidate deserves their support.",
+      "image": "",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/"
         }
       ]
     }
   ],
   "factCheck": [
     {
-      "title": "Fact Check: Have 268 cases of voter fraud been proven in Nigeria?",
+      "title": "Are the 268 INEC records proven cases of electoral fraud?",
       "verdict": "Not established",
-      "summary": "INEC has said that 268 preliminary voter-register records were flagged for further examination. This is not the same as confirming 268 cases of electoral fraud.",
-      "content": "The distinction between a record being flagged and fraud being proven is essential. INEC's explanation refers to suspected irregularities, including photographs believed to be AI-generated. The commission has also discussed special registration arrangements for people with incomplete or missing fingers. The public should wait for the review findings and any formal decisions before describing the records as fraudulent.",
-      "image": "assets/news/inec-voter-registration.jpg",
+      "summary": "INEC says 268 records were flagged for further examination. Being flagged is not the same as being proven fraudulent.",
+      "content": "The commission's reported findings concern records requiring further checks, including photographs suspected of being AI-generated. The records should not be described as confirmed fraudulent registrations unless INEC completes its investigation and provides evidence. The public has a legitimate interest in transparent findings and safeguards for genuine voters.",
       "sources": [
         {
-          "name": "The Punch",
+          "name": "Punch",
           "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
         }
       ]
     },
     {
-      "title": "Fact Check: Does a reported tanker explosion prove that the Strait of Hormuz is closed?",
-      "verdict": "No",
-      "summary": "A reported tanker incident and claims about mines do not by themselves establish that the entire Strait of Hormuz is closed.",
-      "content": "The cited Reuters report attributes the mine claim to Iran's Revolutionary Guard Navy. The cause of the reported explosions and the wider status of maritime traffic require independent confirmation. Reports about proposals to reopen the route should also not be confused with confirmation that an agreement has been reached.",
-      "image": "assets/europe-energy.jpg",
+      "title": "Has Atiku and Obi's joint presidential ticket been confirmed?",
+      "verdict": "No confirmed joint ticket in the reports reviewed",
+      "summary": "The two politicians are associated with separate political platforms, and discussions about cooperation should not be reported as a concluded agreement.",
+      "content": "Political consultations and public calls for unity do not establish that a joint ticket has been agreed. Any formal arrangement should be confirmed by the parties involved and should explain the candidate-selection process.",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-two-tankers-exploded-after-hitting-mines-hormuz-2026-11-01/"
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/news/headlines/922071-2027-politics-watch-sundays-roundup-atiku-challenges-tinubu-on-power-as-kwankwaso-tells-him-to-stand-down.html"
         }
       ]
     }
   ],
   "beyondStatement": [
     {
-      "title": "Beyond the Statement: What should Nigerians expect from an electoral register review?",
-      "summary": "An announcement that records have been flagged is only the beginning. The public needs to understand the evidence, review process and right of appeal.",
-      "content": "INEC should explain the technical criteria behind the flagged records, how genuine photographs are distinguished from manipulated images and how affected voters can challenge decisions. Political parties should be able to submit evidence through established procedures. Independent scrutiny can help protect the credibility of the register while preventing eligible voters from being unfairly excluded. The final outcome should be communicated clearly before certification.",
-      "category": "Public Accountability",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
-        }
-      ]
+      "title": "The electricity question every Nigerian voter should ask",
+      "summary": "Which candidate can explain how Nigeria will deliver dependable electricity, affordable tariffs and investment in generation, transmission and distribution?",
+      "content": "Electricity policy should be tested through actual supply, household affordability, business costs, investment and measurable delivery. Campaign statements from Atiku, Obi, Tinubu and other candidates should be compared against these standards."
     }
   ],
   "publicInterestFeature": {
-    "title": "Public money, public trust: The test of Nigeria's procurement reforms",
-    "summary": "A government warning against inflated contracts must be followed by transparent procurement records, independent audits and fair enforcement.",
-    "content": "Public funds are intended to deliver services and infrastructure. When contracts are inflated or awarded without proper competition, citizens may receive less value for the money spent. The Federal Government's warning to agencies is an opportunity to strengthen compliance with procurement law. The public should be able to see whether contract awards are competitive, whether projects are delivered and whether established violations lead to consequences. Accountability should be measured by results, not announcements.",
-    "image": "assets/mining-investigation.jpg",
-    "sources": [
-      {
-        "name": "The Punch",
-        "url": "https://punchng.com/fg-vows-crackdown-on-inflated-public-contracts/"
-      }
-    ]
+    "title": "Why Nigeria's electricity crisis matters to every household",
+    "summary": "Power supply affects food preservation, education, healthcare, jobs, transport, manufacturing and the cost of running a business.",
+    "content": "For many Nigerian households, unreliable electricity means additional spending on generators, fuel and alternative power. For small businesses, it raises operating costs and reduces the money available for expansion and employment.\n\nHospitals need dependable electricity for essential equipment. Schools need power for digital learning and administration. Manufacturers need predictable supply to compete with imported goods.\n\nThe debate between the government and opposition parties should therefore focus on measurable improvements. Nigerians need transparent information about generation, transmission losses, distribution performance, metering and the cost of electricity reforms.\n\nAtiku's proposed tariff changes, Obi's 10,000MW commitment and the Tinubu administration's current reforms should all be examined against the same public-interest questions.",
+    "image": "assets/europe-energy.jpg"
   },
   "technologyInnovation": [
     {
-      "title": "Artificial intelligence and electoral integrity",
-      "summary": "The INEC review illustrates how AI-generated images can create new challenges for identity verification and voter registration.",
-      "content": "Artificial intelligence can support public services, but synthetic images and manipulated identity material can also complicate verification. Electoral authorities need reliable biometric checks, transparent procedures and safeguards against wrongly rejecting genuine voters. Technology should strengthen public confidence rather than replace due process.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
-        }
-      ]
-    },
-    {
-      "title": "Cybersecurity for essential services",
-      "summary": "Reported attacks on supermarket refrigeration systems underline the importance of securing operational technology.",
-      "content": "Cybersecurity is no longer limited to computers and office networks. Systems controlling refrigeration, power, transport and industrial equipment can affect public safety and essential services. Organisations need access controls, monitoring, secure backups and tested incident-response plans.",
-      "image": "",
-      "sources": [
-        {
-          "name": "The Guardian",
-          "url": "https://www.theguardian.com/world/live/2026/nov/02/ukraine-russia-emergency-warning-systems-hack-zelenskyy-streeting-eu-latest-news-updates"
-        }
-      ]
+      "title": "Digital security must protect physical infrastructure",
+      "summary": "Cybersecurity planning now needs to cover refrigeration, power networks, emergency systems and other connected equipment.",
+      "content": "Digital transformation creates opportunities for efficiency, but it also creates new risks. Systems controlling food storage, energy and emergency communications require strong access controls, monitoring, backup arrangements and independent security testing."
     }
   ],
   "innovation": [
     {
-      "title": "Robotics: The next challenge is practical intelligence",
-      "summary": "The robotics industry is increasingly focused on machines that can understand instructions and perform useful tasks reliably.",
-      "content": "Demonstrating that a robot can walk or balance is different from proving that it can work safely and consistently in a factory, hospital or home. The next stage requires advances in artificial intelligence, sensors, training data and real-world testing.",
-      "image": "",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/china/chinas-robot-makers-have-mastered-moves-now-comes-race-brains-2026-11-01/"
-        }
-      ]
+      "title": "Nigeria's power sector needs innovation and investment",
+      "summary": "Mini-grids, renewable energy, storage systems, metering and modern transmission technology could form part of a broader electricity strategy.",
+      "content": "Nigeria's electricity challenge cannot be solved by generation targets alone. Distribution infrastructure, transmission capacity, maintenance, financing and consumer protection all matter. Candidates should explain how new technologies and private investment would fit into a national energy plan."
     }
   ],
   "leadersWatch": {
-    "intro": "Leaders Watch monitors public decisions, official statements and developments involving influential political figures. No new statement is attributed to a leader unless it is supported by a cited report.",
     "leaders": [
       {
-        "name": "Bola Ahmed Tinubu",
-        "position": "President of Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "update": "Nigeria's electoral register review and the Federal Government's procurement warning remain important governance issues for the administration. No new presidential statement on these specific developments is included in this edition."
-      },
-      {
         "name": "Atiku Abubakar",
-        "position": "Former Vice-President of Nigeria",
+        "country": "Nigeria",
+        "position": "ADC presidential candidate",
         "image": "assets/leaders/atiku.jpg",
-        "update": "Atiku remains a prominent figure in national opposition discussions. This edition does not attribute a new statement or confirmed alliance to him."
+        "summary": "Atiku has challenged the five-band electricity tariff system and pledged a fairer alternative. His campaign is preparing for its Sokoto flag-off scheduled for 4 November."
       },
       {
         "name": "Peter Obi",
-        "position": "Former presidential candidate",
+        "country": "Nigeria",
+        "position": "NDC presidential candidate",
         "image": "assets/leaders/obi.jpg",
-        "update": "Obi remains part of the national debate about opposition politics, public accountability and governance. No new statement is attributed to him in this edition."
+        "summary": "Obi has made a 10,000MW electricity target part of his campaign message. The proposal requires further detail on financing, infrastructure and timing."
       },
       {
         "name": "Rabiu Kwankwaso",
-        "position": "Former Governor of Kano State",
+        "country": "Nigeria",
+        "position": "NDC political figure",
         "image": "",
-        "update": "The Punch reports that Kwankwaso called for a thorough and transparent investigation into the INEC records flagged for review."
+        "summary": "Kwankwaso has raised regional rotation and candidate-selection questions in the opposition debate."
+      },
+      {
+        "name": "Bola Ahmed Tinubu",
+        "country": "Nigeria",
+        "position": "President",
+        "image": "assets/leaders/tinubu.jpg",
+        "summary": "The administration faces scrutiny over electricity supply, the economy, public spending and security as the 2027 election approaches."
+      },
+      {
+        "name": "Omoyele Sowore",
+        "country": "Nigeria",
+        "position": "Political activist and presidential aspirant",
+        "image": "",
+        "summary": "Sowore continues to represent an activist and reform-oriented strand of Nigerian opposition politics."
       },
       {
         "name": "Donald Trump",
-        "position": "President of the United States",
+        "country": "United States",
+        "position": "President",
         "image": "assets/leaders/trump.jpg",
-        "update": "Trump has made public comments about the conflict involving Iran and the future of the Strait of Hormuz. Statements about the expected end of the conflict should be treated as political claims, not confirmation of a settlement."
+        "summary": "Trump faces the congressional midterm elections and continuing scrutiny over US policy in the Middle East."
       },
       {
         "name": "Volodymyr Zelenskyy",
-        "position": "President of Ukraine",
+        "country": "Ukraine",
+        "position": "President",
         "image": "",
-        "update": "Zelenskyy condemned the reported strike on the school used as an aid distribution centre in the Zaporizhzhia region."
-      },
-      {
-        "name": "Bart De Wever",
-        "position": "Prime Minister of Belgium",
-        "image": "",
-        "update": "De Wever has offered his resignation following the failure of coalition budget talks. King Philippe has not yet confirmed whether he will accept it."
+        "summary": "Zelenskyy has condemned the bombing of a humanitarian aid centre in Zaporizhzhia."
       },
       {
         "name": "Emmanuel Macron",
-        "position": "President of France",
+        "country": "France",
+        "position": "President",
         "image": "assets/leaders/macron.jpg",
-        "update": "France continues to face debate over living costs, public services and political stability. No new presidential statement is attributed in this edition."
+        "summary": "France's government faces social mobilisation, budget debates and the approaching 2027 presidential transition."
       },
       {
-        "name": "Friedrich Merz",
-        "position": "Chancellor of Germany",
-        "image": "assets/leaders/merz.jpg",
-        "update": "Germany remains central to European debates about economic conditions, energy security and regional diplomacy. No new statement is attributed in this edition."
+        "name": "Sébastien Lecornu",
+        "country": "France",
+        "position": "Prime Minister",
+        "image": "",
+        "summary": "The prime minister faces renewed pressure over education, public spending and the budget."
       },
       {
-        "name": "Vladimir Putin",
-        "position": "President of Russia",
-        "image": "assets/leaders/putin.jpg",
-        "update": "Russia remains central to the war in Ukraine. Ukrainian authorities have attributed the Komyshuvakha strike to Russian forces; the casualty figures are reported by Ukrainian authorities."
-      },
-      {
-        "name": "Xi Jinping",
-        "position": "President of China",
-        "image": "assets/leaders/xi.jpg",
-        "update": "China's industrial and technology sectors remain under international attention, including developments in robotics and artificial intelligence."
-      },
-      {
-        "name": "Ursula von der Leyen",
-        "position": "President of the European Commission",
-        "image": "assets/leaders/von-der-leyen.jpg",
-        "update": "European institutions continue to face questions involving energy security, economic resilience and cybersecurity."
-      },
-      {
-        "name": "Mark Carney",
-        "position": "Prime Minister of Canada",
-        "image": "assets/leaders/carney.jpg",
-        "update": "No new verified statement from the Canadian prime minister is included in this edition."
+        "name": "Benjamin Netanyahu",
+        "country": "Israel",
+        "position": "Prime Minister",
+        "image": "",
+        "summary": "Netanyahu remains central to Israel's military and diplomatic decisions amid tensions with Iran."
       }
     ]
   },
   "electionWatch": [
     {
-      "title": "Nigeria: Final voter register certification expected in December",
-      "summary": "INEC says the preliminary register is open to scrutiny and that final certification is expected on 15 December.",
-      "content": "The 268 flagged records remain under examination. The process should protect the rights of eligible voters while ensuring that irregular records are addressed. Political parties and citizens should use the official claims and objections process.",
-      "image": "assets/news/inec-voter-registration.jpg",
-      "sources": [
-        {
-          "name": "The Punch",
-          "url": "https://punchng.com/inec-flags-268-records-over-ai-photos-irregularities/"
-        }
-      ]
+      "title": "Nigeria 2027: Opposition candidate selection remains unresolved",
+      "summary": "Atiku, Obi, Kwankwaso and other political figures face questions about cooperation, regional representation and the choice of a common candidate.",
+      "image": "assets/leaders/atiku2.jpg"
     },
     {
-      "title": "United States: Midterm elections approach amid debate over voter eligibility",
-      "summary": "Election administration and voter-list accuracy remain prominent issues ahead of voting.",
-      "content": "Legal and political disputes over suspected non-citizen voter records underline the importance of accurate registration systems and safeguards for eligible citizens. Allegations must be tested against evidence and the law.",
-      "image": "assets/leaders/trump.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/legal/government/how-trumps-noncitizen-voter-lists-could-affect-midterms-2026-11-01/"
-        }
-      ]
+      "title": "United States: Midterm voting day",
+      "summary": "Voters are choosing members of Congress. Results should not be announced until official counts and projections are available.",
+      "image": ""
     }
   ],
   "breakingHistory": [
     {
-      "title": "Novi Sad railway station disaster: A tragedy that reshaped Serbia's political debate",
-      "summary": "The collapse of a railway station canopy killed 16 people and became a focus of public demands for accountability.",
-      "content": "The disaster contributed to a student-led anti-corruption movement and a wider debate about public infrastructure, government transparency and institutional responsibility. The anniversary remains a reminder that public safety and accountability must extend beyond political statements.",
-      "image": "assets/news/bulgaria-election.jpg",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/serbians-mark-railway-disaster-that-led-rise-victorious-student-movement-2026-11-01/"
-        }
-      ]
+      "title": "Ukraine humanitarian aid centre bombing",
+      "date": "2026-11-02",
+      "summary": "Ukrainian authorities reported 26 deaths following strikes on a humanitarian aid distribution centre and neighbouring shelter in Komyshuvakha."
     }
   ],
   "thoughtForToday": {
     "title": "Thought for Today",
-    "quote": "A credible democracy is built not only by the leaders who seek power, but by the institutions that hold power accountable."
+    "quote": "Leadership is not measured by promises alone, but by the ability to turn public commitments into measurable improvements in people's lives."
   },
   "todaysBigQuestion": {
     "title": "Today's Big Question",
-    "question": "As Nigeria approaches another election cycle, what should voters demand first from political leaders: a credible economic plan, measurable security improvements, a record of public accountability, national unity, or stronger democratic institutions?",
-    "discussion": "Public participation should focus on evidence, policies and measurable results rather than political loyalty or personal attacks."
+    "question": "As Nigeria approaches 2027, what should matter most when choosing a president: experience in public service, a credible economic plan, a record of performance, the ability to unite the country, or a clear strategy for electricity and security?"
   },
   "sponsoredAdverts": [
     {
-      "title": "Spices and Natural Ingredients",
-      "image": "assets/spices.jpeg",
-      "description": "Discover the advertised range of spices and natural ingredients."
+      "title": "Spices",
+      "image": "assets/spices.jpeg"
     },
     {
-      "title": "Stonebreaker Product",
-      "image": "assets/stonebreaker.jpeg",
-      "description": "View the advertised Stonebreaker product."
+      "title": "Stonebreaker",
+      "image": "assets/stonebreaker.jpeg"
     }
   ],
   "contact": {
@@ -735,9 +721,15 @@
   },
   "archives": [],
   "editorialStandards": {
-    "verification": "RadiantWaves Media attributes claims to their sources and distinguishes allegations, preliminary findings and confirmed developments.",
-    "corrections": "Figures and developing stories may change. Corrections should be made when reliable new information becomes available.",
-    "independence": "Editorial coverage aims to provide balanced reporting, public-interest analysis and accountability without presenting political claims as established facts.",
-    "sources": "Where available, original reporting and official statements are linked for readers to consult."
+    "principles": [
+      "Independent journalism",
+      "Public accountability",
+      "Fair political scrutiny",
+      "Accurate attribution",
+      "Verification before publication",
+      "Corrections when new evidence becomes available"
+    ],
+    "politicalCoverage": "RadiantWaves Media may publish favourable, critical and analytical coverage of political candidates, including Atiku Abubakar. Positive articles must be grounded in verifiable records, published policies, documented achievements or clearly identified campaign positions. Other candidates and parties must be represented accurately, and allegations must not be presented as established facts.",
+    "verificationNote": "The Ukraine death toll is updated to 26 in the later Associated Press report. The US Supreme Court ruling on California ballots is sourced to Reuters. Atiku's electricity proposal is sourced to TheCable and Premium Times. Obi's 10,000MW pledge is identified as a campaign commitment. No confirmed Atiku–Obi joint ticket is reported. Claims about US military strikes, exact election polling figures and other developing events should be updated only when independently confirmed."
   }
 }

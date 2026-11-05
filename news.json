@@ -2,7 +2,7 @@
   "edition": "Morning",
   "date": "2026-11-05",
   "editionTime": "Morning",
-  "updatedAt": "2026-11-05T05:50:00+01:00",
+  "updatedAt": "2026-11-05T05:43:00+01:00",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "location": "Nigeria | France | Global",
@@ -11,134 +11,45 @@
     "slogan": "Gateway to Your World News — Connecting You to the World"
   },
   "hero": {
-    "title": "Morning News & Global Update — Thursday, 5 November 2026",
-    "description": "Nigeria's political landscape moves into a new phase following Atiku Abubakar's ADC campaign launch in Sokoto, a police investigation into the attack on Peter Obi's convoy in Calabar, major government borrowing proposals and progress towards state policing. Around the world, the US midterm results reshape Washington, maritime incidents raise fresh concerns around the Strait of Hormuz, Ukraine reports a mounting civilian death toll, and political and security developments unfold across Europe, Africa and Asia.",
+    "headline": "A changing political landscape: Nigeria's 2027 campaign season gathers momentum",
+    "subheadline": "From Atiku Abubakar's campaign launch in Sokoto to developments in the United States, Europe, Africa and the Middle East, RadiantWaves brings you the stories shaping today's world.",
     "image": "assets/diplomacy.jpeg",
-    "imageAlt": "International diplomacy and global affairs"
+    "imageAlt": "International diplomacy and global affairs",
+    "category": "Global Affairs",
+    "date": "5 November 2026",
+    "buttonText": "Explore Today's Top Stories"
   },
-  "morningSummary": "Thursday's leading stories include the formal launch of Atiku Abubakar's ADC presidential campaign in Sokoto, the arrest of a suspect following an attack on Peter Obi's convoy in Calabar, Senate scrutiny of President Tinubu's proposed $7.7 billion external borrowing plan, and the transmission of the proposed state police constitutional amendment to the Presidency. In the United States, Democrats have secured control of both chambers of Congress in the 3 November midterm elections. Iran's Revolutionary Guard has reported fires involving two oil tankers and a tugboat in the Strait of Hormuz, although the circumstances remain based on the Iranian military's account. Ukraine says the death toll following a strike on an aid distribution centre in Zaporizhzhia has reached 40. France is preparing for nationwide demonstrations, while a cyberattack affecting refrigeration controls at three French blood-storage facilities was detected before any blood products were compromised. In Africa, Ethiopia has ordered six Sudanese diplomatic staff to leave, and South Africa is counting votes following its municipal elections.",
-  "editorialNote": "RadiantWaves Media reports independently and distinguishes verified developments from campaign statements, official claims, allegations and opinion. Political promises are not presented as achieved results. Reports concerning attacks, conflict incidents and security allegations are attributed to the relevant authorities or parties until independently established. Election results are described according to their verified status at the time of publication.",
+  "morningSummary": {
+    "title": "The Morning Global Briefing",
+    "text": "Nigeria's political landscape is entering another important phase following Atiku Abubakar's ADC campaign launch in Sokoto. Meanwhile, the police are investigating an attack on Peter Obi's convoy in Calabar, lawmakers are scrutinising a proposed external borrowing request, and the debate over state policing continues. Internationally, developments in the United States, Ukraine, France, the Middle East and Africa remain in focus. RadiantWaves separates confirmed developments from political claims and reports that still require independent verification.",
+    "highlights": [
+      "Atiku Abubakar launches his ADC 2027 presidential campaign in Sokoto.",
+      "Police arrest a suspect following an attack on Peter Obi's convoy in Calabar.",
+      "Nigeria's proposed $7.7 billion external borrowing request faces legislative scrutiny.",
+      "The state police constitutional amendment process moves to the presidential assent stage.",
+      "The reported Democratic gains in the US midterm elections could reshape President Trump's legislative environment.",
+      "France prepares for demonstrations with a major police deployment.",
+      "The war in Ukraine continues to bring civilian casualties and humanitarian concerns."
+    ]
+  },
+  "editorialNote": {
+    "title": "Our Editorial Commitment",
+    "text": "RadiantWaves Media reports developments with an emphasis on accuracy, context and accountability. Campaign promises are presented as political commitments, not established achievements. Allegations are attributed to the people or institutions making them. Arrests do not establish guilt, and preliminary election information is not presented as a final result. Where independent confirmation is limited, we say so."
+  },
   "breaking": [
     {
-      "title": "Atiku formally launches ADC presidential campaign in Sokoto",
-      "summary": "The African Democratic Congress formally flagged off Atiku Abubakar's 2027 presidential campaign in Sokoto on Wednesday, 4 November. Atiku reiterated his commitment to tackling insecurity and presented proposals on economic hardship, petroleum subsidy and border trade. The proposals remain campaign commitments requiring detailed policy explanations.",
+      "title": "Atiku launches ADC 2027 presidential campaign in Sokoto",
+      "summary": "Former Vice-President Atiku Abubakar formally launched his 2027 presidential campaign in Sokoto on 4 November, outlining proposals on fuel subsidy, border policy, insecurity and pilgrimage costs.",
       "category": "Nigeria Politics",
-      "date": "2026-11-04",
-      "source": "Channels Television; Voice of Nigeria",
-      "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/",
+      "date": "2026-11-05",
+      "source": "Voice of Nigeria",
+      "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/",
       "image": "assets/leaders/atiku.jpg",
-      "imageAlt": "Atiku Abubakar at the ADC presidential campaign launch"
+      "imageAlt": "Atiku Abubakar"
     },
     {
-      "title": "Police arrest suspect over Peter Obi convoy attack in Calabar",
-      "summary": "Cross River State Police confirmed the arrest of a 27-year-old suspect following an attack on Peter Obi's convoy around Watt Market Roundabout in Calabar on 4 November. Police said investigations are continuing to identify other suspected participants and establish the circumstances. The arrested person remains entitled to the presumption of innocence.",
-      "category": "Nigeria Politics",
-      "date": "2026-11-05",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/",
-      "image": "assets/leaders/obi.jpg",
-      "imageAlt": "Peter Obi, Nigerian Democratic Congress presidential candidate"
-    },
-    {
-      "title": "Senate scrutinises proposed $7.7 billion external loan",
-      "summary": "The Senate has referred President Tinubu's request for approximately $7.7 billion in external borrowing to its Committee on Local and Foreign Debts for examination. The proposed borrowing is intended to help finance the 2026 budget deficit. It has not yet received final legislative approval.",
-      "category": "Nigeria",
-      "date": "2026-11-05",
-      "source": "Punch Newspapers; Premium Times",
-      "url": "https://punchng.com/senate-considers-tinubus-n-10-79tn-foreign-loan-request/",
-      "image": "",
-      "imageAlt": "Nigeria's Senate considers an external borrowing proposal"
-    },
-    {
-      "title": "State police constitutional amendment transmitted to Tinubu",
-      "summary": "The National Assembly has transmitted the constitutional amendment seeking to establish state police to President Bola Tinubu for assent after approval by 30 state legislatures. The proposal is not yet operational and requires presidential assent before the constitutional process can be completed.",
-      "category": "Nigeria",
-      "date": "2026-11-04",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/nassembly-transmits-state-police-bill-to-tinubu-as-30-assemblies-approve-constitution-amendment/",
-      "image": "",
-      "imageAlt": "Nigeria's National Assembly"
-    },
-    {
-      "title": "Democrats take control of both chambers of US Congress",
-      "summary": "Democrats secured control of the House of Representatives and Senate in the 3 November midterm elections, according to Reuters. The result creates a major shift in Washington and gives Democrats greater legislative and oversight influence during President Donald Trump's remaining term.",
-      "category": "USA",
-      "date": "2026-11-04",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528",
-      "image": "",
-      "imageAlt": "United States Capitol in Washington"
-    },
-    {
-      "title": "Iran reports fires involving oil tankers and tugboat in Strait of Hormuz",
-      "summary": "Iran's Islamic Revolutionary Guard Corps reported that two oil tankers and a tugboat caught fire in separate incidents in the Strait of Hormuz. The IRGC gave its account of the vessels' routes and the circumstances. Independent confirmation of the full sequence of events remains necessary.",
-      "category": "World",
-      "date": "2026-11-05",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/",
-      "image": "",
-      "imageAlt": "Commercial oil tankers navigating the Strait of Hormuz"
-    }
-  ],
-  "breakingHistory": [
-    {
-      "date": "2026-11-04",
-      "title": "ADC presidential campaign formally flagged off in Sokoto",
-      "summary": "Atiku Abubakar's presidential campaign launch proceeded in Sokoto despite earlier disputes over campaign facilities and security concerns. The event marked a major public mobilisation by the ADC ahead of the 2027 general election.",
-      "category": "Nigeria Politics",
-      "source": "Channels Television",
-      "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/"
-    },
-    {
-      "date": "2026-11-04",
-      "title": "Peter Obi reports attack on his convoy in Calabar",
-      "summary": "Peter Obi reported that his convoy was attacked during his visit to Calabar. Cross River Police subsequently confirmed an arrest and opened an investigation.",
-      "category": "Nigeria Politics",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
-    },
-    {
-      "date": "2026-11-04",
-      "title": "National Assembly advances proposed state police framework",
-      "summary": "The proposed constitutional amendment received the required number of state assembly approvals and was transmitted to President Tinubu for assent.",
-      "category": "Nigeria",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/nassembly-transmits-state-police-bill-to-tinubu-as-30-assemblies-approve-constitution-amendment/"
-    },
-    {
-      "date": "2026-11-04",
-      "title": "Democrats secure control of Congress in US midterms",
-      "summary": "The results changed the balance of power in Washington, giving Democrats control of both congressional chambers.",
-      "category": "USA",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528"
-    }
-  ],
-  "featured": {
-    "title": "Atiku's Sokoto Campaign: The Rally, the Promises and the Questions Facing Nigeria's 2027 Election",
-    "summary": "Atiku Abubakar formally launched the ADC presidential campaign in Sokoto on 4 November. The event followed a dispute over campaign facilities and concerns about security. The ADC described the turnout as evidence of public dissatisfaction with the Tinubu administration. Campaign spokesperson Phrank Shaibu also described the scale of the journey and the number of supporters along the route. Such descriptions should be understood as campaign accounts, not independent measurements of national support. Atiku reiterated his commitment to tackling insecurity. His campaign has also discussed restoring petroleum subsidy and reopening land borders for legitimate trade. These proposals require detailed explanations of funding, implementation, economic consequences and safeguards against abuse. The Department of State Services rejected Atiku's allegation that it was recruiting protesters to disrupt the campaign. The agency said its Director-General had ordered an investigation into the allegation. The rally went ahead. The next test for the ADC is to explain how its political promises would translate into measurable public outcomes.",
-    "description": "A detailed RadiantWaves special report on the ADC campaign launch, Atiku's statements, the security controversy, campaign claims and the policy questions voters should examine.",
-    "category": "Nigeria Politics",
-    "date": "2026-11-05",
-    "source": "Channels Television; Premium Times; TheCable; Voice of Nigeria",
-    "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/",
-    "image": "assets/leaders/atiku.jpg",
-    "imageAlt": "Atiku Abubakar, ADC presidential candidate"
-  },
-  "topStories": [
-    {
-      "title": "Atiku launches ADC presidential campaign in Sokoto",
-      "summary": "The former Vice-President formally launched his presidential campaign in Sokoto, reaffirming his commitment to tackling insecurity and calling for support ahead of the 2027 general election.",
-      "category": "Nigeria Politics",
-      "date": "2026-11-04",
-      "source": "Channels Television",
-      "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/",
-      "image": "assets/leaders/atiku.jpg",
-      "imageAlt": "Atiku Abubakar at the ADC campaign flag-off"
-    },
-    {
-      "title": "Police arrest suspect after Peter Obi convoy attack",
-      "summary": "Police confirmed that a suspect has been arrested in connection with the reported attack on Peter Obi's convoy in Calabar. Investigations continue.",
+      "title": "Police arrest suspect after attack on Peter Obi's convoy",
+      "summary": "Cross River Police say a 27-year-old suspect has been arrested following an attack on Peter Obi's convoy in Calabar. Investigations are continuing, and the arrest is not a determination of guilt.",
       "category": "Nigeria Politics",
       "date": "2026-11-05",
       "source": "TheCable",
@@ -147,453 +58,722 @@
       "imageAlt": "Peter Obi"
     },
     {
-      "title": "Tinubu's $7.7 billion external borrowing request faces Senate scrutiny",
-      "summary": "The Senate has begun scrutiny of the proposed external borrowing intended to part-finance the 2026 budget deficit. The proposal raises questions about debt sustainability and public accountability.",
-      "category": "Nigeria",
+      "title": "France prepares for nationwide demonstrations",
+      "summary": "France's Interior Minister Laurent Nuñez announced a deployment of approximately 70,000 police officers and gendarmes ahead of demonstrations scheduled for 5 November.",
+      "category": "Europe",
       "date": "2026-11-05",
-      "source": "Punch Newspapers",
-      "url": "https://punchng.com/senate-considers-tinubus-n-10-79tn-foreign-loan-request/",
-      "image": "",
-      "imageAlt": "Nigeria Senate"
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
+      "image": "assets/europe.jpeg",
+      "imageAlt": "European public affairs"
+    }
+  ],
+  "breakingHistory": [
+    {
+      "date": "2026-11-04",
+      "title": "ADC campaign launch in Sokoto",
+      "summary": "Atiku Abubakar launched his 2027 presidential campaign in Sokoto, presenting his political platform and policy proposals.",
+      "category": "Nigeria Politics",
+      "image": "assets/leaders/atiku.jpg",
+      "source": "Voice of Nigeria",
+      "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/"
     },
     {
-      "title": "State police amendment reaches the Presidency",
-      "summary": "The proposed constitutional amendment has been transmitted to President Tinubu following approval by 30 state assemblies. Presidential assent remains outstanding.",
-      "category": "Nigeria",
       "date": "2026-11-04",
+      "title": "Peter Obi convoy reportedly attacked in Calabar",
+      "summary": "An incident involving Peter Obi's convoy was reported in Calabar. Police subsequently announced an arrest and said investigations were continuing.",
+      "category": "Nigeria Politics",
+      "image": "assets/leaders/obi.jpg",
       "source": "TheCable",
-      "url": "https://www.thecable.ng/nassembly-transmits-state-police-bill-to-tinubu-as-30-assemblies-approve-constitution-amendment/",
-      "image": "",
-      "imageAlt": "Nigeria National Assembly"
+      "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
     },
     {
-      "title": "Democrats take control of the US House and Senate",
-      "summary": "The 2026 midterm election results give Democrats control of both congressional chambers and reshape the political environment for President Trump.",
-      "category": "USA",
       "date": "2026-11-04",
+      "title": "Ethiopia orders Sudanese consular staff to leave",
+      "summary": "Ethiopia ordered six Sudanese consulate staff to leave within 48 hours amid renewed diplomatic tensions and competing allegations linked to Sudan's conflict.",
+      "category": "Africa",
+      "image": "assets/africa.jpeg",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528",
-      "image": "",
-      "imageAlt": "United States Capitol"
+      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/"
+    }
+  ],
+  "featured": {
+    "title": "Atiku's Sokoto campaign launch: What the promises mean for Nigeria",
+    "subtitle": "The 2027 political contest is taking shape. Beyond the crowd and campaign speeches, Nigerians will want to understand how the proposed policies would work in practice.",
+    "summary": "Atiku Abubakar's campaign launch in Sokoto has brought the ADC's 2027 presidential ambition further into the national conversation. Among the proposals highlighted were restoring petroleum subsidy arrangements, reopening land borders, addressing insecurity and reducing pilgrimage costs for Muslim and Christian Nigerians.",
+    "content": [
+      "The launch marks an important campaign moment for the former Vice-President and the African Democratic Congress. It also gives voters an opportunity to begin examining the policy choices being presented by the opposition.",
+      "On fuel subsidy, the central questions concern affordability, public finances, transparency and how any proposed intervention would be funded. A campaign promise needs to be accompanied by a clear explanation of its economic consequences.",
+      "On border policy, reopening land borders would require consideration of legitimate trade, customs revenue, security, smuggling and the impact on local producers.",
+      "On insecurity, Nigerians will expect more than a general commitment. They will want to see a practical plan covering intelligence, policing, military coordination, justice, local prevention and support for affected communities.",
+      "The proposal to reduce pilgrimage costs also raises questions about funding, eligibility and the role of government in supporting religious travel.",
+      "The size of a campaign gathering can demonstrate mobilisation, but it is not a scientific measure of nationwide voter support. The real test will be the strength of the policy programme, party organisation, public confidence and the ability to compete across Nigeria."
+    ],
+    "category": "Nigeria Politics",
+    "date": "2026-11-05",
+    "source": "Voice of Nigeria",
+    "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/",
+    "image": "assets/leaders/atiku.jpg",
+    "imageAlt": "Atiku Abubakar at the centre of the ADC 2027 campaign",
+    "readMoreText": "Read full report",
+    "readSourceText": "Read source"
+  },
+  "topStories": [
+    {
+      "title": "Atiku presents his 2027 campaign proposals in Sokoto",
+      "summary": "The former Vice-President highlighted proposed changes to fuel subsidy policy, border management, security and pilgrimage costs as the ADC campaign gathered momentum.",
+      "description": "The proposals now place policy detail and implementation under greater public scrutiny. Voters will need to assess how the commitments would be financed and delivered.",
+      "category": "Nigeria",
+      "date": "2026-11-05",
+      "source": "Voice of Nigeria",
+      "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/",
+      "image": "assets/leaders/atiku.jpg",
+      "imageAlt": "Atiku Abubakar"
     },
     {
-      "title": "Iran reports new maritime incidents in the Strait of Hormuz",
-      "summary": "Iran's Revolutionary Guard says two tankers and a tugboat caught fire in separate incidents. The claims and circumstances require independent confirmation.",
-      "category": "World",
+      "title": "Police investigate attack on Peter Obi's convoy in Calabar",
+      "summary": "Police announced the arrest of a 27-year-old suspect after an incident involving the former presidential candidate's convoy.",
+      "description": "The investigation should establish what happened, who was involved and whether further arrests are necessary. The suspect remains entitled to due process.",
+      "category": "Nigeria",
+      "date": "2026-11-05",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/",
+      "image": "assets/leaders/obi.jpg",
+      "imageAlt": "Peter Obi"
+    },
+    {
+      "title": "DSS rejects allegation that it organised anti-ADC protests",
+      "summary": "The Department of State Services denied Atiku Abubakar's allegation that it was organising protests against the ADC in Sokoto. The agency offered its own account of events and said relevant allegations were under investigation.",
+      "description": "The competing statements underline the need for transparent investigation and independently verifiable evidence. Allegations and official denials should both be reported with attribution.",
+      "category": "Nigeria Politics",
+      "date": "2026-11-05",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/dss-replies-atiku-says-it-is-not-organising-anti-adc-protests-in-sokoto/",
+      "image": "assets/nigeria.jpeg",
+      "imageAlt": "Nigeria's political and security institutions"
+    },
+    {
+      "title": "Senate scrutinises proposed $7.7 billion external borrowing request",
+      "summary": "Nigeria's proposed external borrowing request is attracting legislative attention, placing public debt, infrastructure financing and repayment capacity in focus.",
+      "description": "The key questions include the proposed use of the funds, borrowing terms, foreign-exchange exposure, repayment schedule and the expected economic returns. The final position should be based on the official legislative record and government documentation.",
+      "category": "Business & Economy",
+      "date": "2026-11-05",
+      "source": "Nigerian Senate / Official legislative proceedings",
+      "url": "",
+      "image": "assets/market.jpeg",
+      "imageAlt": "Financial markets and public finance"
+    },
+    {
+      "title": "State police amendment moves towards presidential assent",
+      "summary": "Following approval by the required number of state legislatures, the constitutional amendment concerning state police has been transmitted to the President for the next stage of the process.",
+      "description": "The development does not mean state police are already operational. Presidential assent and the necessary legal and institutional arrangements remain important steps. Questions of accountability, funding, human rights safeguards and political independence will be central to implementation.",
+      "category": "Nigeria",
+      "date": "2026-11-05",
+      "source": "National Assembly / Official government process",
+      "url": "",
+      "image": "assets/nigeria.jpeg",
+      "imageAlt": "Nigeria's constitutional and public institutions"
+    },
+    {
+      "title": "US midterm election results reshape the political landscape",
+      "summary": "Reports from the 3 November US midterm elections indicate major Democratic gains, including control of both chambers of Congress. The certified results and final seat distribution will determine the full extent of the shift.",
+      "description": "If the reported results are confirmed, President Donald Trump will face a substantially changed legislative environment. Congressional control affects legislation, oversight, spending and the political direction of the remainder of the presidential term.",
+      "category": "USA",
+      "date": "2026-11-05",
+      "source": "Election reporting — results subject to official certification",
+      "url": "",
+      "image": "assets/usa.jpeg",
+      "imageAlt": "United States political institutions"
+    },
+    {
+      "title": "Iran's IRGC reports fires involving vessels in the Strait of Hormuz",
+      "summary": "Iran's Islamic Revolutionary Guard Corps reportedly said two oil tankers and a tugboat caught fire in the Strait of Hormuz. Independent confirmation and the full circumstances remain limited.",
+      "description": "The Strait of Hormuz is a strategically important route for global energy shipments. Any disruption could affect shipping costs, insurance and oil-market confidence. The reported incident should not be treated as independently established until further verification is available.",
+      "category": "Middle East",
+      "date": "2026-11-05",
+      "source": "Iranian IRGC statement — independent verification pending",
+      "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/",
+      "image": "assets/oil.jpeg",
+      "imageAlt": "Oil shipping and energy infrastructure"
+    },
+    {
+      "title": "Ukraine reports further casualties after strike in Zaporizhzhia region",
+      "summary": "Reports from Ukraine indicate that the death toll following a strike affecting a shelter or aid centre in Komyshuvakha has risen. The reported toll has changed as information has emerged.",
+      "description": "The Associated Press reported a death toll of 40 in its 5 November coverage. Casualty figures in active conflict zones can change as rescue work and verification continue. Responsibility and the circumstances of the strike should be assessed through independently corroborated reporting.",
+      "category": "Europe",
+      "date": "2026-11-05",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/37dc5e85a5c8c135996bc2720e0674d9",
+      "image": "assets/europe.jpeg",
+      "imageAlt": "The war in Ukraine and its humanitarian consequences"
+    },
+    {
+      "title": "France deploys 70,000 police and gendarmes ahead of demonstrations",
+      "summary": "Interior Minister Laurent Nuñez announced a deployment of around 70,000 police officers and gendarmes for demonstrations planned across France on 5 November.",
+      "description": "More than 220 public actions were expected. In Paris, the planned route was changed to run from République towards Nation. Authorities said they would not tolerate serious disorder. The demonstrations will test public order arrangements and the ability to protect peaceful assembly.",
+      "category": "Europe",
+      "date": "2026-11-05",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
+      "image": "assets/europe.jpeg",
+      "imageAlt": "France and European public affairs"
+    },
+    {
+      "title": "Cyberattack affects three French blood service sites",
+      "summary": "A cyberattack involving a refrigeration equipment provider affected three sites operated by the French blood service. Officials said no blood products were lost.",
+      "description": "The incident highlights the exposure of essential healthcare infrastructure to cyber risks, including risks that can arise through third-party suppliers. Authorities and the blood service have been monitoring the situation and investigating anomalies.",
+      "category": "Technology & Healthcare",
+      "date": "2026-11-05",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/04/cyberattack-hits-french-blood-banks-but-no-samples-compromised-officials-say",
+      "image": "assets/ai.jpeg",
+      "imageAlt": "Technology and digital security in healthcare"
+    },
+    {
+      "title": "Ethiopia expels six Sudanese consular staff amid diplomatic tensions",
+      "summary": "Ethiopia ordered six Sudanese consulate staff to leave within 48 hours amid allegations concerning support for armed groups in Sudan. Both sides have disputed aspects of the accusations.",
+      "description": "The dispute comes as Sudan's conflict continues to destabilise the region. Diplomatic expulsions and competing allegations risk worsening relations between neighbouring states. Claims about military or political support should remain attributed until independently established.",
+      "category": "Africa",
       "date": "2026-11-05",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/",
-      "image": "",
-      "imageAlt": "Commercial shipping in the Strait of Hormuz"
+      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/",
+      "image": "assets/africa.jpeg",
+      "imageAlt": "East Africa and regional diplomacy"
+    },
+    {
+      "title": "British healthcare worker with Ebola to be evacuated from DR Congo",
+      "summary": "A British healthcare worker reported to have contracted Ebola in the Democratic Republic of Congo is expected to be evacuated to the United Kingdom. Reports said the worker was stable.",
+      "description": "Public health authorities are expected to manage the evacuation and assess any potential contacts. The reported risk to the wider UK public is low. The situation requires careful monitoring and accurate public-health communication.",
+      "category": "Africa / Health",
+      "date": "2026-11-05",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/british-healthcare-worker-with-ebola-be-evacuated-congo-uk-document-shows-2026-11-04/",
+      "image": "assets/africa.jpeg",
+      "imageAlt": "Public health and healthcare response in Africa"
+    },
+    {
+      "title": "South Africa awaits local government election results",
+      "summary": "South Africa held local government elections on 4 November. Counting and verification are under way, and early figures should not be treated as final results.",
+      "description": "Local elections provide an important measure of public confidence in municipal services, political parties and local leadership. The Electoral Commission's official announcements remain the reference point for verified results.",
+      "category": "Africa",
+      "date": "2026-11-05",
+      "source": "Electoral Commission of South Africa",
+      "url": "https://www.gov.za/news/media-statements/electoral-commission-reports-smooth-start-2026-local-government-election-04",
+      "image": "assets/africa.jpeg",
+      "imageAlt": "South African local government elections"
+    },
+    {
+      "title": "Israel begins government consultations after certified election results",
+      "summary": "President Isaac Herzog accepted the certified election results and began consultations on forming a government. No political bloc has secured the 61 seats required for a parliamentary majority.",
+      "description": "Reported seat distributions leave coalition negotiations central to the next stage of Israeli politics. The figures reported include 53 seats for Netanyahu-aligned parties, 48 for opposition parties and 19 for Arab-led parties. The outcome will depend on negotiations and the positions of individual parties.",
+      "category": "Middle East",
+      "date": "2026-11-05",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/57aefc6424da937ad2842f6d762631ae",
+      "image": "assets/middleeast.jpeg",
+      "imageAlt": "Israeli politics and regional diplomacy"
     }
   ],
   "articles": [
     {
-      "title": "Atiku's Sokoto Campaign: What Happened and What Comes Next?",
-      "summary": "The ADC presidential campaign was formally launched in Sokoto on Wednesday, 4 November. Atiku Abubakar arrived in the state and was received by party leaders and supporters. The rally took place at the ADC state secretariat along Ilorin Road. The campaign described the turnout as a sign of public dissatisfaction with the Tinubu administration. Atiku spoke about insecurity and urged Nigerians to support the ADC. His campaign has also put forward proposals on petroleum subsidy and border trade. These are political commitments that require detailed policy explanations. The event followed a dispute over access to campaign facilities and allegations of political interference. The party's claims about the scale and meaning of the turnout should be understood as campaign statements rather than a nationwide opinion survey.",
-      "description": "A special report on the campaign launch, the political message, security concerns and policy questions arising from the Sokoto event.",
-      "content": "The ADC's Sokoto campaign launch marks an important stage in public mobilisation ahead of Nigeria's 2027 general election. Atiku Abubakar said his party would continue its activities despite alleged attempts to frustrate its campaign. The Department of State Services rejected Atiku's allegation that it was recruiting protesters to disrupt the event. The DSS said its operatives had protected ADC governorship candidate Mannir Daniya during an incident on 31 October and that two personnel were injured. It also confirmed that its Director-General had ordered an investigation into Atiku's allegation. The rally proceeded. For voters, the next important issue is the detail behind the promises: security strategy, funding, border management, economic reform and public accountability. The crowd at a political rally can demonstrate enthusiasm among those present, but it cannot by itself establish the level of nationwide electoral support.",
+      "title": "Nigeria's opposition challenge: Can political cooperation become a credible alternative?",
+      "summary": "The ADC campaign launch in Sokoto comes as opposition figures face the challenge of building a coherent national alternative ahead of the 2027 elections.",
+      "description": "Nigeria's opposition parties face a difficult strategic task. Public dissatisfaction alone does not guarantee electoral success. A credible alternative requires a clear policy programme, organisational strength, transparent candidate selection and cooperation that can withstand political pressure.",
+      "content": [
+        "The 2027 election cycle is increasingly becoming a test of whether opposition parties can translate public concerns into a practical political programme.",
+        "Atiku Abubakar's ADC campaign launch in Sokoto adds another major development to the emerging contest. His proposals on subsidy policy, borders, security and pilgrimage costs will invite scrutiny from voters and policy specialists.",
+        "The wider opposition question is whether different political interests can agree on a shared minimum programme without losing their identities or creating fresh divisions.",
+        "Nigerians will be looking for specific commitments on inflation, employment, electricity, education, healthcare, insecurity, public debt and institutional accountability.",
+        "A campaign should be judged not only by its promises or attendance but by the quality of its plans, the credibility of its team and its willingness to explain how proposed policies would be funded."
+      ],
       "category": "Nigeria Politics",
       "date": "2026-11-05",
-      "source": "Channels Television; Premium Times; Voice of Nigeria; TheCable",
-      "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/",
-      "image": "assets/leaders/atiku.jpg",
-      "imageAlt": "Atiku Abubakar at the ADC campaign event"
+      "source": "RadiantWaves Media analysis; campaign proposals attributed to Voice of Nigeria",
+      "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/",
+      "image": "assets/nigeria.jpeg",
+      "imageAlt": "Nigeria's political landscape"
     },
     {
-      "title": "DSS Rejects Atiku's Allegation and Orders Investigation",
-      "summary": "The Department of State Services rejected Atiku Abubakar's allegation that it was recruiting protesters to cause unrest in Sokoto. The agency said two of its operatives were injured while protecting ADC governorship candidate Mannir Daniya during an incident on 31 October. The DSS said its Director-General ordered an investigation into Atiku's allegation. The allegation has not been independently established.",
-      "category": "Nigeria Politics",
-      "date": "2026-11-04",
-      "source": "TheCable; Voice of Nigeria",
-      "url": "https://www.thecable.ng/dss-replies-atiku-says-it-is-not-organising-anti-adc-protests-in-sokoto/",
-      "image": "",
-      "imageAlt": "Department of State Services Nigeria"
-    },
-    {
-      "title": "Peter Obi's Convoy Attacked in Calabar as Police Arrest Suspect",
-      "summary": "Cross River State Police said suspected hoodlums armed with machetes and sticks attacked Peter Obi's convoy around Watt Market Roundabout in Calabar on 4 November. Police identified an arrested suspect as 27-year-old Victor Edet Yellow Duke. The police said the investigation would continue to identify other participants and establish the circumstances. The arrest is not a determination of guilt, and the suspect remains entitled to the presumption of innocence.",
+      "title": "The Peter Obi convoy incident: Security, political tolerance and due process",
+      "summary": "The reported attack on Peter Obi's convoy in Calabar raises concerns about the safety of political actors and the protection of democratic participation.",
+      "description": "Police have announced an arrest, but the investigation must establish the facts. Political violence and intimidation have no place in a democratic contest.",
+      "content": [
+        "The reported incident involving Peter Obi's convoy in Calabar has renewed attention on the safety of political figures and their supporters.",
+        "Cross River Police announced the arrest of a 27-year-old suspect. An arrest is an investigative step, not proof of guilt.",
+        "Authorities should provide a clear account of the incident, preserve evidence and ensure that any prosecution follows due process.",
+        "Political disagreement must never become an excuse for intimidation or violence. Every political party and public figure has a responsibility to reject threats and encourage peaceful participation."
+      ],
       "category": "Nigeria Politics",
       "date": "2026-11-05",
       "source": "TheCable",
       "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/",
       "image": "assets/leaders/obi.jpg",
-      "imageAlt": "Peter Obi, NDC presidential candidate"
+      "imageAlt": "Peter Obi"
     },
     {
-      "title": "Nigeria's State Police Amendment Reaches the Presidency",
-      "summary": "The National Assembly transmitted the proposed state police constitutional amendment to President Tinubu after 30 state legislatures approved it. The proposal aims to provide a constitutional basis for state police services. Presidential assent is still required, and operational arrangements, funding, recruitment, oversight and safeguards against political interference remain important questions.",
+      "title": "Nigeria's borrowing debate: What citizens should expect from lawmakers",
+      "summary": "The proposed $7.7 billion external borrowing request raises questions about debt sustainability, transparency and the economic value of public projects.",
+      "description": "Borrowing is not automatically harmful, but public debt must be justified by credible plans, transparent terms and measurable benefits.",
+      "content": [
+        "Nigeria's borrowing debate should go beyond the headline amount. Citizens need to know what projects or obligations the proposed funds would cover.",
+        "Lawmakers should examine the borrowing terms, interest costs, repayment period, foreign-exchange risks and the government's ability to meet future obligations.",
+        "The public also needs transparent reporting on how previously borrowed funds have been used and whether promised projects have delivered measurable results.",
+        "The central test is whether borrowing creates sustainable public value rather than simply postponing fiscal pressure."
+      ],
+      "category": "Business & Economy",
+      "date": "2026-11-05",
+      "source": "Nigerian Senate / Official legislative proceedings",
+      "url": "",
+      "image": "assets/market.jpeg",
+      "imageAlt": "Nigeria's economy and public finance"
+    },
+    {
+      "title": "State police in Nigeria: A constitutional step, not an operational reality yet",
+      "summary": "The movement of the state police amendment towards presidential assent is significant, but practical implementation will require safeguards and detailed legislation.",
+      "description": "The debate is about how to improve local security while preventing political abuse, unlawful detention and unequal protection.",
+      "content": [
+        "Supporters of state policing argue that local institutions may respond more quickly to community-level security challenges and local intelligence.",
+        "However, decentralising police structures also creates risks if governors or political actors are able to use law-enforcement institutions against opponents.",
+        "A workable framework needs independent oversight, clear command structures, professional recruitment, adequate training, transparent funding and effective complaints mechanisms.",
+        "The amendment process should not be confused with the immediate creation of operational state police services. The remaining legal and institutional steps matter."
+      ],
       "category": "Nigeria",
-      "date": "2026-11-04",
-      "source": "TheCable",
-      "url": "https://www.thecable.ng/nassembly-transmits-state-police-bill-to-tinubu-as-30-assemblies-approve-constitution-amendment/",
-      "image": "",
-      "imageAlt": "Nigeria National Assembly chamber"
-    },
-    {
-      "title": "Tinubu's $7.7 Billion External Borrowing Request Faces Senate Scrutiny",
-      "summary": "President Bola Tinubu has requested approval for approximately $7.7 billion in external borrowing to part-finance the 2026 budget deficit. The Senate referred the request to its Committee on Local and Foreign Debts for examination. The proposal follows the withdrawal of an earlier, larger external borrowing request. The debate raises questions about debt sustainability, borrowing costs, repayment obligations, transparency and the projects expected to benefit.",
-      "category": "Business",
       "date": "2026-11-05",
-      "source": "Punch Newspapers; Premium Times",
-      "url": "https://punchng.com/senate-considers-tinubus-n-10-79tn-foreign-loan-request/",
-      "image": "",
-      "imageAlt": "Nigeria's Senate chamber"
+      "source": "National Assembly / Official government process",
+      "url": "",
+      "image": "assets/nigeria.jpeg",
+      "imageAlt": "Nigeria's public institutions"
     },
     {
-      "title": "Democrats Secure Control of Both Chambers of the US Congress",
-      "summary": "Democrats won control of the House of Representatives and Senate in the 3 November 2026 midterm elections. The result creates a divided-government environment for President Donald Trump during the remaining two years of his term. Reuters reported that voter concerns included the cost of living and the Iran war. The new congressional majority will have greater oversight powers, although the President retains executive authority and veto powers.",
-      "category": "USA",
-      "date": "2026-11-04",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528",
-      "image": "",
-      "imageAlt": "United States Capitol"
-    },
-    {
-      "title": "Iran Reports Fires Involving Two Tankers and a Tugboat in the Strait of Hormuz",
-      "summary": "Iran's Islamic Revolutionary Guard Corps said two oil tankers and a tugboat caught fire in separate incidents in the Strait of Hormuz. The IRGC said the incidents involved vessels using routes it described as unauthorised and gave an account involving a possible mine strike. These details remain based on the Iranian military's account. Independent confirmation and further information about casualties, vessel identities and the circumstances remain limited.",
-      "category": "World",
+      "title": "The Strait of Hormuz and the vulnerability of global energy routes",
+      "summary": "Reports of fires involving vessels in the Strait of Hormuz underline the strategic importance of safe maritime passage for global energy markets.",
+      "description": "The reported incident requires independent verification. The wider issue is the exposure of international trade and energy supply to geopolitical tension.",
+      "content": [
+        "The Strait of Hormuz is one of the world's most strategically important maritime corridors for oil and gas shipments.",
+        "Any confirmed disruption can affect shipping schedules, insurance costs, energy prices and confidence in international supply chains.",
+        "The latest report attributed to Iran's IRGC concerns two oil tankers and a tugboat. Independent confirmation of the full circumstances remains limited.",
+        "Governments, shipping operators and energy markets will be watching for verified information about the vessels, the cause of the fires and any wider disruption."
+      ],
+      "category": "World / Business & Economy",
       "date": "2026-11-05",
-      "source": "Reuters",
+      "source": "Reuters report citing Iran's IRGC statement",
       "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/",
-      "image": "",
-      "imageAlt": "Oil tankers in the Strait of Hormuz"
+      "image": "assets/middleeast.jpeg",
+      "imageAlt": "The Strait of Hormuz and global energy shipping"
     },
     {
-      "title": "Ukraine Reports 40 Deaths After Strike on Aid Distribution Centre",
-      "summary": "The death toll from a strike on an aid distribution centre and shelter in Komyshuvakha, Zaporizhzhia region, rose to 40 in reports available on 5 November. Ukrainian authorities said people had gathered to receive humanitarian assistance. Russia said it had targeted military units in the area. The competing accounts have not been independently resolved. Rescue and identification operations have continued, while the incident has renewed concern over civilian protection.",
+      "title": "Ukraine's civilian toll and the continuing humanitarian crisis",
+      "summary": "New reports of casualties in the Zaporizhzhia region underline the continuing danger faced by civilians during the war.",
+      "description": "Casualty figures and responsibility for individual strikes require careful attribution and verification in an active conflict.",
+      "content": [
+        "The war in Ukraine continues to affect civilians, essential services and communities far from the front line.",
+        "The Associated Press reported a death toll of 40 following a strike affecting a shelter or aid centre in Komyshuvakha.",
+        "Casualty reports can change as emergency services search damaged sites and authorities verify information.",
+        "The protection of civilians, humanitarian access and accountability for attacks remain central concerns under international humanitarian law."
+      ],
       "category": "Europe",
       "date": "2026-11-05",
-      "source": "Associated Press; Al Jazeera; Ukrinform",
+      "source": "Associated Press",
       "url": "https://apnews.com/article/37dc5e85a5c8c135996bc2720e0674d9",
-      "image": "",
-      "imageAlt": "Emergency response following a strike in Ukraine"
+      "image": "assets/europe.jpeg",
+      "imageAlt": "Ukraine and the humanitarian consequences of war"
     },
     {
-      "title": "France Prepares for Nationwide Demonstrations on 5 November",
-      "summary": "French Interior Minister Laurent Nuñez announced that 70,000 police officers and gendarmes would be deployed for Thursday's national day of mobilisation. Authorities expected more than 220 public demonstrations. In Paris, the proposed Bastille-to-Concorde route was rejected and a République-to-Nation route was authorised. Demonstrations are linked to union demands concerning wages and employment. Transport and local conditions may vary by city.",
+      "title": "France demonstrations: Public order and the right to protest",
+      "summary": "A large security deployment is planned for demonstrations across France on 5 November.",
+      "description": "The authorities face the challenge of protecting peaceful assembly while responding proportionately to any violence or disorder.",
+      "content": [
+        "France's Interior Minister Laurent Nuñez announced that around 70,000 police officers and gendarmes would be deployed in connection with demonstrations planned across the country.",
+        "More than 220 public actions were expected. In Paris, the planned route was changed to run from République towards Nation.",
+        "The right to peaceful protest is a fundamental democratic principle. Security operations should protect participants, the public and property while respecting lawful assembly.",
+        "The scale of the deployment reflects the authorities' stated security preparations, but the actual course of demonstrations will become clearer as events unfold."
+      ],
       "category": "Europe",
       "date": "2026-11-05",
       "source": "Le Monde",
       "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
-      "image": "",
-      "imageAlt": "Public demonstration in France"
+      "image": "assets/europe.jpeg",
+      "imageAlt": "France and European public affairs"
     },
     {
-      "title": "Cyberattack Disrupts Refrigeration Controls at French Blood Storage Facilities",
-      "summary": "France's national blood service said a cyberattack involving a refrigeration equipment provider affected cold-storage facilities at three sites. Temperature and defrosting settings were altered, but monitoring systems detected the anomalies and staff intervened. The blood service said no blood products were lost and no health consequences had been identified. Investigations into the incident are continuing.",
-      "category": "Technology",
+      "title": "Cybersecurity in healthcare: A warning from France's blood service incident",
+      "summary": "The cyberattack affecting three French blood service sites highlights the importance of securing essential healthcare suppliers and infrastructure.",
+      "description": "Officials said no blood products were lost. The incident nevertheless illustrates how third-party technology providers can become part of the healthcare security chain.",
+      "content": [
+        "Healthcare organisations increasingly depend on connected equipment, digital records and external technology providers.",
+        "An incident involving a refrigeration equipment provider affected three French blood service sites. Officials said no blood products were lost.",
+        "The event highlights the importance of supplier risk assessments, network monitoring, backup procedures and clear incident-response plans.",
+        "Cybersecurity is not only an IT issue. It is also a patient-safety and service-continuity issue."
+      ],
+      "category": "Technology & Innovation",
       "date": "2026-11-05",
-      "source": "Euronews; Associated Press",
+      "source": "Euronews",
       "url": "https://www.euronews.com/2026/11/04/cyberattack-hits-french-blood-banks-but-no-samples-compromised-officials-say",
-      "image": "",
-      "imageAlt": "Blood storage facilities and medical technology"
-    },
-    {
-      "title": "Ethiopia Expels Six Sudanese Diplomatic Staff",
-      "summary": "Ethiopia ordered six Sudanese diplomatic staff to leave the country, according to a senior Ethiopian official. The move further worsens relations between the neighbours amid allegations that each side is supporting armed groups opposed to the other. Sudan accuses Ethiopia of supporting the Rapid Support Forces, while Ethiopia accuses Sudan of backing rebels in its northern Tigray region. Both sides deny the allegations.",
-      "category": "Africa",
-      "date": "2026-11-05",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/",
-      "image": "",
-      "imageAlt": "Ethiopia and Sudan diplomatic relations"
-    },
-    {
-      "title": "British Healthcare Worker with Ebola to Be Evacuated from DR Congo",
-      "summary": "A British healthcare worker who tested positive for Ebola while supporting the outbreak response in the Democratic Republic of Congo is being evacuated to the United Kingdom for specialist treatment. The patient was reported to be stable. British authorities said the risk to the wider UK public was low. The development highlights the importance of protecting frontline healthcare workers and supporting outbreak response in affected communities.",
-      "category": "Africa",
-      "date": "2026-11-04",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/british-healthcare-worker-with-ebola-be-evacuated-congo-uk-document-shows-2026-11-04/",
-      "image": "",
-      "imageAlt": "Ebola response and public health work in the Democratic Republic of Congo"
-    },
-    {
-      "title": "South Africa Counts Votes After Municipal Elections",
-      "summary": "South Africans voted in municipal elections on 4 November, with attention on local service delivery, unemployment, electricity, water and political representation. The Electoral Commission had prepared 23,696 voting stations and reported that polling was scheduled to close at 21:00. Counting and the publication of results are the next stages. Early or partial results should not be presented as final until formally declared by the Electoral Commission.",
-      "category": "Africa",
-      "date": "2026-11-05",
-      "source": "South African Government; Electoral Commission",
-      "url": "https://www.gov.za/news/media-statements/electoral-commission-reports-smooth-start-2026-local-government-election-04",
-      "image": "",
-      "imageAlt": "South Africa municipal election voting"
-    },
-    {
-      "title": "Israel Begins Coalition Consultations After Election Produces No Clear Majority",
-      "summary": "President Isaac Herzog has accepted the certified results of Israel's parliamentary election and begun consultations with political parties on forming a government. Neither Prime Minister Benjamin Netanyahu's bloc nor opposition leader Gadi Eisenkot's bloc secured the 61 seats required for a majority in the 120-member Knesset. Coalition negotiations will determine who is best placed to form the next government. A failure to secure a workable majority could lead to another election.",
-      "category": "World",
-      "date": "2026-11-05",
-      "source": "Al Jazeera; Associated Press",
-      "url": "https://www.aljazeera.com/news/2026/11/5/israels-herzog-accepts-vote-results-opens-talks-on-forming-a-government",
-      "image": "",
-      "imageAlt": "Israeli President Isaac Herzog and parliamentary election developments"
-    },
-    {
-      "title": "North Korea Reports New Air Defence Missile Test",
-      "summary": "North Korea's state media reported that the country tested a newly designed air-defence missile system and conducted a cruise-missile strike drill on Wednesday. The report has been attributed to state media and has not been independently verified. Such tests are likely to draw attention from neighbouring countries and regional security partners.",
-      "category": "Asia",
-      "date": "2026-11-05",
-      "source": "Reuters",
-      "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world",
-      "image": "",
-      "imageAlt": "North Korean missile testing and regional security"
-    },
-    {
-      "title": "International Partners Discuss Ukraine's Post-war Reconstruction",
-      "summary": "European and international representatives met in Brussels to discuss Ukraine's post-war economic development and possible support for reconstruction. The discussions reflect the scale of infrastructure, housing, energy and public-service recovery that would be required after the war. Reconstruction planning does not mean that a peace agreement has been reached.",
-      "category": "Europe",
-      "date": "2026-11-04",
-      "source": "Xinhua; European Commission",
-      "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world",
-      "image": "",
-      "imageAlt": "International talks on Ukraine's reconstruction"
+      "image": "assets/ai.jpeg",
+      "imageAlt": "Digital security and healthcare technology"
     }
   ],
-  "leadersWatch": {
-    "title": "Leaders Watch",
-    "description": "Monitoring the statements, decisions, policy commitments and public responsibilities of political leaders across Nigeria and the international community.",
-    "leaders": [
-      {
-        "name": "Atiku Abubakar",
-        "role": "ADC Presidential Candidate, Nigeria",
-        "status": "ADC campaign launched in Sokoto",
-        "summary": "Atiku formally launched the ADC presidential campaign in Sokoto on 4 November. He reiterated his commitment to tackling insecurity and called for support ahead of the 2027 election. His campaign's proposals on subsidy, border trade and economic reform require further policy detail.",
-        "source": "Channels Television; Voice of Nigeria",
-        "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/",
-        "image": "assets/leaders/atiku.jpg"
-      },
-      {
-        "name": "Peter Obi",
-        "role": "NDC Presidential Candidate, Nigeria",
-        "status": "Police investigation following Calabar convoy attack",
-        "summary": "Peter Obi reported an attack on his convoy in Calabar during a political engagement. Cross River Police confirmed that one suspect had been arrested and said investigations were continuing.",
-        "source": "TheCable",
-        "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/",
-        "image": "assets/leaders/obi.jpg"
-      },
-      {
-        "name": "Bola Ahmed Tinubu",
-        "role": "President of Nigeria",
-        "status": "External borrowing and state police amendment",
-        "summary": "The President faces Senate scrutiny over a proposed $7.7 billion external borrowing plan. The National Assembly has also transmitted the state police constitutional amendment for presidential assent.",
-        "source": "Punch Newspapers; TheCable",
-        "url": "https://punchng.com/senate-considers-tinubus-n-10-79tn-foreign-loan-request/",
-        "image": ""
-      },
-      {
-        "name": "Donald Trump",
-        "role": "President of the United States",
-        "status": "Congressional balance of power changes after midterms",
-        "summary": "Democrats secured control of both chambers of Congress in the November 2026 midterm elections. The result creates a new oversight and legislative environment for the Trump administration.",
-        "source": "Reuters",
-        "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528",
-        "image": ""
-      },
-      {
-        "name": "Volodymyr Zelensky",
-        "role": "President of Ukraine",
-        "status": "Civilian casualties and continuing war",
-        "summary": "Zelensky has condemned the deadly strike in the Zaporizhzhia region. Ukraine and Russia continue to give differing accounts of the target and circumstances of the attack.",
-        "source": "Associated Press",
-        "url": "https://apnews.com/article/37dc5e85a5c8c135996bc2720e0674d9",
-        "image": ""
-      },
-      {
-        "name": "Emmanuel Macron",
-        "role": "President of France",
-        "status": "France faces national mobilisation",
-        "summary": "France is preparing for a national day of demonstrations over wages and employment, with the Interior Ministry announcing a nationwide security deployment.",
-        "source": "Le Monde",
-        "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
-        "image": ""
-      }
-    ]
-  },
+  "leadersWatch": [
+    {
+      "name": "Donald Trump",
+      "role": "President of the United States",
+      "country": "United States",
+      "image": "assets/leaders/trump.jpg",
+      "summary": "The reported Democratic gains in the US midterm elections could significantly change the legislative environment facing Trump's administration. The final implications depend on certified results and the confirmed balance of power in Congress.",
+      "category": "USA",
+      "source": "Election reporting — official certification pending",
+      "url": ""
+    },
+    {
+      "name": "Mark Carney",
+      "role": "Prime Minister of Canada",
+      "country": "Canada",
+      "image": "assets/leaders/carney.jpg",
+      "summary": "No new specific announcement from Mark Carney is included in this edition. RadiantWaves continues to monitor Canada's economic policy, trade relations and international diplomacy.",
+      "category": "Canada",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Emmanuel Macron",
+      "role": "President of France",
+      "country": "France",
+      "image": "assets/leaders/macron.jpg",
+      "summary": "France is preparing for demonstrations on 5 November, with the Interior Minister announcing a major police and gendarmerie deployment. No additional new presidential announcement is included in this edition.",
+      "category": "Europe",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html"
+    },
+    {
+      "name": "Bola Ahmed Tinubu",
+      "role": "President of Nigeria",
+      "country": "Nigeria",
+      "image": "assets/leaders/tinubu.jpg",
+      "summary": "Nigeria's proposed external borrowing request and the state police constitutional amendment process remain important issues for the administration and the National Assembly. The borrowing proposal requires scrutiny of its purpose, terms and repayment implications.",
+      "category": "Nigeria",
+      "source": "Official legislative proceedings",
+      "url": ""
+    },
+    {
+      "name": "Atiku Abubakar",
+      "role": "Former Vice-President and ADC 2027 presidential candidate",
+      "country": "Nigeria",
+      "image": "assets/leaders/atiku.jpg",
+      "summary": "Atiku launched his 2027 presidential campaign in Sokoto on 4 November. His proposals include changes to subsidy policy, border management, insecurity and pilgrimage costs.",
+      "category": "Nigeria Politics",
+      "source": "Voice of Nigeria",
+      "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/"
+    },
+    {
+      "name": "Peter Obi",
+      "role": "Former Governor of Anambra State and former presidential candidate",
+      "country": "Nigeria",
+      "image": "assets/leaders/obi.jpg",
+      "summary": "Police are investigating an attack involving Peter Obi's convoy in Calabar and have announced the arrest of a 27-year-old suspect. The investigation remains ongoing.",
+      "category": "Nigeria Politics",
+      "source": "TheCable",
+      "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
+    },
+    {
+      "name": "Andy Burnham",
+      "role": "Prime Minister of the United Kingdom",
+      "country": "United Kingdom",
+      "image": "assets/leaders/andy.jpg",
+      "summary": "No new specific announcement from Andy Burnham is included in this edition. RadiantWaves continues to monitor UK government policy, healthcare, the economy and international relations.",
+      "category": "United Kingdom",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Friedrich Merz",
+      "role": "Chancellor of Germany",
+      "country": "Germany",
+      "image": "assets/leaders/merz.jpg",
+      "summary": "No new specific announcement from Friedrich Merz is included in this edition. Germany's economic direction, European security and support for Ukraine remain subjects of international attention.",
+      "category": "Europe",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Vladimir Putin",
+      "role": "President of Russia",
+      "country": "Russia",
+      "image": "assets/leaders/putin.jpg",
+      "summary": "Russia's war against Ukraine remains central to European security. This edition does not attribute any new specific announcement to Putin beyond the continuing developments in the conflict.",
+      "category": "Europe / Russia",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Xi Jinping",
+      "role": "President of China",
+      "country": "China",
+      "image": "assets/leaders/xi.jpg",
+      "summary": "No new specific announcement from Xi Jinping is included in this edition. RadiantWaves continues to monitor China's economic policy, regional relations and global diplomatic role.",
+      "category": "Asia",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Ursula von der Leyen",
+      "role": "President of the European Commission",
+      "country": "European Union",
+      "image": "assets/leaders/von-der-leyen.jpg",
+      "summary": "European security, economic competitiveness and the war in Ukraine remain major issues for the European Union. No new specific announcement from the Commission President is included in this edition.",
+      "category": "Europe",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    },
+    {
+      "name": "Helen Haines",
+      "role": "Australian Member of Parliament",
+      "country": "Australia",
+      "image": "assets/leaders/helen-haines.jpg",
+      "summary": "No new specific announcement from Helen Haines is included in this edition. RadiantWaves continues to monitor Australian parliamentary developments and the wider Asia-Pacific region.",
+      "category": "Australia / Pacific",
+      "source": "RadiantWaves monitoring",
+      "url": ""
+    }
+  ],
   "categories": [
     {
-      "id": "world",
       "name": "World",
-      "description": "International affairs, diplomacy, conflicts and major global developments."
+      "description": "Major international developments, diplomacy, security and global affairs.",
+      "image": "assets/diplomacy.jpeg",
+      "articles": [
+        "The Strait of Hormuz and the vulnerability of global energy routes",
+        "Ukraine's civilian toll and the continuing humanitarian crisis",
+        "Israel begins government consultations after certified election results"
+      ]
     },
     {
-      "id": "usa",
       "name": "USA",
-      "description": "United States politics, elections, economy and foreign policy."
+      "description": "US politics, elections, government policy and international relations.",
+      "image": "assets/usa.jpeg",
+      "articles": [
+        "US midterm election results reshape the political landscape"
+      ]
     },
     {
-      "id": "europe",
       "name": "Europe",
-      "description": "European politics, security, economy and public affairs."
+      "description": "European politics, security, public affairs and international cooperation.",
+      "image": "assets/europe.jpeg",
+      "articles": [
+        "France demonstrations: Public order and the right to protest",
+        "Ukraine's civilian toll and the continuing humanitarian crisis",
+        "Cybersecurity in healthcare: A warning from France's blood service incident"
+      ]
     },
     {
-      "id": "africa",
       "name": "Africa",
-      "description": "African politics, diplomacy, security, development and public health."
+      "description": "African politics, regional security, development and public health.",
+      "image": "assets/africa.jpeg",
+      "articles": [
+        "Ethiopia expels six Sudanese consular staff amid diplomatic tensions",
+        "British healthcare worker with Ebola to be evacuated from DR Congo",
+        "South Africa awaits local government election results"
+      ]
     },
     {
-      "id": "nigeria",
       "name": "Nigeria",
-      "description": "National affairs, public policy, security, economy and governance."
+      "description": "Nigerian politics, governance, security, economy and society.",
+      "image": "assets/nigeria.jpeg",
+      "articles": [
+        "Atiku presents his 2027 campaign proposals in Sokoto",
+        "The Peter Obi convoy incident: Security, political tolerance and due process",
+        "Nigeria's borrowing debate: What citizens should expect from lawmakers",
+        "State police in Nigeria: A constitutional step, not an operational reality yet"
+      ]
     },
     {
-      "id": "nigeria-politics",
-      "name": "Nigeria Politics",
-      "description": "Political parties, candidates, campaigns, elections and democratic accountability."
-    },
-    {
-      "id": "asia",
       "name": "Asia",
-      "description": "Asian politics, economy, technology and international relations."
+      "description": "Asian politics, economies, diplomacy and regional developments.",
+      "image": "assets/asia.jpeg",
+      "articles": [
+        "The Strait of Hormuz and the vulnerability of global energy routes",
+        "Israel begins government consultations after certified election results"
+      ]
     },
     {
-      "id": "business",
       "name": "Business & Economy",
-      "description": "Markets, public finance, trade, investment and economic policy."
+      "description": "Markets, trade, public finance, energy and economic policy.",
+      "image": "assets/market.jpeg",
+      "articles": [
+        "Nigeria's borrowing debate: What citizens should expect from lawmakers",
+        "The Strait of Hormuz and the vulnerability of global energy routes"
+      ]
     },
     {
-      "id": "technology",
       "name": "Technology & Innovation",
-      "description": "Cybersecurity, digital transformation, science and technological developments."
+      "description": "Digital transformation, artificial intelligence, cybersecurity and innovation.",
+      "image": "assets/ai.jpeg",
+      "articles": [
+        "Cybersecurity in healthcare: A warning from France's blood service incident"
+      ]
     }
   ],
   "innovationAndDigitalChange": {
-    "title": "Technology & Innovation",
-    "description": "Digital systems and critical infrastructure are increasingly interconnected. Cybersecurity is no longer only an issue for banks and technology companies; it is also essential for healthcare, food storage, transport and public services.",
-    "stories": [
-      {
-        "title": "Cybersecurity and France's Blood Storage Infrastructure",
-        "summary": "A cyberattack involving a refrigeration equipment provider affected temperature-control systems at three French blood-service facilities. Monitoring systems detected the anomalies, staff intervened and the blood service reported that no products were lost. The incident demonstrates how cyber vulnerabilities in third-party suppliers can affect essential public infrastructure.",
-        "category": "Cybersecurity",
-        "source": "Euronews",
-        "url": "https://www.euronews.com/2026/11/04/cyberattack-hits-french-blood-banks-but-no-samples-compromised-officials-say",
-        "image": ""
-      },
-      {
-        "title": "Digital Infrastructure and Public Safety",
-        "summary": "Healthcare systems, energy networks, transport services and public institutions increasingly depend on connected equipment. Governments and service providers need strong access controls, system monitoring, incident response and contingency arrangements to protect essential services.",
-        "category": "Digital Transformation",
-        "source": "RadiantWaves Media Editorial Desk",
-        "url": "https://radiantwavesmedia.com/",
-        "image": ""
-      }
-    ]
+    "title": "Technology & Innovation: Digital security is now a public safety issue",
+    "headline": "The French blood service cyber incident highlights the risks facing essential infrastructure",
+    "summary": "The reported cyberattack affecting three French blood service sites demonstrates how a problem involving a third-party equipment provider can affect essential services. Officials said no blood products were lost.",
+    "content": [
+      "Digital transformation brings major opportunities to healthcare, finance, transport and public administration. It also creates new dependencies on networks, software, connected devices and external suppliers.",
+      "The French blood service incident is a reminder that cybersecurity planning must include suppliers and equipment providers, not only an organisation's own computer systems.",
+      "Organisations responsible for essential services need effective monitoring, tested backup arrangements, staff training and clear procedures for responding to suspected cyber incidents.",
+      "For governments and businesses, digital resilience should be treated as part of operational risk management and public protection."
+    ],
+    "category": "Technology & Innovation",
+    "date": "2026-11-05",
+    "source": "Euronews",
+    "url": "https://www.euronews.com/2026/11/04/cyberattack-hits-french-blood-banks-but-no-samples-compromised-officials-say",
+    "image": "assets/ai.jpeg",
+    "imageAlt": "Artificial intelligence, digital systems and cybersecurity",
+    "relatedImage": "assets/diplomacy.jpeg"
   },
   "electionWatch": {
     "title": "Election Watch",
-    "description": "Monitoring election campaigns, democratic institutions, electoral processes and political accountability across the world.",
+    "intro": "Elections are about more than campaign rallies. RadiantWaves monitors political developments, electoral institutions, candidate commitments and the evidence available to voters.",
     "items": [
       {
         "country": "Nigeria",
-        "title": "ADC launches Atiku's 2027 presidential campaign in Sokoto",
-        "summary": "The ADC has formally begun its public presidential campaign mobilisation. Attention now turns to policy details, peaceful campaigning, party organisation and electoral fairness.",
-        "date": "2026-11-04",
-        "source": "Channels Television",
-        "url": "https://www.channelstv.com/2026/11/04/2027-atiku-vows-to-tackle-insecurity-at-sokoto-campaign-flag-off-says-nothing-will-stop-adc/"
-      },
-      {
-        "country": "Nigeria",
-        "title": "Peter Obi's political engagements continue after Calabar incident",
-        "summary": "Police have arrested one suspect following the reported attack on Obi's convoy. The investigation remains ongoing, and the suspect has not been convicted.",
-        "date": "2026-11-05",
-        "source": "TheCable",
-        "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
+        "title": "2027 presidential election preparations",
+        "summary": "Atiku Abubakar's ADC campaign launch in Sokoto adds momentum to the emerging 2027 contest. Other opposition parties and political figures face decisions about alliances, candidates and campaign priorities.",
+        "status": "Campaign activity",
+        "image": "assets/leaders/atiku.jpg",
+        "source": "Voice of Nigeria",
+        "url": "https://von.gov.ng/atiku-pledges-major-reforms-ahead-of-2027-elections/"
       },
       {
         "country": "United States",
-        "title": "Democrats take control of Congress in the 2026 midterm elections",
-        "summary": "Democrats secured control of both the House and Senate. The result will reshape congressional oversight and the legislative environment when the new Congress takes office.",
-        "date": "2026-11-04",
-        "source": "Reuters",
-        "url": "https://www.investing.com/news/politics-news/democrats-seize-congress-in-sweeping-midterm-repudiation-of-trump-4997528"
+        "title": "2026 midterm elections",
+        "summary": "Reports indicate major Democratic gains and a possible change in control of both chambers of Congress. Final seat totals and institutional control should be checked against certified results.",
+        "status": "Results and certification monitoring",
+        "image": "assets/usa.jpeg",
+        "source": "Election reporting — official certification pending",
+        "url": ""
       },
       {
         "country": "South Africa",
-        "title": "Municipal election counting begins",
-        "summary": "Voting took place on 4 November. Counting and the release of results are under way. Results should be treated as provisional until declared by the Electoral Commission.",
-        "date": "2026-11-05",
-        "source": "South African Government",
-        "url": "https://www.gov.za/news/media-statements/electoral-commission-conclusion-2026-local-government-elections-special"
+        "title": "2026 local government elections",
+        "summary": "Voting took place on 4 November. Counting and verification are under way; early figures are not final results.",
+        "status": "Counting and verification",
+        "image": "assets/africa.jpeg",
+        "source": "Electoral Commission of South Africa",
+        "url": "https://www.gov.za/news/media-statements/electoral-commission-reports-smooth-start-2026-local-government-election-04"
       },
       {
         "country": "Israel",
-        "title": "Coalition consultations follow election without a parliamentary majority",
-        "summary": "The certified election results leave neither Netanyahu's bloc nor the opposition bloc with the 61 seats required for a majority. President Isaac Herzog has begun consultations with political parties on government formation.",
-        "date": "2026-11-05",
-        "source": "Al Jazeera",
-        "url": "https://www.aljazeera.com/news/2026/11/5/israels-herzog-accepts-vote-results-opens-talks-on-forming-a-government"
+        "title": "Government formation after the election",
+        "summary": "President Isaac Herzog has begun consultations after certified results. No bloc has reached the 61-seat threshold for a parliamentary majority.",
+        "status": "Coalition consultations",
+        "image": "assets/middleeast.jpeg",
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/57aefc6424da937ad2842f6d762631ae"
       }
     ]
   },
-  "archives": [
-    {
-      "date": "2026-11-05",
+  "archives": {
+    "title": "News Archives",
+    "description": "Browse previous RadiantWaves editions and follow how major stories develop over time.",
+    "latestEdition": {
       "edition": "Morning",
+      "date": "2026-11-05",
       "title": "Morning News & Global Update — 5 November 2026",
-      "description": "Nigeria's political developments, Atiku's Sokoto campaign, Peter Obi convoy investigation, US midterm results, global security and economic updates."
-    }
-  ],
+      "image": "assets/sunrise.jpeg"
+    },
+    "previousEditions": [
+      {
+        "edition": "Night",
+        "date": "2026-11-04",
+        "title": "Night News & Global Update — 4 November 2026",
+        "image": "assets/diplomacy.jpeg"
+      },
+      {
+        "edition": "Morning",
+        "date": "2026-11-04",
+        "title": "Morning News & Global Update — 4 November 2026",
+        "image": "assets/sunrise.jpeg"
+      },
+      {
+        "edition": "Night",
+        "date": "2026-11-03",
+        "title": "Night News & Global Update — 3 November 2026",
+        "image": "assets/europe.jpeg"
+      }
+    ]
+  },
   "thoughtForToday": {
     "title": "Thought for Today",
-    "quote": "Leadership is not measured by the size of a campaign crowd, but by the quality of decisions, the lives improved and the promises fulfilled.",
-    "author": "RadiantWaves Media Editorial Desk",
-    "description": "A reminder that public leadership should be assessed through measurable results, responsible decisions and accountability."
+    "quote": "Not every delay is a defeat, and not every opportunity deserves a hurried decision. Wisdom is knowing when to move, when to wait and when to change direction.",
+    "attribution": "RadiantWaves Media",
+    "theme": "Patience, judgement and wise decisions",
+    "image": "assets/sunrise.jpeg"
   },
   "todaysBigQuestion": {
     "title": "Today's Big Question",
-    "question": "As Nigeria moves towards the 2027 presidential election, what should voters demand from every candidate: a detailed economic plan, a credible security strategy, a record of performance, national unity, or a clear commitment to accountability?",
-    "description": "The question applies equally to every political party and every presidential candidate. Citizens should examine policies, records and implementation plans rather than relying only on campaign slogans."
+    "question": "As Nigeria moves towards the 2027 elections, what should matter most when choosing the next president: a credible economic plan, a proven record of performance, the ability to unite the country, stronger security, or respect for democratic institutions?",
+    "description": "Political campaigns will make promises, but voters have the responsibility to examine evidence, ask difficult questions and compare what candidates propose with what they have previously delivered.",
+    "image": "assets/nigeria.jpeg"
   },
   "radiantWavesPerspective": {
-    "title": "RadiantWaves Perspective",
-    "summary": "Nigeria's 2027 political contest is entering a more visible campaign phase. Atiku Abubakar's Sokoto rally, Peter Obi's continuing political engagements and the Tinubu administration's policy decisions are all part of a wider national debate. The public deserves clear information about what each political actor proposes and what has actually been delivered. Political competition must remain peaceful, opposition parties must be able to campaign freely, and allegations of intimidation or violence must be investigated impartially. The most important democratic test is whether citizens can make informed choices and hold elected leaders accountable.",
-    "principles": [
-      "Independent journalism and verification",
-      "Peaceful political participation",
-      "Equal protection under the law",
-      "Public accountability and transparency",
-      "Evidence-based reporting",
-      "Respect for democratic institutions"
-    ]
+    "title": "Beyond the Headlines",
+    "headline": "A campaign crowd is a beginning, not a governing plan",
+    "summary": "The Sokoto campaign launch is an important political event, but Nigeria's challenges demand more than slogans, personalities or impressive gatherings. Every candidate should be asked to explain how their promises will be funded, implemented and measured.",
+    "content": [
+      "The Nigerian electorate deserves a serious debate about the country's future.",
+      "Political parties should explain their economic plans, security strategies, employment policies and approaches to education, healthcare and public accountability.",
+      "Opposition unity may influence the competitiveness of the 2027 election, but cooperation must be based on shared principles and a credible programme rather than political convenience alone.",
+      "The responsibility of journalism is to examine every political claim fairly, question those seeking public office and give citizens information they can use to make informed decisions."
+    ],
+    "image": "assets/diplomacy.jpeg",
+    "category": "Editorial",
+    "date": "2026-11-05",
+    "author": "RadiantWaves Editorial Desk"
   },
   "sponsoredAdverts": [
     {
-      "title": "Stone Breaker Herbal Product",
-      "subtitle": "Sponsored Feature",
-      "description": "Discover the advertised herbal product. Readers should review product information and seek qualified professional advice where appropriate.",
-      "image": "assets/stonebreaker.jpeg",
-      "products": [
-        "Stone Breaker Herbal Product"
-      ],
-      "link": "https://radiantwavesmedia.com/",
-      "button": "Learn More"
+      "title": "Sponsored Feature",
+      "description": "Explore the featured product information provided by the advertiser.",
+      "image": "assets/spices.jpeg",
+      "label": "Sponsored",
+      "url": ""
     },
     {
-      "title": "Premium Nigerian Spices",
-      "subtitle": "From Nigeria to the World",
-      "description": "Promoting Nigerian spices and products for local and international audiences.",
-      "image": "assets/spices.jpeg",
-      "products": [
-        "Premium Nigerian Spices"
-      ],
-      "link": "https://radiantwavesmedia.com/",
-      "button": "Discover More"
+      "title": "Sponsored Feature",
+      "description": "Discover more information about this advertiser's featured product.",
+      "image": "assets/stonebreaker.jpeg",
+      "label": "Sponsored",
+      "url": ""
     }
   ],
   "sourcePolicy": {
-    "title": "Our Editorial and Verification Policy",
-    "description": "RadiantWaves Media uses attributable reporting from established news organisations, official statements and relevant public institutions. We distinguish verified facts from allegations, campaign claims, forecasts and opinion. Where accounts differ, we identify the parties making the claims and explain what remains unverified. Political promises are reported as promises, not achievements. Developing stories may change as additional information becomes available.",
-    "verificationNote": "This edition reflects reports available during the morning of Thursday, 5 November 2026. Statements from military forces and parties to ongoing conflicts are attributed to their sources. Election counting and coalition negotiations remain ongoing in the relevant countries. Arrests are not presented as convictions."
+    "title": "Our Sources & Verification Policy",
+    "description": "RadiantWaves Media uses identifiable news organisations, official statements, public institutions and primary documents wherever available.",
+    "principles": [
+      "We attribute claims to the organisation, official or individual making them.",
+      "We distinguish confirmed developments from allegations, campaign statements and unverified reports.",
+      "An arrest is not proof of guilt. Suspects are entitled to due process.",
+      "Election figures remain provisional until the relevant electoral authority confirms the results.",
+      "Casualty figures in active conflict zones may change as authorities and independent reporters verify information.",
+      "Where independent confirmation is limited, we make that limitation clear.",
+      "We correct material errors when reliable new information becomes available."
+    ],
+    "note": "Some developing stories in this edition rely on official statements or reports that may be updated. Readers should consult the linked original reporting for subsequent developments."
   },
   "footer": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "Gateway to Your World News — Connecting You to the World",
-    "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/",
     "email": "info@radiantwavesmedia.com",
     "supportEmail": "support@radiantwavesmedia.com",
-    "whatsApp": "+33 6 21 61 31 49",
-    "copyright": "© 2026 RadiantWaves Media Nigeria Ltd. All rights reserved."
+    "whatsapp": "+33 6 21 61 31 49",
+    "location": "Nigeria | France | Global",
+    "copyright": "© 2026 RadiantWaves Media Nigeria Ltd. All rights reserved.",
+    "socialMedia": {
+      "facebook": "Radiantwaves",
+      "tiktok": "@radiantwaves",
+      "youtube": "@RADIANTWAVE=wv6",
+      "x": "Radiant13528995"
+    }
   }
 }

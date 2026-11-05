@@ -1,8 +1,9 @@
+
 {
   "edition": "Evening",
   "date": "2026-11-05",
   "editionTime": "Evening",
-  "updatedAt": "2026-11-05T16:17:00+01:00",
+  "updatedAt": "2026-11-05T18:50:00+01:00",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "location": "Nigeria | France | Global",
@@ -12,68 +13,78 @@
     "slogan": "Gateway to Your World News — Connecting You to the World"
   },
   "hero": {
-    "title": "GLOBAL PRESSURES, POLITICAL ACCOUNTABILITY AND THE HUMAN COST OF CONFLICT",
-    "description": "Tonight, we examine the latest developments in France, Nigeria and Ukraine — from nationwide demonstrations and political campaigns to a devastating strike on a humanitarian aid centre.",
-    "image": "assets/europe.jpeg"
+    "title": "NIGERIA'S POLITICAL FUTURE, GLOBAL TENSIONS AND THE DEMAND FOR ACCOUNTABILITY",
+    "description": "A court ruling affecting Atiku Abubakar's ADC nomination, renewed scrutiny of government borrowing, demonstrations in France and the human cost of the Ukraine war lead this evening's global report.",
+    "image": "assets/leaders/atiku.jpg"
   },
-  "morningSummary": "Today's major developments include nationwide demonstrations in France over wages and public services, renewed political activity ahead of Nigeria's 2027 elections, scrutiny of a proposed $7.7 billion external borrowing plan by the Nigerian government, and a rising death toll following a strike on a humanitarian aid centre in Ukraine. Across these stories, the central questions remain accountability, public welfare and the protection of civilian rights.",
+  "morningSummary": "The evening's major developments include a Nigerian court ruling voiding Atiku Abubakar's ADC presidential nomination, the party's stated intention to appeal, the attack on Peter Obi's convoy in Calabar, and President Bola Tinubu's proposed $7.7 billion external borrowing. France has experienced nationwide demonstrations over wages and public services. In Ukraine, the reported death toll from a strike on an aid distribution point has reached 43. Oil markets are also reacting to continuing uncertainty around the conflict involving Iran and shipping through the Strait of Hormuz.",
   "breaking": [
     {
-      "title": "Ukraine aid-centre strike death toll rises to 42",
-      "description": "Ukrainian police say the death toll from Monday's strike on an aid distribution point in Komyshuvakha, in the Zaporizhzhia region, has risen to 42. Rescue and identification operations are continuing. Russia says it targeted Ukrainian military units in the area. The competing accounts underline the need for a full investigation and the protection of civilians.",
-      "category": "World | Conflict",
+      "title": "Court voids Atiku Abubakar's ADC presidential nomination",
+      "description": "A Nigerian court has set aside the processes that produced the ADC leadership and Atiku Abubakar's nomination as its presidential candidate. The ADC has rejected the ruling as politically motivated and says it will appeal. The legal process and any subsequent appeal will determine the effect on the party's 2027 election preparations.",
+      "category": "Nigeria | Politics | Breaking",
       "date": "2026-11-05",
-      "image": "assets/europe.jpeg",
+      "image": "assets/leaders/atiku.jpg",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/death-toll-from-russian-strike-on-ukrainian-aid-centre-reaches-42-police-say-5002905",
+      "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/",
       "status": "Developing"
     },
     {
-      "title": "France sees nationwide demonstrations over wages and public services",
-      "description": "Workers, students and trade unions have taken part in demonstrations across France. Their demands include higher wages, stronger public services, job protection and greater purchasing power. The Interior Ministry announced that 70,000 police officers and gendarmes were deployed and that more than 220 public actions were expected.",
-      "category": "France | Society",
+      "title": "Ukraine aid-centre strike death toll rises to 43",
+      "description": "President Volodymyr Zelenskyy said the confirmed death toll from Monday's strike in Komyshuvakha, Zaporizhzhia region, had risen to 43. Rescuers found one person alive after three days. Search and identification operations continue. Russia says it targeted military units in the area, while Ukrainian authorities describe the location as an aid and shelter site.",
+      "category": "World | Conflict | Humanitarian Crisis",
       "date": "2026-11-05",
-      "image": "assets/europe.jpeg",
-      "source": "French Ministry of the Interior",
-      "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/journee-de-mobilisation-du-05-novembre-maintenir-reponse-ferme-face-aux-debordements",
+      "image": "",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/",
+      "status": "Developing"
+    },
+    {
+      "title": "France records nationwide demonstrations over wages and public services",
+      "description": "Workers, students and pensioners demonstrated across France. The Interior Ministry estimated approximately 600,000 participants, while the CGT union claimed 1.6 million. Most marches were largely peaceful, although clashes occurred in Paris and Lyon. Around 70,000 police officers were deployed nationwide.",
+      "category": "France | Society | Labour",
+      "date": "2026-11-05",
+      "image": "assets/france-protests.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/france-braces-fresh-protests-macron-seeks-prevent-repeat-october-unrest-2026-11-05/",
       "status": "Reported"
     },
     {
-      "title": "European flights face fresh bomb threats",
-      "description": "Several airlines reported bomb threats affecting flights across parts of Europe on Thursday. Some aircraft made precautionary or unplanned landings. Initial reports indicated that passengers landed safely. Authorities have not publicly established who was responsible for the threats.",
-      "category": "Europe | Security",
+      "title": "Oil prices rebound amid renewed Middle East shipping concerns",
+      "description": "Oil prices rose by more than two dollars a barrel on Thursday as investors assessed the uncertain course of the conflict involving Iran and the risk of further tanker incidents. Reuters reported that Brent crude rose to around $96.92 a barrel during the trading session.",
+      "category": "World | Energy | Markets",
       "date": "2026-11-05",
-      "image": "assets/europe.jpeg",
+      "image": "assets/middleeast.jpeg",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/stock-market-news/bomb-alerts-force-flights-to-land-in-france-bulgaria-belgium-5002910",
+      "url": "https://www.reuters.com/business/energy/oil-falls-fourth-day-expectations-lower-risk-iran-war-escalation-2026-11-05/",
       "status": "Developing"
     }
   ],
   "featured": {
-    "title": "Ukraine's humanitarian tragedy: death toll rises after aid-centre strike",
-    "subtitle": "The growing number of casualties raises renewed questions about civilian protection and the conduct of war.",
-    "category": "World | Humanitarian Crisis",
+    "title": "Nigeria's opposition faces a legal test as court voids Atiku's ADC nomination",
+    "subtitle": "The ruling raises fresh questions about party leadership, candidate nomination and the opposition's preparations for the 2027 presidential election.",
+    "category": "Nigeria | Politics | Legal Affairs",
     "date": "2026-11-05",
-    "image": "assets/europe.jpeg",
-    "content": "The death toll from Monday's strike on an aid distribution point in Komyshuvakha, in Ukraine's southeastern Zaporizhzhia region, has risen to 42, according to Ukrainian police. Rescue teams are continuing their work.\n\nThe location had been used as a shelter and a point for distributing humanitarian assistance. Ukrainian authorities have described the location as a civilian aid site. Russia's Defence Ministry said the operation targeted Ukrainian military units in and around the area.\n\nThe scale of the casualties makes independent investigation, transparent evidence and the protection of humanitarian facilities essential. Civilians must not become an accepted cost of military operations.",
+    "image": "assets/leaders/atiku.jpg",
+    "content": "A Nigerian court has voided the nomination of former Vice-President Atiku Abubakar as the African Democratic Congress presidential candidate for the 2027 election. The decision represents a significant legal and political development for the opposition party.\n\nAccording to Reuters, the judge set aside the processes that produced the party executive and Atiku's nomination. The challenge was brought by former ADC deputy chairman Nafiu Bala Gombe, who argued that the party leadership had not been elected through a valid national convention.\n\nThe ADC has rejected the decision as politically motivated and announced that it intends to appeal. The party's response and the subsequent legal proceedings will be important in determining the future of its presidential nomination.\n\nThe ruling comes shortly after Atiku addressed supporters at the ADC campaign launch in Sokoto. His campaign has placed insecurity, affordability, economic policy and the cost of living at the centre of its message.\n\nThe legal dispute should not be confused with a final determination of the wider political contest. The appeal process, any further court orders and the decisions of the electoral authorities will shape the next steps.\n\nFor Nigerian voters, the development raises wider questions about internal party democracy, transparent nomination procedures and the ability of political organisations to resolve disputes through lawful processes.\n\nRadiantWaves Media will continue to distinguish between the court's decision, the party's response and the outcome of any appeal.",
     "source": "Reuters",
-    "url": "https://www.investing.com/news/world-news/death-toll-from-russian-strike-on-ukrainian-aid-centre-reaches-42-police-say-5002905"
+    "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
   },
   "topStories": [
     {
-      "title": "Atiku's Sokoto campaign launch places opposition strategy under the spotlight",
+      "title": "Court ruling puts Atiku's ADC nomination under legal challenge",
       "category": "Nigeria | Politics",
       "date": "2026-11-05",
-      "summary": "Atiku Abubakar addressed supporters in Sokoto at the launch of his presidential campaign under the ADC. Senior political figures, including Rotimi Amaechi, Aminu Tambuwal and Abubakar Malami, were reported among those accompanying him. The campaign highlighted security, affordability and economic concerns. Claims about turnout should be distinguished from independently measured voter support.",
-      "image": "assets/leaders/atiku2.jpg",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/922892-2027-politics-watch-from-atikus-sokoto-rally-to-obis-convoy-attack.html"
+      "summary": "A Nigerian court has voided Atiku Abubakar's nomination as the ADC presidential candidate after a challenge concerning the party's leadership and convention process. The ADC says it will appeal. The ruling adds a major legal complication to opposition preparations for the 2027 election.",
+      "image": "assets/leaders/atiku.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
     },
     {
       "title": "Police investigate attack on Peter Obi's convoy in Calabar",
       "category": "Nigeria | Security and Politics",
       "date": "2026-11-05",
-      "summary": "Police have arrested a suspect following an attack on Peter Obi's convoy in Calabar. The incident reportedly occurred near Watt Market Roundabout as Obi was travelling to a town hall event. Police said vehicles were damaged by suspected hoodlums carrying sticks and machetes. Investigators have not established the attackers' political affiliations.",
+      "summary": "Police have arrested a suspect following an attack on Peter Obi's convoy in Calabar. The incident reportedly occurred near Watt Market Roundabout. Obi accused APC supporters, but investigators have not established the attackers' political affiliations. The police investigation remains ongoing.",
       "image": "assets/leaders/obi.jpg",
       "source": "TheCable",
       "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
@@ -82,84 +93,111 @@
       "title": "Tinubu seeks approval for a new $7.7 billion external borrowing plan",
       "category": "Nigeria | Economy",
       "date": "2026-11-05",
-      "summary": "President Bola Tinubu has submitted a revised proposal seeking approval for approximately $7.7 billion in external borrowing. The government says the funds would partly finance the 2026 budget deficit and support approved programmes and projects. The Senate has referred the request for scrutiny. The proposal is not yet an approved or completed loan.",
+      "summary": "President Bola Tinubu has submitted a revised external borrowing request of approximately $7.7 billion to help finance the 2026 budget. The proposal replaces an earlier request of approximately $20.5 billion. The Senate has referred the new proposal for scrutiny. It is not yet an approved or completed loan.",
+      "image": "assets/market.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-seeks-new-77-billion-borrowing-replaces-earlier-205-billion-2026-11-04/"
+    },
+    {
+      "title": "France's nationwide demonstrations put wages and public services in focus",
+      "category": "France | Labour and Society",
+      "date": "2026-11-05",
+      "summary": "Workers, students and pensioners demonstrated over purchasing power, stagnant wages, public services and education. The Interior Ministry estimated 600,000 participants, while the CGT union claimed 1.6 million. Most demonstrations were largely peaceful, although some clashes occurred.",
+      "image": "assets/france-protests.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/france-braces-fresh-protests-macron-seeks-prevent-repeat-october-unrest-2026-11-05/"
+    },
+    {
+      "title": "Ukraine rescue teams continue search after deadly aid-centre strike",
+      "category": "Europe | Conflict and Humanitarian Affairs",
+      "date": "2026-11-05",
+      "summary": "The reported death toll has risen to 43 after a strike on an aid distribution point in Komyshuvakha. Rescuers found one person alive after three days. Ukrainian and Russian accounts of the target differ, and rescue operations continue.",
+      "image": "",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/"
+    },
+    {
+      "title": "Oil markets react to renewed tanker incidents and Iran war uncertainty",
+      "category": "World | Business and Energy",
+      "date": "2026-11-05",
+      "summary": "Oil prices rebounded on Thursday as investors assessed the uncertain outlook for the conflict involving Iran and renewed reports of tanker incidents. The Strait of Hormuz remains a critical route for global energy supplies.",
+      "image": "assets/middleeast.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/oil-falls-fourth-day-expectations-lower-risk-iran-war-escalation-2026-11-05/"
+    },
+    {
+      "title": "Nigeria rules out ceasefire with Islamist insurgent groups",
+      "category": "Africa | Nigeria | Security",
+      "date": "2026-11-05",
+      "summary": "Nigeria's military says it will not agree to a ceasefire with Boko Haram or Islamic State West Africa Province and intends to continue military operations. The announcement comes amid renewed attacks on military positions in the north-east.",
       "image": "assets/nigeria.jpeg",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/headlines/922690-tinubu-asks-nass-to-approve-new-7-7bn-loan-withdraws-previous-external-borrowing-request.html"
-    },
-    {
-      "title": "French unions and students unite in nationwide demonstrations",
-      "category": "Europe | Labour and Society",
-      "date": "2026-11-05",
-      "summary": "French trade unions and student organisations have joined demonstrations calling for better wages, stronger public services, employment protection and improved purchasing power. The movement reflects wider concerns about living costs and the future of public services.",
-      "image": "assets/europe.jpeg",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/11/05/french-students-unions-and-yellow-vest-protestors-bet-on-common-front-in-new-strike_6772570_5.html"
-    },
-    {
-      "title": "France moves G7 foreign ministers' meeting from Marseille to Paris",
-      "category": "Europe | Diplomacy",
-      "date": "2026-11-05",
-      "summary": "France has moved a G7 foreign ministers' meeting from Marseille to Paris amid continuing protests, according to reports citing diplomatic sources. The reported change illustrates the logistical pressures created by public demonstrations.",
-      "image": "assets/europe.jpeg",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/"
-    },
-    {
-      "title": "Poland arrests four in investigation into alleged military supplies to Russia",
-      "category": "Europe | Security",
-      "date": "2026-11-05",
-      "summary": "Polish authorities have arrested four people in an investigation into alleged espionage for Russian intelligence and the provision of military components. The case highlights continuing European concerns about intelligence operations and sensitive materials. The allegations remain subject to legal proceedings.",
-      "image": "assets/europe.jpeg",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/"
+      "url": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
     }
   ],
   "articles": [
     {
-      "title": "Nigeria's opposition campaign season: promises, security and the test of credibility",
+      "title": "Nigeria's opposition faces a test of law, leadership and political strategy",
       "category": "Nigeria | Political Analysis",
       "date": "2026-11-05",
-      "image": "assets/leaders/atiku2.jpg",
-      "content": "Nigeria's political contest is becoming more visible as parties and candidates intensify preparations for the 2027 elections. Atiku Abubakar's campaign launch in Sokoto has placed affordability, insecurity and economic direction at the centre of his public message.\n\nThe campaign has highlighted proposals relating to security, agriculture, trade and the cost of essential goods. These are political commitments, not evidence of outcomes. Voters will need clear explanations of how the proposals would be funded, implemented and measured.\n\nThe wider opposition challenge is equally significant. Political parties must demonstrate that cooperation can produce a credible programme rather than simply an electoral arrangement. Questions of candidate selection, internal democracy, regional balance and policy consistency will shape public confidence.\n\nFor voters, the central test should be whether candidates can explain what they intend to do, how they will do it, what it will cost and how citizens will hold them accountable.",
-      "source": "Premium Times",
-      "sourceUrl": "https://www.premiumtimesng.com/news/top-news/922892-2027-politics-watch-from-atikus-sokoto-rally-to-obis-convoy-attack.html"
+      "image": "assets/leaders/atiku.jpg",
+      "content": "The court ruling affecting Atiku Abubakar's ADC nomination has introduced a major legal challenge into Nigeria's opposition politics ahead of the 2027 general election.\n\nThe case concerns the processes that produced the ADC leadership and the subsequent presidential nomination. The court set those processes aside after a challenge by a former party official.\n\nThe ADC has rejected the ruling and says it will appeal. Until the appeal process and any further legal decisions are resolved, the political consequences remain subject to change.\n\nThe development highlights the importance of internal party democracy. Political parties seeking to challenge an incumbent government must demonstrate that their own leadership and nomination procedures are transparent, lawful and credible.\n\nAtiku's Sokoto campaign launch had focused on insecurity, affordability and economic policy. Those policy questions remain important, but the immediate legal challenge now requires the party to explain how it intends to protect its electoral preparations.\n\nFor voters, the broader issue is not simply which individual receives a party ticket. It is whether political institutions can resolve disputes lawfully and provide candidates who are prepared to explain their policies, costs and implementation plans.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
     },
     {
-      "title": "The attack on Peter Obi's convoy: security must not become a political weapon",
+      "title": "Peter Obi's convoy attack raises concerns about political security",
       "category": "Nigeria | Security and Democracy",
       "date": "2026-11-05",
       "image": "assets/leaders/obi.jpg",
-      "content": "The reported attack on Peter Obi's convoy in Calabar is a serious security concern, regardless of the political identity of those responsible. Police have confirmed an arrest and said investigations are continuing.\n\nAt this stage, investigators have not established the political affiliation of the attackers. It would be irresponsible to present an allegation of party involvement as a confirmed finding.\n\nPolitical competition must not create an environment in which candidates, supporters, journalists or ordinary citizens fear intimidation or violence. Security agencies should investigate transparently, protect evidence and ensure that anyone suspected of an offence is treated according to due process.\n\nNigeria's democratic process depends on the ability of political actors to campaign, debate and organise peacefully.",
+      "content": "The reported attack on Peter Obi's convoy in Calabar is a serious security concern, regardless of the political identity of those responsible.\n\nPolice have confirmed an arrest and said investigations are continuing. Reports say the incident occurred near Watt Market Roundabout while Obi was travelling to a political town hall event.\n\nObi has accused APC supporters of involvement. However, investigators have not established the political affiliation of the attackers or confirmed any political sponsorship.\n\nIt is important to distinguish the candidate's allegation from the findings of the police investigation. An arrest does not establish guilt, and the suspect is entitled to due process.\n\nPolitical competition must not create an environment in which candidates, supporters, journalists or ordinary citizens fear intimidation or violence.\n\nSecurity agencies should investigate transparently, protect evidence and ensure that anyone suspected of an offence is treated according to the law.",
       "source": "TheCable",
       "sourceUrl": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
     },
     {
-      "title": "Nigeria's proposed $7.7 billion borrowing: the questions lawmakers must answer",
+      "title": "Nigeria's proposed $7.7 billion borrowing: what lawmakers and citizens should examine",
       "category": "Nigeria | Business and Economy",
       "date": "2026-11-05",
       "image": "assets/market.jpeg",
-      "content": "The Federal Government's revised request for approximately $7.7 billion in external borrowing has returned public attention to Nigeria's debt strategy. President Bola Tinubu says the proposed funds would help finance the 2026 budget and support approved projects and programmes.\n\nThe Senate has referred the request to committees responsible for debt and appropriations. Legislative scrutiny is an important part of the process; the proposal should not be described as a completed borrowing transaction.\n\nBefore approval, Nigerians deserve clarity on the proposed financing instruments, interest costs, repayment periods, currency exposure and the specific projects expected to benefit. The government should also explain how it will measure whether borrowed funds deliver value.\n\nBorrowing can finance productive investment, but the public interest requires transparent terms, credible project selection and effective oversight. The ultimate test is whether the economic and social benefits justify the long-term obligations.",
-      "source": "Premium Times",
-      "sourceUrl": "https://www.premiumtimesng.com/news/headlines/922690-tinubu-asks-nass-to-approve-new-7-7bn-loan-withdraws-previous-external-borrowing-request.html"
+      "content": "President Bola Tinubu has submitted a revised request for approximately $7.7 billion in external borrowing to help finance the 2026 budget. The new request replaces an earlier proposal of approximately $20.5 billion.\n\nThe government says the funds would support programmes and projects in infrastructure, defence, agriculture, healthcare, power and education.\n\nThe Senate has referred the request to committees responsible for debt and appropriations. It should therefore be described as a proposal under legislative consideration, not as a completed loan.\n\nBefore approval, Nigerians deserve clarity on the proposed financing instruments, interest costs, repayment periods, currency exposure and the specific projects expected to benefit.\n\nThe government should also explain how it will measure whether borrowed funds deliver value. Borrowing can finance productive investment, but the public interest requires transparent terms, credible project selection and effective oversight.\n\nThe ultimate test is whether the economic and social benefits justify the long-term obligations placed on public finances.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/africa/nigerias-tinubu-seeks-new-77-billion-borrowing-replaces-earlier-205-billion-2026-11-04/"
     },
     {
-      "title": "France's strike day puts purchasing power and public services back on the agenda",
+      "title": "France's protest movement puts purchasing power and public services back on the agenda",
       "category": "France | Economy and Society",
       "date": "2026-11-05",
-      "image": "assets/europe.jpeg",
-      "content": "France has experienced another nationwide day of demonstrations as trade unions and student organisations call for higher wages, improved purchasing power and stronger public services.\n\nThe demands include better pay negotiations, protection of jobs and industry, and greater fairness in taxation. The demonstrations also reflect concerns about the ability of workers and households to manage rising living costs.\n\nThe Interior Ministry announced a deployment of 70,000 police officers and gendarmes and said more than 220 public actions were expected. The challenge for the government is to distinguish between legitimate public demands and incidents of violence, while preserving the right to peaceful protest.",
-      "source": "Le Monde and French Ministry of the Interior",
-      "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/11/05/french-students-unions-and-yellow-vest-protestors-bet-on-common-front-in-new-strike_6772570_5.html"
+      "image": "assets/france-protests.jpg",
+      "content": "France experienced another nationwide day of demonstrations as trade unions, students and pensioners protested over wages, purchasing power, education and public services.\n\nThe Interior Ministry estimated that approximately 600,000 people took part, while the CGT union claimed 1.6 million. These figures reflect different estimates and should not be treated as identical measurements.\n\nMost marches were largely peaceful, although clashes between protesters and police were reported in Paris and Lyon. Authorities deployed approximately 70,000 police officers nationwide.\n\nThe protests reflect concerns about household costs, stagnant wages, job security and the quality of public services. The movement also places pressure on the government to respond to demands from workers and students.\n\nThe right to peaceful protest remains an important democratic principle. At the same time, incidents of violence should be investigated without treating all demonstrators as responsible.\n\nThe government is expected to meet workers' and employers' representatives on November 9 to discuss wages and living costs, according to Reuters.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/europe/france-braces-fresh-protests-macron-seeks-prevent-repeat-october-unrest-2026-11-05/"
     },
     {
       "title": "Ukraine's civilian protection crisis demands accountability",
       "category": "World | Humanitarian Affairs",
       "date": "2026-11-05",
-      "image": "assets/europe.jpeg",
-      "content": "The rising death toll following the strike on an aid distribution point in Komyshuvakha is a stark reminder of the vulnerability of civilians in active conflict zones.\n\nUkrainian police reported 42 deaths on Thursday and said rescue teams were still searching through the rubble. Russia has said its forces targeted Ukrainian military units in the area, while Ukrainian authorities have described the site as a civilian aid location.\n\nThe available reporting establishes the scale of the tragedy but does not replace a full independent investigation into responsibility and the circumstances of the strike.\n\nInternational humanitarian law requires parties to distinguish between civilians and combatants and to take precautions to protect civilian life. Humanitarian shelters and aid distribution sites must not be treated as expendable.",
+      "image": "",
+      "content": "The death toll following the strike on an aid distribution point in Komyshuvakha, in Ukraine's Zaporizhzhia region, has risen to 43, according to President Volodymyr Zelenskyy. Rescuers also found one person alive after three days.\n\nThe site had been used as an aid distribution point and shelter. Ukrainian authorities describe it as a civilian location, while Russia's Defence Ministry says its forces targeted Ukrainian military units in the area.\n\nThe competing accounts make independent investigation and transparent evidence essential. The confirmed casualty figures underline the vulnerability of civilians in active conflict zones.\n\nInternational humanitarian law requires parties to distinguish between civilians and combatants and to take precautions to protect civilian life.\n\nHumanitarian shelters and aid distribution sites must not be treated as expendable. The circumstances of the strike and responsibility for the casualties require careful investigation.",
       "source": "Reuters",
-      "sourceUrl": "https://www.investing.com/news/world-news/death-toll-from-russian-strike-on-ukrainian-aid-centre-reaches-42-police-say-5002905"
+      "sourceUrl": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/"
+    },
+    {
+      "title": "Oil prices and the strategic importance of the Strait of Hormuz",
+      "category": "World | Energy and Economy",
+      "date": "2026-11-05",
+      "image": "assets/middleeast.jpeg",
+      "content": "Oil prices rebounded on Thursday as investors assessed the uncertain course of the conflict involving Iran and renewed reports of incidents involving commercial vessels.\n\nReuters reported Brent crude rising to approximately $96.92 a barrel during the trading session, while US crude also recorded gains. Prices had fallen sharply during the previous session.\n\nThe Strait of Hormuz remains one of the world's most important energy shipping routes. Any sustained disruption can increase transport costs, insurance premiums and uncertainty for import-dependent economies.\n\nThe effect is not limited to oil-producing countries. Higher energy costs can feed into transport, manufacturing, electricity generation and food prices.\n\nFor countries such as Nigeria, developments in global oil markets can affect government revenue as well as the cost of imported goods and domestic economic activity.\n\nThe market reaction demonstrates how geopolitical tensions can quickly affect households and businesses far beyond the immediate conflict zone.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/oil-falls-fourth-day-expectations-lower-risk-iran-war-escalation-2026-11-05/"
+    },
+    {
+      "title": "Nigeria's military rejects ceasefire with Islamist insurgent groups",
+      "category": "Nigeria | Security",
+      "date": "2026-11-05",
+      "image": "assets/nigeria.jpeg",
+      "content": "Nigeria's military has said it will not agree to a ceasefire with Boko Haram or Islamic State West Africa Province and will continue operations against Islamist insurgents and other armed groups.\n\nThe announcement comes amid reports of increased attacks on military positions in the north-east. The insurgency has affected communities across the region for many years, contributing to displacement, insecurity and humanitarian needs.\n\nMilitary operations remain one part of the response. Long-term security also requires intelligence, effective policing, protection of civilians, humanitarian assistance and opportunities for affected communities to rebuild.\n\nThe government should provide regular information about security operations while ensuring that civilian protection and accountability remain central to its approach.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
     }
   ],
   "leadersWatch": [
@@ -167,17 +205,17 @@
       "name": "Atiku Abubakar",
       "position": "Former Vice-President of Nigeria and ADC presidential candidate",
       "image": "assets/leaders/atiku.jpg",
-      "headline": "Campaign launch in Sokoto",
-      "update": "Atiku addressed supporters at the ADC campaign launch in Sokoto, presenting security, economic affordability and other national issues as priorities. Campaign claims about turnout should be assessed separately from independently verified evidence of voter support.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/922892-2027-politics-watch-from-atikus-sokoto-rally-to-obis-convoy-attack.html"
+      "headline": "Court ruling challenges ADC nomination",
+      "update": "A Nigerian court has voided the processes that produced Atiku's ADC nomination. The party has rejected the ruling and says it will appeal. The legal process is developing.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
     },
     {
       "name": "Peter Obi",
       "position": "Former Governor of Anambra State and opposition presidential candidate",
       "image": "assets/leaders/obi.jpg",
       "headline": "Convoy attack under police investigation",
-      "update": "Police have confirmed an arrest following an attack on Obi's convoy in Calabar. Investigators have not established the political affiliation of those responsible. The case remains under investigation.",
+      "update": "Police have confirmed an arrest following an attack on Obi's convoy in Calabar. Obi accused APC supporters, but investigators have not established the political affiliation of those responsible.",
       "source": "TheCable",
       "url": "https://www.thecable.ng/police-arrest-suspect-over-attack-on-peter-obis-convoy-in-calabar/"
     },
@@ -186,34 +224,34 @@
       "position": "President of Nigeria",
       "image": "assets/leaders/tinubu.jpg",
       "headline": "Revised external borrowing request",
-      "update": "The President has asked the National Assembly to consider a revised external borrowing proposal of approximately $7.7 billion to partly finance the 2026 budget deficit. The Senate has referred the request for committee scrutiny.",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/headlines/922690-tinubu-asks-nass-to-approve-new-7-7bn-loan-withdraws-previous-external-borrowing-request.html"
+      "update": "The President has asked the National Assembly to consider a revised external borrowing proposal of approximately $7.7 billion to help finance the 2026 budget. The proposal is under legislative scrutiny.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerias-tinubu-seeks-new-77-billion-borrowing-replaces-earlier-205-billion-2026-11-04/"
     },
     {
       "name": "Emmanuel Macron",
       "position": "President of France",
       "image": "assets/leaders/macron.jpg",
       "headline": "Government faces renewed public pressure",
-      "update": "France's nationwide demonstrations have placed wages, purchasing power, jobs and public services back at the centre of national debate.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/11/05/french-students-unions-and-yellow-vest-protestors-bet-on-common-front-in-new-strike_6772570_5.html"
+      "update": "Nationwide demonstrations have placed wages, purchasing power, jobs and public services at the centre of France's political debate.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/france-braces-fresh-protests-macron-seeks-prevent-repeat-october-unrest-2026-11-05/"
     },
     {
       "name": "Donald Trump",
       "position": "President of the United States",
       "image": "assets/leaders/trump.jpg",
-      "headline": "International policy and economic developments",
-      "update": "The US administration remains under scrutiny over its foreign-policy decisions and their economic consequences. This edition carries no additional independently verified presidential announcement.",
+      "headline": "US foreign policy and Iran conflict",
+      "update": "The US administration's approach to the conflict involving Iran remains a significant factor for energy markets and international diplomacy. This edition focuses on verified market and regional developments rather than unconfirmed presidential announcements.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/us/"
+      "url": "https://www.reuters.com/business/energy/oil-falls-fourth-day-expectations-lower-risk-iran-war-escalation-2026-11-05/"
     },
     {
       "name": "Mark Carney",
       "position": "Prime Minister of Canada",
       "image": "assets/leaders/carney.jpg",
       "headline": "Canada and international relations",
-      "update": "Canada's international economic and diplomatic position remains part of RadiantWaves' global monitoring. No additional verified announcement is included in this edition.",
+      "update": "Canada's international economic and diplomatic position remains part of global monitoring. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/americas/"
     },
@@ -222,16 +260,16 @@
       "position": "President of Russia",
       "image": "assets/leaders/putin.jpg",
       "headline": "Ukraine war and international scrutiny",
-      "update": "Russia's military actions in Ukraine remain under international scrutiny following reports of civilian casualties at an aid distribution point. Moscow says its forces targeted military units; the competing accounts require independent investigation.",
+      "update": "Russia's military actions in Ukraine remain under international scrutiny following the strike in Komyshuvakha. Moscow says its forces targeted military units, while Ukrainian authorities describe the site as a civilian aid location.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/"
+      "url": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/"
     },
     {
       "name": "Xi Jinping",
       "position": "President of China",
       "image": "assets/leaders/xi.jpg",
       "headline": "China's global economic and diplomatic role",
-      "update": "China's economic and diplomatic position remains an important part of global monitoring. No additional verified announcement is included in this edition.",
+      "update": "China's economic and diplomatic position remains an important part of global monitoring. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/china/"
     },
@@ -240,7 +278,7 @@
       "position": "Chancellor of Germany",
       "image": "assets/leaders/merz.jpg",
       "headline": "European political and economic developments",
-      "update": "Germany remains central to European economic and diplomatic discussions. No additional verified announcement is included in this edition.",
+      "update": "Germany remains central to European economic and diplomatic discussions. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/europe/"
     },
@@ -249,7 +287,7 @@
       "position": "UK Prime Minister",
       "image": "assets/leaders/andy.jpg",
       "headline": "United Kingdom political monitoring",
-      "update": "RadiantWaves continues to monitor developments in the United Kingdom. No additional verified announcement is included in this edition.",
+      "update": "RadiantWaves continues to monitor developments in the United Kingdom. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/uk/"
     },
@@ -258,7 +296,7 @@
       "position": "President of the European Commission",
       "image": "assets/leaders/von-der-leyen.jpg",
       "headline": "European Union policy and diplomacy",
-      "update": "The European Union remains engaged in major economic, security and diplomatic discussions. No additional verified announcement is included in this edition.",
+      "update": "The European Union remains engaged in major economic, security and diplomatic discussions. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/europe/"
     },
@@ -266,19 +304,19 @@
       "name": "Volodymyr Zelensky",
       "position": "President of Ukraine",
       "image": "assets/leaders/zelensky.jpg",
-      "headline": "Ukraine's humanitarian and security situation",
-      "update": "Ukraine continues to report civilian casualties following the strike on an aid distribution point in the Zaporizhzhia region. Kyiv describes the site as a civilian aid location.",
+      "headline": "Ukraine's humanitarian crisis",
+      "update": "Zelenskyy said the death toll following the strike on an aid distribution point in Komyshuvakha had risen to 43. Rescuers found one person alive after three days.",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/death-toll-from-russian-strike-on-ukrainian-aid-centre-reaches-42-police-say-5002905"
+      "url": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/"
     },
     {
       "name": "Marine Le Pen",
       "position": "French political leader",
       "image": "assets/leaders/marine-le-pen.jpg",
       "headline": "French political developments",
-      "update": "French political debate continues amid demonstrations and public concern about purchasing power and public services. No additional verified announcement is included in this edition.",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/"
+      "update": "French political debate continues amid demonstrations and public concern about purchasing power and public services. No additional specific verified announcement is included in this edition.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/"
     },
     {
       "name": "Nnamdi Kanu",
@@ -321,7 +359,7 @@
       "position": "Australian politician",
       "image": "assets/leaders/helen-haines.jpg",
       "headline": "Australia political monitoring",
-      "update": "RadiantWaves continues to monitor Australian political developments. No additional verified announcement is included in this edition.",
+      "update": "RadiantWaves continues to monitor Australian political developments. No additional specific verified announcement is included in this edition.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/asia-pacific/"
     }
@@ -372,7 +410,16 @@
         "description": "Cybersecurity, reliable data systems and tested recovery procedures are essential for organisations that provide healthcare, transport, finance and public services. Digital transformation should be measured not only by speed and convenience but also by safety, continuity and public trust.",
         "category": "Technology | Editorial",
         "date": "2026-11-05",
-        "image": "assets/ai.jpeg",
+        "image": "",
+        "source": "RadiantWaves Media",
+        "url": "https://radiantwavesmedia.com/"
+      },
+      {
+        "title": "Electric vehicle innovation and the changing global automotive market",
+        "description": "Electric vehicle manufacturers are competing through battery technology, manufacturing scale, software and charging infrastructure. The transition also raises questions about mineral supply chains, affordability, jobs and energy policy.",
+        "category": "Technology | Transport",
+        "date": "2026-11-05",
+        "image": "assets/news/byd-electric-vehicles.jpg",
         "source": "RadiantWaves Media",
         "url": "https://radiantwavesmedia.com/"
       }
@@ -386,10 +433,10 @@
       {
         "country": "Nigeria",
         "election": "2027 General Election",
-        "status": "Campaign preparations and political positioning",
-        "update": "Atiku Abubakar's ADC campaign launch in Sokoto has added momentum to the opposition's public campaign activity. Candidates and parties will be judged on the clarity, feasibility and cost of their proposals, as well as their commitment to credible elections.",
-        "source": "Premium Times",
-        "url": "https://www.premiumtimesng.com/news/top-news/922892-2027-politics-watch-from-atikus-sokoto-rally-to-obis-convoy-attack.html"
+        "status": "Party nomination under legal challenge",
+        "update": "A court has voided the processes that produced Atiku Abubakar's ADC nomination. The party says it will appeal. The legal process, any further court orders and electoral requirements will determine the next steps.",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
       }
     ],
     "editorialNote": "Election monitoring must distinguish between campaign announcements, political allegations, official electoral decisions and independently verified outcomes. RadiantWaves will not present a candidate's claims as established public opinion or an unverified allegation as fact."
@@ -397,19 +444,27 @@
   "breakingHistory": [
     {
       "date": "2026-11-05",
-      "title": "Ukraine aid-centre strike death toll rises",
-      "description": "Ukrainian police reported 42 deaths following Monday's strike on an aid distribution point in Komyshuvakha. Rescue operations continued.",
+      "title": "Court voids Atiku Abubakar's ADC nomination",
+      "description": "A Nigerian court set aside the processes that produced the ADC leadership and Atiku's presidential nomination. The party says it will appeal.",
+      "category": "Nigeria | Politics",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigerian-court-voids-candidacy-opposition-adcs-atiku-2027-election-2026-11-05/"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Ukraine aid-centre strike death toll rises to 43",
+      "description": "President Zelenskyy reported 43 deaths following the strike in Komyshuvakha. Rescuers found one person alive after three days.",
       "category": "World | Humanitarian Crisis",
       "source": "Reuters",
-      "url": "https://www.investing.com/news/world-news/death-toll-from-russian-strike-on-ukrainian-aid-centre-reaches-42-police-say-5002905"
+      "url": "https://www.reuters.com/world/europe/death-toll-russian-strike-ukrainian-aid-centre-reaches-42-police-say-2026-11-05/"
     },
     {
       "date": "2026-11-05",
       "title": "Nationwide demonstrations take place across France",
-      "description": "Workers and students joined demonstrations demanding better wages, stronger public services and improved purchasing power.",
+      "description": "Workers, students and pensioners joined demonstrations demanding better wages, stronger public services and improved purchasing power.",
       "category": "France | Society",
-      "source": "French Ministry of the Interior",
-      "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/journee-de-mobilisation-du-05-novembre-maintenir-reponse-ferme-face-aux-debordements"
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/france-braces-fresh-protests-macron-seeks-prevent-repeat-october-unrest-2026-11-05/"
     }
   ],
   "archives": {
@@ -425,19 +480,19 @@
   },
   "todaysBigQuestion": {
     "title": "Today's Big Question",
-    "question": "How should Nigerians judge presidential candidates ahead of the 2027 election: by political experience, economic plans, security proposals, past performance or the ability to unite the country?",
-    "description": "Campaign activity is increasing, but voters need more than slogans and political alliances. They need credible proposals, clear funding plans and measurable commitments.",
+    "question": "How should Nigerians judge political parties and presidential candidates when legal disputes, campaign promises and questions of leadership credibility arise before an election?",
+    "description": "Political competition requires more than slogans and alliances. Voters need lawful party processes, credible proposals, clear funding plans and measurable commitments.",
     "discussionPoints": [
+      "Respect for internal party democracy and lawful nomination procedures",
       "A proven record of public service and performance",
       "A realistic and affordable economic programme",
       "A practical strategy for tackling insecurity",
-      "Respect for democratic institutions and the rule of law",
-      "The ability to unite a diverse country"
+      "Respect for democratic institutions and the rule of law"
     ]
   },
   "radiantWavesPerspective": {
     "title": "The RadiantWaves Perspective",
-    "content": "Today's developments across Nigeria, France and Ukraine reveal a common responsibility: those who exercise power must answer for the consequences of their decisions.\n\nIn Nigeria, political campaigns should be judged by practical policies, credible funding proposals and respect for democratic competition. In France, public demonstrations reflect the importance of listening to workers and protecting peaceful civic participation. In Ukraine, the growing civilian death toll reinforces the urgent need to protect humanitarian sites and investigate attacks transparently.\n\nRadiantWaves Media believes journalism must go beyond repeating announcements. It must provide context, distinguish verified facts from allegations, question those in authority and give the public the information needed to make informed decisions."
+    "content": "Today's developments across Nigeria, France and Ukraine reveal a common responsibility: institutions and those who exercise power must answer for the consequences of their decisions.\n\nIn Nigeria, the court ruling affecting Atiku Abubakar's nomination places party democracy and lawful political processes under scrutiny. The ADC's announced appeal is now an important part of the story. Political parties must demonstrate that their internal procedures can withstand legal examination.\n\nThe attack on Peter Obi's convoy also underlines the importance of protecting peaceful political participation. Allegations must be investigated, but they should not be presented as established facts before evidence is available.\n\nIn France, demonstrations reflect continuing concerns about wages, purchasing power and public services. The right to peaceful protest and the responsibility to maintain public safety must both be respected.\n\nIn Ukraine, the rising civilian death toll reinforces the urgent need to protect humanitarian sites and investigate attacks transparently.\n\nRadiantWaves Media believes journalism must go beyond repeating announcements. It must provide context, distinguish verified facts from allegations, question those in authority and give the public the information needed to make informed decisions."
   },
   "sponsoredAdverts": [
     {
@@ -464,6 +519,7 @@
       "We update developing stories when reliable new information becomes available.",
       "We do not present an arrest as proof of guilt.",
       "We do not describe proposed government borrowing as an approved or completed loan.",
+      "We distinguish a court ruling from the outcome of an appeal.",
       "We aim to provide original reporting and analysis rather than reproduce another publisher's work."
     ]
   },

@@ -1,699 +1,669 @@
 
 {
-  "edition": "Night",
-  "date": "2026-11-06",
-  "editionTime": "Night",
-  "updatedAt": "2026-11-06T21:15:00+01:00",
+  "edition": "Morning",
+  "date": "2026-11-07",
+  "editionTime": "Morning",
+  "updatedAt": "2026-11-07T03:14:00+01:00",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
+    "slogan": "Gateway to Your World News — Connecting You to the World",
     "location": "Nigeria | France | Global",
-    "website": "https://radiantwavesmedia.com/",
-    "email": "info@radiantwavesmedia.com",
-    "supportEmail": "support@radiantwavesmedia.com",
-    "slogan": "Gateway to Your World News — Connecting You to the World"
+    "website": "https://radiantwavesmedia.com/"
   },
   "hero": {
-    "title": "NIGHT GLOBAL NEWS: NIGERIA'S ADC CRISIS, IRAN WAR TENSIONS, BREXIT DEBATE AND A CHANGING GLOBAL POLITICAL LANDSCAPE",
-    "description": "Atiku Abubakar insists he remains in Nigeria's 2027 presidential race as the ADC confirms an appeal against the Federal High Court judgment. In the Middle East, Donald Trump's latest warning raises fears of renewed military action against Iran while Tehran pursues diplomacy through regional mediators. Britain debates its long-term relationship with Europe, Scotland presses its constitutional case, South Africa's municipal results point to further political change, and a new defence partnership involving Turkey, Saudi Arabia and Pakistan takes shape. Across the world, markets, security and economic pressures remain in focus.",
-    "image": "assets/middleeast.jpeg"
+    "category": "GLOBAL MORNING BRIEFING",
+    "headline": "GLOBAL POWER SHIFTS: US-IRAN STRIKES, NIGERIA'S ADC APPEAL AND A NEW POLITICAL CHAPTER IN PARAGUAY",
+    "summary": "Saturday begins with major developments across several continents. The United States has carried out further limited strikes against Iranian air defences as Qatar pursues mediation. Nigeria's ADC has appealed a court judgment affecting its leadership and 2027 preparations. Democrats have made major gains in the US midterm elections, South Africa's municipal results point to a changing political landscape, and Paraguay has sworn in a new president following Santiago Peña's impeachment. Europe is preparing for closer UK-EU cooperation, while Ukraine diplomacy, African security and global economic uncertainty remain firmly in focus.",
+    "image": "assets/middleeast.jpeg",
+    "source": "RadiantWaves Media Newsroom",
+    "url": "https://radiantwavesmedia.com/"
   },
-  "morningSummary": "Friday's international developments have been shaped by political disputes, security concerns, diplomacy and economic uncertainty. In Nigeria, former Vice-President Atiku Abubakar has issued a new statement insisting that he remains in the 2027 presidential race despite the Federal High Court judgment affecting his ADC nomination. The ADC says it has filed an appeal and applied for a stay of execution, while the APC denies involvement in the case. The legal process remains ongoing, and the outcome of the appeal and any interim orders will be important. In the Middle East, President Donald Trump has warned that the United States may have to launch further action against Iran. Tehran, meanwhile, has sent a proposal through Qatari mediators and is maintaining diplomatic contacts with regional governments. Iran's security chief also met President Vladimir Putin in Moscow. In Europe, Britain's Prime Minister Andy Burnham has reopened discussion about the country's long-term relationship with the European Union, while Scotland's First Minister John Swinney continues to advocate independence and closer European relations. France is also responding to a fatal bus crash in the Ain department, in which two people died and 16 were injured. In Africa, South Africa's municipal election count shows the ANC facing a substantial decline, while tensions between Sudan and Ethiopia have escalated following reciprocal consulate closures and accusations of interference in each other's conflicts. Turkey's parliament has approved a defence agreement with Saudi Arabia and Pakistan. Canada has released its 2026 federal budget, placing emphasis on investment, trade diversification and affordability. Global markets have been unsettled by a sharp technology-stock sell-off linked to concerns about artificial-intelligence investment costs and company valuations. Pope Leo XIV has begun a 12-day visit to Uruguay, Argentina and Peru. New Zealand is preparing for its general election on 7 November. This edition reflects developments reported by reliable sources available by 21:15 CET on 6 November 2026.",
+  "morningSummary": {
+    "headline": "The World This Morning",
+    "text": "Saturday, 7 November 2026, opens with a rapidly changing international picture. In the Middle East, the United States has confirmed limited strikes on Iranian air defences, while Iranian media report two missiles struck Qeshm Island. Qatar says diplomatic efforts between Washington and Tehran are continuing. In Nigeria, the ADC has filed an appeal and requested a stay of execution following the Federal High Court judgment affecting the David Mark-led leadership. In Washington, Democratic gains in both chambers of Congress create a new political balance for President Donald Trump. South Africa's municipal election count shows the ANC under pressure, while Paraguay has entered a new political chapter after Pedro Alliana was sworn in following Santiago Peña's impeachment. The UK and EU are preparing a 20 November summit on trade, security and youth mobility. France is preparing for a social conference after nationwide demonstrations. China has passed a new law targeting cross-border corruption, and a possible meeting involving Xi Jinping, Donald Trump and Vladimir Putin is being discussed. Ukraine's next round of US-mediated discussions is expected in Abu Dhabi on 10 and 11 November. Across Africa, Nigeria's military rejects claims of a ceasefire with insurgent groups, Sudan-Ethiopia tensions are worsening, and Kenya's Shakahola case has reached a major sentencing stage. These developments underline the importance of diplomacy, democratic accountability, public security and reliable information."
+  },
   "breaking": [
     {
-      "title": "ATIKU INSISTS HE REMAINS IN 2027 PRESIDENTIAL RACE AS APC DENIES COURT INTERFERENCE",
-      "description": "Former Nigerian Vice-President Atiku Abubakar has issued a statement from Sokoto dated 6 November, insisting that he remains in the 2027 presidential race despite Thursday's Federal High Court judgment affecting his nomination under the African Democratic Congress. Atiku told supporters that he would not abandon the campaign and maintained that Nigerians should have the opportunity to choose between competing political parties. He also accused President Bola Tinubu's administration of using political pressure and the courts to weaken opposition politics. Premium Times reported that Atiku offered no evidence linking the administration to the court case or to his separate allegations concerning the voters' register. The APC rejected the accusations. Its National Publicity Secretary, Felix Morka, said the party was neither a party to the case nor involved in the dispute, describing it as an internal ADC matter. Aviation Minister Festus Keyamo also questioned Atiku's status as a candidate, interpreting the wording and signature of his statement as recognition of the court order. Atiku, however, expressly maintains that he intends to continue his campaign. The legal position remains subject to the appeal process and any further orders of the courts.",
-      "category": "Nigeria | Breaking Politics | Atiku Abubakar",
-      "date": "2026-11-06",
-      "image": "assets/leaders/atiku2.jpg",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html",
-      "status": "Atiku's statement issued; legal dispute ongoing"
-    },
-    {
-      "title": "ADC CONFIRMS APPEAL AND STAY APPLICATION; INEC URGED TO AWAIT COURT PROCESS",
-      "description": "The African Democratic Congress has confirmed that it has filed an appeal against the Federal High Court judgment delivered on 5 November in the case brought by former party official Nafiu Bala Gombe. The party has also applied for a stay of execution pending the hearing and determination of the appeal. It says the Independent National Electoral Commission has been notified and urged not to take steps that could pre-empt the Court of Appeal. The judgment affected the David Mark-led leadership structure and decisions taken under it, including the presidential primary that produced Atiku Abubakar as the ADC candidate. The party argues that an earlier judgment delivered on 2 July by Justice Musa Liman is relevant to the leadership dispute and should be considered in the appeal. That is the ADC's legal argument, and the appellate court will have to determine its significance. Filing an appeal does not automatically suspend the original judgment. The stay application must be considered separately, and the position will depend on the orders made by the courts.",
-      "category": "Nigeria | Judiciary | ADC",
-      "date": "2026-11-06",
-      "image": "assets/leaders/atiku.jpg",
-      "source": "The Guardian Nigeria and Trust Radio",
-      "url": "https://guardian.ng/news/adc-appeals-court-judgment-urges-inec-against-pre-empting-court-of-appeal/",
-      "status": "Appeal filed; stay application pending"
-    },
-    {
-      "title": "APC REJECTS CLAIMS OF POLITICAL INTERFERENCE IN ADC COURT CASE",
-      "description": "The All Progressives Congress has rejected allegations that it influenced the Federal High Court judgment affecting the ADC leadership and Atiku Abubakar's nomination. APC National Publicity Secretary Felix Morka said the ruling party was not involved in the case and urged the ADC to use its constitutional right of appeal rather than accuse the government of interference. The dispute originated in a legal challenge brought by Nafiu Bala Gombe, a former ADC deputy national chairman, who questioned the process through which the David Mark-led leadership emerged. The court upheld the challenge and invalidated decisions taken under the disputed leadership. The ADC has rejected the judgment and says it will pursue further legal remedies. Atiku has also criticised the timing and political implications of the decision. These competing political claims should not be confused with findings made by the court. The appeal process, the full judgment and any subsequent orders will be central to understanding the legal position.",
-      "category": "Nigeria | Politics | Government and Opposition",
-      "date": "2026-11-06",
-      "image": "assets/leaders/tinubu.jpg",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html",
-      "status": "APC denial reported; allegations disputed"
-    },
-    {
-      "title": "NIGERIA'S MILITARY RULES OUT CEASEFIRE WITH BOKO HARAM AND ISWAP",
-      "description": "Nigeria's military has ruled out a ceasefire with Boko Haram and Islamic State West Africa Province, saying operations against insurgent groups will continue. Military spokesperson Major-General Samaila Uba said recent operations had resulted in insurgents being killed, suspects arrested and hostages rescued. He said the armed forces would maintain pressure on the groups rather than negotiate a ceasefire. The announcement comes amid renewed attacks on military positions in north-eastern Nigeria, where the insurgency has persisted for approximately 17 years. The military also said Nigeria was discussing security and diplomatic cooperation with neighbouring Sahel countries that have left ECOWAS. The statement outlines the military's position; it does not mean the insurgency has been defeated. The continuing attacks, displacement of civilians and humanitarian consequences remain major challenges for communities in the north-east.",
-      "category": "Nigeria | Security | National Affairs",
-      "date": "2026-11-06",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/",
-      "status": "Military operations continuing"
-    },
-    {
-      "title": "TRUMP WARNS UNITED STATES MAY HAVE TO TAKE FURTHER ACTION AGAINST IRAN",
-      "description": "US President Donald Trump has warned that Washington may have to take further military action against Iran, saying the United States could be forced to destroy more of the country if the conflict continues. His remarks have increased concern about a possible resumption or expansion of military operations. They are a warning, not confirmation that a new attack has been ordered. Iran has meanwhile sent a nuclear and peace proposal to the United States through Qatari mediators, according to reporting by Al Jazeera citing Reuters and an Iranian official. Tehran says discussions depend on Washington meeting a list of Iranian demands, including sanctions and the naval restrictions affecting Iranian ports. The United States is reviewing the proposal, but no agreement has been announced. Iran's security chief Mohsen Rezaei has also travelled to Moscow to meet Vladimir Putin. The combination of military threats, diplomatic proposals and pressure around the Strait of Hormuz continues to create uncertainty for regional security and international energy markets.",
-      "category": "Middle East | United States | Iran Conflict",
-      "date": "2026-11-06",
-      "image": "assets/leaders/trump.jpg",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran",
-      "status": "Warning issued; no new operation confirmed"
-    },
-    {
-      "title": "PUTIN MEETS IRANIAN SECURITY CHIEF AS MOSCOW AND TEHRAN DISCUSS REGIONAL SECURITY",
-      "description": "Russian President Vladimir Putin met Iranian security official Mohsen Rezaei in Moscow on 5 November. Rezaei, secretary of Iran's Supreme National Security Council, reportedly delivered a message from Iran's Supreme Leader Mojtaba Khamenei. According to statements reported by Al Jazeera, the discussions covered regional security, the future of the conflict involving Iran and possible energy cooperation, including a proposed gas pipeline. Rezaei said Tehran would not resume negotiations with Washington or reopen the Strait of Hormuz until its conditions were met. The meeting demonstrates continuing diplomatic engagement between Moscow and Tehran, whose relationship has deepened under Western sanctions. However, the meeting itself does not establish that a new military agreement has been signed or that Russia has committed to direct military intervention. The wider diplomatic and security consequences will depend on subsequent decisions by the governments involved.",
-      "category": "Russia | Iran | International Diplomacy",
-      "date": "2026-11-06",
-      "image": "assets/leaders/putin.jpg",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei",
-      "status": "Diplomatic meeting reported"
-    },
-    {
-      "title": "SUDAN AND ETHIOPIA CLOSE CONSULATES AS BORDER TENSIONS DEEPEN",
-      "description": "Sudan and Ethiopia have closed each other's consulates following escalating accusations that each country is interfering in the other's internal conflict. Ethiopia ordered Sudanese diplomats to leave its consulate in Assosa, while Sudan responded by closing Ethiopia's consulate in Gedaref and expelling its staff. Sudan has accused Ethiopia of allowing the paramilitary Rapid Support Forces to use Ethiopian territory for drone operations against civilian infrastructure. Ethiopia denies the allegation. Addis Ababa has also accused Sudan, Egypt and Eritrea of supporting Tigrayan rebels, claims those countries reject. Sudan has taken its complaint to the United Nations Security Council and the African Union's Peace and Security Council. The diplomatic dispute is particularly serious because Sudan's civil war has already displaced millions and created a major humanitarian emergency. The closure of consulates does not mean the two countries are at war, but it highlights the risk that internal conflicts could create wider instability across the Horn of Africa.",
-      "category": "Africa | Sudan | Ethiopia | Diplomacy",
-      "date": "2026-11-06",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/",
-      "status": "Consulates closed; allegations denied"
-    },
-    {
-      "title": "SOUTH AFRICA: ANC FACES MAJOR MUNICIPAL ELECTION SETBACK AS COALITION TALKS LOOM",
-      "description": "South Africa's African National Congress is facing a substantial decline in support in the country's municipal elections. Reuters reported on Friday evening that with approximately 81% of votes counted, the ANC was on about 32%, compared with approximately 25% for the Democratic Alliance. These figures remain provisional and should not be described as final certified results. If the trend holds, the ANC would lose around 14 percentage points compared with its 2021 municipal election performance. The results point towards difficult coalition negotiations in major urban centres, including Johannesburg and Tshwane. The DA is on course for a strong result in Cape Town, while several other municipalities may have no outright majority. The ANC's decline follows its loss of a parliamentary majority in the 2024 national election. Voters' concerns include unemployment, crime, corruption and poor delivery of basic services such as water and electricity. The final results and local coalition agreements will determine how municipalities are governed.",
-      "category": "Africa | South Africa | Elections",
-      "date": "2026-11-06",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters",
-      "url": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/",
-      "status": "About 81% counted; final results awaited"
-    },
-    {
-      "title": "TURKEY'S PARLIAMENT APPROVES DEFENCE AGREEMENT WITH SAUDI ARABIA AND PAKISTAN",
-      "description": "Turkey's parliament has approved the Mecca Joint Defence Agreement involving Turkey, Saudi Arabia and Pakistan by 279 votes to 119. The agreement provides for closer defence cooperation, intelligence-sharing, joint deterrence and stronger defence-industry links. It was signed in August by Turkish President Recep Tayyip Erdoğan, Saudi Crown Prince Mohammed bin Salman and Pakistan's Prime Minister Shehbaz Sharif. The pact commits the countries to treat an attack against one as an attack against all. However, Turkish officials have stressed that any deployment of Turkish troops would require separate parliamentary approval. Opposition lawmakers have raised questions about the agreement's scope and the risk of Turkey becoming involved in regional conflicts. The three governments have said the pact is defensive and is not directed against Iran or another country. Its practical consequences will depend on how the agreement is implemented.",
-      "category": "Asia | Middle East | Defence and Security",
-      "date": "2026-11-06",
+      "id": "brk-001",
+      "category": "Middle East | Iran | United States",
+      "headline": "US Confirms Further Limited Strikes on Iranian Air Defences as Qatar Pursues Mediation",
+      "summary": "President Donald Trump says US forces carried out further limited strikes on Iranian air defences. Qatar is continuing diplomatic efforts aimed at reducing the conflict and opening a path to negotiations. Iran has set conditions for talks, and no comprehensive agreement has been announced.",
       "image": "assets/middleeast.jpeg",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/b17c570820e88891b2d46dd3fbc3a1f6",
-      "status": "Parliamentary approval confirmed"
+      "url": "https://apnews.com/article/53ed5d271b9aef6f880aebc133ea6a55"
     },
     {
-      "title": "FRANCE: TWO PEOPLE KILLED AND 16 INJURED IN BUS CRASH IN AIN",
-      "description": "Two people, including a child, were killed and 16 others injured when a bus crashed in Lent in the Ain department of eastern France, near the Swiss border. The accident occurred on Friday morning. Local authorities said the vehicle left the road, entered a ditch and struck a tree. Three of the injured were reported to be in serious condition. There were initially differing accounts about whether the vehicle was a school bus or an intercity bus, and about the number of people affected. The prefecture coordinated emergency services and rescue teams, while Transport Minister Philippe Tabarot travelled towards the scene. Authorities have launched an investigation to establish the cause of the crash and the precise circumstances. The community has been left grieving, and support services have been made available to those affected.",
-      "category": "Europe | France | Breaking News",
-      "date": "2026-11-06",
-      "image": "assets/france.jpeg",
-      "source": "Reuters and Euronews",
-      "url": "https://www.euronews.com/2026/11/06/emergency-services-deployed-after-school-bus-crash-kills-two-in-france",
-      "status": "Fatal crash; investigation ongoing"
-    },
-    {
-      "title": "BREXIT DEBATE RETURNS AS UK PRIME MINISTER CALLS FOR HONEST DISCUSSION ABOUT EUROPE",
-      "description": "The United Kingdom's relationship with the European Union has returned to the centre of political debate following comments by Prime Minister Andy Burnham. In an interview with ITV News, Burnham said he wanted a more honest discussion about how immigration and the country's relationship with Europe had changed since the Brexit referendum. He also said he had not proposed restoring freedom of movement. His comments have revived debate about whether Britain should seek a closer relationship with the EU over the coming years. The government's current parliamentary commitments continue to rule out an immediate return to the single market, customs union and freedom-of-movement arrangements during this Parliament. A UK-EU summit expected on 20 November is likely to focus on practical cooperation, including trade in food and drink, emissions arrangements and youth mobility. This is a debate about future policy options, not an announcement that Britain is rejoining the European Union.",
-      "category": "United Kingdom | Europe | Brexit",
-      "date": "2026-11-06",
-      "image": "assets/leaders/andy.jpg",
-      "source": "ITV News",
-      "url": "https://www.itv.com/news/2026-11-03/burnham-i-have-not-proposed-return-to-eu-freedom-of-movement",
-      "status": "Political debate ongoing; no decision to rejoin EU"
-    },
-    {
-      "title": "SCOTLAND: JOHN SWINNEY CONTINUES TO PRESS FOR INDEPENDENCE AND CLOSER EU RELATIONS",
-      "description": "Scotland's constitutional future remains a major issue in British politics. First Minister John Swinney continues to argue that Scotland's long-term interests would be best served by independence and eventual membership of the European Union. The Scottish Government's published position calls for a much closer relationship between the UK and EU and says Scotland should have a stronger voice in negotiations affecting its interests. Swinney has also said he is willing to work constructively with Prime Minister Andy Burnham on further devolution where it can improve economic growth, wages, public services and opportunities. The two governments continue to disagree over independence. Scotland remains part of the United Kingdom, and the Scottish Government cannot independently complete EU accession while Scotland remains within the UK constitutional framework. Any change would require a lawful constitutional process and democratic consent. The debate therefore concerns not only political identity but also trade, public finances, powers and the future relationship between Scotland and the rest of the UK.",
-      "category": "Europe | Scotland | Constitution and Brexit",
-      "date": "2026-11-06",
-      "image": "assets/leaders/uk-government.jpg",
-      "source": "Scottish Government",
-      "url": "https://www.gov.scot/news/fm-will-work-with-pm-on-further-devolution/",
-      "status": "Constitutional debate ongoing"
-    },
-    {
-      "title": "CANADA RELEASES 2026 BUDGET WITH FOCUS ON INVESTMENT, TRADE AND AFFORDABILITY",
-      "description": "Canada's government has released its 2026 federal budget, setting out plans to encourage investment, diversify international trade and respond to affordability pressures. The Department of Finance says the plan includes approximately 400 billion Canadian dollars in capital investment over six years and 22 billion dollars in new affordability measures. It also aims to reduce the growth of direct programme spending from 8% to 2%. The budget comes as Canada seeks to strengthen its economic position amid geopolitical competition, trade uncertainty and changing relations with the United States. The government says it wants to expand export markets and make greater use of Canada's natural resources, energy capacity and skilled workforce. The impact of the budget will depend on implementation, economic conditions and parliamentary scrutiny. The announcement is a government plan, not proof that all proposed investments or savings have already been delivered.",
-      "category": "North America | Canada | Economy",
-      "date": "2026-11-06",
-      "image": "assets/leaders/carney.jpg",
-      "source": "Government of Canada",
-      "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html",
-      "status": "Budget released; implementation ahead"
-    },
-    {
-      "title": "GLOBAL MARKETS HIT BY SHARP TECHNOLOGY SELL-OFF AS AI INVESTMENT CONCERNS GROW",
-      "description": "Financial markets experienced a sharp sell-off as investors reassessed the cost and commercial returns of artificial-intelligence investment. Associated Press reported that the Nasdaq fell 5.5%, while the S&P 500 dropped 4.4% and the Dow Jones Industrial Average fell 3.4% during Thursday's session. Technology companies and businesses linked to data-centre construction faced heavy selling as investors questioned whether spending on AI infrastructure could generate sufficient returns. Nvidia and AMD were among the companies affected. The market decline also reflected concerns about borrowing costs, inflation, political pressure and the energy requirements of data centres. Brent crude rose amid uncertainty over the conflict involving Iran. A sharp fall in share prices does not by itself establish that the global economy is entering recession. Investors will continue to assess company earnings, interest-rate decisions, energy prices and the outlook for AI-related investment.",
-      "category": "Global Business | Markets | Technology",
-      "date": "2026-11-06",
-      "image": "assets/market.jpeg",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e",
-      "status": "Markets volatile"
-    },
-    {
-      "title": "POPE LEO XIV BEGINS 12-DAY VISIT TO URUGUAY, ARGENTINA AND PERU",
-      "description": "Pope Leo XIV has departed Rome for a 12-day visit to Uruguay, Argentina and Peru, returning to a region where he spent many years as a missionary and church leader. The journey includes religious services, meetings with political leaders and visits to communities facing poverty and social pressures. In Argentina, the Pope is expected to meet President Javier Milei amid debate over public spending and the effect of economic reforms on poorer households. In Peru, the visit will include places connected to his earlier ministry. The Vatican has described the Pope as recovered from his recent surgery, although the demanding schedule is being watched closely. The tour is also taking place at a time when Catholic affiliation is declining in parts of Latin America and churches face questions about public trust. The visit is pastoral and diplomatic; political positions should be attributed to the Pope or Vatican when reported.",
-      "category": "South America | Vatican | Religion and Diplomacy",
-      "date": "2026-11-06",
-      "image": "assets/argentina.jpeg",
+      "id": "brk-002",
+      "category": "Middle East | Iran",
+      "headline": "Iranian Media Report Two Missiles Struck Qeshm Island",
+      "summary": "Iran's semi-official Tasnim news agency says two missiles struck Qeshm Island in southern Iran. The initial report did not establish responsibility or confirm the extent of damage. Qatar has separately rejected reports that its mediation efforts have failed, saying contacts between Washington and Tehran continue.",
+      "image": "assets/middleeast.jpeg",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/americas/pope-leo-starts-south-america-homecoming-tour-month-after-lung-surgery-2026-11-06/",
-      "status": "Visit underway"
+      "url": "https://www.reuters.com/world/middle-east/two-missiles-strike-irans-qeshm-island-tasnim-news-agency-says-2026-11-06/"
     },
     {
-      "title": "NEW ZEALAND PREPARES FOR CLOSE GENERAL ELECTION ON 7 NOVEMBER",
-      "description": "New Zealand is preparing to vote in a closely watched general election on Saturday, 7 November. The contest is centred on incumbent Prime Minister Christopher Luxon and Labour leader Chris Hipkins. Campaign issues include the cost of living, economic recovery, unemployment, public healthcare, education and the country's future trade relationships. Luxon's supporters point to his government's economic and policy agenda, while critics have raised concerns about living costs and the pace of recovery. Hipkins is campaigning on household affordability and public services. The election is taking place in a challenging economic environment, and the result will determine which party or coalition forms the next government. No result should be reported before voting and the official counting process have taken place.",
-      "category": "Oceania | New Zealand | Elections",
-      "date": "2026-11-06",
-      "image": "",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7131767dc54ff924985ae40f17c46b68",
-      "status": "Election scheduled for 7 November"
-    },
-    {
-      "title": "UKRAINE DIPLOMACY: BERLIN CALLS FOR EUROPE TO BE INCLUDED IN ANY PEACE SETTLEMENT",
-      "description": "German Chancellor Friedrich Merz has said Europe must be included in any lasting settlement of Russia's war against Ukraine. His comments come ahead of planned talks involving Ukrainian, US and Russian representatives in Abu Dhabi on 10 and 11 November. The discussions are expected to consider security guarantees, an energy ceasefire and arrangements affecting the Black Sea. Ukrainian President Volodymyr Zelensky has said Kyiv is prepared to pursue diplomacy but needs credible security guarantees and continued support for its defence. Germany has pledged further assistance to Ukraine, including support for energy supplies ahead of winter. Russia's position and the terms of any proposed ceasefire remain unresolved. The planned talks are an opportunity for diplomatic engagement, not evidence that a peace agreement has been reached. Fighting and attacks continue while the diplomatic process is being prepared.",
-      "category": "Europe | Ukraine | Russia | Diplomacy",
-      "date": "2026-11-06",
-      "image": "assets/leaders/zelensky.jpg",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/russia-must-show-it-is-serious-about-ceasefire-abu-dhabi-talks-germanys-merz-2026-11-03/",
-      "status": "Peace talks planned; no agreement announced"
-    }
-  ],
-  "featured": {
-    "title": "NIGERIA'S 2027 ELECTION UNDER PRESSURE: ATIKU RESPONDS AS ADC TAKES COURT BATTLE TO APPEAL",
-    "subtitle": "The judgment, the opposition's legal response and the APC's denial raise important questions about party leadership and electoral competition",
-    "category": "Nigeria | Special Political Report",
-    "date": "2026-11-06",
-    "image": "assets/leaders/atiku2.jpg",
-    "content": "Nigeria's political landscape has entered a period of legal uncertainty following the Federal High Court judgment delivered on 5 November concerning the leadership of the African Democratic Congress. The court invalidated the disputed David Mark-led leadership structure and decisions taken under it, including the presidential primary that produced Atiku Abubakar as the ADC candidate. Atiku responded on 6 November with a statement issued from Sokoto, declaring that he remains in the presidential race and will not abandon his supporters. He accused the Tinubu administration of seeking to weaken opposition politics. Those allegations are political claims and should not be treated as established findings. The APC has denied involvement in the case. Its National Publicity Secretary, Felix Morka, said the party was not a party to the proceedings and urged the ADC to pursue its legal remedies. The ADC has now confirmed that it has filed an appeal and applied for a stay of execution. It has notified INEC and urged the commission not to take steps that could pre-empt the appellate court. The party also argues that an earlier judgment delivered on 2 July by Justice Musa Liman is relevant to the dispute. That argument must be examined through the legal process. The distinction between an appeal and a stay is important. An appeal asks a higher court to review a decision; a stay application asks a court to suspend the operation of that decision while the appeal is being considered. Filing an appeal does not automatically suspend the original judgment. The next developments will depend on the precise terms of the judgment, the arguments presented by the ADC, any interim orders and INEC's response. The case also affects other candidates and party decisions taken under the disputed leadership, not only Atiku's presidential nomination. It raises wider questions about internal party democracy, the requirements for party leadership, the authority of electoral institutions and the rights of political candidates. Nigerians should avoid premature claims that every legal route has been exhausted or that the 2027 election itself has been cancelled. Equally, political declarations cannot by themselves reverse a court order. The rule of law requires parties and public institutions to respect existing orders while allowing lawful appeals. RadiantWaves Media will continue to follow the proceedings, report the positions of all parties and distinguish legal decisions from political allegations. The central public interest is the protection of a transparent electoral process in which political competition is governed by law and voters retain meaningful choices.",
-    "source": "Premium Times and The Guardian Nigeria",
-    "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
-  },
-  "topStories": [
-    {
-      "title": "Atiku Says He Remains in 2027 Presidential Race",
+      "id": "brk-003",
       "category": "Nigeria | Politics",
-      "date": "2026-11-06",
-      "summary": "Atiku has issued a statement from Sokoto insisting that he will continue his campaign despite the court judgment affecting his ADC nomination. The APC denies influencing the court proceedings.",
-      "image": "assets/leaders/atiku2.jpg",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
+      "headline": "ADC Appeals Court Judgment and Seeks Stay of Execution",
+      "summary": "The African Democratic Congress says it has filed a notice of appeal against the 5 November Federal High Court judgment affecting the David Mark-led leadership. It has also applied for a stay of execution and formally notified INEC. The stay application has not yet been determined.",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "source": "THISDAY",
+      "url": "https://www.thisdaylive.com/2026/11/07/adc-appeals-judgment-sacking-david-mark-led-leadership-seeks-stay-writes-inec/"
     },
     {
-      "title": "ADC Files Appeal and Applies for Stay of Execution",
-      "category": "Nigeria | Judiciary",
-      "date": "2026-11-06",
-      "summary": "The party says it has appealed the judgment and asked for a stay. The application had not yet been determined in the reports available this evening.",
-      "image": "assets/leaders/atiku.jpg",
-      "source": "The Guardian Nigeria",
-      "url": "https://guardian.ng/news/adc-appeals-court-judgment-urges-inec-against-pre-empting-court-of-appeal/"
-    },
-    {
-      "title": "Trump Warns of Possible Further Action Against Iran",
-      "category": "Middle East | United States",
-      "date": "2026-11-06",
-      "summary": "Trump's warning has raised concern about renewed military action, while Iran pursues diplomatic contacts through Qatar and regional governments.",
+      "id": "brk-004",
+      "category": "United States | Politics",
+      "headline": "Democrats Win Control of Both Chambers of Congress in Midterm Elections",
+      "summary": "Associated Press reports a sweeping Democratic victory in the 2026 midterms, ending unified Republican control of Congress. The result is expected to increase congressional scrutiny of the Trump administration and complicate its legislative agenda. It does not automatically remove presidential powers over foreign policy or military operations.",
       "image": "assets/leaders/trump.jpg",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran"
-    },
-    {
-      "title": "Putin Meets Iranian Security Official in Moscow",
-      "category": "Russia | Iran | Diplomacy",
-      "date": "2026-11-06",
-      "summary": "Iran's Mohsen Rezaei met Putin and reportedly delivered a message from Supreme Leader Mojtaba Khamenei.",
-      "image": "assets/leaders/putin.jpg",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei"
-    },
-    {
-      "title": "Sudan and Ethiopia Close Consulates Amid Mutual Accusations",
-      "category": "Africa | Diplomacy",
-      "date": "2026-11-06",
-      "summary": "The two neighbours have closed consulates following allegations of support for armed groups and interference in their internal conflicts. Both sides reject accusations against them.",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/"
-    },
-    {
-      "title": "South Africa's ANC Faces Further Losses in Municipal Vote",
-      "category": "Africa | Elections",
-      "date": "2026-11-06",
-      "summary": "The ANC was on approximately 32% and the DA on 25% with 81% of votes counted, according to the latest Reuters report.",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters",
-      "url": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/"
-    },
-    {
-      "title": "Turkey Approves Defence Pact With Saudi Arabia and Pakistan",
-      "category": "Asia | Security",
-      "date": "2026-11-06",
-      "summary": "Turkey's parliament approved the three-country defence agreement. Any Turkish troop deployment would require separate parliamentary approval.",
-      "image": "assets/middleeast.jpeg",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/b17c570820e88891b2d46dd3fbc3a1f6"
+      "url": "https://apnews.com/article/9c5c4c5283f58b1ae0786e2f410c21a0"
     },
     {
-      "title": "Brexit Debate Returns Under Prime Minister Andy Burnham",
-      "category": "United Kingdom | Europe",
-      "date": "2026-11-06",
-      "summary": "Burnham says Britain needs an honest discussion about its relationship with Europe but has not proposed an immediate return to freedom of movement.",
-      "image": "assets/leaders/andy.jpg",
-      "source": "ITV News",
-      "url": "https://www.itv.com/news/2026-11-03/burnham-i-have-not-proposed-return-to-eu-freedom-of-movement"
+      "id": "brk-005",
+      "category": "Africa | South Africa",
+      "headline": "South Africa's ANC Falls to 31.1% in Latest Municipal Election Count",
+      "summary": "The latest available results dashboard reported 96% of voting districts counted, with the ANC on 31.1% and the Democratic Alliance on 24.4%. The figures are provisional. Several councils remain without a clear majority, making coalition negotiations central to the next stage.",
+      "image": "assets/leaders/ramaphosa.jpg",
+      "source": "Rateweb election results dashboard",
+      "url": "https://www.rateweb.co.za/elections-2026/results/"
     },
     {
-      "title": "Canada Releases 2026 Federal Budget",
-      "category": "North America | Economy",
-      "date": "2026-11-06",
-      "summary": "The government has announced investment and affordability measures, including a planned 400 billion Canadian dollars in capital investment over six years.",
+      "id": "brk-006",
+      "category": "Latin America | Paraguay",
+      "headline": "Pedro Alliana Sworn In as Paraguay's President After Santiago Peña's Impeachment",
+      "summary": "Paraguay's Congress confirms that Pedro Alliana has taken the presidency following the impeachment and removal of Santiago Peña. The political crisis has been linked to allegations surrounding the collapse of digital lender ueno and wider concerns about financial oversight. The allegations should not be treated as proof of criminal guilt.",
+      "image": "assets/argentina.jpeg",
+      "source": "Paraguayan Senate",
+      "url": "https://www.senado.gov.py/index.php/menu-dircom/sub-menu-noticias-presidencia/pedro-alliana-juro-como-nuevo-presidente-de-la-republica.html"
+    },
+    {
+      "id": "brk-007",
+      "category": "Europe | Security",
+      "headline": "Bomb Threats Disrupt Broadcasters and Flights Across Europe",
+      "summary": "Threats directed at broadcasters including Ireland's RTÉ, Britain's Sky and Bulgaria's Nova TV prompted evacuations and temporary programming changes. A wider series of threats has also disrupted commercial flights. No explosives were found at the affected broadcaster sites, and investigators have not established who is responsible.",
+      "image": "assets/europe-energy.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/bomb-threats-warning-the-clock-is-ticking-disrupt-tv-channels-across-europe-2026-11-06/"
+    },
+    {
+      "id": "brk-008",
+      "category": "Africa | Nigeria | Security",
+      "headline": "Nigerian Military Rules Out Ceasefire With Boko Haram and ISWAP",
+      "summary": "Nigeria's military says it has no ceasefire agreement with Boko Haram or Islamic State West Africa Province and will continue military operations. The announcement follows renewed attacks on military positions in the north-east.",
+      "image": "assets/africa.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
+    },
+    {
+      "id": "brk-009",
+      "category": "Africa | Kenya",
+      "headline": "Kenyan Court Sentences Paul Mackenzie to 200 Years in Shakahola Case",
+      "summary": "A Kenyan court has sentenced cult leader Paul Mackenzie to 200 years in prison over the starvation murders of 190 children and one adult. Twenty-eight accomplices also received prison sentences. The case has renewed calls for stronger oversight and accountability after the Shakahola tragedy.",
+      "image": "assets/africa.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/kenyan-court-sentences-cult-leader-200-years-prison-murder-190-children-2026-11-06/"
+    },
+    {
+      "id": "brk-010",
+      "category": "Africa | Sudan | Ethiopia",
+      "headline": "Sudan-Ethiopia Diplomatic Tensions Escalate Over Allegations of Conflict Support",
+      "summary": "Ethiopia has ordered Sudan's consulate in Assosa closed and expelled Sudanese consular staff. Sudan has accused Ethiopia of allowing support for the Rapid Support Forces from its territory, an allegation Ethiopia denies. The dispute comes as Sudan's humanitarian crisis continues.",
+      "image": "assets/africa.jpeg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/5e963c304cde91158a39218209a477cb"
+    },
+    {
+      "id": "brk-011",
+      "category": "Ukraine | Russia | Diplomacy",
+      "headline": "US Prepares to Mediate Ukraine-Russia Discussions in Abu Dhabi",
+      "summary": "US officials say delegations from Ukraine and Russia are expected to meet in Abu Dhabi on 10 and 11 November. The agenda is expected to include security guarantees, de-escalation and humanitarian measures. The talks have not yet taken place and no peace agreement has been reached.",
+      "image": "assets/ukraine-veterans.jpg",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/world-news/us-to-hold-trilateral-talks-with-ukraine-russia-in-abu-dhabi-next-weekus-official-4993163"
+    },
+    {
+      "id": "brk-012",
+      "category": "Asia | China",
+      "headline": "China Passes New Law Targeting Cross-Border Corruption",
+      "summary": "China has adopted legislation expanding its anti-corruption campaign beyond its borders. The law aims to strengthen cooperation in tracking suspects and recovering assets, while placing new compliance responsibilities on Chinese companies operating internationally.",
+      "image": "assets/leaders/xi.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/"
+    },
+    {
+      "id": "brk-013",
+      "category": "Canada | Economy",
+      "headline": "Canada's Budget 2026 Promises Major Investment and Affordability Measures",
+      "summary": "The Carney government has announced a budget plan including C$400 billion in capital investment over six years and C$22 billion in new affordability measures. These are government budget commitments and projections, not money already spent.",
       "image": "assets/leaders/carney.jpg",
       "source": "Government of Canada",
       "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
     },
     {
-      "title": "Two Dead and 16 Injured in Eastern France Bus Crash",
-      "category": "Europe | France",
-      "date": "2026-11-06",
-      "summary": "A bus crash in Lent, in the Ain department, killed two people and injured 16. Authorities have opened an investigation.",
-      "image": "assets/france.jpeg",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/06/emergency-services-deployed-after-school-bus-crash-kills-two-in-france"
-    },
-    {
-      "title": "Technology Sell-Off Shakes Global Markets",
-      "category": "Global Business | Technology",
-      "date": "2026-11-06",
-      "summary": "The Nasdaq fell 5.5% as investors reassessed AI investment costs, technology valuations and the outlook for data-centre spending.",
-      "image": "assets/market.jpeg",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e"
-    },
-    {
-      "title": "Pope Leo XIV Begins South American Visit",
+      "id": "brk-014",
       "category": "South America | Vatican",
-      "date": "2026-11-06",
-      "summary": "The Pope has begun a 12-day tour of Uruguay, Argentina and Peru, including meetings with political and community leaders.",
+      "headline": "Pope Leo XIV Begins 12-Day South American Tour",
+      "summary": "Pope Leo XIV has begun a major visit to Uruguay, Argentina and Peru. The tour includes ten cities and is described by the Vatican as a return to places where he served as a missionary and bishop.",
       "image": "assets/argentina.jpeg",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/americas/pope-leo-starts-south-america-homecoming-tour-month-after-lung-surgery-2026-11-06/"
+      "url": "https://www.investing.com/news/world-news/pope-leo-starts-south-america-homecoming-tour-a-month-after-lung-surgery-5006436"
+    }
+  ],
+  "featured": {
+    "category": "Nigeria | 2027 POLITICS",
+    "headline": "Atiku Says He Remains in the Race as ADC Takes Court Dispute to Appeal Stage",
+    "summary": "Former Vice-President Atiku Abubakar has reiterated his intention to contest the 2027 presidential election despite the Federal High Court judgment affecting the David Mark-led leadership of the African Democratic Congress. The party says it has filed a notice of appeal and applied for a stay of execution. It has also notified INEC and urged the commission not to take further action that could pre-empt the appeal. The stay application has not yet been determined. The APC has denied involvement in the court dispute. The legal process will be central to determining the consequences for the party's leadership and its candidates. Political declarations, party statements and legal orders must be reported separately.",
+    "image": "assets/leaders/atiku2.jpg",
+    "source": "Premium Times | THISDAY",
+    "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
+  },
+  "topStories": [
+    {
+      "category": "Nigeria | Politics",
+      "headline": "ADC Appeals Judgment Affecting David Mark-Led Leadership",
+      "summary": "The party has filed an appeal and a stay application and notified INEC. The stay request remains pending, so the appeal should not be described as having automatically reversed the judgment.",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "source": "THISDAY",
+      "url": "https://www.thisdaylive.com/2026/11/07/adc-appeals-judgment-sacking-david-mark-led-leadership-seeks-stay-writes-inec/"
     },
     {
-      "title": "New Zealand Prepares for General Election",
-      "category": "Oceania | Elections",
-      "date": "2026-11-06",
-      "summary": "New Zealand votes on 7 November in a closely watched contest between Prime Minister Christopher Luxon and Labour leader Chris Hipkins.",
+      "category": "United States | Middle East",
+      "headline": "Trump Confirms Further Limited Strikes on Iranian Air Defences",
+      "summary": "The US says it has carried out further limited strikes while Qatar works to keep diplomatic channels open. Iran's demands and the future of the Strait of Hormuz remain major obstacles.",
+      "image": "assets/leaders/trump.jpg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/53ed5d271b9aef6f880aebc133ea6a55"
+    },
+    {
+      "category": "United States | Politics",
+      "headline": "Democratic Midterm Victory Creates a Divided Washington",
+      "summary": "Democrats have won control of both chambers of Congress, setting up stronger scrutiny of the Trump administration and a more difficult legislative environment for the White House.",
+      "image": "assets/leaders/trump.jpg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/9c5c4c5283f58b1ae0786e2f410c21a0"
+    },
+    {
+      "category": "United Kingdom | European Union",
+      "headline": "UK and EU Prepare for 20 November Summit on Trade, Security and Mobility",
+      "summary": "The planned summit is expected to address youth mobility, food trade, energy, climate and security. A proposed youth scheme could allow people aged 18 to 34 to live in the other territory for up to three years, subject to final agreement.",
+      "image": "assets/leaders/andy.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/uk/britain-eu-set-youth-mobility-deal-summit-student-fee-talks-continue-2026-11-03/"
+    },
+    {
+      "category": "France | Society",
+      "headline": "Lecornu Calls Social Conference After Nationwide Demonstrations",
+      "summary": "The French Prime Minister has invited unions and employers to Matignon on 9 November after demonstrations over wages and purchasing power. The Interior Ministry estimated 575,000 participants, while the CGT union estimated around 1.6 million.",
+      "image": "assets/france-protests.jpg",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/06/greve-du-5-novembre-lecornu-convoque-syndicats-et-patronat-pour-une-conference-sociale-a-matignon_6807684_823448.html"
+    },
+    {
+      "category": "Africa | South Africa",
+      "headline": "Ramaphosa Faces a Changing Local Political Landscape",
+      "summary": "South Africa's municipal count shows the ANC below its 2021 local-election performance. The latest dashboard reported 96% of voting districts counted, with the ANC at 31.1% and DA at 24.4%. Final certified results and coalition negotiations will determine control of local councils.",
+      "image": "assets/leaders/ramaphosa.jpg",
+      "source": "Rateweb election results dashboard",
+      "url": "https://www.rateweb.co.za/elections-2026/results/"
+    },
+    {
+      "category": "Latin America | Paraguay",
+      "headline": "Pedro Alliana Takes Office After Santiago Peña's Removal",
+      "summary": "Paraguay's Congress confirms Alliana's swearing-in following Peña's impeachment. The transition follows a financial and political crisis linked to the ueno bank collapse and allegations of conflicts of interest.",
+      "image": "assets/argentina.jpeg",
+      "source": "Paraguayan Senate",
+      "url": "https://www.senado.gov.py/index.php/menu-dircom/sub-menu-noticias-presidencia/pedro-alliana-juro-como-nuevo-presidente-de-la-republica.html"
+    },
+    {
+      "category": "Ukraine | Russia | Europe",
+      "headline": "Abu Dhabi Talks Expected to Test Prospects for Ukraine Diplomacy",
+      "summary": "The United States is preparing a new round of discussions involving Ukraine and Russia for 10 and 11 November. Security guarantees and Europe's role remain key questions.",
+      "image": "assets/ukraine-veterans.jpg",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/world-news/us-to-hold-trilateral-talks-with-ukraine-russia-in-abu-dhabi-next-weekus-official-4993163"
+    },
+    {
+      "category": "Canada | Business",
+      "headline": "Carney Government Sets Out C$400 Billion Investment Plan",
+      "summary": "Canada's 2026 budget outlines capital investment over six years and new affordability measures as Ottawa seeks to strengthen productivity, diversify trade and support economic growth.",
+      "image": "assets/leaders/carney.jpg",
+      "source": "Government of Canada",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
+    },
+    {
+      "category": "Asia | China",
+      "headline": "Beijing Expands Anti-Corruption Powers Beyond Its Borders",
+      "summary": "China's new law strengthens its ability to pursue cross-border corruption cases and requires companies operating internationally to establish appropriate compliance arrangements.",
+      "image": "assets/leaders/xi.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/"
+    },
+    {
+      "category": "Asia-Pacific | New Zealand",
+      "headline": "New Zealand Votes in a Closely Watched General Election",
+      "summary": "New Zealand's general election is taking place on Saturday, 7 November. The contest is between Prime Minister Christopher Luxon and opposition leader Chris Hipkins. No result should be announced until voting and counting have taken place.",
       "image": "",
       "source": "Associated Press",
       "url": "https://apnews.com/article/7131767dc54ff924985ae40f17c46b68"
     },
     {
-      "title": "Ukraine Peace Talks Planned for Abu Dhabi",
-      "category": "Europe | Ukraine | Diplomacy",
-      "date": "2026-11-06",
-      "summary": "Talks involving Ukrainian, US and Russian representatives are planned for 10–11 November. Germany says Europe must be included in any lasting settlement.",
-      "image": "assets/leaders/zelensky.jpg",
+      "category": "Africa | Nigeria | Security",
+      "headline": "Military Rejects Ceasefire Claims and Vows Continued Operations",
+      "summary": "Nigeria's Defence Headquarters says military operations against Boko Haram and ISWAP will continue. Recent attacks in the north-east underline the continuing security challenge.",
+      "image": "assets/africa.jpeg",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/europe/russia-must-show-it-is-serious-about-ceasefire-abu-dhabi-talks-germanys-merz-2026-11-03/"
+      "url": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
+    },
+    {
+      "category": "Africa | Kenya",
+      "headline": "Shakahola Case: Paul Mackenzie Receives 200-Year Sentence",
+      "summary": "The sentence follows convictions over the deaths of 190 children and one adult. Twenty-eight co-accused were also sentenced, while wider investigations connected to the tragedy continue.",
+      "image": "assets/africa.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/kenyan-court-sentences-cult-leader-200-years-prison-murder-190-children-2026-11-06/"
+    },
+    {
+      "category": "Global Economy | Technology",
+      "headline": "Technology Sell-Off Raises Questions About AI Investment",
+      "summary": "A sharp fall in US technology shares has renewed debate about the cost of AI infrastructure, company valuations and the time needed for major investments to generate sustainable returns.",
+      "image": "assets/market.jpeg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e"
     }
   ],
   "articles": [
     {
-      "title": "Nigeria's Opposition at a Legal Crossroads: What the ADC Appeal Means",
-      "category": "Analysis | Nigeria | Politics",
-      "date": "2026-11-06",
-      "image": "assets/leaders/atiku.jpg",
-      "content": "The ADC leadership dispute has become one of the most consequential legal developments in Nigeria's preparations for the 2027 general election. The Federal High Court judgment of 5 November invalidated the disputed leadership structure and decisions taken under it, including the primary that produced Atiku Abubakar as the party's presidential candidate. Atiku has responded by insisting that he remains in the race. The ADC says it has filed an appeal and applied for a stay of execution. The APC denies involvement in the court proceedings and says the matter is an internal dispute within the opposition party. The central legal questions include the authority through which the ADC leadership was established, the effect of earlier court decisions and the extent to which the judgment affects nominations already submitted to INEC. The ADC's argument about the earlier July 2 judgment must be considered by the appellate court rather than treated as an established legal conclusion. An appeal does not automatically suspend the judgment. The stay application is a separate request, and the court's decision on that application will matter. The case also affects other ADC candidates and party decisions, not only Atiku. The public interest lies in ensuring that political parties comply with the law, candidates have access to lawful remedies and electoral institutions act transparently. The legal process must be allowed to run its course without premature declarations about the final outcome.",
-      "source": "RadiantWaves Media analysis, based on Premium Times and The Guardian Nigeria",
-      "sourceUrl": "https://guardian.ng/news/adc-appeals-court-judgment-urges-inec-against-pre-empting-court-of-appeal/"
+      "id": "article-001",
+      "category": "Nigeria | Politics",
+      "title": "ADC's Appeal: What the Court Dispute Means for Atiku and the 2027 Election",
+      "summary": "The ADC leadership dispute has moved into the appeal process, but the filing of an appeal does not by itself suspend the Federal High Court judgment.",
+      "content": "The African Democratic Congress has taken its challenge against the Federal High Court judgment of 5 November to the Court of Appeal. The judgment affected the David Mark-led leadership structure and the party's preparations for the 2027 general election. On 6 November, the party said it had filed a notice of appeal and a motion seeking a stay of execution. It also notified the Independent National Electoral Commission and urged the commission to avoid taking steps that could pre-empt the appellate process. The party's application for a stay had not yet been determined at the time of this report. This distinction is legally important. Filing an appeal does not automatically cancel or suspend the judgment. A court must decide whether to grant a stay, and the appeal itself must be heard through the appropriate judicial process. Former Vice-President Atiku Abubakar has publicly insisted that he remains in the 2027 presidential race. The APC has denied involvement in the dispute. The case was brought by Nafiu Bala Gombe, and the competing political statements should not be confused with the court's actual orders. The next questions concern the stay application, the appeal timetable, INEC's response and the practical effect of the judgment on the party's leadership and nomination process. RadiantWaves Media will continue to distinguish between court decisions, pending applications, party positions and political claims.",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "source": "THISDAY | Premium Times | Channels Television",
+      "url": "https://www.thisdaylive.com/2026/11/07/adc-appeals-judgment-sacking-david-mark-led-leadership-seeks-stay-writes-inec/"
     },
     {
-      "title": "Nigeria's Security Challenge: Military Offensive and the Human Cost of Insurgency",
-      "category": "Analysis | Nigeria | Security",
-      "date": "2026-11-06",
-      "image": "assets/africa.jpeg",
-      "content": "Nigeria's military has ruled out a ceasefire with Boko Haram and ISWAP and says it will continue operations against insurgent groups. The announcement reflects the government's security position as attacks on military positions in the north-east continue. The conflict has lasted for approximately 17 years and has caused displacement, loss of life, disruption to education and serious humanitarian pressures. Military operations are one part of the response, but long-term security also depends on intelligence, local trust, effective policing, economic opportunity and the protection of civilians. Cooperation with neighbouring Sahel states is important because armed groups operate across borders. Any assessment of progress must consider not only the number of operations or arrests announced but also whether communities are safer, displaced families can return and public services can function. A declaration that a ceasefire is ruled out should not be mistaken for evidence that the conflict is close to ending.",
-      "source": "RadiantWaves Media analysis, based on Reuters reporting",
-      "sourceUrl": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
-    },
-    {
-      "title": "Iran, the United States and the Strait of Hormuz: Diplomacy Under Military Pressure",
-      "category": "Analysis | Middle East | International Security",
-      "date": "2026-11-06",
+      "id": "article-002",
+      "category": "Middle East | United States | Iran",
+      "title": "US Confirms Further Limited Strikes as Qatar Tries to Keep Iran Diplomacy Alive",
+      "summary": "Military action and diplomatic contacts are continuing side by side, with the Strait of Hormuz remaining central to the international crisis.",
+      "content": "The United States has confirmed further limited strikes on Iranian air defences, according to Associated Press reporting. President Donald Trump described the action as limited. The development comes during a wider conflict that has placed regional security, shipping and international energy supplies under pressure. Iran's semi-official Tasnim news agency has separately reported that two missiles struck Qeshm Island in southern Iran. The initial report did not provide confirmed details about damage or casualties, and responsibility for the reported incident has not been independently established. Qatar is continuing to mediate between Washington and Tehran. Its officials have rejected reports that the two sides have abandoned negotiations, saying diplomatic contacts remain active. Iran has set conditions for negotiations, including issues relating to the US port blockade, sanctions, frozen assets, compensation for war damage and wider regional hostilities. The Strait of Hormuz remains strategically important because of its role in global energy transportation. Any prolonged disruption could affect shipping costs, oil prices and supply chains. However, diplomatic contacts should not be presented as a peace agreement. As of this morning, no comprehensive settlement has been announced. The immediate priorities are preventing further escalation, protecting civilian populations and keeping diplomatic channels open.",
       "image": "assets/middleeast.jpeg",
-      "content": "The conflict involving Iran, the United States and Israel continues to influence diplomacy, shipping and energy markets. President Donald Trump has warned that the United States may have to take further action against Iran. Tehran has responded through diplomatic contacts and a proposal passed to Washington through Qatari mediators. Iran has linked renewed negotiations and the reopening of the Strait of Hormuz to a series of demands, while the United States maintains that any settlement must address Iran's nuclear programme. Iran's security chief has also met Vladimir Putin in Moscow, highlighting the importance of Russia-Iran relations. The Strait of Hormuz is strategically important because a significant share of global oil and gas shipments passes through the wider Gulf region. Any disruption can affect transport costs, insurance, energy prices and inflation far beyond the Middle East. It is important to distinguish military threats from confirmed military orders and diplomatic proposals from completed agreements. At the time of this edition, no comprehensive settlement has been announced.",
-      "source": "RadiantWaves Media analysis, based on Al Jazeera and Reuters reporting",
-      "sourceUrl": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran"
+      "source": "Associated Press | Reuters",
+      "url": "https://apnews.com/article/53ed5d271b9aef6f880aebc133ea6a55"
     },
     {
-      "title": "Sudan and Ethiopia: A Diplomatic Dispute With Wider Regional Risks",
-      "category": "Analysis | Africa | Horn of Africa",
-      "date": "2026-11-06",
-      "image": "assets/africa.jpeg",
-      "content": "The closure of Sudanese and Ethiopian consulates marks a further deterioration in relations between two neighbouring countries already affected by internal conflict and regional insecurity. Sudan accuses Ethiopia of allowing the Rapid Support Forces to operate from Ethiopian territory, while Ethiopia denies the allegation and has made its own accusations concerning support for Tigrayan rebels. Other countries named in the dispute have also rejected allegations against them. Sudan has taken its concerns to international and regional institutions. The diplomatic consequences matter because instability in the Horn of Africa can affect border communities, trade, refugees and regional security cooperation. Sudan's civil war has already displaced millions of people and created one of the world's most serious humanitarian emergencies. The closure of consulates does not amount to a declaration of war, but it is a warning that diplomatic channels are under pressure. Independent investigations and regional mediation will be important in preventing further escalation.",
-      "source": "RadiantWaves Media analysis, based on Reuters reporting",
-      "sourceUrl": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/"
+      "id": "article-003",
+      "category": "United States | Politics",
+      "title": "Democratic Midterm Victory Creates a New Balance of Power in Washington",
+      "summary": "Democrats have won control of both chambers of Congress, setting up a divided government and stronger congressional oversight of the Trump administration.",
+      "content": "The 2026 US midterm elections have produced a major political setback for President Donald Trump and the Republican Party. Associated Press reports that Democrats have won control of both the House of Representatives and the Senate, ending unified Republican control of Congress. The result is expected to reshape the domestic political environment for the remainder of Trump's term. Democratic leaders have indicated that they intend to focus on the cost of living, health programmes, government oversight and the administration's handling of the conflict with Iran. Congressional committees may also intensify investigations into executive decisions and the use of public funds. The new balance of power does not mean that the President automatically loses his constitutional authority over diplomacy or military operations. It does, however, give the opposition greater influence over legislation, budgets, hearings and investigations. The transition to the new Congress will take place in January 2027. The election is also a warning about the political consequences of prolonged international conflict, rising fuel costs and economic uncertainty. The coming weeks will show whether the two parties can reach agreements on government funding and other urgent legislative matters.",
+      "image": "assets/leaders/trump.jpg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/9c5c4c5283f58b1ae0786e2f410c21a0"
     },
     {
-      "title": "Brexit Ten Years On: What Does Britain Want From Europe?",
-      "category": "Analysis | United Kingdom | Europe",
-      "date": "2026-11-06",
+      "id": "article-004",
+      "category": "United Kingdom | European Union",
+      "title": "Beyond Brexit: UK and EU Prepare for a New Round of Practical Cooperation",
+      "summary": "The 20 November Brussels summit is expected to address youth mobility, food trade, education, energy, climate and security cooperation.",
+      "content": "The United Kingdom and European Union are preparing for a summit in Brussels on 20 November, with negotiations focused on practical areas of cooperation rather than immediate British re-entry into the EU. A proposed youth mobility scheme could allow people aged 18 to 34 to live in the other territory for up to three years for work, study, volunteering or travel. The draft proposals also envisage British participation in the Erasmus+ education exchange programme in 2027. Discussions include easing agricultural and food trade checks, linking emissions trading systems and strengthening defence and security cooperation. The details remain subject to final agreement and legislation. The negotiations matter because businesses, universities, students and workers continue to deal with the consequences of Brexit. A closer relationship could reduce some administrative barriers, but it would not automatically restore freedom of movement or make the UK a member of the single market. Prime Minister Andy Burnham has said that he has not proposed restoring freedom of movement and that the public should have a say in major future changes. Scotland's government continues to advocate closer EU relations and eventual membership, but foreign affairs and EU accession are not decisions Scotland can make independently while it remains part of the United Kingdom. The summit will therefore be watched for the practical agreements it produces and the political limits both sides are prepared to accept.",
       "image": "assets/leaders/andy.jpg",
-      "content": "Britain's debate about Brexit has returned as Prime Minister Andy Burnham calls for a more honest discussion about the country's long-term relationship with the European Union. Burnham has said he has not proposed restoring freedom of movement, but he wants the public to examine how migration, trade and cooperation have changed since the referendum. The government's present commitments do not amount to a decision to rejoin the EU. Practical negotiations may focus on food and drink trade, emissions arrangements, youth mobility and reducing barriers for businesses. For exporters, the central questions include border checks, regulatory alignment and the cost of reaching European markets. For workers and households, the debate includes employment, migration, wages and prices. Scotland's government argues for independence and eventual EU membership, while also seeking further powers within the existing UK framework. Any major change would require political decisions, legal arrangements and public consent. The discussion should therefore focus on the actual consequences of each possible arrangement rather than slogans about either Brexit or rejoining.",
-      "source": "RadiantWaves Media analysis, based on ITV News and Scottish Government publications",
-      "sourceUrl": "https://www.itv.com/news/2026-11-03/burnham-i-have-not-proposed-return-to-eu-freedom-of-movement"
+      "source": "Reuters | ITV | European External Action Service",
+      "url": "https://www.reuters.com/world/uk/britain-eu-set-youth-mobility-deal-summit-student-fee-talks-continue-2026-11-03/"
     },
     {
-      "title": "South Africa's Municipal Elections: What the Changing Vote Could Mean",
-      "category": "Analysis | Africa | Elections",
-      "date": "2026-11-06",
+      "id": "article-005",
+      "category": "France | Society | Economy",
+      "title": "France's Purchasing Power Debate Moves Towards Government Dialogue",
+      "summary": "Prime Minister Sébastien Lecornu has called unions and employers to a social conference after major demonstrations over wages and public services.",
+      "content": "France is preparing for a new round of discussions between the government, trade unions and employers after nationwide demonstrations on 5 November. The protests focused on wages, purchasing power and public services. The scale of participation remains disputed. The Interior Ministry estimated 575,000 demonstrators across the country, while the CGT trade union put the figure at approximately 1.6 million. The figures represent different estimates from the authorities and the union movement and should be reported separately. Prime Minister Sébastien Lecornu has invited social partners to a conference at Matignon on 9 November. The meeting is intended to address concerns about wages and household purchasing power. The demonstrations included workers, students and other groups concerned about living costs and public services. The government's challenge will be to demonstrate that dialogue can produce practical outcomes rather than simply postponing the dispute. For households, the central questions remain whether wages can keep pace with living costs, whether public services will receive adequate support and how the government will manage public finances. The conference will be an important test of whether the current social tensions can move towards negotiation.",
+      "image": "assets/france-protests.jpg",
+      "source": "Le Monde",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/06/greve-du-5-novembre-lecornu-convoque-syndicats-et-patronat-pour-une-conference-sociale-a-matignon_6807684_823448.html"
+    },
+    {
+      "id": "article-006",
+      "category": "Africa | South Africa | Elections",
+      "title": "South Africa's Municipal Elections Signal Further Pressure on the ANC",
+      "summary": "The latest available count shows the ANC below one-third of the vote, while opposition parties are positioned to negotiate control of several councils.",
+      "content": "South Africa's 4 November municipal elections are producing a significant test for the African National Congress. The latest results dashboard available in the early hours of 7 November reported 96% of voting districts counted. On that count, the ANC stood at 31.1%, while the Democratic Alliance was at 24.4% and the uMkhonto weSizwe Party at 9.7%. These figures remain provisional and should not be presented as the final certified national result. The distribution of support across municipalities is particularly important. Several councils are expected to require coalition arrangements, while the DA has made strong advances in some urban areas and the MK Party is competitive in others. The ANC has governed South Africa nationally since the end of apartheid in 1994, but its support has weakened in recent years amid concerns about unemployment, crime, corruption and the delivery of basic services. President Cyril Ramaphosa remains the country's president; these are municipal elections, not a presidential election. The next phase will involve the certification of results and negotiations over council leadership, budgets and local administration. The results will be watched as an indicator of the political environment ahead of the next national election.",
+      "image": "assets/leaders/ramaphosa.jpg",
+      "source": "Rateweb election results dashboard | The Presidency of South Africa",
+      "url": "https://www.rateweb.co.za/elections-2026/results/"
+    },
+    {
+      "id": "article-007",
+      "category": "Latin America | Paraguay",
+      "title": "Paraguay Enters a New Political Chapter After Santiago Peña's Impeachment",
+      "summary": "Pedro Alliana has been sworn in as president following Peña's removal, amid a crisis linked to allegations surrounding the collapse of digital lender ueno.",
+      "content": "Paraguay has undergone a major political transition after Congress removed President Santiago Peña through impeachment proceedings and former Vice-President Pedro Alliana was sworn in as the new president on 6 November. Paraguay's Senate confirmed the swearing-in in an official announcement. The crisis has been linked to the collapse of digital lender ueno and allegations concerning conflicts of interest and financial oversight. The allegations formed part of the political process and should not be treated as a criminal conviction. The transition places immediate pressure on the new administration to reassure citizens, protect confidence in the financial system and explain how the government will respond to the banking crisis. Questions about access to customer funds, regulatory supervision and the relationship between political leaders and financial institutions are likely to remain central. The country now faces the challenge of maintaining institutional stability while investigations and political debate continue. The constitutional succession has taken place, but the broader consequences for public confidence and the economy are still unfolding.",
+      "image": "assets/argentina.jpeg",
+      "source": "Paraguayan Senate | Reuters",
+      "url": "https://www.senado.gov.py/index.php/menu-dircom/sub-menu-noticias-presidencia/pedro-alliana-juro-como-nuevo-presidente-de-la-republica.html"
+    },
+    {
+      "id": "article-008",
+      "category": "Africa | Nigeria | Security",
+      "title": "Nigeria's Military Rejects Ceasefire Claims as Insurgent Attacks Continue",
+      "summary": "Defence Headquarters says operations against Boko Haram and ISWAP will continue, following renewed attacks on military positions in the north-east.",
+      "content": "Nigeria's military has ruled out a ceasefire agreement with Boko Haram and the Islamic State West Africa Province, saying operations against the armed groups will continue. The announcement follows renewed attacks on military positions in the north-east, where the insurgency has remained a major security challenge for years. The military's statement came amid public discussion of reports alleging that a secret ceasefire arrangement had been reached with one faction. Defence Headquarters rejected the claim. The security situation remains complex, involving insurgent groups, other armed networks, displaced communities and pressure on local authorities. Military operations alone cannot resolve all the consequences of the conflict. Protection of civilians, humanitarian access, the restoration of public services and opportunities for communities to rebuild are also essential. The continuing violence highlights the need for accurate information about security operations and for accountability when civilians are harmed. The government has not declared the insurgency defeated, and the latest military statement confirms that the campaign remains active.",
       "image": "assets/africa.jpeg",
-      "content": "The latest municipal election figures point to a difficult result for South Africa's African National Congress. Reuters reported that with approximately 81% of votes counted, the ANC was on around 32%, while the Democratic Alliance was on approximately 25%. The figures remain provisional. If the trend holds, the ANC will have lost further support compared with its previous municipal election performance. The results matter because municipalities are responsible for services that directly affect daily life, including water, electricity, sanitation, roads and local planning. Where no party secures a majority, coalition negotiations will determine who governs. Johannesburg and other major urban areas may face difficult negotiations, while the DA is in a stronger position in Cape Town. The ANC's national parliamentary majority was already lost in 2024, and the municipal results suggest that voters continue to judge parties on service delivery, unemployment, crime and corruption. The final certified results, rather than early projections, will determine the composition of local councils.",
-      "source": "RadiantWaves Media analysis, based on Reuters reporting",
-      "sourceUrl": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/"
+      "source": "Reuters | Premium Times",
+      "url": "https://www.reuters.com/world/africa/nigeria-rules-out-ceasefire-with-islamists-vows-sustained-military-offensive-2026-11-05/"
     },
     {
-      "title": "Canada's Budget and the Challenge of Economic Independence",
-      "category": "Analysis | Canada | Business and Economy",
-      "date": "2026-11-06",
+      "id": "article-009",
+      "category": "Africa | Sudan | Ethiopia",
+      "title": "Sudan and Ethiopia's Diplomatic Dispute Deepens as Regional Conflict Spreads",
+      "summary": "The closure of consular facilities and reciprocal accusations reflect growing tensions around the war in Sudan and instability in Ethiopia's border regions.",
+      "content": "Relations between Sudan and Ethiopia have deteriorated following the closure of Sudan's consulate in the Ethiopian city of Assosa and the expulsion of Sudanese consular staff. The dispute comes amid accusations about support for armed groups involved in regional conflicts. Sudan has alleged that drones used by the Rapid Support Forces were supplied by the United Arab Emirates and launched from Ethiopian territory. Ethiopia and the UAE deny supporting the RSF. Ethiopia has also accused Sudan of backing rebels in the Tigray region, an allegation Sudan rejects. These claims remain disputed and should not be presented as established fact. The diplomatic crisis is unfolding while Sudan continues to experience one of the world's most severe humanitarian emergencies, with millions displaced and essential services under pressure. The deterioration in relations risks making humanitarian coordination and regional diplomacy more difficult. African Union and international engagement will be important in preventing the dispute from developing into a wider confrontation.",
+      "image": "assets/africa.jpeg",
+      "source": "Associated Press | Reuters",
+      "url": "https://apnews.com/article/5e963c304cde91158a39218209a477cb"
+    },
+    {
+      "id": "article-010",
+      "category": "Africa | Kenya | Justice",
+      "title": "Shakahola Massacre: Paul Mackenzie Sentenced to 200 Years in Prison",
+      "summary": "The Kenyan court's sentence marks a major development in the case involving starvation deaths in Shakahola Forest and the conviction of 28 co-accused.",
+      "content": "A Kenyan court has sentenced Paul Mackenzie to 200 years in prison for the starvation murders of 190 children and one adult in the Shakahola case. Twenty-eight accomplices were also convicted and received sentences ranging from 10 to 160 years. The case involved followers who prosecutors said were instructed to fast in the belief that starvation would bring them closer to heaven. The court rejected Mackenzie's defence. The wider tragedy came to public attention in 2023 after authorities began recovering bodies in Shakahola Forest. The case has raised serious questions about the regulation of religious organisations, the protection of children, the responsibilities of public institutions and the early warning signs that were missed. The sentences represent an important judicial development, but investigations into other deaths connected with the wider tragedy are continuing. The case has also renewed calls for stronger safeguarding systems and accountability where vulnerable people are exposed to dangerous practices.",
+      "image": "assets/africa.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/kenyan-court-sentences-cult-leader-200-years-prison-murder-190-children-2026-11-06/"
+    },
+    {
+      "id": "article-011",
+      "category": "Asia | China | Governance",
+      "title": "China Expands Its Anti-Corruption Campaign to International Business Activity",
+      "summary": "A new law gives Beijing a wider legal framework for pursuing cross-border corruption cases and places compliance expectations on companies operating abroad.",
+      "content": "China has adopted a new law targeting cross-border corruption, expanding the legal reach of President Xi Jinping's long-running anti-graft campaign. According to Reuters reporting based on state media, the legislation is intended to strengthen international cooperation, track fugitives, prevent suspects from leaving the country and recover assets linked to corruption. The law also introduces compliance expectations for Chinese companies conducting business internationally. The changes reflect Beijing's interest in pursuing corruption cases beyond its domestic borders and strengthening oversight of companies with overseas operations. The legislation also contains confidentiality requirements covering state secrets, commercial information and personal data obtained during investigations. The impact will depend on how the law is implemented and how Chinese authorities cooperate with foreign jurisdictions. For international businesses, the development is another reminder that compliance systems, due diligence and transparent financial controls are becoming increasingly important in cross-border operations.",
+      "image": "assets/leaders/xi.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/"
+    },
+    {
+      "id": "article-012",
+      "category": "Asia-Pacific | New Zealand | Elections",
+      "title": "New Zealand Votes in a Closely Watched General Election",
+      "summary": "Voters are going to the polls on 7 November, with Prime Minister Christopher Luxon and opposition leader Chris Hipkins at the centre of the contest.",
+      "content": "New Zealand is holding its general election on Saturday, 7 November. The contest is being closely watched because it will determine the next government and the country's direction on economic policy, public services, housing and international relations. The two leading candidates for prime minister are incumbent Christopher Luxon and opposition leader Chris Hipkins. At the time of this early-morning European edition, the election is taking place and no result should be reported as final. New Zealand's electoral system can produce coalition negotiations, meaning that the outcome may depend not only on the largest party but also on the balance of support among smaller parties. The result will be important for the country's domestic priorities and its relationships across the Asia-Pacific region.",
+      "image": "",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/7131767dc54ff924985ae40f17c46b68"
+    },
+    {
+      "id": "article-013",
+      "category": "Canada | Economy | Public Policy",
+      "title": "Canada's Budget 2026 Sets Out a Major Capital Investment Programme",
+      "summary": "The federal budget proposes C$400 billion in capital investment over six years and C$22 billion in affordability measures as the government seeks to strengthen productivity and diversify trade.",
+      "content": "Canada's federal government has released Budget 2026, setting out an investment and affordability programme intended to strengthen the country's economic position. The Department of Finance says the plan includes C$400 billion in capital investment over six years and C$22 billion in new affordability measures. The government also says it intends to reduce the growth of direct programme spending and lower deficits. These are budget commitments and projections; they should not be described as completed expenditure. The plan comes at a time of geopolitical competition, changing trade relationships and rapid technological development. Ottawa is seeking to improve productivity, create jobs, diversify export markets and make better use of Canada's natural resources and energy capacity. The budget will be judged by whether the proposed investment produces measurable improvements in infrastructure, employment, productivity and household affordability. Its implementation will also depend on parliamentary scrutiny and the economic conditions facing Canada over the coming years.",
       "image": "assets/leaders/carney.jpg",
-      "content": "Canada's 2026 budget places emphasis on investment, affordability and diversifying the country's trade relationships. The government has announced plans for approximately 400 billion Canadian dollars in capital investment over six years and 22 billion dollars in new affordability measures. It also intends to reduce the growth of direct programme spending. These priorities reflect the pressure on Canada to strengthen domestic economic capacity while navigating geopolitical competition and uncertainty in its relationship with the United States. Diversifying trade can reduce dependence on a limited number of markets, but building new export relationships takes time and requires infrastructure, investment and access to customers. The budget's success will depend on whether the announced measures generate jobs, improve productivity and ease household pressures. The figures are government commitments and forecasts; their impact must be assessed as programmes are implemented.",
-      "source": "RadiantWaves Media analysis, based on Government of Canada publications",
-      "sourceUrl": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
+      "source": "Government of Canada",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
     },
     {
-      "title": "Artificial Intelligence Investment: Why Global Markets Are Reassessing Technology Valuations",
-      "category": "Analysis | Technology | Global Business",
-      "date": "2026-11-06",
+      "id": "article-014",
+      "category": "Global Economy | Technology | Markets",
+      "title": "Technology Sell-Off Raises Questions About the Cost and Return of AI Investment",
+      "summary": "Investors are reassessing technology valuations and the scale of spending on artificial-intelligence infrastructure amid wider economic and geopolitical uncertainty.",
+      "content": "Global financial markets have been unsettled by a sharp decline in US technology shares. Associated Press reported that the Nasdaq fell 5.5%, the S&P 500 dropped 4.4% and the Dow Jones Industrial Average declined 3.4% in the latest major sell-off. Investors are questioning the scale of investment in artificial-intelligence infrastructure, the cost of data centres and the time required for major technology spending to produce sustainable returns. Higher borrowing costs and geopolitical uncertainty have added to market pressure. A market correction does not automatically mean that the global economy is in recession. It does, however, highlight the risks of high valuations and expectations built around rapid growth. Technology companies will face increasing pressure to demonstrate that investment in AI can generate reliable revenue and productivity gains. Governments and regulators will also need to consider energy demand, data infrastructure, competition and the wider social effects of automation.",
       "image": "assets/market.jpeg",
-      "content": "The sharp fall in technology shares has renewed questions about the financial assumptions behind the global artificial-intelligence investment boom. Investors are examining the scale of spending on data centres, computing equipment, electricity and specialist infrastructure against the revenue companies can realistically generate. The Nasdaq's 5.5% fall and the wider losses on Wall Street show how quickly market expectations can change when investors question valuations. This does not mean artificial intelligence has no economic value or that the technology sector is entering a permanent decline. It does show that major investment announcements must eventually be supported by sustainable business models and measurable returns. The expansion of AI also raises questions about energy demand, employment, data protection, competition and access to computing resources. Governments and companies will need to balance innovation with responsible investment and public accountability.",
-      "source": "RadiantWaves Media analysis, based on Associated Press reporting",
-      "sourceUrl": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e"
+    },
+    {
+      "id": "article-015",
+      "category": "Ukraine | Russia | Diplomacy",
+      "title": "Abu Dhabi Talks: Can Washington Bring Ukraine and Russia Closer to a Framework for Peace?",
+      "summary": "The United States is preparing discussions for 10 and 11 November, but major disagreements remain over security guarantees, territory and the future European security framework.",
+      "content": "The United States is preparing to mediate discussions involving Ukraine and Russia in Abu Dhabi on 10 and 11 November. US envoy Steve Witkoff has said the agenda is expected to include post-war security arrangements, de-escalation, humanitarian measures and efforts to end the war. US officials are also expected to consult European representatives about Ukraine's security guarantees and the continent's wider security framework. The talks have not yet taken place. Ukraine and Russia remain far apart on the terms of any possible settlement, and Kyiv has repeatedly emphasised the importance of its sovereignty and long-term security. German Chancellor Friedrich Merz has said Russia must demonstrate that it is serious about a ceasefire and that Europe must be included in discussions affecting European security. Diplomatic contact is important, but it should not be confused with a peace agreement. The coming meeting will be an early test of whether the parties can make progress on practical measures to reduce violence and protect civilians.",
+      "image": "assets/leaders/zelensky.jpg",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/world-news/us-to-hold-trilateral-talks-with-ukraine-russia-in-abu-dhabi-next-weekus-official-4993163"
+    },
+    {
+      "id": "article-016",
+      "category": "Europe | Security",
+      "title": "Bomb Threats Across Europe Raise Concerns About Public Safety and Hybrid Disruption",
+      "summary": "Broadcasters and commercial flights have faced threats, prompting evacuations, diversions and security operations. Investigators have not established who is responsible.",
+      "content": "A wave of bomb threats has disrupted broadcasters and commercial aviation across Europe. Ireland's RTÉ, Britain's Sky and Bulgaria's Nova TV were among the broadcasters that reported threats. Some buildings were evacuated and programming was temporarily changed while police carried out searches. Separate threats to commercial flights led to diversions and security checks in several countries. Reuters reported that no explosives were found at the affected broadcaster sites. Authorities have not established the identity of the people responsible or confirmed whether all incidents are connected. The events have raised concerns about the use of false threats to disrupt essential services and create public anxiety. Investigators are examining the messages and any possible links between the incidents. It is important not to attribute responsibility to a country or organisation without evidence. The priority for authorities is to protect passengers and staff, maintain public confidence and establish whether the incidents form part of a coordinated campaign.",
+      "image": "assets/europe-energy.jpg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/bomb-threats-warning-the-clock-is-ticking-disrupt-tv-channels-across-europe-2026-11-06/"
+    },
+    {
+      "id": "article-017",
+      "category": "South America | Vatican | Diplomacy",
+      "title": "Pope Leo XIV Begins a South American Tour Focused on Regional Cooperation",
+      "summary": "The Pope's 12-day visit to Uruguay, Argentina and Peru includes a call for countries to address regional challenges through cooperation.",
+      "content": "Pope Leo XIV has begun a 12-day visit to Uruguay, Argentina and Peru. The journey is expected to cover ten cities and include a demanding programme of public addresses and meetings. The Pope's first stop is Uruguay, where he called for regional cooperation and urged South American countries to set an example of international engagement. The tour is particularly significant because Leo spent decades in Peru as a missionary and bishop and later became a Peruvian citizen. His programme includes Argentina, the homeland of his predecessor Pope Francis, and Peru, where he served for many years. The Vatican has indicated that the visit will address social and regional concerns. The journey is also an opportunity for the Pope to engage with political and religious leaders at a time of economic and political uncertainty in parts of Latin America. His messages will be watched for their emphasis on social responsibility, peace, migration and cooperation between neighbouring countries.",
+      "image": "assets/argentina.jpeg",
+      "source": "Reuters | Vatican News",
+      "url": "https://www.investing.com/news/world-news/pope-leo-starts-south-america-homecoming-tour-a-month-after-lung-surgery-5006436"
     }
   ],
   "leadersWatch": {
+    "headline": "World Leaders in Focus",
     "leaders": [
       {
-        "name": "Atiku Abubakar",
-        "position": "Former Vice-President of Nigeria",
-        "image": "assets/leaders/atiku.jpg",
-        "headline": "Insists he remains in the 2027 presidential race",
-        "update": "Atiku issued a statement from Sokoto on 6 November declaring that he intends to continue his campaign despite the court judgment affecting his ADC nomination. He accused the ruling establishment of seeking to weaken opposition politics. The APC has denied involvement in the court case. Atiku's political position does not itself suspend the judgment; the appeal process remains important.",
+        "name": "Bola Ahmed Tinubu",
+        "country": "Nigeria",
+        "role": "President of Nigeria",
+        "headline": "Nigeria's political institutions face scrutiny as the ADC dispute moves to appeal",
+        "summary": "The court dispute involving the ADC has intensified debate about party leadership, opposition politics and the 2027 electoral process. The APC has denied involvement in the case; the legal proceedings remain ongoing.",
+        "image": "assets/leaders/tinubu.jpg",
         "source": "Premium Times",
         "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
       },
       {
-        "name": "Bola Ahmed Tinubu",
-        "position": "President of Nigeria",
-        "image": "assets/leaders/tinubu.jpg",
-        "headline": "APC rejects allegations of involvement in ADC court dispute",
-        "update": "The ruling APC has denied allegations that the Tinubu administration influenced the Federal High Court judgment affecting the ADC. Party spokesman Felix Morka says the APC was not involved in the case and describes it as an internal ADC dispute. The allegations and denial remain political positions, not judicial findings.",
-        "source": "Premium Times",
-        "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
+        "name": "Atiku Abubakar",
+        "country": "Nigeria",
+        "role": "Former Vice-President",
+        "headline": "Atiku insists he remains in the 2027 presidential race",
+        "summary": "Atiku has maintained his political intention while the ADC challenges the Federal High Court judgment. The appeal and stay application are now central to the legal process.",
+        "image": "assets/leaders/atiku2.jpg",
+        "source": "Premium Times | THISDAY",
+        "url": "https://www.thisdaylive.com/2026/11/07/adc-appeals-judgment-sacking-david-mark-led-leadership-seeks-stay-writes-inec/"
       },
       {
         "name": "Donald Trump",
-        "position": "President of the United States",
+        "country": "United States",
+        "role": "President of the United States",
+        "headline": "Iran strikes and Democratic midterm gains create a difficult political landscape",
+        "summary": "Trump has confirmed further limited US strikes on Iranian air defences. Democrats have also won control of both chambers of Congress, increasing pressure on the administration.",
         "image": "assets/leaders/trump.jpg",
-        "headline": "Warns of possible further military action against Iran",
-        "update": "Trump has warned that the United States may have to take further action against Iran. His comments have increased concern about renewed military operations, but no new operation is confirmed by the statement alone. Iran is pursuing diplomatic contacts through Qatar and regional governments.",
-        "source": "Al Jazeera",
-        "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran"
-      },
-      {
-        "name": "Vladimir Putin",
-        "position": "President of Russia",
-        "image": "assets/leaders/putin.jpg",
-        "headline": "Meets Iranian security official in Moscow",
-        "update": "Putin met Mohsen Rezaei, Iran's security chief, who reportedly delivered a message from Supreme Leader Mojtaba Khamenei. The discussions included regional security and energy cooperation. The meeting does not establish that a new military pact has been signed.",
-        "source": "Al Jazeera",
-        "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei"
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/53ed5d271b9aef6f880aebc133ea6a55"
       },
       {
         "name": "Andy Burnham",
-        "position": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "role": "Prime Minister",
+        "headline": "UK prepares for a new summit with the European Union",
+        "summary": "The UK government is preparing for the 20 November Brussels summit, with discussions expected on youth mobility, food trade, education, energy and security.",
         "image": "assets/leaders/andy.jpg",
-        "headline": "Reopens debate about Britain's long-term relationship with Europe",
-        "update": "Burnham says Britain needs an honest discussion about the effects of Brexit and its future relationship with the EU. He has clarified that he has not proposed an immediate return to freedom of movement. The government has not announced a decision to rejoin the European Union.",
-        "source": "ITV News",
-        "url": "https://www.itv.com/news/2026-11-03/burnham-i-have-not-proposed-return-to-eu-freedom-of-movement"
+        "source": "Reuters | UK Government",
+        "url": "https://www.reuters.com/world/uk/britain-eu-set-youth-mobility-deal-summit-student-fee-talks-continue-2026-11-03/"
       },
       {
         "name": "Emmanuel Macron",
-        "position": "President of France",
+        "country": "France",
+        "role": "President of France",
+        "headline": "France faces renewed pressure over wages and purchasing power",
+        "summary": "Nationwide demonstrations have brought economic and public-service concerns back to the centre of French politics. Prime Minister Sébastien Lecornu has called a social conference with unions and employers.",
         "image": "assets/leaders/macron.jpg",
-        "headline": "France responds to public pressure and a fatal bus crash",
-        "update": "France is dealing with continuing public debate over purchasing power and public services, alongside the fatal bus crash in the Ain department that killed two people and injured 16. Authorities are investigating the crash. The government faces pressure to address social and economic concerns.",
-        "source": "Euronews and Le Monde",
-        "url": "https://www.euronews.com/2026/11/06/emergency-services-deployed-after-school-bus-crash-kills-two-in-france"
+        "source": "Le Monde",
+        "url": "https://www.lemonde.fr/politique/article/2026/11/06/greve-du-5-novembre-lecornu-convoque-syndicats-et-patronat-pour-une-conference-sociale-a-matignon_6807684_823448.html"
       },
       {
         "name": "Mark Carney",
-        "position": "Prime Minister of Canada",
+        "country": "Canada",
+        "role": "Prime Minister",
+        "headline": "Canada announces a major investment and affordability programme",
+        "summary": "The 2026 federal budget outlines C$400 billion in capital investment over six years and C$22 billion in new affordability measures.",
         "image": "assets/leaders/carney.jpg",
-        "headline": "Government releases 2026 budget focused on investment and affordability",
-        "update": "The Canadian government has announced a budget that includes planned capital investment of 400 billion Canadian dollars over six years and 22 billion dollars in affordability measures. The government says it wants to diversify trade and strengthen economic resilience.",
         "source": "Government of Canada",
         "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
       },
       {
-        "name": "Friedrich Merz",
-        "position": "Chancellor of Germany",
-        "image": "assets/leaders/merz.jpg",
-        "headline": "Says Europe must be included in Ukraine peace settlement",
-        "update": "Merz has said Europe must be included in any lasting agreement concerning Russia's war against Ukraine. Planned talks in Abu Dhabi are expected to address security guarantees and possible ceasefire arrangements. Germany has also pledged continued support for Ukraine.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/europe/russia-must-show-it-is-serious-about-ceasefire-abu-dhabi-talks-germanys-merz-2026-11-03/"
+        "name": "Cyril Ramaphosa",
+        "country": "South Africa",
+        "role": "President of South Africa",
+        "headline": "Municipal election results point to a changing political landscape",
+        "summary": "The latest available count shows the ANC below one-third of the vote. Final results and coalition negotiations will determine the next leadership of several municipalities. Ramaphosa remains president; this is a local government election.",
+        "image": "assets/leaders/ramaphosa.jpg",
+        "source": "The Presidency of South Africa | Election results dashboard",
+        "url": "https://www.rateweb.co.za/elections-2026/results/"
       },
       {
-        "name": "Volodymyr Zelensky",
-        "position": "President of Ukraine",
-        "image": "assets/leaders/zelensky.jpg",
-        "headline": "Ukraine prepares for diplomatic talks while seeking security guarantees",
-        "update": "Zelensky has said Ukraine is prepared to pursue diplomacy but requires credible security guarantees. Planned talks involving Ukrainian, US and Russian representatives are expected in Abu Dhabi on 10 and 11 November. No peace agreement has been announced.",
+        "name": "Vladimir Putin",
+        "country": "Russia",
+        "role": "President of Russia",
+        "headline": "Russia prepares for further discussions on Ukraine",
+        "summary": "US officials are preparing talks involving Russia and Ukraine in Abu Dhabi on 10 and 11 November. The discussions are expected to address security arrangements and de-escalation.",
+        "image": "assets/leaders/putin.jpg",
         "source": "Reuters",
-        "url": "https://www.reuters.com/world/ukraines-zelenskiy-visit-berlin-tuesday-germanys-merz-says-2026-11-03/"
+        "url": "https://www.investing.com/news/world-news/us-to-hold-trilateral-talks-with-ukraine-russia-in-abu-dhabi-next-weekus-official-4993163"
+      },
+      {
+        "name": "Xi Jinping",
+        "country": "China",
+        "role": "President of China",
+        "headline": "China expands its legal framework against cross-border corruption",
+        "summary": "China has passed new legislation aimed at strengthening international cooperation on corruption investigations and increasing compliance expectations for companies operating abroad. A possible meeting involving Xi, Trump and Putin is also under discussion, but no final plan has been confirmed.",
+        "image": "assets/leaders/xi.jpg",
+        "source": "Reuters | Associated Press",
+        "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/"
+      },
+      {
+        "name": "Friedrich Merz",
+        "country": "Germany",
+        "role": "Chancellor of Germany",
+        "headline": "Germany says Europe must be included in Ukraine security discussions",
+        "summary": "Merz has said Russia must demonstrate genuine seriousness about a ceasefire and that European countries must be involved in discussions affecting the continent's security.",
+        "image": "assets/leaders/merz.jpg",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/europe/russia-must-show-it-is-serious-about-ceasefire-at-abu-dhabi-talks-germanys-merz-2026-11-03/"
+      },
+      {
+        "name": "Volodymyr Zelenskyy",
+        "country": "Ukraine",
+        "role": "President of Ukraine",
+        "headline": "Ukraine prepares for further diplomatic discussions with Russia",
+        "summary": "Ukraine is preparing for the expected Abu Dhabi discussions while continuing to emphasise security guarantees, sovereignty and the need for continued support for its air defences.",
+        "image": "assets/leaders/zelensky.jpg",
+        "source": "Reuters",
+        "url": "https://www.investing.com/news/world-news/us-to-hold-trilateral-talks-with-ukraine-russia-in-abu-dhabi-next-weekus-official-4993163"
       },
       {
         "name": "Ursula von der Leyen",
-        "position": "President of the European Commission",
+        "country": "European Union",
+        "role": "President of the European Commission",
+        "headline": "European Commission prepares for closer UK-EU cooperation",
+        "summary": "The EU is preparing the 20 November summit with the United Kingdom, covering trade, security, energy, climate and people-to-people contacts.",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "headline": "Europe's role in Ukraine diplomacy remains a key issue",
-        "update": "Germany's Chancellor Merz has stressed that Europe must be included in any lasting settlement of the war in Ukraine. The position highlights the continuing debate over Europe's role in security guarantees, reconstruction and the future of the continent's security arrangements. This update reflects the wider European policy issue and is not a direct statement from von der Leyen.",
-        "source": "Reuters",
-        "url": "https://www.reuters.com/world/europe/russia-must-show-it-is-serious-about-ceasefire-abu-dhabi-talks-germanys-merz-2026-11-03/"
-      },
-      {
-        "name": "Cyril Ramaphosa",
-        "position": "President of South Africa",
-        "image": "assets/leaders/ramaphosa.jpg",
-        "headline": "ANC faces further electoral pressure in municipal vote",
-        "update": "The latest municipal election figures show the ANC at approximately 32% and the DA at 25% with about 81% of votes counted. The result is provisional and may lead to coalition negotiations in major municipalities. The election is a local government contest, not a national presidential election.",
-        "source": "Reuters",
-        "url": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/"
+        "source": "European External Action Service",
+        "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
       }
     ]
   },
   "electionWatch": [
     {
       "country": "Nigeria",
-      "date": "2027-01",
-      "status": "ADC leadership and presidential nomination under appeal",
-      "update": "A Federal High Court judgment invalidated the disputed ADC leadership structure and decisions taken under it, including the primary that produced Atiku Abubakar as the party's presidential candidate. The ADC says it has filed an appeal and applied for a stay of execution. The stay application must be decided separately; an appeal does not automatically suspend the judgment.",
-      "source": "The Guardian Nigeria",
-      "url": "https://guardian.ng/news/adc-appeals-court-judgment-urges-inec-against-pre-empting-court-of-appeal/"
+      "election": "2027 General Election",
+      "status": "Party leadership dispute under appeal",
+      "summary": "The ADC has filed an appeal and applied for a stay of execution following the Federal High Court judgment affecting the David Mark-led leadership. The stay application remains pending.",
+      "source": "THISDAY",
+      "url": "https://www.thisdaylive.com/2026/11/07/adc-appeals-judgment-sacking-david-mark-led-leadership-seeks-stay-writes-inec/"
     },
     {
       "country": "South Africa",
-      "date": "2026-11-06",
-      "status": "Municipal vote count continuing",
-      "update": "Reuters reported the ANC at approximately 32% and the DA at 25% with around 81% of votes counted. Final certified results and coalition negotiations will determine the composition of local councils.",
-      "source": "Reuters",
-      "url": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/"
-    },
-    {
-      "country": "New Zealand",
-      "date": "2026-11-07",
-      "status": "General election scheduled",
-      "update": "New Zealand is due to hold its general election on 7 November. The main contest is between Prime Minister Christopher Luxon and Labour leader Chris Hipkins. No result should be reported before voting and the official counting process.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7131767dc54ff924985ae40f17c46b68"
+      "election": "2026 Local Government Elections",
+      "status": "Late-stage provisional count",
+      "summary": "The latest available dashboard reported 96% of voting districts counted, with the ANC at 31.1%, the DA at 24.4% and the MK Party at 9.7%. Final certified results and coalition arrangements remain important.",
+      "source": "Rateweb election results dashboard",
+      "url": "https://www.rateweb.co.za/elections-2026/results/"
     },
     {
       "country": "United States",
-      "date": "2026-11-03",
-      "status": "Midterm results reported",
-      "update": "Democrats have secured major gains in the midterm elections and are reported to have won control of both chambers of Congress. The result represents a major political setback for President Donald Trump and will affect the administration's legislative programme.",
+      "election": "2026 Midterm Elections",
+      "status": "Democratic victory reported",
+      "summary": "Democrats have won control of both the House and Senate, ending unified Republican control and creating a divided government for the remainder of the presidential term.",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/e92751dbcdf940c486c8d1e57dafbe99"
+      "url": "https://apnews.com/article/9c5c4c5283f58b1ae0786e2f410c21a0"
+    },
+    {
+      "country": "New Zealand",
+      "election": "2026 General Election",
+      "status": "Election day - 7 November",
+      "summary": "Voters are going to the polls on Saturday. The leading candidates are Prime Minister Christopher Luxon and opposition leader Chris Hipkins. No result is available in this early-morning edition.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/7131767dc54ff924985ae40f17c46b68"
     }
   ],
   "technologyInnovation": [
     {
-      "title": "Technology Stock Sell-Off Raises Questions About AI Investment",
-      "description": "The Nasdaq fell 5.5% as investors reassessed the cost of artificial-intelligence infrastructure, data-centre spending and technology valuations. The decline highlights the importance of sustainable business models and measurable returns from major technology investments.",
-      "image": "assets/market.jpeg",
+      "title": "AI Investment Faces a New Test From Global Investors",
+      "summary": "The technology sell-off has renewed questions about the cost of AI infrastructure, the construction of data centres, company valuations and the time required for investment to produce sustainable returns.",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e"
+      "url": "https://apnews.com/article/7ee9c212805aa5e70cf34d25aab7a36e",
+      "image": "assets/market.jpeg"
     },
     {
-      "title": "Canada's Budget Targets Investment and Economic Resilience",
-      "description": "Canada's 2026 budget includes plans for major capital investment, affordability measures and trade diversification. The government's priorities include productivity, new export opportunities and stronger domestic economic capacity.",
-      "image": "assets/leaders/carney.jpg",
-      "source": "Government of Canada",
-      "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
+      "title": "China Expands Cross-Border Anti-Corruption Rules",
+      "summary": "China's new law introduces stronger provisions for international cooperation in corruption investigations and requires companies operating abroad to establish appropriate compliance arrangements.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/chinas-standing-committee-national-peoples-congress-passes-cross-border-2026-11-06/",
+      "image": "assets/leaders/xi.jpg"
     }
   ],
   "breakingHistory": [
     {
-      "date": "2026-11-06",
-      "title": "Atiku Issues Statement Insisting He Remains in 2027 Race",
-      "description": "Atiku Abubakar issued a statement from Sokoto saying he would continue his campaign despite the court judgment affecting his ADC nomination.",
-      "category": "Nigeria | Politics",
-      "source": "Premium Times",
-      "url": "https://www.premiumtimesng.com/news/top-news/923226-atiku-insists-he-remains-in-2027-race-as-apc-denies-court-interference.html"
+      "headline": "Democratic Transition and the Meaning of Midterm Elections",
+      "text": "Midterm elections in the United States are an important constitutional check on the governing party. A change in control of Congress can reshape legislation, budgets and investigations without automatically changing the identity or constitutional powers of the president."
     },
     {
-      "date": "2026-11-06",
-      "title": "ADC Files Appeal and Applies for Stay of Execution",
-      "description": "The party says it has appealed the judgment and asked the court to suspend its operation pending the appeal.",
-      "category": "Nigeria | Judiciary",
-      "source": "The Guardian Nigeria",
-      "url": "https://guardian.ng/news/adc-appeals-court-judgment-urges-inec-against-pre-empting-court-of-appeal/"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Trump Warns of Possible Further Action Against Iran",
-      "description": "The US president's warning increased concern about renewed military action while Iran continued diplomatic contacts through regional mediators.",
-      "category": "Middle East | International Security",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Sudan and Ethiopia Close Consulates",
-      "description": "The two countries closed each other's consulates after accusations of interference in their internal conflicts.",
-      "category": "Africa | Diplomacy",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/africa/ethiopia-expels-sudanese-diplomats-after-fresh-allegations-support-rsf-2026-11-04/"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "South Africa Municipal Vote Count Shows ANC Under Pressure",
-      "description": "Reuters reported the ANC at approximately 32% and the DA at 25% with about 81% of votes counted.",
-      "category": "Africa | Elections",
-      "source": "Reuters",
-      "url": "https://theprint.in/world/south-africas-anc-set-for-major-vote-loss-city-coalition-battles-loom/3092524/"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Turkey Approves Defence Agreement With Saudi Arabia and Pakistan",
-      "description": "Turkey's parliament approved the three-country defence cooperation agreement by 279 votes to 119.",
-      "category": "Asia | Security",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/b17c570820e88891b2d46dd3fbc3a1f6"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Fatal Bus Crash in Eastern France",
-      "description": "Two people were killed and 16 injured in a bus crash in the Ain department. Authorities are investigating the circumstances.",
-      "category": "Europe | France",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/06/emergency-services-deployed-after-school-bus-crash-kills-two-in-france"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Canada Releases 2026 Federal Budget",
-      "description": "The budget sets out investment, trade diversification and affordability measures.",
-      "category": "North America | Economy",
-      "source": "Government of Canada",
-      "url": "https://www.canada.ca/en/department-finance/news/2026/11/government-of-canada-releases-budget-2026-masters-of-our-destiny.html"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Pope Leo XIV Begins South American Tour",
-      "description": "The Pope began a 12-day visit to Uruguay, Argentina and Peru.",
-      "category": "South America | Vatican",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/americas/pope-leo-starts-south-america-homecoming-tour-month-after-lung-surgery-2026-11-06/"
+      "headline": "The Long Shadow of Brexit",
+      "text": "The UK's departure from the European Union continues to influence trade, migration, education and security cooperation. Today's negotiations demonstrate how political decisions can reshape relationships for years after the original vote."
     }
   ],
   "archives": [
     {
-      "title": "RadiantWaves News Archives",
-      "description": "Previous Morning, Midday, Evening and Night editions are available through the website archives.",
-      "enabled": true
+      "headline": "RadiantWaves Morning News Archive",
+      "text": "Explore previous Morning, Midday, Evening and Night editions for continuing coverage of Nigeria, Africa and international developments."
     }
   ],
   "thoughtForToday": {
-    "title": "Thought for Today",
-    "quote": "Democracy is protected not by political promises alone, but by institutions, lawful processes, accountability and the informed choices of citizens.",
-    "author": "RadiantWaves Media",
-    "reflection": "From Nigeria's court dispute to Britain's Brexit debate, South Africa's municipal elections and the international response to conflict, today's developments remind us that public decisions must be examined through evidence and accountability. Journalism must distinguish what leaders say, what institutions decide and what remains unresolved."
+    "headline": "Democracy Requires More Than Winning an Election",
+    "text": "Public confidence grows when institutions are independent, decisions are transparent, opposition voices are respected and leaders accept accountability under the law."
   },
   "todaysBigQuestion": {
-    "title": "Today's Big Question",
-    "question": "When political power, national security and economic interests collide, how can citizens ensure that leaders and institutions remain accountable?",
-    "description": "Nigeria's opposition dispute, the conflict involving Iran, Britain's debate about Europe and South Africa's changing electoral landscape all raise questions about the responsibility of political leaders and the strength of democratic institutions.",
-    "discussionPoints": [
-      "What should happen when a court judgment affects a political party's candidates before an election?",
-      "Should an appeal be accompanied by a stay application, and why is the distinction important?",
-      "How can governments pursue national security without overlooking the protection of civilians?",
-      "What should Britain prioritise in its future relationship with the European Union?",
-      "How can African governments prevent internal conflicts from creating wider regional instability?",
-      "What responsibility do political leaders have to explain the economic consequences of their decisions?"
-    ]
+    "headline": "Can Diplomacy and Democratic Institutions Keep Pace With a Changing World?",
+    "text": "From the US-Iran conflict to Ukraine, from Nigeria's court dispute to South Africa's changing political landscape, today's developments raise one question: are political leaders and institutions doing enough to resolve disagreements through law, dialogue and accountability?"
   },
   "radiantWavesPerspective": {
-    "title": "The RadiantWaves Perspective",
-    "content": "The stories shaping this Friday show how closely domestic politics, international security and economic decisions are connected. In Nigeria, the ADC appeal and Atiku's response must be followed alongside the actual court orders and the decisions of INEC. The APC's denial must also be reported fairly, and allegations must not be presented as proven facts. In the Middle East, threats of further military action and continuing diplomatic contacts show how quickly regional tensions can affect global energy markets. In Europe, Britain's renewed debate about Brexit and Scotland's constitutional ambitions raise questions about sovereignty, trade and democratic consent. South Africa's municipal election count points to changing voter expectations, while the Sudan-Ethiopia dispute demonstrates the danger of regional conflicts becoming entangled. Canada's budget and the technology sell-off highlight the pressure on governments and businesses to balance investment, affordability and economic resilience. RadiantWaves Media will continue to distinguish verified developments from political claims, provisional figures from certified results and diplomatic proposals from completed agreements. Our responsibility is to provide context, accuracy and balanced reporting so that readers can make informed judgments.",
-    "editorialPrinciple": "Facts before assumptions. Accountability without prejudice. Context before conclusions."
+    "headline": "The RadiantWaves Perspective",
+    "text": "The world is experiencing political and security changes that demand careful reporting rather than speculation. In Nigeria, the ADC appeal must be followed through the courts, and no political declaration should be confused with a judicial order. In the United States and South Africa, election results will reshape political responsibilities, but democratic accountability continues after voting day. In the Middle East, military action and diplomatic mediation are unfolding simultaneously, with consequences for civilians, shipping and energy markets. In Europe, closer UK-EU cooperation will be measured by agreements actually reached, not political slogans. Across Africa, security and humanitarian crises require sustained attention. RadiantWaves Media will continue to separate verified developments from allegations, provisional results and political claims, giving readers the context needed to understand what is happening and why it matters."
   },
   "sponsoredAdverts": [],
   "sourcePolicy": {
-    "title": "Our Editorial and Verification Policy",
-    "principles": [
-      "We distinguish court judgments from appeals, stay applications and political reactions.",
-      "We report statements from political parties and governments with clear attribution.",
-      "We include relevant denials and competing accounts where available.",
-      "We do not report political allegations as established findings without evidence.",
-      "We do not present provisional election figures as final certified results.",
-      "We do not report a military threat as proof that an operation has been ordered.",
-      "We distinguish diplomatic proposals from signed or implemented agreements.",
-      "We provide source links so readers can examine original reporting.",
-      "We update developing stories when reliable new information becomes available.",
-      "We do not use unrelated photographs to illustrate news reports.",
-      "We use only repository images that match the people or subjects in the relevant report."
-    ]
+    "headline": "Our Editorial Commitment",
+    "text": "RadiantWaves Media reports in original editorial language and identifies the sources used for verification. We distinguish confirmed developments from allegations, political claims, early election results and pending legal decisions. Source links are provided for readers who wish to consult the original reporting. Where information is preliminary or disputed, the report says so clearly. Images are selected to match the people, places or subjects being reported."
   },
   "footer": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "Connecting You Deeper to the World's Most Important Stories",
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/",
-    "copyright": "© 2026 RadiantWaves Media Nigeria Ltd. All rights reserved."
+    "email": "info@radiantwavesmedia.com",
+    "support": "support@radiantwavesmedia.com"
   },
   "contact": {
     "email": "info@radiantwavesmedia.com",
     "supportEmail": "support@radiantwavesmedia.com",
     "whatsapp": "+33 6 21 61 31 49",
-    "website": "https://radiantwavesmedia.com/",
-    "social": {
-      "facebook": "https://www.facebook.com/profile.php?id=100093982346090",
-      "tiktok": "https://www.tiktok.com/@radiantwaves",
-      "youtube": "https://www.youtube.com/@RADIANTWAVE",
-      "x": "https://x.com/Radiant13528995"
-    }
+    "website": "https://radiantwavesmedia.com/"
   }
 }

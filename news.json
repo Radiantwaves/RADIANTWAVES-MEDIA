@@ -1,916 +1,601 @@
+
 {
-  "edition": "Evening",
+  "company": "RADIANTWAVES MEDIA NIGERIA LTD",
+  "edition": "Night",
   "date": "2026-11-08",
-  "editionTime": "Evening",
-  "updatedAt": "2026-11-08T18:30:00+01:00",
-  "branding": {
-    "company": "RADIANTWAVES MEDIA NIGERIA LTD",
-    "location": "Nigeria | France | Global",
-    "website": "https://radiantwavesmedia.com/",
-    "slogan": "Gateway to Your World News — Connecting You to the World"
-  },
+  "editionTime": "Night",
+  "updatedAt": "2026-11-08T22:01:00+01:00",
+  "location": "Nigeria | France | Global",
+  "website": "https://radiantwavesmedia.com/",
+  "slogan": "Gateway to Your World News — Connecting You to the World",
+
   "hero": {
-    "headline": "A World Under Pressure: Political Change, Conflict and Economic Uncertainty Shape the Global Agenda",
-    "summary": "From Nigeria's ADC leadership dispute and the changing balance of power in Washington to renewed security concerns around the Strait of Hormuz, governments across the world face mounting political, economic and diplomatic challenges. Elections in New Zealand and South Africa, tensions in the Horn of Africa, the war in Ukraine and preparations for a new UK-EU summit are among the developments shaping Sunday's international agenda.",
+    "headline": "NIGHT GLOBAL UPDATE: HORMUZ CRISIS DEEPENS, INEC AWAITS ADC JUDGMENT, UKRAINE FACES NEW STRIKES",
+    "subheadline": "Egypt's train disaster toll rises, South Africa's ANC suffers a historic electoral setback, and Poland investigates a deadly shooting as international tensions intensify.",
     "image": "assets/middleeast.jpeg",
-    "category": "Global Affairs",
-    "location": "Worldwide"
+    "category": "Global Breaking News",
+    "date": "Sunday, 8 November 2026"
   },
-  "morningSummary": "THE WORLD THIS EVENING — Sunday's international news agenda is dominated by political uncertainty, conflict and the search for economic stability. In the Middle East, reported incidents involving commercial shipping around the Strait of Hormuz have renewed concerns about the security of a vital international energy route. The United States and Iran remain at the centre of a dangerous confrontation, although some accounts of individual incidents have not been independently verified. In Europe, Russia's latest attacks on Ukraine's energy infrastructure underline the continuing humanitarian and security consequences of the war as diplomatic discussions are prepared for Abu Dhabi. Germany has called for Europe to remain involved in decisions affecting Ukraine. In Nigeria, the ADC faces a serious legal and organisational challenge following a Federal High Court judgment affecting the David Mark-led caretaker leadership and decisions taken under it, including the process that produced Atiku Abubakar as the party's presidential candidate. INEC says it will study the certified judgment before deciding its next steps. Across Africa, South Africa's provisional local election figures point to a weakened ANC and a more fragmented political landscape, while Senegal is mourning victims of a deadly migrant boat disaster. In the Horn of Africa, worsening relations between Sudan and Ethiopia have raised concerns about regional instability. In the Americas, Democrats have secured control of both chambers of the United States Congress following the 2026 midterm elections, creating a new political environment for President Donald Trump. Canada has released its 2026 federal budget, placing investment and affordability at the centre of its economic plans. In Europe, the United Kingdom and European Union are preparing for a summit in Brussels on 20 November, while the European Commission's preliminary findings on TikTok's recommendation system have intensified debate about digital platform accountability. New Zealand's closely contested election has left government formation uncertain pending special votes. The central question for governments is whether diplomacy, credible institutions and accountable leadership can prevent political and military tensions from becoming deeper economic and humanitarian crises.",
+
+  "morningSummary": {
+    "title": "The World Tonight: The major developments",
+    "summary": "Sunday closes with mounting international pressure across several regions. In the Middle East, the United States and Iran remain locked in a dangerous confrontation around the Strait of Hormuz. Reports of damaged vessels and maritime incidents have heightened fears over international shipping, energy supplies and the security of one of the world's most important commercial waterways. President Donald Trump has indicated that he is unlikely to order renewed major strikes if negotiations produce a strong agreement. However, Washington continues to consider additional pressure measures. Reports of explosions in southern Iran have not been independently established as new American attacks.\n\nIn Nigeria, the 2027 political contest has entered a significant legal phase. INEC says it has not made a final decision about Atiku Abubakar's ADC presidential candidacy. The commission is waiting for the certified court judgment affecting the David Mark-led party leadership and expects to consider the matter at its next meeting. The ADC leadership faction has indicated that it will appeal, but filing an appeal does not automatically suspend a judgment.\n\nUkraine is facing renewed attacks on its energy infrastructure. More than 600,000 people in the Dnipropetrovsk region have reportedly lost electricity, with hospitals and public transport affected. The attacks come ahead of planned US-brokered diplomatic discussions in Abu Dhabi on 10 and 11 November.\n\nIn Africa, South Africa's governing ANC has recorded a historic local-election setback, receiving approximately 30.76 per cent of the vote. The Democratic Alliance and uMkhonto weSizwe have strengthened their positions, making coalition negotiations central to municipal government. Senegal is also mourning at least 21 people after a migrant boat capsized off its northwestern coast. In Egypt, a passenger-train collision has killed seven people and injured at least 125.\n\nAcross Europe, Polish prosecutors have opened a terrorism investigation following a shooting in Kraków that killed six people. France has experienced major demonstrations over purchasing power, wages and public services. The European Commission's preliminary findings concerning TikTok's recommendation system have added to the debate over digital-platform accountability.\n\nIn North America, the Democratic Party's victory in the US midterm elections has changed the balance of power in Congress. Canadian Prime Minister Mark Carney has welcomed the emerging American debate over reversing tariffs on Canadian goods, although the trade dispute remains unresolved.",
+    "editorialNote": "This edition distinguishes independently reported developments from official statements, allegations and preliminary findings. Casualty figures and developing political situations may change as further information becomes available."
+  },
+
   "breaking": [
     {
-      "headline": "INEC Awaits Certified Court Judgment Before Deciding on ADC Leadership Dispute",
-      "summary": "INEC says it will obtain and study the certified true copy of the Federal High Court judgment before determining its next steps in the ADC leadership crisis. The commission is expected to consider the matter at its next meeting. The ruling has created uncertainty around the party's leadership and nomination process.",
-      "category": "Nigeria Politics",
+      "id": "breaking-001",
+      "priority": "urgent",
+      "headline": "INEC: No decision yet on Atiku's 2027 presidential candidacy",
+      "summary": "INEC says it must first obtain and study the certified true copy of the Federal High Court judgment affecting the David Mark-led ADC leadership. National Commissioner Mohammed Haruna says the commission expects to consider the matter at its next meeting. Atiku maintains that he remains in the presidential race. The commission has not announced a final disqualification.",
       "image": "assets/leaders/atiku2.jpg",
-      "source": "Punch Newspapers, 8 November 2026",
-      "sourceUrl": "https://punchng.com/inec-to-meet-over-atikus-2027-ticket/"
+      "source": "Nigeria Info FM / Punch",
+      "sourceUrl": "https://www.nigeriainfo.fm/lagos/news/2027-elections/no-decision-on-atikus-candidacy-yet-inec/",
+      "category": "Nigeria Politics",
+      "time": "8 November 2026"
     },
     {
-      "headline": "Strait of Hormuz Incidents Raise Fresh Fears for International Shipping",
-      "summary": "Reports of tanker incidents, alleged mine strikes and military activity near the Gulf of Oman have heightened concern about commercial shipping. Iran and the United States have offered competing accounts, and some claims remain independently unverified.",
-      "category": "Middle East",
+      "id": "breaking-002",
+      "priority": "urgent",
+      "headline": "Iran-US confrontation: Trump signals preference for negotiations as shipping incidents continue",
+      "summary": "President Donald Trump says he is highly unlikely to order renewed major strikes if negotiations produce a strong agreement. Both Iran and the United States have reported maritime incidents involving vessels around the Strait of Hormuz. Reuters says the reported incidents have not all been independently verified. Washington is also considering measures to restrict weapons and sanctioned materials reaching Iran.",
       "image": "assets/middleeast.jpeg",
-      "source": "Reuters and maritime security reporting"
-    },
-    {
-      "headline": "Democrats Take Control of Both Chambers of US Congress",
-      "summary": "The 2026 midterm outcome gives Democrats control of the House and Senate, creating a major political challenge for President Donald Trump and changing the balance of power in Washington.",
-      "category": "United States",
-      "image": "assets/leaders/trump.jpg",
       "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/international-politicians-react-democrats-winning-us-midterms-2026-11-04/"
+      "sourceUrl": "https://www.reuters.com/world/middle-east/iran-suggests-blasts-are-not-us-attacks-both-sides-report-ships-hit-2026-11-08/",
+      "category": "Middle East",
+      "time": "8 November 2026"
     },
     {
-      "headline": "Russia Renews Attacks on Ukrainian Energy Infrastructure Ahead of Talks",
-      "summary": "Fresh drone and missile attacks have caused casualties and damaged infrastructure in Ukraine as diplomatic preparations continue for discussions in Abu Dhabi.",
-      "category": "Ukraine",
+      "id": "breaking-003",
+      "priority": "urgent",
+      "headline": "Egypt train collision: Seven dead and at least 125 injured",
+      "summary": "Two passenger trains collided in Egypt's al-Ayyat district, south of Cairo. The Associated Press reports seven deaths and at least 125 injuries. A train travelling from Giza to Fayoum struck the rear of a stationary Cairo-to-Aswan train. Authorities have launched an investigation.",
+      "image": "assets/africa.jpeg",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/4ad591268ce015d85ae302e22185b235",
+      "category": "Africa | Breaking",
+      "time": "8 November 2026"
+    },
+    {
+      "id": "breaking-004",
+      "priority": "urgent",
+      "headline": "Ukraine reports widespread electricity disruption after Russian strikes",
+      "summary": "More than 600,000 people in the Dnipropetrovsk region have reportedly been left without electricity following Russian attacks on energy infrastructure. Hospitals have switched to generators and electric-powered public transport has been disrupted. Diplomatic talks are scheduled for Abu Dhabi on 10 and 11 November.",
       "image": "assets/leaders/zelensky.jpg",
-      "source": "Associated Press"
+      "source": "Radio Free Europe / Radio Liberty",
+      "sourceUrl": "https://www.rferl.org/a/russia-strikes-ukraine-energy/33893219.html",
+      "category": "Europe | War",
+      "time": "8 November 2026"
     },
     {
-      "headline": "South Africa's ANC Faces Major Setback in Local Elections",
-      "summary": "Provisional results show the ANC with approximately 30.8 per cent of the vote, behind the DA at approximately 24.6 per cent. Final certification and coalition negotiations remain important.",
-      "category": "Africa",
+      "id": "breaking-005",
+      "priority": "high",
+      "headline": "South Africa: ANC suffers historic local-election setback",
+      "summary": "The ANC received approximately 30.76 per cent of the vote, compared with 24.64 per cent for the Democratic Alliance and 9.76 per cent for uMkhonto weSizwe. The outcome leaves coalition negotiations central to the formation of municipal governments.",
       "image": "assets/leaders/ramaphosa.jpg",
-      "source": "Associated Press and Electoral Commission of South Africa"
+      "source": "Reuters / South African electoral reporting",
+      "sourceUrl": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/",
+      "category": "Africa | Elections",
+      "time": "8 November 2026"
     },
     {
-      "headline": "New Zealand Election Produces a Close Contest",
-      "summary": "Preliminary results show Labour narrowly ahead of National in party votes, while the distribution of parliamentary seats leaves government formation uncertain. Special votes are still to be counted.",
-      "category": "Asia-Pacific",
-      "source": "New Zealand Electoral Commission"
+      "id": "breaking-006",
+      "priority": "high",
+      "headline": "Poland opens terrorism investigation after Kraków shooting kills six",
+      "summary": "Polish prosecutors have opened a terrorism investigation following a shooting in Kraków that killed six people and injured others. Three additional bodies, identified as the suspect's parents and sister, were found at a family property. Investigators are examining the circumstances and possible motive.",
+      "image": "assets/europe.jpeg",
+      "source": "Polskie Radio",
+      "sourceUrl": "https://www.polskieradio.pl/395/7784/artykul/3750661%2Can-investigation-launched-into-saturdays-mass-shooting-in-krakow",
+      "category": "Europe | Security",
+      "time": "8 November 2026"
     },
     {
-      "headline": "UK and EU Prepare for 20 November Brussels Summit",
-      "summary": "UK Prime Minister Andy Burnham is expected to meet EU leaders for discussions covering defence, security, energy, climate, migration and wider cooperation.",
-      "category": "Europe",
-      "image": "assets/leaders/andy.jpg",
-      "source": "European Council"
-    },
-    {
-      "headline": "European Commission Raises Preliminary Concerns Over TikTok Recommendation System",
-      "summary": "The Commission says TikTok's For You recommendation system may breach the Digital Services Act because of risks linked to harmful content and compulsive use. The findings are preliminary and TikTok disputes them.",
-      "category": "Technology",
-      "image": "assets/technology.jpeg",
-      "source": "European Commission, 6 November 2026"
-    },
-    {
-      "headline": "Deadly Migrant Boat Disaster off Senegal Leaves at Least 21 Dead",
-      "summary": "At least 21 people have died after a migrant boat sank off Senegal's coast. One survivor was reported rescued as search efforts continued.",
-      "category": "Africa",
+      "id": "breaking-007",
+      "priority": "high",
+      "headline": "At least 21 dead after migrant boat sinks off Senegal",
+      "summary": "Senegal's Interior Ministry says 21 bodies have been recovered after a migrant boat capsized off the coast near Kébémer, north of Dakar. One survivor was rescued and search operations continued. Authorities have not confirmed the total number of people aboard.",
       "image": "assets/africa.jpeg",
-      "source": "Associated Press"
+      "source": "Senegal Interior Ministry / Reuters",
+      "sourceUrl": "https://www.interieur.gouv.sn/actualites/communiques/drame-migratoire-sur-le-littoral-de-kebemer",
+      "category": "Africa | Migration",
+      "time": "8 November 2026"
     },
     {
-      "headline": "Sudan and Ethiopia Tensions Raise Alarm Across the Horn of Africa",
-      "summary": "Relations have deteriorated amid accusations concerning support for armed groups and interference in each other's conflicts. Both sides have rejected allegations made against them.",
-      "category": "Africa",
-      "image": "assets/africa.jpeg",
-      "source": "Reuters"
-    },
-    {
-      "headline": "Canada's 2026 Federal Budget Sets Out Major Investment and Affordability Measures",
-      "summary": "Ottawa's budget sets an ambition to mobilise 400 billion Canadian dollars in capital investment over six years and announces affordability measures alongside spending restraint.",
-      "category": "Canada",
-      "image": "assets/leaders/carney.jpg",
-      "source": "Government of Canada"
-    },
-    {
-      "headline": "Paraguay Enters a New Political Chapter Under President Pedro Alliana",
-      "summary": "Pedro Alliana was sworn in as president on 6 November following the removal of Santiago Peña. The political transition is expected to face scrutiny over the circumstances surrounding the change of government.",
-      "category": "Latin America",
-      "source": "Paraguayan Senate and Chamber of Deputies"
-    },
-    {
-      "headline": "Poland Investigates Deadly Kraków Shooting",
-      "summary": "Authorities are investigating a mass shooting in Kraków that left six people dead and at least 16 injured. Investigators are examining possible extremist motivations.",
-      "category": "Europe",
-      "source": "Polish Radio and international reporting"
-    },
-    {
-      "headline": "Marine Le Pen and National Rally Remain Central to France's Opposition Debate",
-      "summary": "Recent polling places Marine Le Pen and Jordan Bardella among the leading figures in France's political debate. These are opinion poll findings, not election results.",
-      "category": "France",
-      "image": "assets/france-protests.jpg",
-      "source": "ELABE polling and French political reporting"
+      "id": "breaking-008",
+      "priority": "high",
+      "headline": "Saudi Aramco building damaged by debris after attempted attack",
+      "summary": "Saudi authorities say debris from an intercepted attack damaged several floors of an administrative building belonging to Saudi Aramco in Riyadh. No casualties were reported. The Houthis claimed responsibility, while Saudi air defences reported intercepting missiles. The incident adds another dangerous dimension to the regional conflict.",
+      "image": "assets/middleeast.jpeg",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/middle-east/loud-booms-heard-saudi-capital-riyadh-after-early-warning-alert-issued-2026-11-08/",
+      "category": "Middle East | Security",
+      "time": "8 November 2026"
     }
   ],
+
   "featured": {
-    "headline": "Nigeria's ADC Crisis: What the Court Judgment Means for Atiku and the 2027 Opposition",
-    "summary": "The Federal High Court ruling has created a serious legal and organisational challenge for the African Democratic Congress. The judgment nullified the David Mark-led caretaker leadership process and decisions taken under it, including the process that produced Atiku Abubakar as the party's presidential candidate. INEC says it will study the certified judgment before deciding how to proceed. The ADC leadership has indicated that it intends to challenge the ruling. The political consequences will depend on the appeal process, any further court orders and INEC's formal response. An appeal does not automatically suspend a judgment; a separate stay or other order from a competent court may be required.",
-    "image": "assets/leaders/atiku2.jpg",
-    "category": "Nigeria | Politics",
-    "source": "Punch Newspapers and Nigerian political reporting",
-    "sourceUrl": "https://punchng.com/inec-to-meet-over-atikus-2027-ticket/"
+    "headline": "Nigeria's 2027 election: INEC refuses to rush decision on Atiku's ADC ticket",
+    "standfirst": "The commission says it will study the certified court judgment before determining its implications for the ADC presidential ticket. The next stage of the dispute will involve the legal effect of the ruling, any appeal and whether a court grants a stay of execution.",
+    "content": "The legal dispute surrounding the African Democratic Congress has become one of the most consequential developments in Nigeria's developing 2027 election campaign. A Federal High Court judgment in Abuja nullified the David Mark-led caretaker leadership and invalidated decisions taken under that leadership, including the process that produced Atiku Abubakar as the party's presidential candidate.\n\nThe ruling followed a case brought by Nafiu Bala Gombe, a former ADC deputy national chairman, who challenged the process through which the party leadership was constituted. The judgment has raised questions about the authority of the party structure that conducted the presidential selection process and the status of decisions made under it.\n\nINEC National Commissioner Mohammed Haruna has now made the commission's immediate position clear: it will not decide the matter on the basis of media reports or summaries. It wants the certified true copy of the judgment and says the issue will be considered at its next meeting.\n\nThe Mark-led faction has indicated that it will challenge the judgment. However, filing an appeal and obtaining a stay are different legal steps. An appeal does not, by itself, automatically suspend the operation of a court judgment. The specific orders made by the court and any subsequent order from an appellate court will therefore be important.\n\nAtiku has publicly maintained that he remains in the presidential contest. That is his political position; it should not be presented as a final determination of his legal eligibility. Equally, it would be inaccurate to report that INEC has already removed or definitively disqualified him.\n\nThe immediate questions are whether the ADC faction obtains a stay, what the certified judgment actually orders, and how INEC interprets its obligations under the law. The answers could have significant consequences for the party's organisation and its preparations for the 2027 election.",
+    "image": "assets/leaders/atiku-david-mark-court.jpg",
+    "category": "Nigeria | Politics | Legal Affairs",
+    "source": "Nigeria Info FM / Punch",
+    "sourceUrl": "https://www.nigeriainfo.fm/lagos/news/2027-elections/no-decision-on-atikus-candidacy-yet-inec/"
   },
+
   "topStories": [
     {
-      "headline": "Ukraine Faces Renewed Energy Attacks as Diplomacy Prepares for Abu Dhabi",
-      "summary": "Russia's continuing attacks on Ukrainian infrastructure underline the challenge facing negotiators as discussions are prepared for the coming week. Civilian protection, territorial questions and security guarantees remain central issues.",
-      "image": "assets/leaders/zelensky.jpg",
-      "category": "Europe | Security",
-      "source": "Associated Press"
+      "id": "top-001",
+      "category": "Nigeria",
+      "headline": "ADC appeal will not automatically suspend court judgment",
+      "summary": "The ADC leadership dispute is moving into the appeal process. The legal distinction between filing an appeal and securing a stay of execution is central. INEC says it will study the certified judgment before taking a position on Atiku's candidacy.",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "source": "BusinessDay",
+      "sourceUrl": "https://businessday.ng/news/article/adc-appeals-judgment-sacking-mark-led-leadership-asks-inec-to-suspend-action/"
     },
     {
-      "headline": "South Africa's Local Election Results Point to Coalition Politics",
-      "summary": "The ANC's reduced share of the vote signals a more fragmented political landscape. Coalition negotiations will be critical in determining local administrations and service delivery priorities. The figures remain provisional pending final certification.",
-      "image": "assets/leaders/ramaphosa.jpg",
-      "category": "Africa | Elections",
-      "source": "Electoral Commission of South Africa and Associated Press"
-    },
-    {
-      "headline": "UK and EU Seek a More Structured Relationship",
-      "summary": "The 20 November summit in Brussels offers an opportunity to advance cooperation on defence, energy, migration, climate and economic relations. The extent of any agreement will depend on negotiations between both sides.",
-      "image": "assets/leaders/andy.jpg",
-      "category": "United Kingdom | European Union",
-      "source": "European Council"
-    },
-    {
-      "headline": "Canada's Budget Places Investment and Affordability at the Centre",
-      "summary": "The federal budget's investment ambitions and affordability measures will be judged against delivery, fiscal discipline and the impact on households and businesses.",
-      "image": "assets/leaders/carney.jpg",
-      "category": "Canada | Economy",
-      "source": "Government of Canada"
-    },
-    {
-      "headline": "Senegal's Migrant Boat Tragedy Renews Questions Over Safe Migration",
-      "summary": "The latest disaster highlights the dangers faced by people attempting irregular sea crossings and the continuing need for regional cooperation, rescue capacity and safer migration pathways.",
-      "image": "assets/africa.jpeg",
-      "category": "Africa | Humanitarian",
-      "source": "Associated Press"
-    },
-    {
-      "headline": "TikTok Faces Further European Regulatory Scrutiny",
-      "summary": "The European Commission's preliminary findings raise questions about platform design, algorithmic recommendations, user protection and the responsibilities of large digital services.",
-      "image": "assets/technology.jpeg",
-      "category": "Technology | Europe",
-      "source": "European Commission"
-    }
-  ],
-  "worldNews": [
-    {
-      "headline": "Hormuz Shipping Risks Deepen as Iran-US Confrontation Continues",
-      "summary": "The Strait of Hormuz is a vital route for global oil and gas shipments. Reports on Sunday described incidents involving commercial vessels, alleged mine strikes and military activity in nearby waters. Iran and the United States have offered competing accounts, and some claims have not been independently verified. The United Kingdom Maritime Trade Operations organisation has also reported a maritime security incident in the wider region. Qatar has rejected suggestions that diplomatic contacts have collapsed. Even a limited incident can raise insurance costs, disrupt shipping schedules and increase energy-market uncertainty. Governments and shipping operators will be watching for verified information and signs of de-escalation.",
-      "content": "The Strait of Hormuz remains one of the world's most strategically important maritime corridors. A prolonged disruption could affect energy prices, shipping insurance, supply chains and the cost of imported goods. The latest reports underline the importance of independent verification and diplomatic channels at a time of heightened military tension.",
+      "id": "top-002",
+      "category": "Middle East",
+      "headline": "Hormuz shipping incidents heighten global energy concerns",
+      "summary": "Reports from Iran and the United States describe vessels being damaged or disabled in and around the Strait of Hormuz. Reuters says it could not independently verify all reported incidents. The waterway remains strategically important to global energy and commodity shipments.",
       "image": "assets/middleeast.jpeg",
-      "category": "Middle East | International Security",
-      "author": "RadiantWaves International Desk",
-      "source": "Reuters and UK Maritime Trade Operations",
-      "status": "Developing"
-    },
-    {
-      "headline": "Democrats' Congressional Gains Set Up a New Test for Donald Trump",
-      "summary": "The 2026 midterm elections have delivered a significant shift in the United States Congress, with Democrats securing control of both the House of Representatives and the Senate. The outcome gives the opposition greater influence over legislation, congressional investigations, spending negotiations and oversight of the executive branch. It does not remove Donald Trump's presidential powers, but it makes cooperation with Congress more important.",
-      "content": "International governments are assessing the implications for US foreign policy, trade, support for Ukraine and relations with allies. The result may produce political gridlock, but it also strengthens the role of congressional checks and balances. The new congressional balance will test the administration's ability to negotiate across party lines.",
-      "image": "assets/leaders/trump.jpg",
-      "category": "United States | Politics",
-      "author": "RadiantWaves Americas Desk",
       "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/international-politicians-react-democrats-winning-us-midterms-2026-11-04/",
-      "status": "Reported election outcome"
+      "sourceUrl": "https://www.reuters.com/world/middle-east/iran-suggests-blasts-are-not-us-attacks-both-sides-report-ships-hit-2026-11-08/"
     },
     {
-      "headline": "Ukraine's Energy Infrastructure Under Pressure as New Talks Approach",
-      "summary": "Ukraine continues to face attacks on energy infrastructure and civilian areas. Associated Press reporting describes a major wave of Russian drones and ballistic missiles, with damage and injuries reported. The attacks underline the vulnerability of power generation and distribution systems as colder weather approaches.",
-      "content": "Diplomatic activity is expected to focus on possible negotiations in Abu Dhabi during the coming week. Any progress will depend on the positions of Kyiv and Moscow, the role of the United States and the question of security guarantees. European governments have stressed that Ukraine's future cannot be decided without its participation and that of European partners. Germany has also announced additional winter assistance as the country prepares for continuing pressure on its energy system.",
+      "id": "top-003",
+      "category": "Ukraine",
+      "headline": "600,000 Ukrainians reportedly left without electricity",
+      "summary": "Russian attacks on energy infrastructure have caused major power disruption in Ukraine's Dnipropetrovsk region. Kyiv says the attacks are intensifying before the next round of US-brokered discussions.",
       "image": "assets/leaders/zelensky.jpg",
-      "category": "Ukraine | War and Diplomacy",
-      "author": "RadiantWaves International Desk",
-      "source": "Associated Press and German government statements",
-      "status": "Developing"
+      "source": "RFE/RL",
+      "sourceUrl": "https://www.rferl.org/a/russia-strikes-ukraine-energy/33893219.html"
     },
     {
-      "headline": "New Zealand Election Leaves Government Formation Uncertain",
-      "summary": "New Zealand's general election has produced a closely fought result. Preliminary figures put Labour slightly ahead of National in the party vote, while National has the largest individual parliamentary bloc. Smaller parties will have a significant role in determining the next government.",
-      "content": "The preliminary party vote figures are Labour 29.36 per cent, National 29.21 per cent, the Greens 13.30 per cent, ACT 10.92 per cent and New Zealand First 9.78 per cent. Special votes are estimated at more than 399,000, and the Electoral Commission has indicated that final results are expected on 27 November. It is too early to declare a definitive coalition outcome. The election demonstrates the difficulty of securing a clear mandate in a fragmented political environment.",
-      "category": "New Zealand | Elections",
-      "author": "RadiantWaves Asia-Pacific Desk",
-      "source": "New Zealand Electoral Commission",
-      "status": "Preliminary results"
-    },
-    {
-      "headline": "UK and EU Prepare for a New Brussels Summit",
-      "summary": "The United Kingdom and European Union are preparing for a second summit on 20 November, with security and economic cooperation expected to feature prominently.",
-      "content": "The Brussels meeting is expected to bring together UK Prime Minister Andy Burnham, European Council President António Costa and European Commission President Ursula von der Leyen. The agenda includes defence and security, energy, agriculture and food standards, climate cooperation, migration and law enforcement. The summit offers both sides an opportunity to develop a more practical relationship after years of difficult negotiations following Brexit. Any progress will depend on concrete commitments rather than broad political statements.",
-      "image": "assets/leaders/andy.jpg",
-      "category": "United Kingdom | European Union",
-      "author": "RadiantWaves Europe Desk",
-      "source": "European Council",
-      "status": "Scheduled diplomatic summit"
-    },
-    {
-      "headline": "France's Opposition Landscape: Marine Le Pen and Bardella Remain Key Political Figures",
-      "summary": "Marine Le Pen and Jordan Bardella remain central figures in France's opposition politics. Recent ELABE polling has placed both among the leading political personalities in the national debate. The figures indicate political positioning and public sentiment at the time of polling; they do not establish the outcome of a future presidential election.",
-      "content": "The wider opposition landscape includes parties on the left, centre and right, with debates over immigration, purchasing power, public services, European policy and national identity continuing to shape political competition. The coming months will test whether opposition parties can turn polling support into a coherent electoral strategy. France's domestic political debate also has implications for European policy, fiscal negotiations and the country's role in international affairs.",
-      "image": "assets/france-protests.jpg",
-      "category": "France | Opposition Politics",
-      "author": "RadiantWaves Europe Desk",
-      "source": "ELABE polling and French political reporting",
-      "status": "Polling and political analysis"
-    },
-    {
-      "headline": "European Commission's TikTok Findings Put Platform Accountability Under Scrutiny",
-      "summary": "The European Commission has issued preliminary findings concerning TikTok's For You recommendation system. The concerns relate to potential harmful content pathways, compulsive use and the way the platform's design affects users.",
-      "content": "The findings are not a final ruling, and TikTok has disputed the Commission's position. The case highlights the growing regulatory focus on how large digital platforms design their services, assess risks and protect users. Any eventual enforcement decision could have implications for platform accountability across the European Union and for the wider debate about online safety.",
-      "image": "assets/technology.jpeg",
-      "category": "Technology | Digital Regulation",
-      "author": "RadiantWaves Technology Desk",
-      "source": "European Commission, 6 November 2026",
-      "status": "Preliminary regulatory findings"
-    },
-    {
-      "headline": "Canada's 2026 Budget: Investment Ambition Meets Pressure for Affordability",
-      "summary": "Canada's federal budget, released on 5 November, sets an ambition to mobilise approximately 400 billion Canadian dollars in capital investment over six years and includes around 22 billion dollars in affordability measures.",
-      "content": "The government has also outlined efforts to reduce deficits and restrain the growth of direct programme spending. The policy challenge will be translating investment plans into jobs, infrastructure and productivity gains while responding to household concerns about housing, prices and living costs. The budget's success will depend on implementation and the economic conditions facing the country.",
-      "image": "assets/leaders/carney.jpg",
-      "category": "Canada | Economy",
-      "author": "RadiantWaves Americas Desk",
-      "source": "Government of Canada, Budget 2026",
-      "status": "Budget released"
-    },
-    {
-      "headline": "Paraguay Begins a New Presidency Under Pedro Alliana",
-      "summary": "Pedro Alliana assumed the presidency of Paraguay on 6 November following the removal of Santiago Peña. The transition has attracted attention because of the political controversy and allegations surrounding the events leading to the change in leadership.",
-      "content": "Alliana is expected to serve the remainder of the presidential term. The new administration faces questions about political stability, institutional accountability and economic confidence. Allegations involving individuals or financial institutions should be treated as allegations unless established by competent authorities. The coming weeks will be important in determining how the transition affects government policy and public confidence.",
-      "category": "Paraguay | Politics",
-      "author": "RadiantWaves Americas Desk",
-      "source": "Paraguayan Senate and Chamber of Deputies",
-      "status": "Confirmed transition"
-    },
-    {
-      "headline": "Polish Authorities Investigate Kraków Mass Shooting",
-      "summary": "Polish authorities are investigating a deadly shooting in Kraków that left six people dead and at least 16 injured. Investigators are examining possible extremist motivations.",
-      "content": "Reports also describe deaths among members of the suspect's family at a separate location. Those deaths should not be confused with the six victims of the shooting itself. The investigation remains ongoing, and further official information is expected. Authorities will need to establish the suspect's motive and whether the incident involved a wider network or organised activity.",
-      "category": "Poland | Security",
-      "author": "RadiantWaves Europe Desk",
-      "source": "Polish Radio and international reporting",
-      "status": "Investigation ongoing"
-    }
-  ],
-  "usaNews": [
-    {
-      "headline": "Democrats Win Control of the House and Senate in 2026 Midterms",
-      "summary": "The result changes the balance of power in Washington and gives Democrats greater capacity to shape congressional oversight, spending negotiations and legislative debate. President Trump remains in office, but the administration will face a more challenging Congress.",
-      "image": "assets/leaders/trump.jpg",
-      "source": "Reuters"
-    }
-  ],
-  "europeNews": [
-    {
-      "headline": "UK-EU Summit Scheduled for Brussels on 20 November",
-      "summary": "Defence, energy, migration, climate and law enforcement are expected to feature in discussions between the UK and EU leadership.",
-      "image": "assets/leaders/andy.jpg",
-      "source": "European Council"
-    },
-    {
-      "headline": "France's Opposition Parties Position Themselves Ahead of the Next Presidential Contest",
-      "summary": "Marine Le Pen, Jordan Bardella and other political figures remain prominent in polling and party strategy. Polling should not be mistaken for an election result.",
-      "image": "assets/france-protests.jpg",
-      "source": "ELABE and French political reporting"
-    },
-    {
-      "headline": "TikTok Faces Preliminary EU Regulatory Findings",
-      "summary": "The European Commission's concerns focus on recommendation-system design and possible risks to users under the Digital Services Act. TikTok disputes the preliminary findings.",
-      "image": "assets/technology.jpeg",
-      "source": "European Commission"
-    },
-    {
-      "headline": "Kraków Shooting Investigation Continues",
-      "summary": "Six people were killed and at least 16 injured. Investigators are examining possible extremist motives.",
-      "source": "Polish Radio"
-    }
-  ],
-  "africaNews": [
-    {
-      "headline": "South Africa's ANC Faces a Difficult Local Election Result",
-      "summary": "Provisional results show the ANC behind the DA, with coalition negotiations likely to shape municipal government. Final certification remains important.",
+      "id": "top-004",
+      "category": "Africa",
+      "headline": "ANC's historic electoral setback opens a new coalition era",
+      "summary": "South Africa's ANC has fallen to approximately 30.76 per cent in the municipal elections. The DA has taken approximately 24.64 per cent, while the MK Party has secured close to 9.76 per cent. Coalition bargaining will shape the leadership of several councils.",
       "image": "assets/leaders/ramaphosa.jpg",
-      "source": "Electoral Commission of South Africa and Associated Press"
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
     },
     {
-      "headline": "Senegal Boat Disaster Leaves at Least 21 Dead",
-      "summary": "A migrant boat sank off Senegal's coast. One survivor was reported rescued while search operations continued.",
+      "id": "top-005",
+      "category": "Egypt",
+      "headline": "Rail disaster raises fresh questions about transport safety",
+      "summary": "A collision between two passenger trains in Egypt's Giza province has killed seven people and injured at least 125, according to the latest AP report. Investigators are examining how one train struck another on the same line.",
       "image": "assets/africa.jpeg",
-      "source": "Associated Press"
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/4ad591268ce015d85ae302e22185b235"
     },
     {
-      "headline": "Sudan-Ethiopia Diplomatic Tensions Intensify",
-      "summary": "Mutual accusations over interference in regional conflicts have raised concerns about instability across the Horn of Africa. Both countries have rejected allegations made against them.",
+      "id": "top-006",
+      "category": "Europe",
+      "headline": "Kraków attack investigated as terrorism",
+      "summary": "Polish prosecutors have opened a terrorism investigation into the fatal shooting in Kraków. Authorities are also investigating the deaths of three members of the suspect's family found at a separate property.",
+      "image": "assets/europe.jpeg",
+      "source": "Polskie Radio",
+      "sourceUrl": "https://www.polskieradio.pl/395/7784/artykul/3750661%2Can-investigation-launched-into-saturdays-mass-shooting-in-krakow"
+    },
+    {
+      "id": "top-007",
+      "category": "Africa",
+      "headline": "Senegal migrant tragedy leaves at least 21 dead",
+      "summary": "A boat carrying people attempting irregular migration capsized off Senegal. Rescue teams continued searching after one survivor and 21 bodies were reported.",
       "image": "assets/africa.jpeg",
-      "source": "Reuters"
-    }
-  ],
-  "nigeriaNews": [
-    {
-      "headline": "INEC Waits for Certified Judgment in ADC Leadership Dispute",
-      "summary": "The commission says it must study the certified court judgment before deciding its next steps. The ruling affects the David Mark-led caretaker leadership and decisions taken under it.",
-      "image": "assets/leaders/atiku2.jpg",
-      "source": "Punch Newspapers",
-      "sourceUrl": "https://punchng.com/inec-to-meet-over-atikus-2027-ticket/"
+      "source": "Senegal Interior Ministry",
+      "sourceUrl": "https://www.interieur.gouv.sn/actualites/communiques/drame-migratoire-sur-le-littoral-de-kebemer"
     },
     {
-      "headline": "Atiku Rejects Political Withdrawal as ADC Considers Legal Response",
-      "summary": "Atiku Abubakar has rejected suggestions that he should abandon his political ambition. The ADC leadership intends to challenge the judgment, but an appeal alone does not automatically suspend the court's order.",
-      "image": "assets/leaders/atiku.jpg",
-      "source": "Nigerian political reporting"
+      "id": "top-008",
+      "category": "United States",
+      "headline": "Democrats' midterm victory reshapes Washington's political balance",
+      "summary": "Democrats have won control of both chambers of Congress and are set to take control in January. The result will intensify scrutiny of the Trump administration and reshape legislative negotiations, although presidential foreign-policy powers remain significant.",
+      "image": "assets/leaders/trump.jpg",
+      "source": "Associated Press",
+      "sourceUrl": "https://www.ap.org/the-definitive-source/behind-the-news/calling-control-of-congress-in-the-2026-midterm-elections/"
     },
     {
-      "headline": "Nigeria's Economic Challenges Remain Central to the 2027 Debate",
-      "summary": "Public debt, the cost of living, employment, security and the performance of public services remain central issues for voters and political parties. Campaign claims should be tested against published economic data and measurable policy proposals.",
-      "image": "assets/leaders/tinubu.jpg",
-      "source": "RadiantWaves Editorial Desk"
-    }
-  ],
-  "asiaNews": [
-    {
-      "headline": "New Zealand Election Leaves Coalition Options Open",
-      "summary": "Labour and National are closely matched in party votes. Special votes and negotiations will determine the final parliamentary picture.",
-      "source": "New Zealand Electoral Commission"
-    },
-    {
-      "headline": "China Watches Changes in Washington and Global Security",
-      "summary": "The changing balance in the US Congress, trade relations and continuing international security tensions remain important considerations for Beijing.",
-      "image": "assets/leaders/xi.jpg",
-      "source": "International reporting"
-    }
-  ],
-  "businessNews": [
-    {
-      "headline": "Canada's Budget Targets Investment and Affordability",
-      "summary": "The federal budget sets a six-year capital investment ambition of 400 billion Canadian dollars and outlines affordability measures alongside efforts to restrain spending growth.",
+      "id": "top-009",
+      "category": "Canada",
+      "headline": "Carney welcomes US Democrats' push to repeal tariffs on Canada",
+      "summary": "Canadian Prime Minister Mark Carney has welcomed calls by incoming Democratic lawmakers to reverse US tariffs on Canadian goods. However, any change will face political and legislative obstacles, and Ottawa says it will continue seeking an agreement that protects Canadian interests.",
       "image": "assets/leaders/carney.jpg",
-      "source": "Government of Canada"
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/f04af2dd9b3d473d167986e073b0d8c2"
     },
     {
-      "headline": "Hormuz Tensions Keep Energy and Shipping Risks in Focus",
-      "summary": "Any disruption to the Strait of Hormuz could affect energy prices, shipping costs, insurance and international supply chains.",
-      "image": "assets/middleeast.jpeg",
-      "source": "Reuters"
+      "id": "top-010",
+      "category": "European Union | Technology",
+      "headline": "EU says TikTok's recommendation feed may breach digital rules",
+      "summary": "The European Commission has issued preliminary findings that TikTok's For You recommendation system may breach the Digital Services Act because of risks associated with harmful recommendation loops. TikTok can respond to the findings; they are not yet a final enforcement decision.",
+      "image": "assets/market.jpeg",
+      "source": "European Commission",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
     },
     {
-      "headline": "Nigeria's Debt and Cost-of-Living Debate Remain Under Scrutiny",
-      "summary": "The country's economic outlook continues to be shaped by debt servicing, inflation, household purchasing power, public revenue and the need for productive investment.",
+      "id": "top-011",
+      "category": "France",
+      "headline": "France faces renewed pressure over purchasing power and public services",
+      "summary": "Major demonstrations on 5 November brought together unions, students, farmers and other groups demanding better pay and protection of public services. Reported participation figures differed significantly between unions and the Interior Ministry. The demonstrations reflect continuing social and economic pressure.",
+      "image": "assets/france-protests.jpg",
+      "source": "Le Monde",
+      "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/11/06/france-takes-to-the-streets-again-in-massive-protests-over-purchasing-power_6773461_5.html"
+    },
+    {
+      "id": "top-012",
+      "category": "Nigeria | Economy",
+      "headline": "Power supply dispute continues as government promises improvement",
+      "summary": "Nigeria's electricity supply difficulties have prompted further explanations and disagreements between government and energy-sector institutions. The government has promised improvement, while the NNPC has disputed aspects of the explanation concerning the gas network. Consumers are still waiting for sustained improvement.",
       "image": "assets/africa.jpeg",
-      "source": "RadiantWaves Business Desk"
+      "source": "THISDAY",
+      "sourceUrl": "https://www.thisdaylive.com/2026/11/08/nnpc-counters-power-minister-says-gas-network-not-responsible-for-drop-in-electricity/"
     }
   ],
-  "technologyNews": [
-    {
-      "headline": "EU Questions TikTok's Recommendation System",
-      "summary": "Preliminary findings raise questions about platform design, user protection and algorithmic accountability. TikTok disputes the Commission's position.",
-      "image": "assets/technology.jpeg",
-      "source": "European Commission"
-    },
-    {
-      "headline": "Artificial Intelligence Raises New Questions About Accountability",
-      "summary": "As AI systems become more influential in information, business and public services, governments and technology companies face increasing pressure to improve transparency, privacy safeguards and accountability.",
-      "image": "assets/technology.jpeg",
-      "source": "RadiantWaves Technology Desk"
-    }
-  ],
+
   "articles": [
     {
-      "id": "adc-inec-2026-11-08",
-      "headline": "ADC Leadership Crisis: INEC Waits for Certified Judgment as Atiku Rejects Political Withdrawal",
-      "summary": "Nigeria's opposition politics has entered a critical legal phase after the Federal High Court in Abuja nullified the process that produced the David Mark-led ADC caretaker leadership. The ruling also affected decisions taken by that leadership, including the process that produced Atiku Abubakar as the party's 2027 presidential candidate.",
-      "content": "The Independent National Electoral Commission has said it will not take a final position until it obtains and studies the certified true copy of the judgment. INEC National Commissioner Mohammed Haruna told Punch that the commission would consider the matter at its next meeting. The case was brought by Nafiu Bala Gombe, a former ADC deputy national chairman, who challenged the process through which the caretaker leadership emerged.\n\nThe court's decision creates uncertainty for the party's leadership, candidate nomination and other decisions taken under the disputed structure. Atiku has rejected calls to abandon his political ambition, while the ADC leadership has indicated that it intends to appeal. It is important to distinguish the court's ruling from a final determination of every possible route available to the party.\n\nAn appeal does not, by itself, automatically suspend the judgment; a stay or other order from a competent court may be required. INEC has said it will comply with any further court order. The next legal steps and the commission's formal position will therefore be decisive.",
-      "image": "assets/leaders/atiku2.jpg",
+      "id": "article-001",
       "category": "Nigeria | Politics",
-      "author": "RadiantWaves News Desk",
-      "source": "Punch Newspapers",
-      "sourceUrl": "https://punchng.com/inec-to-meet-over-atikus-2027-ticket/",
-      "status": "Developing"
+      "title": "ADC's legal battle enters a decisive phase as INEC waits for certified judgment",
+      "excerpt": "The commission says it will not make a decision on Atiku's candidacy until it has studied the court's formal judgment.",
+      "content": "Nigeria's opposition politics has entered a period of uncertainty following the Federal High Court ruling affecting the David Mark-led leadership of the African Democratic Congress. The judgment nullified the caretaker leadership and decisions taken under it, including the process through which Atiku Abubakar emerged as the party's presidential candidate.\n\nINEC's response is significant because it has declined to make a final determination based on media accounts of the judgment. National Commissioner Mohammed Haruna says the commission needs the certified true copy and will discuss the matter at its next meeting.\n\nThe ADC leadership faction has indicated that it will appeal and has asked INEC to suspend action. However, an appeal is not itself a stay of execution. A separate court order may be required to suspend the effect of the judgment while the appeal proceeds.\n\nFor Atiku, the political message is that he intends to continue his campaign. For the party, the immediate challenge is to establish which leadership structure has legal authority to make decisions and submit candidates. For INEC, the task is to comply with court orders and electoral law rather than resolve the party's political dispute itself.\n\nThe coming days will be important. The certified judgment, any application for a stay and the commission's subsequent position will help determine the next stage of the dispute.",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "source": "Nigeria Info FM / Punch",
+      "sourceUrl": "https://www.nigeriainfo.fm/lagos/news/2027-elections/no-decision-on-atikus-candidacy-yet-inec/"
     },
     {
-      "id": "hormuz-shipping-2026-11-08",
-      "headline": "Hormuz Shipping Risks Deepen as Iran-US Confrontation Continues",
-      "summary": "Reports of tanker incidents and military activity near the Strait of Hormuz have renewed fears over international shipping and energy supplies.",
-      "content": "The Strait of Hormuz is a vital route for global oil and gas shipments. Reports on Sunday described incidents involving commercial vessels, alleged mine strikes and military activity in nearby waters. Iran and the United States have offered competing accounts of events, and some claims have not been independently verified. The United Kingdom Maritime Trade Operations organisation has also reported a maritime security incident in the wider region.\n\nQatar has rejected suggestions that diplomatic contacts have collapsed. The situation remains dangerous because even a limited incident can raise insurance costs, disrupt shipping schedules and increase energy-market uncertainty. Governments and shipping operators will be watching for verified information and signs of de-escalation.",
+      "id": "article-002",
+      "category": "Middle East | International Affairs",
+      "title": "Hormuz crisis tests diplomacy as Trump signals conditional openness to a deal",
+      "excerpt": "The United States and Iran continue to exchange warnings as shipping incidents disrupt confidence in one of the world's most important maritime corridors.",
+      "content": "The confrontation between Washington and Tehran remains a major threat to international stability. The Strait of Hormuz is a critical passage for oil, gas and other commodities, making any disruption a concern for energy-importing countries, shipping companies and financial markets.\n\nOn Sunday, President Donald Trump said he was highly unlikely to order renewed major strikes if negotiations produced a strong agreement. His remarks suggest that diplomacy remains possible, but they do not mean a settlement has been reached. The United States has also discussed further measures to restrict the movement of advanced weapons and sanctioned materials to Iran.\n\nIranian media reported explosions in southern parts of the country but suggested these could have been connected to Iranian military activity. There is no independently confirmed basis for presenting the reported explosions as a new US attack. Meanwhile, both sides have reported incidents involving vessels in and around the waterway. Reuters said it could not independently verify all the reported strikes.\n\nQatar continues to play a mediating role. Iran has put forward proposals involving nuclear issues and sanctions, while Washington wants nuclear concerns addressed as part of any agreement. The gap between the two positions remains substantial.\n\nThe immediate risk is that an incident involving a vessel, military unit or energy facility could trigger a wider response before diplomats have secured a framework for de-escalation.",
       "image": "assets/middleeast.jpeg",
-      "category": "Middle East | International Security",
-      "author": "RadiantWaves International Desk",
-      "source": "Reuters and UK Maritime Trade Operations",
-      "status": "Developing"
-    },
-    {
-      "id": "us-midterms-2026-11-08",
-      "headline": "Democrats' Congressional Gains Set Up a New Test for Donald Trump",
-      "summary": "The Democrats' takeover of both chambers of Congress changes the political balance in Washington and creates new challenges for the administration.",
-      "content": "The 2026 midterm elections have delivered a significant shift in the United States Congress, with Democrats securing control of both the House of Representatives and the Senate. The outcome gives the opposition greater influence over legislation, congressional investigations, spending negotiations and oversight of the executive branch. It does not remove Donald Trump's presidential powers, but it makes cooperation with Congress more important.\n\nInternational governments are also assessing the implications for US foreign policy, trade, support for Ukraine and relations with allies. The result may produce political gridlock, but it also strengthens the role of congressional checks and balances.",
-      "image": "assets/leaders/trump.jpg",
-      "category": "United States | Politics",
-      "author": "RadiantWaves Americas Desk",
       "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/international-politicians-react-democrats-winning-us-midterms-2026-11-04/",
-      "status": "Reported election outcome"
+      "sourceUrl": "https://www.reuters.com/world/middle-east/iran-suggests-blasts-are-not-us-attacks-both-sides-report-ships-hit-2026-11-08/"
     },
     {
-      "id": "ukraine-energy-2026-11-08",
-      "headline": "Ukraine's Energy Infrastructure Under Pressure as New Talks Approach",
-      "summary": "Fresh Russian drone and missile attacks have caused casualties and damage to infrastructure as diplomatic discussions are prepared for Abu Dhabi.",
-      "content": "Ukraine continues to face attacks on energy infrastructure and civilian areas. Associated Press reporting describes a major wave of Russian drones and ballistic missiles, with damage and injuries reported. The attacks underline the vulnerability of power generation and distribution systems as colder weather approaches.\n\nDiplomatic activity is expected to focus on possible negotiations in Abu Dhabi during the coming week. Any progress will depend on the positions of Kyiv and Moscow, the role of the United States and the question of security guarantees. European governments have stressed that Ukraine's future cannot be decided without its participation and that of European partners.",
+      "id": "article-003",
+      "category": "Ukraine | Europe",
+      "title": "Ukraine faces another difficult night as Russian strikes hit energy infrastructure",
+      "excerpt": "The latest attacks have disrupted electricity supplies as diplomatic discussions are scheduled to resume in Abu Dhabi.",
+      "content": "Ukraine is facing renewed pressure on its energy system following another wave of Russian attacks. Ukrainian officials say strikes on energy facilities have caused outages across several regions, with more than 600,000 people reportedly affected in the Dnipropetrovsk region.\n\nPresident Volodymyr Zelenskyy has accused Moscow of intensifying attacks to strengthen its position ahead of planned US-brokered talks in Abu Dhabi on 10 and 11 November. Ukraine is seeking further support for its air-defence systems, including Patriot interceptors.\n\nThe talks are expected to bring Ukrainian, Russian and American representatives together. France has also indicated that it will participate, although the exact representation was still being discussed in the latest reporting.\n\nThe diplomatic meeting should not be mistaken for a concluded peace agreement. The main obstacles remain the terms of any settlement, security guarantees, territorial questions and the future of occupied areas.\n\nFor civilians, the immediate concern is the impact of repeated attacks on electricity, heating, hospitals and public transport as colder weather approaches.",
       "image": "assets/leaders/zelensky.jpg",
-      "category": "Ukraine | War and Diplomacy",
-      "author": "RadiantWaves International Desk",
-      "source": "Associated Press and German government statements",
-      "status": "Developing"
+      "source": "RFE/RL",
+      "sourceUrl": "https://www.rferl.org/a/russia-strikes-ukraine-energy/33893219.html"
     },
     {
-      "id": "south-africa-elections-2026-11-08",
-      "headline": "South Africa's ANC Faces a Historic Local Election Setback",
-      "summary": "Provisional results show a weakened ANC and a more fragmented local political landscape, raising the likelihood of coalition negotiations.",
-      "content": "South Africa's local elections have delivered a major political warning for the African National Congress. Provisional figures place the ANC at approximately 30.8 per cent, the Democratic Alliance at around 24.6 per cent, the uMkhonto weSizwe Party at about 9.8 per cent and the Economic Freedom Fighters at approximately 6.2 per cent. These figures should not be treated as final certified results while verification processes remain.\n\nThe outcome reflects voter frustration over municipal services, unemployment, infrastructure and governance. Coalition negotiations are likely to be central to the formation of local administrations. President Cyril Ramaphosa and the ANC leadership face renewed pressure to respond to voters' concerns.",
+      "id": "article-004",
+      "category": "Africa | South Africa",
+      "title": "ANC's worst local-election performance puts coalition politics at the centre of South Africa's future",
+      "excerpt": "The governing party's national vote share has fallen sharply, forcing difficult negotiations over municipal leadership.",
+      "content": "South Africa's African National Congress has suffered a major setback in the 2026 municipal elections. The reported results give the ANC 30.76 per cent of the vote, compared with 24.64 per cent for the Democratic Alliance and approximately 9.76 per cent for uMkhonto weSizwe.\n\nThe result represents a significant decline in the ANC's support. The party's difficulties reflect public frustration over municipal service delivery, including water and electricity problems, infrastructure failures and concerns about governance.\n\nThe result does not mean the ANC has ceased to be a major political force. It remains the largest party nationally, but it will need to negotiate with other political organisations to secure governing arrangements in municipalities where no party has a majority.\n\nPresident Cyril Ramaphosa faces pressure to respond to the electoral message and demonstrate renewed commitment to public interests. The coming coalition negotiations will test whether parties can agree on practical arrangements for local government despite their political differences.\n\nThe election is another indication that South African voters are increasingly willing to distribute their support among multiple parties rather than give one organisation dominant control.",
       "image": "assets/leaders/ramaphosa.jpg",
-      "category": "South Africa | Elections",
-      "author": "RadiantWaves Africa Desk",
-      "source": "Electoral Commission of South Africa and Associated Press",
-      "status": "Provisional results"
+      "source": "Reuters / South African electoral reporting",
+      "sourceUrl": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
     },
     {
-      "id": "new-zealand-election-2026-11-08",
-      "headline": "New Zealand Election Leaves Government Formation Uncertain",
-      "summary": "A close contest between Labour and National has left the final political balance uncertain as special votes await counting.",
-      "content": "New Zealand's general election has produced a closely fought result. Preliminary figures put Labour slightly ahead of National in the party vote, while National has the largest individual parliamentary bloc. The smaller parties will have a significant role in determining the next government. Special votes are estimated at hundreds of thousands and the Electoral Commission has indicated that final results are expected later in November.\n\nIt is therefore too early to declare a definitive coalition outcome. The election demonstrates the difficulty of securing a clear mandate in a fragmented political environment.",
-      "category": "New Zealand | Elections",
-      "author": "RadiantWaves Asia-Pacific Desk",
-      "source": "New Zealand Electoral Commission",
-      "status": "Preliminary results"
-    },
-    {
-      "id": "uk-eu-summit-2026-11-08",
-      "headline": "Andy Burnham and EU Leaders Prepare for Brussels Summit",
-      "summary": "The United Kingdom and European Union are preparing for a second summit on 20 November, with security and economic cooperation expected to feature prominently.",
-      "content": "The upcoming Brussels summit is expected to bring together UK Prime Minister Andy Burnham, European Council President António Costa and European Commission President Ursula von der Leyen. The agenda is expected to include defence and security, energy, agriculture and food standards, climate cooperation, migration and law enforcement. The meeting offers both sides an opportunity to develop a more practical relationship after years of difficult negotiations following Brexit.\n\nAny progress will depend on the willingness of both parties to agree on concrete commitments rather than broad political statements.",
-      "image": "assets/leaders/andy.jpg",
-      "category": "United Kingdom | European Union",
-      "author": "RadiantWaves Europe Desk",
-      "source": "European Council",
-      "status": "Scheduled diplomatic summit"
-    },
-    {
-      "id": "france-opposition-2026-11-08",
-      "headline": "France's Opposition Landscape: Marine Le Pen and Bardella Remain Key Political Figures",
-      "summary": "Recent polling keeps the National Rally leadership prominent in France's political debate, although polling figures should not be confused with election results.",
-      "content": "Marine Le Pen and Jordan Bardella remain central figures in France's opposition politics. Recent ELABE polling has placed both among the leading political personalities in the country's national debate. The figures indicate political positioning and public sentiment at the time of polling; they do not establish the outcome of a future presidential election.\n\nThe wider opposition landscape includes parties on the left, centre and right, with debates over immigration, purchasing power, public services, European policy and national identity continuing to shape political competition. The coming months will test whether opposition parties can turn polling support into a coherent electoral strategy.",
-      "image": "assets/france-protests.jpg",
-      "category": "France | Opposition Politics",
-      "author": "RadiantWaves Europe Desk",
-      "source": "ELABE polling and French political reporting",
-      "status": "Polling and political analysis"
-    },
-    {
-      "id": "tiktok-dsa-2026-11-08",
-      "headline": "EU Raises Preliminary Questions Over TikTok's Recommendation Design",
-      "summary": "The European Commission says TikTok's recommendation system may create risks for users and could breach obligations under the Digital Services Act.",
-      "content": "The European Commission has issued preliminary findings concerning TikTok's For You recommendation system. The concerns relate to the potential for harmful content pathways, compulsive use and the way the platform's design affects users. The findings are not a final ruling, and TikTok has disputed the Commission's position. The case highlights the growing regulatory focus on how large digital platforms design their services, assess risks and protect users.\n\nThe eventual outcome could have implications for platform accountability across the European Union.",
-      "image": "assets/technology.jpeg",
-      "category": "Technology | Digital Regulation",
-      "author": "RadiantWaves Technology Desk",
-      "source": "European Commission, 6 November 2026",
-      "status": "Preliminary regulatory findings"
-    },
-    {
-      "id": "senegal-migrant-disaster-2026-11-08",
-      "headline": "Senegal Mourns Victims of Deadly Migrant Boat Disaster",
-      "summary": "At least 21 people have died after a migrant boat sank off Senegal, renewing attention on dangerous migration routes and humanitarian protection.",
-      "content": "A migrant boat disaster off Senegal's coast has left at least 21 people dead, according to reports citing local authorities. One person was reported rescued, while search efforts continued. The number of people who were aboard the vessel was not immediately established. The tragedy highlights the dangers faced by people attempting irregular sea crossings in search of safety, employment or better living conditions.\n\nIt also raises difficult questions about regional migration policy, trafficking networks, rescue operations and the need for safer legal routes.",
+      "id": "article-005",
+      "category": "Africa | Egypt",
+      "title": "Seven dead and more than 125 injured in Egypt passenger-train collision",
+      "excerpt": "A collision south of Cairo has prompted an investigation into railway operations and safety.",
+      "content": "A serious train collision in Egypt's Giza province has left at least seven people dead and more than 125 injured, according to the Associated Press. The accident occurred in the al-Ayyat district, south of Cairo, when a passenger train travelling from Giza to Fayoum struck the rear of a stationary train travelling from Cairo towards Aswan.\n\nEmergency workers were deployed to rescue passengers, treat the injured and clear damaged carriages. The collision has again raised questions about railway safety and the systems used to manage train movements.\n\nPresident Abdel-Fattah el-Sissi ordered an investigation and called for accountability where negligence is established. Prosecutors are examining the circumstances of the crash.\n\nThe casualty figures developed throughout Sunday. The seven-death and 125-injury figures are those reported by AP in its later update.",
       "image": "assets/africa.jpeg",
-      "category": "Senegal | Humanitarian Crisis",
-      "author": "RadiantWaves Africa Desk",
       "source": "Associated Press",
-      "status": "Developing"
+      "sourceUrl": "https://apnews.com/article/4ad591268ce015d85ae302e22185b235"
     },
     {
-      "id": "sudan-ethiopia-tensions-2026-11-08",
-      "headline": "Sudan-Ethiopia Relations Deteriorate Amid Mutual Allegations",
-      "summary": "The two countries have moved towards diplomatic confrontation amid allegations of interference in regional conflicts, raising concern across the Horn of Africa.",
-      "content": "Sudan and Ethiopia are facing a serious diplomatic deterioration following allegations that each has supported or enabled armed actors involved in the other's security crisis. Sudan has accused Ethiopia of allowing support for the Rapid Support Forces, while Ethiopia has denied allegations made against it and raised its own concerns about regional interference. Other neighbouring states have also been mentioned in competing claims, many of which remain disputed.\n\nThe situation risks widening instability in an already fragile region. Diplomatic engagement and independent verification are essential to prevent accusations from escalating into direct confrontation.",
+      "id": "article-006",
+      "category": "Europe | Poland",
+      "title": "Poland begins terrorism investigation after deadly Kraków shooting",
+      "excerpt": "Six people were killed in the city centre, while investigators are examining a separate discovery at the suspect's family home.",
+      "content": "Poland is mourning six people killed in a shooting in Kraków's historic centre. Prosecutors have opened an investigation under the country's terrorism framework after a 24-year-old suspect allegedly opened fire in the busy Main Market Square.\n\nMore than a dozen people were reported injured. The suspect was wounded during the police response and taken into custody. Authorities later found three people dead at a family property, identified as the suspect's parents and sister. Prosecutors say the events are being investigated together.\n\nOfficials have referred to the suspect's reported far-right interests, but investigators still need to establish the full motive and sequence of events. The terrorism classification describes the legal direction of the investigation; it should not be treated as proof that every aspect of the motive has already been established.\n\nThe attack has intensified concerns about public safety, political extremism and the spread of disinformation following violent incidents.",
+      "image": "assets/europe.jpeg",
+      "source": "Polskie Radio",
+      "sourceUrl": "https://www.polskieradio.pl/395/7784/artykul/3750661%2Can-investigation-launched-into-saturdays-mass-shooting-in-krakow"
+    },
+    {
+      "id": "article-007",
+      "category": "Africa | Migration",
+      "title": "Senegal boat disaster highlights the continuing human cost of dangerous migration routes",
+      "excerpt": "At least 21 people have died after a migrant vessel capsized off Senegal, with search operations continuing.",
+      "content": "At least 21 people have died after a boat carrying migrants capsized off Senegal's coast, according to the country's Interior Ministry. The incident occurred near Kébémer, north of Dakar.\n\nAuthorities reported that one person had been rescued and 21 bodies recovered. Search operations continued as officials looked for anyone else who may have survived. The total number of people who were on board had not been confirmed in the initial government statement.\n\nThe tragedy is part of a wider pattern of dangerous sea journeys undertaken by people seeking to reach Europe, particularly the Canary Islands route from West Africa. Migrants often face overcrowded vessels, poor equipment and long periods at sea without adequate supplies.\n\nThe continuing loss of life raises questions about the conditions that drive people to leave, the role of trafficking networks and the need for effective search-and-rescue arrangements.",
       "image": "assets/africa.jpeg",
-      "category": "Horn of Africa | Diplomacy",
-      "author": "RadiantWaves Africa Desk",
-      "source": "Reuters",
-      "status": "Diplomatic tensions"
+      "source": "Senegal Interior Ministry / Reuters",
+      "sourceUrl": "https://www.interieur.gouv.sn/actualites/communiques/drame-migratoire-sur-le-littoral-de-kebemer"
     },
     {
-      "id": "canada-budget-2026-11-08",
-      "headline": "Canada's 2026 Budget: Investment Ambition Meets Pressure for Affordability",
-      "summary": "The federal budget sets out a major capital investment ambition and new affordability measures while seeking to restrain spending growth.",
-      "content": "Canada's federal budget, released on 5 November, sets an ambition to mobilise approximately 400 billion Canadian dollars in capital investment over six years and includes around 22 billion dollars in new affordability measures. The government has also outlined efforts to reduce deficits and restrain the growth of direct programme spending.\n\nThe policy challenge will be translating investment plans into jobs, infrastructure and productivity gains while responding to household concerns about housing, prices and living costs. The budget's success will depend on implementation and the economic conditions facing the country.",
+      "id": "article-008",
+      "category": "Technology | European Union",
+      "title": "EU challenges TikTok's recommendation system over potential harm to users",
+      "excerpt": "The European Commission says TikTok's personalised feed may expose users to harmful recommendation loops.",
+      "content": "The European Commission has issued preliminary findings that TikTok's For You recommendation system may breach the Digital Services Act. The concern centres on the way the platform can repeatedly recommend similar content after a user interacts with a particular subject.\n\nThe Commission says this design may create harmful recommendation loops, including repeated exposure to material related to sadness, isolation and body image. It is examining whether the platform has adequately assessed and reduced risks to users, particularly vulnerable people and minors.\n\nThe findings are preliminary. TikTok has an opportunity to respond, and the Commission has not yet issued a final decision establishing a violation. The case forms part of the European Union's wider effort to hold major digital platforms accountable for risks created by their systems.\n\nThe debate is broader than one social-media company. It concerns how recommendation algorithms influence attention, behaviour, access to information and mental wellbeing.",
+      "image": "assets/market.jpeg",
+      "source": "European Commission",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
+    },
+    {
+      "id": "article-009",
+      "category": "Canada | United States",
+      "title": "Carney welcomes US tariff-repeal push but Canada still faces difficult trade negotiations",
+      "excerpt": "The Canadian prime minister says reducing trade barriers would help workers and consumers, but political obstacles remain.",
+      "content": "Canadian Prime Minister Mark Carney has welcomed efforts by incoming Democratic lawmakers in the United States to repeal tariffs imposed on Canadian goods. The proposal could ease pressure on businesses and households on both sides of the border.\n\nHowever, the prospect of legislative change remains uncertain. President Donald Trump retains significant authority over trade policy, and any attempt to reverse tariffs could face resistance in Congress and the White House.\n\nCanada has been negotiating with Washington while trying to protect its economic interests and sovereignty. Carney's government must balance the benefits of a deal against concerns that concessions could create longer-term disadvantages for Canadian industries.\n\nThe midterm election result has changed the political environment in Washington, but it has not automatically resolved the trade dispute.",
       "image": "assets/leaders/carney.jpg",
-      "category": "Canada | Economy",
-      "author": "RadiantWaves Americas Desk",
-      "source": "Government of Canada, Budget 2026",
-      "status": "Budget released"
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/f04af2dd9b3d473d167986e073b0d8c2"
     },
     {
-      "id": "paraguay-transition-2026-11-08",
-      "headline": "Pedro Alliana Assumes Paraguay Presidency Following Political Upheaval",
-      "summary": "Pedro Alliana was sworn in on 6 November after Santiago Peña left office, marking a significant political transition in Paraguay.",
-      "content": "Pedro Alliana has assumed the presidency of Paraguay following the removal of Santiago Peña. The transition has attracted attention because of the political controversy and allegations surrounding the events leading to the change in leadership. Alliana is expected to serve the remainder of the presidential term, with the new administration facing questions about political stability, institutional accountability and economic confidence.\n\nAllegations surrounding individuals or financial institutions should be treated as allegations unless established by competent authorities.",
-      "category": "Paraguay | Politics",
-      "author": "RadiantWaves Americas Desk",
-      "source": "Paraguayan Senate and Chamber of Deputies",
-      "status": "Confirmed transition"
+      "id": "article-010",
+      "category": "Nigeria | Economy",
+      "title": "Electricity shortages expose continuing weaknesses across Nigeria's power system",
+      "excerpt": "Government promises of improvement come amid disagreement between energy-sector institutions over the causes of recent outages.",
+      "content": "Households and businesses in parts of Nigeria continue to face electricity disruption. The government has promised improvement as generating units are returned to service and repairs are undertaken.\n\nThe government has pointed to a combination of maintenance work, gas supply constraints and infrastructure limitations. The NNPC has disputed aspects of the explanation concerning gas transportation, while other power-sector institutions have challenged claims about the causes of interruptions.\n\nThe disagreement illustrates the complexity of Nigeria's electricity system. Power generation, gas supply, transmission capacity and distribution networks are interconnected. A shortfall at one stage can affect customers even when other parts of the system are operating.\n\nConsumers will judge the response by whether supply becomes more reliable and whether the responsible institutions provide a clear account of the causes and remedies. Short-term assurances need to be followed by measurable improvements.",
+      "image": "assets/africa.jpeg",
+      "source": "THISDAY",
+      "sourceUrl": "https://www.thisdaylive.com/2026/11/08/nnpc-counters-power-minister-says-gas-network-not-responsible-for-drop-in-electricity/"
     },
     {
-      "id": "poland-krakow-2026-11-08",
-      "headline": "Polish Authorities Investigate Kraków Mass Shooting",
-      "summary": "Six people were killed and at least 16 injured in a mass shooting in Kraków. Investigators are examining possible extremist motives.",
-      "content": "Polish authorities are investigating a deadly shooting in Kraków that left six people dead and at least 16 injured. Investigators are examining the suspect's background and possible ideological motivations. Reports also describe deaths among members of the suspect's family at a separate location. Those deaths should not be confused with the six victims of the shooting itself.\n\nThe investigation remains ongoing, and further official information is expected.",
-      "category": "Poland | Security",
-      "author": "RadiantWaves Europe Desk",
-      "source": "Polish Radio and international reporting",
-      "status": "Investigation ongoing"
+      "id": "article-011",
+      "category": "United States | Politics",
+      "title": "Democratic midterm victory changes the balance of power in Washington",
+      "excerpt": "Democrats have won control of Congress, setting up a new political environment for the remainder of Trump's presidency.",
+      "content": "The 2026 United States midterm elections have produced a major shift in Washington. The Associated Press has called Democratic control of both the Senate and House of Representatives.\n\nThe result means President Donald Trump will face a Congress in which the opposition party controls both chambers when the new legislature takes office in January. This is likely to intensify oversight, increase political scrutiny and complicate the passage of the administration's legislative priorities.\n\nThe change does not automatically remove the president's constitutional authority over foreign policy, military decisions or executive administration. However, congressional control can influence budgets, legislation, investigations and the political environment surrounding international negotiations.\n\nThe immediate challenge for both parties will be balancing domestic economic concerns with international issues, including the Iran conflict, Ukraine, immigration and trade.",
+      "image": "assets/leaders/trump.jpg",
+      "source": "Associated Press",
+      "sourceUrl": "https://www.ap.org/the-definitive-source/behind-the-news/calling-control-of-congress-in-the-2026-midterm-elections/"
+    },
+    {
+      "id": "article-012",
+      "category": "France | Society",
+      "title": "France's cost-of-living protests expose continuing pressure on households",
+      "excerpt": "Unions, students, farmers and other groups have mobilised over purchasing power, wages and public services.",
+      "content": "France has experienced another major wave of demonstrations linked to the cost of living and the future of public services. The demonstrations held on 5 November brought together unions, students, farmers and other groups.\n\nParticipants raised concerns about purchasing power, wages, working conditions, education and the protection of public services. The movement reflects a wider debate about household finances and the government's ability to respond to economic pressures.\n\nThe reported participation figures varied substantially. Major trade unions estimated a higher turnout than the Interior Ministry, illustrating the importance of distinguishing organisers' estimates from official figures.\n\nThe demonstrations place further pressure on the government to address the concerns of workers and families while managing public finances and wider economic challenges.",
+      "image": "assets/france-protests.jpg",
+      "source": "Le Monde",
+      "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/11/06/france-takes-to-the-streets-again-in-massive-protests-over-purchasing-power_6773461_5.html"
+    },
+    {
+      "id": "article-013",
+      "category": "United Kingdom | Politics",
+      "title": "Andy Burnham leads UK government as Britain considers its European relationships",
+      "excerpt": "The new prime minister faces questions over domestic priorities and cooperation with European partners.",
+      "content": "Andy Burnham became Prime Minister of the United Kingdom on 20 July 2026. His government is operating in a period of significant international uncertainty, with security, trade, migration and economic cooperation among the principal issues facing Britain.\n\nRelations with European partners remain important as the UK considers closer cooperation in areas such as defence, trade and youth mobility. The government must also address domestic concerns involving living costs, public services and employment.\n\nBritain's approach to Europe will be closely watched because decisions on security and economic cooperation can have consequences beyond the country's borders.",
+      "image": "assets/leaders/andy.jpg",
+      "source": "UK Government",
+      "sourceUrl": "https://www.gov.uk/government/ministers/prime-minister"
     }
   ],
+
   "leadersWatch": {
+    "title": "Leaders Watch",
+    "description": "Political and institutional leaders shaping today's major international developments.",
     "leaders": [
       {
-        "name": "Bola Ahmed Tinubu",
-        "title": "President of Nigeria",
-        "headline": "Nigeria's 2027 political contest intensifies",
-        "summary": "Tinubu's administration faces scrutiny over the economy, cost of living, security and the emerging opposition challenge.",
-        "image": "assets/leaders/tinubu.jpg",
-        "country": "Nigeria"
+        "name": "Atiku Abubakar",
+        "position": "Former Vice-President of Nigeria",
+        "country": "Nigeria",
+        "image": "assets/leaders/atiku2.jpg",
+        "update": "Maintains that he remains in the 2027 presidential race as INEC awaits the certified court judgment affecting the ADC leadership and nomination process.",
+        "sourceUrl": "https://www.nigeriainfo.fm/lagos/news/2027-elections/no-decision-on-atikus-candidacy-yet-inec/"
       },
       {
-        "name": "Atiku Abubakar",
-        "title": "Former Vice-President of Nigeria and opposition figure",
-        "headline": "ADC legal battle places presidential ambition under pressure",
-        "summary": "Atiku has rejected the prospect of withdrawing from the political contest after the Federal High Court judgment affecting the ADC leadership and nomination process. The appeal and INEC's response remain important.",
-        "image": "assets/leaders/atiku2.jpg",
-        "country": "Nigeria"
+        "name": "Bola Ahmed Tinubu",
+        "position": "President of Nigeria",
+        "country": "Nigeria",
+        "image": "assets/leaders/tinubu.jpg",
+        "update": "His administration faces continuing scrutiny over economic conditions, electricity supply and the political consequences of the ADC legal dispute.",
+        "sourceUrl": "https://www.thisdaylive.com/2026/11/08/nnpc-counters-power-minister-says-gas-network-not-responsible-for-drop-in-electricity/"
       },
       {
         "name": "Donald Trump",
-        "title": "President of the United States",
-        "headline": "Democratic control of Congress changes Washington's political balance",
-        "summary": "The midterm result creates new congressional oversight and legislative challenges for the administration.",
+        "position": "President of the United States",
+        "country": "United States",
         "image": "assets/leaders/trump.jpg",
-        "country": "United States"
-      },
-      {
-        "name": "Andy Burnham",
-        "title": "Prime Minister of the United Kingdom",
-        "headline": "Preparing for the next UK-EU summit",
-        "summary": "The 20 November Brussels meeting is expected to address defence, energy, migration and wider cooperation.",
-        "image": "assets/leaders/andy.jpg",
-        "country": "United Kingdom"
-      },
-      {
-        "name": "Emmanuel Macron",
-        "title": "President of France",
-        "headline": "France's European and domestic political agenda",
-        "summary": "Macron faces continuing domestic political debate while France remains central to European security and diplomatic discussions.",
-        "image": "assets/leaders/macron.jpg",
-        "country": "France"
-      },
-      {
-        "name": "Marine Le Pen",
-        "title": "French opposition leader",
-        "headline": "National Rally remains a major force in opposition politics",
-        "summary": "Recent polling keeps Le Pen prominent in the national political debate. Polling is not an election result.",
-        "image": "assets/france-protests.jpg",
-        "country": "France"
-      },
-      {
-        "name": "Mark Carney",
-        "title": "Prime Minister of Canada",
-        "headline": "Budget priorities focus on investment and affordability",
-        "summary": "The government's newly released budget sets out major investment ambitions and household affordability measures.",
-        "image": "assets/leaders/carney.jpg",
-        "country": "Canada"
+        "update": "Says a strong agreement with Iran could avert renewed major strikes, while Washington continues pressure measures. The Democratic midterm victory will also reshape the political balance in Congress.",
+        "sourceUrl": "https://www.reuters.com/world/middle-east/iran-suggests-blasts-are-not-us-attacks-both-sides-report-ships-hit-2026-11-08/"
       },
       {
         "name": "Cyril Ramaphosa",
-        "title": "President of South Africa",
-        "headline": "ANC faces pressure after difficult local election results",
-        "summary": "Provisional results point to a major setback for the governing party and a more fragmented local political landscape.",
+        "position": "President of South Africa",
+        "country": "South Africa",
         "image": "assets/leaders/ramaphosa.jpg",
-        "country": "South Africa"
-      },
-      {
-        "name": "Vladimir Putin",
-        "title": "President of Russia",
-        "headline": "Ukraine war continues as diplomatic discussions approach",
-        "summary": "Russian attacks on Ukrainian infrastructure continue while diplomatic preparations move towards talks in Abu Dhabi.",
-        "image": "assets/leaders/putin.jpg",
-        "country": "Russia"
-      },
-      {
-        "name": "Xi Jinping",
-        "title": "President of China",
-        "headline": "China watches changing US political and global security dynamics",
-        "summary": "The changing balance in Washington and continued international trade and security tensions remain important for Beijing.",
-        "image": "assets/leaders/xi.jpg",
-        "country": "China"
-      },
-      {
-        "name": "Friedrich Merz",
-        "title": "Chancellor of Germany",
-        "headline": "Germany calls for European involvement in Ukraine diplomacy",
-        "summary": "Berlin has emphasised the need for serious negotiations and continued European participation in decisions affecting Ukraine.",
-        "image": "assets/leaders/merz.jpg",
-        "country": "Germany"
+        "update": "Faces the political consequences of the ANC's historic local-election setback as coalition negotiations begin across municipalities.",
+        "sourceUrl": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
       },
       {
         "name": "Volodymyr Zelenskyy",
-        "title": "President of Ukraine",
-        "headline": "Ukraine seeks security guarantees as attacks continue",
-        "summary": "Kyiv faces renewed attacks on infrastructure while preparing for possible diplomatic discussions.",
+        "position": "President of Ukraine",
+        "country": "Ukraine",
         "image": "assets/leaders/zelensky.jpg",
-        "country": "Ukraine"
+        "update": "Calls for stronger air-defence support as Russian attacks disrupt electricity supplies ahead of planned talks in Abu Dhabi.",
+        "sourceUrl": "https://www.rferl.org/a/russia-strikes-ukraine-energy/33893219.html"
+      },
+      {
+        "name": "Vladimir Putin",
+        "position": "President of Russia",
+        "country": "Russia",
+        "image": "assets/leaders/putin.jpg",
+        "update": "His government faces renewed international scrutiny over attacks on Ukraine's energy infrastructure ahead of diplomatic discussions.",
+        "sourceUrl": "https://www.theguardian.com/world/2026/nov/08/ukraine-war-briefing-russia-ramping-up-attacks-to-pressure-kyiv-at-trilateral-talks-zelenskyy-says"
+      },
+      {
+        "name": "Andy Burnham",
+        "position": "Prime Minister of the United Kingdom",
+        "country": "United Kingdom",
+        "image": "assets/leaders/andy.jpg",
+        "update": "Leads the UK government as Britain considers closer cooperation with European partners on security, trade and youth mobility.",
+        "sourceUrl": "https://www.gov.uk/government/ministers/prime-minister"
+      },
+      {
+        "name": "Emmanuel Macron",
+        "position": "President of France",
+        "country": "France",
+        "image": "assets/leaders/macron.jpg",
+        "update": "France continues to face public demonstrations over purchasing power, public services and education, adding pressure to the political climate.",
+        "sourceUrl": "https://www.lemonde.fr/en/politics/article/2026/11/06/france-takes-to-the-streets-again-in-massive-protests-over-purchasing-power_6773461_5.html"
+      },
+      {
+        "name": "Mark Carney",
+        "position": "Prime Minister of Canada",
+        "country": "Canada",
+        "image": "assets/leaders/carney.jpg",
+        "update": "Welcomes the US debate over reversing tariffs on Canadian goods while continuing to seek a trade arrangement that protects Canadian interests.",
+        "sourceUrl": "https://apnews.com/article/f04af2dd9b3d473d167986e073b0d8c2"
       },
       {
         "name": "Ursula von der Leyen",
-        "title": "President of the European Commission",
-        "headline": "EU digital regulation and UK relations remain in focus",
-        "summary": "The Commission is pursuing digital platform regulation and preparing for the next UK-EU summit.",
+        "position": "President of the European Commission",
+        "country": "European Union",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "country": "European Union"
+        "update": "The European Commission has issued preliminary findings concerning TikTok's recommendation system under the Digital Services Act.",
+        "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
       },
       {
-        "name": "Anthony Albanese",
-        "title": "Prime Minister of Australia",
-        "headline": "Australia monitors regional security and economic developments",
-        "summary": "Regional security, trade and the wider Indo-Pacific environment remain key priorities for the Australian government.",
-        "country": "Australia"
-      },
-      {
-        "name": "Pedro Alliana",
-        "title": "President of Paraguay",
-        "headline": "New administration begins after political transition",
-        "summary": "Alliana has assumed office following the removal of Santiago Peña and faces questions about political stability and institutional accountability.",
-        "country": "Paraguay"
+        "name": "Friedrich Merz",
+        "position": "Chancellor of Germany",
+        "country": "Germany",
+        "image": "assets/leaders/merz.jpg",
+        "update": "Germany remains central to European discussions on Ukraine, regional security and the continent's response to wider geopolitical instability.",
+        "sourceUrl": "https://www.theguardian.com/world/2026/nov/08/ukraine-war-briefing-russia-ramping-up-attacks-to-pressure-kyiv-at-trilateral-talks-zelenskyy-says"
       }
     ]
   },
+
   "electionWatch": [
     {
       "country": "Nigeria",
-      "headline": "2027 Presidential Election: ADC Ticket Faces Legal Uncertainty",
-      "summary": "The court judgment has affected the ADC leadership and the process that produced Atiku Abubakar as its candidate. INEC is awaiting the certified judgment before deciding its next steps. The appeal process and any stay order will be important.",
-      "status": "Legal proceedings ongoing",
-      "image": "assets/leaders/atiku2.jpg"
+      "election": "2027 Presidential Election",
+      "status": "Party nomination and legal dispute",
+      "update": "INEC is awaiting the certified judgment affecting the David Mark-led ADC leadership and the process that produced Atiku Abubakar as its presidential candidate. No final INEC decision on Atiku's candidacy has been announced.",
+      "image": "assets/leaders/atiku2.jpg",
+      "sourceUrl": "https://www.nigeriainfo.fm/lagos/news/2027-elections/no-decision-on-atikus-candidacy-yet-inec/"
     },
     {
       "country": "South Africa",
-      "headline": "Local Elections: ANC Suffers Major Provisional Setback",
-      "summary": "Provisional results indicate a sharply reduced ANC vote share. Final certification and coalition negotiations remain outstanding.",
-      "status": "Provisional results",
-      "image": "assets/leaders/ramaphosa.jpg"
-    },
-    {
-      "country": "New Zealand",
-      "headline": "General Election: Close Result Leaves Coalition Options Open",
-      "summary": "Labour and National are closely matched in party votes. Special votes and negotiations will determine the final parliamentary picture.",
-      "status": "Awaiting final results"
+      "election": "2026 Municipal Elections",
+      "status": "Results reported; coalition negotiations ahead",
+      "update": "The ANC received approximately 30.76 per cent, the DA 24.64 per cent and the MK Party approximately 9.76 per cent. Coalition agreements will be important in municipalities where no party has secured a majority.",
+      "image": "assets/leaders/ramaphosa.jpg",
+      "sourceUrl": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
     },
     {
       "country": "United States",
-      "headline": "2026 Midterms: Democrats Win Control of Both Chambers",
-      "summary": "The result changes the balance of power in Congress and increases the opposition's capacity for legislative oversight.",
-      "status": "Election outcome reported",
-      "image": "assets/leaders/trump.jpg"
+      "election": "2026 Midterm Elections",
+      "status": "Democratic victory; congressional transition ahead",
+      "update": "Democrats have won control of the House and Senate. The change will affect legislative negotiations, oversight and the balance of power when the new Congress takes office in January.",
+      "image": "assets/leaders/trump.jpg",
+      "sourceUrl": "https://www.ap.org/the-definitive-source/behind-the-news/calling-control-of-congress-in-the-2026-midterm-elections/"
     },
     {
-      "country": "France",
-      "headline": "French Political Positioning Ahead of the Next Presidential Contest",
-      "summary": "Marine Le Pen, Jordan Bardella and other political figures remain prominent in polling and party strategy. No future election outcome can be inferred from polling alone.",
-      "status": "Political positioning",
-      "image": "assets/france-protests.jpg"
+      "country": "New Zealand",
+      "election": "2026 General Election",
+      "status": "Government formation remains uncertain",
+      "update": "Preliminary results and special votes remain important to the final political balance. Neither major political camp should be described as having conclusively secured government without confirmation of the final count.",
+      "image": "assets/market.jpeg",
+      "sourceUrl": "https://apnews.com/article/d8a146430f366bc4da786dfeca7bf6d0"
     }
   ],
+
   "technologyInnovation": [
     {
-      "headline": "EU Scrutiny of TikTok Raises Questions About Algorithmic Responsibility",
-      "summary": "The European Commission's preliminary findings focus on the potential risks of recommendation systems and the responsibilities of major digital platforms under the Digital Services Act.",
-      "image": "assets/technology.jpeg",
+      "title": "EU challenges TikTok's For You recommendation system",
+      "summary": "The European Commission's preliminary findings say TikTok may not have adequately addressed risks created by recommendation loops. The case raises questions about platform design, mental wellbeing and the protection of vulnerable users. The findings are preliminary, not a final ruling.",
+      "image": "assets/market.jpeg",
       "source": "European Commission",
-      "status": "Preliminary findings"
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
     },
     {
-      "headline": "Artificial Intelligence and the Growing Need for Digital Accountability",
-      "summary": "As AI systems become more influential in information, business and public services, governments and technology companies face increasing pressure to improve transparency, privacy safeguards and accountability.",
-      "image": "assets/technology.jpeg",
-      "source": "RadiantWaves Technology Desk",
-      "status": "Analysis"
+      "title": "AI data centres face growing questions over energy demand",
+      "summary": "The expansion of artificial intelligence infrastructure is increasing scrutiny of electricity consumption, cooling requirements and the potential to recover waste heat. Governments and technology companies face the challenge of balancing innovation with energy efficiency.",
+      "image": "assets/market.jpeg",
+      "source": "Al Jazeera",
+      "sourceUrl": "https://www.aljazeera.com/us-canada/"
+    },
+    {
+      "title": "Digital regulation becomes a central issue in global technology policy",
+      "summary": "The European Union's action against TikTok illustrates the growing role of regulation in debates about algorithmic accountability, online safety and the responsibilities of major technology platforms.",
+      "image": "assets/market.jpeg",
+      "source": "European Commission",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
     }
   ],
-  "editorial": [
-    {
-      "headline": "Political Accountability Must Not Be Selective",
-      "summary": "Court judgments, election outcomes and public institutions must be respected regardless of which political party benefits. In Nigeria and elsewhere, citizens deserve transparent processes, consistent standards and leaders who accept scrutiny.",
-      "content": "Democratic accountability is tested most seriously when decisions are inconvenient to powerful political actors. The ADC dispute in Nigeria should be assessed through the actual court orders, the legal process and the response of the relevant institutions. The same standard should apply to every party and every government. Political loyalty must never replace evidence, and criticism must never be mistaken for hostility to a country. Public confidence grows when institutions explain their decisions and apply the law consistently.",
-      "author": "RadiantWaves Editorial Desk",
-      "category": "Editorial | Governance"
-    }
-  ],
-  "analysis": [
-    {
-      "headline": "What the New US Congressional Balance Could Mean for International Relations",
-      "summary": "Democratic control of both chambers could increase congressional oversight of the Trump administration and make legislative negotiations more difficult. The implications for trade, security partnerships and support for Ukraine will depend on the priorities of the new Congress.",
-      "content": "The midterm result does not remove presidential authority, but it changes the political environment in which the administration must operate. Congressional committees can investigate government decisions, influence spending and scrutinise foreign policy. Allies and competitors will be watching whether the new balance produces stronger oversight, legislative gridlock or a combination of both.",
-      "author": "RadiantWaves Analysis Desk",
-      "category": "Analysis | United States"
-    },
-    {
-      "headline": "The ADC Court Dispute and the Wider Challenge Facing Nigeria's Opposition",
-      "summary": "The legal dispute is not simply a contest between political personalities. It raises questions about party governance, internal democracy, candidate selection and the ability of opposition groups to build stable electoral organisations.",
-      "content": "The next steps will depend on the certified judgment, the appeal process and any further orders made by the courts. INEC's response will also matter. Opposition parties seeking to challenge an incumbent government need credible internal structures and transparent decision-making. Legal uncertainty can weaken public confidence if party leaders fail to explain their actions clearly.",
-      "author": "RadiantWaves Nigeria Desk",
-      "category": "Analysis | Nigeria"
-    }
-  ],
-  "factCheck": [
-    {
-      "headline": "Fact Check: Does Filing an Appeal Automatically Suspend a Court Judgment?",
-      "summary": "No. Filing an appeal does not automatically suspend the operation of a judgment. A separate stay of execution or other appropriate court order may be required.",
-      "content": "The distinction matters in the ADC leadership dispute. The fact that a party intends to appeal does not, by itself, mean the original judgment has been suspended. The legal position must be assessed by examining the actual court orders and any subsequent ruling granting a stay. Readers should avoid treating an announced intention to appeal as proof that a judgment has ceased to operate.",
-      "category": "Fact Check | Nigeria",
-      "author": "RadiantWaves Fact-Check Desk",
-      "status": "Legal principle"
-    },
-    {
-      "headline": "Fact Check: Are France's Opinion Polls the Same as Election Results?",
-      "summary": "No. Opinion polls measure reported preferences among a sample of people at a particular time. They do not establish who will win a future election.",
-      "content": "Polling figures concerning Marine Le Pen, Jordan Bardella or other French political figures should be described as survey findings. The eventual result will depend on the candidates, campaign, turnout, electoral conditions and votes cast.",
-      "category": "Fact Check | France",
-      "author": "RadiantWaves Fact-Check Desk",
-      "status": "Clarification"
-    }
-  ],
-  "beyondStatement": [
-    {
-      "headline": "Beyond the Statement: What a Change in Washington Means for America's Allies",
-      "summary": "The US midterm result will be judged not only by party control but by what Congress does with its powers over spending, investigations, legislation and foreign policy oversight.",
-      "content": "International partners will be watching for continuity in security commitments, trade policy and support for Ukraine. The administration retains executive authority, but congressional control can influence funding and the political space available for major decisions.",
-      "category": "Beyond the Statement | United States"
-    },
-    {
-      "headline": "Beyond the Statement: What the ADC Judgment Means for Nigeria's Opposition",
-      "summary": "The immediate legal dispute is only one part of a larger question: whether Nigeria's opposition parties can build credible, disciplined and transparent organisations capable of sustaining public trust.",
-      "content": "The coming legal proceedings will determine the practical consequences of the judgment. Beyond the courtroom, party leaders must address internal governance, candidate selection and the confidence of supporters. A strong opposition requires more than prominent personalities; it needs credible institutions and a clear programme.",
-      "category": "Beyond the Statement | Nigeria"
-    }
-  ],
-  "categories": [
-    {
-      "name": "World",
-      "description": "Major international developments, diplomacy, security and global affairs."
-    },
-    {
-      "name": "United States",
-      "description": "US politics, government, Congress, economy and foreign policy."
-    },
-    {
-      "name": "Europe",
-      "description": "European politics, security, diplomacy and the UK-EU relationship."
-    },
-    {
-      "name": "Africa",
-      "description": "African politics, elections, security, development and regional affairs."
-    },
-    {
-      "name": "Nigeria",
-      "description": "Nigerian politics, governance, economy and national affairs."
-    },
-    {
-      "name": "Asia-Pacific",
-      "description": "Developments across Asia, China and the Pacific region."
-    },
-    {
-      "name": "Business",
-      "description": "International business, investment, trade and economic policy."
-    },
-    {
-      "name": "Technology",
-      "description": "Artificial intelligence, digital platforms and technology regulation."
-    },
-    {
-      "name": "Editorial",
-      "description": "RadiantWaves perspectives on accountability and public affairs."
-    },
-    {
-      "name": "Analysis",
-      "description": "Context and implications behind major international developments."
-    },
-    {
-      "name": "Fact Check",
-      "description": "Verification of public claims, political statements and developing stories."
-    },
-    {
-      "name": "Beyond the Statement",
-      "description": "Examining the wider meaning and consequences of major announcements."
-    }
-  ],
-  "breakingHistory": [
-    {
-      "date": "2026-11-08",
-      "headline": "INEC Awaits Certified ADC Judgment",
-      "category": "Nigeria Politics",
-      "image": "assets/leaders/atiku2.jpg"
-    },
-    {
-      "date": "2026-11-08",
-      "headline": "Hormuz Shipping Incidents Raise Security Concerns",
-      "category": "Middle East",
-      "image": "assets/middleeast.jpeg"
-    },
-    {
-      "date": "2026-11-08",
-      "headline": "Democrats Take Control of Both Chambers of Congress",
-      "category": "United States",
-      "image": "assets/leaders/trump.jpg"
-    }
-  ],
+
   "archives": [
     {
       "date": "2026-11-08",
-      "edition": "Evening",
-      "headline": "Global Political and Security Developments",
-      "file": "news.json"
+      "edition": "Night",
+      "headline": "Hormuz crisis, Nigeria's ADC legal dispute and South Africa's political shift",
+      "summary": "The major developments of Sunday, 8 November 2026, including the Iran-US confrontation, Ukraine's energy crisis, Nigeria's election dispute, South Africa's municipal results and the Egypt train disaster.",
+      "image": "assets/middleeast.jpeg"
     }
   ],
+
+  "breakingHistory": [
+    {
+      "title": "The Strait of Hormuz and the global economy",
+      "summary": "The Strait of Hormuz is one of the world's most strategically important maritime passages. Disruption can affect energy shipments, insurance costs, shipping routes and prices far beyond the Middle East. The current confrontation demonstrates how a regional security crisis can quickly become a global economic concern.",
+      "image": "assets/middleeast.jpeg"
+    },
+    {
+      "title": "South Africa's changing political landscape",
+      "summary": "The ANC governed South Africa for decades after the end of apartheid. Its declining electoral support and the rise of competing parties have made coalition politics increasingly important to the country's democratic system.",
+      "image": "assets/leaders/ramaphosa.jpg"
+    }
+  ],
+
+  "todaysBigQuestion": {
+    "question": "When political parties face legal disputes close to an election, how can electoral institutions protect both the rule of law and voters' right to a clear, credible choice?",
+    "context": "Nigeria's ADC dispute raises questions about party governance, court orders, electoral administration and the importance of timely legal clarity."
+  },
+
   "thoughtForToday": {
-    "quote": "The strength of a nation is measured not only by the power of its leaders, but by the dignity, security and opportunities it provides to its people.",
-    "attribution": "RadiantWaves Editorial Desk"
+    "quote": "The strength of a democracy is measured not only by the votes it counts, but by the institutions and principles it protects.",
+    "attribution": "RadiantWaves Editorial Reflection"
   },
-  "todaysBigQuestion": "When political power, national security and economic interests collide, who ensures that ordinary citizens are not left to pay the highest price?",
+
   "radiantWavesPerspective": {
-    "headline": "Accountability Must Remain at the Centre of Leadership",
-    "content": "Across continents, today's developments point to a common challenge: public confidence is under pressure. In Nigeria, the ADC leadership dispute demonstrates how court decisions can reshape political competition and why transparent legal processes matter. In the United States, the midterm result reinforces the importance of institutional checks and balances. In South Africa, voters have sent a strong message about local governance and service delivery.\n\nIn Europe, regulatory scrutiny of digital platforms reflects growing concern about the influence of technology on society. In conflict zones, civilians continue to bear the consequences of decisions made by political and military leaders. RadiantWaves Media believes that public accountability, credible institutions, independent journalism and access to verified information are essential to democratic stability.\n\nOur responsibility is to report developments accurately, distinguish evidence from allegation and give readers the context needed to understand the decisions shaping their world.",
-    "image": "assets/africa.jpeg"
+    "title": "The world needs facts, accountability and responsible leadership",
+    "content": "Today's developments show how quickly political decisions, legal disputes and security incidents can affect ordinary people. In Nigeria, the ADC dispute must be resolved through transparent legal processes and respect for court orders. In the Middle East, diplomacy must be given a genuine opportunity before further escalation causes wider harm. In Ukraine, civilians should not have to endure repeated attacks on essential infrastructure. In South Africa, the election results demonstrate the importance of public accountability and effective local government. In the United States, the midterm result shows that electoral accountability remains a central feature of democratic government. Across all these stories, responsible journalism must distinguish verified facts from claims, political messaging and speculation. RadiantWaves Media will continue to report developments with context, balance and clarity."
   },
+
   "sponsoredAdverts": [
     {
+      "id": "advert-001",
+      "title": "Discover Quality Spices",
+      "description": "Explore a range of spices and ingredients for your kitchen.",
       "image": "assets/spices.jpeg",
-      "headline": "Advertise With RadiantWaves Media",
-      "summary": "Reach audiences across Nigeria, France and the wider international community through our digital media platform.",
-      "placement": "Advert Placement 1",
-      "type": "Sponsored Advertisement",
+      "label": "Sponsored",
       "url": "https://radiantwavesmedia.com/"
     },
     {
+      "id": "advert-002",
+      "title": "Explore Stonebreaker Products",
+      "description": "Discover more about this featured product.",
       "image": "assets/stonebreaker.jpeg",
-      "headline": "Promote Your Products and Services",
-      "summary": "Explore advertising and media partnership opportunities with RadiantWaves Media.",
-      "placement": "Advert Placement 2",
-      "type": "Sponsored Advertisement",
+      "label": "Sponsored",
       "url": "https://radiantwavesmedia.com/"
     }
   ],
+
   "sourcePolicy": {
-    "headline": "Our Editorial and Verification Standards",
-    "content": "RadiantWaves Media prioritises verified reporting, official statements, reputable international news organisations and primary documents. We distinguish confirmed facts from allegations, provisional results, opinion polls and developing reports. Court proceedings are described according to the orders actually made, and an appeal is not described as a successful stay unless a court grants one. Images must accurately represent the person, place or event described. Where an image is illustrative rather than documentary, it should be understood as a regional or subject illustration and not as documentary evidence. Readers are encouraged to consult original source links and report factual errors to the newsroom.",
-    "sourcesUsed": [
-      "Reuters",
-      "Associated Press",
-      "Punch Newspapers",
-      "European Commission",
-      "European Council",
-      "Government of Canada",
-      "Electoral Commission of South Africa",
-      "New Zealand Electoral Commission",
-      "Paraguayan Senate",
-      "Paraguayan Chamber of Deputies",
-      "UK Maritime Trade Operations",
-      "Polish Radio",
-      "ELABE"
-    ]
+    "title": "Our Editorial Standards",
+    "description": "RadiantWaves Media prioritises verified information, clear attribution and responsible reporting. We distinguish confirmed facts from official claims, preliminary findings, allegations and developing reports. Where independent verification is not available, that limitation is stated. Source links are provided to support transparency and further reading. Images are selected to match the subject of each report."
   },
+
   "footer": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "Connecting You Deeper to the World's Most Important Stories",
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/",
-    "email": "info@radiantwavesmedia.com",
-    "supportEmail": "support@radiantwavesmedia.com"
+    "copyright": "© 2026 RadiantWaves Media Nigeria Ltd. All rights reserved."
   },
+
   "contact": {
-    "website": "https://radiantwavesmedia.com/",
     "email": "info@radiantwavesmedia.com",
-    "supportEmail": "support@radiantwavesmedia.com"
+    "support": "support@radiantwavesmedia.com",
+    "whatsapp": "+33 6 21 61 31 49",
+    "website": "https://radiantwavesmedia.com/"
   }
 }

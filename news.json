@@ -1,8 +1,9 @@
+
 {
   "edition": "Midday",
   "date": "2026-11-08",
   "editionTime": "Midday",
-  "updatedAt": "2026-11-08T13:01:00+01:00",
+  "updatedAt": "2026-11-08T13:30:00+01:00",
   "branding": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",
     "slogan": "Gateway to Your World News — Connecting You to the World",
@@ -11,22 +12,27 @@
   },
   "hero": {
     "category": "MIDDAY GLOBAL NEWS",
-    "headline": "Nigeria's Debt Burden, Atiku's Appeal and Global Political Shifts Dominate Sunday's Headlines",
-    "summary": "Nigeria's external debt figures and the ADC's legal challenge lead today's coverage, alongside the changing political balance in Washington, Britain's preparations for a new EU summit, France's social tensions and rising security concerns in the Middle East.",
-    "image": "middleeast.jpeg",
+    "headline": "Nigeria's Debt Burden, Atiku's Appeal and Global Security Tensions Lead Sunday's Headlines",
+    "summary": "Nigeria's external debt figures and the ADC's legal challenge dominate the domestic agenda. Across the world, the US-Iran confrontation is raising maritime risks, South Africa's elections are reshaping local politics, and Britain and the EU are preparing for a new phase of cooperation.",
+    "image": "assets/nigeria.jpeg",
     "source": "RadiantWaves Media Newsroom",
     "url": "https://radiantwavesmedia.com/"
   },
   "morningSummary": {
     "headline": "The World at Midday",
-    "text": "Sunday's international agenda is dominated by political uncertainty, economic pressure and security developments. In Nigeria, the ADC says it has filed an appeal and applied for a stay following the Federal High Court judgment affecting its leadership and Atiku Abubakar's nomination. The appeal does not automatically suspend the judgment, and no stay order had been verified in the latest Premium Times report. The World Bank's 2026 International Debt Statistics records Nigeria's total external debt stock at approximately $145.015 billion for 2025. In South Africa, the latest municipal election count shows a major decline in ANC support and the prospect of coalition negotiations. Democrats have secured control of both chambers of the United States Congress from January. In the Middle East, a US military action against a commercial vessel in the Gulf of Oman and fresh missile interceptions in Saudi Arabia underline the risks to regional security and shipping. Britain and the European Union are preparing for their 20 November summit, while France is dealing with renewed pressure over wages and purchasing power. New Zealand's preliminary election results point to a close parliamentary balance, with special votes still to be counted."
+    "text": "Sunday's international news agenda is shaped by political uncertainty, economic pressure and rising security risks. In Nigeria, the African Democratic Congress says it has appealed the Federal High Court judgment affecting its leadership and Atiku Abubakar's nomination, while seeking to prevent premature implementation of the ruling. The World Bank reports that Nigeria's total external debt stock reached $145.015 billion in 2025, including public, private and short-term liabilities. In the Middle East, US military action against a commercial vessel in the Gulf of Oman and missile interceptions reported by Saudi Arabia underline the risks to regional shipping and energy markets. South Africa's municipal election count shows a fragmented political landscape, while New Zealand awaits the counting of special votes. Britain and the European Union are preparing for their 20 November summit. France's debate over wages and purchasing power remains part of the wider European economic conversation.",
+    "image": "assets/europe.jpeg"
+  },
+  "editorialNote": {
+    "headline": "Today's Editorial Focus",
+    "text": "RadiantWaves Media is following the facts behind the headlines. Legal filings are not the same as court orders; national debt totals must be distinguished from government-only liabilities; and preliminary election counts must not be presented as final results. Our coverage separates verified information, official statements, allegations and political interpretation."
   },
   "breaking": [
     {
       "id": "brk-001",
       "category": "Nigeria | Politics",
-      "headline": "ADC Reports Appeal and Stay Application to INEC as Atiku's Legal Battle Continues",
-      "summary": "A letter received by INEC on 6 November reportedly informed the commission that the ADC had filed a notice of appeal and applied for a stay of execution against the Federal High Court judgment. Premium Times says it had not independently examined the full filings and had not verified an order granting a stay. The appeal therefore does not, by itself, restore Atiku's nomination.",
+      "headline": "ADC Reports Appeal and Stay Application Following Court Judgment",
+      "summary": "The ADC has reportedly informed INEC that it filed a notice of appeal and applied for a stay of execution against the Federal High Court judgment affecting the David Mark-led leadership and Atiku Abubakar's nomination. The filing does not itself mean that a stay has been granted. The next decisive development will be the court's consideration of the application.",
       "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html",
       "image": "assets/leaders/atiku-david-mark-court.jpg"
@@ -34,143 +40,176 @@
     {
       "id": "brk-002",
       "category": "Nigeria | Economy",
-      "headline": "Nigeria's External Debt Hits $145.015bn as Servicing Burden Rises — World Bank",
-      "summary": "The World Bank's 2026 International Debt Statistics records Nigeria's total external debt stock at approximately $145.015 billion in 2025, compared with $135.988 billion in 2024. The figure includes different categories of external liabilities and should not be described as Federal Government debt alone.",
+      "headline": "Nigeria's External Debt Reaches $145.015bn — World Bank",
+      "summary": "The World Bank's 2026 International Debt Statistics put Nigeria's total external debt stock at approximately $145.015 billion in 2025, a 6.6 per cent increase on 2024. The total includes public and publicly guaranteed debt, private non-guaranteed debt and short-term external liabilities.",
       "source": "World Bank | Channels Television",
       "url": "https://www.channelstv.com/2026/11/06/nigerias-external-debt-hits-145bn-as-servicing-burden-rises-world-bank/",
-      "image": "nigeria.jpeg"
+      "image": "assets/nigeria.jpeg"
     },
     {
       "id": "brk-003",
       "category": "Middle East | Maritime Security",
       "headline": "US Forces Disable Commercial Vessel in Gulf of Oman",
-      "summary": "US Central Command says American forces fired on and disabled a St Kitts-flagged commercial vessel after it allegedly ignored repeated warnings and attempted to breach the US naval blockade of Iran. Iranian reports of other maritime incidents have not all been independently verified.",
+      "summary": "US Central Command says American forces disabled a St Kitts-flagged commercial vessel after its crew allegedly ignored repeated warnings and attempted to breach the US naval blockade of Iran. The incident adds to the risks facing commercial shipping in the Gulf of Oman and surrounding waters.",
       "source": "Associated Press",
       "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b",
-      "image": "oil.jpeg"
+      "image": "assets/oil.jpeg"
     },
     {
       "id": "brk-004",
       "category": "Middle East | Saudi Arabia",
-      "headline": "Saudi Air Defences Intercept Missiles Targeting Riyadh and Other Regions",
-      "summary": "Saudi authorities reported that air defences intercepted ballistic and cruise missiles directed towards Riyadh and other areas on Sunday. Residents received emergency warnings, followed by all-clear notifications. The developments add to growing regional security concerns.",
-      "source": "Saudi Gazette | Arab News",
-      "url": "https://saudigazette.com.sa/article/666074/saudi-arabia/saudi-air-defenses-intercept-3-ballistic-missiles-2-cruise-missiles-targeting-riyadh-other-regions",
-      "image": "middleeast.jpeg"
+      "headline": "Saudi Arabia Reports Missile Interceptions Near Riyadh",
+      "summary": "Saudi air defences intercepted missiles targeting Riyadh and other areas, according to Associated Press. Falling debris reportedly caused damage to an Aramco building, with no casualties reported. Saudi authorities blamed the Houthis, although the group had not claimed responsibility for the specific launch in the report.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/090d96e25872f5c63e105b9dd3e5dc60",
+      "image": "assets/middleeast.jpeg"
+    },
+    {
+      "id": "brk-005",
+      "category": "Africa | South Africa",
+      "headline": "South Africa's ANC Faces Further Setbacks in Municipal Elections",
+      "summary": "With 99 per cent of votes counted in the Reuters report, the ANC had approximately 31 per cent nationally, followed by the Democratic Alliance on 25 per cent and the uMkhonto weSizwe Party on about 10 per cent. Coalition negotiations are expected in several municipalities.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/",
+      "image": "assets/leaders/ramaphosa.jpg"
     }
   ],
   "featured": {
     "category": "NIGERIA | ECONOMY",
-    "headline": "Nigeria's External Debt Hits $145.015bn as Servicing Burden Rises — World Bank",
-    "summary": "Nigeria's total external debt stock reached approximately $145.015 billion in 2025, according to the World Bank's International Debt Statistics. The figure represents an increase from approximately $135.988 billion in 2024. The figures include public and private external liabilities, as well as short-term obligations. The central questions are how borrowed funds are being used, how foreign currency obligations will be met and whether borrowing is producing measurable economic returns.",
-    "image": "nigeria.jpeg",
+    "headline": "Nigeria's External Debt Hits $145.015bn as Servicing Burden Rises",
+    "summary": "Nigeria's total external debt stock reached approximately $145.015 billion in 2025, according to the World Bank's International Debt Statistics. The headline figure includes public and publicly guaranteed borrowing, private non-guaranteed debt and short-term external liabilities. The figures raise questions about debt management, foreign exchange exposure, export earnings and the economic returns expected from borrowing.",
+    "image": "assets/nigeria.jpeg",
     "source": "World Bank International Debt Statistics 2026 | Channels Television",
     "url": "https://www.channelstv.com/2026/11/06/nigerias-external-debt-hits-145bn-as-servicing-burden-rises-world-bank/"
   },
   "topStories": [
     {
       "category": "Nigeria | Politics",
-      "headline": "Atiku and ADC: Appeal Filed, but No Verified Stay of Execution Yet",
-      "summary": "ADC lawyers reportedly informed INEC that a notice of appeal and an application for a stay had been filed. The distinction is important: filing an appeal does not automatically suspend the judgment. Until a competent court grants appropriate relief, the legal position remains subject to the existing judgment and further proceedings. INEC's published ADC party page lists Senator David Mark as national chairman and Rauf Aregbesola as national secretary.",
+      "headline": "ADC Appeal: What the Latest Filing Means for Atiku and the 2027 Election",
+      "summary": "The ADC says it has filed an appeal and a stay application following the Federal High Court judgment affecting its leadership and candidates. The appeal is an important legal development, but the filing alone does not suspend the judgment. The Court of Appeal's response and any interim orders will be central to what happens next.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
-      "source": "Premium Times | INEC",
+      "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
     },
     {
       "category": "Nigeria | Economy",
-      "headline": "World Bank Records Nigeria's External Debt Stock at $145.015bn",
-      "summary": "The World Bank's 2026 data puts Nigeria's external debt stock at approximately $145.015 billion in 2025, up from $135.988 billion in 2024. The total covers several types of external liabilities, not only direct government borrowing. The increase renews questions about debt management, export earnings, foreign exchange availability and the productive use of borrowed funds.",
-      "image": "nigeria.jpeg",
+      "headline": "World Bank Puts Nigeria's External Debt Stock at $145.015bn",
+      "summary": "The 2025 figure represents a 6.6 per cent increase from 2024. The total is broader than the Federal Government's direct external debt because it includes private non-guaranteed and short-term liabilities. Public and publicly guaranteed external debt accounted for about $62.4 billion in the Channels Television report.",
+      "image": "assets/nigeria.jpeg",
       "source": "World Bank | Channels Television",
-      "url": "https://datatopics.worldbank.org/debt/ids/country/nga"
+      "url": "https://www.channelstv.com/2026/11/06/nigerias-external-debt-hits-145bn-as-servicing-burden-rises-world-bank/"
     },
     {
       "category": "United Kingdom | European Union",
       "headline": "UK and EU Prepare for 20 November Brussels Summit",
-      "summary": "Prime Minister Andy Burnham is expected to meet European Council President António Costa and European Commission President Ursula von der Leyen in Brussels. The agenda includes security, illegal migration, trade, energy and reducing administrative barriers for businesses and farmers. The meeting is about closer practical cooperation, not British re-entry into the European Union.",
-      "image": "uk-government.jpg",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
+      "summary": "Britain and the European Union are preparing discussions on security, energy, trade, climate, migration and law enforcement. European leaders have also called for closer cooperation on clean energy and the relationship between Britain's energy market and the EU. The summit concerns practical cooperation; it is not a decision on British re-entry into the European Union.",
+      "image": "assets/uk-government.jpg",
+      "source": "European External Action Service | The Guardian",
+      "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
     },
     {
       "category": "France | Society",
-      "headline": "France Faces Continued Pressure Over Wages and Purchasing Power",
-      "summary": "Demonstrations on 5 November brought workers and other groups onto the streets over wages, pensions, education and public services. The Interior Ministry's estimate was approximately 600,000 participants, while the CGT union put its own figure at nearly 1.6 million. These are separate estimates and should be attributed accordingly. The government has announced further discussions with unions and employers.",
-      "image": "france-protests.jpeg",
-      "source": "Le Monde | CGT",
-      "url": "https://www.lemonde.fr/politique/live/2026/11/05/en-direct-greve-du-5-novembre-pres-de-600-000-manifestants-en-france-ce-jeudi-selon-une-estimation-provisoire-du-ministere-de-l-interieur_6806775_823448.html"
+      "headline": "France's Purchasing Power Debate Keeps Pressure on Government",
+      "summary": "Demonstrations over wages, education, pensions and public services have kept economic pressures in the national debate. The Interior Ministry and trade unions reported substantially different estimates of participation, illustrating why crowd figures should be attributed to their respective sources.",
+      "image": "assets/france-protests.jpeg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/94e10fc8a1edbf7951e2c067418a7d33"
     },
     {
       "category": "United States | Politics",
-      "headline": "Democrats Take Control of Both Chambers of Congress After Midterm Victory",
-      "summary": "Democrats have secured control of the House of Representatives and Senate, creating a major change in Washington's political balance. The new congressional majority will have greater powers over legislation, budgets, investigations and confirmation of presidential nominees. President Donald Trump retains executive and foreign-policy powers, but his administration will face stronger congressional scrutiny.",
+      "headline": "Democratic Congressional Gains Set Up a New Period of Scrutiny for Trump",
+      "summary": "The reported midterm result gives Democrats control of both chambers of Congress from January. That will affect legislative priorities, budget negotiations and congressional investigations. The change does not automatically remove the president's constitutional authority over foreign policy and military operations.",
       "image": "assets/leaders/trump.jpg",
-      "source": "Reuters | Associated Press",
+      "source": "Reuters",
       "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/"
     },
     {
       "category": "Middle East | Iran and United States",
-      "headline": "Gulf of Oman Incident Raises Further Questions Over Shipping Security",
-      "summary": "US forces say they disabled a commercial vessel accused of attempting to breach the naval blockade of Iran. The incident comes amid reports of further explosions and maritime disruption, although the details and causes of some incidents remain unclear. The conflict continues to threaten shipping routes, insurance costs and international energy markets.",
-      "image": "oil.jpeg",
+      "headline": "Gulf of Oman Incident Adds to US-Iran Shipping Crisis",
+      "summary": "The US military says it disabled a commercial vessel accused of attempting to breach its blockade of Iran. Separate reports of tanker fires and maritime incidents have added to concerns about the Strait of Hormuz, shipping insurance and energy supplies. Details surrounding individual incidents remain subject to confirmation.",
+      "image": "assets/oil.jpeg",
       "source": "Associated Press",
       "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b"
     },
     {
       "category": "Israel | Middle East",
-      "headline": "Gadi Eisenkot to Receive Mandate to Attempt to Form Israel's Next Government",
-      "summary": "President Isaac Herzog announced that former military chief Gadi Eisenkot would be tasked with attempting to form a government following the inconclusive October election. Eisenkot is expected to receive the formal mandate on 8 November. He will have 28 days, with a possible extension of up to 14 days, to negotiate a coalition. The announcement does not mean Benjamin Netanyahu has already left office.",
-      "image": "middleeast.jpeg",
-      "source": "Reuters | Office of the President of Israel",
-      "url": "https://www.president.gov.il/en/president-herzog-concludes-consultations-and-announces-he-will-task-gadi-eisenkot-with-forming-a-government/"
+      "headline": "Gadi Eisenkot Receives Mandate to Attempt to Form Israel's Next Government",
+      "summary": "President Isaac Herzog has designated former military chief Gadi Eisenkot to attempt to form a government after an inconclusive election. Coalition negotiations will determine whether he can secure sufficient parliamentary support. The designation does not mean that Benjamin Netanyahu has already left office.",
+      "image": "assets/middleeast.jpeg",
+      "source": "Reuters | Associated Press",
+      "url": "https://www.reuters.com/world/middle-east/israeli-president-picks-gadi-eisenkot-netanyahu-rival-form-government-2026-11-07/"
     },
     {
       "category": "Africa | South Africa",
-      "headline": "ANC Suffers Major Setback as South African Municipal Election Count Nears Completion",
-      "summary": "With approximately 99 per cent of votes counted, the ANC was on about 31 per cent nationally, compared with approximately 25 per cent for the Democratic Alliance and 10 per cent for the uMkhonto weSizwe Party. The results represent a major decline from the ANC's 2021 local election performance. Several municipalities face coalition negotiations, with Johannesburg among the closely watched contests. Final declarations and council arrangements remain important next steps.",
+      "headline": "South Africa's Municipal Results Point to Coalition Negotiations",
+      "summary": "Reuters reported that 99 per cent of votes had been counted, with the ANC at about 31 per cent, the DA at 25 per cent and the MK Party at approximately 10 per cent. The results point to a fragmented political landscape, with coalition talks expected in several municipalities. Final certified results remain important.",
       "image": "assets/leaders/ramaphosa.jpg",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
     },
     {
       "category": "Asia | Japan",
-      "headline": "Magnitude 5.7 Earthquake Recorded in Japan's Shizuoka Region",
-      "summary": "A magnitude 5.7 earthquake was recorded in western Shizuoka Prefecture on 8 November. Local authorities and monitoring agencies continue to assess the effects and any aftershock risk. Residents should follow official emergency information rather than rely on unverified social media reports.",
-      "image": "asia.jpeg",
-      "source": "Japan Earthquake Monitoring",
-      "url": "https://jishindesu.jp/en/earthquakes/days/2026-11-08"
+      "headline": "Earthquake Reports Put Central Japan on Alert",
+      "summary": "Reports of a magnitude 5.7 earthquake in the Shizuoka region said more than 20 people were injured. Residents were advised to follow local emergency guidance and remain alert for possible aftershocks. Further details should be taken from Japan's official disaster and meteorological authorities.",
+      "image": "assets/asia.jpeg",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/asia-pacific/"
     },
     {
       "category": "Asia-Pacific | New Zealand",
-      "headline": "New Zealand Election: Preliminary Results Show a Narrow Parliamentary Balance",
-      "summary": "The Electoral Commission's preliminary count placed Labour slightly ahead of National in the party vote, while the National-led grouping appeared to have a narrow parliamentary advantage. Approximately 399,000 special votes, including overseas ballots, remain to be processed. The official results are scheduled for 27 November, meaning the final balance and coalition negotiations are not yet settled.",
-      "image": "asia.jpeg",
-      "source": "New Zealand Electoral Commission | Reuters",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results"
+      "headline": "New Zealand Election: Special Votes Could Still Affect the Result",
+      "summary": "The provisional count gives the governing coalition a narrow majority, but around 14 per cent of ballots, including special votes, remained to be counted in the Reuters report. Official results are expected on 27 November. The incumbent government remains in caretaker office while the final result and subsequent negotiations are awaited.",
+      "image": "assets/asia.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/what-happens-next-after-new-zealands-vote-2026-11-07/"
     },
     {
       "category": "Latin America | Colombia",
-      "headline": "Drone Attack on Colombian Army Base Kills Three Soldiers",
-      "summary": "Colombia's armed forces reported that a drone attack on a military base in Santa Rosa del Sur killed three soldiers and injured at least 16. Authorities had not identified those responsible in the initial report. The attack highlights continuing security challenges in areas affected by armed groups and criminal networks.",
-      "image": "africa.jpeg",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7eb8bd82e98900f790b6d4e35eb702ec"
+      "headline": "Colombian Army Reports Deadly Drone Attack on Military Base",
+      "summary": "Colombia's armed forces reported that a drone attack on a military base in Santa Rosa del Sur killed three soldiers and wounded at least 16. Authorities had not identified those responsible in the initial report. Investigators are expected to establish the group involved and the circumstances of the attack.",
+      "image": "",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/"
     },
     {
       "category": "Oceania | Australia",
-      "headline": "Australia Keeps Four Heritage Defence Properties in Public Ownership",
-      "summary": "The Australian government has confirmed that the heritage of four defence properties will be protected through continued public ownership. The decision follows public concern about the proposed disposal of historic sites. The government says the properties will be vacated by defence operations as planned, with future public access and heritage protection arrangements to be developed.",
-      "image": "europe.jpeg",
-      "source": "Australian Government | Department of Defence",
-      "url": "https://www.minister.defence.gov.au/media-releases/2026-11-08/first-update-defence-estate-audit"
+      "headline": "Australia Reverses Planned Sale of Four Heritage Defence Properties",
+      "summary": "The Australian government has decided to retain four heritage-listed defence properties in public ownership following criticism of the proposed sales. The sites include Victoria Barracks in Sydney and Melbourne. The government says it will work on public access arrangements after defence operations vacate the properties.",
+      "image": "",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news"
     },
     {
       "category": "Global Economy | Technology",
-      "headline": "Technology Sell-Off Raises Questions About the Scale of AI Investment",
-      "summary": "A sharp fall in technology shares has renewed concerns about the cost of artificial-intelligence infrastructure, data centres and company valuations. Reuters reported that the Nasdaq fell 5.5 per cent on Thursday, amid investor reassessment of AI spending and wider economic risks. The sell-off does not by itself establish that a global recession is beginning, but it highlights pressure on technology companies to demonstrate sustainable returns.",
-      "image": "ai.jpeg",
+      "headline": "Technology Sell-Off Renews Questions About AI Investment",
+      "summary": "A sharp decline in technology shares has prompted investors to reassess company valuations, data-centre spending and the expected returns from artificial-intelligence investment. Market volatility does not by itself establish that a global recession is beginning, but it highlights the risks associated with high expectations and expensive infrastructure.",
+      "image": "assets/ai.jpeg",
       "source": "Reuters",
       "url": "https://www.reuters.com/business/take-five/global-markets-themes-graphic-2026-11-06/"
+    },
+    {
+      "category": "Africa | Somalia",
+      "headline": "Somalia's Security and International Mission Remain in Focus",
+      "summary": "The security situation in Somalia continues to require attention from national authorities and international partners. The African Union mission, counter-insurgency operations and protection of civilians remain important issues for regional stability.",
+      "image": "news/somalia-un-mission.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
+    },
+    {
+      "category": "Asia | India",
+      "headline": "Voter Participation and Electoral Administration Remain in Focus in India",
+      "summary": "Voter registration, electoral access and public confidence in election administration remain important issues in India's political debate. The wider question is how electoral institutions ensure that eligible citizens can participate and that results are trusted.",
+      "image": "news/india-voter-protest.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
+    },
+    {
+      "category": "Global Business | Transport",
+      "headline": "Electric Vehicle Competition Continues to Reshape the Automotive Industry",
+      "summary": "Competition among electric vehicle manufacturers is putting pressure on prices, supply chains and established carmakers. The next phase of the market will depend on affordability, charging infrastructure, battery technology and consumer demand.",
+      "image": "news/byd-electric-vehicles.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
     }
   ],
   "articles": [
@@ -178,78 +217,78 @@
       "id": "article-001",
       "category": "Nigeria | Politics",
       "title": "ADC Appeal: What the Latest Filing Means for Atiku and the 2027 Election",
-      "summary": "The ADC says it has taken its challenge against the Federal High Court judgment into the appeal process. However, the filing of an appeal does not automatically suspend the judgment or restore Atiku Abubakar's nomination.",
-      "content": "The legal dispute surrounding the African Democratic Congress has entered another phase. A Premium Times report published on 7 November says ADC lawyers sent a letter to the Independent National Electoral Commission stating that a notice of appeal and an application for a stay of execution had been filed. The letter reportedly carried a receipt stamp from the INEC chairman's office. The legal challenge follows the Federal High Court judgment delivered by Justice Peter Lifu on 5 November, which affected the David Mark-led party leadership and Atiku Abubakar's nomination for the 2027 presidential election. The most important distinction is that an appeal and a stay are not the same thing. Under Section 17 of the Court of Appeal Act, filing an appeal does not automatically operate as a stay of execution. Premium Times reported that it had not independently examined the full registry-stamped filings and had not verified an order granting a stay by Friday night. The report also noted that INEC's online party directory continued to list David Mark as national chairman and Rauf Aregbesola as national secretary on 7 November. INEC's published ADC party page also identifies Mark as national chairman. Atiku has maintained his intention to remain in the presidential race. That is a political declaration, not proof that the court has restored his nomination. The next developments to watch are the appeal proceedings, the stay application, the precise wording of the court judgment and INEC's formal response. The dispute may have implications beyond the presidential ticket, potentially affecting other ADC candidates and the party's preparations for the 2027 election. RadiantWaves Media will continue to distinguish between what the party says it has filed, what the courts have ordered and what INEC formally recognises.",
+      "summary": "The ADC says it has entered the appeal process following the Federal High Court judgment affecting its leadership and Atiku Abubakar's nomination.",
+      "content": "The legal dispute surrounding the African Democratic Congress has entered a new phase. A Premium Times report published on 7 November says ADC lawyers sent a letter to the Independent National Electoral Commission stating that a notice of appeal and an application for a stay of execution had been filed. The letter reportedly carried a receipt stamp from the INEC chairman's office. The legal challenge follows the Federal High Court judgment delivered by Justice Peter Lifu on 5 November, which affected the David Mark-led party leadership and the nomination of Atiku Abubakar for the 2027 presidential election. The distinction between filing an appeal and obtaining a stay is essential. An appeal challenges the judgment, while a stay is a separate judicial order that may suspend enforcement pending further proceedings. The report did not establish that a stay had been granted. Atiku has maintained that he intends to remain in the presidential race. His position is a political declaration; the legal status of his nomination will depend on the relevant court proceedings and decisions. The next developments to watch include the Court of Appeal proceedings, the stay application, certified copies of the judgment and INEC's formal response. The dispute may affect other ADC candidates as well as the presidential nomination.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
-      "source": "Premium Times | INEC",
+      "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
     },
     {
       "id": "article-002",
       "category": "Nigeria | Economy",
-      "title": "Nigeria's External Debt Hits $145.015bn as Servicing Burden Rises — World Bank",
-      "summary": "The World Bank's 2026 International Debt Statistics records Nigeria's total external debt stock at approximately $145.015 billion in 2025, up from $135.988 billion in 2024.",
-      "content": "Nigeria's total external debt stock reached approximately $145.015 billion in 2025, according to the World Bank's 2026 International Debt Statistics. The figure compares with approximately $135.988 billion in 2024. The increase highlights the scale of Nigeria's external financial obligations and the importance of examining the composition of the debt. The headline figure should not be described as the Federal Government's direct public external debt alone. The World Bank's total external debt measure covers different categories of external liabilities, including public and publicly guaranteed debt, private non-guaranteed borrowing and short-term obligations. The distinction matters because the responsibilities and risks associated with these categories are not identical. The increase also raises questions about the cost of servicing foreign-currency obligations, the availability of foreign exchange, export earnings and the economic returns generated by borrowing. Debt can finance infrastructure, productive investment and development when properly managed. However, borrowing becomes a greater concern when repayment costs rise faster than the economy's capacity to generate revenue and foreign exchange. Citizens and policymakers should therefore look beyond the headline figure and ask what the borrowed money financed, what projects have been completed, what returns have been generated and how future obligations will be met. The World Bank data provides an important basis for public scrutiny, but the figures must be interpreted accurately and in context.",
-      "image": "nigeria.jpeg",
+      "title": "Nigeria's External Debt Hits $145.015bn as Servicing Burden Rises",
+      "summary": "The World Bank's 2026 debt statistics record a 6.6 per cent annual increase in Nigeria's total external debt stock in 2025.",
+      "content": "Nigeria's total external debt stock rose to approximately $145.015 billion in 2025, representing a 6.6 per cent increase from the previous year, according to the World Bank's International Debt Statistics 2026. The figure was approximately $83.213 billion in 2015. The composition of the total matters. Public and publicly guaranteed external debt accounted for about $62.4 billion in the Channels Television report, while private non-guaranteed and short-term external debt made up the remainder. The $145.015 billion headline should therefore not be presented as the Federal Government's direct public external debt alone. The World Bank's country data provides a breakdown by debtor type and creditor. The increase raises questions about foreign currency availability, the cost of borrowing, the use of borrowed funds, private-sector exposure and the ability of the economy to generate export earnings. Debt sustainability is not measured by the headline stock alone. Repayment schedules, interest costs, export receipts, economic growth and the returns generated by borrowed funds are also important. The public deserves clear reporting on how borrowed money is used and what measurable economic benefits result.",
+      "image": "assets/nigeria.jpeg",
       "source": "World Bank International Debt Statistics 2026 | Channels Television",
-      "url": "https://datatopics.worldbank.org/debt/ids/country/nga"
+      "url": "https://www.channelstv.com/2026/11/06/nigerias-external-debt-hits-145bn-as-servicing-burden-rises-world-bank/"
     },
     {
       "id": "article-003",
       "category": "United Kingdom | Europe",
       "title": "Beyond Brexit: Britain and the EU Prepare for a New Summit",
-      "summary": "The 20 November Brussels summit will focus on practical cooperation in security, trade, energy, migration and reducing barriers for businesses.",
-      "content": "The United Kingdom and the European Union are preparing for their second summit, scheduled to take place in Brussels on 20 November 2026. Prime Minister Andy Burnham is expected to meet European Council President António Costa and European Commission President Ursula von der Leyen. According to the UK Government, discussions will include security cooperation, illegal migration, crime, trade and practical measures to reduce costs and administrative barriers for farmers and businesses. The meeting comes amid continuing debate in Britain about the economic consequences of Brexit and whether closer cooperation could reduce friction affecting businesses, workers, students and travellers. The summit is not an announcement that the United Kingdom is rejoining the European Union. Instead, it is an attempt to deepen cooperation within the existing political and legal framework. The outcome will be important for businesses that trade across the Channel, agricultural producers, security agencies and communities on both sides of the relationship. The central test will be whether the summit produces practical agreements rather than broad political statements.",
-      "image": "uk-government.jpg",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
+      "summary": "The 20 November Brussels summit is expected to focus on practical cooperation in security, trade, energy, climate and migration.",
+      "content": "The United Kingdom and the European Union are preparing for a summit scheduled to take place in Brussels on 20 November. The agenda includes defence and security cooperation, energy, agricultural rules, climate policy, migration and law enforcement. European leaders have also called for closer cooperation on clean energy and Britain's relationship with the EU internal electricity market. The discussions come amid a wider debate in Britain about the practical consequences of Brexit and whether closer cooperation could reduce barriers affecting businesses, students and travellers. The summit is not an announcement that the United Kingdom is rejoining the European Union. Instead, it represents an effort to develop the relationship within the current political and legal framework. The outcome will matter to businesses, farmers, students and communities on both sides of the Channel. The key test will be whether political commitments translate into practical agreements and measurable benefits.",
+      "image": "assets/uk-government.jpg",
+      "source": "European External Action Service | The Guardian",
+      "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
     },
     {
       "id": "article-004",
       "category": "France | Society",
       "title": "France's Purchasing Power Debate: Government Faces Pressure After Demonstrations",
-      "summary": "Demonstrations on 5 November over wages, pensions, education and public services have increased pressure on the government to engage with unions and employers.",
-      "content": "France experienced another major round of demonstrations on 5 November, with workers, students and other groups demanding better wages and improved public services. The Interior Ministry's estimate was approximately 600,000 participants, while the CGT trade union reported nearly 1.6 million. The figures are different estimates from different organisations and should not be presented as a single agreed count. The protests reflected concerns about purchasing power, wages, pensions, education funding, employment conditions and the quality of public services. The government has announced further discussions with unions and employer representatives. The challenge for the authorities is to respond to demands from workers and households while managing budgetary constraints and a difficult economic environment. The next stage will be judged by whether discussions produce concrete commitments on wages, public services and household purchasing power. The demonstrations underline the continuing importance of social dialogue in France and the pressure facing the government to demonstrate that economic decisions are improving everyday living conditions.",
-      "image": "france-protests.jpeg",
-      "source": "Le Monde | CGT",
-      "url": "https://www.lemonde.fr/politique/live/2026/11/05/en-direct-greve-du-5-novembre-pres-de-600-000-manifestants-en-france-ce-jeudi-selon-une-estimation-provisoire-du-ministere-de-l-interieur_6806775_823448.html"
+      "summary": "Demonstrations over wages, education and public services have kept the cost of living and public spending at the centre of debate.",
+      "content": "France has experienced renewed demonstrations over wages, purchasing power, education funding, employment prospects, pensions and public services. The Interior Ministry and the CGT trade union published significantly different estimates of participation. Those figures should be attributed separately rather than combined into a single total. The protests reflect wider concerns about household budgets and the quality of public services. Transport disruption, school closures and arrests were reported in some locations. The government faces the challenge of responding to public demands while managing budgetary constraints and a difficult economic environment. Discussions with unions and employer representatives are expected to be watched for concrete commitments rather than statements alone.",
+      "image": "assets/france-protests.jpeg",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/94e10fc8a1edbf7951e2c067418a7d33"
     },
     {
       "id": "article-005",
       "category": "United States | Politics",
-      "title": "Democrats' Midterm Victory Reshapes Congress but Trump Retains Executive Powers",
-      "summary": "The new congressional balance will strengthen oversight of the administration, but it does not automatically transfer presidential authority over foreign policy and military operations.",
-      "content": "The 2026 midterm elections have produced a major shift in the balance of power in Washington, with Democrats securing control of both chambers of Congress. The result gives the party greater influence over legislative priorities, budget negotiations, investigations and scrutiny of presidential nominees. President Donald Trump nevertheless retains important constitutional and executive powers, including significant authority over foreign policy and military operations. A divided political system can make it more difficult for an administration to pass legislation, approve budgets and secure support for its priorities. The new Congress is therefore likely to become a more assertive arena for oversight and political contest. The result also comes amid public debate about the cost of living, the conflict with Iran and the administration's economic record. The coming months will show how the new congressional balance affects domestic policy, military funding, international relations and the president's ability to advance his programme.",
+      "title": "Democrats' Midterm Gains Reshape Congress but Trump Retains Foreign Policy Powers",
+      "summary": "The new congressional balance will strengthen oversight of the administration, but it does not automatically transfer presidential authority over military operations.",
+      "content": "The 2026 midterm elections have produced a major reported shift in the balance of power in Washington, with Democrats securing control of both chambers of Congress from January. The result will give the party greater influence over legislative priorities, budget negotiations, investigations and scrutiny of presidential nominees. President Donald Trump nevertheless retains important constitutional authority over foreign policy and military operations. Congress has powers over legislation, appropriations and oversight, while the president remains commander-in-chief. The coming months will show how the new congressional balance affects funding, investigations, domestic legislation and America's relationships with its allies.",
       "image": "assets/leaders/trump.jpg",
-      "source": "Reuters | Associated Press",
+      "source": "Reuters",
       "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/"
     },
     {
       "id": "article-006",
       "category": "Middle East | International Security",
       "title": "Gulf of Oman Incident Adds to Shipping Risks as US-Iran Tensions Continue",
-      "summary": "US forces say they disabled a commercial vessel accused of breaching the blockade of Iran as maritime security concerns grow.",
-      "content": "The United States military says it fired on and disabled a St Kitts-flagged commercial vessel in the Gulf of Oman after the ship allegedly ignored repeated warnings and attempted to leave the region following a visit to an Iranian port. The incident comes amid continuing tensions over the US naval blockade of Iran and the strategic Strait of Hormuz. Iranian state media have reported explosions at locations in southern Iran, while Iranian military statements have raised claims about tankers and maritime mines. The causes and details of every reported incident have not been independently established. The developments underline the vulnerability of commercial shipping in a region central to global energy supplies. Any prolonged disruption could affect shipping insurance, freight costs, oil prices and supply chains. Diplomatic efforts remain important because a military escalation could have consequences well beyond the countries directly involved. No comprehensive settlement has been announced, and the situation remains fluid.",
-      "image": "oil.jpeg",
+      "summary": "US forces say they disabled a commercial vessel accused of breaching the blockade of Iran as maritime risks increase.",
+      "content": "The United States military says it fired on and disabled a St Kitts-flagged commercial vessel in the Gulf of Oman after the ship allegedly ignored repeated warnings and attempted to leave the region following a visit to an Iranian port. The incident comes amid continuing tensions over the US naval blockade of Iran and the strategic Strait of Hormuz. Iranian media have reported explosions at locations in southern Iran, while Iranian military statements have raised claims about tankers and maritime mines. The details and causes of individual incidents have not all been independently established. The conflict threatens shipping routes, insurance costs and energy markets. Any further disruption around the Strait of Hormuz could affect international oil supplies and shipping costs. No comprehensive diplomatic settlement has been announced.",
+      "image": "assets/oil.jpeg",
       "source": "Associated Press",
       "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b"
     },
     {
       "id": "article-007",
       "category": "Middle East | Israel",
-      "title": "Gadi Eisenkot Receives Opportunity to Form Israel's Next Government",
-      "summary": "President Isaac Herzog has announced his intention to task former military chief Gadi Eisenkot with forming a government after an inconclusive election.",
-      "content": "Israeli President Isaac Herzog announced on 7 November that he intended to task former military chief Gadi Eisenkot with forming the next government. The formal appointment was scheduled for 8 November. The decision follows an election that did not produce a straightforward parliamentary majority. Eisenkot faces difficult coalition negotiations involving parties with differing political positions. Under Israeli law, he has 28 days to attempt to form a government, with a possible extension of up to 14 additional days. The announcement does not mean that Benjamin Netanyahu has already left office. If Eisenkot fails to secure sufficient support, the president may have to consider another candidate or the country could eventually face another election. The process will be closely watched because of its implications for Israel's domestic politics, security policy and approach to the conflict in the region.",
-      "image": "middleeast.jpeg",
-      "source": "Office of the President of Israel | Reuters",
-      "url": "https://www.president.gov.il/en/president-herzog-concludes-consultations-and-announces-he-will-task-gadi-eisenkot-with-forming-a-government/"
+      "title": "Gadi Eisenkot Receives Mandate to Attempt to Form Israel's Next Government",
+      "summary": "President Isaac Herzog has selected former military chief Gadi Eisenkot to attempt to form a government after an inconclusive election.",
+      "content": "Israeli President Isaac Herzog has selected former military chief Gadi Eisenkot to attempt to form the next government after the election failed to produce a parliamentary majority. Eisenkot faces difficult coalition negotiations. The appointment does not mean Benjamin Netanyahu has already left office. The process could lead to a new government, another candidate being asked to form one or eventually another election. The outcome will be important for Israel's domestic political direction and its approach to regional security and diplomacy.",
+      "image": "assets/middleeast.jpeg",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/israeli-president-picks-gadi-eisenkot-netanyahu-rival-form-government-2026-11-07/"
     },
     {
       "id": "article-008",
       "category": "Africa | South Africa",
-      "title": "South Africa's Municipal Elections Point to a New Era of Coalition Politics",
-      "summary": "With approximately 99 per cent of votes counted, the ANC was on about 31 per cent nationally, with the DA and MK Party behind it.",
-      "content": "South Africa's municipal election results point to a further weakening of the African National Congress's traditional electoral dominance. Reuters reported on 8 November that with approximately 99 per cent of votes counted, the ANC had about 31 per cent nationally, compared with approximately 25 per cent for the Democratic Alliance and 10 per cent for the uMkhonto weSizwe Party. The ANC's result represents a substantial decline from its performance in the 2021 local elections. The political consequences are especially significant in major municipalities where no party has secured a clear majority. Johannesburg is among the closely watched contests, and coalition negotiations are expected in several councils. The result reflects continuing public concerns about electricity, water, roads, employment, public safety and municipal administration. The final outcome will depend not only on the vote shares but also on the ability of parties to negotiate stable governing arrangements. For President Cyril Ramaphosa and the ANC leadership, the results present a serious political challenge ahead of future national contests.",
+      "title": "South Africa's Local Elections Show Declining ANC Support and Coalition Challenges",
+      "summary": "The latest count points to a fragmented political landscape and possible coalition negotiations in major cities.",
+      "content": "Reuters reported on 8 November that 99 per cent of votes had been counted in South Africa's municipal elections. The African National Congress had approximately 31 per cent nationally, compared with 25 per cent for the Democratic Alliance and about 10 per cent for the uMkhonto weSizwe Party. The figures represent a major change from the ANC's previous local election performance. No single party secured a majority in several municipalities, including Johannesburg, making coalition negotiations important. Local concerns over electricity, water, roads, employment, public safety and municipal management remain central to the political debate. These are reported count figures and should not be confused with final certified results. The negotiations that follow will help determine the composition of local administrations and the priorities of municipal councils.",
       "image": "assets/leaders/ramaphosa.jpg",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
@@ -257,42 +296,72 @@
     {
       "id": "article-009",
       "category": "Asia-Pacific | Japan and New Zealand",
-      "title": "Japan Earthquake and New Zealand Election Feature in Asia-Pacific Updates",
-      "summary": "Japan recorded a magnitude 5.7 earthquake in Shizuoka, while New Zealand's preliminary election results show a narrow parliamentary balance.",
-      "content": "Two significant developments are attracting attention across the Asia-Pacific region. Japan's earthquake monitoring records show a magnitude 5.7 earthquake in western Shizuoka Prefecture on 8 November. Authorities and monitoring agencies continue to assess the situation, and residents should follow official guidance on aftershocks and local safety arrangements. In New Zealand, the Electoral Commission has released preliminary results from the 7 November general election. The figures show a close contest between the National and Labour parties and a narrow parliamentary advantage for the National-led grouping. However, approximately 399,000 special votes, including overseas ballots, remain to be processed. The official results are scheduled for 27 November. Until the final count is published and political negotiations are completed, the eventual government arrangements remain uncertain.",
-      "image": "asia.jpeg",
-      "source": "Japan Earthquake Monitoring | New Zealand Electoral Commission",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results"
+      "title": "Japan Earthquake and New Zealand Election Lead Asia-Pacific Headlines",
+      "summary": "Japan is assessing the effects of an earthquake, while New Zealand awaits a fuller count after a close general election.",
+      "content": "Reports from Japan said a magnitude 5.7 earthquake struck the Shizuoka region, with more than 20 people injured in initial accounts. Authorities advised residents to remain alert for possible aftershocks. In New Zealand, the provisional election count gave the governing coalition a narrow majority, but around 14 per cent of ballots, including special votes, remained to be counted in the Reuters report. Official results are expected on 27 November. The final distribution of seats may affect coalition negotiations. Neither preliminary election figures nor initial earthquake reports should be treated as final assessments.",
+      "image": "assets/asia.jpeg",
+      "source": "Al Jazeera | Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/what-happens-next-after-new-zealands-vote-2026-11-07/"
     },
     {
       "id": "article-010",
       "category": "Latin America | Colombia",
       "title": "Drone Attack on Colombian Army Base Leaves Three Soldiers Dead",
-      "summary": "Colombia's armed forces reported three deaths and at least 16 injuries after a drone attack on a military base.",
-      "content": "Colombia's armed forces reported that a drone attack on a military base in Santa Rosa del Sur killed three soldiers and wounded at least 16. Authorities had not identified those responsible in the initial report. The area has experienced continuing insecurity involving armed groups and criminal networks competing for influence and control of territory. Investigators will need to establish which group was responsible, the type of drone used and whether the attack is connected to other recent incidents. The attack also raises questions about the protection of military installations and the use of increasingly accessible drone technology by armed groups.",
-      "image": "africa.jpeg",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/7eb8bd82e98900f790b6d4e35eb702ec"
+      "summary": "Colombia's armed forces report three deaths and at least 16 injuries after a drone attack on a military base.",
+      "content": "Colombia's armed forces reported that a drone attack on a base in Santa Rosa del Sur killed three soldiers and wounded at least 16. The authorities had not identified those responsible in the initial report. The attack comes amid continuing security challenges in rural areas, where armed groups and criminal networks have been involved in violence against state forces and local communities. Investigators will need to establish the group responsible, the type of drone used and whether the attack is connected to other recent incidents.",
+      "image": "",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/"
     },
     {
       "id": "article-011",
       "category": "Oceania | Australia",
-      "title": "Australia Confirms Continued Public Ownership of Four Heritage Defence Properties",
-      "summary": "The government says the heritage of four historic defence properties will be protected through continued public ownership.",
-      "content": "The Australian government has confirmed that four heritage-listed defence properties will remain in public ownership. The decision follows public criticism of plans to dispose of the sites. The government says their heritage will be protected and that arrangements will be developed to allow public access after defence operations have vacated the properties. The decision highlights the tension between the management of government assets and the protection of historically important public places. Further details about access, maintenance and future use will be important in determining how the decision is implemented.",
-      "image": "europe.jpeg",
-      "source": "Australian Government | Department of Defence",
-      "url": "https://www.minister.defence.gov.au/media-releases/2026-11-08/first-update-defence-estate-audit"
+      "title": "Australia Reverses Planned Sale of Four Heritage Defence Properties",
+      "summary": "The government says four historic defence properties will remain in public ownership after public criticism of the proposed sales.",
+      "content": "The Australian government has decided to keep four heritage-listed defence properties in public hands following criticism of plans to sell them. The sites include Victoria Barracks in Sydney and Melbourne. The government had identified the properties as underused and costly to maintain, but the proposed sales prompted public concern about their heritage and national significance. The government says it will work with the Australian War Memorial to make the properties accessible to the public once they are vacated by defence operations.",
+      "image": "",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news"
     },
     {
       "id": "article-012",
       "category": "Global Economy | Technology",
       "title": "Global Markets Reassess AI Spending After Sharp Technology Sell-Off",
       "summary": "Investors are reassessing the cost of artificial-intelligence infrastructure and the valuations of major technology companies.",
-      "content": "Global markets have faced volatility following a sharp sell-off in technology shares. Reuters reported that the Nasdaq fell 5.5 per cent on Thursday, with approximately $2.5 trillion wiped from its market value in the report. Investors are reassessing the scale of artificial-intelligence investment, the cost of data-centre infrastructure, technology valuations, inflation and regulatory risks. The sell-off does not by itself establish that a global recession is beginning. It does, however, highlight concerns about whether the revenue and productivity gains expected from large AI investments will justify the capital being committed. The developments are important for technology companies, investors, workers and governments considering the economic impact of artificial intelligence.",
-      "image": "ai.jpeg",
+      "content": "Global markets have faced volatility following a sharp sell-off in technology shares. Reuters reported that the Nasdaq fell 5.5 per cent on Thursday, wiping an estimated $2.5 trillion from its market value. Investors are reassessing the scale of artificial-intelligence investment, the cost of data-centre infrastructure, technology valuations, inflation and regulatory risks. The sell-off does not by itself establish that a global recession is beginning. It does, however, highlight concerns about whether the revenue and productivity gains expected from large AI investments will justify the money being committed. Oil prices and wider market sentiment are also sensitive to developments in the Middle East.",
+      "image": "assets/ai.jpeg",
       "source": "Reuters",
       "url": "https://www.reuters.com/business/take-five/global-markets-themes-graphic-2026-11-06/"
+    },
+    {
+      "id": "article-013",
+      "category": "Africa | Somalia",
+      "title": "Somalia's Security Situation Remains a Regional Priority",
+      "summary": "International and regional attention remains on security operations, civilian protection and the work of the African Union mission.",
+      "content": "Somalia's security situation remains a significant concern for the Horn of Africa. National authorities and international partners continue to face challenges involving armed groups, protection of civilians and the stabilisation of areas affected by conflict. The African Union mission and regional cooperation remain important elements of the wider security response. Developments should be assessed through official mission updates and independently verified reporting.",
+      "image": "news/somalia-un-mission.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
+    },
+    {
+      "id": "article-014",
+      "category": "Asia | India",
+      "title": "India's Electoral Debate Includes Voter Access and Public Confidence",
+      "summary": "Voter registration and electoral administration remain important issues in India's wider democratic debate.",
+      "content": "Electoral participation depends on accessible registration systems, reliable voter records and public confidence in election administration. Debates about voter access and electoral processes remain important in India, where the scale and diversity of the electorate create significant administrative challenges. Claims about specific irregularities should be assessed against official records and independent evidence.",
+      "image": "news/india-voter-protest.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
+    },
+    {
+      "id": "article-015",
+      "category": "Global Business | Technology",
+      "title": "Electric Vehicle Competition Continues to Reshape the Automotive Industry",
+      "summary": "Competition in electric vehicles is putting pressure on prices, supply chains and established manufacturers.",
+      "content": "The electric vehicle industry continues to change as manufacturers compete on price, battery technology, range, charging infrastructure and production costs. Chinese manufacturers have become important participants in the international market, intensifying competition for established carmakers. The industry's next phase will depend on consumer demand, affordability, government policy and the development of charging networks.",
+      "image": "news/byd-electric-vehicles.jpg",
+      "source": "RadiantWaves Media Newsroom",
+      "url": "https://radiantwavesmedia.com/"
     }
   ],
   "leadersWatch": [
@@ -300,9 +369,9 @@
       "name": "Atiku Abubakar",
       "country": "Nigeria",
       "role": "Former Vice-President",
-      "headline": "ADC appeal reported as legal uncertainty continues",
-      "summary": "Atiku says he intends to remain in the 2027 presidential race. ADC lawyers reportedly informed INEC that an appeal and stay application had been filed, but no stay order had been independently verified in the latest report. His political position and the legal status of his nomination must be treated separately.",
-      "image": "assets/leaders/atiku-david-mark-court.jpg",
+      "headline": "ADC legal challenge enters the appeal process",
+      "summary": "The ADC reports filing an appeal and a stay application after the court judgment affecting its leadership and Atiku's nomination. The filing is not proof that a stay has been granted.",
+      "image": "assets/leaders/atiku.jpg",
       "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
     },
@@ -310,8 +379,8 @@
       "name": "Bola Ahmed Tinubu",
       "country": "Nigeria",
       "role": "President of Nigeria",
-      "headline": "APGA support for Tinubu reported",
-      "summary": "A Premium Times political roundup reported that APGA and Anambra Governor Chukwuma Soludo reaffirmed support for the president as political positioning ahead of 2027 continues.",
+      "headline": "APGA reaffirms support for Tinubu",
+      "summary": "A Premium Times political roundup reports that APGA and Anambra Governor Chukwuma Soludo reaffirmed support for the president. The development forms part of the political positioning ahead of the 2027 election.",
       "image": "assets/leaders/tinubu.jpg",
       "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
@@ -320,8 +389,8 @@
       "name": "Donald Trump",
       "country": "United States",
       "role": "President of the United States",
-      "headline": "Democratic congressional victory changes Washington's balance of power",
-      "summary": "Democrats have secured control of both chambers of Congress. The new majority will strengthen legislative scrutiny and oversight of the administration.",
+      "headline": "New congressional balance follows midterm elections",
+      "summary": "The reported Democratic gains will affect congressional oversight and legislative negotiations from January, while presidential powers over foreign policy remain in place.",
       "image": "assets/leaders/trump.jpg",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/"
@@ -330,61 +399,71 @@
       "name": "Emmanuel Macron",
       "country": "France",
       "role": "President of France",
-      "headline": "Government faces pressure over wages and purchasing power",
-      "summary": "Demonstrations over wages, pensions, education and public services have kept social and economic concerns at the centre of France's political debate.",
+      "headline": "France faces continued pressure over purchasing power",
+      "summary": "Demonstrations over wages, education and public services have kept economic and social concerns in the political spotlight.",
       "image": "assets/leaders/macron.jpg",
-      "source": "Le Monde | CGT",
-      "url": "https://www.lemonde.fr/politique/live/2026/11/05/en-direct-greve-du-5-novembre-pres-de-600-000-manifestants-en-france-ce-jeudi-selon-une-estimation-provisoire-du-ministere-de-l-interieur_6806775_823448.html"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/94e10fc8a1edbf7951e2c067418a7d33"
     },
     {
       "name": "Andy Burnham",
       "country": "United Kingdom",
       "role": "Prime Minister",
-      "headline": "UK prepares for 20 November EU summit",
-      "summary": "The UK Government says the summit will focus on practical cooperation with the European Union in security, migration, trade and reducing costs for businesses and farmers.",
+      "headline": "UK prepares for next EU summit",
+      "summary": "The 20 November Brussels summit is expected to address security, energy, trade, climate and migration cooperation.",
       "image": "assets/leaders/andy.jpg",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
+      "source": "European External Action Service",
+      "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
     },
     {
       "name": "Vladimir Putin",
       "country": "Russia",
       "role": "President of Russia",
-      "headline": "Russia watches changes in Washington and international security",
-      "summary": "The change in congressional control in the United States could influence future debates over foreign policy, military funding and diplomatic engagement.",
+      "headline": "Russia watches developments in Washington and the Ukraine conflict",
+      "summary": "The changing US political balance and continuing international discussions over Ukraine remain important to Moscow's diplomatic calculations.",
       "image": "assets/leaders/putin.jpg",
-      "source": "RadiantWaves Media Newsroom",
-      "url": "https://radiantwavesmedia.com/"
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/8f0cee7ab3dea277232b00a87648eaca"
     },
     {
       "name": "Xi Jinping",
       "country": "China",
       "role": "President of China",
-      "headline": "China remains central to global trade and economic relations",
-      "summary": "China remains an important factor in global supply chains, trade policy and the international economic outlook as geopolitical tensions continue.",
+      "headline": "China remains central to global trade and diplomatic relations",
+      "summary": "International attention remains on China's economic position, global supply chains and the impact of geopolitical tensions on trade.",
       "image": "assets/leaders/xi.jpg",
-      "source": "RadiantWaves Media Newsroom",
+      "source": "RadiantWaves Media",
+      "url": "https://radiantwavesmedia.com/"
+    },
+    {
+      "name": "Ursula von der Leyen",
+      "country": "European Union",
+      "role": "President of the European Commission",
+      "headline": "EU prepares for summit with the United Kingdom",
+      "summary": "The European Commission is involved in preparations for the 20 November summit, with energy, security and trade among the issues under discussion.",
+      "image": "assets/leaders/von-der-leyen.jpg",
+      "source": "European External Action Service",
+      "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
+    },
+    {
+      "name": "Mark Carney",
+      "country": "Canada",
+      "role": "Prime Minister of Canada",
+      "headline": "Canada remains engaged in international economic and security discussions",
+      "summary": "Canada's international priorities include trade relations, economic resilience, energy and cooperation with European and North American partners.",
+      "image": "assets/leaders/carney.jpg",
+      "source": "RadiantWaves Media",
       "url": "https://radiantwavesmedia.com/"
     },
     {
       "name": "Cyril Ramaphosa",
       "country": "South Africa",
       "role": "President of South Africa",
-      "headline": "ANC faces pressure after municipal election setback",
-      "summary": "The ANC's reduced support in the municipal elections presents a major political challenge and increases the importance of coalition negotiations in local government.",
+      "headline": "Municipal election results point to a changing political landscape",
+      "summary": "The ANC's performance in the municipal count presents a new political challenge, with coalition negotiations expected in several cities.",
       "image": "assets/leaders/ramaphosa.jpg",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
-    },
-    {
-      "name": "Ursula von der Leyen",
-      "country": "European Union",
-      "role": "President of the European Commission",
-      "headline": "EU prepares for next summit with the United Kingdom",
-      "summary": "The European Commission president is expected to meet the UK prime minister and European Council president in Brussels on 20 November.",
-      "image": "assets/leaders/von-der-leyen.jpg",
-      "source": "UK Government",
-      "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
     }
   ],
   "categories": [
@@ -416,13 +495,15 @@
       {
         "title": "AI Investment Under Fresh Market Scrutiny",
         "summary": "The latest technology sell-off has renewed debate about the cost of AI infrastructure, data centres, company valuations and the time required for major investments to produce sustainable returns.",
+        "image": "assets/ai.jpeg",
         "source": "Reuters",
         "url": "https://www.reuters.com/business/take-five/global-markets-themes-graphic-2026-11-06/"
       },
       {
-        "title": "Electric Vehicle Competition Continues to Reshape the Global Automotive Industry",
-        "summary": "Competition among electric vehicle manufacturers remains an important part of the global technology and industrial transition, with manufacturers under pressure to improve affordability, production efficiency and battery performance.",
-        "source": "RadiantWaves Media Newsroom",
+        "title": "Electric Vehicle Competition Reshapes the Automotive Industry",
+        "summary": "Competition among manufacturers is intensifying around battery technology, vehicle affordability, charging networks and international market access.",
+        "image": "news/byd-electric-vehicles.jpg",
+        "source": "RadiantWaves Media",
         "url": "https://radiantwavesmedia.com/"
       }
     ]
@@ -431,8 +512,8 @@
     {
       "country": "Nigeria",
       "election": "2027 General Election",
-      "status": "Appeal and stay application reported; no verified stay order",
-      "summary": "ADC lawyers reportedly informed INEC that a notice of appeal and an application for a stay had been filed. The legal effect of the judgment remains subject to court proceedings.",
+      "status": "Appeal reported; stay application not yet confirmed as granted",
+      "summary": "ADC lawyers reportedly filed a notice of appeal and applied for a stay of execution following the Federal High Court judgment. The court's response remains important.",
       "source": "Premium Times",
       "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
     },
@@ -440,15 +521,15 @@
       "country": "United States",
       "election": "2026 Midterm Elections",
       "status": "Congressional control determined",
-      "summary": "Democrats have secured control of both chambers of Congress and will take up their new majority when the next Congress convenes in January.",
+      "summary": "Democrats have reportedly secured control of both chambers of Congress from January.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/"
     },
     {
       "country": "South Africa",
       "election": "2026 Municipal Elections",
-      "status": "Count nearing completion; coalition talks expected",
-      "summary": "With approximately 99 per cent of votes counted, the ANC was on about 31 per cent nationally. Several municipalities are expected to require coalition negotiations.",
+      "status": "99 per cent count reported; final certification awaited",
+      "summary": "Reuters reported the ANC on approximately 31 per cent, the DA on 25 per cent and the MK Party on about 10 per cent, with coalition talks expected in several municipalities.",
       "source": "Reuters",
       "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
     },
@@ -456,90 +537,100 @@
       "country": "Israel",
       "election": "October 2026 Parliamentary Election",
       "status": "Government formation",
-      "summary": "President Isaac Herzog has announced his intention to task Gadi Eisenkot with forming a government. The formal mandate and coalition negotiations are the next steps.",
-      "source": "Office of the President of Israel",
-      "url": "https://www.president.gov.il/en/president-herzog-concludes-consultations-and-announces-he-will-task-gadi-eisenkot-with-forming-a-government/"
+      "summary": "President Isaac Herzog has selected Gadi Eisenkot to attempt to form a government after the election produced no majority.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/middle-east/israeli-president-picks-gadi-eisenkot-netanyahu-rival-form-government-2026-11-07/"
     },
     {
       "country": "New Zealand",
       "election": "7 November 2026 General Election",
-      "status": "Preliminary results; special votes outstanding",
-      "summary": "Preliminary results show a narrow parliamentary balance. Approximately 399,000 special votes remain to be processed, with official results scheduled for 27 November.",
-      "source": "New Zealand Electoral Commission",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results"
+      "status": "Provisional count; special votes outstanding",
+      "summary": "The governing coalition has a narrow provisional majority, but around 14 per cent of ballots remained to be counted in the Reuters report. Official results are expected on 27 November.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/what-happens-next-after-new-zealands-vote-2026-11-07/"
     }
   ],
   "weeklyReview": {
     "headline": "The Week in Review: 2–8 November 2026",
-    "summary": "The past week brought major developments in Nigerian opposition politics, global debt, US congressional politics, the Middle East conflict, European relations and elections in Africa and the Asia-Pacific region.",
+    "summary": "The past week brought major developments in Nigeria's opposition politics, global debt, US congressional politics, Middle East security, European relations and elections in Africa and the Asia-Pacific region.",
     "stories": [
       {
         "category": "Nigeria | Politics",
-        "headline": "ADC Leadership Dispute and Atiku Nomination Challenge",
-        "summary": "The 5 November Federal High Court judgment triggered political reactions and a legal challenge. ADC lawyers subsequently reported filing an appeal and an application for a stay, although no stay order had been verified in the latest report.",
+        "headline": "ADC Leadership and Atiku Nomination Dispute",
+        "summary": "The 5 November Federal High Court judgment triggered political reactions and a legal challenge. ADC lawyers subsequently reported filing an appeal and a stay application.",
+        "image": "assets/leaders/atiku-david-mark-court.jpg",
         "source": "Premium Times",
         "url": "https://www.premiumtimesng.com/news/top-news/923342-2027-politics-watch-from-adcs-court-appeal-to-apgas-tinubu-endorsement.html"
       },
       {
         "category": "Nigeria | Economy",
-        "headline": "World Bank Records Nigeria's 2025 External Debt at $145.015bn",
-        "summary": "The World Bank's 2026 data highlights the increase in Nigeria's external debt stock and the importance of monitoring repayment obligations and export earnings.",
-        "source": "World Bank",
-        "url": "https://datatopics.worldbank.org/debt/ids/country/nga"
+        "headline": "World Bank Figures Put Nigeria's 2025 External Debt Stock at $145.015bn",
+        "summary": "The World Bank's figures highlighted the increase in external debt and the importance of distinguishing public debt from the wider national external debt total.",
+        "image": "assets/nigeria.jpeg",
+        "source": "Channels Television",
+        "url": "https://www.channelstv.com/2026/11/06/nigerias-external-debt-hits-145bn-as-servicing-burden-rises-world-bank/"
       },
       {
         "category": "United States",
         "headline": "Democrats Win Control of Both Chambers of Congress",
         "summary": "The midterm result changes the legislative and oversight environment for President Trump from January.",
+        "image": "assets/leaders/trump.jpg",
         "source": "Reuters",
         "url": "https://www.reuters.com/world/us/midterms-upended-congress-trump-still-commands-foreign-policy-2026-11-05/"
       },
       {
         "category": "Middle East",
         "headline": "US-Iran Conflict and Gulf Shipping Risks Intensify",
-        "summary": "Military incidents, maritime restrictions and diplomatic uncertainty continued to raise concerns about regional stability and international shipping.",
+        "summary": "Military incidents, maritime restrictions and diplomatic efforts remained central to the regional crisis.",
+        "image": "assets/oil.jpeg",
         "source": "Associated Press",
         "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b"
       },
       {
         "category": "United Kingdom and European Union",
-        "headline": "Preparations Continue for the 20 November Summit",
-        "summary": "The UK and EU are preparing discussions on security, migration, trade and practical cooperation.",
-        "source": "UK Government",
-        "url": "https://www.gov.uk/government/news/prime-minister-to-attend-uk-eu-summit-in-brussels-on-20-november"
+        "headline": "Preparations Begin for the 20 November Summit",
+        "summary": "The UK and EU are preparing discussions on trade, security, energy, climate and migration.",
+        "image": "assets/uk-government.jpg",
+        "source": "European External Action Service",
+        "url": "https://www.eeas.europa.eu/delegations/united-kingdom/eu-uk-summit-take-place-brussels-20-november_en"
       },
       {
         "category": "France",
-        "headline": "Large Demonstrations Over Wages and Purchasing Power",
-        "summary": "Workers and students demonstrated over wages, pensions, education and public services. The Interior Ministry and CGT published different attendance estimates.",
-        "source": "Le Monde | CGT",
-        "url": "https://www.lemonde.fr/politique/live/2026/11/05/en-direct-greve-du-5-novembre-pres-de-600-000-manifestants-en-france-ce-jeudi-selon-une-estimation-provisoire-du-ministere-de-l-interieur_6806775_823448.html"
+        "headline": "Demonstrations Keep Wages and Purchasing Power in Focus",
+        "summary": "Workers and students demonstrated over wages, education and public services, prompting further public debate.",
+        "image": "assets/france-protests.jpeg",
+        "source": "Associated Press",
+        "url": "https://apnews.com/article/94e10fc8a1edbf7951e2c067418a7d33"
       },
       {
         "category": "South Africa",
-        "headline": "Municipal Elections Show a Major Decline in ANC Support",
-        "summary": "The latest count shows the ANC well below its 2021 local election level and points to coalition negotiations in several municipalities.",
+        "headline": "Municipal Elections Show Changing Party Support",
+        "summary": "The latest count reported by Reuters showed the ANC at approximately 31 per cent and pointed to coalition negotiations.",
+        "image": "assets/leaders/ramaphosa.jpg",
         "source": "Reuters",
         "url": "https://www.reuters.com/world/africa/south-africas-anc-battered-by-local-election-losses-ahead-coalition-talks-2026-11-08/"
       },
       {
         "category": "Israel",
-        "headline": "Gadi Eisenkot Selected to Attempt to Form a Government",
-        "summary": "The inconclusive election has opened a new coalition negotiation process, with the formal mandate expected on 8 November.",
-        "source": "Office of the President of Israel",
-        "url": "https://www.president.gov.il/en/president-herzog-concludes-consultations-and-announces-he-will-task-gadi-eisenkot-with-forming-a-government/"
+        "headline": "Eisenkot Receives Mandate to Form a Government",
+        "summary": "The inconclusive election has opened a new coalition negotiation process.",
+        "image": "assets/middleeast.jpeg",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/israeli-president-picks-gadi-eisenkot-netanyahu-rival-form-government-2026-11-07/"
       },
       {
         "category": "New Zealand",
-        "headline": "General Election Produces a Narrow Preliminary Parliamentary Balance",
-        "summary": "The preliminary count points to a close parliamentary situation, with special votes still to be counted before official results on 27 November.",
-        "source": "New Zealand Electoral Commission",
-        "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results"
+        "headline": "General Election Produces a Close Provisional Count",
+        "summary": "The initial count gave the governing coalition a narrow majority, with special votes still outstanding.",
+        "image": "assets/asia.jpeg",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/what-happens-next-after-new-zealands-vote-2026-11-07/"
       },
       {
         "category": "Global Economy",
         "headline": "Technology Shares Fall as AI Investment Faces Scrutiny",
-        "summary": "A sharp Nasdaq decline renewed questions about technology valuations, AI spending and market risk.",
+        "summary": "A sharp technology sell-off renewed questions about valuations, AI spending and market risk.",
+        "image": "assets/ai.jpeg",
         "source": "Reuters",
         "url": "https://www.reuters.com/business/take-five/global-markets-themes-graphic-2026-11-06/"
       }
@@ -563,12 +654,12 @@
   },
   "radiantWavesPerspective": {
     "headline": "The RadiantWaves Perspective",
-    "text": "Today's developments connect three important public questions: the rule of law, responsible economic management and international stability. Nigeria's ADC appeal must be assessed through the actual court documents and orders. The filing of an appeal does not automatically suspend a judgment, and Atiku's political determination must be distinguished from the legal status of his nomination. The World Bank's external debt figures should be examined alongside borrowing purposes, repayment obligations and economic returns. South Africa's municipal results demonstrate the importance of public accountability and effective local government. Britain's post-Brexit relationship with Europe should be judged by the agreements reached rather than political slogans. In the Middle East, maritime security and civilian protection remain urgent concerns. RadiantWaves Media will continue to separate verified developments from allegations, provisional results and political interpretations."
+    "text": "Today's developments connect three important public questions: the rule of law, responsible economic management and international stability. Nigeria's ADC appeal must be assessed through the actual court documents and orders. The World Bank's external debt figures should be examined alongside borrowing purposes, repayment obligations and economic returns. Britain's post-Brexit relationship with Europe should be judged by the agreements reached rather than political slogans. In the Middle East, maritime security and civilian protection remain urgent concerns. South Africa's provisional election count shows the importance of coalition negotiations and accountable local government. RadiantWaves Media will continue to distinguish verified developments from allegations, provisional results and political interpretations."
   },
   "sponsoredAdverts": [],
   "sourcePolicy": {
     "headline": "Our Editorial Commitment",
-    "text": "RadiantWaves Media reports in original editorial language and identifies the sources used for verification. We distinguish confirmed developments from allegations, political claims, early election results and pending legal decisions. Source links are provided for readers who wish to consult the original reporting. Figures are attributed to the institutions or news organisations that reported them."
+    "text": "RadiantWaves Media reports in original editorial language and identifies the sources used for verification. We distinguish confirmed developments from allegations, political claims, early election results and pending legal decisions. Source links are provided for readers who wish to consult the original reporting. Figures are attributed to the institutions or news organisations that reported them. Images are selected to match the people, places and events described in each report."
   },
   "footer": {
     "company": "RADIANTWAVES MEDIA NIGERIA LTD",

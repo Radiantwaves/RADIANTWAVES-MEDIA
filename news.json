@@ -7,60 +7,60 @@
   },
   "edition": "Morning News & Global Update",
   "date": "12 November 2026",
-  "updatedAt": "2026-11-12T05:52:00+01:00",
+  "updatedAt": "2026-11-12T06:34:00+01:00",
   "timezone": "Europe/Paris",
   "hero": {
-    "title": "Global tensions, political uncertainty and public health developments shape the morning headlines",
-    "description": "From renewed attacks involving Russia and Ukraine to Nigeria’s opposition political dispute, France’s 2027 political debate, and public health developments in East Africa, the world faces another consequential day.",
+    "title": "Global tensions, political change and economic pressures shape today's headlines",
+    "description": "A comprehensive look at the Russia–Ukraine conflict, Nigeria's opposition politics, developments in France, American democracy, African public health and international diplomacy.",
     "image": "assets/diplomacy.jpeg",
     "category": "Global Affairs",
     "country": "Global"
   },
-  "morningSummary": "Good morning. Thursday, 12 November 2026. Today's international news agenda is dominated by the continuing Russia–Ukraine conflict and renewed diplomatic activity, including planned discussions involving US representatives and President Vladimir Putin. In Nigeria, the dispute surrounding the African Democratic Congress leadership and Atiku Abubakar's political future remains unresolved as INEC awaits the certified court judgment. In East Africa, Kenya has begun the 42-day countdown towards a possible Ebola-free declaration after its final known patient was discharged. France is facing renewed debate about the 2027 presidential contest following Emmanuel Macron's public comments about judoka Teddy Riner, while a weaker economic outlook adds pressure to the country's political and budgetary discussions. Elsewhere, G7 foreign ministers have reaffirmed their positions on Ukraine, maritime security and the Indo-Pacific; South Sudan faces concerns over preparations for its planned December election; and China and ASEAN have failed to meet their target for completing a South China Sea code of conduct. RadiantWaves Media brings you the key developments, their context and why they matter.",
+  "morningSummary": "Good morning. Thursday, 12 November 2026. Today's international agenda is shaped by renewed military attacks involving Russia and Ukraine, alongside fresh diplomatic efforts following discussions in Abu Dhabi. In Nigeria, the African Democratic Congress leadership dispute remains unresolved as INEC awaits the certified court judgment. Kenya has discharged its last known Ebola patient and begun the 42-day countdown towards a possible declaration that the country is free of the outbreak. France faces questions about its 2027 political succession and a weaker economic outlook. In the United States, the results of the midterm elections have changed the political balance in Congress, raising important questions about accountability, executive power and the legislative agenda. G7 foreign ministers have reaffirmed support for Ukraine and discussed international security, while South Sudan faces concerns about its December election preparations. China and ASEAN have also missed their target for completing a South China Sea code of conduct. RadiantWaves Media brings you the facts, context and implications behind these developments.",
   "breaking": [
     {
       "title": "Russia and Ukraine exchange attacks as US envoys prepare for Moscow talks",
-      "description": "Explosions were reported in Kyiv as Russia and Ukraine exchanged attacks. US representatives are expected to meet President Vladimir Putin in Moscow following peace discussions in Abu Dhabi.",
+      "description": "Explosions were reported in Kyiv while Russia said it had intercepted drones heading towards Moscow. The latest attacks came after US-mediated discussions in Abu Dhabi.",
       "image": "assets/leaders/zelensky.jpg",
       "country": "Ukraine / Russia",
       "category": "Breaking News",
       "source": "Reuters"
     },
     {
-      "title": "Nigeria: INEC awaits certified court judgment in ADC leadership dispute",
-      "description": "INEC says it needs the certified true copy of the Federal High Court judgment before determining its next steps in the dispute affecting the ADC leadership.",
+      "title": "Nigeria: INEC awaits certified judgment in ADC leadership dispute",
+      "description": "INEC says it needs the certified true copy of the Federal High Court judgment before determining its next steps in the ADC leadership dispute.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
       "country": "Nigeria",
       "category": "Politics",
-      "source": "Premium Times; INEC statements"
+      "source": "Premium Times; INEC"
     },
     {
-      "title": "Kenya begins 42-day Ebola-free countdown after final patient is discharged",
-      "description": "Kenya has discharged its last known Ebola patient. The country will need to complete a 42-day monitoring period without a new case before it can be declared Ebola-free.",
+      "title": "Kenya begins 42-day Ebola-free countdown",
+      "description": "The last known patient has been discharged and the final contacts have completed monitoring. The countdown began on 12 November.",
       "image": "assets/africa.jpeg",
       "country": "Kenya",
       "category": "Health",
       "source": "WHO Africa"
     },
     {
-      "title": "France's 2027 debate intensifies after Macron comments on Teddy Riner",
-      "description": "President Emmanuel Macron's public praise of judoka Teddy Riner, who has announced a presidential bid, has fuelled discussion about the political landscape ahead of 2027.",
-      "image": "assets/leaders/macron.jpg",
-      "country": "France",
-      "category": "Politics",
-      "source": "Le Monde"
+      "title": "G7 ministers reaffirm support for Ukraine",
+      "description": "Foreign ministers from the G7 met in Paris and reaffirmed support for Ukraine, maritime security and coordinated international diplomacy.",
+      "image": "assets/diplomacy.jpeg",
+      "country": "France / International",
+      "category": "Diplomacy",
+      "source": "GOV.UK; French Foreign Ministry"
     },
     {
-      "title": "Moody's cuts France's 2026 growth forecast to 0.2%",
-      "description": "The revised outlook adds to pressure on the French government as it faces difficult budget negotiations and concerns about public debt.",
+      "title": "France's economic outlook weakened as Moody's lowers growth forecast",
+      "description": "Moody's has reduced its forecast for French economic growth in 2026, adding to concerns about public finances and political uncertainty.",
       "image": "assets/market.jpeg",
       "country": "France",
       "category": "Economy",
-      "source": "AFP"
+      "source": "Moody's; AFP"
     },
     {
-      "title": "South Sudan warned over risks surrounding December election",
-      "description": "An African Union envoy has warned that inadequate preparation and financing could threaten the country's planned 22 December election.",
+      "title": "South Sudan faces concerns over December election preparations",
+      "description": "An African Union envoy has warned that inadequate preparations and political tensions could undermine the planned election.",
       "image": "assets/africa.jpeg",
       "country": "South Sudan",
       "category": "Africa",
@@ -68,60 +68,62 @@
     }
   ],
   "featured": {
-    "title": "Ukraine war: renewed attacks coincide with fresh diplomatic efforts",
-    "subtitle": "US representatives prepare to meet Vladimir Putin after Abu Dhabi discussions produce a prisoner-exchange agreement but no breakthrough on territory.",
-    "description": "Russia and Ukraine exchanged attacks on their respective capitals early Thursday, while diplomatic efforts continued to explore possible ways to reduce the conflict.",
+    "title": "Ukraine war: attacks continue as diplomatic efforts intensify",
+    "subtitle": "US representatives are expected to meet Vladimir Putin after Abu Dhabi talks produced an agreement to arrange a prisoner exchange but no breakthrough on territorial disputes.",
+    "description": "Russia and Ukraine exchanged attacks on their respective capitals as Washington pursued another round of diplomatic engagement.",
     "image": "assets/leaders/zelensky.jpg",
     "category": "World News",
     "country": "Ukraine / Russia",
-    "content": "Explosions were reported in Kyiv early Thursday as Russia and Ukraine exchanged attacks. The full extent of damage in the Ukrainian capital was not immediately clear. Moscow Mayor Sergei Sobyanin said that five drones heading towards the Russian capital had been brought down. The latest attacks came after two days of US-mediated discussions in Abu Dhabi. Those discussions ended with an agreement to arrange a prisoner exchange, but no breakthrough was reported on the central question of territorial control. US envoys Jared Kushner and Steve Witkoff are expected to travel to Moscow to meet President Vladimir Putin. The diplomatic effort is also expected to involve discussions with Ukrainian President Volodymyr Zelenskyy and European leaders. The proposed engagement matters because any settlement affecting Ukraine's territory and security will have consequences for European security and the wider international order. However, a prisoner-exchange agreement should not be mistaken for a ceasefire or a peace settlement. The fighting continues, and the key political disagreements remain unresolved.",
+    "content": "Russia and Ukraine exchanged attacks early on Thursday, 12 November, underlining the continuing military dimension of the war despite renewed diplomatic activity. Explosions were heard in Kyiv, although the extent of any damage was not immediately established. Moscow Mayor Sergei Sobyanin said five drones heading towards the Russian capital had been brought down. The latest developments followed two days of US-mediated discussions in Abu Dhabi. Russian and Ukrainian negotiators agreed to arrange a prisoner exchange, but the talks did not resolve the central disagreements over territory. US representatives Jared Kushner and Steve Witkoff were expected to travel to Moscow to meet President Vladimir Putin. Their diplomatic mission also involves further engagement with Ukrainian President Volodymyr Zelenskyy and European leaders. The prisoner-exchange agreement is a humanitarian development, but it must not be confused with a ceasefire or a peace agreement. Fighting continues, and the fundamental disagreements over territory, sovereignty and security remain unresolved.",
+    "whyItMatters": "The conflict has consequences for European security, international diplomacy, energy markets, food supply chains and the future security arrangements of the continent.",
+    "whatHappensNext": "Attention will focus on the planned Moscow meeting, subsequent discussions with Ukraine and European leaders, and whether the agreed prisoner exchange can be implemented.",
     "source": "Reuters",
     "publishedAt": "12 November 2026"
   },
   "topStories": [
     {
-      "title": "Ukraine and Russia exchange attacks as US diplomatic mission prepares for Moscow",
-      "description": "Fresh attacks underline the continuing military risks even as Washington pursues diplomatic contacts with Moscow and Kyiv.",
+      "title": "Russia and Ukraine exchange attacks as diplomatic contacts continue",
+      "description": "The latest attacks demonstrate that military operations continue despite renewed US-mediated discussions.",
       "image": "assets/leaders/zelensky.jpg",
       "category": "World",
       "country": "Ukraine / Russia",
       "source": "Reuters"
     },
     {
-      "title": "ADC dispute: INEC says it must examine certified court judgment before acting",
-      "description": "The commission says it will review the court's certified decision through its institutional process before determining the implications for the party.",
+      "title": "ADC leadership dispute: INEC awaits certified court judgment",
+      "description": "The electoral commission says it will examine the certified judgment before determining the implications for the party.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
       "category": "Nigeria",
       "country": "Nigeria",
       "source": "Premium Times; INEC"
     },
     {
-      "title": "Kenya's Ebola response enters critical 42-day monitoring period",
-      "description": "The final known patient has been discharged, but health authorities must continue surveillance throughout the countdown.",
+      "title": "Kenya begins 42-day countdown after final Ebola patient is discharged",
+      "description": "The country has reached an important public-health milestone, but surveillance must continue.",
       "image": "assets/africa.jpeg",
       "category": "Africa",
       "country": "Kenya",
       "source": "WHO Africa"
     },
     {
-      "title": "Macron's comments on Teddy Riner raise questions about France's 2027 political contest",
-      "description": "Riner's presidential announcement and Macron's public reaction have added a new dimension to the debate about the political succession.",
-      "image": "assets/leaders/macron.jpg",
-      "category": "Europe",
+      "title": "G7 foreign ministers reaffirm support for Ukraine at Paris meeting",
+      "description": "The ministers also discussed maritime security, Iran and wider international crises.",
+      "image": "assets/diplomacy.jpeg",
+      "category": "Diplomacy",
       "country": "France",
-      "source": "Le Monde"
+      "source": "GOV.UK; French Foreign Ministry"
     },
     {
-      "title": "France's economic outlook weakened as Moody's lowers growth forecast",
-      "description": "Political uncertainty, borrowing costs and fiscal pressures are weighing on the country's economic outlook.",
+      "title": "France's economic growth forecast reduced to 0.2%",
+      "description": "The revised outlook highlights the pressure of political uncertainty, borrowing costs and public finances.",
       "image": "assets/market.jpeg",
       "category": "Business",
       "country": "France",
-      "source": "AFP"
+      "source": "Moody's; AFP"
     },
     {
-      "title": "China and ASEAN miss deadline for South China Sea code of conduct",
-      "description": "Negotiators have made progress on the draft but unresolved disagreements mean discussions will continue into 2027.",
+      "title": "China and ASEAN miss target for South China Sea agreement",
+      "description": "Negotiators have made progress on draft language but major differences remain.",
       "image": "assets/asia.jpeg",
       "category": "Asia",
       "country": "China / Southeast Asia",
@@ -136,10 +138,11 @@
       "region": "Europe",
       "country": "Ukraine / Russia",
       "image": "assets/leaders/zelensky.jpg",
-      "summary": "Fresh attacks on Kyiv and Moscow coincided with renewed US diplomatic engagement following talks in Abu Dhabi.",
-      "content": "Russia and Ukraine exchanged attacks on their capitals early Thursday, highlighting the continuing military dimension of the war despite renewed diplomatic activity. Explosions were heard in Kyiv, although the full extent of damage was not immediately known. Moscow Mayor Sergei Sobyanin said five drones heading towards Moscow had been shot down. The latest diplomatic effort follows two days of US-mediated talks in Abu Dhabi. The discussions produced an agreement to arrange a prisoner exchange, but failed to resolve the central dispute over territory. US envoys Jared Kushner and Steve Witkoff are expected to meet Russian President Vladimir Putin in Moscow. Their discussions are expected to address the next steps in negotiations and the possible involvement of European partners. The diplomatic process remains difficult because Ukraine's territorial integrity, future security arrangements and Russia's demands remain major points of disagreement. For Ukraine, any settlement will need to address the country's sovereignty and long-term security. For Europe, the outcome could shape defence planning, energy security and relations with Russia for years. The agreed prisoner exchange is a humanitarian development, but it does not mean the war has ended or that a ceasefire is in place. Further diplomatic meetings will be watched closely for evidence of practical progress.",
-      "whyItMatters": "The conflict remains a major security concern for Europe and the wider international community. Any diplomatic agreement will have implications for Ukraine's sovereignty, European defence and relations between Russia and Western governments.",
-      "whatNext": "Attention will turn to the planned Moscow meeting, further contacts with Ukraine and European leaders, and whether the prisoner-exchange agreement can be implemented.",
+      "summary": "Fresh attacks on Kyiv and Moscow coincide with diplomatic efforts following discussions in Abu Dhabi.",
+      "content": "Russia and Ukraine exchanged attacks on their capitals early Thursday. Explosions were heard in Kyiv, although the full extent of damage was not immediately known. Moscow Mayor Sergei Sobyanin said five drones heading towards Moscow had been intercepted. The latest military developments came after two days of US-mediated discussions in Abu Dhabi. Negotiators agreed to arrange a prisoner exchange, but no breakthrough was reported on the central dispute over territory. US envoys Jared Kushner and Steve Witkoff were expected to meet Russian President Vladimir Putin in Moscow. The discussions are expected to address the diplomatic process and the possible involvement of European partners. Ukraine continues to insist that any sustainable settlement must protect its sovereignty and security. Russia's territorial demands remain a major obstacle. The agreement to arrange a prisoner exchange is significant for families affected by the war, but it does not constitute a ceasefire or a peace settlement.",
+      "background": "The war began with Russia's full-scale invasion of Ukraine in February 2022. The conflict has caused extensive destruction, displacement and international security concerns.",
+      "whyItMatters": "Any settlement will affect Ukraine's territorial integrity, European defence policy, relations between Russia and Western governments and the wider international order.",
+      "whatHappensNext": "The planned Moscow meeting, further contacts with Zelenskyy and European leaders, and implementation of the prisoner-exchange agreement will be important developments to monitor.",
       "source": "Reuters",
       "publishedAt": "12 November 2026"
     },
@@ -150,10 +153,11 @@
       "region": "Africa",
       "country": "Nigeria",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
-      "summary": "INEC says it has not received the certified true copy of the Federal High Court judgment concerning the ADC leadership dispute.",
-      "content": "The dispute over the leadership of the African Democratic Congress remains a significant issue for Nigeria's opposition politics as the country moves towards the 2027 general election. INEC Chairman Joash Amupitan has said that the commission needs the certified true copy of the Federal High Court judgment before it can properly consider the matter. The commission has explained that it does not make decisions based solely on reports circulating on social media. Once the certified judgment is received, the matter will pass through the relevant institutional and legal review processes. The court ruling delivered on 5 November challenged the position of the David Mark-led ADC leadership and decisions taken under that leadership. The development has implications for party administration and the political plans of opposition figures, including former Vice-President Atiku Abubakar. The ADC has indicated that it is challenging the ruling through the legal process. It is important to distinguish between filing an appeal or an application for a stay and obtaining an actual court order suspending the effect of a judgment. An appeal or stay application does not automatically suspend a ruling. No confirmed stay order is established in the information reviewed for this report. The next steps will depend on the certified judgment, any subsequent court orders and INEC's formal assessment.",
-      "whyItMatters": "The dispute could affect the organisation of one of Nigeria's opposition parties and the preparations of political aspirants ahead of 2027. It also raises wider questions about party leadership, internal democracy and the role of the courts in electoral disputes.",
-      "whatNext": "The key developments to watch are the delivery of the certified judgment to INEC, further court proceedings and any formal decision or clarification from the electoral commission.",
+      "summary": "INEC Chairman Joash Amupitan says the commission needs the certified true copy of the Federal High Court judgment before determining its next steps.",
+      "content": "The dispute over the leadership of the African Democratic Congress remains an important development in Nigeria's opposition politics ahead of the 2027 general election. INEC Chairman Joash Amupitan has said that the commission needs the certified true copy of the Federal High Court judgment before it can properly consider the matter. The commission has indicated that it will not base an institutional decision solely on reports circulating on social media. The ruling delivered on 5 November challenged the position of the David Mark-led ADC leadership and decisions taken under that leadership. The development has implications for party administration and the political plans of opposition figures, including former Vice-President Atiku Abubakar. The ADC has indicated that it is pursuing legal remedies. It is important to distinguish between filing an appeal or an application for a stay and obtaining an actual court order suspending the effect of a judgment. Filing an appeal does not automatically suspend a court ruling. No confirmed stay order is established in the information reviewed for this report. The next steps will depend on the certified judgment, subsequent court proceedings and INEC's formal assessment.",
+      "background": "The ADC has become an important platform in discussions about opposition cooperation and political realignment ahead of the 2027 election.",
+      "whyItMatters": "The dispute could affect the party's recognised leadership, internal organisation and the political plans of aspirants seeking to contest under its platform.",
+      "whatHappensNext": "The key issues are delivery of the certified judgment to INEC, further court proceedings and any formal decision by the electoral commission.",
       "source": "Premium Times; INEC statements; Federal High Court proceedings",
       "publishedAt": "12 November 2026"
     },
@@ -165,9 +169,10 @@
       "country": "Kenya",
       "image": "assets/africa.jpeg",
       "summary": "Kenya has discharged its last known Ebola patient and completed monitoring of the final identified contacts.",
-      "content": "Kenya has reached an important milestone in its Ebola response after the country's final known patient was discharged on 11 November. The last 11 contacts completed their monitoring period on the same day. The World Health Organization says Kenya's 42-day countdown begins on 12 November. If no new cases are identified during that period, the country could be declared free of the outbreak on 23 December 2026. Health authorities identified and monitored 135 contacts. The outbreak involved nine confirmed cases, including two deaths, while seven people recovered. The cases were linked to the initial patient, and the WHO reported no evidence of community transmission. The countdown is an important public-health milestone, but it does not mean surveillance can stop. Health teams must continue monitoring, investigating suspected cases and maintaining the ability to respond rapidly. The development also matters regionally because health authorities across East Africa remain alert to cross-border risks and the movement of people.",
-      "whyItMatters": "The successful identification and monitoring of contacts demonstrate the importance of early detection, coordinated public-health action and transparent reporting. The countdown is conditional: a new case could change the timetable.",
-      "whatNext": "Kenya will continue surveillance throughout the 42-day period. The next key date is 23 December, when a declaration may be possible if no further cases are recorded.",
+      "content": "Kenya reached an important milestone in its Ebola response after the country's last known patient was discharged on 11 November. The final 11 contacts also completed their monitoring on the same day. According to the World Health Organization's Regional Office for Africa, the 42-day countdown begins on 12 November. If no new cases are identified during this period, Kenya could be declared free of the outbreak on 23 December 2026. The outbreak involved nine confirmed cases, including two deaths, while seven people recovered. Health authorities identified and monitored 135 contacts. The cases were linked to the initial patient, and the WHO reported that there had been no community transmission. The countdown is an important milestone, but it does not mean surveillance can stop. Health teams must continue monitoring, investigating suspected cases and maintaining the ability to respond quickly.",
+      "background": "Kenya's outbreak involved the Bundibugyo strain of Ebola virus disease. The initial case was linked to travel from the Democratic Republic of the Congo through Uganda.",
+      "whyItMatters": "The response demonstrates the importance of contact tracing, early detection, public communication and cooperation between health authorities.",
+      "whatHappensNext": "Kenya must complete the 42-day monitoring period without another case before it can be declared free of the outbreak.",
       "source": "World Health Organization Regional Office for Africa",
       "publishedAt": "12 November 2026"
     },
@@ -178,24 +183,26 @@
       "region": "Africa",
       "country": "Democratic Republic of the Congo",
       "image": "assets/africa.jpeg",
-      "summary": "The DRC continues to face a major Ebola burden, with regional authorities monitoring the risk of further spread.",
-      "content": "The Democratic Republic of the Congo remains at the centre of a serious Ebola response, with reported figures indicating a substantial burden of infections and deaths. Regional public-health authorities are continuing surveillance and contact-tracing work as neighbouring countries remain alert to possible cross-border transmission. The wider regional picture requires careful interpretation: an outbreak in one country does not mean every neighbouring country is experiencing sustained community transmission. Nigeria's reported case involved a person with a travel history linked to Uganda who was medically evacuated to Switzerland. Nigerian authorities identified contacts and monitored them as part of the response. The case should not be presented as evidence of a continuing nationwide Ebola outbreak in Nigeria. Ebola response depends on early diagnosis, safe treatment, contact tracing, infection prevention and accurate public communication. Health authorities must also ensure that fear and misinformation do not discourage people from seeking medical care.",
-      "whyItMatters": "Cross-border health risks require coordination between governments, health agencies, transport authorities and international organisations. Clear information helps prevent panic while supporting early reporting of suspected cases.",
-      "whatNext": "Authorities will continue monitoring suspected cases, contacts and cross-border risks. Updated official figures from national health ministries and the WHO remain essential.",
-      "source": "WHO Africa; Associated Press",
+      "summary": "The Democratic Republic of the Congo continues to face a major Ebola burden, with neighbouring countries monitoring the risk of further spread.",
+      "content": "The Democratic Republic of the Congo remains at the centre of a serious Ebola response. The European Centre for Disease Prevention and Control reported 11,042 confirmed cases and 5,387 related deaths in the DRC using data available up to 9 November. The outbreak has affected several provinces, and health authorities continue surveillance and response operations. The regional picture requires careful interpretation. Kenya's final patient has been discharged, while Nigeria's reported case involved a traveller with a history connected to Uganda who was medically evacuated to Switzerland. Nigerian authorities identified contacts and continued monitoring. This should not be presented as evidence of a sustained nationwide Ebola outbreak in Nigeria. The response depends on early diagnosis, safe treatment, contact tracing, infection prevention and accurate public communication.",
+      "background": "The current regional outbreak involves the Bundibugyo strain of Ebola virus. Several countries have strengthened surveillance and cross-border health coordination.",
+      "whyItMatters": "Cross-border health risks require cooperation between governments, airports, health agencies and international organisations. Accurate reporting helps prevent both complacency and unnecessary public panic.",
+      "whatHappensNext": "Authorities will continue monitoring suspected cases, contacts and cross-border risks. Updated figures from national health ministries and the WHO remain essential.",
+      "source": "European Centre for Disease Prevention and Control; WHO Africa",
       "publishedAt": "12 November 2026"
     },
     {
       "id": "rw-2026-11-12-005",
-      "title": "Macron's public praise of Teddy Riner fuels France's 2027 succession debate",
+      "title": "Macron's public comments on Teddy Riner fuel France's 2027 succession debate",
       "category": "French Politics",
       "region": "Europe",
       "country": "France",
       "image": "assets/leaders/macron.jpg",
-      "summary": "The French president's comments about judoka Teddy Riner have intensified discussion following Riner's announcement of a presidential bid.",
-      "content": "France's political debate ahead of the 2027 presidential election has taken an unexpected turn following judoka Teddy Riner's announcement that he intends to run for president. President Emmanuel Macron publicly welcomed Riner's entry into the political debate, a reaction that has attracted attention because Macron cannot seek a third consecutive presidential term. Riner has presented himself as a candidate outside the traditional left-right divide, although his programme remains under development. His announcement has raised questions about how a high-profile sporting figure could translate public recognition into a political movement capable of competing in a national election. Macron's public comments have also prompted discussion among centrist political figures, particularly because the president has not offered comparable political backing to some established figures associated with his political camp. Riner's campaign team and its political independence will be important issues as the campaign develops. Public popularity, sporting achievements and name recognition do not automatically translate into electoral support. A credible presidential campaign will require a detailed programme, a national organisation, political endorsements and the ability to meet the legal requirements for candidacy.",
-      "whyItMatters": "The development adds another potential figure to France's already complex succession debate. It could influence the positioning of centrist parties and other candidates preparing for the post-Macron political landscape.",
-      "whatNext": "Attention will focus on Riner's proposed programme, campaign organisation, political alliances and whether his announcement develops into a fully established presidential campaign.",
+      "summary": "The French president's public reaction to judoka Teddy Riner's presidential announcement has attracted attention ahead of the 2027 election.",
+      "content": "France's political debate ahead of the 2027 presidential election has taken an unexpected turn following judoka Teddy Riner's announcement that he intends to run for president. President Emmanuel Macron publicly welcomed Riner's entry into the political debate. The comments have attracted attention because Macron cannot seek a third consecutive presidential term. Riner's announcement raises questions about whether a prominent figure from outside traditional party politics can build a credible national campaign. Public recognition and sporting achievements do not automatically translate into electoral support. A serious presidential campaign requires a detailed programme, political organisation, alliances and the ability to meet the legal requirements for candidacy. Macron's comments should not be interpreted as proof that he has organised or formally endorsed Riner's campaign.",
+      "background": "France will elect a new president in 2027. Macron is constitutionally unable to seek a third consecutive term, making political succession a major issue.",
+      "whyItMatters": "The development adds another potential figure to an already complex political landscape and may influence the positioning of established parties and candidates.",
+      "whatHappensNext": "Attention will focus on Riner's programme, campaign organisation, political alliances and whether the announcement develops into a fully established candidacy.",
       "source": "Le Monde",
       "publishedAt": "12 November 2026"
     },
@@ -206,53 +213,57 @@
       "region": "Europe",
       "country": "France",
       "image": "assets/market.jpeg",
-      "summary": "The rating agency has reduced its growth forecast amid political uncertainty, borrowing costs and pressure on public finances.",
-      "content": "France is facing a weaker economic outlook after Moody's cut its forecast for 2026 economic growth to 0.2%, half the level previously expected. The revised forecast reflects concerns about political uncertainty, higher borrowing costs and the country's difficult fiscal position. The new projection is below the French government's 0.5% growth target and also below the Bank of France's 0.3% forecast. The economic picture is complicated by the country's high public debt and the challenge of passing a budget that reduces the deficit without placing excessive pressure on households and businesses. France's economy contracted by 0.1% in the third quarter after stagnating in the second quarter, according to the figures cited in the report. The government faces a difficult balancing act: it must reassure financial markets about public finances while supporting economic activity and maintaining essential public services. A weaker growth outlook can affect tax receipts, investment decisions and the government's ability to meet fiscal targets.",
-      "whyItMatters": "France is one of Europe's largest economies. Prolonged uncertainty over its budget and public finances could affect borrowing costs, business confidence and the wider European economic outlook.",
-      "whatNext": "Investors and businesses will watch the budget negotiations, future economic data and any further assessment of France's fiscal position.",
-      "source": "AFP; Moody's",
+      "summary": "The reduced forecast adds pressure to France's economic and budgetary debate amid political uncertainty and high public debt.",
+      "content": "France's economic outlook has weakened after Moody's reduced its forecast for economic growth in 2026 to 0.2%. The revised projection is below the government's target of 0.5% and the Bank of France's forecast of 0.3%. Political uncertainty, difficult budget negotiations, borrowing costs and the country's public-finance position are among the concerns affecting the outlook. The revised forecast does not mean that France has entered a recession, but it signals a weaker growth environment. Slower growth can affect tax revenues, public spending plans, business confidence and employment. The challenge for the government is to manage public finances while supporting economic activity and maintaining confidence among investors and households.",
+      "background": "France has faced difficult negotiations over public spending, taxation and debt management. The country's economic performance is closely linked to wider conditions across the euro area.",
+      "whyItMatters": "A weaker growth outlook can complicate efforts to reduce public deficits and may influence borrowing costs, investment and household confidence.",
+      "whatHappensNext": "The next indicators to watch include economic growth figures, budget negotiations, government policy decisions and further assessments from rating agencies.",
+      "source": "Moody's; AFP",
       "publishedAt": "12 November 2026"
     },
     {
       "id": "rw-2026-11-12-007",
-      "title": "French AI advisory body calls for stronger safeguards for users of AI assistants",
+      "title": "French advisory body calls for stronger safeguards around artificial-intelligence assistants",
       "category": "Technology and Society",
       "region": "Europe",
       "country": "France",
-      "image": "assets/france-protests.jpg",
-      "summary": "A report presented to President Macron recommends stronger protections, especially for minors and people vulnerable to emotional manipulation.",
-      "content": "France's Council on AI and Digital Technology has called for stronger safeguards around artificial-intelligence assistants, warning that some systems may encourage emotional dependence or exploit users' vulnerabilities. The report, presented to President Emmanuel Macron on 10 November, recommends stronger regulation rather than a general ban. Among the concerns identified are excessive personalisation, flattering responses, anthropomorphic design and the possibility that vulnerable users may treat an AI assistant as a human relationship. The recommendations include clearer disclosure that a user is interacting with artificial intelligence, stronger protections for minors, improved reporting mechanisms and safeguards for people expressing signs of self-harm or other serious distress. The report also calls for greater transparency around advertising and commercial influence, and for closer assessment of potential vulnerabilities before products are introduced and after they are deployed. The recommendations raise questions about the balance between innovation, consumer protection and freedom to use digital services. Some changes may require action at European Union level rather than through France alone.",
-      "whyItMatters": "AI assistants are increasingly used for education, work, information and personal support. Safeguards could influence how technology companies design products and how regulators protect users.",
-      "whatNext": "The recommendations will feed into discussions about French and European regulation, including protections for minors and transparency requirements for AI services.",
-      "source": "Le Monde; French Council on AI and Digital Technology",
+      "image": "assets/diplomacy.jpeg",
+      "summary": "A French advisory body has recommended stronger protections for users of AI assistants rather than an outright ban.",
+      "content": "France's Council on AI and Digital Technology has recommended stronger safeguards around artificial-intelligence assistants. The advice highlights risks including excessive dependence, misleading human-like interaction, emotional manipulation, hyper-personalisation and the vulnerability of younger users. The recommendations include stronger protections for minors, clearer disclosures, improved reporting mechanisms and greater transparency around advertising. The report does not call for a general ban on AI assistants. Instead, it argues that the technology should develop within a framework that protects users and makes companies more accountable. The debate reflects wider European questions about how to encourage innovation while addressing risks to privacy, wellbeing and public trust.",
+      "background": "AI assistants are increasingly used for education, work, information and personal communication. Governments and regulators are examining how existing rules should apply to these systems.",
+      "whyItMatters": "The debate could influence future regulation, product design and the responsibilities of companies providing AI services in France and across Europe.",
+      "whatHappensNext": "Attention will turn to how the recommendations are considered by policymakers and whether they lead to formal regulatory proposals.",
+      "source": "French Council on AI and Digital Technology; Le Monde",
       "publishedAt": "12 November 2026"
     },
     {
       "id": "rw-2026-11-12-008",
       "title": "G7 foreign ministers reaffirm support for Ukraine and maritime security",
       "category": "Diplomacy",
-      "region": "Global",
+      "region": "Europe",
       "country": "France",
       "image": "assets/diplomacy.jpeg",
-      "summary": "Foreign ministers from the G7 and the European Union met in Paris to discuss Ukraine, maritime security, the Middle East and the Indo-Pacific.",
-      "content": "G7 foreign ministers met in Paris on 9 and 10 November under the French presidency of the group. The meeting brought together representatives from Canada, France, Germany, Italy, Japan, the United Kingdom, the United States and the European Union. Their discussions covered Russia's war against Ukraine, maritime security, food security, the Middle East and tensions in the Indo-Pacific. The ministers reaffirmed support for Ukraine's sovereignty and territorial integrity and addressed attacks affecting civilian shipping in the Black Sea. They also discussed security concerns involving the South China Sea, East China Sea and Taiwan Strait, opposing unilateral attempts to change the status quo through force or coercion. The discussions also addressed wider regional concerns, including the Strait of Hormuz, Iran, Sudan, Yemen and Lebanon. The declaration reflects a shared diplomatic position, but it does not itself resolve the conflicts and security disputes discussed. The practical significance will depend on how member states coordinate diplomatic pressure, assistance and security measures.",
-      "whyItMatters": "The G7 remains an influential forum for coordination among major advanced economies. Its positions can shape diplomatic messaging, economic measures and international responses to security crises.",
-      "whatNext": "Attention will turn to whether the Paris discussions lead to coordinated diplomatic initiatives, further support for Ukraine and practical measures on maritime security.",
+      "summary": "Ministers from Canada, France, Germany, Italy, Japan, the United Kingdom and the United States met in Paris on 9 and 10 November.",
+      "content": "G7 foreign ministers have reaffirmed their support for Ukraine following a meeting in Paris held under the French presidency of the group. The joint declaration, published on 11 November, addressed Ukraine, maritime security, Iran and other international challenges. The ministers condemned attacks affecting civilian shipping in the Black Sea and highlighted the consequences for global food security. They reiterated support for US-led diplomatic efforts while stressing that Europeans must be involved in negotiations concerning the future security of Europe. The statement also addressed Ukraine's financing needs for 2027 and beyond, air defence, energy resilience and sanctions against Russia. The meeting included Canada, France, Germany, Italy, Japan, the United Kingdom and the United States, together with the European Union's High Representative. The declaration is a statement of the participating governments' positions; it is not itself a ceasefire agreement or a settlement of the war.",
+      "background": "The G7 is a forum for major advanced economies to coordinate positions on economic, diplomatic and security matters.",
+      "whyItMatters": "The statement demonstrates continued coordination among major Western economies on Ukraine, maritime trade routes, energy security and international stability.",
+      "whatHappensNext": "The important test will be whether the commitments translate into financial support, practical security assistance and coordinated diplomatic action.",
       "source": "GOV.UK; French Ministry for Europe and Foreign Affairs",
       "publishedAt": "12 November 2026"
     },
     {
       "id": "rw-2026-11-12-009",
-      "title": "South Sudan faces warnings over preparation and funding for December election",
+      "title": "South Sudan warned over risks surrounding December election",
       "category": "African Politics",
       "region": "Africa",
       "country": "South Sudan",
       "image": "assets/africa.jpeg",
-      "summary": "An African Union envoy has warned that inadequate preparation and resources could threaten the planned 22 December election.",
-      "content": "South Sudan is facing renewed international concern over preparations for its planned 22 December election. African Union envoy and former Tanzanian president Jakaya Kikwete has urged the United Nations Security Council to help ensure that the vote is peaceful and credible. He warned that a poorly prepared or violent election could trigger a serious political and security crisis. The concerns come amid a fragile political environment. President Salva Kiir dissolved the transitional government in September, while opposition leader Riek Machar remains under house arrest and is facing trial. Machar's party has argued that his release is necessary for meaningful political dialogue. The United Nations Mission in South Sudan has separately highlighted concerns about security, logistics, the compressed timetable and outstanding commitments under the peace agreement. Humanitarian conditions also remain severe, with millions of people requiring assistance and food insecurity affecting large parts of the population. The election is intended to mark an important step in the country's political transition, but the process faces major practical and political challenges.",
-      "whyItMatters": "South Sudan's political stability affects millions of people and has implications for regional security and humanitarian operations. A disputed or violent election could deepen existing divisions.",
-      "whatNext": "The main issues to monitor are election financing, security arrangements, political participation, implementation of the peace agreement and the response of regional and international partners.",
-      "source": "Associated Press; UNMISS; Radio Tamazuj",
+      "summary": "An African Union envoy has warned that inadequate preparation and political tensions could threaten the planned 22 December election.",
+      "content": "South Sudan is facing renewed concern over preparations for its planned 22 December election. African Union envoy Jakaya Kikwete has urged international partners to help ensure that the electoral process is peaceful. Concerns include security, logistics, financing, political participation and the implementation of the country's peace arrangements. The political environment remains tense, with President Salva Kiir's government facing criticism over the slow implementation of transitional commitments. Opposition leader Riek Machar remains a central figure in the country's political crisis and is facing legal proceedings. The United Nations Mission in South Sudan has also highlighted concerns about the compressed timetable and the practical requirements for conducting an election. A vote held without sufficient preparation or political confidence could deepen instability rather than resolve it.",
+      "background": "South Sudan has experienced prolonged political and security instability since independence in 2011. The country's peace agreement has faced repeated implementation difficulties.",
+      "whyItMatters": "The election could influence the country's political legitimacy, security and humanitarian situation. A credible process is important for the country's long-term stability.",
+      "whatHappensNext": "The key issues are whether the authorities can provide adequate security, financing, logistics and meaningful political participation before the planned election date.",
+      "source": "Associated Press; UNMISS",
       "publishedAt": "12 November 2026"
     },
     {
@@ -262,219 +273,280 @@
       "region": "Asia",
       "country": "China / Southeast Asia",
       "image": "assets/asia.jpeg",
-      "summary": "Negotiators have made progress on a draft agreement but have not resolved key disagreements before the end-of-year target.",
-      "content": "China and the Association of Southeast Asian Nations have missed their target of completing a code of conduct for the South China Sea by the end of 2026. Negotiators have reportedly made progress, with a substantial portion of the draft text provisionally agreed, but important differences remain. These include the geographical scope of the agreement, the wording of sensitive provisions and whether the eventual code should be legally binding. The South China Sea is strategically important because it is a major international shipping route and a source of competing territorial claims involving China, the Philippines, Vietnam, Malaysia, Brunei and Taiwan. The negotiations are intended to reduce the risk of incidents and provide a framework for managing disagreements. However, a code of conduct will only be effective if the parties agree on meaningful rules and are prepared to respect them. Discussions are expected to continue in 2027 under Singapore's ASEAN leadership.",
-      "whyItMatters": "The South China Sea is vital to international trade and regional security. Continued disagreement increases the risk of diplomatic confrontation and maritime incidents.",
-      "whatNext": "Negotiators are expected to continue discussions in 2027, with the unresolved questions of legal status, scope and enforcement likely to remain central.",
+      "summary": "Negotiators have made progress on the draft text but have not resolved disagreements needed to complete the agreement by the end of 2026.",
+      "content": "China and the Association of Southeast Asian Nations have missed their target for completing a code of conduct intended to manage tensions in the South China Sea. Reports indicate that around 80 per cent of the draft text has been provisionally agreed, but important questions remain unresolved. These include the geographic scope of the agreement, the meaning of sensitive legal provisions and whether the final document should be legally binding. The South China Sea is an important international shipping route and a source of overlapping territorial and maritime claims. Several Southeast Asian countries have disputes with China over maritime rights and activities. The failure to meet the deadline does not mean negotiations have ended. Discussions are expected to continue into 2027 under Singapore's ASEAN leadership.",
+      "background": "The South China Sea is strategically important for international trade, fishing, energy resources and regional security.",
+      "whyItMatters": "Unresolved maritime disputes can increase the risk of confrontation and affect shipping, trade and relations between China and neighbouring countries.",
+      "whatHappensNext": "Negotiators will continue discussions on the unresolved legal and geographic questions as ASEAN prepares for the next phase of negotiations.",
       "source": "Associated Press",
       "publishedAt": "12 November 2026"
     },
     {
       "id": "rw-2026-11-12-011",
-      "title": "Trinidad and Tobago same-sex intimacy law challenge reaches Privy Council decision",
+      "title": "Trinidad and Tobago Privy Council ruling raises major human-rights questions",
       "category": "Human Rights",
-      "region": "Caribbean",
+      "region": "World",
       "country": "Trinidad and Tobago",
       "image": "assets/diplomacy.jpeg",
-      "summary": "The Judicial Committee of the Privy Council has ruled on a constitutional challenge concerning laws criminalising consensual same-sex intimacy between adults.",
-      "content": "The Judicial Committee of the Privy Council has delivered a judgment in the case of Jason Jones v Attorney General of Trinidad and Tobago, concerning provisions of the country's Sexual Offences Act that criminalise certain consensual same-sex activity between adults. The decision, dated 10 November 2026, is an important development in a long-running constitutional and human-rights dispute. The case concerns the relationship between criminal law, constitutional protections and the rights of adults to private consensual relationships. The legal outcome must be reported carefully: the appeal was allowed, but the final remedial position requires attention to the court's directions and any further proceedings. It would therefore be premature to describe the matter as if every legal and implementation question had already been settled. The judgment will be closely examined by legal organisations, human-rights advocates and public authorities across the Caribbean and Commonwealth jurisdictions.",
-      "whyItMatters": "The case raises important questions about constitutional rights, privacy, equality and the continuing influence of inherited criminal laws in Commonwealth countries.",
-      "whatNext": "The next stage concerns the final remedial position and how the judgment is applied by the relevant authorities.",
+      "summary": "The Judicial Committee of the Privy Council has issued a decision in the challenge to provisions criminalising consensual same-sex intimacy between adults.",
+      "content": "The Judicial Committee of the Privy Council has delivered a judgment in the case of Jason Jones v Attorney General of Trinidad and Tobago, reported as [2026] UKPC 38. The case concerns provisions of the Sexual Offences Act that criminalise certain consensual same-sex activity between adults in private. The Privy Council allowed the appeal and dismissed the cross-appeal. The court's decision addresses the legal challenge, but the final remedial order is to follow further submissions. It is therefore important not to report that every relevant provision has already been fully removed from the statute without explaining the outstanding remedial stage. The case has implications for constitutional rights, privacy, equality and the relationship between national law and the Privy Council's appellate jurisdiction.",
+      "background": "The Privy Council is the final court of appeal for Trinidad and Tobago. The case concerns the interpretation and constitutional validity of provisions of the country's Sexual Offences Act.",
+      "whyItMatters": "The judgment is significant for human-rights protections and the legal treatment of consensual private relationships between adults.",
+      "whatHappensNext": "Further submissions are required before the final remedial order. The precise legal effect should be assessed against that order when issued.",
       "source": "Judicial Committee of the Privy Council; [2026] UKPC 38",
+      "publishedAt": "12 November 2026"
+    },
+    {
+      "id": "rw-2026-11-12-012",
+      "title": "US midterm results reshape Congress and open a new accountability debate",
+      "category": "United States Politics",
+      "region": "North America",
+      "country": "United States",
+      "image": "assets/leaders/trump.jpg",
+      "summary": "Democratic gains in the 2026 midterm elections have changed the balance of power in Congress, setting up a period of oversight and political confrontation.",
+      "content": "The 2026 US midterm elections have reshaped the political balance in Washington. Associated Press reporting says Democrats' victories have given the party majorities in both chambers of Congress. The result creates the prospect of more intensive congressional scrutiny of the Trump administration during the remaining two years of the president's term. Incoming House Oversight chair Robert Garcia has indicated that investigations into the administration will be a priority. President Donald Trump and Attorney General Todd Blanche have criticised the prospect of extensive investigations, warning that Democratic demands could become politically motivated. Democratic leaders face their own challenge: demonstrating that congressional oversight will address matters of public interest rather than become a substitute for a policy programme. The election result is a political mandate, but it does not automatically resolve disagreements over the economy, immigration, government spending, judicial appointments or executive authority. The effectiveness of the new Congress will depend on its ability to scrutinise government conduct, legislate and respond to voters' concerns.",
+      "background": "Midterm elections determine the composition of Congress and can significantly change the relationship between the executive and legislative branches of government.",
+      "whyItMatters": "Congress has constitutional responsibilities to legislate, oversee federal agencies and scrutinise the executive branch. The new political balance will influence investigations, budgets and national policy.",
+      "whatHappensNext": "Attention will turn to the transition of congressional leadership, committee priorities, proposed investigations and the ability of both parties to agree on legislation.",
+      "source": "Associated Press; CBS News",
       "publishedAt": "12 November 2026"
     }
   ],
   "worldNews": [
     {
       "title": "Ukraine and Russia exchange attacks as diplomatic contacts continue",
-      "description": "Fresh attacks underline the gap between ongoing military operations and efforts to negotiate a possible settlement.",
+      "description": "Fresh attacks on the two capitals underline the continuing military risks despite diplomatic discussions.",
       "image": "assets/leaders/zelensky.jpg",
       "country": "Ukraine / Russia",
+      "category": "International Security",
       "source": "Reuters"
     },
     {
       "title": "G7 ministers discuss Ukraine, maritime security and international crises",
-      "description": "The Paris meeting brought together major industrialised economies and the European Union.",
+      "description": "The Paris meeting produced a joint declaration covering Ukraine, maritime shipping, Iran and other international challenges.",
       "image": "assets/diplomacy.jpeg",
       "country": "Global",
+      "category": "Diplomacy",
       "source": "GOV.UK; French Foreign Ministry"
     },
     {
       "title": "Privy Council delivers judgment in Trinidad and Tobago human-rights case",
-      "description": "The ruling concerns the constitutionality of criminal provisions affecting consensual same-sex intimacy between adults.",
+      "description": "The court allowed the appeal in the Jason Jones case, with a final remedial order to follow further submissions.",
       "image": "assets/diplomacy.jpeg",
       "country": "Trinidad and Tobago",
+      "category": "Human Rights",
       "source": "Judicial Committee of the Privy Council"
     }
   ],
   "usaNews": [
     {
-      "title": "US diplomatic representatives prepare for Moscow talks on Ukraine",
-      "description": "US envoys Jared Kushner and Steve Witkoff are expected to meet Vladimir Putin following the Abu Dhabi discussions.",
+      "title": "US midterm results reshape Congress and open a new accountability debate",
+      "description": "Democratic gains have changed the balance of power in both chambers, setting up a new period of congressional oversight and political debate.",
       "image": "assets/leaders/trump.jpg",
       "country": "United States",
-      "source": "Reuters"
+      "category": "Politics",
+      "source": "Associated Press; CBS News"
     }
   ],
   "europeNews": [
     {
       "title": "Macron's comments on Teddy Riner add a new dimension to France's 2027 debate",
-      "description": "The French president has publicly welcomed the judoka's entry into the political debate.",
+      "description": "The judoka's presidential announcement and Macron's public reaction have attracted attention in the succession debate.",
       "image": "assets/leaders/macron.jpg",
       "country": "France",
+      "category": "Politics",
       "source": "Le Monde"
     },
     {
       "title": "Moody's lowers France's 2026 growth forecast",
-      "description": "The revised 0.2% forecast highlights economic and fiscal pressures facing the French government.",
+      "description": "The revised projection highlights economic and budgetary challenges facing the French government.",
       "image": "assets/market.jpeg",
       "country": "France",
-      "source": "AFP"
+      "category": "Economy",
+      "source": "Moody's; AFP"
     },
     {
       "title": "French advisory body recommends stronger safeguards for AI assistants",
-      "description": "The recommendations focus on minors, transparency and risks of emotional dependence.",
-      "image": "assets/france-protests.jpg",
+      "description": "The recommendations focus on user protection, transparency and risks associated with excessive dependence on AI systems.",
+      "image": "assets/diplomacy.jpeg",
       "country": "France",
-      "source": "Le Monde"
+      "category": "Technology",
+      "source": "French Council on AI and Digital Technology"
     }
   ],
   "africaNews": [
     {
       "title": "Kenya begins 42-day countdown after final Ebola patient is discharged",
-      "description": "The countdown will determine whether Kenya can be declared free of the outbreak in December.",
+      "description": "Kenya could be declared free of the outbreak on 23 December if no new cases are recorded.",
       "image": "assets/africa.jpeg",
       "country": "Kenya",
+      "category": "Health",
       "source": "WHO Africa"
     },
     {
       "title": "South Sudan faces concerns over December election preparations",
-      "description": "The African Union and United Nations have raised concerns about funding, security and political conditions.",
+      "description": "Security, political participation, financing and logistics remain major challenges.",
       "image": "assets/africa.jpeg",
       "country": "South Sudan",
+      "category": "Politics",
       "source": "Associated Press; UNMISS"
     },
     {
       "title": "DR Congo continues Ebola response",
-      "description": "Health authorities remain focused on surveillance, treatment and contact tracing.",
+      "description": "The DRC remains the centre of the regional outbreak, with more than 11,000 confirmed cases reported.",
       "image": "assets/africa.jpeg",
-      "country": "DR Congo",
-      "source": "WHO Africa"
+      "country": "Democratic Republic of the Congo",
+      "category": "Health",
+      "source": "ECDC; WHO Africa"
     }
   ],
   "nigeriaNews": [
     {
       "title": "INEC awaits certified court judgment in ADC leadership dispute",
-      "description": "The commission says it must review the certified judgment before determining its next steps.",
+      "description": "The commission says it needs the certified document before determining its next steps in the dispute affecting the party's leadership.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
       "country": "Nigeria",
+      "category": "Politics",
       "source": "Premium Times; INEC"
     }
   ],
   "asiaNews": [
     {
       "title": "China and ASEAN miss deadline for South China Sea code of conduct",
-      "description": "Negotiations will continue in 2027 as disagreements remain over the scope and legal force of the proposed agreement.",
+      "description": "Negotiators have made progress on draft provisions but unresolved disagreements mean discussions will continue into 2027.",
       "image": "assets/asia.jpeg",
       "country": "China / Southeast Asia",
+      "category": "Diplomacy",
       "source": "Associated Press"
     }
   ],
   "businessNews": [
     {
       "title": "France's growth outlook weakened by political and fiscal uncertainty",
-      "description": "Moody's has reduced its 2026 growth forecast to 0.2%, adding pressure to the government's budget discussions.",
+      "description": "Moody's reduced its 2026 growth forecast to 0.2%, adding pressure to budget discussions and investor confidence.",
       "image": "assets/market.jpeg",
       "country": "France",
-      "source": "AFP; Moody's"
+      "category": "Economy",
+      "source": "Moody's; AFP"
     }
   ],
   "technologyNews": [
     {
-      "title": "France considers stronger safeguards for artificial-intelligence assistants",
-      "description": "Recommendations include clearer AI disclosure, protections for minors and controls against hidden commercial influence.",
-      "image": "assets/france-protests.jpg",
+      "title": "France calls for stronger protections around AI assistants",
+      "description": "A national advisory body has recommended safeguards for users, particularly minors and vulnerable people.",
+      "image": "assets/diplomacy.jpeg",
       "country": "France",
-      "source": "Le Monde; French Council on AI and Digital Technology"
+      "category": "Artificial Intelligence",
+      "source": "French Council on AI and Digital Technology"
     }
   ],
   "editorial": [
     {
       "title": "Democracy requires more than political announcements",
-      "description": "Across different regions, political credibility depends on institutions, transparent processes and the ability to turn public promises into accountable action.",
+      "category": "RadiantWaves Editorial",
+      "description": "Democracy is not measured by speeches, campaign promises or announcements alone. It depends on institutions that can function independently, laws that apply equally, credible elections, accountable leadership and citizens who can question those in power without fear.",
       "image": "assets/diplomacy.jpeg",
-      "content": "The political developments in Nigeria, France and South Sudan underline a common principle: democracy is not sustained by announcements alone. Political parties must respect their own rules, electoral commissions must act transparently, courts must be allowed to perform their constitutional role, and citizens must be able to assess competing programmes. In Nigeria, the ADC dispute demonstrates why political organisations need clear internal procedures and timely legal clarification. In France, the emergence of new potential candidates shows how public recognition must be translated into a credible programme and democratic support. In South Sudan, the challenge is more fundamental: elections require security, political participation, adequate preparation and confidence in the process. The strength of a democracy is measured not only by the holding of elections but by the credibility of the institutions that organise them and the rights of citizens who participate.",
-      "source": "RadiantWaves Media Editorial Desk"
+      "country": "Global",
+      "content": "Across the world, political leaders regularly speak about defending democracy. Yet democratic credibility is built through conduct, not slogans. Elections must be credible, courts must be able to make decisions independently, public institutions must be accountable and citizens must have meaningful opportunities to participate. The United States midterm elections, Nigeria's ongoing party leadership dispute and political tensions in several other countries demonstrate why democratic institutions matter. A party's political ambitions cannot replace legal procedures. An election victory does not remove the responsibility to govern fairly. Opposition parties also have a duty to respect democratic rules, internal accountability and transparency. Democracy is strongest when those who win power accept scrutiny and those who lose elections can trust the process.",
+      "whyItMatters": "Public trust depends on whether democratic principles are reflected in institutional behaviour and everyday governance.",
+      "source": "RadiantWaves Media Editorial Desk",
+      "publishedAt": "12 November 2026"
     }
   ],
   "analysis": [
     {
       "title": "The gap between diplomacy and reality in the Ukraine war",
-      "description": "Prisoner exchanges and diplomatic meetings matter, but they should not be confused with a settlement of the conflict.",
+      "category": "International Analysis",
+      "description": "A prisoner-exchange agreement is a humanitarian step, but it should not be mistaken for progress on the central territorial and security disputes.",
       "image": "assets/leaders/zelensky.jpg",
-      "content": "The latest diplomatic contacts involving the United States, Russia and Ukraine show that channels of communication remain open. The agreement to arrange a prisoner exchange is a meaningful humanitarian step. However, the fundamental questions remain unresolved: territory, security guarantees, sovereignty and the future relationship between Russia and Ukraine. A lasting settlement will require more than a series of meetings. It will require commitments that the parties can accept and that can be monitored and implemented. European participation will also remain important because the consequences of any settlement will be felt across the continent.",
-      "source": "RadiantWaves Media Analysis Desk"
+      "country": "Ukraine / Russia",
+      "content": "Diplomatic meetings can create opportunities for communication, but their importance must be measured by what they actually deliver. The Abu Dhabi discussions produced an agreement to arrange a prisoner exchange, an important humanitarian development. However, the central disagreements over territory and Ukraine's future security remain unresolved. The continuation of attacks during diplomatic engagement demonstrates the distance between negotiation and conditions on the ground. European participation will also remain a major question because any settlement affecting European security cannot realistically be treated as a matter involving only Washington, Moscow and Kyiv.",
+      "whyItMatters": "International audiences need to distinguish humanitarian progress from a political settlement or ceasefire.",
+      "source": "RadiantWaves Media Analysis Desk; Reuters",
+      "publishedAt": "12 November 2026"
     },
     {
       "title": "Nigeria's opposition needs clarity as the 2027 political season approaches",
-      "description": "The ADC dispute demonstrates why legal certainty and credible internal party processes matter to opposition politics.",
+      "category": "Nigeria Analysis",
+      "description": "The ADC leadership dispute highlights the importance of clear party structures, transparent legal processes and credible opposition organisation.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
-      "content": "The ADC leadership dispute is not simply a disagreement between political personalities. It concerns the authority to manage a political party, the validity of decisions taken in its name and the legal processes that determine who can represent it. INEC's position that it needs the certified court judgment is an important procedural point. Political supporters should distinguish confirmed court orders from statements by interested parties. The opposition's ability to prepare for 2027 will depend on legal clarity, internal unity and public confidence. The coming weeks will be important in determining whether the party can resolve the dispute through the courts and establish a stable structure.",
-      "source": "RadiantWaves Media Analysis Desk"
+      "country": "Nigeria",
+      "content": "The ADC dispute is not simply a disagreement between political personalities. It raises questions about party leadership, institutional recognition and the legal procedures through which political organisations operate. For opposition figures seeking to challenge the governing party in 2027, clarity and stability will be essential. INEC must act within the law and rely on the relevant court documents. Party leaders and supporters should avoid presenting applications, appeals or political declarations as final legal outcomes. The credibility of the opposition will depend not only on its criticism of government but also on its ability to demonstrate internal organisation, transparency and respect for due process.",
+      "whyItMatters": "Opposition credibility and electoral competition are important elements of democratic accountability.",
+      "source": "RadiantWaves Media Analysis Desk",
+      "publishedAt": "12 November 2026"
     }
   ],
   "factCheck": [
     {
-      "claim": "Kenya has already been declared Ebola-free.",
-      "verdict": "Not yet confirmed",
-      "explanation": "Kenya began a 42-day countdown on 12 November after its last known patient was discharged and final identified contacts completed monitoring. A declaration could be made on 23 December if no new cases are recorded.",
-      "image": "assets/africa.jpeg",
-      "source": "WHO Africa"
-    },
-    {
-      "claim": "The Ukraine prisoner-exchange agreement means the war has ended.",
-      "verdict": "False",
-      "explanation": "The Abu Dhabi discussions produced an agreement to arrange a prisoner exchange. They did not produce a confirmed ceasefire or a territorial settlement.",
+      "title": "Fact Check: Has the Russia–Ukraine war ended following the Abu Dhabi talks?",
+      "category": "International Fact Check",
+      "description": "No. The talks produced an agreement to arrange a prisoner exchange, but major territorial and security disagreements remain unresolved.",
       "image": "assets/leaders/zelensky.jpg",
-      "source": "Reuters"
+      "country": "Ukraine / Russia",
+      "content": "The agreement to arrange a prisoner exchange is not a ceasefire or a peace agreement. Attacks continued after the talks, and the central territorial questions remain unresolved.",
+      "verdict": "False if presented as an end to the war.",
+      "source": "Reuters",
+      "publishedAt": "12 November 2026"
     },
     {
-      "claim": "Filing an appeal automatically suspends the ADC court judgment.",
-      "verdict": "Incorrect",
-      "explanation": "An appeal or application for a stay does not automatically suspend the effect of a judgment. The existence of a specific court order must be verified before claiming that the judgment has been stayed.",
+      "title": "Fact Check: Has Kenya already been declared Ebola-free?",
+      "category": "Public Health Fact Check",
+      "description": "No. Kenya has begun the 42-day countdown after the last patient was discharged. A declaration may be possible on 23 December if no new cases are recorded.",
+      "image": "assets/africa.jpeg",
+      "country": "Kenya",
+      "content": "The last patient has been discharged and the final contacts have completed monitoring. The formal countdown still has to be completed before the country can be declared free of the outbreak.",
+      "verdict": "Not yet. The countdown has begun.",
+      "source": "WHO Africa",
+      "publishedAt": "12 November 2026"
+    },
+    {
+      "title": "Fact Check: Does filing an appeal automatically suspend a court judgment in Nigeria?",
+      "category": "Legal Fact Check",
+      "description": "No. Filing an appeal does not automatically suspend the operation of a judgment. A stay of execution requires a separate court order.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
-      "source": "Federal High Court proceedings; Premium Times"
+      "country": "Nigeria",
+      "content": "The distinction between an appeal, an application for a stay and an actual order granting a stay is important in reporting the ADC dispute. The legal position must be assessed from the relevant court documents and orders.",
+      "verdict": "False.",
+      "source": "Nigerian court procedure; Premium Times",
+      "publishedAt": "12 November 2026"
     }
   ],
   "beyondStatement": [
     {
       "title": "Why Kenya's Ebola countdown still matters",
-      "description": "A final patient being discharged is a major achievement, but public-health authorities must continue surveillance until the full monitoring period has passed.",
+      "category": "Beyond the Statement",
+      "description": "The discharge of the final patient is encouraging, but the 42-day surveillance period remains essential to confirming that transmission has stopped.",
       "image": "assets/africa.jpeg",
-      "content": "The 42-day period is not a formality. It is an essential public-health safeguard designed to identify any further cases that may emerge after the last known patient has been discharged. The public should continue following official health advice and report symptoms or suspected exposure promptly."
+      "country": "Kenya",
+      "content": "Public-health success is not measured only by the last patient leaving hospital. Health authorities must continue surveillance, investigate alerts and support survivors. The countdown is designed to provide confidence that no further transmission has occurred.",
+      "source": "RadiantWaves Media"
     },
     {
       "title": "What a prisoner-exchange agreement does — and does not — mean",
-      "description": "Humanitarian progress can occur even when the political and territorial issues behind a war remain unresolved.",
+      "category": "Beyond the Statement",
+      "description": "An agreement to exchange prisoners can bring relief to families, but it does not resolve the political and military disagreements that sustain a war.",
       "image": "assets/leaders/zelensky.jpg",
-      "content": "Prisoner exchanges can reunite families and reduce human suffering. They are important confidence-building measures, but they do not establish that the parties have agreed to stop fighting or settle territorial disputes. Accurate reporting must keep those distinctions clear."
+      "country": "Ukraine / Russia",
+      "content": "A prisoner exchange is a humanitarian measure. Its implementation can build limited confidence between negotiating parties, but it does not establish a ceasefire, settle territorial disputes or guarantee a lasting peace.",
+      "source": "RadiantWaves Media"
     }
   ],
   "leadersWatch": {
-    "title": "Leaders Watch",
-    "description": "Key political and international figures shaping today's global developments.",
+    "title": "Leaders Watch — Global Political and Diplomatic Monitor",
+    "description": "A selection of international leaders and influential political figures whose decisions and public responsibilities are shaping today's global developments.",
     "leaders": [
       {
         "name": "Donald Trump",
         "position": "President of the United States",
         "country": "United States",
         "image": "assets/leaders/trump.jpg",
-        "headline": "US diplomatic engagement continues over the Ukraine war",
-        "report": "US representatives are expected to meet Vladimir Putin in Moscow as Washington pursues diplomatic contacts following discussions in Abu Dhabi.",
-        "background": "The United States remains a central diplomatic actor in efforts to influence the course of the Russia–Ukraine conflict.",
-        "implications": "The success or failure of the diplomatic effort could affect European security, US relations with Russia and the future of Ukraine.",
-        "radiantWavesView": "The key test will be whether diplomatic contacts produce verifiable humanitarian and security progress rather than statements alone.",
-        "source": "Reuters",
+        "headline": "US political balance changes after midterm elections",
+        "report": "Democratic gains have changed the balance of power in Congress and opened a new period of political scrutiny and legislative debate.",
+        "background": "The US president will face a Congress in which the opposition party has gained majorities in both chambers.",
+        "implications": "The new balance will influence investigations, legislation, government funding and the relationship between the executive and legislative branches.",
+        "radiantWavesView": "The strength of American democracy will be judged by institutional accountability, respect for the law and the ability of elected representatives to serve the public.",
+        "source": "Associated Press; CBS News",
         "publishedAt": "12 November 2026"
       },
       {
@@ -482,11 +554,11 @@
         "position": "President of France",
         "country": "France",
         "image": "assets/leaders/macron.jpg",
-        "headline": "Macron's public comments add to the 2027 succession debate",
-        "report": "Macron has publicly welcomed Teddy Riner's entry into the presidential debate, prompting discussion about the political landscape after his own presidency.",
-        "background": "Macron cannot seek a third consecutive presidential term, making the question of political succession a central issue in France.",
-        "implications": "His comments could influence the positioning of centrist figures and the debate over who might lead the political centre in 2027.",
-        "radiantWavesView": "France's next political chapter will depend on programmes, alliances and voter confidence, not public recognition alone.",
+        "headline": "France's 2027 succession debate attracts new attention",
+        "report": "Macron has publicly welcomed Teddy Riner's entry into the presidential debate.",
+        "background": "Macron cannot seek a third consecutive presidential term.",
+        "implications": "The succession debate may influence centrist political alliances and the positioning of potential candidates.",
+        "radiantWavesView": "France's next political chapter will depend on credible programmes, alliances and voter confidence.",
         "source": "Le Monde",
         "publishedAt": "12 November 2026"
       },
@@ -496,11 +568,11 @@
         "country": "Canada",
         "image": "assets/leaders/carney.jpg",
         "headline": "Canada participates in G7 diplomatic coordination",
-        "report": "Canada is represented in the G7 foreign ministers' discussions in Paris, which covered Ukraine, maritime security and international crises.",
-        "background": "Canada is a member of the G7 and works with other members on international security, economic coordination and diplomacy.",
-        "implications": "The G7's ability to coordinate positions remains important as conflicts and trade-security concerns affect global stability.",
-        "radiantWavesView": "Canada's role in multilateral diplomacy will be judged by the practical contribution it makes to shared international priorities.",
-        "source": "GOV.UK; French Ministry for Europe and Foreign Affairs",
+        "report": "Canada is represented in the G7 foreign ministers' discussions in Paris, which covered Ukraine and international security.",
+        "background": "Canada is a member of the G7 and participates in international economic and diplomatic coordination.",
+        "implications": "Canada's role remains important in multilateral discussions about security and international stability.",
+        "radiantWavesView": "The value of multilateral diplomacy is measured by practical cooperation and results.",
+        "source": "GOV.UK; French Foreign Ministry",
         "publishedAt": "12 November 2026"
       },
       {
@@ -510,10 +582,10 @@
         "image": "assets/leaders/merz.jpg",
         "headline": "Germany joins G7 discussions on Ukraine and international security",
         "report": "Germany is among the G7 participants reaffirming support for Ukraine and discussing maritime and regional security.",
-        "background": "Germany is a major European power whose security and economic policies have significant implications for the European Union.",
-        "implications": "Berlin's position will remain important to European coordination on Ukraine, defence and economic stability.",
-        "radiantWavesView": "European unity will matter most when diplomatic statements are translated into consistent policies and practical support.",
-        "source": "GOV.UK; French Ministry for Europe and Foreign Affairs",
+        "background": "Germany is a major European power whose security and economic policies influence the European Union.",
+        "implications": "Berlin's position remains important to European coordination on Ukraine, defence and economic stability.",
+        "radiantWavesView": "European unity will matter most when diplomatic statements translate into consistent policy and practical support.",
+        "source": "GOV.UK; French Foreign Ministry",
         "publishedAt": "12 November 2026"
       },
       {
@@ -522,11 +594,11 @@
         "country": "European Union",
         "image": "assets/leaders/von-der-leyen.jpg",
         "headline": "European Union joins G7 discussions on international security",
-        "report": "The EU participated in the Paris G7 foreign ministers' meeting, where Ukraine, maritime security and regional tensions were discussed.",
-        "background": "The European Commission plays a central role in EU policy coordination, economic regulation and relations with international partners.",
+        "report": "The European Union participated in the Paris G7 foreign ministers' meeting, where Ukraine, maritime security and regional tensions were discussed.",
+        "background": "The European Commission plays a central role in EU policy coordination and international relations.",
         "implications": "The EU's diplomatic and economic influence will be important in shaping Europe's response to international crises.",
-        "radiantWavesView": "Europe needs consistent coordination between its institutions and member states if it is to remain influential in global diplomacy.",
-        "source": "GOV.UK; French Ministry for Europe and Foreign Affairs",
+        "radiantWavesView": "Europe needs consistent coordination between its institutions and member states if it is to remain influential.",
+        "source": "GOV.UK; French Foreign Ministry",
         "publishedAt": "12 November 2026"
       },
       {
@@ -535,9 +607,9 @@
         "country": "Ukraine",
         "image": "assets/leaders/zelensky.jpg",
         "headline": "Ukraine faces renewed attacks as diplomatic discussions continue",
-        "report": "Ukraine experienced fresh attacks as US-mediated diplomatic efforts continued. Discussions in Abu Dhabi produced an agreement to arrange a prisoner exchange but no territorial breakthrough.",
-        "background": "Ukraine has defended its territory against Russia's full-scale invasion and continues to seek international support and security guarantees.",
-        "implications": "Any negotiated outcome will have major consequences for Ukraine's sovereignty and the security of Europe.",
+        "report": "Ukraine experienced fresh attacks as US-mediated diplomatic efforts continued. The Abu Dhabi discussions produced an agreement to arrange a prisoner exchange but no territorial breakthrough.",
+        "background": "Ukraine continues to defend its territory against Russia's full-scale invasion.",
+        "implications": "Any negotiated outcome will have major consequences for Ukraine's sovereignty and European security.",
         "radiantWavesView": "A sustainable settlement must address Ukraine's security and sovereignty and must be assessed by its practical terms.",
         "source": "Reuters",
         "publishedAt": "12 November 2026"
@@ -549,9 +621,9 @@
         "image": "assets/leaders/putin.jpg",
         "headline": "Putin expected to meet US representatives in Moscow",
         "report": "US envoys Jared Kushner and Steve Witkoff are expected to meet the Russian president following the latest round of talks in Abu Dhabi.",
-        "background": "Russia's invasion of Ukraine remains the central issue in the diplomatic discussions involving Moscow, Kyiv, Washington and European governments.",
-        "implications": "The meeting could provide an indication of Russia's position on a possible diplomatic process, although major disagreements remain.",
-        "radiantWavesView": "The international community will need to assess concrete actions and commitments rather than assume that a meeting represents a breakthrough.",
+        "background": "Russia's invasion of Ukraine remains the central issue in diplomatic discussions involving Moscow, Kyiv, Washington and European governments.",
+        "implications": "The meeting could provide an indication of Russia's position on a possible diplomatic process.",
+        "radiantWavesView": "International observers should assess concrete actions and commitments rather than assume that a meeting represents a breakthrough.",
         "source": "Reuters",
         "publishedAt": "12 November 2026"
       },
@@ -560,11 +632,11 @@
         "position": "President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/tinubu.jpg",
-        "headline": "Nigeria's political environment remains focused on party organisation and 2027 preparations",
-        "report": "The ADC leadership dispute and INEC's position on the certified court judgment remain important developments in the wider political environment ahead of the next general election.",
-        "background": "Nigeria's political parties are preparing for the 2027 election cycle amid debate over governance, economic conditions and opposition organisation.",
-        "implications": "The handling of political disputes and electoral procedures will influence public confidence in the democratic process.",
-        "radiantWavesView": "All political parties and public institutions should ensure that legal procedures are respected and that voters receive clear, verifiable information.",
+        "headline": "Nigeria's political environment remains focused on 2027 preparations",
+        "report": "The ADC leadership dispute and INEC's position on the certified court judgment remain important developments in the wider political environment.",
+        "background": "Nigeria's political parties are preparing for the 2027 election cycle amid debate over governance and economic conditions.",
+        "implications": "The handling of political disputes and electoral procedures will influence public confidence.",
+        "radiantWavesView": "All political parties and public institutions should respect legal procedures and provide voters with clear information.",
         "source": "INEC; Premium Times",
         "publishedAt": "12 November 2026"
       },
@@ -574,11 +646,11 @@
         "country": "Nigeria",
         "image": "assets/leaders/atiku2.jpg",
         "headline": "Atiku's political plans remain affected by the ADC leadership dispute",
-        "report": "The court dispute involving the ADC leadership has implications for the political plans of Atiku Abubakar and other opposition figures. INEC says it is awaiting the certified judgment before determining its next steps.",
-        "background": "Atiku is a former vice-president and a prominent opposition politician who has been involved in several presidential election cycles.",
+        "report": "The court dispute involving the ADC leadership has implications for the political plans of Atiku Abubakar and other opposition figures.",
+        "background": "Atiku is a former vice-president and a prominent opposition politician.",
         "implications": "The legal outcome and the party's ability to establish a recognised leadership structure could influence opposition preparations for 2027.",
-        "radiantWavesView": "The process should be followed through verified court documents and official INEC statements. Political supporters should avoid presenting unresolved legal questions as settled facts.",
-        "source": "Premium Times; INEC statements",
+        "radiantWavesView": "Political supporters should follow verified court documents and official INEC statements rather than treat unresolved legal questions as settled facts.",
+        "source": "Premium Times; INEC",
         "publishedAt": "12 November 2026"
       },
       {
@@ -587,10 +659,10 @@
         "country": "China",
         "image": "assets/leaders/xi.jpg",
         "headline": "China and ASEAN continue negotiations over the South China Sea",
-        "report": "China and ASEAN have missed their target for completing a code of conduct, despite reported progress in negotiations.",
-        "background": "China has overlapping maritime claims with several Southeast Asian countries, making the South China Sea a major regional security issue.",
-        "implications": "The outcome of negotiations will affect maritime security, trade routes and relations between China and its neighbours.",
-        "radiantWavesView": "A durable agreement will require clear rules, mutual respect and a credible approach to managing disputes.",
+        "report": "China and ASEAN have missed their target for completing a code of conduct despite reported progress in negotiations.",
+        "background": "China has overlapping maritime claims with several Southeast Asian countries.",
+        "implications": "The negotiations affect maritime security, trade routes and regional relations.",
+        "radiantWavesView": "A durable agreement will require clear rules, mutual respect and credible dispute-management mechanisms.",
         "source": "Associated Press",
         "publishedAt": "12 November 2026"
       },
@@ -601,9 +673,9 @@
         "image": "assets/leaders/ramaphosa.jpg",
         "headline": "African regional priorities include health security and political stability",
         "report": "Developments in East and Central Africa, including the Ebola response and South Sudan's election preparations, underline the importance of regional coordination.",
-        "background": "South Africa remains an influential African state and an important participant in continental and international diplomacy.",
-        "implications": "Regional cooperation is essential for managing cross-border health risks, conflict prevention and economic development.",
-        "radiantWavesView": "African governments and regional institutions need sustained cooperation, transparent information and practical support for countries facing crises.",
+        "background": "South Africa remains an influential African state and an important participant in continental diplomacy.",
+        "implications": "Regional cooperation is essential for managing cross-border health risks and political instability.",
+        "radiantWavesView": "African governments and regional institutions need sustained cooperation, transparent information and practical support.",
         "source": "WHO Africa; UNMISS",
         "publishedAt": "12 November 2026"
       },
@@ -613,9 +685,9 @@
         "country": "France",
         "image": "assets/leaders/marine-le-pen.jpg",
         "headline": "France's opposition landscape continues to take shape ahead of 2027",
-        "report": "The emergence of new potential candidates and the discussion around the post-Macron political landscape form part of a wider debate involving established opposition figures.",
-        "background": "Marine Le Pen remains a prominent figure in French opposition politics and in debates about the direction of the country's political future.",
-        "implications": "The shape of the opposition field, candidate eligibility and political alliances will be important factors in the 2027 contest.",
+        "report": "The emergence of potential candidates and debate around the post-Macron political landscape form part of a wider contest involving established opposition figures.",
+        "background": "Marine Le Pen remains a prominent figure in French opposition politics.",
+        "implications": "Candidate eligibility, alliances and the shape of the opposition field will be important factors in the 2027 contest.",
         "radiantWavesView": "French voters will need clear policy choices and credible candidates as the next presidential election approaches.",
         "source": "Le Monde",
         "publishedAt": "12 November 2026"
@@ -626,7 +698,7 @@
     {
       "country": "Nigeria",
       "title": "Nigeria 2027: ADC leadership dispute and opposition preparations",
-      "description": "The legal dispute involving the ADC leadership remains an important issue for opposition organisation. INEC says it is awaiting the certified judgment before determining its next steps.",
+      "description": "The legal dispute involving the ADC leadership remains an important issue for opposition organisation. INEC says it is awaiting the certified judgment.",
       "image": "assets/leaders/atiku-david-mark-court.jpg",
       "status": "Ongoing legal process",
       "source": "INEC; Premium Times"
@@ -651,16 +723,18 @@
   "technologyInnovation": [
     {
       "title": "France calls for stronger protections around AI assistants",
-      "description": "Recommendations include clearer disclosure, stronger protection for minors and safeguards against emotional manipulation.",
-      "image": "assets/france-protests.jpg",
       "category": "Artificial Intelligence",
-      "source": "Le Monde; French Council on AI and Digital Technology"
+      "description": "Recommendations include stronger protections for minors, greater transparency and measures to address risks associated with AI assistants.",
+      "image": "assets/diplomacy.jpeg",
+      "country": "France",
+      "source": "French Council on AI and Digital Technology"
     },
     {
       "title": "Digital transparency becomes central to the AI debate",
-      "description": "The French recommendations highlight the importance of informing users when they are interacting with AI and making commercial influence more visible.",
-      "image": "assets/france-protests.jpg",
       "category": "Digital Regulation",
+      "description": "Policymakers are examining how companies should disclose AI use, handle user vulnerability and improve accountability.",
+      "image": "assets/diplomacy.jpeg",
+      "country": "Europe",
       "source": "French Council on AI and Digital Technology"
     }
   ],
@@ -693,17 +767,17 @@
     }
   ],
   "todaysBigQuestion": {
-    "question": "Can diplomacy make meaningful progress in global conflicts when the central political disagreements remain unresolved?",
-    "description": "From Ukraine to the South China Sea and the Middle East, international leaders are pursuing dialogue while security tensions continue. What should the world expect from diplomacy, and how should progress be measured?"
+    "question": "Can democratic institutions remain strong when political leaders and parties face pressure?",
+    "description": "From the United States to Nigeria and Europe, public confidence depends on credible elections, independent institutions, accountability and respect for the rule of law. What should citizens expect from those who hold political power?"
   },
   "thoughtForToday": {
     "title": "Truth is the foundation of public trust",
-    "quote": "A responsible society does not simply ask who is speaking; it asks what is known, what is proven and what still needs to be established.",
+    "quote": "A well-informed society does not simply ask who is speaking; it asks what is known, what is proven and what still needs to be established.",
     "attribution": "RadiantWaves Media"
   },
   "radiantWavesPerspective": {
     "title": "Beyond the headlines",
-    "description": "Today's developments show why accurate reporting must distinguish between an agreement and its implementation, a political announcement and a confirmed candidacy, and a legal application and a court order. RadiantWaves Media will continue to provide context, verify claims and explain the implications of events across Nigeria, Africa, Europe and the wider world."
+    "description": "Today's developments show why responsible journalism must distinguish between an agreement and its implementation, a political announcement and a confirmed candidacy, and a legal application and an actual court order. RadiantWaves Media will continue to verify claims, provide context and explain the implications of events across Nigeria, Africa, Europe and the wider world."
   },
   "sponsoredAdverts": [
     {
@@ -725,7 +799,7 @@
   ],
   "sourcePolicy": {
     "title": "Our Editorial Standards",
-    "description": "RadiantWaves Media uses named sources and official statements to support its reporting. We distinguish verified facts from allegations, political claims, projections and opinions. Court proceedings are described according to the documents and orders confirmed at the time of publication. Source names are provided for transparency, while our reports are independently written and contextualised.",
+    "description": "RadiantWaves Media uses named sources and official statements to support its reporting. We distinguish verified facts from allegations, political claims, projections and opinions. Court proceedings are described according to the documents and orders confirmed at the time of publication. Our reports are independently written and contextualised.",
     "principles": [
       "Verify information before publication.",
       "Distinguish allegations from established facts.",

@@ -1141,6 +1141,61 @@ function renderHistory(data) {
 }
 
 /* =========================================================
+   OPPORTUNITIES — VERIFIED JOBS, SCHOLARSHIPS AND TRAINING
+   ========================================================= */
+
+function renderOpportunities(data) {
+    const container = getElement("opportunities-container");
+
+    if (!container) return;
+
+    const opportunities = getArray(data.opportunities)
+        .filter(item => item && typeof item === "object");
+
+    if (!opportunities.length) {
+        container.innerHTML = `
+            <div class="opportunity-empty">
+                <span class="opportunity-type">EDITORIALLY VERIFIED LISTINGS</span>
+                <h3>New opportunities are being prepared</h3>
+                <p>We will publish vacancies, scholarships, grants, internships and training programmes here after checking the provider and application details. No unverified listing is presented as an active opportunity.</p>
+                <a href="mailto:support@radiantwavesmedia.com?subject=Opportunity%20Listing%20Submission">Submit an opportunity for review</a>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = opportunities.map(item => {
+        const title = getFirstValue(item, ["title", "name"], "Opportunity");
+        const type = getFirstValue(item, ["type", "category"], "Opportunity");
+        const organisation = getFirstValue(item, ["organisation", "organization", "provider"], "");
+        const location = getFirstValue(item, ["location", "country"], "");
+        const description = getFirstValue(item, ["description", "summary"], "");
+        const eligibility = getFirstValue(item, ["eligibility", "whoCanApply"], "");
+        const deadline = getFirstValue(item, ["deadline", "closingDate"], "");
+        const verified = getFirstValue(item, ["dateVerified", "verifiedAt"], "");
+        const applicationUrl = safeUrl(getFirstValue(item, ["applicationUrl", "url", "link"], ""));
+        const status = getFirstValue(item, ["status"], "Check provider website");
+
+        return `
+            <article class="opportunity-card">
+                <div class="opportunity-card-top">
+                    <span class="opportunity-type">${escapeHTML(type)}</span>
+                    <span class="opportunity-status">${escapeHTML(status)}</span>
+                </div>
+                <h3>${escapeHTML(title)}</h3>
+                ${organisation ? `<p class="opportunity-provider">${escapeHTML(organisation)}</p>` : ""}
+                ${location ? `<p><strong>Location:</strong> ${escapeHTML(location)}</p>` : ""}
+                ${description ? `<p>${escapeHTML(description)}</p>` : ""}
+                ${eligibility ? `<p><strong>Eligibility:</strong> ${escapeHTML(eligibility)}</p>` : ""}
+                ${deadline ? `<p><strong>Deadline:</strong> ${escapeHTML(formatDate(deadline))}</p>` : ""}
+                ${verified ? `<p class="opportunity-verified">Details checked: ${escapeHTML(formatDate(verified))}</p>` : ""}
+                ${applicationUrl ? `<a class="opportunity-link" href="${escapeHTML(applicationUrl)}" target="_blank" rel="noopener noreferrer">Official application / details</a>` : `<p class="opportunity-no-link">Official application link pending verification.</p>`}
+            </article>
+        `;
+    }).join("");
+}
+
+/* =========================================================
    ARCHIVES
    ========================================================= */
 
@@ -1561,6 +1616,7 @@ function renderAll(data) {
     renderElectionWatch(data);
     renderHistory(data);
     renderArchives(data);
+    renderOpportunities(data);
     renderQuestionAndQuote(data);
     renderAdverts(data);
 }

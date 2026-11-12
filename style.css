@@ -1467,3 +1467,136 @@ ul {
         color: black;
     }
 }
+
+
+/* =========================================================
+   OPPORTUNITIES — JOBS, SCHOLARSHIPS, GRANTS AND TRAINING
+   ========================================================= */
+
+.opportunities-intro {
+    background: var(--rw-panel);
+    border-left: 4px solid var(--rw-yellow);
+    border-radius: 5px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+}
+
+.opportunities-intro p,
+.opportunities-disclaimer {
+    color: var(--rw-muted);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.opportunity-card,
+.opportunity-empty {
+    min-width: 0;
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-top: 3px solid var(--rw-red);
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.opportunity-card h3,
+.opportunity-empty h3 {
+    color: var(--rw-white);
+    font-size: 19px;
+    margin: 12px 0 8px;
+}
+
+.opportunity-card p,
+.opportunity-empty p {
+    color: var(--rw-muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.opportunity-card-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.opportunity-type,
+.opportunity-status {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 5px 9px;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.opportunity-type {
+    background: rgba(200, 16, 46, .2);
+    color: #ff8799;
+}
+
+.opportunity-status {
+    background: #303030;
+    color: var(--rw-yellow);
+}
+
+.opportunity-provider {
+    color: var(--rw-yellow) !important;
+    font-weight: 700;
+}
+
+.opportunity-verified {
+    font-size: 11px !important;
+    color: #a8d7b0 !important;
+}
+
+.opportunity-link,
+.opportunity-empty a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 9px 13px;
+    background: var(--rw-red);
+    color: var(--rw-white);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.opportunity-link:hover,
+.opportunity-empty a:hover {
+    background: var(--rw-red-dark);
+    color: var(--rw-white);
+}
+
+.opportunity-no-link {
+    font-style: italic;
+    font-size: 12px !important;
+}
+
+.opportunity-empty {
+    grid-column: 1 / -1;
+    border-top-color: var(--rw-yellow);
+}
+
+.opportunities-disclaimer {
+    margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunity-card,
+    .opportunity-empty {
+        padding: 16px;
+    }
+}

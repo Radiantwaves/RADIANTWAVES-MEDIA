@@ -1301,48 +1301,57 @@ function renderQuestionAndQuote(data) {
    ========================================================= */
 
 function renderAdverts(data) {
-    const adverts = getArray(data.sponsoredAdverts);
+    const adverts = getArray(data.sponsoredAdverts)
+        .filter(advert => advert && advert.status !== "inactive");
 
+    // The live page has one sponsored-list container holding both advert cards.
+    // Keep the existing static cards visible if the edition has no advert data.
+    const list = getElement("sponsored-adverts");
+
+    if (list && adverts.length) {
+        list.innerHTML = adverts.map(advert => {
+            const title = getFirstValue(advert, ["title", "name"], "Sponsored");
+            const description = getFirstValue(advert, ["description", "summary"], "");
+            const image = safeImage(advert.image);
+            const url = safeUrl(advert.url || advert.link);
+
+            return `
+                <article class="advert-card">
+                    <span class="advert-label">Sponsored</span>
+                    ${image ? `
+                        <img src="${escapeHTML(image)}"
+                             alt="${escapeHTML(title)}"
+                             loading="lazy">
+                    ` : ""}
+                    <h3>${escapeHTML(title)}</h3>
+                    <p>${escapeHTML(description)}</p>
+                    ${url ? `
+                        <a href="${escapeHTML(url)}"
+                           target="_blank"
+                           rel="noopener noreferrer">Learn more</a>
+                    ` : ""}
+                </article>
+            `;
+        }).join("");
+        return;
+    }
+
+    // Backwards compatibility with any older page layout using individual IDs.
     adverts.forEach((advert, index) => {
         const container = getElement("sponsored-ad-" + (index + 1));
-
-        // The current website has static sponsored advert cards.
-        // Do not replace or remove those cards if these IDs do not exist.
         if (!container) return;
 
-        const title = getFirstValue(
-            advert,
-            ["title", "name"],
-            "Sponsored"
-        );
-
-        const description = getFirstValue(
-            advert,
-            ["description", "summary"],
-            ""
-        );
-
+        const title = getFirstValue(advert, ["title", "name"], "Sponsored");
+        const description = getFirstValue(advert, ["description", "summary"], "");
         const image = safeImage(advert.image);
-        const url = safeUrl(advert.url);
+        const url = safeUrl(advert.url || advert.link);
 
         container.innerHTML = `
             <div class="advert-content">
-                ${image ? `
-                    <img src="${escapeHTML(image)}"
-                         alt="${escapeHTML(title)}"
-                         loading="lazy">
-                ` : ""}
-
+                ${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="lazy">` : ""}
                 <h3>${escapeHTML(title)}</h3>
                 <p>${escapeHTML(description)}</p>
-
-                ${url ? `
-                    <a href="${escapeHTML(url)}"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Learn more
-                    </a>
-                ` : ""}
+                ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}
             </div>
         `;
     });

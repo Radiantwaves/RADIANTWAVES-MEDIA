@@ -1609,6 +1609,43 @@ function initialiseReadMore() {
 }
 
 /* =========================================================
+   RADIANTWAVES FLIGHT SEARCH — PROVIDER-READY
+   ========================================================= */
+function initialiseFlightSearch() {
+    const form = getElement("rw-flight-form");
+    if (!form) return;
+    const departure = getElement("flight-departure");
+    const returning = getElement("flight-return");
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    departure.min = localToday;
+    returning.min = localToday;
+    departure.addEventListener("change", () => {
+        returning.min = departure.value || localToday;
+        if (returning.value && returning.value < departure.value) returning.value = "";
+    });
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        const origin = getElement("flight-origin").value.trim();
+        const destination = getElement("flight-destination").value.trim();
+        const depart = departure.value;
+        const returnDate = returning.value;
+        if (!origin || !destination || !depart || (returnDate && returnDate < depart)) {
+            getElement("flight-search-message").textContent = "Please check your route and travel dates. The return date must be on or after departure.";
+            return;
+        }
+        const passengers = getElement("flight-passengers").value;
+        const cabin = getElement("flight-cabin").value;
+        const route = "Flights from " + origin + " to " + destination + " on " + depart +
+            (returnDate ? " returning " + returnDate : " one way") +
+            " for " + passengers + " adults in " + cabin;
+        const target = "https://www.google.com/travel/flights?q=" + encodeURIComponent(route);
+        getElement("flight-search-message").textContent = "Opening flight options in a new tab. Compare the final price, baggage allowance, transit requirements and booking conditions before payment.";
+        window.open(target, "_blank", "noopener,noreferrer");
+    });
+}
+
+/* =========================================================
    COPYRIGHT YEAR
    ========================================================= */
 
@@ -1708,6 +1745,7 @@ async function loadNews() {
 
 document.addEventListener("DOMContentLoaded", () => {
     initialiseNavigation();
+    initialiseFlightSearch();
     initialiseVideoControls();
     initialiseContactForm();
     initialiseReadMore();

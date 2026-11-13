@@ -1638,3 +1638,22 @@ ul {
 .flight-benefits strong { color: var(--rw-white); margin-bottom: 6px; }
 .flight-benefits span { color: var(--rw-muted); font-size: 12px; line-height: 1.5; }
 @media (max-width: 700px) { .flight-form, .flight-benefits { grid-template-columns: 1fr; } .flight-search-panel { padding: 17px; } }
+
+
+/* ABOUT, EDITORIAL STANDARDS AND ACCOUNTABILITY PAGES */
+.information-section { scroll-margin-top: 110px; }
+.information-panel {
+    background: var(--rw-panel);
+    border: 1px solid var(--rw-border);
+    border-left: 4px solid var(--rw-yellow);
+    border-radius: 7px;
+    padding: clamp(18px, 3vw, 26px);
+    color: var(--rw-text);
+}
+.information-panel p:last-child { margin-bottom: 0; }
+.information-panel h3 { color: var(--rw-white); font-size: 18px; margin-bottom: 10px; }
+.information-panel p { color: var(--rw-muted); font-size: 14px; }
+.information-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.footer-policy-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin:18px auto; }
+.footer-policy-links a { font-size:12px; }
+@media (max-width:700px) { .information-grid { grid-template-columns:1fr; } .footer-policy-links { flex-direction:column; align-items:center; gap:8px; } }

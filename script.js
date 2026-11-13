@@ -1301,60 +1301,78 @@ function renderQuestionAndQuote(data) {
    ========================================================= */
 
 function renderAdverts(data) {
-    const adverts = getArray(data.sponsoredAdverts)
+    const defaults = [
+        {
+            id: "ad001",
+            title: "Discover Quality Spices",
+            description: "Explore quality spices and ingredients for your kitchen. Discover products for everyday cooking and special meals.",
+            image: "assets/spices.jpeg"
+        },
+        {
+            id: "ad002",
+            title: "Stonebreaker",
+            description: "Discover more about Stonebreaker products and explore the available product range.",
+            image: "assets/stonebreaker.jpeg"
+        }
+    ];
+
+    const supplied = getArray(data && data.sponsoredAdverts)
         .filter(advert => advert && advert.status !== "inactive");
 
-    // The live page has one sponsored-list container holding both advert cards.
-    // Keep the existing static cards visible if the edition has no advert data.
-    const list = getElement("sponsored-adverts");
+    // Always show both approved advert placements, even if the news data
+    // is incomplete or one advert record is temporarily missing.
+    const adverts = defaults.map((fallback, index) => ({
+        ...fallback,
+        ...(supplied[index] || {})
+    }));
 
-    if (list && adverts.length) {
-        list.innerHTML = adverts.map(advert => {
-            const title = getFirstValue(advert, ["title", "name"], "Sponsored");
-            const description = getFirstValue(advert, ["description", "summary"], "");
-            const image = safeImage(advert.image);
-            const url = safeUrl(advert.url || advert.link);
+    const section = getElement("sponsored-adverts-section");
+    let list = getElement("sponsored-adverts");
 
-            return `
-                <article class="advert-card">
-                    <span class="advert-label">Sponsored</span>
-                    ${image ? `
-                        <img src="${escapeHTML(image)}"
-                             alt="${escapeHTML(title)}"
-                             loading="lazy">
-                    ` : ""}
-                    <h3>${escapeHTML(title)}</h3>
-                    <p>${escapeHTML(description)}</p>
-                    ${url ? `
-                        <a href="${escapeHTML(url)}"
-                           target="_blank"
-                           rel="noopener noreferrer">Learn more</a>
-                    ` : ""}
-                </article>
-            `;
-        }).join("");
-        return;
+    if (!list && section) {
+        list = document.createElement("div");
+        list.id = "sponsored-adverts";
+        list.className = "sponsored-list";
+        section.appendChild(list);
     }
 
-    // Backwards compatibility with any older page layout using individual IDs.
-    adverts.forEach((advert, index) => {
-        const container = getElement("sponsored-ad-" + (index + 1));
-        if (!container) return;
+    if (!list) return;
 
+    list.innerHTML = adverts.map(advert => {
         const title = getFirstValue(advert, ["title", "name"], "Sponsored");
         const description = getFirstValue(advert, ["description", "summary"], "");
         const image = safeImage(advert.image);
         const url = safeUrl(advert.url || advert.link);
 
-        container.innerHTML = `
-            <div class="advert-content">
-                ${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="lazy">` : ""}
+        return `
+            <article class="advert-card">
+                <span class="advert-label">Sponsored</span>
+                ${image ? `
+                    <img src="${escapeHTML(image)}"
+                         alt="${escapeHTML(title)}"
+                         loading="eager"
+                         onerror="this.style.display='none'">
+                ` : ""}
                 <h3>${escapeHTML(title)}</h3>
                 <p>${escapeHTML(description)}</p>
-                ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}
-            </div>
+                ${url ? `
+                    <a href="${escapeHTML(url)}"
+                       target="_blank"
+                       rel="noopener noreferrer">Learn more</a>
+                ` : ""}
+            </article>
         `;
-    });
+    }).join("");
+
+    list.style.display = "grid";
+    list.style.visibility = "visible";
+    list.style.opacity = "1";
+
+    if (section) {
+        section.hidden = false;
+        section.style.display = "block";
+        section.style.visibility = "visible";
+    }
 }
 
 /* =========================================================
@@ -1613,6 +1631,10 @@ function renderAll(data) {
 
     newsroomData = data;
 
+    // Render the two sponsored placements first so a later article-rendering
+    // issue cannot prevent the adverts from appearing.
+    renderAdverts(data);
+
     renderHero(data);
     renderBreaking(data);
     renderSummary(data);
@@ -1627,7 +1649,6 @@ function renderAll(data) {
     renderArchives(data);
     renderOpportunities(data);
     renderQuestionAndQuote(data);
-    renderAdverts(data);
 }
 
 /* =========================================================

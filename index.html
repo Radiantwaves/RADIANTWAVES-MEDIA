@@ -36,9 +36,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <link rel="stylesheet" href="./style.css?v=6000">
+  <link rel="stylesheet" href="./style.css?v=6002">
 
-  <script defer src="./script.js?v=6000"></script>
+  <script defer src="./script.js?v=6002"></script>
 
   <script type="application/ld+json">
   {
@@ -125,6 +125,7 @@
       <a href="#beyond-statement">Beyond the Statement</a>
       <a href="#leaders-watch">Leaders Watch</a>
       <a href="#opportunities">Opportunities</a>
+      <a href="#flight-search">Flight Search ✈️</a>
       <a href="#archives">Archives</a>
       <a href="#live-tv">Live TV</a>
       <a href="#birthday-wall">Birthdays</a>
@@ -545,6 +546,54 @@
         <p class="loading-message">Previous breaking-news headlines will appear here.</p>
       </div>
 
+    </section>
+
+    <!-- RADIANTWAVES FLIGHT SEARCH -->
+    <section class="content-section flight-section" id="flight-search" aria-labelledby="flight-search-heading">
+      <div class="section-heading">
+        <p class="eyebrow">TRAVEL DESK · FLIGHT DISCOVERY</p>
+        <h2 class="section-title" id="flight-search-heading">RadiantWaves Flight Search ✈️</h2>
+        <p>Plan your next journey and compare flight options through an established travel search provider.</p>
+      </div>
+      <div class="flight-search-panel">
+        <div class="flight-intro">
+          <span class="flight-kicker">YOUR JOURNEY STARTS HERE</span>
+          <h3>Where would you like to go?</h3>
+          <p>Search routes from Nigeria, France and destinations worldwide. Choose your dates and passenger details to continue to flight options.</p>
+        </div>
+        <form id="rw-flight-form" class="flight-form">
+          <label>From
+            <input type="text" id="flight-origin" name="origin" placeholder="e.g. Paris (PAR)" autocomplete="off" required>
+          </label>
+          <label>To
+            <input type="text" id="flight-destination" name="destination" placeholder="e.g. Lagos (LOS)" autocomplete="off" required>
+          </label>
+          <label>Departure
+            <input type="date" id="flight-departure" name="departure" required>
+          </label>
+          <label>Return <span class="flight-optional">(optional)</span>
+            <input type="date" id="flight-return" name="return">
+          </label>
+          <label>Passengers
+            <select id="flight-passengers" name="passengers">
+              <option value="1">1 adult</option><option value="2">2 adults</option><option value="3">3 adults</option><option value="4">4 adults</option><option value="5">5 adults</option><option value="6">6 adults</option><option value="7">7 adults</option><option value="8">8 adults</option><option value="9">9 adults</option>
+            </select>
+          </label>
+          <label>Cabin class
+            <select id="flight-cabin" name="cabin">
+              <option value="economy">Economy</option><option value="premium economy">Premium economy</option><option value="business">Business</option><option value="first">First class</option>
+            </select>
+          </label>
+          <button class="flight-search-button" type="submit"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search Flights</button>
+        </form>
+        <p id="flight-search-message" class="flight-message" role="status" aria-live="polite">Flight results open with our search provider. Booking and payment are completed on the provider's website.</p>
+        <div class="flight-partner-note"><strong>Affiliate transparency:</strong> RadiantWaves Media is preparing its travel-partner integration. Affiliate links and commission tracking will only be activated after partner approval. We do not currently sell tickets or display guaranteed live fares.</div>
+      </div>
+      <div class="flight-benefits">
+        <div><strong>Compare journeys</strong><span>Explore different dates and cabin options.</span></div>
+        <div><strong>Travel with clarity</strong><span>Check baggage, transit and change rules before booking.</span></div>
+        <div><strong>Book securely</strong><span>Complete reservations directly with the airline or travel provider.</span></div>
+      </div>
     </section>
 
     <!-- OPPORTUNITIES: VERIFIED VACANCIES, SCHOLARSHIPS AND TRAINING -->

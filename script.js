@@ -810,7 +810,7 @@ function renderBreaking(data) {
     // Ensure the ticker starts at the beginning after each edition loads.
     track.style.animation = "none";
     void track.offsetWidth;
-    track.style.animation = "";
+    track.style.animation = "rw-ticker-scroll 100s linear infinite";
 }
 
 /* =========================================================
@@ -1301,77 +1301,62 @@ function renderQuestionAndQuote(data) {
    ========================================================= */
 
 function renderAdverts(data) {
-    const defaults = [
-        {
-            id: "ad001",
-            title: "Discover Quality Spices",
-            description: "Explore quality spices and ingredients for your kitchen. Discover products for everyday cooking and special meals.",
-            image: "assets/spices.jpeg"
-        },
-        {
-            id: "ad002",
-            title: "Stonebreaker",
-            description: "Discover more about Stonebreaker products and explore the available product range.",
-            image: "assets/stonebreaker.jpeg"
-        }
-    ];
-
     const supplied = getArray(data && data.sponsoredAdverts)
         .filter(advert => advert && advert.status !== "inactive");
-
-    // Always show both approved advert placements, even if the news data
-    // is incomplete or one advert record is temporarily missing.
-    const adverts = defaults.map((fallback, index) => ({
-        ...fallback,
-        ...(supplied[index] || {})
-    }));
-
+    const homepageAds = supplied.filter(ad => {
+        const placement = cleanText(ad.placement).toLowerCase();
+        return !placement || placement === "homepage" || placement === "sponsored";
+    });
+    const inBreakerAd = supplied.find(ad => {
+        const placement = cleanText(ad.placement).toLowerCase();
+        return placement === "in-breaker" || placement === "inbreaker" || placement === "breaking";
+    });
     const section = getElement("sponsored-adverts-section");
-    let list = getElement("sponsored-adverts");
+    const list = getElement("sponsored-adverts");
 
-    if (!list && section) {
-        list = document.createElement("div");
-        list.id = "sponsored-adverts";
-        list.className = "sponsored-list";
-        section.appendChild(list);
-    }
-
-    if (!list) return;
-
-    list.innerHTML = adverts.map(advert => {
-        const title = getFirstValue(advert, ["title", "name"], "Sponsored");
-        const description = getFirstValue(advert, ["description", "summary"], "");
-        const image = safeImage(advert.image);
-        const url = safeUrl(advert.url || advert.link);
-
-        return `
-            <article class="advert-card">
+    if (list) {
+        const cards = homepageAds.length ? homepageAds : supplied.slice(0, 2);
+        list.innerHTML = cards.map(advert => {
+            const title = getFirstValue(advert, ["title", "name"], "Sponsored");
+            const description = getFirstValue(advert, ["description", "summary"], "");
+            const image = safeImage(advert.image);
+            const url = safeUrl(advert.url || advert.link);
+            return `<article class="advert-card">
                 <span class="advert-label">Sponsored</span>
-                ${image ? `
-                    <img src="${escapeHTML(image)}"
-                         alt="${escapeHTML(title)}"
-                         loading="eager"
-                         onerror="this.style.display='none'">
-                ` : ""}
-                <h3>${escapeHTML(title)}</h3>
-                <p>${escapeHTML(description)}</p>
-                ${url ? `
-                    <a href="${escapeHTML(url)}"
-                       target="_blank"
-                       rel="noopener noreferrer">Learn more</a>
-                ` : ""}
-            </article>
-        `;
-    }).join("");
-
-    list.style.display = "grid";
-    list.style.visibility = "visible";
-    list.style.opacity = "1";
-
+                ${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.style.display='none'">` : ""}
+                <h3>${escapeHTML(title)}</h3><p>${escapeHTML(description)}</p>
+                ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}
+            </article>`;
+        }).join("");
+        list.style.display = cards.length ? "grid" : "none";
+    }
     if (section) {
         section.hidden = false;
-        section.style.display = "block";
+        section.style.display = homepageAds.length ? "block" : "none";
         section.style.visibility = "visible";
+    }
+
+    const inBreakerSection = getElement("in-breaker-advert-section");
+    const inBreakerContainer = getElement("in-breaker-advert");
+    if (inBreakerSection && inBreakerContainer) {
+        if (inBreakerAd) {
+            const title = getFirstValue(inBreakerAd, ["title", "name"], "Sponsored");
+            const description = getFirstValue(inBreakerAd, ["description", "summary"], "");
+            const image = safeImage(inBreakerAd.image);
+            const url = safeUrl(inBreakerAd.url || inBreakerAd.link);
+            inBreakerContainer.innerHTML = `<article class="in-breaker-advert-card">
+                <img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.style.display='none'">
+                <div class="in-breaker-advert-copy"><span class="advert-label">SPONSORED</span>
+                <h3>${escapeHTML(title)}</h3><p>${escapeHTML(description)}</p>
+                ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}</div>
+            </article>`;
+            inBreakerSection.hidden = false;
+            inBreakerSection.style.display = "block";
+        } else {
+            inBreakerContainer.innerHTML = "";
+            inBreakerSection.hidden = true;
+            inBreakerSection.style.display = "none";
+        }
     }
 }
 

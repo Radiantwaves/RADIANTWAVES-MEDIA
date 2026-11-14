@@ -306,7 +306,7 @@ ul {
     width: max-content;
     min-width: max-content;
     flex-shrink: 0;
-    animation: rw-ticker-scroll 35s linear infinite;
+    animation: rw-ticker-scroll 100s linear infinite;
     will-change: transform;
 }
 
@@ -1657,3 +1657,14 @@ ul {
 .footer-policy-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin:18px auto; }
 .footer-policy-links a { font-size:12px; }
 @media (max-width:700px) { .information-grid { grid-template-columns:1fr; } .footer-policy-links { flex-direction:column; align-items:center; gap:8px; } }
+
+
+/* IN-BREAKER SPONSORED ADVERT */
+.in-breaker-advert-section{width:min(94%,var(--rw-container));margin:14px auto 22px}
+.in-breaker-advert-card{display:flex;align-items:center;gap:18px;padding:12px 18px;background:var(--rw-panel);border:1px solid var(--rw-border);border-left:4px solid var(--rw-yellow);border-radius:7px}
+.in-breaker-advert-card img{width:150px;height:88px;object-fit:cover;border-radius:5px;flex-shrink:0}
+.in-breaker-advert-copy{flex:1;min-width:0}
+.in-breaker-advert-copy h3{color:var(--rw-yellow);margin:3px 0 4px;font-size:17px}
+.in-breaker-advert-copy p{color:var(--rw-muted);margin:0;font-size:13px}
+.in-breaker-advert-card .advert-label{color:var(--rw-yellow);font-size:10px;font-weight:800;letter-spacing:1px}
+@media(max-width:600px){.in-breaker-advert-card{align-items:flex-start;gap:11px;padding:10px}.in-breaker-advert-card img{width:100px;height:82px}.in-breaker-advert-copy h3{font-size:14px}.in-breaker-advert-copy p{font-size:12px}}

@@ -35,7 +35,7 @@
     {
       "title": "Trump, Xi and Putin expected to meet on APEC sidelines in China",
       "category": "World",
-      "image": "assets/diplomacy.jpeg",
+      "image": "assets/un.jpeg",
       "url": "https://apnews.com/article/5fe92253ef38100bae913834a9b74d72"
     },
     {
@@ -59,7 +59,7 @@
     {
       "title": "Middle East tensions rise after Gaza strike and Iranian claim involving Bahrain base",
       "category": "Middle East",
-      "image": "assets/middleeast.jpeg",
+      "image": "assets/middleast.jpeg",
       "url": "https://apnews.com/article/3b4adde832dadd333451fd2f7a51908c"
     }
   ],
@@ -158,7 +158,7 @@
       "flag": "🌐",
       "summary": "The three governments say Donald Trump, Xi Jinping and Vladimir Putin plan an unprecedented joint meeting on 19 November in Shenzhen.",
       "content": "The White House and Kremlin say the leaders of the United States, China and Russia are expected to meet on the sidelines of the APEC summit in Shenzhen on 19 November. The gathering would bring together leaders of three nuclear powers at a moment of tension over Ukraine, Iran, trade and strategic competition. Analysts quoted by the Associated Press caution that the meeting may be more symbolic than substantive, with no specific agreement announced in advance. Ukraine's absence from any discussion about its own future would be a major diplomatic concern for Kyiv and European partners.",
-      "image": "assets/diplomacy.jpeg",
+      "image": "assets/un.jpeg",
       "imageAlt": "Diplomatic meeting illustration",
       "imageNote": "General diplomatic illustration, not a photograph of the announced meeting",
       "source": "Associated Press",
@@ -258,7 +258,7 @@
       "flag": "🌍",
       "summary": "Israel says it killed a senior Hamas commander in Gaza; Iran claims it struck a US radar system in Bahrain, a claim not independently confirmed in the report.",
       "content": "The Associated Press reports that Israeli forces say they killed Samir Mahmoud Hassan Abu Younis, identified by Israel as commander of Hamas' Rafah Brigade. Hamas confirmed his death but disputed Israel's account of his activities. Separately, Iran's Revolutionary Guard claimed it struck a radar system at a US helicopter base in Bahrain; the US military had not immediately commented. Bahrain said its air defences intercepted Iranian projectiles. These statements must be attributed to the parties making them until independently verified. The same AP report notes a Jordanian court's sentences over a deadly church shooting and renewed claims and counterclaims relating to Yemen.",
-      "image": "assets/middleeast.jpeg",
+      "image": "assets/middleast.jpeg",
       "imageAlt": "Middle East regional illustration",
       "imageNote": "Regional illustration, not a photograph of the reported strike or military site",
       "source": "Associated Press",
@@ -333,7 +333,7 @@
       "flag": "🇳🇬",
       "summary": "The ADC's appeal and request for a stay follow the Federal High Court judgment; no final appellate ruling or verified order suspending the judgment is established in this update.",
       "content": "The legal dispute over the African Democratic Congress leadership and Atiku Abubakar's nomination remains unresolved in the material reviewed for this midday update. The Federal High Court judgment of 5 November set aside the processes that produced the David Mark-led leadership and related nomination actions. The ADC has challenged the ruling and sought appellate relief. Filing an appeal does not by itself suspend a judgment; the decisive question is whether a competent appellate court grants a stay or changes the ruling. INEC's position must be read alongside the certified court documents and any binding orders. RadiantWaves has not verified a final appellate decision as of this edition.",
-      "image": "assets/atiku-david-mark-court.jpg",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
       "imageAlt": "Atiku Abubakar and David Mark in the context of the ADC court dispute",
       "imageNote": "Repository image associated with the ADC leadership dispute",
       "source": "Reuters; Channels Television; THISDAY",
@@ -368,7 +368,7 @@
       "flag": "🌐",
       "summary": "The three governments say Donald Trump, Xi Jinping and Vladimir Putin plan an unprecedented joint meeting on 19 November in Shenzhen.",
       "content": "The White House and Kremlin say the leaders of the United States, China and Russia are expected to meet on the sidelines of the APEC summit in Shenzhen on 19 November. The gathering would bring together leaders of three nuclear powers at a moment of tension over Ukraine, Iran, trade and strategic competition. Analysts quoted by the Associated Press caution that the meeting may be more symbolic than substantive, with no specific agreement announced in advance. Ukraine's absence from any discussion about its own future would be a major diplomatic concern for Kyiv and European partners.",
-      "image": "assets/diplomacy.jpeg",
+      "image": "assets/un.jpeg",
       "imageAlt": "Diplomatic meeting illustration",
       "imageNote": "General diplomatic illustration, not a photograph of the announced meeting",
       "source": "Associated Press",
@@ -393,7 +393,7 @@
       "flag": "🌍",
       "summary": "Israel says it killed a senior Hamas commander in Gaza; Iran claims it struck a US radar system in Bahrain, a claim not independently confirmed in the report.",
       "content": "The Associated Press reports that Israeli forces say they killed Samir Mahmoud Hassan Abu Younis, identified by Israel as commander of Hamas' Rafah Brigade. Hamas confirmed his death but disputed Israel's account of his activities. Separately, Iran's Revolutionary Guard claimed it struck a radar system at a US helicopter base in Bahrain; the US military had not immediately commented. Bahrain said its air defences intercepted Iranian projectiles. These statements must be attributed to the parties making them until independently verified. The same AP report notes a Jordanian court's sentences over a deadly church shooting and renewed claims and counterclaims relating to Yemen.",
-      "image": "assets/middleeast.jpeg",
+      "image": "assets/middleast.jpeg",
       "imageAlt": "Middle East regional illustration",
       "imageNote": "Regional illustration, not a photograph of the reported strike or military site",
       "source": "Associated Press",
@@ -468,121 +468,185 @@
   ],
   "leadersWatch": {
     "title": "Leaders Watch",
-    "updatedAt": "2026-11-15",
+    "updatedAt": "2026-11-15T12:30:00+01:00",
     "leaders": [
       {
         "name": "Donald Trump",
         "position": "President of the United States",
         "country": "United States",
         "image": "assets/leaders/trump.jpg",
-        "headline": "The Democratic midterm victories give Congress new oversight powers over the administration."
+        "headline": "The Democratic midterm victories give Congress new oversight powers over the administration.",
+        "report": "Congressional oversight is set to intensify after Democrats won control of both chambers in the US midterm elections. The administration will face closer scrutiny of executive decisions, spending and foreign policy.",
+        "background": "Donald Trump is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Emmanuel Macron",
         "position": "President of France",
         "country": "France",
         "image": "assets/leaders/macron.jpg",
-        "headline": "France's political debate is moving toward the 2027 presidential contest and questions of national direction."
+        "headline": "France's political debate is moving toward the 2027 presidential contest and questions of national direction.",
+        "report": "France's political debate is increasingly focused on the 2027 presidential contest, economic pressures and the balance of power between the government and opposition parties.",
+        "background": "Emmanuel Macron is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Bola Ahmed Tinubu",
         "position": "President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/tinubu.jpg",
-        "headline": "INEC's legal workload and opposition litigation keep electoral credibility in focus."
+        "headline": "INEC's legal workload and opposition litigation keep electoral credibility in focus.",
+        "report": "Nigeria's government faces continued scrutiny over the economy, security and the political consequences of court cases involving opposition parties ahead of the 2027 election.",
+        "background": "Bola Ahmed Tinubu is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Atiku Abubakar",
         "position": "Former Vice-President of Nigeria",
         "country": "Nigeria",
         "image": "assets/leaders/atiku.jpg",
-        "headline": "The ADC court judgment and pending appeal leave his 2027 nomination in legal uncertainty."
+        "headline": "The ADC court judgment and pending appeal leave his 2027 nomination in legal uncertainty.",
+        "report": "Atiku's prospective 2027 candidacy remains affected by the ADC leadership litigation. The party has appealed the Federal High Court judgment and sought a stay; no final appellate outcome is confirmed in this update.",
+        "background": "Atiku Abubakar is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Peter Obi",
         "position": "Opposition politician; NDC presidential figure",
         "country": "Nigeria",
         "image": "assets/leaders/obi.jpg",
-        "headline": "Obi says any opposition alliance must be negotiated by parties, not imposed on individual candidates."
+        "headline": "Obi says any opposition alliance must be negotiated by parties, not imposed on individual candidates.",
+        "report": "Peter Obi has argued that any opposition alliance should be negotiated by political parties rather than imposed on individual candidates. The question of coalition structure remains central to opposition strategy.",
+        "background": "Peter Obi is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "David Mark",
         "position": "Former Senate President; ADC leader",
         "country": "Nigeria",
         "image": "assets/leaders/atiku-david-mark-court.jpg",
-        "headline": "The ADC leadership dispute remains before the courts; the party has appealed the ruling."
+        "headline": "The ADC leadership dispute remains before the courts; the party has appealed the ruling.",
+        "report": "David Mark's position as leader of the ADC remains part of the court dispute over the party's leadership processes. The appeal process and any order on a stay will be important next steps.",
+        "background": "David Mark is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Mark Carney",
         "position": "Prime Minister of Canada",
         "country": "Canada",
         "image": "assets/leaders/carney.jpg",
-        "headline": "Canada's 2026 budget and its new tropical-forest financing commitment shape economic and climate policy."
+        "headline": "Canada's 2026 budget and its new tropical-forest financing commitment shape economic and climate policy.",
+        "report": "Canada has announced up to C$560 million over four years for the Tropical Forest Forever Facility, linking climate finance with forest protection and support for local communities.",
+        "background": "Mark Carney is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Vladimir Putin",
         "position": "President of Russia",
         "country": "Russia",
         "image": "assets/leaders/putin.jpg",
-        "headline": "Ukraine negotiations remain blocked by territorial questions and the need for credible security guarantees."
+        "headline": "Ukraine negotiations remain blocked by territorial questions and the need for credible security guarantees.",
+        "report": "Russia's war against Ukraine continues to shape European security diplomacy. Any proposed settlement remains contested, particularly over territorial questions and guarantees against renewed aggression.",
+        "background": "Vladimir Putin is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Xi Jinping",
         "position": "President of China",
         "country": "China",
         "image": "assets/leaders/xi.jpg",
-        "headline": "China's regional diplomacy is in focus as ASEAN leaders meet in Manila."
+        "headline": "China's regional diplomacy is in focus as ASEAN leaders meet in Manila.",
+        "report": "China is preparing to host the APEC summit in Shenzhen, where major-power diplomacy and trade relations are expected to feature prominently.",
+        "background": "Xi Jinping is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Volodymyr Zelenskyy",
         "position": "President of Ukraine",
         "country": "Ukraine",
         "image": "assets/leaders/zelensky.jpg",
-        "headline": "Zelenskyy says possible Donbas withdrawal was raised in talks but Kyiv has not accepted territorial concessions."
+        "headline": "Zelenskyy says possible Donbas withdrawal was raised in talks but Kyiv has not accepted territorial concessions.",
+        "report": "Zelenskyy has warned that a proposed US security framework could weaken Ukraine if Kyiv is sidelined or pressured into territorial concessions. Ukraine continues to seek credible guarantees.",
+        "background": "Volodymyr Zelenskyy is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Ursula von der Leyen",
         "position": "President of the European Commission",
         "country": "European Union",
         "image": "assets/leaders/von-der-leyen.jpg",
-        "headline": "The Commission's AI agenda and digital-platform enforcement remain central to Europe's technology policy."
+        "headline": "The Commission's AI agenda and digital-platform enforcement remain central to Europe's technology policy.",
+        "report": "The European Commission is pursuing enforcement of the Digital Services Act, including preliminary findings concerning TikTok's recommendation system, while promoting AI adoption across the bloc.",
+        "background": "Ursula von der Leyen is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Andy Burnham",
         "position": "Prime Minister of the United Kingdom",
         "country": "United Kingdom",
         "image": "assets/leaders/andy.jpg",
-        "headline": "Burnham is preparing for the 20 November UK-EU summit on security, migration and trade."
+        "headline": "Burnham is preparing for the 20 November UK-EU summit on security, migration and trade.",
+        "report": "The UK political debate continues to focus on public services, regional economic development and the future direction of the Labour Party and national government.",
+        "background": "Andy Burnham is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Anthony Albanese",
         "position": "Prime Minister of Australia",
         "country": "Australia",
-        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthony_Albanese_portrait_%28cropped%29.jpg",
+        "image": "assets/leaders/andy.jpg",
         "imageCredit": "Australian Government, CC BY 4.0, via Wikimedia Commons",
         "headline": "Australia has signed a new defence cooperation arrangement with the Philippines.",
-        "imageNote": "Official Australian Government portrait; credit Australian Government, CC BY 4.0."
+        "imageNote": "Official Australian Government portrait; credit Australian Government, CC BY 4.0.",
+        "report": "Australia is deepening defence cooperation with regional partners as Indo-Pacific governments respond to maritime security concerns and wider strategic competition.",
+        "background": "Anthony Albanese is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Friedrich Merz",
         "position": "Chancellor of Germany",
         "country": "Germany",
         "image": "assets/leaders/merz.jpg",
-        "headline": "Germany's 2027 budget committee approval includes near-record borrowing and coalition compromises."
+        "headline": "Germany's 2027 budget committee approval includes near-record borrowing and coalition compromises.",
+        "report": "Germany's government is preparing a major borrowing and investment programme as it seeks to support infrastructure, defence and economic competitiveness.",
+        "background": "Friedrich Merz is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Cyril Ramaphosa",
         "position": "President of South Africa",
         "country": "South Africa",
         "image": "assets/leaders/ramaphosa.jpg",
-        "headline": "South Africa's policy choices remain important to African diplomacy and regional economic cooperation."
+        "headline": "South Africa's policy choices remain important to African diplomacy and regional economic cooperation.",
+        "report": "South Africa continues to balance domestic economic pressures, coalition politics and its diplomatic role on African and international issues.",
+        "background": "Cyril Ramaphosa is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       },
       {
         "name": "Marine Le Pen",
         "position": "French opposition political leader",
         "country": "France",
         "image": "assets/leaders/marine-le-pen.jpg",
-        "headline": "New polling puts Le Pen ahead of potential rivals as France's 2027 contest takes shape."
+        "headline": "New polling puts Le Pen ahead of potential rivals as France's 2027 contest takes shape.",
+        "report": "France's 2027 presidential debate is being shaped by polling, legal constraints and the future direction of the National Rally. Polling is not a prediction of the eventual result.",
+        "background": "Marine Le Pen is included in Leaders Watch because decisions and public positions in this office or political role have implications beyond the immediate news cycle.",
+        "implications": "The key questions are the evidence behind public statements, the practical effects of policy decisions and the impact on citizens, institutions and international relations.",
+        "radiantWavesView": "RadiantWaves will assess developments through verified information, transparent attribution and scrutiny of both official claims and opposition responses."
       }
     ]
   },
@@ -1985,7 +2049,7 @@
       "flag": "🇳🇬",
       "summary": "The ADC's appeal and request for a stay follow the Federal High Court judgment; no final appellate ruling or verified order suspending the judgment is established in this update.",
       "content": "The legal dispute over the African Democratic Congress leadership and Atiku Abubakar's nomination remains unresolved in the material reviewed for this midday update. The Federal High Court judgment of 5 November set aside the processes that produced the David Mark-led leadership and related nomination actions. The ADC has challenged the ruling and sought appellate relief. Filing an appeal does not by itself suspend a judgment; the decisive question is whether a competent appellate court grants a stay or changes the ruling. INEC's position must be read alongside the certified court documents and any binding orders. RadiantWaves has not verified a final appellate decision as of this edition.",
-      "image": "assets/atiku-david-mark-court.jpg",
+      "image": "assets/leaders/atiku-david-mark-court.jpg",
       "imageAlt": "Atiku Abubakar and David Mark in the context of the ADC court dispute",
       "imageNote": "Repository image associated with the ADC leadership dispute",
       "source": "Reuters; Channels Television; THISDAY",

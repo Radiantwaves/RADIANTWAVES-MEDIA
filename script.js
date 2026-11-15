@@ -1302,61 +1302,88 @@ function renderQuestionAndQuote(data) {
 
 function renderAdverts(data) {
     const supplied = getArray(data && data.sponsoredAdverts)
-        .filter(advert => advert && advert.status !== "inactive");
-    const homepageAds = supplied.filter(ad => {
-        const placement = cleanText(ad.placement).toLowerCase();
+        .filter(advert => advert && String(advert.status || "active").toLowerCase() !== "inactive");
+
+    const placements = data && data.advertPlacements && typeof data.advertPlacements === "object"
+        ? data.advertPlacements : {};
+
+    const homepageConfigured = placements.homepage && typeof placements.homepage === "object"
+        ? placements.homepage : null;
+    const breakerConfigured = placements.inBreaker && typeof placements.inBreaker === "object"
+        ? placements.inBreaker : null;
+
+    const homepageAds = supplied.filter(advert => {
+        const placement = cleanText(advert.placement).toLowerCase();
         return !placement || placement === "homepage" || placement === "sponsored";
     });
-    const inBreakerAd = supplied.find(ad => {
-        const placement = cleanText(ad.placement).toLowerCase();
+    const inBreakerAd = supplied.find(advert => {
+        const placement = cleanText(advert.placement).toLowerCase();
         return placement === "in-breaker" || placement === "inbreaker" || placement === "breaking";
-    });
+    }) || breakerConfigured;
+
+    const homepageFallback = {
+        id: "ad001",
+        title: "Discover Quality Spices",
+        description: "Explore quality spices and ingredients for your kitchen. Discover products for everyday cooking and special meals.",
+        image: "assets/spices.jpeg",
+        placement: "homepage",
+        status: "active"
+    };
+    const breakerFallback = {
+        id: "ad002",
+        title: "Stonebreaker",
+        description: "Discover more about Stonebreaker products and explore the available product range.",
+        image: "assets/stonebreaker.jpeg",
+        placement: "in-breaker",
+        status: "active"
+    };
+
+    const homepageCards = homepageAds.length
+        ? homepageAds
+        : (homepageConfigured ? [homepageConfigured] : [homepageFallback]);
+
     const section = getElement("sponsored-adverts-section");
     const list = getElement("sponsored-adverts");
 
     if (list) {
-        const cards = homepageAds.length ? homepageAds : supplied.slice(0, 2);
-        list.innerHTML = cards.map(advert => {
+        list.innerHTML = homepageCards.map(advert => {
             const title = getFirstValue(advert, ["title", "name"], "Sponsored");
             const description = getFirstValue(advert, ["description", "summary"], "");
-            const image = safeImage(advert.image);
+            const image = safeImage(advert.image) || "assets/spices.jpeg";
             const url = safeUrl(advert.url || advert.link);
             return `<article class="advert-card">
                 <span class="advert-label">Sponsored</span>
-                ${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.style.display='none'">` : ""}
+                <img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.onerror=null;this.src='./assets/spices.jpeg';this.style.display='block'">
                 <h3>${escapeHTML(title)}</h3><p>${escapeHTML(description)}</p>
                 ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}
             </article>`;
         }).join("");
-        list.style.display = cards.length ? "grid" : "none";
+        list.style.display = "grid";
+        list.style.visibility = "visible";
     }
     if (section) {
         section.hidden = false;
-        section.style.display = homepageAds.length ? "block" : "none";
+        section.style.display = "block";
         section.style.visibility = "visible";
     }
 
     const inBreakerSection = getElement("in-breaker-advert-section");
     const inBreakerContainer = getElement("in-breaker-advert");
     if (inBreakerSection && inBreakerContainer) {
-        if (inBreakerAd) {
-            const title = getFirstValue(inBreakerAd, ["title", "name"], "Sponsored");
-            const description = getFirstValue(inBreakerAd, ["description", "summary"], "");
-            const image = safeImage(inBreakerAd.image);
-            const url = safeUrl(inBreakerAd.url || inBreakerAd.link);
-            inBreakerContainer.innerHTML = `<article class="in-breaker-advert-card">
-                <img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.style.display='none'">
-                <div class="in-breaker-advert-copy"><span class="advert-label">SPONSORED</span>
-                <h3>${escapeHTML(title)}</h3><p>${escapeHTML(description)}</p>
-                ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}</div>
-            </article>`;
-            inBreakerSection.hidden = false;
-            inBreakerSection.style.display = "block";
-        } else {
-            inBreakerContainer.innerHTML = "";
-            inBreakerSection.hidden = true;
-            inBreakerSection.style.display = "none";
-        }
+        const advert = inBreakerAd || breakerFallback;
+        const title = getFirstValue(advert, ["title", "name"], "Sponsored");
+        const description = getFirstValue(advert, ["description", "summary"], "");
+        const image = safeImage(advert.image) || "assets/stonebreaker.jpeg";
+        const url = safeUrl(advert.url || advert.link);
+        inBreakerContainer.innerHTML = `<article class="in-breaker-advert-card">
+            <img src="${escapeHTML(image)}" alt="${escapeHTML(title)}" loading="eager" onerror="this.onerror=null;this.src='./assets/stonebreaker.jpeg';this.style.display='block'">
+            <div class="in-breaker-advert-copy"><span class="advert-label">SPONSORED</span>
+            <h3>${escapeHTML(title)}</h3><p>${escapeHTML(description)}</p>
+            ${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Learn more</a>` : ""}</div>
+        </article>`;
+        inBreakerSection.hidden = false;
+        inBreakerSection.style.display = "block";
+        inBreakerSection.style.visibility = "visible";
     }
 }
 

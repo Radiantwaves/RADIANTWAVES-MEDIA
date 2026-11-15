@@ -1626,8 +1626,10 @@ ul {
 }
 .flight-optional { color: var(--rw-muted); font-weight: 400; }
 .flight-search-button {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     min-height: 46px; border: 0; border-radius: 5px; padding: 12px 18px;
     background: var(--rw-red); color: #fff; font-weight: 900; cursor: pointer;
+    text-decoration: none;
 }
 .flight-search-button:hover { background: var(--rw-red-dark); }
 .flight-message { margin: 16px 0 0; }

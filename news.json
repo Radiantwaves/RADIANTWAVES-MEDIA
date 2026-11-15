@@ -5,21 +5,45 @@
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/"
   },
-  "edition": "Evening News & Global Update",
+  "edition": "Night News & Global Update",
   "date": "Sunday, 15 November 2026",
-  "updatedAt": "2026-11-15T17:08:00+01:00",
+  "updatedAt": "2026-11-15T20:35:00+01:00",
   "timezone": "Europe/Paris",
   "hero": {
-    "title": "Nigeria's 2027 political debate intensifies as global tensions, privacy and space technology shape the headlines",
-    "subtitle": "Atiku's subsidy proposal faces questions over funding; Guinea reports deadly mining-region clashes; Italy fines Meta €805 million; SpaceX achieves a historic Starship recovery milestone.",
-    "image": "assets/g20-meeting.jpg",
-    "imageAlt": "Leaders at an international summit",
-    "imageNote": "Illustrative international summit image, not a photograph of a specific meeting.",
+    "title": "Middle East tensions and major-power diplomacy dominate a fast-moving global agenda",
+    "subtitle": "Israel confirms a Gaza strike killed a Hamas commander; Iran's Bahrain claim remains disputed; Trump heads to Asia amid domestic political pressure, while France's political divisions deepen.",
+    "image": "assets/middleeast.jpeg",
+    "imageAlt": "Regional illustration for Middle East news",
+    "imageNote": "Illustrative regional image, not a photograph of a specific strike or location.",
     "category": "Global Affairs",
     "url": "https://www.premiumtimesng.com/news/headlines/925262-2027-politics-watch-tinubus-plateau-pledges-atikus-subsidy-bets-and-adcs-deepening-crisis.html"
   },
-  "morningSummary": "Good evening. This Sunday’s global agenda brings together political competition, security, economic pressure and major technology developments. In Nigeria, President Bola Tinubu has promised to rebuild communities affected by violence in Plateau State, while former Vice-President Atiku Abubakar renewed his proposal to restore petrol and electricity subsidies at a Bauchi rally. Those are campaign commitments, not implemented policies: the key questions are how the proposals would be financed, targeted and delivered. The ADC leadership and Atiku nomination dispute remains before the courts; an appeal is not the same as a stay, and no final appellate outcome is established in this edition.\\n\\nAcross Africa, Guinea's government says 10 people were killed and 13 injured during clashes in Balato, in the Siguiri mining region, amid a crackdown on informal gold mining. The Democratic Republic of Congo's Ebola emergency and South Sudan's delayed election timetable remain major concerns. In France, demonstrations on 14 November brought together groups protesting the cost of living, public services and a proposed change to police self-defence rules; unions are preparing further action on 17 November.\\n\\nIn Europe, Italy's data-protection authority fined Meta €805 million over a Facebook feature that accessed Android users' photos and videos without sufficiently specific consent. Meta says it will appeal. In the United States, the FAA says airspace has reopened after a nationwide ground stop caused by telecommunications problems, although passengers may still face disruption as airlines restore schedules. SpaceX has completed the first successful catch of a Starship upper stage by its launch tower, while the booster did not complete a return catch.\\n\\nDiplomacy continues in Manila as ASEAN leaders meet, and Canada has announced an initial contribution of up to C$560 million over four years to the Tropical Forest Forever Facility. In the Middle East, Israel says it killed a senior Hamas commander in Gaza; Hamas confirmed the death. Iran's claim that it struck a US radar system in Bahrain remains a claim requiring independent confirmation. RadiantWaves separates confirmed events, official statements, allegations and analysis.",
+  "morningSummary": "Good evening. This Night News edition brings together renewed Middle East tensions, major-power diplomacy, political pressure in France and Nigeria, and continuing economic uncertainty. In the Middle East, Israel says an overnight strike in southern Gaza killed Hamas commander Samir Mahmoud Hassan Abu Younis, and Hamas has confirmed his death. The Associated Press also reports that Bahrain says its defences intercepted Iranian projectiles; Iran's claim that it struck a US radar system in Bahrain remains disputed and should not be treated as independently verified. The developments underline the risk that the conflict could widen and further affect shipping and regional security.\\n\\nIn the United States, President Donald Trump is travelling to the Philippines and China after Republican losses in the midterm elections. His Asia trip includes the APEC summit and expected high-level talks with Chinese President Xi Jinping; the Kremlin has also announced a planned Trump-Xi-Putin meeting in Shenzhen on 19 November. The agenda is likely to be shaped by trade, Taiwan, Iran and Russia's war in Ukraine.\\n\\nIn France, a new survey reported by Le Monde points to deep political polarisation, economic anxiety and low confidence in national institutions ahead of the 2027 presidential election. Separately, public-sector unions are preparing further industrial action on 17 November as disputes over purchasing power and public services continue. These developments reflect different forms of pressure: public dissatisfaction, distrust and the challenge of governing amid fragmented politics.\\n\\nIn Nigeria, former Vice-President Atiku Abubakar has again pledged to restore petrol and electricity subsidies if elected. This remains a campaign proposal, not an implemented policy. Voters need details on cost, financing, targeting and the effect on public services. The ADC leadership and nomination dispute remains a separate legal matter: the court judgment, the party's appeal and any eventual appellate decision must not be conflated.\\n\\nAcross Africa, Guinea's government has reported deaths and injuries in clashes linked to enforcement against informal gold mining. In Canada, Prime Minister Mark Carney says trade talks with the United States are making progress, while Canada continues efforts to diversify its export markets in Asia. RadiantWaves distinguishes confirmed events, official statements, allegations and analysis; developing stories may change as more information becomes available.",
   "breaking": [
+    {
+      "title": "Israel says Gaza strike killed Hamas commander; Iran's claim involving Bahrain remains disputed",
+      "category": "Middle East",
+      "image": "assets/middleast.jpeg",
+      "url": "https://apnews.com/article/3b4adde832dadd333451fd2f7a51908c"
+    },
+    {
+      "title": "Trump heads to Asia after midterm setbacks as China, Russia and regional security dominate diplomacy",
+      "category": "World",
+      "image": "assets/leaders/trump.jpg",
+      "url": "https://apnews.com/article/30ac0f6937301f36904808f278b79b1e"
+    },
+    {
+      "title": "France survey points to rising anger, economic anxiety and weak confidence in national institutions",
+      "category": "France",
+      "image": "assets/france-protests.jpg",
+      "url": "https://www.lemonde.fr/en/politics/article/2026/11/15/french-fractures-survey-amid-polarized-political-landscape-people-no-longer-see-elections-as-a-solution_6781579_5.html"
+    },
+    {
+      "title": "Carney says Canada-US trade talks are progressing as Ottawa deepens links with Asian markets",
+      "category": "Canada",
+      "image": "assets/leaders/carney.jpg",
+      "url": "https://apnews.com/article/00dea030028a7c221840458b25469e02"
+    },
     {
       "title": "Tinubu and Atiku put security, reconstruction and energy subsidies at centre of Nigeria's 2027 debate",
       "category": "Nigeria",
@@ -43,18 +67,6 @@
       "category": "Technology",
       "image": "assets/ai.jpeg",
       "url": "https://apnews.com/article/df394c1b5a0f85e11194f9ff7db9ee6b"
-    },
-    {
-      "title": "Israel says Gaza strike killed senior Hamas commander; Iran's Bahrain radar claim remains unverified",
-      "category": "Middle East",
-      "image": "assets/middleast.jpeg",
-      "url": "https://apnews.com/article/3b4adde832dadd333451fd2f7a51908c"
-    },
-    {
-      "title": "French unions prepare further action as cost-of-living and public-sector disputes continue",
-      "category": "France",
-      "image": "assets/france-protests.jpg",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/11/14/french-social-unrest-between-concessions-and-tough-talk-pm-lecornu-struggles-to-end-crisis_6780688_5.html"
     },
     {
       "title": "US airspace reopens after nationwide ground stop, but airlines continue recovery operations",
@@ -151,28 +163,32 @@
     },
     {
       "id": "rw-2026-11-15-103",
-      "title": "Trump, Xi and Putin expected to meet on APEC sidelines in China",
+      "title": "Trump heads to Asia amid domestic setbacks as a possible Trump-Xi-Putin meeting draws attention",
       "category": "World",
       "region": "Global",
       "country": "United States / China / Russia",
       "flag": "🌐",
-      "summary": "The three governments say Donald Trump, Xi Jinping and Vladimir Putin plan an unprecedented joint meeting on 19 November in Shenzhen.",
-      "content": "The White House and Kremlin say the leaders of the United States, China and Russia are expected to meet on the sidelines of the APEC summit in Shenzhen on 19 November. The gathering would bring together leaders of three nuclear powers at a moment of tension over Ukraine, Iran, trade and strategic competition. Analysts quoted by the Associated Press caution that the meeting may be more symbolic than substantive, with no specific agreement announced in advance. Ukraine's absence from any discussion about its own future would be a major diplomatic concern for Kyiv and European partners.",
+      "summary": "President Donald Trump is travelling to the Philippines and China after Republican midterm losses, with APEC diplomacy and an announced 19 November meeting with Xi Jinping and Vladimir Putin in focus.",
+      "content": "President Donald Trump is travelling to the Philippines and China after Republican losses in the midterm elections weakened his domestic political position. His programme includes the APEC summit, meetings with Southeast Asian and Quad leaders, and expected talks with Chinese President Xi Jinping. The Kremlin has announced a planned trilateral meeting involving Trump, Xi and Russian President Vladimir Putin in Shenzhen on 19 November. The diplomatic agenda is likely to include trade, nuclear arms, Taiwan, Iran and Russia's war in Ukraine. Ukraine's absence from the planned meeting is a concern for Kyiv and European partners. The announcement of a meeting does not mean an agreement has been reached; its significance will depend on the agenda, participation and any concrete outcomes.",
       "image": "assets/un.jpeg",
       "imageAlt": "Diplomatic meeting illustration",
       "imageNote": "General diplomatic illustration, not a photograph of the announced meeting",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/5fe92253ef38100bae913834a9b74d72",
+      "source": "Associated Press; Anadolu Agency",
+      "url": "https://apnews.com/article/30ac0f6937301f36904808f278b79b1e",
       "sources": [
         {
           "name": "Associated Press",
-          "url": "https://apnews.com/article/5fe92253ef38100bae913834a9b74d72"
+          "url": "https://apnews.com/article/30ac0f6937301f36904808f278b79b1e"
+        },
+        {
+          "name": "Anadolu Agency",
+          "url": "https://aa.com.tr/en/world/morning-briefing-nov-15-2026/4125489"
         }
       ],
       "publishedAt": "2026-11-15",
       "background": "APEC provides a forum for economic cooperation among Asia-Pacific economies, but major-power diplomacy often takes place around its meetings.",
-      "whyItMatters": "A direct meeting could shape perceptions of global power relations and influence discussions on nuclear arms, trade and regional conflicts.",
-      "whatHappensNext": "Watch for confirmation of the agenda, whether Ukraine or Iran is discussed, and whether any joint statement follows."
+      "whyItMatters": "Talks among the leaders of three major powers could affect global trade, security and the diplomatic response to conflicts, while raising questions about whether smaller states' interests will be represented.",
+      "whatHappensNext": "Watch for confirmation of the meeting's agenda, official readouts and whether any practical commitments are announced."
     },
     {
       "id": "rw-2026-11-15-104",
@@ -226,28 +242,28 @@
     },
     {
       "id": "rw-2026-11-15-106",
-      "title": "French government faces continued pressure over cost of living and public-sector pay",
+      "title": "French survey highlights public anger, economic anxiety and deep political divisions ahead of 2027",
       "category": "France",
       "region": "Europe",
       "country": "France",
       "flag": "🇫🇷",
-      "summary": "Unions have criticised Prime Minister Sébastien Lecornu's response to public-sector pay concerns; further union action is planned for 17 November.",
-      "content": "France's government is facing continuing social pressure over the cost of living and public-sector purchasing power. Le Monde reports that the CFDT union has joined a planned public-sector strike call for Tuesday 17 November after negotiations were postponed. The government has made some concessions, including a minimum-wage increase, but union leaders say the response does not adequately address workers' concerns. The dispute is part of a wider period of protests involving students, public-sector workers and groups concerned about living costs and government policy. The reported union action is planned; its eventual scale and impact remain to be seen.",
+      "summary": "A new survey reported by Le Monde finds widespread concern about purchasing power, institutional trust and social divisions.",
+      "content": "A 2026 Ipsos-BVA survey of about 3,000 people, reported by Le Monde on 15 November, points to growing anger, economic anxiety and deep divisions in France ahead of the 2027 presidential election. Purchasing power is respondents' leading concern, while confidence in national institutions and the media remains weak. The findings are a snapshot of public opinion, not a prediction of the election result. They come as public-sector unions prepare further action on 17 November and the government faces disputes over wages, public services and the cost of living. The political challenge is to rebuild trust while addressing household pressures and social cohesion.",
       "image": "assets/france-protests.jpg",
       "imageAlt": "Photograph illustrating protests in France",
       "imageNote": "Repository image illustrating French protest coverage",
-      "source": "Le Monde",
-      "url": "https://www.lemonde.fr/en/politics/article/2026/11/14/french-social-unrest-between-concessions-and-tough-talk-pm-lecornu-struggles-to-end-crisis_6780688_5.html",
+      "source": "Le Monde; Ipsos-BVA survey",
+      "url": "https://www.lemonde.fr/en/politics/article/2026/11/15/french-fractures-survey-amid-polarized-political-landscape-people-no-longer-see-elections-as-a-solution_6781579_5.html",
       "sources": [
         {
           "name": "Le Monde",
-          "url": "https://www.lemonde.fr/en/politics/article/2026/11/14/french-social-unrest-between-concessions-and-tough-talk-pm-lecornu-struggles-to-end-crisis_6780688_5.html"
+          "url": "https://www.lemonde.fr/en/politics/article/2026/11/15/french-fractures-survey-amid-polarized-political-landscape-people-no-longer-see-elections-as-a-solution_6781579_5.html"
         }
       ],
       "publishedAt": "2026-11-15",
       "background": "France has faced repeated demonstrations over purchasing power, public services and government reforms.",
-      "whyItMatters": "The dispute could affect public services, transport and the government's ability to build political compromises.",
-      "whatHappensNext": "Watch union announcements, the 17 November action and any new government proposals on wages and public services."
+      "whyItMatters": "Public trust and purchasing power will shape the political debate before the 2027 presidential election and influence how parties respond to social discontent.",
+      "whatHappensNext": "Watch the 17 November union action, government responses and further polling as the presidential campaign approaches."
     },
     {
       "id": "rw-2026-11-15-107",

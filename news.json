@@ -5,20 +5,38 @@
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/"
   },
-  "edition": "Evening News & Global Update",
+  "edition": "Night News & Global Update",
   "date": "Friday, 20 November 2026",
-  "updatedAt": "2026-11-20T19:16:00+01:00",
+  "updatedAt": "2026-11-20T20:52:00+01:00",
   "timezone": "Europe/Paris",
   "hero": {
-    "title": "Nigeria's security, political tensions and transport disruption lead Friday's evening headlines",
-    "subtitle": "The Army reports Borno airstrikes; an APC convoy is attacked in Gombe; Lagos–Ibadan bridge works are suspended after gridlock; and the Olubadan calls for community support against insecurity. Global headlines include the Shenzhen summit and a landmark ICJ ruling.",
-    "image": "https://www.nairaland.com/attachments/16745727_img20230117wa0496_jpegc7704155667d86671dce791003a6ba7c",
-    "imageAlt": "APC campaign bus and supporters at an earlier Nigerian campaign rally",
-    "imageNote": "Archive photograph of an APC campaign rally, not the Gombe attack.",
-    "category": "Nigeria / Security / Politics / Global Affairs"
+    "title": "Atiku demands transparency in election technology as Nigeria and Europe face fresh developments",
+    "subtitle": "Atiku calls for an independent audit of INEC's proposed AI system as the ADC leadership dispute continues. Ukraine reports a major Russian attack, while Nigeria's security, economy and governance remain in focus.",
+    "image": "assets/leaders/atiku2.jpg",
+    "imageAlt": "Former Vice-President Atiku Abubakar",
+    "imageNote": "Portrait of Atiku Abubakar accompanying the lead election accountability report.",
+    "category": "Nigeria / Elections / Politics / Global Affairs"
   },
   "morningSummary": "Friday, 20 November 2026 — Morning News & Global Update. Updated at 06:42 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — INEC has extended recruitment for 2027 election ad hoc staff until 3 December. Registration is free and applicants should use only the official INECPRES portal. Inspector-General of Police Olatunji Disu has urged hospitals to treat gunshot victims immediately without waiting for police reports. President Bola Tinubu has met current and former National Assembly leaders at Aso Rock. Separately, election stakeholders have warned about risks including voter-register manipulation, AI-generated disinformation, hate speech and political violence ahead of 2027. The Federal Government is considering harmonising the 2026 and 2027 budget cycles.\n\nEUROPE — UK and EU negotiators are working towards a package ahead of a Brussels summit, with trade, food standards, youth mobility and migration cooperation among the issues under discussion.\n\nUKRAINE AND GLOBAL DIPLOMACY — European leaders are pushing back against any settlement that would decide Ukraine's future without Kyiv and its European partners. Diplomatic statements are not a peace agreement; negotiations remain uncertain.\n\nEDITORIAL NOTE — We distinguish official announcements from allegations, proposals and ongoing negotiations. Images are selected to match the country and subject; contextual photographs are labelled and are not presented as pictures of the specific event.\n\nADDITIONAL NIGERIA UPDATES — The Olubadan of Ibadanland, Oba Rashidi Ladoja, has pledged palace support for the military and urged community leaders to provide timely intelligence. FIFA has appointed Daniel Amokachi and four others to the NFF Normalisation Committee, subject to eligibility checks. The Army says airstrikes in Borno on 16–17 November killed 21 suspected ISWAP fighters and injured 10; casualty figures are attributed to the military and have not been independently verified.",
   "breaking": [
+    {
+      "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+      "category": "Nigeria / Politics / Elections / Technology",
+      "image": "assets/leaders/atiku2.jpg",
+      "imageAlt": "Former Vice-President Atiku Abubakar",
+      "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+      "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+      "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute."
+    },
+    {
+      "title": "Russian attack kills eight in Ukraine as Poland reports objects entering its airspace",
+      "category": "Europe / Ukraine / Conflict / Security",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to Ukrainian infrastructure during the war",
+      "imageNote": "Contextual file photograph of Ukraine conflict damage; not a photograph of the specific attacks on 20 November.",
+      "summary": "Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, while Poland said three objects, likely missiles and a drone, entered its airspace.",
+      "content": "Russia launched one of its largest attacks of the war against Ukraine, firing more than 400 drones and over 110 missiles at energy, transport and other infrastructure, Reuters reported on 20 November. Ukrainian officials said eight people were killed: six in Kyiv and two at Lviv's Sknyliv railway station. Strikes also caused damage and injuries in other regions, while power outages and disruption to water and railway services were reported. Poland said three objects, believed to be missiles and a drone, had violated its airspace. The reports add to European security concerns as leaders continue discussions about Ukraine's future and possible security guarantees. Casualty and damage figures are attributed to Ukrainian and Polish authorities and may be updated."
+    },
     {
       "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
       "category": "Nigeria / Politics / Security",
@@ -162,25 +180,63 @@
     }
   ],
   "featured": {
-    "id": "evening-201",
-    "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
-    "category": "Nigeria / Politics / Security",
+    "id": "night-201",
+    "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+    "category": "Nigeria / Politics / Elections / Technology",
     "region": "Africa",
     "country": "Nigeria",
     "flag": "🇳🇬",
-    "summary": "Punch reports that violence broke out in Gombe after youths chanted an anti-APC slogan at a campaign convoy. Buses were damaged and supporters were reportedly injured.",
-    "content": "Violence reportedly broke out in Gombe after youths chanted the anti-APC slogan 'Bamayi' as a party campaign convoy passed through the area. Punch reports that suspected attackers damaged buses and some supporters were injured. The report does not establish the identity of those responsible or whether the incident was politically organised. The development raises fresh concerns about the safety of political gatherings and campaign movements ahead of the 2027 general elections. Authorities should investigate impartially and provide clear information about arrests, injuries and damage.",
-    "image": "https://www.nairaland.com/attachments/16745727_img20230117wa0496_jpegc7704155667d86671dce791003a6ba7c",
-    "imageAlt": "APC campaign bus and supporters at an earlier Nigerian campaign rally",
-    "imageNote": "Archive photograph of an APC campaign rally, not the Gombe attack. No verified photograph of the damaged Gombe convoy was located.",
-    "source": "Punch, 20 November 2026",
-    "sourceUrl": "https://punchng.com/morning-recap-apc-convoy-attacked-in-gombe-fg-suspends-lagos-ibadan-bridge-work-other-stories/",
+    "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+    "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute.",
+    "image": "assets/leaders/atiku2.jpg",
+    "imageAlt": "Former Vice-President Atiku Abubakar",
+    "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+    "source": "The PUNCH, 20 November 2026; The Sun, 20 November 2026",
+    "sourceUrl": "https://punchng.com/atiku-demands-independent-audit-of-inecs-proposed-ai-system/",
     "publishedAt": "2026-11-20",
-    "whyItMatters": "Political violence can intimidate voters and supporters and undermine confidence in the campaign period.",
-    "whatHappensNext": "Watch for statements from Gombe State Police, party officials and election observers. Responsibility should not be assigned before investigations.",
-    "label": "POLITICAL SECURITY"
+    "whyItMatters": "The transparency of election technology and the legal status of party nominations are both important to confidence in Nigeria's 2027 electoral process.",
+    "whatHappensNext": "Watch for INEC's response to the audit request, the 28 November mock accreditation exercise and the Court of Appeal proceedings on the ADC dispute.",
+    "label": "ELECTIONS WATCH"
   },
   "topStories": [
+    {
+      "id": "night-201",
+      "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+      "category": "Nigeria / Politics / Elections / Technology",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+      "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute.",
+      "image": "assets/leaders/atiku2.jpg",
+      "imageAlt": "Former Vice-President Atiku Abubakar",
+      "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+      "source": "The PUNCH, 20 November 2026; The Sun, 20 November 2026",
+      "sourceUrl": "https://punchng.com/atiku-demands-independent-audit-of-inecs-proposed-ai-system/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The transparency of election technology and the legal status of party nominations are both important to confidence in Nigeria's 2027 electoral process.",
+      "whatHappensNext": "Watch for INEC's response to the audit request, the 28 November mock accreditation exercise and the Court of Appeal proceedings on the ADC dispute.",
+      "label": "ELECTIONS WATCH"
+    },
+    {
+      "id": "night-202",
+      "title": "Russian attack kills eight in Ukraine as Poland reports objects entering its airspace",
+      "category": "Europe / Ukraine / Conflict / Security",
+      "region": "Europe",
+      "country": "Ukraine / Poland / Russia",
+      "flag": "🇺🇦 🇵🇱",
+      "summary": "Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, while Poland said three objects, likely missiles and a drone, entered its airspace.",
+      "content": "Russia launched one of its largest attacks of the war against Ukraine, firing more than 400 drones and over 110 missiles at energy, transport and other infrastructure, Reuters reported on 20 November. Ukrainian officials said eight people were killed: six in Kyiv and two at Lviv's Sknyliv railway station. Strikes also caused damage and injuries in other regions, while power outages and disruption to water and railway services were reported. Poland said three objects, believed to be missiles and a drone, had violated its airspace. The reports add to European security concerns as leaders continue discussions about Ukraine's future and possible security guarantees. Casualty and damage figures are attributed to Ukrainian and Polish authorities and may be updated.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to Ukrainian infrastructure during the war",
+      "imageNote": "Contextual file photograph of Ukraine conflict damage; not a photograph of the specific attacks on 20 November.",
+      "source": "Reuters, 20 November 2026",
+      "sourceUrl": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The scale of the attack and reports of objects entering Polish airspace raise immediate concerns for civilians and regional security.",
+      "whatHappensNext": "Watch for updated casualty figures, Polish and NATO assessments, and further statements from Ukrainian and Russian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
     {
       "id": "evening-201",
       "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
@@ -729,6 +785,25 @@
     }
   ],
   "worldNews": [
+    {
+      "id": "night-202",
+      "title": "Russian attack kills eight in Ukraine as Poland reports objects entering its airspace",
+      "category": "Europe / Ukraine / Conflict / Security",
+      "region": "Europe",
+      "country": "Ukraine / Poland / Russia",
+      "flag": "🇺🇦 🇵🇱",
+      "summary": "Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, while Poland said three objects, likely missiles and a drone, entered its airspace.",
+      "content": "Russia launched one of its largest attacks of the war against Ukraine, firing more than 400 drones and over 110 missiles at energy, transport and other infrastructure, Reuters reported on 20 November. Ukrainian officials said eight people were killed: six in Kyiv and two at Lviv's Sknyliv railway station. Strikes also caused damage and injuries in other regions, while power outages and disruption to water and railway services were reported. Poland said three objects, believed to be missiles and a drone, had violated its airspace. The reports add to European security concerns as leaders continue discussions about Ukraine's future and possible security guarantees. Casualty and damage figures are attributed to Ukrainian and Polish authorities and may be updated.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to Ukrainian infrastructure during the war",
+      "imageNote": "Contextual file photograph of Ukraine conflict damage; not a photograph of the specific attacks on 20 November.",
+      "source": "Reuters, 20 November 2026",
+      "sourceUrl": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The scale of the attack and reports of objects entering Polish airspace raise immediate concerns for civilians and regional security.",
+      "whatHappensNext": "Watch for updated casualty figures, Polish and NATO assessments, and further statements from Ukrainian and Russian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
     {
       "id": "evening-205",
       "title": "Trump, Xi and Putin agree to dialogue on nuclear risks at historic Shenzhen summit",
@@ -1532,23 +1607,30 @@
   ],
   "archives": [
     {
-      "title": "Evening News — 20 November 2026",
+      "title": "Night News — 20 November 2026",
       "date": "2026-11-20",
       "status": "Current edition",
+      "edition": "Night News & Global Update",
+      "summary": "Atiku calls for independent audit of INEC's proposed AI election system; ADC leadership dispute awaits Court of Appeal; major Russian attack on Ukraine; Poland reports objects in its airspace; Nigeria security and economy updates."
+    },
+    {
+      "title": "Evening News — 20 November 2026",
+      "date": "2026-11-20",
+      "status": "Archived edition",
       "edition": "Evening News & Global Update",
       "summary": "Gombe APC convoy attack; Lagos–Ibadan bridge works suspended after gridlock; Army reports 21 ISWAP fighters killed in Borno strikes; Olubadan backs Army; Shenzhen leaders' declaration; ICJ Myanmar genocide ruling; Anthropic market debut."
     },
     {
       "title": "Midday News — 20 November 2026",
       "date": "2026-11-20",
-      "status": "Current edition",
+      "status": "Archived edition",
       "edition": "Midday News & Global Update",
       "summary": "Kogi police report 15 kidnapped people rescued; Nigeria-Russia customs cooperation; ESUT renaming proposal; UK-EU reset package; Russian strikes hit Kyiv."
     },
     {
       "title": "Morning News — 20 November 2026",
       "date": "2026-11-20",
-      "status": "Current edition",
+      "status": "Archived edition",
       "edition": "Morning News & Global Update",
       "summary": "INEC extends 2027 election recruitment to 3 December; IGP urges immediate treatment for gunshot victims; Tinubu meets National Assembly leaders; election stakeholders warn of disinformation and violence; budget planning and Europe-Ukraine diplomacy."
     },
@@ -2302,6 +2384,44 @@
   "dateISO": "2026-11-20",
   "articles": [
     {
+      "id": "night-201",
+      "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+      "category": "Nigeria / Politics / Elections / Technology",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+      "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute.",
+      "image": "assets/leaders/atiku2.jpg",
+      "imageAlt": "Former Vice-President Atiku Abubakar",
+      "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+      "source": "The PUNCH, 20 November 2026; The Sun, 20 November 2026",
+      "sourceUrl": "https://punchng.com/atiku-demands-independent-audit-of-inecs-proposed-ai-system/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The transparency of election technology and the legal status of party nominations are both important to confidence in Nigeria's 2027 electoral process.",
+      "whatHappensNext": "Watch for INEC's response to the audit request, the 28 November mock accreditation exercise and the Court of Appeal proceedings on the ADC dispute.",
+      "label": "ELECTIONS WATCH"
+    },
+    {
+      "id": "night-202",
+      "title": "Russian attack kills eight in Ukraine as Poland reports objects entering its airspace",
+      "category": "Europe / Ukraine / Conflict / Security",
+      "region": "Europe",
+      "country": "Ukraine / Poland / Russia",
+      "flag": "🇺🇦 🇵🇱",
+      "summary": "Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, while Poland said three objects, likely missiles and a drone, entered its airspace.",
+      "content": "Russia launched one of its largest attacks of the war against Ukraine, firing more than 400 drones and over 110 missiles at energy, transport and other infrastructure, Reuters reported on 20 November. Ukrainian officials said eight people were killed: six in Kyiv and two at Lviv's Sknyliv railway station. Strikes also caused damage and injuries in other regions, while power outages and disruption to water and railway services were reported. Poland said three objects, believed to be missiles and a drone, had violated its airspace. The reports add to European security concerns as leaders continue discussions about Ukraine's future and possible security guarantees. Casualty and damage figures are attributed to Ukrainian and Polish authorities and may be updated.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to Ukrainian infrastructure during the war",
+      "imageNote": "Contextual file photograph of Ukraine conflict damage; not a photograph of the specific attacks on 20 November.",
+      "source": "Reuters, 20 November 2026",
+      "sourceUrl": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The scale of the attack and reports of objects entering Polish airspace raise immediate concerns for civilians and regional security.",
+      "whatHappensNext": "Watch for updated casualty figures, Polish and NATO assessments, and further statements from Ukrainian and Russian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
+    {
       "id": "evening-201",
       "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
       "category": "Nigeria / Politics / Security",
@@ -3030,6 +3150,25 @@
   ],
   "europeNews": [
     {
+      "id": "night-202",
+      "title": "Russian attack kills eight in Ukraine as Poland reports objects entering its airspace",
+      "category": "Europe / Ukraine / Conflict / Security",
+      "region": "Europe",
+      "country": "Ukraine / Poland / Russia",
+      "flag": "🇺🇦 🇵🇱",
+      "summary": "Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, while Poland said three objects, likely missiles and a drone, entered its airspace.",
+      "content": "Russia launched one of its largest attacks of the war against Ukraine, firing more than 400 drones and over 110 missiles at energy, transport and other infrastructure, Reuters reported on 20 November. Ukrainian officials said eight people were killed: six in Kyiv and two at Lviv's Sknyliv railway station. Strikes also caused damage and injuries in other regions, while power outages and disruption to water and railway services were reported. Poland said three objects, believed to be missiles and a drone, had violated its airspace. The reports add to European security concerns as leaders continue discussions about Ukraine's future and possible security guarantees. Casualty and damage figures are attributed to Ukrainian and Polish authorities and may be updated.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to Ukrainian infrastructure during the war",
+      "imageNote": "Contextual file photograph of Ukraine conflict damage; not a photograph of the specific attacks on 20 November.",
+      "source": "Reuters, 20 November 2026",
+      "sourceUrl": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The scale of the attack and reports of objects entering Polish airspace raise immediate concerns for civilians and regional security.",
+      "whatHappensNext": "Watch for updated casualty figures, Polish and NATO assessments, and further statements from Ukrainian and Russian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
+    {
       "id": "evening-205",
       "title": "Trump, Xi and Putin agree to dialogue on nuclear risks at historic Shenzhen summit",
       "category": "World / Diplomacy / Ukraine",
@@ -3177,6 +3316,25 @@
     }
   ],
   "africaNews": [
+    {
+      "id": "night-201",
+      "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+      "category": "Nigeria / Politics / Elections / Technology",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+      "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute.",
+      "image": "assets/leaders/atiku2.jpg",
+      "imageAlt": "Former Vice-President Atiku Abubakar",
+      "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+      "source": "The PUNCH, 20 November 2026; The Sun, 20 November 2026",
+      "sourceUrl": "https://punchng.com/atiku-demands-independent-audit-of-inecs-proposed-ai-system/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The transparency of election technology and the legal status of party nominations are both important to confidence in Nigeria's 2027 electoral process.",
+      "whatHappensNext": "Watch for INEC's response to the audit request, the 28 November mock accreditation exercise and the Court of Appeal proceedings on the ADC dispute.",
+      "label": "ELECTIONS WATCH"
+    },
     {
       "id": "evening-201",
       "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
@@ -3435,6 +3593,25 @@
     }
   ],
   "nigeriaNews": [
+    {
+      "id": "night-201",
+      "title": "Atiku calls for independent audit of INEC's proposed AI election system",
+      "category": "Nigeria / Politics / Elections / Technology",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Former Vice-President Atiku Abubakar has asked INEC to disclose and independently audit its proposed AI tools before their use in the 2027 elections. Separately, the ADC leadership dispute continues, with INEC saying it will await the Court of Appeal.",
+      "content": "Former Vice-President Atiku Abubakar has asked the Independent National Electoral Commission to open its proposed Artificial Intelligence system to an independent audit before using it to process documents and results in the 2027 general elections. In a petition submitted on behalf of the African Democratic Congress and allied democratic stakeholders, he requested disclosure of technical details including the system's source code, training data, discrepancy-detection criteria and vendors. He also called for independent cybersecurity experts, political parties and civil society technologists to examine the system before the nationwide mock accreditation exercise scheduled for 28 November 2026. Atiku says AI should remain an administrative tool under human supervision and should not delete, alter or permanently block election results. Separately, INEC National Commissioner Mohammed Haruna told The PUNCH that the commission would await the Court of Appeal's decision in the ADC leadership dispute. A rival ADC Board of Trustees aligned with Nafiu Bala Gombe has urged INEC to enforce the 5 November Federal High Court judgment and asked Atiku and others associated with the David Mark-led faction to suspend party activities. The Mark-led faction says it has appealed and applied for a stay of execution. These are competing legal and political positions; the appellate court has yet to resolve the dispute.",
+      "image": "assets/leaders/atiku2.jpg",
+      "imageAlt": "Former Vice-President Atiku Abubakar",
+      "imageNote": "Use the existing verified Atiku portrait from the RadiantWaves leaders image folder; this is a portrait, not a photograph of the petition or court proceedings.",
+      "source": "The PUNCH, 20 November 2026; The Sun, 20 November 2026",
+      "sourceUrl": "https://punchng.com/atiku-demands-independent-audit-of-inecs-proposed-ai-system/",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The transparency of election technology and the legal status of party nominations are both important to confidence in Nigeria's 2027 electoral process.",
+      "whatHappensNext": "Watch for INEC's response to the audit request, the 28 November mock accreditation exercise and the Court of Appeal proceedings on the ADC dispute.",
+      "label": "ELECTIONS WATCH"
+    },
     {
       "id": "evening-201",
       "title": "APC campaign convoy attacked in Gombe after anti-party chants; supporters reportedly injured",
@@ -4163,9 +4340,9 @@
     "inBreaker": "assets/stonebreaker.jpeg"
   },
   "opportunitiesSummary": "18 opportunities remain listed from the previous verification cycle, including international roles, scholarships, grants, fellowships and training programmes. Their deadlines and eligibility notes have been retained, but they have not all been re-verified during this late-night update. Check each official employer, university or funder page before applying; pay particular attention to deadlines approaching on 19–20 November.",
-  "summary": "Friday, 20 November 2026 — Evening News & Global Update. Updated at 17:35 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Punch reports that an APC campaign convoy was attacked in Gombe after anti-party chants, with buses damaged and supporters reportedly injured. The Federal Government has suspended pedestrian bridge construction on the Lagos–Ibadan Expressway following severe gridlock that reportedly stranded motorists for more than 20 hours. The Nigerian military says airstrikes around Monguno and the southern Lake Chad area killed 21 ISWAP fighters and injured 10 others; these figures are military claims and have not been independently verified. The Olubadan of Ibadanland, Oba Rashidi Adewolu Ladoja, has commended the Army's efforts and urged communities to support security agencies with useful information.\n\nWORLD — Trump, Xi and Putin met in Shenzhen and agreed to open dialogue on reducing nuclear risks, but no breakthrough on Ukraine was announced. European and Ukrainian officials continue discussions in Berlin, insisting that Ukraine must be involved in decisions about its future. The International Court of Justice has issued a landmark ruling holding Myanmar responsible for genocide against the Rohingya in connection with the 2017 crackdown. Anthropic's stock-market debut has renewed debate about AI valuations, investment and profitability.\n\nEDITORIAL NOTE — We distinguish reported facts from allegations, official claims and archive imagery. The Borno casualty figures are attributed to the military. The Gombe incident remains under investigation. Contextual photographs are clearly labelled and are not represented as images of the specific event.",
-  "globalNewsSummary": "Evening global update: the Shenzhen summit produced an agreement to open dialogue on nuclear risks but no announced Ukraine peace breakthrough; the ICJ issued a landmark Myanmar-Rohingya genocide ruling; and Anthropic's stock-market debut has drawn attention to AI valuations.",
-  "editorialNote": "RadiantWaves editorial policy: photographs must match the country, subject or person reported. Archive/contextual photographs are explicitly labelled and never represented as images of the specific event. The red-attire Olubadan portrait supplied by RadiantWaves is the consistent reference image for Oba Rashidi Adewolu Ladoja. Military casualty figures are attributed to the issuing authority.",
+  "summary": "Friday, 20 November 2026 — Night News & Global Update. Updated at 20:52 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Former Vice-President Atiku Abubakar has called for an independent audit of INEC's proposed AI system before it is used in the 2027 elections. He wants technical details disclosed and independent experts to examine the system before the 28 November mock accreditation exercise. The ADC leadership dispute remains unresolved: INEC says it will await the Court of Appeal, while a rival Board of Trustees faction is demanding enforcement of the Federal High Court judgment and a halt to activities by the David Mark-led faction. The Mark-led faction says it has appealed and applied for a stay. Elsewhere, the Army says airstrikes in Borno killed 21 suspected ISWAP fighters; the figures remain military claims. The Olubadan has urged community cooperation with security agencies, and the Federal Government has suspended pedestrian bridge work on the Lagos–Ibadan Expressway after severe gridlock.\n\nEUROPE AND UKRAINE — Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, six in Kyiv and two at Lviv's railway station. Poland said three objects, believed to be missiles and a drone, entered its airspace. These developments come as European leaders continue discussions about Ukraine's security and the future of the war.\n\nGLOBAL AFFAIRS — The Trump-Xi-Putin meeting in Shenzhen produced an agreement to open dialogue on nuclear risks, but no announced breakthrough on Ukraine. The International Court of Justice's ruling holding Myanmar responsible for genocide against the Rohingya continues to draw international reaction. Anthropic's stock-market debut has renewed debate about AI valuations and profitability.\n\nEDITORIAL NOTE — Atiku's audit demand is reported as his stated position, not as proof of wrongdoing by INEC. The ADC leadership and nomination questions remain subject to ongoing legal proceedings. Military and casualty figures are attributed to the authorities that issued them. Contextual photographs are labelled and are not presented as images of the specific events.",
+  "globalNewsSummary": "Night global update: Russia's large-scale attack on Ukraine has left eight people reported dead and Poland says three objects entered its airspace; the Shenzhen summit produced dialogue on nuclear risks but no Ukraine breakthrough; the ICJ Myanmar ruling continues to draw international reaction.",
+  "editorialNote": "RadiantWaves editorial policy: photographs must match the country, subject or person reported. Archive/contextual photographs are explicitly labelled and never represented as images of the specific event. Use the existing red-attire portrait supplied by RadiantWaves consistently for Oba Rashidi Adewolu Ladoja. Use the existing Atiku portrait in assets/leaders/atiku2.jpg for Atiku coverage. Military casualty figures and conflict casualty figures are attributed to the authorities or news agencies reporting them. Atiku's demand for an audit is his stated position; it is not evidence that INEC's proposed system has been compromised.",
   "presenter": "Sophie Laurent",
   "sportsNews": [
     {
@@ -4188,5 +4365,6 @@
     }
   ],
   "middaySummary": "Friday, 20 November 2026 — Midday News & Global Update. Updated at 12:08 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Kogi Police say 15 kidnapped people were rescued from Magaru Forest near Kabba after a joint security operation. Nigeria Customs and Russia's Federal Customs Service have signed a cooperation agreement covering trade facilitation and intelligence sharing. Enugu State Governor Peter Mbah has proposed renaming ESUT after former governor Jim Nwobodo, subject to stakeholder consultation and legislative due process.\n\nEUROPE — Downing Street says the UK and EU have concluded negotiations on a reset package covering youth mobility, food and agricultural standards, and links between emissions trading systems. Full terms and implementation details are awaited.\n\nUKRAINE — Ukrainian authorities report Russian strikes hit Kyiv and other regions overnight. Kyiv's mayor reported three deaths in the capital; injuries were also reported in Kharkiv and Dnipropetrovsk. Casualty figures are attributed to local authorities and may change.\n\nEDITORIAL NOTE — We distinguish official statements, proposals and agreements. Images are geographically and editorially matched; archive or contextual photographs are labelled and are not presented as photographs of the specific event.",
-  "eveningSummary": "Friday, 20 November 2026 — Evening News & Global Update. Updated at 17:35 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Punch reports that an APC campaign convoy was attacked in Gombe after anti-party chants, with buses damaged and supporters reportedly injured. The Federal Government has suspended pedestrian bridge construction on the Lagos–Ibadan Expressway following severe gridlock that reportedly stranded motorists for more than 20 hours. The Nigerian military says airstrikes around Monguno and the southern Lake Chad area killed 21 ISWAP fighters and injured 10 others; these figures are military claims and have not been independently verified. The Olubadan of Ibadanland, Oba Rashidi Adewolu Ladoja, has commended the Army's efforts and urged communities to support security agencies with useful information.\n\nWORLD — Trump, Xi and Putin met in Shenzhen and agreed to open dialogue on reducing nuclear risks, but no breakthrough on Ukraine was announced. European and Ukrainian officials continue discussions in Berlin, insisting that Ukraine must be involved in decisions about its future. The International Court of Justice has issued a landmark ruling holding Myanmar responsible for genocide against the Rohingya in connection with the 2017 crackdown. Anthropic's stock-market debut has renewed debate about AI valuations, investment and profitability.\n\nEDITORIAL NOTE — We distinguish reported facts from allegations, official claims and archive imagery. The Borno casualty figures are attributed to the military. The Gombe incident remains under investigation. Contextual photographs are clearly labelled and are not represented as images of the specific event."
+  "eveningSummary": "Friday, 20 November 2026 — Night News & Global Update. Updated at 20:52 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Former Vice-President Atiku Abubakar has called for an independent audit of INEC's proposed AI system before it is used in the 2027 elections. He wants technical details disclosed and independent experts to examine the system before the 28 November mock accreditation exercise. The ADC leadership dispute remains unresolved: INEC says it will await the Court of Appeal, while a rival Board of Trustees faction is demanding enforcement of the Federal High Court judgment and a halt to activities by the David Mark-led faction. The Mark-led faction says it has appealed and applied for a stay. Elsewhere, the Army says airstrikes in Borno killed 21 suspected ISWAP fighters; the figures remain military claims. The Olubadan has urged community cooperation with security agencies, and the Federal Government has suspended pedestrian bridge work on the Lagos–Ibadan Expressway after severe gridlock.\n\nEUROPE AND UKRAINE — Reuters reports that Russia launched more than 400 drones and over 110 missiles at Ukrainian infrastructure. Ukrainian officials reported eight deaths, six in Kyiv and two at Lviv's railway station. Poland said three objects, believed to be missiles and a drone, entered its airspace. These developments come as European leaders continue discussions about Ukraine's security and the future of the war.\n\nGLOBAL AFFAIRS — The Trump-Xi-Putin meeting in Shenzhen produced an agreement to open dialogue on nuclear risks, but no announced breakthrough on Ukraine. The International Court of Justice's ruling holding Myanmar responsible for genocide against the Rohingya continues to draw international reaction. Anthropic's stock-market debut has renewed debate about AI valuations and profitability.\n\nEDITORIAL NOTE — Atiku's audit demand is reported as his stated position, not as proof of wrongdoing by INEC. The ADC leadership and nomination questions remain subject to ongoing legal proceedings. Military and casualty figures are attributed to the authorities that issued them. Contextual photographs are labelled and are not presented as images of the specific events.",
+  "presentedAt": "20:52 Europe/Paris"
 }

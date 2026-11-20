@@ -449,7 +449,7 @@ function renderNewsCard(item, options = {}) {
                 <img src="${escapeHTML(image)}"
                      alt="${escapeHTML(title)}"
                      loading="lazy"
-                     onerror="this.style.display='none'">
+                     onerror="this.parentElement.classList.add('image-unavailable'); this.parentElement.setAttribute('data-fallback', 'Photograph unavailable'); this.remove()">
             </div>
         `
         : "";
@@ -1024,7 +1024,7 @@ function renderLeaders(data) {
                          src="${escapeHTML(image)}"
                          alt="${escapeHTML(name)}"
                          loading="lazy"
-                         onerror="this.style.display='none'">
+                         onerror="this.parentElement.classList.add('image-unavailable'); this.parentElement.setAttribute('data-fallback', 'Photograph unavailable'); this.remove()">
                 ` : ""}
 
                 <div class="leader-card-content">

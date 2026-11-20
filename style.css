@@ -1688,3 +1688,8 @@ ul {
 .travel-services-disclosure{margin:18px 0 0;padding:13px 15px;border-left:3px solid var(--rw-yellow);background:rgba(255,255,255,.055);color:#d4d9df;font-size:12px;line-height:1.65}
 @media(max-width:560px){.travel-services-grid{grid-template-columns:1fr 1fr;gap:10px}.travel-service-card{min-height:220px;padding:13px}.travel-service-card h4{font-size:15px}.travel-service-card p{font-size:12px}}
 @media(max-width:360px){.travel-services-grid{grid-template-columns:1fr}.travel-service-card{min-height:unset}}
+
+
+/* IMAGE LOAD FAILURE: SHOW A CLEAR EDITORIAL FALLBACK, NOT AN EMPTY BLACK BOX */
+.news-card-image.image-unavailable { display:flex; align-items:center; justify-content:center; min-height:205px; padding:24px; background:linear-gradient(135deg,#252525,#151515); border-bottom:1px solid var(--rw-border); text-align:center; }
+.news-card-image.image-unavailable::after { content:attr(data-fallback); color:var(--rw-muted); font-size:13px; font-weight:600; letter-spacing:.3px; }

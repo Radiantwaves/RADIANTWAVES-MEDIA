@@ -5,20 +5,55 @@
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/"
   },
-  "edition": "Morning News & Global Update",
+  "edition": "Midday News & Global Update",
   "date": "Friday, 20 November 2026",
-  "updatedAt": "2026-11-20T06:42:00+01:00",
+  "updatedAt": "2026-11-20T12:08:00+01:00",
   "timezone": "Europe/Paris",
   "hero": {
-    "title": "INEC extends 2027 election recruitment deadline as Nigeria faces fresh governance and public-safety questions",
-    "subtitle": "The election commission gives applicants two more weeks; the police chief urges hospitals to treat gunshot victims immediately; Tinubu meets National Assembly leaders; and Europe weighs its next steps on Ukraine and the UK-EU reset.",
-    "image": "assets/news/inec-voter-registration.jpg",
-    "imageAlt": "Nigerian election administration and voter registration",
-    "imageNote": "Contextual image of election administration in Nigeria; not a photograph of the recruitment announcement.",
-    "category": "Nigeria / Elections / Public Affairs"
+    "title": "Kogi police report rescue of 15 kidnapped people as Nigeria advances trade and education discussions",
+    "subtitle": "Also today: Nigeria and Russia sign a customs cooperation agreement; Enugu proposes an ESUT name change; the UK and EU agree a reset package; and Russian strikes hit Kyiv.",
+    "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+    "imageAlt": "Nigerian police officers on a forest security patrol",
+    "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself.",
+    "category": "Nigeria / Security / Public Affairs"
   },
   "morningSummary": "Friday, 20 November 2026 — Morning News & Global Update. Updated at 06:42 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — INEC has extended recruitment for 2027 election ad hoc staff until 3 December. Registration is free and applicants should use only the official INECPRES portal. Inspector-General of Police Olatunji Disu has urged hospitals to treat gunshot victims immediately without waiting for police reports. President Bola Tinubu has met current and former National Assembly leaders at Aso Rock. Separately, election stakeholders have warned about risks including voter-register manipulation, AI-generated disinformation, hate speech and political violence ahead of 2027. The Federal Government is considering harmonising the 2026 and 2027 budget cycles.\n\nEUROPE — UK and EU negotiators are working towards a package ahead of a Brussels summit, with trade, food standards, youth mobility and migration cooperation among the issues under discussion.\n\nUKRAINE AND GLOBAL DIPLOMACY — European leaders are pushing back against any settlement that would decide Ukraine's future without Kyiv and its European partners. Diplomatic statements are not a peace agreement; negotiations remain uncertain.\n\nEDITORIAL NOTE — We distinguish official announcements from allegations, proposals and ongoing negotiations. Images are selected to match the country and subject; contextual photographs are labelled and are not presented as pictures of the specific event.\n\nADDITIONAL NIGERIA UPDATES — The Olubadan of Ibadanland, Oba Rashidi Ladoja, has pledged palace support for the military and urged community leaders to provide timely intelligence. FIFA has appointed Daniel Amokachi and four others to the NFF Normalisation Committee, subject to eligibility checks. The Army says airstrikes in Borno on 16–17 November killed 21 suspected ISWAP fighters and injured 10; casualty figures are attributed to the military and have not been independently verified.",
   "breaking": [
+    {
+      "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+      "category": "Nigeria / Security",
+      "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+      "imageAlt": "Nigerian police officers on a forest security patrol",
+      "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself."
+    },
+    {
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg",
+      "imageAlt": "Nigeria Customs Service officers inspecting goods at a port",
+      "imageNote": "Contextual image of Nigeria Customs officers at a port; not a photograph of the signing ceremony."
+    },
+    {
+      "title": "Enugu governor proposes renaming ESUT after former governor Jim Nwobodo",
+      "category": "Nigeria / Education / Enugu",
+      "image": "https://i.ibb.co/bmNgMBL/esut-postgraduate-admission-list.jpg",
+      "imageAlt": "Main entrance of Enugu State University of Science and Technology",
+      "imageNote": "Photograph of the ESUT campus entrance; the renaming proposal has not yet been enacted."
+    },
+    {
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "image": "assets/european-parliament.jpg",
+      "imageAlt": "European Parliament building in Brussels",
+      "imageNote": "Contextual photograph of European institutions, not the summit or signing ceremony."
+    },
+    {
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to infrastructure in Ukraine following Russian attacks",
+      "imageNote": "Contextual file photograph of conflict-related infrastructure damage in Ukraine; not a photograph of the Kyiv strikes reported today."
+    },
     {
       "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
       "category": "Nigeria / Elections",
@@ -103,57 +138,117 @@
       "category": "International Justice",
       "image": "assets/un.jpeg",
       "imageAlt": "International justice, contextual image"
-    },
-    {
-      "title": "Trump, Xi and Putin conclude historic Shenzhen summit without major breakthrough",
-      "category": "Global Diplomacy",
-      "image": "assets/g20-meeting.jpg",
-      "imageAlt": "International summit, contextual image"
-    },
-    {
-      "title": "NNPC and CBN sign MoU to improve FX flows from oil exports",
-      "category": "Nigeria / Economy",
-      "image": "assets/market.jpeg",
-      "imageAlt": "Nigeria energy and markets, contextual image"
-    },
-    {
-      "title": "FIFA appoints Daniel Amokachi and four others to NFF normalisation committee",
-      "category": "Nigeria / Football",
-      "image": "assets/africa.jpeg",
-      "imageAlt": "Nigerian football, contextual image"
-    },
-    {
-      "title": "Senate moves state-police constitutional amendment to President for assent",
-      "category": "Nigeria / Governance",
-      "image": "assets/leaders/tinubu.jpg",
-      "imageAlt": "President Tinubu, contextual portrait"
-    },
-    {
-      "title": "Army says airstrikes killed 21 suspected ISWAP fighters in Borno",
-      "category": "Nigeria / Security",
-      "image": "assets/africa.jpeg",
-      "imageAlt": "Nigeria security, contextual image"
     }
   ],
   "featured": {
-    "id": "morning-201",
-    "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
-    "category": "Nigeria / Elections",
+    "id": "midday-201",
+    "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+    "category": "Nigeria / Security",
     "region": "Africa",
     "country": "Nigeria",
     "flag": "🇳🇬",
-    "summary": "INEC has extended its recruitment window for 2027 general-election ad hoc staff by two weeks. The new deadline is 11:59 p.m. on 3 December 2026, and the Commission says applications through its official portal are free.",
-    "content": "The Independent National Electoral Commission says it has extended recruitment for ad hoc personnel by two weeks to give more eligible Nigerians time to apply and help build an adequate pool of election workers. The revised closing date is 11:59 p.m. on Wednesday, 3 December 2026. Applications are to be made through the INECPRES portal, pres.inecnigeria.org, or via INEC's official website. INEC says registration is free and warns that no official or other person is authorised to demand payment. Applicants should avoid unofficial links and payment requests.",
-    "image": "assets/news/inec-voter-registration.jpg",
-    "imageAlt": "INEC voter registration and election administration in Nigeria",
-    "imageNote": "Contextual image of Nigerian election administration; not a photograph of the recruitment announcement.",
-    "source": "INEC statement; Naija News, 19 November 2026",
+    "summary": "Kogi State Police say 15 people were rescued from kidnappers in Magaru Forest near Kabba after a joint operation involving police, the Army, forest guards and local security groups.",
+    "content": "The Kogi State Police Command says 15 kidnapped people have been rescued from Magaru Forest, Kakun-Kabba, following an intelligence-led operation on 18 November. Police said the joint team included police units, the Nigerian Army's 251 Tank Battalion, forest guards and local security outfits. The operation involved an exchange of gunfire, and the rescue team reportedly repelled a further ambush while evacuating the victims. The rescued people were taken to St John's Catholic Hospital in Kabba for medical attention. Police said no suspects had been arrested at the time of the report and investigations were continuing. The account is based on statements by the police command.",
+    "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+    "imageAlt": "Nigerian police officers on a forest security patrol",
+    "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself.",
+    "source": "Kogi State Police Command; Premium Times, 19 November 2026; Punch, 19 November 2026",
     "publishedAt": "2026-11-20",
-    "whyItMatters": "The extension gives eligible Nigerians additional time to seek temporary election work, while the warning about free registration is important protection against recruitment scams.",
-    "whatHappensNext": "Applicants should use only the official INECPRES portal and check INEC's website for any further instructions.",
-    "label": "MORNING LEAD"
+    "whyItMatters": "The rescue highlights continued kidnapping risks and the role of joint operations involving security agencies and local groups.",
+    "whatHappensNext": "Police say they are pursuing leads to identify and arrest the fleeing suspects. The number rescued is reported by the command.",
+    "label": "SECURITY UPDATE"
   },
   "topStories": [
+    {
+      "id": "midday-201",
+      "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+      "category": "Nigeria / Security",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Kogi State Police say 15 people were rescued from kidnappers in Magaru Forest near Kabba after a joint operation involving police, the Army, forest guards and local security groups.",
+      "content": "The Kogi State Police Command says 15 kidnapped people have been rescued from Magaru Forest, Kakun-Kabba, following an intelligence-led operation on 18 November. Police said the joint team included police units, the Nigerian Army's 251 Tank Battalion, forest guards and local security outfits. The operation involved an exchange of gunfire, and the rescue team reportedly repelled a further ambush while evacuating the victims. The rescued people were taken to St John's Catholic Hospital in Kabba for medical attention. Police said no suspects had been arrested at the time of the report and investigations were continuing. The account is based on statements by the police command.",
+      "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+      "imageAlt": "Nigerian police officers on a forest security patrol",
+      "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself.",
+      "source": "Kogi State Police Command; Premium Times, 19 November 2026; Punch, 19 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The rescue highlights continued kidnapping risks and the role of joint operations involving security agencies and local groups.",
+      "whatHappensNext": "Police say they are pursuing leads to identify and arrest the fleeing suspects. The number rescued is reported by the command.",
+      "label": "SECURITY UPDATE"
+    },
+    {
+      "id": "midday-202",
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "region": "Africa",
+      "country": "Nigeria / Russia",
+      "flag": "🇳🇬 🇷🇺",
+      "summary": "The Nigeria Customs Service and Russia's Federal Customs Service have signed an agreement covering trade facilitation, intelligence sharing and customs enforcement cooperation.",
+      "content": "The Nigeria Customs Service says it has signed a cooperation agreement with the Federal Customs Service of Russia. The reported areas include trade facilitation, exchange of customs intelligence, enforcement cooperation and exploring mutual recognition of the two countries' Authorised Economic Operator programmes. The agreement could support more predictable cross-border trade and closer cooperation against customs offences. The practical impact will depend on implementation details, procedures and how businesses can use any new arrangements.",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg",
+      "imageAlt": "Nigeria Customs Service officers inspecting goods at a port",
+      "imageNote": "Contextual image of Nigeria Customs officers at a port; not a photograph of the signing ceremony.",
+      "source": "Nigeria Customs Service statement; Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "Customs cooperation can affect clearance processes, trade compliance and the movement of legitimate goods between Nigeria and Russia.",
+      "whatHappensNext": "Watch for implementation guidelines and further details from the Nigeria Customs Service.",
+      "label": "TRADE"
+    },
+    {
+      "id": "midday-203",
+      "title": "Enugu governor proposes renaming ESUT after former governor Jim Nwobodo",
+      "category": "Nigeria / Education / Enugu",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Governor Peter Mbah has announced a proposal to rename Enugu State University of Science and Technology after former governor Senator Jim Nwobodo, subject to consultation and due legislative process.",
+      "content": "Enugu State Governor Peter Mbah has unveiled a proposal to rename Enugu State University of Science and Technology (ESUT) after Senator Jim Nwobodo, a former governor of the old Anambra State. Reports say the proposal remains subject to engagement with stakeholders and the required legislative process. It is therefore a proposal, not a completed renaming. Any change would require formal approval and clear communication to students, staff, alumni and the wider university community.",
+      "image": "https://i.ibb.co/bmNgMBL/esut-postgraduate-admission-list.jpg",
+      "imageAlt": "Main entrance of Enugu State University of Science and Technology",
+      "imageNote": "Photograph of the ESUT campus entrance; the renaming proposal has not yet been enacted.",
+      "source": "Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "A university name change can affect institutional identity, alumni records, public communication and administrative processes.",
+      "whatHappensNext": "Watch for stakeholder consultations and any bill or formal decision by the Enugu State House of Assembly.",
+      "label": "EDUCATION"
+    },
+    {
+      "id": "midday-204",
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "region": "Europe",
+      "country": "United Kingdom / European Union",
+      "flag": "🇬🇧 🇪🇺",
+      "summary": "Downing Street says Britain and the European Union have concluded negotiations on a reset package, including a youth mobility scheme, a food and plant-health agreement and links between emissions trading systems.",
+      "content": "The UK and European Union have agreed a reset package and concluded negotiations, according to Downing Street. The announced measures include timelines for a youth mobility scheme, a sanitary and phytosanitary agreement covering food and agricultural trade, and a link between the two sides' emissions trading systems. Further details were expected in a joint statement. The announcement marks a step towards closer practical cooperation, but the full terms, eligibility rules and implementation dates need to be checked against the published agreement. This is not a return to EU membership or the single market.",
+      "image": "assets/european-parliament.jpg",
+      "imageAlt": "European Parliament building in Brussels",
+      "imageNote": "Contextual photograph of European institutions, not the summit or signing ceremony.",
+      "source": "Reuters, 20 November 2026; Associated Press, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The package could affect young people seeking study or work experience across the Channel, food exporters and businesses affected by carbon-border rules.",
+      "whatHappensNext": "The governments are expected to publish the joint statement and detailed implementation arrangements.",
+      "label": "EUROPE"
+    },
+    {
+      "id": "midday-205",
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "region": "Europe",
+      "country": "Ukraine",
+      "flag": "🇺🇦",
+      "summary": "Ukrainian authorities report that overnight Russian strikes hit Kyiv and other regions, killing three people in the capital and injuring residents elsewhere. The situation remains developing.",
+      "content": "Ukrainian authorities reported overnight Russian strikes affecting Kyiv and other parts of the country. Kyiv's mayor said three people were killed in the capital and around 15 injured, while emergency services reported injuries in Kharkiv and Dnipropetrovsk regions. Reports said several bridges in Kyiv were hit. The figures and damage assessments may be updated as emergency services continue their work. This report attributes casualty information to Ukrainian officials and emergency services; independent verification of each incident may be limited during active hostilities.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to infrastructure in Ukraine following Russian attacks",
+      "imageNote": "Contextual file photograph of conflict-related infrastructure damage in Ukraine; not a photograph of the Kyiv strikes reported today.",
+      "source": "Sky News live coverage, 20 November 2026; Euronews, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The strikes underscore the continuing danger to civilians and infrastructure as winter approaches and diplomatic discussions continue.",
+      "whatHappensNext": "Watch for updated casualty figures, damage assessments and statements from Ukrainian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
     {
       "id": "morning-201",
       "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
@@ -567,63 +662,45 @@
       "whyItMatters": "A renewed war would threaten civilians, regional trade and already fragile stability in the Horn of Africa.",
       "whatHappensNext": "Watch for official statements, independent monitoring and diplomatic efforts by the African Union and regional partners.",
       "label": "AFRICA SECURITY"
-    },
-    {
-      "id": "evening-199",
-      "title": "Senegal lawmakers reject first part of 2027 budget bill",
-      "category": "Africa / Politics / Public Finance",
-      "region": "Africa",
-      "country": "Senegal",
-      "flag": "🇸🇳",
-      "summary": "Senegal's National Assembly has rejected the first part of the 2027 budget bill, covering revenue and debt, by 126 votes to 18, according to reporting compiled by African news outlets.",
-      "content": "The vote is a setback for the government as it faces pressure over public finances and debt. The rejection does not by itself resolve the country's budget process; lawmakers and the government will face further procedural and political decisions. The dispute reflects broader concerns about revenue, borrowing and the government's ability to fund public priorities.",
-      "image": "assets/africa.jpeg",
-      "imageAlt": "Senegal and West African political institutions, contextual image",
-      "imageNote": "Contextual image; not a photograph of the specific event unless stated otherwise.",
-      "source": "RFI; BBC Afrique; Story Africa",
-      "publishedAt": "2026-11-19",
-      "whyItMatters": "Budget disputes affect public services, debt management and political stability.",
-      "whatHappensNext": "Watch for the government's next steps and any revised budget proposal or parliamentary procedure.",
-      "label": "WEST AFRICA"
-    },
-    {
-      "id": "evening-1910",
-      "title": "EU and UK race to settle post-Brexit package before Brussels summit",
-      "category": "Europe / UK / Trade and Mobility",
-      "region": "Europe",
-      "country": "United Kingdom / European Union",
-      "flag": "🇬🇧 🇪🇺",
-      "summary": "EU and UK negotiators are working towards a package ahead of Friday's Brussels summit, with food standards, trade, youth mobility and migration cooperation among the disputed issues.",
-      "content": "The Financial Times reports that the talks include freer food and drink trade, linked carbon markets, a youth mobility scheme and cooperation against illicit migration. Disagreement remains over how the UK would participate in EU rule-making and access industrial-policy initiatives. The proposals are not a final agreement, and several details remain under negotiation. Any package would need to be assessed against the final text and its implementation arrangements.",
-      "image": "assets/european-parliament.jpg",
-      "imageAlt": "European Union institutions and UK-EU relations, contextual image",
-      "imageNote": "Contextual image; not a photograph of the specific event unless stated otherwise.",
-      "source": "Financial Times",
-      "publishedAt": "2026-11-19",
-      "whyItMatters": "The outcome could shape trade costs, food standards, mobility for young people and post-Brexit relations.",
-      "whatHappensNext": "Watch for the Brussels summit conclusions and the published details of any agreed package.",
-      "label": "EUROPE"
-    },
-    {
-      "id": "evening-1911",
-      "title": "Coalition of the Willing meets in Berlin as Europe seeks a role in Ukraine diplomacy",
-      "category": "Europe / Ukraine / Security",
-      "region": "Europe",
-      "country": "Germany / Ukraine / European partners",
-      "flag": "🇩🇪 🇺🇦",
-      "summary": "A Berlin meeting of the Coalition of the Willing has brought together European leaders to discuss Ukraine's security and reconstruction as diplomacy follows the Trump-Xi-Putin summit in Shenzhen.",
-      "content": "A live global roundup reports that German Chancellor Friedrich Merz hosted more than 30 national leaders, with French President Emmanuel Macron, British Prime Minister Andy Burnham and other officials attending. US envoys Steve Witkoff and Jared Kushner were reported to be briefing European allies on the Shenzhen discussions. European governments are pressing for legally binding security guarantees and a role in any settlement affecting Ukraine. The details of any proposed guarantees and commitments require confirmation from official communiqués.",
-      "image": "assets/leaders/zelensky.jpg",
-      "imageAlt": "Ukraine and European security, contextual image",
-      "imageNote": "Contextual image; not a photograph of the specific event unless stated otherwise.",
-      "source": "Reuters; Deutsche Welle; AFP, as compiled in evening global reporting",
-      "publishedAt": "2026-11-19",
-      "whyItMatters": "Europe's security architecture and Ukraine's sovereignty are directly affected by any future ceasefire or settlement.",
-      "whatHappensNext": "Watch for the Berlin communiqué, concrete security commitments and Ukraine's response.",
-      "label": "UKRAINE DIPLOMACY"
     }
   ],
   "worldNews": [
+    {
+      "id": "midday-205",
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "region": "Europe",
+      "country": "Ukraine",
+      "flag": "🇺🇦",
+      "summary": "Ukrainian authorities report that overnight Russian strikes hit Kyiv and other regions, killing three people in the capital and injuring residents elsewhere. The situation remains developing.",
+      "content": "Ukrainian authorities reported overnight Russian strikes affecting Kyiv and other parts of the country. Kyiv's mayor said three people were killed in the capital and around 15 injured, while emergency services reported injuries in Kharkiv and Dnipropetrovsk regions. Reports said several bridges in Kyiv were hit. The figures and damage assessments may be updated as emergency services continue their work. This report attributes casualty information to Ukrainian officials and emergency services; independent verification of each incident may be limited during active hostilities.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to infrastructure in Ukraine following Russian attacks",
+      "imageNote": "Contextual file photograph of conflict-related infrastructure damage in Ukraine; not a photograph of the Kyiv strikes reported today.",
+      "source": "Sky News live coverage, 20 November 2026; Euronews, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The strikes underscore the continuing danger to civilians and infrastructure as winter approaches and diplomatic discussions continue.",
+      "whatHappensNext": "Watch for updated casualty figures, damage assessments and statements from Ukrainian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
+    {
+      "id": "midday-204",
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "region": "Europe",
+      "country": "United Kingdom / European Union",
+      "flag": "🇬🇧 🇪🇺",
+      "summary": "Downing Street says Britain and the European Union have concluded negotiations on a reset package, including a youth mobility scheme, a food and plant-health agreement and links between emissions trading systems.",
+      "content": "The UK and European Union have agreed a reset package and concluded negotiations, according to Downing Street. The announced measures include timelines for a youth mobility scheme, a sanitary and phytosanitary agreement covering food and agricultural trade, and a link between the two sides' emissions trading systems. Further details were expected in a joint statement. The announcement marks a step towards closer practical cooperation, but the full terms, eligibility rules and implementation dates need to be checked against the published agreement. This is not a return to EU membership or the single market.",
+      "image": "assets/european-parliament.jpg",
+      "imageAlt": "European Parliament building in Brussels",
+      "imageNote": "Contextual photograph of European institutions, not the summit or signing ceremony.",
+      "source": "Reuters, 20 November 2026; Associated Press, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The package could affect young people seeking study or work experience across the Channel, food exporters and businesses affected by carbon-border rules.",
+      "whatHappensNext": "The governments are expected to publish the joint statement and detailed implementation arrangements.",
+      "label": "EUROPE"
+    },
     {
       "id": "morning-207",
       "title": "European leaders reject a new 'Yalta' approach to Ukraine after Trump-Putin-Xi talks",
@@ -1335,6 +1412,13 @@
   ],
   "archives": [
     {
+      "title": "Midday News — 20 November 2026",
+      "date": "2026-11-20",
+      "status": "Current edition",
+      "edition": "Midday News & Global Update",
+      "summary": "Kogi police report 15 kidnapped people rescued; Nigeria-Russia customs cooperation; ESUT renaming proposal; UK-EU reset package; Russian strikes hit Kyiv."
+    },
+    {
       "title": "Morning News — 20 November 2026",
       "date": "2026-11-20",
       "status": "Current edition",
@@ -1471,6 +1555,36 @@
     }
   ],
   "breakingHistory": [
+    {
+      "date": "2026-11-20",
+      "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+      "category": "Nigeria / Security",
+      "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Enugu governor proposes renaming ESUT after former governor Jim Nwobodo",
+      "category": "Nigeria / Education / Enugu",
+      "image": "https://i.ibb.co/bmNgMBL/esut-postgraduate-admission-list.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "image": "assets/european-parliament.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "image": "assets/dnipro-railway-attack.jpg"
+    },
     {
       "date": "2026-11-20",
       "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
@@ -1993,6 +2107,96 @@
   "dateISO": "2026-11-20",
   "articles": [
     {
+      "id": "midday-201",
+      "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+      "category": "Nigeria / Security",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Kogi State Police say 15 people were rescued from kidnappers in Magaru Forest near Kabba after a joint operation involving police, the Army, forest guards and local security groups.",
+      "content": "The Kogi State Police Command says 15 kidnapped people have been rescued from Magaru Forest, Kakun-Kabba, following an intelligence-led operation on 18 November. Police said the joint team included police units, the Nigerian Army's 251 Tank Battalion, forest guards and local security outfits. The operation involved an exchange of gunfire, and the rescue team reportedly repelled a further ambush while evacuating the victims. The rescued people were taken to St John's Catholic Hospital in Kabba for medical attention. Police said no suspects had been arrested at the time of the report and investigations were continuing. The account is based on statements by the police command.",
+      "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+      "imageAlt": "Nigerian police officers on a forest security patrol",
+      "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself.",
+      "source": "Kogi State Police Command; Premium Times, 19 November 2026; Punch, 19 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The rescue highlights continued kidnapping risks and the role of joint operations involving security agencies and local groups.",
+      "whatHappensNext": "Police say they are pursuing leads to identify and arrest the fleeing suspects. The number rescued is reported by the command.",
+      "label": "SECURITY UPDATE"
+    },
+    {
+      "id": "midday-202",
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "region": "Africa",
+      "country": "Nigeria / Russia",
+      "flag": "🇳🇬 🇷🇺",
+      "summary": "The Nigeria Customs Service and Russia's Federal Customs Service have signed an agreement covering trade facilitation, intelligence sharing and customs enforcement cooperation.",
+      "content": "The Nigeria Customs Service says it has signed a cooperation agreement with the Federal Customs Service of Russia. The reported areas include trade facilitation, exchange of customs intelligence, enforcement cooperation and exploring mutual recognition of the two countries' Authorised Economic Operator programmes. The agreement could support more predictable cross-border trade and closer cooperation against customs offences. The practical impact will depend on implementation details, procedures and how businesses can use any new arrangements.",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg",
+      "imageAlt": "Nigeria Customs Service officers inspecting goods at a port",
+      "imageNote": "Contextual image of Nigeria Customs officers at a port; not a photograph of the signing ceremony.",
+      "source": "Nigeria Customs Service statement; Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "Customs cooperation can affect clearance processes, trade compliance and the movement of legitimate goods between Nigeria and Russia.",
+      "whatHappensNext": "Watch for implementation guidelines and further details from the Nigeria Customs Service.",
+      "label": "TRADE"
+    },
+    {
+      "id": "midday-203",
+      "title": "Enugu governor proposes renaming ESUT after former governor Jim Nwobodo",
+      "category": "Nigeria / Education / Enugu",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Governor Peter Mbah has announced a proposal to rename Enugu State University of Science and Technology after former governor Senator Jim Nwobodo, subject to consultation and due legislative process.",
+      "content": "Enugu State Governor Peter Mbah has unveiled a proposal to rename Enugu State University of Science and Technology (ESUT) after Senator Jim Nwobodo, a former governor of the old Anambra State. Reports say the proposal remains subject to engagement with stakeholders and the required legislative process. It is therefore a proposal, not a completed renaming. Any change would require formal approval and clear communication to students, staff, alumni and the wider university community.",
+      "image": "https://i.ibb.co/bmNgMBL/esut-postgraduate-admission-list.jpg",
+      "imageAlt": "Main entrance of Enugu State University of Science and Technology",
+      "imageNote": "Photograph of the ESUT campus entrance; the renaming proposal has not yet been enacted.",
+      "source": "Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "A university name change can affect institutional identity, alumni records, public communication and administrative processes.",
+      "whatHappensNext": "Watch for stakeholder consultations and any bill or formal decision by the Enugu State House of Assembly.",
+      "label": "EDUCATION"
+    },
+    {
+      "id": "midday-204",
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "region": "Europe",
+      "country": "United Kingdom / European Union",
+      "flag": "🇬🇧 🇪🇺",
+      "summary": "Downing Street says Britain and the European Union have concluded negotiations on a reset package, including a youth mobility scheme, a food and plant-health agreement and links between emissions trading systems.",
+      "content": "The UK and European Union have agreed a reset package and concluded negotiations, according to Downing Street. The announced measures include timelines for a youth mobility scheme, a sanitary and phytosanitary agreement covering food and agricultural trade, and a link between the two sides' emissions trading systems. Further details were expected in a joint statement. The announcement marks a step towards closer practical cooperation, but the full terms, eligibility rules and implementation dates need to be checked against the published agreement. This is not a return to EU membership or the single market.",
+      "image": "assets/european-parliament.jpg",
+      "imageAlt": "European Parliament building in Brussels",
+      "imageNote": "Contextual photograph of European institutions, not the summit or signing ceremony.",
+      "source": "Reuters, 20 November 2026; Associated Press, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The package could affect young people seeking study or work experience across the Channel, food exporters and businesses affected by carbon-border rules.",
+      "whatHappensNext": "The governments are expected to publish the joint statement and detailed implementation arrangements.",
+      "label": "EUROPE"
+    },
+    {
+      "id": "midday-205",
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "region": "Europe",
+      "country": "Ukraine",
+      "flag": "🇺🇦",
+      "summary": "Ukrainian authorities report that overnight Russian strikes hit Kyiv and other regions, killing three people in the capital and injuring residents elsewhere. The situation remains developing.",
+      "content": "Ukrainian authorities reported overnight Russian strikes affecting Kyiv and other parts of the country. Kyiv's mayor said three people were killed in the capital and around 15 injured, while emergency services reported injuries in Kharkiv and Dnipropetrovsk regions. Reports said several bridges in Kyiv were hit. The figures and damage assessments may be updated as emergency services continue their work. This report attributes casualty information to Ukrainian officials and emergency services; independent verification of each incident may be limited during active hostilities.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to infrastructure in Ukraine following Russian attacks",
+      "imageNote": "Contextual file photograph of conflict-related infrastructure damage in Ukraine; not a photograph of the Kyiv strikes reported today.",
+      "source": "Sky News live coverage, 20 November 2026; Euronews, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The strikes underscore the continuing danger to civilians and infrastructure as winter approaches and diplomatic discussions continue.",
+      "whatHappensNext": "Watch for updated casualty figures, damage assessments and statements from Ukrainian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
+    {
       "id": "morning-201",
       "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
       "category": "Nigeria / Elections",
@@ -2499,6 +2703,42 @@
   ],
   "europeNews": [
     {
+      "id": "midday-204",
+      "title": "UK and EU agree reset package covering youth mobility, food trade and carbon markets",
+      "category": "Europe / UK / European Union",
+      "region": "Europe",
+      "country": "United Kingdom / European Union",
+      "flag": "🇬🇧 🇪🇺",
+      "summary": "Downing Street says Britain and the European Union have concluded negotiations on a reset package, including a youth mobility scheme, a food and plant-health agreement and links between emissions trading systems.",
+      "content": "The UK and European Union have agreed a reset package and concluded negotiations, according to Downing Street. The announced measures include timelines for a youth mobility scheme, a sanitary and phytosanitary agreement covering food and agricultural trade, and a link between the two sides' emissions trading systems. Further details were expected in a joint statement. The announcement marks a step towards closer practical cooperation, but the full terms, eligibility rules and implementation dates need to be checked against the published agreement. This is not a return to EU membership or the single market.",
+      "image": "assets/european-parliament.jpg",
+      "imageAlt": "European Parliament building in Brussels",
+      "imageNote": "Contextual photograph of European institutions, not the summit or signing ceremony.",
+      "source": "Reuters, 20 November 2026; Associated Press, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The package could affect young people seeking study or work experience across the Channel, food exporters and businesses affected by carbon-border rules.",
+      "whatHappensNext": "The governments are expected to publish the joint statement and detailed implementation arrangements.",
+      "label": "EUROPE"
+    },
+    {
+      "id": "midday-205",
+      "title": "Russian strikes hit Kyiv as Ukraine reports civilian deaths and damage to infrastructure",
+      "category": "Europe / Ukraine / Conflict",
+      "region": "Europe",
+      "country": "Ukraine",
+      "flag": "🇺🇦",
+      "summary": "Ukrainian authorities report that overnight Russian strikes hit Kyiv and other regions, killing three people in the capital and injuring residents elsewhere. The situation remains developing.",
+      "content": "Ukrainian authorities reported overnight Russian strikes affecting Kyiv and other parts of the country. Kyiv's mayor said three people were killed in the capital and around 15 injured, while emergency services reported injuries in Kharkiv and Dnipropetrovsk regions. Reports said several bridges in Kyiv were hit. The figures and damage assessments may be updated as emergency services continue their work. This report attributes casualty information to Ukrainian officials and emergency services; independent verification of each incident may be limited during active hostilities.",
+      "image": "assets/dnipro-railway-attack.jpg",
+      "imageAlt": "Damage to infrastructure in Ukraine following Russian attacks",
+      "imageNote": "Contextual file photograph of conflict-related infrastructure damage in Ukraine; not a photograph of the Kyiv strikes reported today.",
+      "source": "Sky News live coverage, 20 November 2026; Euronews, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The strikes underscore the continuing danger to civilians and infrastructure as winter approaches and diplomatic discussions continue.",
+      "whatHappensNext": "Watch for updated casualty figures, damage assessments and statements from Ukrainian authorities.",
+      "label": "UKRAINE UPDATE"
+    },
+    {
       "id": "morning-206",
       "title": "EU and UK race to settle post-Brexit package ahead of Brussels summit",
       "category": "Europe / UK / European Union",
@@ -2754,6 +2994,60 @@
     }
   ],
   "nigeriaNews": [
+    {
+      "id": "midday-201",
+      "title": "Police rescue 15 kidnapped victims after forest operation in Kogi",
+      "category": "Nigeria / Security",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Kogi State Police say 15 people were rescued from kidnappers in Magaru Forest near Kabba after a joint operation involving police, the Army, forest guards and local security groups.",
+      "content": "The Kogi State Police Command says 15 kidnapped people have been rescued from Magaru Forest, Kakun-Kabba, following an intelligence-led operation on 18 November. Police said the joint team included police units, the Nigerian Army's 251 Tank Battalion, forest guards and local security outfits. The operation involved an exchange of gunfire, and the rescue team reportedly repelled a further ambush while evacuating the victims. The rescued people were taken to St John's Catholic Hospital in Kabba for medical attention. Police said no suspects had been arrested at the time of the report and investigations were continuing. The account is based on statements by the police command.",
+      "image": "https://pbs.twimg.com/media/G7tJxZ4WoAAzXho.jpg",
+      "imageAlt": "Nigerian police officers on a forest security patrol",
+      "imageNote": "Archive/contextual photograph of Nigerian police on a forest operation; not a photograph of the Kogi rescue itself.",
+      "source": "Kogi State Police Command; Premium Times, 19 November 2026; Punch, 19 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "The rescue highlights continued kidnapping risks and the role of joint operations involving security agencies and local groups.",
+      "whatHappensNext": "Police say they are pursuing leads to identify and arrest the fleeing suspects. The number rescued is reported by the command.",
+      "label": "SECURITY UPDATE"
+    },
+    {
+      "id": "midday-202",
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "region": "Africa",
+      "country": "Nigeria / Russia",
+      "flag": "🇳🇬 🇷🇺",
+      "summary": "The Nigeria Customs Service and Russia's Federal Customs Service have signed an agreement covering trade facilitation, intelligence sharing and customs enforcement cooperation.",
+      "content": "The Nigeria Customs Service says it has signed a cooperation agreement with the Federal Customs Service of Russia. The reported areas include trade facilitation, exchange of customs intelligence, enforcement cooperation and exploring mutual recognition of the two countries' Authorised Economic Operator programmes. The agreement could support more predictable cross-border trade and closer cooperation against customs offences. The practical impact will depend on implementation details, procedures and how businesses can use any new arrangements.",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg",
+      "imageAlt": "Nigeria Customs Service officers inspecting goods at a port",
+      "imageNote": "Contextual image of Nigeria Customs officers at a port; not a photograph of the signing ceremony.",
+      "source": "Nigeria Customs Service statement; Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "Customs cooperation can affect clearance processes, trade compliance and the movement of legitimate goods between Nigeria and Russia.",
+      "whatHappensNext": "Watch for implementation guidelines and further details from the Nigeria Customs Service.",
+      "label": "TRADE"
+    },
+    {
+      "id": "midday-203",
+      "title": "Enugu governor proposes renaming ESUT after former governor Jim Nwobodo",
+      "category": "Nigeria / Education / Enugu",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "summary": "Governor Peter Mbah has announced a proposal to rename Enugu State University of Science and Technology after former governor Senator Jim Nwobodo, subject to consultation and due legislative process.",
+      "content": "Enugu State Governor Peter Mbah has unveiled a proposal to rename Enugu State University of Science and Technology (ESUT) after Senator Jim Nwobodo, a former governor of the old Anambra State. Reports say the proposal remains subject to engagement with stakeholders and the required legislative process. It is therefore a proposal, not a completed renaming. Any change would require formal approval and clear communication to students, staff, alumni and the wider university community.",
+      "image": "https://i.ibb.co/bmNgMBL/esut-postgraduate-admission-list.jpg",
+      "imageAlt": "Main entrance of Enugu State University of Science and Technology",
+      "imageNote": "Photograph of the ESUT campus entrance; the renaming proposal has not yet been enacted.",
+      "source": "Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "A university name change can affect institutional identity, alumni records, public communication and administrative processes.",
+      "whatHappensNext": "Watch for stakeholder consultations and any bill or formal decision by the Enugu State House of Assembly.",
+      "label": "EDUCATION"
+    },
     {
       "id": "morning-201",
       "title": "INEC extends 2027 election ad hoc recruitment deadline to 3 December",
@@ -3137,6 +3431,24 @@
   ],
   "businessNews": [
     {
+      "id": "midday-202",
+      "title": "Nigeria and Russia sign customs cooperation agreement to facilitate trade",
+      "category": "Nigeria / Economy / Trade",
+      "region": "Africa",
+      "country": "Nigeria / Russia",
+      "flag": "🇳🇬 🇷🇺",
+      "summary": "The Nigeria Customs Service and Russia's Federal Customs Service have signed an agreement covering trade facilitation, intelligence sharing and customs enforcement cooperation.",
+      "content": "The Nigeria Customs Service says it has signed a cooperation agreement with the Federal Customs Service of Russia. The reported areas include trade facilitation, exchange of customs intelligence, enforcement cooperation and exploring mutual recognition of the two countries' Authorised Economic Operator programmes. The agreement could support more predictable cross-border trade and closer cooperation against customs offences. The practical impact will depend on implementation details, procedures and how businesses can use any new arrangements.",
+      "image": "https://pbs.twimg.com/media/HIbwi7WXMAAGnn0.jpg",
+      "imageAlt": "Nigeria Customs Service officers inspecting goods at a port",
+      "imageNote": "Contextual image of Nigeria Customs officers at a port; not a photograph of the signing ceremony.",
+      "source": "Nigeria Customs Service statement; Vanguard, 20 November 2026",
+      "publishedAt": "2026-11-20",
+      "whyItMatters": "Customs cooperation can affect clearance processes, trade compliance and the movement of legitimate goods between Nigeria and Russia.",
+      "whatHappensNext": "Watch for implementation guidelines and further details from the Nigeria Customs Service.",
+      "label": "TRADE"
+    },
+    {
       "id": "morning-205",
       "title": "Federal Government considers harmonising 2026 and 2027 budgets and carrying over capital spending",
       "category": "Nigeria / Economy / Public Finance",
@@ -3298,9 +3610,9 @@
     "inBreaker": "assets/stonebreaker.jpeg"
   },
   "opportunitiesSummary": "18 opportunities remain listed from the previous verification cycle, including international roles, scholarships, grants, fellowships and training programmes. Their deadlines and eligibility notes have been retained, but they have not all been re-verified during this late-night update. Check each official employer, university or funder page before applying; pay particular attention to deadlines approaching on 19–20 November.",
-  "summary": "Friday, 20 November 2026 — Morning News & Global Update. Updated at 06:42 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — INEC has extended recruitment for 2027 election ad hoc staff until 3 December. Registration is free and applicants should use only the official INECPRES portal. Inspector-General of Police Olatunji Disu has urged hospitals to treat gunshot victims immediately without waiting for police reports. President Bola Tinubu has met current and former National Assembly leaders at Aso Rock. Separately, election stakeholders have warned about risks including voter-register manipulation, AI-generated disinformation, hate speech and political violence ahead of 2027. The Federal Government is considering harmonising the 2026 and 2027 budget cycles.\n\nEUROPE — UK and EU negotiators are working towards a package ahead of a Brussels summit, with trade, food standards, youth mobility and migration cooperation among the issues under discussion.\n\nUKRAINE AND GLOBAL DIPLOMACY — European leaders are pushing back against any settlement that would decide Ukraine's future without Kyiv and its European partners. Diplomatic statements are not a peace agreement; negotiations remain uncertain.\n\nEDITORIAL NOTE — We distinguish official announcements from allegations, proposals and ongoing negotiations. Images are selected to match the country and subject; contextual photographs are labelled and are not presented as pictures of the specific event.\n\nADDITIONAL NIGERIA UPDATES — The Olubadan of Ibadanland, Oba Rashidi Ladoja, has pledged palace support for the military and urged community leaders to provide timely intelligence. FIFA has appointed Daniel Amokachi and four others to the NFF Normalisation Committee, subject to eligibility checks. The Army says airstrikes in Borno on 16–17 November killed 21 suspected ISWAP fighters and injured 10; casualty figures are attributed to the military and have not been independently verified.",
-  "globalNewsSummary": "Morning global update: UK-EU negotiations continue ahead of the Brussels summit, while European leaders stress that Ukraine's future cannot be decided without Kyiv. No peace agreement has been announced.",
-  "editorialNote": "Image corrections: Nigerian stories use Nigerian people, places, institutions or clearly labelled Nigerian file photographs. Images of specific individuals are labelled as file photographs when they are not from the event itself. Military casualty claims are attributed to the military.",
+  "summary": "Friday, 20 November 2026 — Midday News & Global Update. Updated at 12:08 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Kogi Police say 15 kidnapped people were rescued from Magaru Forest near Kabba after a joint security operation. Nigeria Customs and Russia's Federal Customs Service have signed a cooperation agreement covering trade facilitation and intelligence sharing. Enugu State Governor Peter Mbah has proposed renaming ESUT after former governor Jim Nwobodo, subject to stakeholder consultation and legislative due process.\n\nEUROPE — Downing Street says the UK and EU have concluded negotiations on a reset package covering youth mobility, food and agricultural standards, and links between emissions trading systems. Full terms and implementation details are awaited.\n\nUKRAINE — Ukrainian authorities report Russian strikes hit Kyiv and other regions overnight. Kyiv's mayor reported three deaths in the capital; injuries were also reported in Kharkiv and Dnipropetrovsk. Casualty figures are attributed to local authorities and may change.\n\nEDITORIAL NOTE — We distinguish official statements, proposals and agreements. Images are geographically and editorially matched; archive or contextual photographs are labelled and are not presented as photographs of the specific event.",
+  "globalNewsSummary": "Midday global update: the UK and EU have concluded negotiations on a reset package, while Ukrainian authorities report overnight Russian strikes on Kyiv and other regions. The full UK-EU terms are awaited; casualty reports from Ukraine may be updated.",
+  "editorialNote": "RadiantWaves editorial policy: images are selected for subject and geographic relevance. Where an exact event photograph is unavailable, a clearly labelled contextual or archive image is used. We do not use unrelated European stock imagery to illustrate Nigerian events.",
   "presenter": "Sophie Laurent",
   "sportsNews": [
     {
@@ -3321,5 +3633,6 @@
       "whatHappensNext": "The appointments remain subject to FIFA eligibility checks. The committee is expected to begin its work immediately.",
       "label": "NIGERIAN FOOTBALL"
     }
-  ]
+  ],
+  "middaySummary": "Friday, 20 November 2026 — Midday News & Global Update. Updated at 12:08 Europe/Paris. Presented by Sophie Laurent.\n\nNIGERIA — Kogi Police say 15 kidnapped people were rescued from Magaru Forest near Kabba after a joint security operation. Nigeria Customs and Russia's Federal Customs Service have signed a cooperation agreement covering trade facilitation and intelligence sharing. Enugu State Governor Peter Mbah has proposed renaming ESUT after former governor Jim Nwobodo, subject to stakeholder consultation and legislative due process.\n\nEUROPE — Downing Street says the UK and EU have concluded negotiations on a reset package covering youth mobility, food and agricultural standards, and links between emissions trading systems. Full terms and implementation details are awaited.\n\nUKRAINE — Ukrainian authorities report Russian strikes hit Kyiv and other regions overnight. Kyiv's mayor reported three deaths in the capital; injuries were also reported in Kharkiv and Dnipropetrovsk. Casualty figures are attributed to local authorities and may change.\n\nEDITORIAL NOTE — We distinguish official statements, proposals and agreements. Images are geographically and editorially matched; archive or contextual photographs are labelled and are not presented as photographs of the specific event."
 }

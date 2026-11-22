@@ -69,7 +69,7 @@
     currentProfile=data;if(data)fillProfile(data);else message("Welcome. Please complete your player profile.");
     const isAdmin=currentUser.app_metadata?.role==="admin";
     adminPanel.classList.toggle("hidden",!isAdmin);
-    if(isAdmin)await loadAdminPlayers();
+    if(isAdmin){await loadAdminPlayers();await loadAdminMedia();}
     await loadPlayerMedia();
   }
   async function uploadFile(inputId,kind,maxBytes,allowed){
@@ -147,10 +147,31 @@
   }
   async function loadAdminPlayers(){
     $("admin-status").textContent="Loading player records…";
-    const {data,error}=await db.from("player_profiles").select("*").order("created_at",{ascending:false}).limit(500);
+    const {data,error}=await db.from("player_profiles").select("*").limit(500);
     if(error){$("admin-status").textContent="Admin access is not enabled by database policy: "+error.message;return;}
     window.__rwAdminPlayers=data||[];$("admin-status").textContent=(data||[]).length+" player profile(s) retrieved.";
     renderAdminPlayers();
+  }
+  async function loadAdminMedia(){
+    const status=$("admin-media-status"),root=$("admin-media-results");
+    status.textContent="Loading player media…";root.replaceChildren();
+    const {data,error}=await db.from("player_media").select("id,userid,media_type,storage_path,external_url").limit(1000);
+    if(error){status.textContent="Could not load player media: "+error.message;return;}
+    status.textContent=(data||[]).length+" media record(s) retrieved.";
+    if(!(data||[]).length){root.textContent="No player media has been uploaded yet.";return;}
+    (data||[]).forEach(m=>{
+      const card=document.createElement("article");card.className="player-result";
+      const title=document.createElement("h4");title.textContent=(m.media_type||"Media")+" · Player "+(m.userid||"unknown");
+      const details=document.createElement("p");details.textContent="Media record: "+m.id;
+      card.append(title,details);
+      if(m.external_url){
+        const link=document.createElement("a");link.href=m.external_url;link.target="_blank";link.rel="noopener noreferrer";
+        link.textContent="Open uploaded media";link.style.color="var(--gold)";card.append(link);
+      }else if(m.storage_path){
+        const path=document.createElement("p");path.textContent="Storage path: "+m.storage_path;card.append(path);
+      }
+      root.append(card);
+    });
   }
   function renderAdminPlayers(){
     const list=window.__rwAdminPlayers||[],name=$("admin-search").value.trim().toLowerCase(),country=$("admin-country").value.trim().toLowerCase();
@@ -171,7 +192,7 @@
     });
   }
   ["admin-search","admin-country","admin-position","admin-min-age","admin-max-age"].forEach(id=>$(id).addEventListener("input",renderAdminPlayers));
-  $("admin-refresh").addEventListener("click",loadAdminPlayers);
+  $("admin-refresh").addEventListener("click",async()=>{await loadAdminPlayers();await loadAdminMedia();});
 
   db.auth.getSession().then(({data})=>{if(data.session){currentUser=data.session.user;loadProfile();}});
   db.auth.onAuthStateChange((_event,session)=>{if(session?.user){currentUser=session.user;loadProfile();}});

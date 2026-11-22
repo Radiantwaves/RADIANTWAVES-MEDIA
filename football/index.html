@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2d">
+  <title>RadiantWaves Football Talent</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="RadiantWaves Football Talent home">
+      <span class="brand-mark">RW</span>
+      <span><strong>RADIANTWAVES</strong><small>FOOTBALL TALENT</small></span>
+    </a>
+    <span class="header-note">Player Registration Portal</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">YOUR JOURNEY. YOUR PROFILE. YOUR OPPORTUNITY.</p>
+      <h1>Make your football talent visible.</h1>
+      <p>Create a player account, complete your football profile and keep your information up to date.</p>
+      <div class="notice"><strong>Please note:</strong> Registration does not guarantee trials, selection, a contract, transfer or scholarship. RadiantWaves does not promise placement or paid opportunities through registration.</div>
+    </section>
+
+    <section class="portal-card">
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+
+      <section id="auth-panel">
+        <div class="tabs" role="tablist" aria-label="Account options">
+          <button class="tab active" id="show-signup" type="button">Create account</button>
+          <button class="tab" id="show-login" type="button">Log in</button>
+        </div>
+
+        <form id="signup-form" class="form-panel">
+          <h2>Create your player account</h2>
+          <p class="muted">Use an email address you can access. You may need to confirm it before logging in.</p>
+          <label>Email address<input id="signup-email" type="email" autocomplete="email" required></label>
+          <label>Password<input id="signup-password" type="password" minlength="8" autocomplete="new-password" required><small>At least 8 characters.</small></label>
+          <label class="check-row"><input id="adult-confirm" type="checkbox" required><span>I confirm that I am 18 years of age or older.</span></label>
+          <button class="primary-button" type="submit">Create account</button>
+        </form>
+
+        <form id="login-form" class="form-panel hidden">
+          <h2>Welcome back</h2>
+          <label>Email address<input id="login-email" type="email" autocomplete="email" required></label>
+          <label>Password<input id="login-password" type="password" autocomplete="current-password" required></label>
+          <button class="primary-button" type="submit">Log in</button>
+          <button class="text-button" id="reset-password" type="button">Forgot your password?</button>
+        </form>
+      </section>
+
+      <section id="profile-panel" class="hidden">
+        <div class="profile-heading">
+          <div><p class="eyebrow">PLAYER DASHBOARD</p><h2>Your football profile</h2></div>
+          <button id="logout-button" class="outline-button" type="button">Log out</button>
+        </div>
+        <p class="muted">Complete the fields below and save your profile. You can return later to update it.</p>
+        <div class="registration-chip">Player ID: <strong id="player-id">Created when you save</strong></div>
+
+        <form id="profile-form" class="form-panel">
+          <div class="form-grid">
+            <label>Full name<input id="full_name" required maxlength="120"></label>
+            <label>Date of birth<input id="date_of_birth" type="date" required></label>
+            <label>Nationality<input id="nationality" required maxlength="80"></label>
+            <label>Country where you live<input id="country" required maxlength="80"></label>
+            <label>City<input id="city" maxlength="80"></label>
+            <label>Primary playing position
+              <select id="primary_position" required>
+                <option value="">Select position</option>
+                <option>Goalkeeper</option><option>Right Back</option><option>Left Back</option>
+                <option>Centre Back</option><option>Defensive Midfielder</option><option>Central Midfielder</option>
+                <option>Attacking Midfielder</option><option>Right Winger</option><option>Left Winger</option>
+                <option>Striker</option><option>Second Striker</option>
+              </select>
+            </label>
+            <label>Secondary position
+              <select id="secondary_position">
+                <option value="">None</option>
+                <option>Goalkeeper</option><option>Right Back</option><option>Left Back</option>
+                <option>Centre Back</option><option>Defensive Midfielder</option><option>Central Midfielder</option>
+                <option>Attacking Midfielder</option><option>Right Winger</option><option>Left Winger</option>
+                <option>Striker</option><option>Second Striker</option>
+              </select>
+            </label>
+            <label>Preferred foot
+              <select id="dominant_foot"><option value="">Select</option><option>Right</option><option>Left</option><option>Both</option></select>
+            </label>
+            <label>Height (cm)<input id="height_cm" type="number" min="100" max="250"></label>
+            <label>Current club or academy<input id="club_or_academy" maxlength="120"></label>
+          </div>
+          <label>Football experience<textarea id="experience" rows="4" maxlength="2000" placeholder="Briefly describe your playing experience, teams, competitions and achievements."></textarea></label>
+
+          <div class="upload-grid">
+            <label>Profile photo <span class="field-note">JPG, PNG or WEBP · up to 5 MB</span><input id="profile-photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <label>Football CV <span class="field-note">PDF · up to 5 MB</span><input id="football-cv" type="file" accept="application/pdf"></label>
+          </div>
+          <div class="file-status" id="file-status"></div>
+          <button class="primary-button" type="submit">Save my profile</button>
+        </form>
+        <section class="media-section">
+          <h3>Match highlights</h3>
+          <p class="muted">Upload up to 3 short football highlight videos. Maximum 60 seconds and 50 MB per video.</p>
+          <label>Choose a highlight video<input id="highlight-video" type="file" accept="video/mp4,video/quicktime,video/webm"></label>
+          <button id="upload-video" class="primary-button" type="button">Upload highlight</button>
+          <div id="video-status" class="file-status" aria-live="polite"></div>
+          <div id="player-media-list" class="media-list"></div>
+        </section>
+        <p class="small-print">Your profile and uploaded documents are intended for your account. Do not upload passports, identity documents or medical records.</p>
+      </section>
+
+      <section id="admin-panel" class="hidden admin-section">
+        <div class="profile-heading"><div><p class="eyebrow">RESTRICTED ACCESS</p><h2>Talent administration</h2></div><span class="admin-tag">Admin</span></div>
+        <p class="muted">Search registered players by country, playing position or age. Access is controlled by Supabase administrator claims and database policies.</p>
+        <div class="admin-filters">
+          <label>Search name<input id="admin-search" type="search" placeholder="Player name"></label>
+          <label>Country<input id="admin-country" type="search" placeholder="Country"></label>
+          <label>Position<select id="admin-position"><option value="">All positions</option><option>Goalkeeper</option><option>Right Back</option><option>Left Back</option><option>Centre Back</option><option>Defensive Midfielder</option><option>Central Midfielder</option><option>Attacking Midfielder</option><option>Right Winger</option><option>Left Winger</option><option>Striker</option><option>Second Striker</option></select></label>
+          <label>Minimum age<input id="admin-min-age" type="number" min="18" max="60" placeholder="18"></label>
+          <label>Maximum age<input id="admin-max-age" type="number" min="18" max="60" placeholder="Any"></label>
+        </div>
+        <button id="admin-refresh" class="outline-button" type="button">Refresh player list</button>
+        <div id="admin-status" class="file-status" aria-live="polite"></div>
+        <div id="admin-results" class="admin-results"></div>
+        <h3 class="admin-subheading">Uploaded player media</h3>
+        <div id="admin-media-status" class="file-status" aria-live="polite"></div>
+        <div id="admin-media-results" class="admin-results"></div>
+      </section>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> RadiantWaves Media Nigeria Ltd · Football Talent</footer>
+</body>
+</html>

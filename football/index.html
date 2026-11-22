@@ -101,7 +101,30 @@
           <div class="file-status" id="file-status"></div>
           <button class="primary-button" type="submit">Save my profile</button>
         </form>
+        <section class="media-section">
+          <h3>Match highlights</h3>
+          <p class="muted">Upload up to 3 short football highlight videos. Maximum 60 seconds and 50 MB per video.</p>
+          <label>Choose a highlight video<input id="highlight-video" type="file" accept="video/mp4,video/quicktime,video/webm"></label>
+          <button id="upload-video" class="primary-button" type="button">Upload highlight</button>
+          <div id="video-status" class="file-status" aria-live="polite"></div>
+          <div id="player-media-list" class="media-list"></div>
+        </section>
         <p class="small-print">Your profile and uploaded documents are intended for your account. Do not upload passports, identity documents or medical records.</p>
+      </section>
+
+      <section id="admin-panel" class="hidden admin-section">
+        <div class="profile-heading"><div><p class="eyebrow">RESTRICTED ACCESS</p><h2>Talent administration</h2></div><span class="admin-tag">Admin</span></div>
+        <p class="muted">Search registered players by country, playing position or age. Access is controlled by Supabase administrator claims and database policies.</p>
+        <div class="admin-filters">
+          <label>Search name<input id="admin-search" type="search" placeholder="Player name"></label>
+          <label>Country<input id="admin-country" type="search" placeholder="Country"></label>
+          <label>Position<select id="admin-position"><option value="">All positions</option><option>Goalkeeper</option><option>Right Back</option><option>Left Back</option><option>Centre Back</option><option>Defensive Midfielder</option><option>Central Midfielder</option><option>Attacking Midfielder</option><option>Right Winger</option><option>Left Winger</option><option>Striker</option><option>Second Striker</option></select></label>
+          <label>Minimum age<input id="admin-min-age" type="number" min="18" max="60" placeholder="18"></label>
+          <label>Maximum age<input id="admin-max-age" type="number" min="18" max="60" placeholder="Any"></label>
+        </div>
+        <button id="admin-refresh" class="outline-button" type="button">Refresh player list</button>
+        <div id="admin-status" class="file-status" aria-live="polite"></div>
+        <div id="admin-results" class="admin-results"></div>
       </section>
     </section>
   </main>

@@ -95,8 +95,15 @@
         dominant_foot:$("dominant_foot").value||null,height_cm:$("height_cm").value?Number($("height_cm").value):null,
         club_or_academy:$("club_or_academy").value.trim()||null,experience:$("experience").value.trim()||null,
         profile_photo_path:photo||currentProfile?.profile_photo_path||null,football_cv_path:cv||currentProfile?.football_cv_path||null,updated_at:new Date().toISOString()};
-      const {data,error}=await db.from("player_profiles").upsert(p,{onConflict:"user_id"}).select().single();
-      if(error)throw error;currentProfile=data;fillProfile(data);$("file-status").textContent="Profile saved. Your documents remain in your private player folder.";
+      let saved;
+      if(currentProfile){
+        const {data,error}=await db.from("player_profiles").update(p).eq("user_id",currentUser.id).select().single();
+        if(error)throw error;saved=data;
+      }else{
+        const {data,error}=await db.from("player_profiles").insert(p).select().single();
+        if(error)throw error;saved=data;
+      }
+      currentProfile=saved;fillProfile(saved);$("file-status").textContent="Profile saved. Your documents remain in your private player folder.";
       message("Your player profile has been saved.");
     }catch(err){message("We could not save your profile: "+(err.message||"Please try again."),"error");}
     finally{btn.disabled=false;btn.textContent="Save my profile";}

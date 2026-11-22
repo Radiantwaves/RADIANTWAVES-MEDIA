@@ -117,7 +117,7 @@
     $("upload-video").disabled=true;$("video-status").textContent="Preparing secure upload…";
     try{
       const {data:{session}}=await db.auth.getSession();if(!session)throw new Error("Your session has expired. Log in again.");
-      const {data:rows,error:countError}=await db.from("player_media").select("id").eq("userid",currentUser.id).eq("media_type","video");
+      const {data:rows,error:countError}=await db.from("player_media").select("id").eq("user_id",currentUser.id).eq("media_type","video");
       if(countError)throw countError;if((rows||[]).length>=MAX_VIDEOS)throw new Error("You have reached the limit of 3 highlight videos.");
       const signResponse=await fetch(CLOUDINARY_SIGNER,{method:"POST",headers:{Authorization:"Bearer "+session.access_token,apikey:SUPABASE_PUBLISHABLE_KEY,"Content-Type":"application/json"},body:JSON.stringify({})});
       const signed=await signResponse.json();if(!signResponse.ok)throw new Error(signed.error||"Could not obtain a secure upload signature.");
@@ -125,7 +125,7 @@
       form.append("upload_preset",signed.upload_preset);form.append("api_key",signed.api_key);form.append("signature",signed.signature);
       const upload=await fetch("https://api.cloudinary.com/v1_1/"+encodeURIComponent(signed.cloud_name)+"/video/upload",{method:"POST",body:form});
       const result=await upload.json();if(!upload.ok)throw new Error(result.error?.message||"Cloudinary upload failed.");
-      const record={userid:currentUser.id,media_type:"video",storage_path:result.public_id,external_url:result.secure_url};
+      const record={user_id:currentUser.id,media_type:"video",storage_path:result.public_id,external_url:result.secure_url};
       const {error:insertError}=await db.from("player_media").insert(record);if(insertError)throw insertError;
       $("highlight-video").value="";$("video-status").textContent="Video uploaded successfully.";await loadPlayerMedia();
     }catch(err){$("video-status").textContent="";message("Video upload failed: "+(err.message||"Please try again."),"error");}
@@ -134,7 +134,7 @@
   $("upload-video").addEventListener("click",uploadHighlight);
   async function loadPlayerMedia(){
     if(!currentUser)return;
-    const {data,error}=await db.from("player_media").select("id,media_type,storage_path,external_url").eq("userid",currentUser.id).order("id",{ascending:false});
+    const {data,error}=await db.from("player_media").select("id,media_type,storage_path,external_url").eq("user_id",currentUser.id).order("id",{ascending:false});
     if(error){$("player-media-list").textContent="Your video list could not be loaded: "+error.message;return;}
     playerMedia=data||[];$("player-media-list").replaceChildren();
     playerMedia.filter(m=>m.media_type==="video"&&m.external_url).forEach(m=>{
@@ -155,13 +155,13 @@
   async function loadAdminMedia(){
     const status=$("admin-media-status"),root=$("admin-media-results");
     status.textContent="Loading player media…";root.replaceChildren();
-    const {data,error}=await db.from("player_media").select("id,userid,media_type,storage_path,external_url").limit(1000);
+    const {data,error}=await db.from("player_media").select("id,user_id,media_type,storage_path,external_url").limit(1000);
     if(error){status.textContent="Could not load player media: "+error.message;return;}
     status.textContent=(data||[]).length+" media record(s) retrieved.";
     if(!(data||[]).length){root.textContent="No player media has been uploaded yet.";return;}
     (data||[]).forEach(m=>{
       const card=document.createElement("article");card.className="player-result";
-      const title=document.createElement("h4");title.textContent=(m.media_type||"Media")+" · Player "+(m.userid||"unknown");
+      const title=document.createElement("h4");title.textContent=(m.media_type||"Media")+" · Player "+(m.user_id||"unknown");
       const details=document.createElement("p");details.textContent="Media record: "+m.id;
       card.append(title,details);
       if(m.external_url){

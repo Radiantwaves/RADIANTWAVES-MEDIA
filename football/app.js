@@ -79,8 +79,8 @@
         currentUser=data.user;await loadProfile();
         message(underage?"Your account has been created. It is marked as awaiting guardian review. Please complete the player profile; no trial, selection or placement is guaranteed.":"Your account has been created. Please complete your player profile.");
       }else{
-        message("Your registration request was received. Check your inbox (and spam folder) for the confirmation email. You must confirm your email before logging in."+(underage?" Your account is also marked as awaiting guardian review.":""));
         switchTab("login");
+        message("Your registration request was received. Check your inbox (and spam folder) for the confirmation email. You must confirm your email before logging in."+(underage?" Your account is also marked as awaiting guardian review.":""));
       }
     }catch(err){
       const detail=err?.message||"The registration service could not be reached.";

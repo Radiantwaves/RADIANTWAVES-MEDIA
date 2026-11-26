@@ -306,7 +306,7 @@ ul {
     width: max-content;
     min-width: max-content;
     flex-shrink: 0;
-    animation: rw-ticker-scroll 100s linear infinite;
+    animation: rw-ticker-scroll 240s linear infinite;
     will-change: transform;
 }
 

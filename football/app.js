@@ -27,17 +27,38 @@
 
   signupForm.addEventListener("submit",async e=>{
     e.preventDefault(); clearMessage();
-    if(!$("adult-confirm").checked)return message("You must confirm that you are 18 or older to register.","error");
-    const {data,error}=await db.auth.signUp({email:$("signup-email").value.trim(),password:$("signup-password").value});
-    if(error)return message(error.message,"error");
-    if(data.session){currentUser=data.user;await loadProfile();message("Your account has been created.");}
-    else{message("Account created. Confirm your email before logging in.");switchTab("login");}
+    const btn=signupForm.querySelector('button[type="submit"]');
+    const email=$("signup-email").value.trim();
+    const password=$("signup-password").value;
+    if(!$("adult-confirm").checked)return message("Please tick the box confirming that you are 18 or older. This portal currently accepts adult players only.","error");
+    if(!email||!password)return message("Enter your email address and password to continue.","error");
+    if(password.length<8)return message("Your password must contain at least 8 characters.","error");
+    btn.disabled=true;btn.textContent="Creating account…";
+    try{
+      const {data,error}=await db.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});
+      if(error)throw error;
+      if(data.session&&data.user){
+        currentUser=data.user;await loadProfile();
+        message("Your account has been created. Please complete your player profile.");
+      }else{
+        message("Your registration request was received. Check your inbox (and spam folder) for the confirmation email. You must confirm your email before logging in.");
+        switchTab("login");
+      }
+    }catch(err){
+      const detail=err?.message||"The registration service could not be reached.";
+      message("Registration was not completed: "+detail+" If the problem continues, contact support@radiantwavesmedia.com.","error");
+    }finally{btn.disabled=false;btn.textContent="Create account";}
   });
   loginForm.addEventListener("submit",async e=>{
     e.preventDefault();clearMessage();
-    const {data,error}=await db.auth.signInWithPassword({email:$("login-email").value.trim(),password:$("login-password").value});
-    if(error)return message(error.message,"error");
-    currentUser=data.user;await loadProfile();message("You are logged in.");
+    const btn=loginForm.querySelector('button[type="submit"]');
+    btn.disabled=true;btn.textContent="Logging in…";
+    try{
+      const {data,error}=await db.auth.signInWithPassword({email:$("login-email").value.trim(),password:$("login-password").value});
+      if(error)throw error;
+      currentUser=data.user;await loadProfile();message("You are logged in.");
+    }catch(err){message("Login failed: "+(err?.message||"Please check your details and try again."),"error");}
+    finally{btn.disabled=false;btn.textContent="Log in";}
   });
   $("reset-password").addEventListener("click",async()=>{
     const email=$("login-email").value.trim();

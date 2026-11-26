@@ -25,23 +25,61 @@
   $("show-signup").addEventListener("click",()=>switchTab("signup"));
   $("show-login").addEventListener("click",()=>switchTab("login"));
 
+  function updateGuardianFields(){
+    const dob=$("signup-dob").value, age=ageFromDOB(dob), underage=age!==null&&age<18;
+    $("guardian-fields").classList.toggle("hidden",!underage);
+    ["guardian-name","guardian-relationship","guardian-email","guardian-phone","guardian-consent"].forEach(id=>$(id).required=underage);
+    $("age-guidance").textContent=underage
+      ? "This player is under 18. A parent or legal guardian must provide their details and consent. The account will be flagged for guardian review."
+      : "Players aged 18 or over can register independently.";
+  }
+  $("signup-dob").addEventListener("change",updateGuardianFields);
+
   signupForm.addEventListener("submit",async e=>{
     e.preventDefault(); clearMessage();
     const btn=signupForm.querySelector('button[type="submit"]');
     const email=$("signup-email").value.trim();
     const password=$("signup-password").value;
-    if(!$("adult-confirm").checked)return message("Please tick the box confirming that you are 18 or older. This portal currently accepts adult players only.","error");
-    if(!email||!password)return message("Enter your email address and password to continue.","error");
+    const dob=$("signup-dob").value, age=ageFromDOB(dob);
+    if(!email||!password||!dob)return message("Enter your email address, date of birth and password to continue.","error");
+    if(age===null||age<0)return message("Please enter a valid date of birth.","error");
+    const underage=age<18;
+    const guardian={
+      full_name:$("guardian-name").value.trim(),
+      relationship:$("guardian-relationship").value,
+      email:$("guardian-email").value.trim(),
+      phone:$("guardian-phone").value.trim(),
+      consent: $("guardian-consent").checked
+    };
+    if(underage){
+      if(!guardian.full_name||!guardian.relationship||!guardian.email||!guardian.phone||!guardian.consent)
+        return message("For a player under 18, complete all parent/guardian details and confirm their consent before continuing.","error");
+      if(guardian.email.toLowerCase()===email.toLowerCase())
+        return message("Please provide a parent or guardian email address, not the player's email address.","error");
+    }
     if(password.length<8)return message("Your password must contain at least 8 characters.","error");
     btn.disabled=true;btn.textContent="Creating account…";
     try{
-      const {data,error}=await db.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});
+      const {data,error}=await db.auth.signUp({email,password,options:{
+        emailRedirectTo:location.origin+location.pathname,
+        data:{
+          date_of_birth:dob,
+          age_group:underage?"under_18":"adult",
+          guardian_review_status:underage?"pending":"not_required",
+          guardian_full_name:underage?guardian.full_name:null,
+          guardian_relationship:underage?guardian.relationship:null,
+          guardian_email:underage?guardian.email:null,
+          guardian_phone:underage?guardian.phone:null,
+          guardian_consent_declared:underage?true:false,
+          guardian_consent_recorded_at:underage?new Date().toISOString():null
+        }
+      }});
       if(error)throw error;
       if(data.session&&data.user){
         currentUser=data.user;await loadProfile();
-        message("Your account has been created. Please complete your player profile.");
+        message(underage?"Your account has been created. It is marked as awaiting guardian review. Please complete the player profile; no trial, selection or placement is guaranteed.":"Your account has been created. Please complete your player profile.");
       }else{
-        message("Your registration request was received. Check your inbox (and spam folder) for the confirmation email. You must confirm your email before logging in.");
+        message("Your registration request was received. Check your inbox (and spam folder) for the confirmation email. You must confirm your email before logging in."+(underage?" Your account is also marked as awaiting guardian review.":""));
         switchTab("login");
       }
     }catch(err){
@@ -105,7 +143,12 @@
   profileForm.addEventListener("submit",async e=>{
     e.preventDefault();clearMessage();if(!currentUser)return message("Please log in again.","error");
     const dob=$("date_of_birth").value;if(!dob)return message("Please enter your date of birth.","error");
-    if(ageFromDOB(dob)<18)return message("This initial portal is for players aged 18 and over.","error");
+    const playerAge=ageFromDOB(dob);
+    const underage=playerAge!==null&&playerAge<18;
+    const guardian=currentUser.user_metadata||{};
+    if(playerAge===null||playerAge<0)return message("Please enter a valid date of birth.","error");
+    if(underage&&!(guardian.age_group==="under_18"&&guardian.guardian_consent_declared===true&&guardian.guardian_full_name&&guardian.guardian_email&&guardian.guardian_phone&&guardian.guardian_relationship))
+      return message("A parent or legal guardian's details and consent are required before saving a profile for a player under 18. Please contact support if you need to correct your registration details.","error");
     const btn=profileForm.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent="Saving…";
     try{
       const photo=await uploadFile("profile-photo","profile-photo",5*1024*1024,["image/jpeg","image/png","image/webp"]);

@@ -810,7 +810,17 @@ function renderBreaking(data) {
     // Ensure the ticker starts at the beginning after each edition loads.
     track.style.animation = "none";
     void track.offsetWidth;
-    track.style.animation = "rw-ticker-scroll 100s linear infinite";
+    // Set a comfortable reading speed based on the actual headline length.
+    // 26 pixels per second prevents long breaking-news feeds from racing past.
+    const tickerSpeed = 26;
+    const travelWidth = sequenceOne.scrollWidth;
+    const durationSeconds = Math.max(90, Math.ceil(travelWidth / tickerSpeed));
+    track.style.animation = `rw-ticker-scroll ${durationSeconds}s linear infinite`;
+
+    // Respect visitors who request reduced motion.
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        track.style.animation = "none";
+    }
 }
 
 /* =========================================================

@@ -39,8 +39,18 @@
           <h2>Create your player account</h2>
           <p class="muted">Use an email address you can access. You may need to confirm it before logging in.</p>
           <label>Email address<input id="signup-email" type="email" autocomplete="email" required></label>
+          <label>Date of birth<input id="signup-dob" type="date" required></label>
+          <div id="guardian-fields" class="guardian-fields hidden">
+            <h3>Parent or legal guardian details</h3>
+            <p class="muted">Players under 18 must provide a parent or legal guardian's contact details and consent. Their registration will remain pending guardian review.</p>
+            <label>Parent/guardian full name<input id="guardian-name" maxlength="120" autocomplete="name"></label>
+            <label>Relationship to player<select id="guardian-relationship"><option value="">Select relationship</option><option>Parent</option><option>Legal guardian</option></select></label>
+            <label>Parent/guardian email<input id="guardian-email" type="email" autocomplete="email"></label>
+            <label>Parent/guardian phone (include country code)<input id="guardian-phone" type="tel" autocomplete="tel" maxlength="30"></label>
+            <label class="check-row"><input id="guardian-consent" type="checkbox"><span>I confirm that the parent/legal guardian has reviewed this registration and has given permission for the young player to create an account and submit football profile information.</span></label>
+          </div>
           <label>Password<input id="signup-password" type="password" minlength="8" autocomplete="new-password" required><small>At least 8 characters.</small></label>
-          <label class="check-row"><input id="adult-confirm" type="checkbox" required><span>I confirm that I am 18 years of age or older.</span></label>
+          <p id="age-guidance" class="muted">Enter your date of birth. Players aged 18 or over can register independently.</p>
           <button class="primary-button" type="submit">Create account</button>
         </form>
 

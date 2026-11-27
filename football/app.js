@@ -278,15 +278,26 @@
     const btn=$("admin-message-form").querySelector('button[type="submit"]');
     btn.disabled=true;
     try{
+      const subject=$("admin-message-subject").value.trim();
+      const body=$("admin-message-body").value.trim();
+      const playerId=selectedAdminPlayerId;
       const {error}=await db.from("player_messages").insert({
-        player_user_id:selectedAdminPlayerId,sender_user_id:currentUser.id,sender_role:"admin",
-        subject:$("admin-message-subject").value.trim(),body:$("admin-message-body").value.trim()
+        player_user_id:playerId,sender_user_id:currentUser.id,sender_role:"admin",subject,body
       });
       if(error)throw error;
       $("admin-message-body").value="";
       $("admin-message-compose").classList.add("hidden");
-      $("admin-message-status").textContent="Message saved and delivered to the player's in-app inbox.";
       selectedAdminPlayerId=null;
+      $("admin-message-status").textContent="In-app message saved. Sending email notification…";
+      const {data:mailData,error:mailError}=await db.functions.invoke("send-player-message",{
+        body:{player_user_id:playerId,subject,message:body}
+      });
+      if(mailError||!mailData?.success){
+        const reason=mailData?.error||mailError?.message||"Email could not be sent.";
+        $("admin-message-status").textContent="In-app message saved, but email was not sent: "+reason;
+      }else{
+        $("admin-message-status").textContent="Message saved in the player's dashboard and email sent to "+mailData.recipient+".";
+      }
       await loadAdminMessages();
     }catch(err){$("admin-message-status").textContent="Message could not be sent: "+(err.message||"Please try again.");}
     finally{btn.disabled=false;}

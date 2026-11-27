@@ -54,5 +54,7 @@ with check (
   or (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
 );
 
-grant select, insert, update on public.player_messages to authenticated;
+grant select, insert on public.player_messages to authenticated;
+revoke update on public.player_messages from authenticated;
+grant update (read_at) on public.player_messages to authenticated;
 grant usage, select on sequence public.player_messages_id_seq to authenticated;

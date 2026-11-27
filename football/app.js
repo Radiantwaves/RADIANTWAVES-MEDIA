@@ -9,7 +9,7 @@
   const $ = (id) => document.getElementById(id);
   const authPanel=$("auth-panel"), profilePanel=$("profile-panel"), adminPanel=$("admin-panel");
   const signupForm=$("signup-form"), loginForm=$("login-form"), profileForm=$("profile-form");
-  let currentUser=null, currentProfile=null, playerMedia=[];
+  let currentUser=null, currentProfile=null, playerMedia=[], selectedAdminPlayerId=null;
   $("year").textContent=new Date().getFullYear();
 
   function message(text,type="success"){
@@ -128,8 +128,9 @@
     currentProfile=data;if(data)fillProfile(data);else message("Welcome. Please complete your player profile.");
     const isAdmin=currentUser.app_metadata?.role==="admin";
     adminPanel.classList.toggle("hidden",!isAdmin);
-    if(isAdmin){await loadAdminPlayers();await loadAdminMedia();}
+    if(isAdmin){await loadAdminPlayers();await loadAdminMedia();await loadAdminMessages();}
     await loadPlayerMedia();
+    await loadPlayerMessages();
   }
   async function uploadFile(inputId,kind,maxBytes,allowed){
     const f=$(inputId).files[0];if(!f)return null;
@@ -216,6 +217,101 @@
     });
     if(!playerMedia.length)$("player-media-list").textContent="No highlight videos uploaded yet.";
   }
+  async function loadPlayerMessages(){
+    if(!currentUser)return;
+    const root=$("player-messages"),status=$("player-message-status");
+    const {data,error}=await db.from("player_messages").select("id,sender_role,subject,body,created_at,read_at").eq("player_user_id",currentUser.id).order("created_at",{ascending:true}).limit(200);
+    if(error){status.textContent="Messages could not be loaded: "+error.message;return;}
+    root.replaceChildren();
+    if(!(data||[]).length){root.textContent="You have no messages yet.";status.textContent="";return;}
+    (data||[]).forEach(m=>{
+      const card=document.createElement("article");card.className="message-item";
+      const head=document.createElement("div");head.className="message-item-head";
+      const sender=document.createElement("strong");sender.textContent=m.sender_role==="admin"?"RadiantWaves Talent Administration":"Your reply";
+      const date=document.createElement("time");date.textContent=new Date(m.created_at).toLocaleString();
+      const subject=document.createElement("h4");subject.textContent=m.subject;
+      const body=document.createElement("p");body.textContent=m.body;
+      head.append(sender,date);card.append(head,subject,body);root.append(card);
+    });
+    const unread=(data||[]).filter(m=>m.sender_role==="admin"&&!m.read_at).map(m=>m.id);
+    if(unread.length){
+      await db.from("player_messages").update({read_at:new Date().toISOString()}).in("id",unread);
+    }
+    status.textContent=data.length+" message(s) in your conversation.";
+  }
+
+  async function loadAdminMessages(){
+    const root=$("admin-message-results"),status=$("admin-message-status");
+    const {data,error}=await db.from("player_messages").select("id,player_user_id,sender_role,subject,body,created_at,read_at").order("created_at",{ascending:false}).limit(300);
+    if(error){status.textContent="Messages could not be loaded: "+error.message;return;}
+    root.replaceChildren();
+    if(!(data||[]).length){root.textContent="No player messages yet.";status.textContent="";return;}
+    const names=new Map((window.__rwAdminPlayers||[]).map(p=>[p.user_id,p.full_name||"Player"]));
+    (data||[]).forEach(m=>{
+      const card=document.createElement("article");card.className="message-item";
+      const head=document.createElement("div");head.className="message-item-head";
+      const sender=document.createElement("strong");sender.textContent=(names.get(m.player_user_id)||"Player")+" · "+(m.sender_role==="player"?"Player reply":"Administration");
+      const date=document.createElement("time");date.textContent=new Date(m.created_at).toLocaleString();
+      const subject=document.createElement("h4");subject.textContent=m.subject;
+      const body=document.createElement("p");body.textContent=m.body;
+      const reply=document.createElement("button");reply.type="button";reply.className="outline-button";reply.textContent="Reply to player";
+      reply.addEventListener("click",()=>openAdminMessage(m.player_user_id,names.get(m.player_user_id)||"Player","Re: "+m.subject));
+      head.append(sender,date);card.append(head,subject,body,reply);root.append(card);
+      if(m.sender_role==="player"&&!m.read_at){
+        db.from("player_messages").update({read_at:new Date().toISOString()}).eq("id",m.id);
+      }
+    });
+    status.textContent=data.length+" message(s) retrieved.";
+  }
+
+  function openAdminMessage(playerId,playerName,subject){
+    selectedAdminPlayerId=playerId;
+    $("admin-message-recipient").textContent="Message to "+playerName;
+    $("admin-message-subject").value=subject||"RadiantWaves Football Talent – Registration Update";
+    $("admin-message-compose").classList.remove("hidden");
+    $("admin-message-compose").scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+
+  $("admin-message-form").addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!selectedAdminPlayerId)return;
+    const btn=$("admin-message-form").querySelector('button[type="submit"]');
+    btn.disabled=true;
+    try{
+      const {error}=await db.from("player_messages").insert({
+        player_user_id:selectedAdminPlayerId,sender_user_id:currentUser.id,sender_role:"admin",
+        subject:$("admin-message-subject").value.trim(),body:$("admin-message-body").value.trim()
+      });
+      if(error)throw error;
+      $("admin-message-body").value="";
+      $("admin-message-compose").classList.add("hidden");
+      $("admin-message-status").textContent="Message saved and delivered to the player's in-app inbox.";
+      selectedAdminPlayerId=null;
+      await loadAdminMessages();
+    }catch(err){$("admin-message-status").textContent="Message could not be sent: "+(err.message||"Please try again.");}
+    finally{btn.disabled=false;}
+  });
+  $("admin-message-cancel").addEventListener("click",()=>{
+    selectedAdminPlayerId=null;$("admin-message-compose").classList.add("hidden");
+  });
+  $("player-reply-form").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const body=$("player-reply-body").value.trim();if(!body)return;
+    const btn=$("player-reply-form").querySelector('button[type="submit"]');btn.disabled=true;
+    try{
+      const {error}=await db.from("player_messages").insert({
+        player_user_id:currentUser.id,sender_user_id:currentUser.id,sender_role:"player",
+        subject:"Reply from player"
+        ,body
+      });
+      if(error)throw error;
+      $("player-reply-body").value="";
+      $("player-message-status").textContent="Your reply has been sent to Talent Administration.";
+      await loadPlayerMessages();
+    }catch(err){$("player-message-status").textContent="Your reply could not be sent: "+(err.message||"Please try again.");}
+    finally{btn.disabled=false;}
+  });
+
   async function loadAdminPlayers(){
     $("admin-status").textContent="Loading player records…";
     const {data,error}=await db.from("player_profiles").select("*").limit(500);
@@ -259,7 +355,9 @@
       const title=document.createElement("h4");title.textContent=p.full_name||"Unnamed player";
       const details=document.createElement("p");details.textContent=[p.registration_id,p.country,ageFromDOB(p.date_of_birth)+" years",p.primary_position,p.club_or_academy].filter(Boolean).join(" · ");
       const exp=document.createElement("p");exp.textContent=p.experience||"No experience summary provided.";
-      card.append(title,details,exp);root.append(card);
+      const contact=document.createElement("button");contact.type="button";contact.className="outline-button";contact.textContent="Message player";
+      contact.addEventListener("click",()=>openAdminMessage(p.user_id,p.full_name||"Player"));
+      card.append(title,details,exp,contact);root.append(card);
     });
   }
   ["admin-search","admin-country","admin-position","admin-min-age","admin-max-age"].forEach(id=>$(id).addEventListener("input",renderAdminPlayers));

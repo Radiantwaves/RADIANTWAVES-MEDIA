@@ -5,21 +5,63 @@
     "location": "Nigeria | France | Global",
     "website": "https://radiantwavesmedia.com/"
   },
-  "edition": "Friday Midday News & Global Report",
+  "edition": "Friday Evening News & Global Report",
   "date": "Friday, 27 November 2026",
-  "updatedAt": "2026-11-27T12:07:00+01:00",
+  "updatedAt": "2026-11-27T18:11:00+01:00",
   "timezone": "Europe/Paris",
   "hero": {
-    "title": "Friday Midday News & Global Report",
+    "title": "Friday Evening News & Global Report",
     "subtitle": "Nigeria, Africa and the World",
-    "description": "Good afternoon. NAFDAC has shut Zuba International Market in Abuja after screening more than 160 shops and seizing counterfeit, expired and unwholesome products valued at over ₦300 million. In politics, Peter Obi and Rabiu Kwankwaso met former military president Ibrahim Babangida in Minna as 2027 consultations gather pace; separately, former leaders expressed confidence in President Tinubu’s administration. The CBN has appointed Murtala Mohammed as acting chief executive of Keystone Bank and says the bank remains fully operational. The CBN governor has also urged lenders to improve financing for Nigerian exporters. Internationally, Ukraine reports a major overnight Russian drone and missile attack, while the EU’s special budget summit ended early without agreement on the 2028–2034 spending plan. Figures and claims are attributed to the relevant authorities and reports.",
+    "description": "Good evening. Nigeria’s health authorities say monitoring of all 62 contacts linked to the country’s confirmed Ebola case has ended without secondary infections, but the NCDC cautions that Nigeria has not yet been officially declared Ebola-free. Politically, opposition leaders including Atiku Abubakar, Peter Obi and Seyi Makinde are expected at a Monday summit to consider a unity pact; it is not a formal merger. Rabiu Kwankwaso has accused Kano political rivals of using an EFCC petition to damage his image, while the petitioning group says it seeks accountability and the EFCC says it will assess the matter on its merits. INEC has warned of political attacks reported in nine states and is due to test accreditation technology on Saturday. Across Africa, Eritrea has warned against threats to sovereignty and maritime stability in the Horn of Africa. Internationally, Zelenskyy warns of a possible new Russian mass strike, while Trump says he urged Putin to pull back; no ceasefire has been agreed. Kyiv also claims North Korea has paused some military support to Russia, a claim not confirmed by Moscow or Pyongyang.",
     "image": null,
     "imageAlt": "",
     "imageNote": "No verified, rights-cleared lead image has been added for this edition.",
-    "category": "Midday News"
+    "category": "Evening News"
   },
   "morningSummary": "Good morning. Friday’s edition leads with President Bola Tinubu’s pledge of ₦100 million and a three-bedroom home for each family of the 25 people killed in the Nigerian Air Force aircraft crash in Ondo State. In security news, the NSCDC says five people were killed and six injured in an attack on Gurjiya village in Jigawa. A bus fire in Lagos has reportedly killed eight people and left five hospitalised; details of the cause are still limited. The naira reportedly gained ₦19 following fresh CBN intervention, although one day’s movement does not establish a sustained trend. In Osun, Governor Ademola Adeleke has warned NURTW leaders to stay away from his inauguration, citing concerns about possible disruption. Internationally, EU leaders failed to agree on the bloc’s next long-term budget and a proposed €45 billion loan for Ukraine, with talks deferred to December. Figures and allegations are attributed to their sources and remain subject to official updates.",
   "breaking": [
+    {
+      "title": "Nigeria completes Ebola contact monitoring without new infections, NCDC says",
+      "category": "Nigeria / Health / Ebola",
+      "source": "Nigeria Info FM, 27 November 2026; NCDC briefing",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/nigeria-completes-ebola-contact-monitoring-without-new-infections/"
+    },
+    {
+      "title": "Opposition leaders expected to sign unity pact ahead of 2027 elections",
+      "category": "Nigeria / Politics / 2027 Elections",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/2027-elections/atiku-obi-makinde-expected-to-sign-opposition-unity-pact-on-monday/"
+    },
+    {
+      "title": "Kwankwaso accuses Kano government of using EFCC petition to damage his image",
+      "category": "Nigeria / Politics / Kano / Anti-Corruption",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/kwankwaso-accuses-kano-government-of-using-efcc-to-tarnish-his-image/"
+    },
+    {
+      "title": "INEC warns political actors as election-related attacks reported in nine states",
+      "category": "Nigeria / Elections / Security / INEC",
+      "source": "The Fellow Press, 27 November 2026; Nigeria newspaper reports",
+      "sourceUrl": "https://www.fellowpress.com/nigerian-newspapers-headlines-today-friday-27-november-2026/"
+    },
+    {
+      "title": "Eritrea warns against threats to sovereignty and rising tension around Red Sea access",
+      "category": "Africa / Horn of Africa / Diplomacy / Red Sea",
+      "source": "Ahram Online, 27 November 2026",
+      "sourceUrl": "https://english.ahram.org.eg/News/583537.aspx"
+    },
+    {
+      "title": "Zelenskyy warns of another Russian mass strike as Trump says he urged Putin to pull back",
+      "category": "Europe / Ukraine / Russia / Diplomacy / Security",
+      "source": "Al Jazeera, 27 November 2026; Reuters reporting",
+      "sourceUrl": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back"
+    },
+    {
+      "title": "Kyiv says North Korea has paused some military support to Russia after diplomatic dispute",
+      "category": "Asia / North Korea / Russia / Ukraine War",
+      "source": "Euronews, 27 November 2026; Ukrainian military intelligence claims",
+      "sourceUrl": "https://www.euronews.com/2026/11/27/north-korea-halts-russia-military-aid-over-seoul-row-kyiv-says"
+    },
     {
       "title": "NAFDAC shuts Zuba International Market after seizing products worth over ₦300m",
       "category": "Nigeria / Health / Consumer Protection / Enforcement",
@@ -860,28 +902,164 @@
     }
   ],
   "featured": {
-    "id": "midday-2711-01",
-    "title": "NAFDAC shuts Zuba International Market after seizing products worth over ₦300m",
-    "category": "Nigeria / Health / Consumer Protection / Enforcement",
+    "id": "evening-2711-01",
+    "title": "Nigeria completes Ebola contact monitoring without new infections, NCDC says",
+    "category": "Nigeria / Health / Ebola",
     "region": "Africa",
     "country": "Nigeria",
     "flag": "🇳🇬",
     "publishedAt": "2026-11-27",
-    "summary": "NAFDAC says it screened more than 160 shops at Zuba International Market in Abuja and confiscated counterfeit, expired and unwholesome regulated products valued at over ₦300 million. The operation involved the police and DSS.",
-    "content": "The National Agency for Food and Drug Administration and Control (NAFDAC) has shut Zuba International Market in the Federal Capital Territory after an enforcement operation in which more than 160 shops were screened and products valued at over ₦300 million were seized.\n\nNAFDAC said the confiscated goods included counterfeit and unwholesome products, expired items and alcoholic beverages packaged in sachets and containers below 200 millilitres. The operation was conducted with the Nigeria Police Force and the Department of State Services.\n\nThe agency said it would investigate the affected warehouses and shops, document the recovered goods and gather evidence for possible prosecution. The market’s vice-chairman expressed support for the operation but said market officials had not known that prohibited products were being stocked.\n\nThe closure and seizures are enforcement actions; any criminal liability of individual traders or warehouse owners will depend on investigation and due process.",
+    "summary": "The NCDC says monitoring of all 62 contacts linked to Nigeria’s confirmed Ebola case ended without secondary transmission. The agency cautions that Nigeria has not been officially declared Ebola-free.",
+    "content": "Nigeria’s Federal Government says the 21-day monitoring period for all 62 people who had contact with the country’s confirmed Ebola patient has ended without any secondary infection. NCDC Director-General Jide Idris said 13 contacts developed fever or other symptoms but all tested negative. Seven additional suspected cases reported in Adamawa, Rivers, Borno, Lagos and Ekiti were also investigated and returned negative results. The only confirmed case was recorded in the FCT on 20 October, involving a woman who had travelled from Uganda. She was evacuated to Switzerland for treatment and recovered. The NCDC stressed that completion of contact monitoring does not mean Nigeria has officially been declared Ebola-free. The WHO requires 42 days without new cases before an outbreak can be declared over. Surveillance and preparedness will continue, particularly in 10 higher-risk states.",
     "image": null,
     "imageAlt": "",
-    "imageNote": "No verified, rights-cleared photograph of the enforcement operation has been added to the website.",
-    "source": "The Guardian, 27 November 2026; NAFDAC briefing",
-    "sourceUrl": "https://guardian.ng/news/nafdac-shuts-down-zuba-international-market-seizes-counterfeit-products-worth-over-n300m/",
-    "relatedSourceUrls": [
-      "https://www.premiumtimesng.com/health/health-news/928267-nafdac-raids-abuja-market-seizes-prohibited-goods-worth-over-%E2%82%A6300-million.html"
-    ],
-    "whyItMatters": "The operation highlights public-health risks from counterfeit and expired products, particularly during the high-consumption festive period.",
-    "whatHappensNext": "NAFDAC says it will investigate the affected premises and consider prosecution where evidence supports charges.",
-    "label": "NAFDAC / PUBLIC HEALTH"
+    "imageNote": "No verified, rights-cleared photograph of the public-health briefing has been added.",
+    "source": "Nigeria Info FM, 27 November 2026; NCDC briefing",
+    "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/nigeria-completes-ebola-contact-monitoring-without-new-infections/",
+    "whyItMatters": "The update is reassuring, but continued surveillance is essential and Nigeria has not yet met the WHO period required to declare the outbreak over.",
+    "whatHappensNext": "Health authorities say monitoring and preparedness will continue.",
+    "label": "HEALTH / EBOLA UPDATE"
   },
   "topStories": [
+    {
+      "id": "evening-2711-01",
+      "title": "Nigeria completes Ebola contact monitoring without new infections, NCDC says",
+      "category": "Nigeria / Health / Ebola",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "The NCDC says monitoring of all 62 contacts linked to Nigeria’s confirmed Ebola case ended without secondary transmission. The agency cautions that Nigeria has not been officially declared Ebola-free.",
+      "content": "Nigeria’s Federal Government says the 21-day monitoring period for all 62 people who had contact with the country’s confirmed Ebola patient has ended without any secondary infection. NCDC Director-General Jide Idris said 13 contacts developed fever or other symptoms but all tested negative. Seven additional suspected cases reported in Adamawa, Rivers, Borno, Lagos and Ekiti were also investigated and returned negative results. The only confirmed case was recorded in the FCT on 20 October, involving a woman who had travelled from Uganda. She was evacuated to Switzerland for treatment and recovered. The NCDC stressed that completion of contact monitoring does not mean Nigeria has officially been declared Ebola-free. The WHO requires 42 days without new cases before an outbreak can be declared over. Surveillance and preparedness will continue, particularly in 10 higher-risk states.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the public-health briefing has been added.",
+      "source": "Nigeria Info FM, 27 November 2026; NCDC briefing",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/nigeria-completes-ebola-contact-monitoring-without-new-infections/",
+      "whyItMatters": "The update is reassuring, but continued surveillance is essential and Nigeria has not yet met the WHO period required to declare the outbreak over.",
+      "whatHappensNext": "Health authorities say monitoring and preparedness will continue.",
+      "label": "HEALTH / EBOLA UPDATE"
+    },
+    {
+      "id": "evening-2711-02",
+      "title": "Opposition leaders expected to sign unity pact ahead of 2027 elections",
+      "category": "Nigeria / Politics / 2027 Elections",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "Atiku Abubakar, Peter Obi and Seyi Makinde are expected at an Abuja summit on Monday, 30 November, where six political groups plan to consider a unity pact. It is not a formal party merger.",
+      "content": "Opposition figures including former Vice-President Atiku Abubakar, Peter Obi and Oyo State Governor Seyi Makinde are expected at a summit in Abuja on Monday, 30 November, where participating political groups plan to consider a unity pact ahead of the 2027 general election. Salihu Mohammed Lukman, a convener of the Coalition for Democracy, said the summit is intended to move discussions towards a commitment to cooperate. The coalition includes the ADC, APM, NDC, a faction of the PDP, PRP and SDP. Three documents are expected to be presented: the National Covenant for Democratic Renewal, the Framework for Opposition Unity and the National Reform Programme. Makinde has said discussions among the leaders are not a formal merger like the one that formed the APC in 2015. The summit and proposed documents are planned political steps; they do not yet establish a final alliance, joint ticket or binding electoral arrangement.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the planned summit has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/2027-elections/atiku-obi-makinde-expected-to-sign-opposition-unity-pact-on-monday/",
+      "whyItMatters": "Any sustained opposition cooperation could reshape the 2027 contest, but its impact will depend on agreement over candidates, policy and organisation.",
+      "whatHappensNext": "The coalition summit is scheduled for Monday, 30 November, in Abuja.",
+      "label": "2027 / OPPOSITION TALKS"
+    },
+    {
+      "id": "evening-2711-03",
+      "title": "Kwankwaso accuses Kano government of using EFCC petition to damage his image",
+      "category": "Nigeria / Politics / Kano / Anti-Corruption",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "NDC vice-presidential candidate Rabiu Kwankwaso alleges political rivals are behind pressure for an EFCC investigation into properties linked to him. The petitioning group says it seeks accountability; the EFCC says it will assess the petition on its merits.",
+      "content": "Former Kano State governor and NDC vice-presidential candidate Rabiu Musa Kwankwaso has accused the Kano State Government of using anti-corruption agencies to damage his reputation and weaken his political prospects. The allegation followed a petition by the Society for Anti-Corruption and Good Governance Initiative asking the EFCC to investigate the sources of funds used to acquire 10 properties in Abuja, Kano and Nasarawa State. Kwankwaso alleged that Governor Abba Kabir Yusuf had previously sought an EFCC investigation and that the protest was intended to pressure the commission. The petitioning group denied that its action was politically motivated and said it wanted accountability from public office holders. The EFCC said the petition would be considered on its merits. The allegations have not been established. A petition does not prove wrongdoing, and Kwankwaso’s accusations against the Kano government remain his claims.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the EFCC protest has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/kwankwaso-accuses-kano-government-of-using-efcc-to-tarnish-his-image/",
+      "whyItMatters": "The dispute puts anti-corruption institutions and political accountability under scrutiny as the 2027 campaign approaches.",
+      "whatHappensNext": "The EFCC says it will assess the petition on its merits.",
+      "label": "KWANKWASO / EFCC PETITION"
+    },
+    {
+      "id": "evening-2711-04",
+      "title": "INEC warns political actors as election-related attacks reported in nine states",
+      "category": "Nigeria / Elections / Security / INEC",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "INEC Chairman Joash Amupitan says political attacks have been reported in nine states and warns that violence could undermine the 2027 elections. The commission is also due to test accreditation technology on Saturday.",
+      "content": "The Independent National Electoral Commission has warned political parties and supporters against violence ahead of the 2027 general election. Chairman Joash Amupitan identified nine states where political attacks have been reported: Lagos, Edo, Ekiti, Enugu, Ebonyi, Delta, Cross River, Oyo and Benue. Separately, INEC is scheduled to conduct a mock accreditation exercise on Saturday, 28 November, in 17,676 polling units across the 36 states and the Federal Capital Territory, according to Friday’s newspaper reporting. The exercise is intended to test election technology ahead of the 2027 polls. The commission’s warning is not a finding of responsibility against any particular party or individual. Allegations surrounding each incident require investigation and evidence.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the INEC conference has been added.",
+      "source": "The Fellow Press, 27 November 2026; Nigeria newspaper reports",
+      "sourceUrl": "https://www.fellowpress.com/nigerian-newspapers-headlines-today-friday-27-november-2026/",
+      "relatedSourceUrls": [
+        "https://www.nigeriainfo.fm/abuja/news/national/archive/2026-11/"
+      ],
+      "whyItMatters": "Political violence threatens voter participation, campaign safety and confidence in the electoral process.",
+      "whatHappensNext": "INEC’s mock accreditation is scheduled for Saturday; authorities face pressure to investigate reported attacks.",
+      "label": "INEC / ELECTION SECURITY"
+    },
+    {
+      "id": "evening-2711-05",
+      "title": "Eritrea warns against threats to sovereignty and rising tension around Red Sea access",
+      "category": "Africa / Horn of Africa / Diplomacy / Red Sea",
+      "region": "Africa",
+      "country": "Eritrea / Egypt",
+      "flag": "🌍",
+      "publishedAt": "2026-11-27",
+      "summary": "Eritrean Foreign Minister Osman Saleh warned in Cairo that threats to sovereignty and the use of force to secure maritime access could destabilise the Horn of Africa and threaten Red Sea security.",
+      "content": "Eritrean Foreign Minister Osman Saleh has warned against threats to the sovereignty and territorial integrity of states in the Horn of Africa, saying that threats to use force to secure maritime access could further destabilise the region. Saleh made the remarks during a meeting in Cairo with European diplomats. His comments come amid heightened regional sensitivity over access to the Red Sea and the strategic importance of ports and shipping routes. The minister’s statement reflects Eritrea’s diplomatic position. It does not establish that military action is imminent or identify a new agreement among the states concerned. The challenge for regional governments is to manage competing interests through diplomacy and respect for international law.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the Cairo meeting has been added.",
+      "source": "Ahram Online, 27 November 2026",
+      "sourceUrl": "https://english.ahram.org.eg/News/583537.aspx",
+      "whyItMatters": "The Horn of Africa borders a vital shipping corridor; escalation could affect regional stability, trade and maritime security.",
+      "whatHappensNext": "Watch for diplomatic responses and any regional initiative addressing maritime access and sovereignty.",
+      "label": "HORN OF AFRICA / RED SEA"
+    },
+    {
+      "id": "evening-2711-06",
+      "title": "Zelenskyy warns of another Russian mass strike as Trump says he urged Putin to pull back",
+      "category": "Europe / Ukraine / Russia / Diplomacy / Security",
+      "region": "Europe",
+      "country": "Ukraine / Russia / United States",
+      "flag": "🇺🇦",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s president says Kyiv has information that Russia is preparing another mass strike in the coming days. Donald Trump says he urged Vladimir Putin to pull back military aggression; no ceasefire agreement has been announced.",
+      "content": "Ukrainian President Volodymyr Zelenskyy has warned that Russia may be preparing another large-scale attack on Ukraine in the coming days, urging residents to pay attention to air-raid alerts. The warning follows renewed Russian strikes on Kyiv, which the city’s mayor said wounded seven people and hit a shopping centre and other buildings. Ukraine also reported attacks on Russian energy and military facilities. The accounts of battlefield damage and military operations are attributed to the parties involved. US President Donald Trump said he had urged Russian President Vladimir Putin to pull back military aggression across Europe during talks in China. Trump said he had briefed NATO Secretary-General Mark Rutte. His statement is a diplomatic account, not evidence that Russia has agreed to withdraw or that a ceasefire is in place. The European Union is still divided over a proposed €45 billion loan for Ukraine and the bloc’s next long-term budget.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph specific to the latest warning has been added.",
+      "source": "Al Jazeera, 27 November 2026; Reuters reporting",
+      "sourceUrl": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
+      "relatedSourceUrls": [
+        "https://www.reuters.com/world/eu-leaders-wrestle-with-seven-year-budget-ukraine-financing-they-seek-december-2026-11-26/"
+      ],
+      "whyItMatters": "The warning highlights risks to Ukrainian civilians and infrastructure, while diplomatic statements have yet to produce a ceasefire.",
+      "whatHappensNext": "Monitor air-raid alerts, verified damage reports and concrete diplomatic steps.",
+      "label": "UKRAINE / DIPLOMACY"
+    },
+    {
+      "id": "evening-2711-07",
+      "title": "Kyiv says North Korea has paused some military support to Russia after diplomatic dispute",
+      "category": "Asia / North Korea / Russia / Ukraine War",
+      "region": "Asia",
+      "country": "North Korea / Russia / Ukraine",
+      "flag": "🌏",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s military intelligence claims North Korea has temporarily suspended some weapons deliveries and military cooperation with Russia. Neither Moscow nor Pyongyang has confirmed the claim.",
+      "content": "Ukraine’s military intelligence directorate says North Korea has temporarily suspended some military assistance to Russia following a diplomatic disagreement between Moscow and Pyongyang over comments concerning tensions on the Korean Peninsula. Euronews reports that Kyiv’s intelligence service said the pause includes deliveries of KN-23 ballistic missiles and artillery shells, as well as some Russian military flights over North Korean territory. The claim has not been confirmed by the Russian or North Korean governments. The report also says North Korean troops remain in Russia, according to Ukrainian intelligence. The reported pause should therefore not be interpreted as a complete end to military cooperation between the two countries. The scale and duration of any suspension remain unclear.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of any reported change in military cooperation has been added.",
+      "source": "Euronews, 27 November 2026; Ukrainian military intelligence claims",
+      "sourceUrl": "https://www.euronews.com/2026/11/27/north-korea-halts-russia-military-aid-over-seoul-row-kyiv-says",
+      "whyItMatters": "North Korean support has been part of Russia’s war effort; any change could affect military supplies, although the reported pause remains unconfirmed.",
+      "whatHappensNext": "Independent confirmation from Moscow or Pyongyang is needed.",
+      "label": "NORTH KOREA / RUSSIA"
+    },
     {
       "id": "midday-2711-01",
       "title": "NAFDAC shuts Zuba International Market after seizing products worth over ₦300m",
@@ -1827,6 +2005,47 @@
     }
   ],
   "worldNews": [
+    {
+      "id": "evening-2711-06",
+      "title": "Zelenskyy warns of another Russian mass strike as Trump says he urged Putin to pull back",
+      "category": "Europe / Ukraine / Russia / Diplomacy / Security",
+      "region": "Europe",
+      "country": "Ukraine / Russia / United States",
+      "flag": "🇺🇦",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s president says Kyiv has information that Russia is preparing another mass strike in the coming days. Donald Trump says he urged Vladimir Putin to pull back military aggression; no ceasefire agreement has been announced.",
+      "content": "Ukrainian President Volodymyr Zelenskyy has warned that Russia may be preparing another large-scale attack on Ukraine in the coming days, urging residents to pay attention to air-raid alerts. The warning follows renewed Russian strikes on Kyiv, which the city’s mayor said wounded seven people and hit a shopping centre and other buildings. Ukraine also reported attacks on Russian energy and military facilities. The accounts of battlefield damage and military operations are attributed to the parties involved. US President Donald Trump said he had urged Russian President Vladimir Putin to pull back military aggression across Europe during talks in China. Trump said he had briefed NATO Secretary-General Mark Rutte. His statement is a diplomatic account, not evidence that Russia has agreed to withdraw or that a ceasefire is in place. The European Union is still divided over a proposed €45 billion loan for Ukraine and the bloc’s next long-term budget.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph specific to the latest warning has been added.",
+      "source": "Al Jazeera, 27 November 2026; Reuters reporting",
+      "sourceUrl": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
+      "relatedSourceUrls": [
+        "https://www.reuters.com/world/eu-leaders-wrestle-with-seven-year-budget-ukraine-financing-they-seek-december-2026-11-26/"
+      ],
+      "whyItMatters": "The warning highlights risks to Ukrainian civilians and infrastructure, while diplomatic statements have yet to produce a ceasefire.",
+      "whatHappensNext": "Monitor air-raid alerts, verified damage reports and concrete diplomatic steps.",
+      "label": "UKRAINE / DIPLOMACY"
+    },
+    {
+      "id": "evening-2711-07",
+      "title": "Kyiv says North Korea has paused some military support to Russia after diplomatic dispute",
+      "category": "Asia / North Korea / Russia / Ukraine War",
+      "region": "Asia",
+      "country": "North Korea / Russia / Ukraine",
+      "flag": "🌏",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s military intelligence claims North Korea has temporarily suspended some weapons deliveries and military cooperation with Russia. Neither Moscow nor Pyongyang has confirmed the claim.",
+      "content": "Ukraine’s military intelligence directorate says North Korea has temporarily suspended some military assistance to Russia following a diplomatic disagreement between Moscow and Pyongyang over comments concerning tensions on the Korean Peninsula. Euronews reports that Kyiv’s intelligence service said the pause includes deliveries of KN-23 ballistic missiles and artillery shells, as well as some Russian military flights over North Korean territory. The claim has not been confirmed by the Russian or North Korean governments. The report also says North Korean troops remain in Russia, according to Ukrainian intelligence. The reported pause should therefore not be interpreted as a complete end to military cooperation between the two countries. The scale and duration of any suspension remain unclear.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of any reported change in military cooperation has been added.",
+      "source": "Euronews, 27 November 2026; Ukrainian military intelligence claims",
+      "sourceUrl": "https://www.euronews.com/2026/11/27/north-korea-halts-russia-military-aid-over-seoul-row-kyiv-says",
+      "whyItMatters": "North Korean support has been part of Russia’s war effort; any change could affect military supplies, although the reported pause remains unconfirmed.",
+      "whatHappensNext": "Independent confirmation from Moscow or Pyongyang is needed.",
+      "label": "NORTH KOREA / RUSSIA"
+    },
     {
       "id": "midday-2711-05",
       "title": "Ukraine reports one of the heaviest overnight Russian drone and missile attacks",
@@ -3888,6 +4107,13 @@
   "archives": [
     {
       "date": "2026-11-27",
+      "edition": "Evening News & Global Report",
+      "title": "Ebola monitoring, opposition unity talks, INEC security warning and Ukraine tensions",
+      "summary": "Evening edition covering Nigeria’s Ebola contact-monitoring update, opposition unity summit planned for Monday, Kwankwaso’s EFCC allegations, INEC’s warning on election violence, Horn of Africa diplomacy, Ukraine’s mass-strike warning and Kyiv’s claim of a North Korean pause in military aid.",
+      "status": "Published edition"
+    },
+    {
+      "date": "2026-11-27",
       "edition": "Midday News & Global Report",
       "title": "NAFDAC enforcement, 2027 consultations, Keystone Bank leadership and Ukraine developments",
       "summary": "Midday edition covering the Zuba market enforcement operation, political consultations in Minna, Keystone Bank’s acting CEO appointment, export finance, Ukraine’s overnight attack and EU budget negotiations.",
@@ -5266,8 +5492,8 @@
       "status": "Developing"
     }
   ],
-  "todaysBigQuestion": "How can Nigeria protect democratic participation and public safety ahead of the 2027 elections, while ensuring that accountability follows every act of political violence?",
-  "thoughtForToday": "The strength of a democracy is measured not only by the votes it counts, but by the lives and freedoms it protects.",
+  "todaysBigQuestion": "How can Nigeria protect public health, voter safety and institutional independence while political competition intensifies ahead of 2027?",
+  "thoughtForToday": "A stronger society is built when institutions act on evidence, leaders accept accountability and citizens can participate without fear.",
   "radiantWavesPerspective": "Tonight's developments underline the cost of insecurity and the importance of public accountability. Political violence must be investigated without partisan assumptions; emergency support must reach the people it is intended to help; humanitarian workers and civilians must be protected; and diplomatic announcements must be judged by concrete outcomes. RadiantWaves Media reports claims with attribution and does not treat allegations as established facts.",
   "sponsoredAdverts": [
     {
@@ -5306,6 +5532,145 @@
   "schemaVersion": 6002,
   "dateISO": "2026-11-27",
   "articles": [
+    {
+      "id": "evening-2711-01",
+      "title": "Nigeria completes Ebola contact monitoring without new infections, NCDC says",
+      "category": "Nigeria / Health / Ebola",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "The NCDC says monitoring of all 62 contacts linked to Nigeria’s confirmed Ebola case ended without secondary transmission. The agency cautions that Nigeria has not been officially declared Ebola-free.",
+      "content": "Nigeria’s Federal Government says the 21-day monitoring period for all 62 people who had contact with the country’s confirmed Ebola patient has ended without any secondary infection. NCDC Director-General Jide Idris said 13 contacts developed fever or other symptoms but all tested negative. Seven additional suspected cases reported in Adamawa, Rivers, Borno, Lagos and Ekiti were also investigated and returned negative results. The only confirmed case was recorded in the FCT on 20 October, involving a woman who had travelled from Uganda. She was evacuated to Switzerland for treatment and recovered. The NCDC stressed that completion of contact monitoring does not mean Nigeria has officially been declared Ebola-free. The WHO requires 42 days without new cases before an outbreak can be declared over. Surveillance and preparedness will continue, particularly in 10 higher-risk states.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the public-health briefing has been added.",
+      "source": "Nigeria Info FM, 27 November 2026; NCDC briefing",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/nigeria-completes-ebola-contact-monitoring-without-new-infections/",
+      "whyItMatters": "The update is reassuring, but continued surveillance is essential and Nigeria has not yet met the WHO period required to declare the outbreak over.",
+      "whatHappensNext": "Health authorities say monitoring and preparedness will continue.",
+      "label": "HEALTH / EBOLA UPDATE"
+    },
+    {
+      "id": "evening-2711-02",
+      "title": "Opposition leaders expected to sign unity pact ahead of 2027 elections",
+      "category": "Nigeria / Politics / 2027 Elections",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "Atiku Abubakar, Peter Obi and Seyi Makinde are expected at an Abuja summit on Monday, 30 November, where six political groups plan to consider a unity pact. It is not a formal party merger.",
+      "content": "Opposition figures including former Vice-President Atiku Abubakar, Peter Obi and Oyo State Governor Seyi Makinde are expected at a summit in Abuja on Monday, 30 November, where participating political groups plan to consider a unity pact ahead of the 2027 general election. Salihu Mohammed Lukman, a convener of the Coalition for Democracy, said the summit is intended to move discussions towards a commitment to cooperate. The coalition includes the ADC, APM, NDC, a faction of the PDP, PRP and SDP. Three documents are expected to be presented: the National Covenant for Democratic Renewal, the Framework for Opposition Unity and the National Reform Programme. Makinde has said discussions among the leaders are not a formal merger like the one that formed the APC in 2015. The summit and proposed documents are planned political steps; they do not yet establish a final alliance, joint ticket or binding electoral arrangement.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the planned summit has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/2027-elections/atiku-obi-makinde-expected-to-sign-opposition-unity-pact-on-monday/",
+      "whyItMatters": "Any sustained opposition cooperation could reshape the 2027 contest, but its impact will depend on agreement over candidates, policy and organisation.",
+      "whatHappensNext": "The coalition summit is scheduled for Monday, 30 November, in Abuja.",
+      "label": "2027 / OPPOSITION TALKS"
+    },
+    {
+      "id": "evening-2711-03",
+      "title": "Kwankwaso accuses Kano government of using EFCC petition to damage his image",
+      "category": "Nigeria / Politics / Kano / Anti-Corruption",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "NDC vice-presidential candidate Rabiu Kwankwaso alleges political rivals are behind pressure for an EFCC investigation into properties linked to him. The petitioning group says it seeks accountability; the EFCC says it will assess the petition on its merits.",
+      "content": "Former Kano State governor and NDC vice-presidential candidate Rabiu Musa Kwankwaso has accused the Kano State Government of using anti-corruption agencies to damage his reputation and weaken his political prospects. The allegation followed a petition by the Society for Anti-Corruption and Good Governance Initiative asking the EFCC to investigate the sources of funds used to acquire 10 properties in Abuja, Kano and Nasarawa State. Kwankwaso alleged that Governor Abba Kabir Yusuf had previously sought an EFCC investigation and that the protest was intended to pressure the commission. The petitioning group denied that its action was politically motivated and said it wanted accountability from public office holders. The EFCC said the petition would be considered on its merits. The allegations have not been established. A petition does not prove wrongdoing, and Kwankwaso’s accusations against the Kano government remain his claims.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the EFCC protest has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/kwankwaso-accuses-kano-government-of-using-efcc-to-tarnish-his-image/",
+      "whyItMatters": "The dispute puts anti-corruption institutions and political accountability under scrutiny as the 2027 campaign approaches.",
+      "whatHappensNext": "The EFCC says it will assess the petition on its merits.",
+      "label": "KWANKWASO / EFCC PETITION"
+    },
+    {
+      "id": "evening-2711-04",
+      "title": "INEC warns political actors as election-related attacks reported in nine states",
+      "category": "Nigeria / Elections / Security / INEC",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "INEC Chairman Joash Amupitan says political attacks have been reported in nine states and warns that violence could undermine the 2027 elections. The commission is also due to test accreditation technology on Saturday.",
+      "content": "The Independent National Electoral Commission has warned political parties and supporters against violence ahead of the 2027 general election. Chairman Joash Amupitan identified nine states where political attacks have been reported: Lagos, Edo, Ekiti, Enugu, Ebonyi, Delta, Cross River, Oyo and Benue. Separately, INEC is scheduled to conduct a mock accreditation exercise on Saturday, 28 November, in 17,676 polling units across the 36 states and the Federal Capital Territory, according to Friday’s newspaper reporting. The exercise is intended to test election technology ahead of the 2027 polls. The commission’s warning is not a finding of responsibility against any particular party or individual. Allegations surrounding each incident require investigation and evidence.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the INEC conference has been added.",
+      "source": "The Fellow Press, 27 November 2026; Nigeria newspaper reports",
+      "sourceUrl": "https://www.fellowpress.com/nigerian-newspapers-headlines-today-friday-27-november-2026/",
+      "relatedSourceUrls": [
+        "https://www.nigeriainfo.fm/abuja/news/national/archive/2026-11/"
+      ],
+      "whyItMatters": "Political violence threatens voter participation, campaign safety and confidence in the electoral process.",
+      "whatHappensNext": "INEC’s mock accreditation is scheduled for Saturday; authorities face pressure to investigate reported attacks.",
+      "label": "INEC / ELECTION SECURITY"
+    },
+    {
+      "id": "evening-2711-05",
+      "title": "Eritrea warns against threats to sovereignty and rising tension around Red Sea access",
+      "category": "Africa / Horn of Africa / Diplomacy / Red Sea",
+      "region": "Africa",
+      "country": "Eritrea / Egypt",
+      "flag": "🌍",
+      "publishedAt": "2026-11-27",
+      "summary": "Eritrean Foreign Minister Osman Saleh warned in Cairo that threats to sovereignty and the use of force to secure maritime access could destabilise the Horn of Africa and threaten Red Sea security.",
+      "content": "Eritrean Foreign Minister Osman Saleh has warned against threats to the sovereignty and territorial integrity of states in the Horn of Africa, saying that threats to use force to secure maritime access could further destabilise the region. Saleh made the remarks during a meeting in Cairo with European diplomats. His comments come amid heightened regional sensitivity over access to the Red Sea and the strategic importance of ports and shipping routes. The minister’s statement reflects Eritrea’s diplomatic position. It does not establish that military action is imminent or identify a new agreement among the states concerned. The challenge for regional governments is to manage competing interests through diplomacy and respect for international law.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the Cairo meeting has been added.",
+      "source": "Ahram Online, 27 November 2026",
+      "sourceUrl": "https://english.ahram.org.eg/News/583537.aspx",
+      "whyItMatters": "The Horn of Africa borders a vital shipping corridor; escalation could affect regional stability, trade and maritime security.",
+      "whatHappensNext": "Watch for diplomatic responses and any regional initiative addressing maritime access and sovereignty.",
+      "label": "HORN OF AFRICA / RED SEA"
+    },
+    {
+      "id": "evening-2711-06",
+      "title": "Zelenskyy warns of another Russian mass strike as Trump says he urged Putin to pull back",
+      "category": "Europe / Ukraine / Russia / Diplomacy / Security",
+      "region": "Europe",
+      "country": "Ukraine / Russia / United States",
+      "flag": "🇺🇦",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s president says Kyiv has information that Russia is preparing another mass strike in the coming days. Donald Trump says he urged Vladimir Putin to pull back military aggression; no ceasefire agreement has been announced.",
+      "content": "Ukrainian President Volodymyr Zelenskyy has warned that Russia may be preparing another large-scale attack on Ukraine in the coming days, urging residents to pay attention to air-raid alerts. The warning follows renewed Russian strikes on Kyiv, which the city’s mayor said wounded seven people and hit a shopping centre and other buildings. Ukraine also reported attacks on Russian energy and military facilities. The accounts of battlefield damage and military operations are attributed to the parties involved. US President Donald Trump said he had urged Russian President Vladimir Putin to pull back military aggression across Europe during talks in China. Trump said he had briefed NATO Secretary-General Mark Rutte. His statement is a diplomatic account, not evidence that Russia has agreed to withdraw or that a ceasefire is in place. The European Union is still divided over a proposed €45 billion loan for Ukraine and the bloc’s next long-term budget.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph specific to the latest warning has been added.",
+      "source": "Al Jazeera, 27 November 2026; Reuters reporting",
+      "sourceUrl": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
+      "relatedSourceUrls": [
+        "https://www.reuters.com/world/eu-leaders-wrestle-with-seven-year-budget-ukraine-financing-they-seek-december-2026-11-26/"
+      ],
+      "whyItMatters": "The warning highlights risks to Ukrainian civilians and infrastructure, while diplomatic statements have yet to produce a ceasefire.",
+      "whatHappensNext": "Monitor air-raid alerts, verified damage reports and concrete diplomatic steps.",
+      "label": "UKRAINE / DIPLOMACY"
+    },
+    {
+      "id": "evening-2711-07",
+      "title": "Kyiv says North Korea has paused some military support to Russia after diplomatic dispute",
+      "category": "Asia / North Korea / Russia / Ukraine War",
+      "region": "Asia",
+      "country": "North Korea / Russia / Ukraine",
+      "flag": "🌏",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s military intelligence claims North Korea has temporarily suspended some weapons deliveries and military cooperation with Russia. Neither Moscow nor Pyongyang has confirmed the claim.",
+      "content": "Ukraine’s military intelligence directorate says North Korea has temporarily suspended some military assistance to Russia following a diplomatic disagreement between Moscow and Pyongyang over comments concerning tensions on the Korean Peninsula. Euronews reports that Kyiv’s intelligence service said the pause includes deliveries of KN-23 ballistic missiles and artillery shells, as well as some Russian military flights over North Korean territory. The claim has not been confirmed by the Russian or North Korean governments. The report also says North Korean troops remain in Russia, according to Ukrainian intelligence. The reported pause should therefore not be interpreted as a complete end to military cooperation between the two countries. The scale and duration of any suspension remain unclear.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of any reported change in military cooperation has been added.",
+      "source": "Euronews, 27 November 2026; Ukrainian military intelligence claims",
+      "sourceUrl": "https://www.euronews.com/2026/11/27/north-korea-halts-russia-military-aid-over-seoul-row-kyiv-says",
+      "whyItMatters": "North Korean support has been part of Russia’s war effort; any change could affect military supplies, although the reported pause remains unconfirmed.",
+      "whatHappensNext": "Independent confirmation from Moscow or Pyongyang is needed.",
+      "label": "NORTH KOREA / RUSSIA"
+    },
     {
       "id": "midday-2711-01",
       "title": "NAFDAC shuts Zuba International Market after seizing products worth over ₦300m",
@@ -8664,6 +9029,28 @@
   ],
   "europeNews": [
     {
+      "id": "evening-2711-06",
+      "title": "Zelenskyy warns of another Russian mass strike as Trump says he urged Putin to pull back",
+      "category": "Europe / Ukraine / Russia / Diplomacy / Security",
+      "region": "Europe",
+      "country": "Ukraine / Russia / United States",
+      "flag": "🇺🇦",
+      "publishedAt": "2026-11-27",
+      "summary": "Ukraine’s president says Kyiv has information that Russia is preparing another mass strike in the coming days. Donald Trump says he urged Vladimir Putin to pull back military aggression; no ceasefire agreement has been announced.",
+      "content": "Ukrainian President Volodymyr Zelenskyy has warned that Russia may be preparing another large-scale attack on Ukraine in the coming days, urging residents to pay attention to air-raid alerts. The warning follows renewed Russian strikes on Kyiv, which the city’s mayor said wounded seven people and hit a shopping centre and other buildings. Ukraine also reported attacks on Russian energy and military facilities. The accounts of battlefield damage and military operations are attributed to the parties involved. US President Donald Trump said he had urged Russian President Vladimir Putin to pull back military aggression across Europe during talks in China. Trump said he had briefed NATO Secretary-General Mark Rutte. His statement is a diplomatic account, not evidence that Russia has agreed to withdraw or that a ceasefire is in place. The European Union is still divided over a proposed €45 billion loan for Ukraine and the bloc’s next long-term budget.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph specific to the latest warning has been added.",
+      "source": "Al Jazeera, 27 November 2026; Reuters reporting",
+      "sourceUrl": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
+      "relatedSourceUrls": [
+        "https://www.reuters.com/world/eu-leaders-wrestle-with-seven-year-budget-ukraine-financing-they-seek-december-2026-11-26/"
+      ],
+      "whyItMatters": "The warning highlights risks to Ukrainian civilians and infrastructure, while diplomatic statements have yet to produce a ceasefire.",
+      "whatHappensNext": "Monitor air-raid alerts, verified damage reports and concrete diplomatic steps.",
+      "label": "UKRAINE / DIPLOMACY"
+    },
+    {
       "id": "midday-2711-05",
       "title": "Ukraine reports one of the heaviest overnight Russian drone and missile attacks",
       "category": "Europe / Ukraine / Russia / Security",
@@ -9457,6 +9844,25 @@
   ],
   "africaNews": [
     {
+      "id": "evening-2711-05",
+      "title": "Eritrea warns against threats to sovereignty and rising tension around Red Sea access",
+      "category": "Africa / Horn of Africa / Diplomacy / Red Sea",
+      "region": "Africa",
+      "country": "Eritrea / Egypt",
+      "flag": "🌍",
+      "publishedAt": "2026-11-27",
+      "summary": "Eritrean Foreign Minister Osman Saleh warned in Cairo that threats to sovereignty and the use of force to secure maritime access could destabilise the Horn of Africa and threaten Red Sea security.",
+      "content": "Eritrean Foreign Minister Osman Saleh has warned against threats to the sovereignty and territorial integrity of states in the Horn of Africa, saying that threats to use force to secure maritime access could further destabilise the region. Saleh made the remarks during a meeting in Cairo with European diplomats. His comments come amid heightened regional sensitivity over access to the Red Sea and the strategic importance of ports and shipping routes. The minister’s statement reflects Eritrea’s diplomatic position. It does not establish that military action is imminent or identify a new agreement among the states concerned. The challenge for regional governments is to manage competing interests through diplomacy and respect for international law.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the Cairo meeting has been added.",
+      "source": "Ahram Online, 27 November 2026",
+      "sourceUrl": "https://english.ahram.org.eg/News/583537.aspx",
+      "whyItMatters": "The Horn of Africa borders a vital shipping corridor; escalation could affect regional stability, trade and maritime security.",
+      "whatHappensNext": "Watch for diplomatic responses and any regional initiative addressing maritime access and sovereignty.",
+      "label": "HORN OF AFRICA / RED SEA"
+    },
+    {
       "id": "night-2611-05",
       "title": "African Union says any Sudan peace process must be Sudanese-led",
       "category": "Africa / Sudan / African Union / Diplomacy",
@@ -10124,6 +10530,85 @@
     }
   ],
   "nigeriaNews": [
+    {
+      "id": "evening-2711-01",
+      "title": "Nigeria completes Ebola contact monitoring without new infections, NCDC says",
+      "category": "Nigeria / Health / Ebola",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "The NCDC says monitoring of all 62 contacts linked to Nigeria’s confirmed Ebola case ended without secondary transmission. The agency cautions that Nigeria has not been officially declared Ebola-free.",
+      "content": "Nigeria’s Federal Government says the 21-day monitoring period for all 62 people who had contact with the country’s confirmed Ebola patient has ended without any secondary infection. NCDC Director-General Jide Idris said 13 contacts developed fever or other symptoms but all tested negative. Seven additional suspected cases reported in Adamawa, Rivers, Borno, Lagos and Ekiti were also investigated and returned negative results. The only confirmed case was recorded in the FCT on 20 October, involving a woman who had travelled from Uganda. She was evacuated to Switzerland for treatment and recovered. The NCDC stressed that completion of contact monitoring does not mean Nigeria has officially been declared Ebola-free. The WHO requires 42 days without new cases before an outbreak can be declared over. Surveillance and preparedness will continue, particularly in 10 higher-risk states.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the public-health briefing has been added.",
+      "source": "Nigeria Info FM, 27 November 2026; NCDC briefing",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/nigeria-completes-ebola-contact-monitoring-without-new-infections/",
+      "whyItMatters": "The update is reassuring, but continued surveillance is essential and Nigeria has not yet met the WHO period required to declare the outbreak over.",
+      "whatHappensNext": "Health authorities say monitoring and preparedness will continue.",
+      "label": "HEALTH / EBOLA UPDATE"
+    },
+    {
+      "id": "evening-2711-02",
+      "title": "Opposition leaders expected to sign unity pact ahead of 2027 elections",
+      "category": "Nigeria / Politics / 2027 Elections",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "Atiku Abubakar, Peter Obi and Seyi Makinde are expected at an Abuja summit on Monday, 30 November, where six political groups plan to consider a unity pact. It is not a formal party merger.",
+      "content": "Opposition figures including former Vice-President Atiku Abubakar, Peter Obi and Oyo State Governor Seyi Makinde are expected at a summit in Abuja on Monday, 30 November, where participating political groups plan to consider a unity pact ahead of the 2027 general election. Salihu Mohammed Lukman, a convener of the Coalition for Democracy, said the summit is intended to move discussions towards a commitment to cooperate. The coalition includes the ADC, APM, NDC, a faction of the PDP, PRP and SDP. Three documents are expected to be presented: the National Covenant for Democratic Renewal, the Framework for Opposition Unity and the National Reform Programme. Makinde has said discussions among the leaders are not a formal merger like the one that formed the APC in 2015. The summit and proposed documents are planned political steps; they do not yet establish a final alliance, joint ticket or binding electoral arrangement.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the planned summit has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/2027-elections/atiku-obi-makinde-expected-to-sign-opposition-unity-pact-on-monday/",
+      "whyItMatters": "Any sustained opposition cooperation could reshape the 2027 contest, but its impact will depend on agreement over candidates, policy and organisation.",
+      "whatHappensNext": "The coalition summit is scheduled for Monday, 30 November, in Abuja.",
+      "label": "2027 / OPPOSITION TALKS"
+    },
+    {
+      "id": "evening-2711-03",
+      "title": "Kwankwaso accuses Kano government of using EFCC petition to damage his image",
+      "category": "Nigeria / Politics / Kano / Anti-Corruption",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "NDC vice-presidential candidate Rabiu Kwankwaso alleges political rivals are behind pressure for an EFCC investigation into properties linked to him. The petitioning group says it seeks accountability; the EFCC says it will assess the petition on its merits.",
+      "content": "Former Kano State governor and NDC vice-presidential candidate Rabiu Musa Kwankwaso has accused the Kano State Government of using anti-corruption agencies to damage his reputation and weaken his political prospects. The allegation followed a petition by the Society for Anti-Corruption and Good Governance Initiative asking the EFCC to investigate the sources of funds used to acquire 10 properties in Abuja, Kano and Nasarawa State. Kwankwaso alleged that Governor Abba Kabir Yusuf had previously sought an EFCC investigation and that the protest was intended to pressure the commission. The petitioning group denied that its action was politically motivated and said it wanted accountability from public office holders. The EFCC said the petition would be considered on its merits. The allegations have not been established. A petition does not prove wrongdoing, and Kwankwaso’s accusations against the Kano government remain his claims.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the EFCC protest has been added.",
+      "source": "Nigeria Info FM, 27 November 2026",
+      "sourceUrl": "https://www.nigeriainfo.fm/abuja/news/homepage/kwankwaso-accuses-kano-government-of-using-efcc-to-tarnish-his-image/",
+      "whyItMatters": "The dispute puts anti-corruption institutions and political accountability under scrutiny as the 2027 campaign approaches.",
+      "whatHappensNext": "The EFCC says it will assess the petition on its merits.",
+      "label": "KWANKWASO / EFCC PETITION"
+    },
+    {
+      "id": "evening-2711-04",
+      "title": "INEC warns political actors as election-related attacks reported in nine states",
+      "category": "Nigeria / Elections / Security / INEC",
+      "region": "Africa",
+      "country": "Nigeria",
+      "flag": "🇳🇬",
+      "publishedAt": "2026-11-27",
+      "summary": "INEC Chairman Joash Amupitan says political attacks have been reported in nine states and warns that violence could undermine the 2027 elections. The commission is also due to test accreditation technology on Saturday.",
+      "content": "The Independent National Electoral Commission has warned political parties and supporters against violence ahead of the 2027 general election. Chairman Joash Amupitan identified nine states where political attacks have been reported: Lagos, Edo, Ekiti, Enugu, Ebonyi, Delta, Cross River, Oyo and Benue. Separately, INEC is scheduled to conduct a mock accreditation exercise on Saturday, 28 November, in 17,676 polling units across the 36 states and the Federal Capital Territory, according to Friday’s newspaper reporting. The exercise is intended to test election technology ahead of the 2027 polls. The commission’s warning is not a finding of responsibility against any particular party or individual. Allegations surrounding each incident require investigation and evidence.",
+      "image": null,
+      "imageAlt": "",
+      "imageNote": "No verified, rights-cleared photograph of the INEC conference has been added.",
+      "source": "The Fellow Press, 27 November 2026; Nigeria newspaper reports",
+      "sourceUrl": "https://www.fellowpress.com/nigerian-newspapers-headlines-today-friday-27-november-2026/",
+      "relatedSourceUrls": [
+        "https://www.nigeriainfo.fm/abuja/news/national/archive/2026-11/"
+      ],
+      "whyItMatters": "Political violence threatens voter participation, campaign safety and confidence in the electoral process.",
+      "whatHappensNext": "INEC’s mock accreditation is scheduled for Saturday; authorities face pressure to investigate reported attacks.",
+      "label": "INEC / ELECTION SECURITY"
+    },
     {
       "id": "midday-2711-01",
       "title": "NAFDAC shuts Zuba International Market after seizing products worth over ₦300m",
@@ -12801,12 +13286,12 @@
   ],
   "editorial": [
     {
-      "title": "Accountability must accompany enforcement",
-      "summary": "Public-health enforcement is important, but investigations and any prosecutions must follow due process and transparent evidence."
+      "title": "Public health requires vigilance, not complacency",
+      "summary": "The end of contact monitoring is encouraging, but official surveillance and the WHO criteria for declaring an outbreak over remain important."
     },
     {
-      "title": "Political engagement is not endorsement",
-      "summary": "The meetings and public statements by political actors are reported as news developments, not as support for any candidate."
+      "title": "Political competition must remain peaceful",
+      "summary": "Claims of intimidation and corruption should be investigated on evidence, while voters’ safety and the integrity of the 2027 process must be protected."
     }
   ],
   "analysis": [
@@ -12959,9 +13444,9 @@
     "inBreaker": "assets/stonebreaker.jpeg"
   },
   "opportunitiesSummary": "As checked on 22 November 2026, six listings have passed their published deadlines and are now marked closed. Twelve other listings remain in the feed with future deadlines, institution-nomination requirements, rolling review dates or restricted eligibility. Applicants should verify each opportunity directly with the official provider before applying.",
-  "summary": "Good afternoon. NAFDAC has shut Zuba International Market in Abuja after screening more than 160 shops and seizing counterfeit, expired and unwholesome products valued at over ₦300 million. In politics, Peter Obi and Rabiu Kwankwaso met former military president Ibrahim Babangida in Minna as 2027 consultations gather pace; separately, former leaders expressed confidence in President Tinubu’s administration. The CBN has appointed Murtala Mohammed as acting chief executive of Keystone Bank and says the bank remains fully operational. The CBN governor has also urged lenders to improve financing for Nigerian exporters. Internationally, Ukraine reports a major overnight Russian drone and missile attack, while the EU’s special budget summit ended early without agreement on the 2028–2034 spending plan. Figures and claims are attributed to the relevant authorities and reports.",
-  "globalNewsSummary": "Midday coverage focuses on NAFDAC enforcement in Abuja, Nigeria’s 2027 political consultations and banking leadership, export finance, Ukraine’s latest aerial assault and divisions over the EU’s long-term budget.",
-  "editorialNote": "NAFDAC seizure values and operational details are attributed to the agency; political statements are presented as positions rather than endorsements; the CBN has not disclosed the reason for Keystone Bank’s leadership change; Ukrainian attack and interception figures are attributed to Ukrainian authorities; and EU budget negotiations remain unresolved.",
+  "summary": "Good evening. Nigeria’s health authorities say monitoring of all 62 contacts linked to the country’s confirmed Ebola case has ended without secondary infections, but the NCDC cautions that Nigeria has not yet been officially declared Ebola-free. Politically, opposition leaders including Atiku Abubakar, Peter Obi and Seyi Makinde are expected at a Monday summit to consider a unity pact; it is not a formal merger. Rabiu Kwankwaso has accused Kano political rivals of using an EFCC petition to damage his image, while the petitioning group says it seeks accountability and the EFCC says it will assess the matter on its merits. INEC has warned of political attacks reported in nine states and is due to test accreditation technology on Saturday. Across Africa, Eritrea has warned against threats to sovereignty and maritime stability in the Horn of Africa. Internationally, Zelenskyy warns of a possible new Russian mass strike, while Trump says he urged Putin to pull back; no ceasefire has been agreed. Kyiv also claims North Korea has paused some military support to Russia, a claim not confirmed by Moscow or Pyongyang.",
+  "globalNewsSummary": "Evening coverage spans Nigeria’s Ebola surveillance update, opposition unity discussions and election security, Horn of Africa diplomacy, Ukraine’s warning of further Russian attacks and an unconfirmed claim of a North Korean pause in military support to Russia.",
+  "editorialNote": "Health authorities say contact monitoring has ended, but Nigeria has not been declared Ebola-free. The proposed opposition pact is a planned summit outcome, not a completed merger. Kwankwaso’s allegations and the petitioning group’s response are attributed; the EFCC has not announced a finding. INEC’s list of states with reported political attacks is not a finding of responsibility. Ukraine’s and North Korea’s military claims are attributed to Kyiv and remain subject to independent confirmation.",
   "presenter": "RadiantWaves Media Newsroom",
   "sportsNews": [
     {
@@ -13032,10 +13517,10 @@
     }
   ],
   "middaySummary": "Good afternoon. NAFDAC has shut Zuba International Market in Abuja after screening more than 160 shops and seizing counterfeit, expired and unwholesome products valued at over ₦300 million. In politics, Peter Obi and Rabiu Kwankwaso met former military president Ibrahim Babangida in Minna as 2027 consultations gather pace; separately, former leaders expressed confidence in President Tinubu’s administration. The CBN has appointed Murtala Mohammed as acting chief executive of Keystone Bank and says the bank remains fully operational. The CBN governor has also urged lenders to improve financing for Nigerian exporters. Internationally, Ukraine reports a major overnight Russian drone and missile attack, while the EU’s special budget summit ended early without agreement on the 2028–2034 spending plan. Figures and claims are attributed to the relevant authorities and reports.",
-  "eveningSummary": "Good evening. Nigeria’s top story is the Court of Appeal’s decision to sentence oil businessman Jide Omokore and two former senior petroleum officials to seven years in prison each in a long-running oil case. In Bayelsa, 51 injured survivors of the 20 November boat tragedy are receiving hospital treatment as NIWA begins a formal investigation into safety failures. The Senate is considering President Tinubu’s proposal to reduce 2026 federal expenditure by ₦3.147 trillion, although the deficit and borrowing plan would remain unchanged. The CBN says external reserves stood at $54.02 billion on 17 November, covering more than ten months of imports, while October inflation eased. Politically, the NDC says it has petitioned international partners over alleged attacks on its members; the APC rejects the accusations, and responsibility for individual incidents remains a matter for investigation. Internationally, Ukraine’s President Zelenskyy warns of a possible major Russian strike on energy infrastructure as winter approaches.",
-  "presentedAt": "Friday, 27 November 2026 — Midday",
-  "editionTime": "Midday",
-  "eveningEdition": false,
+  "eveningSummary": "Good evening. Nigeria’s health authorities say monitoring of all 62 contacts linked to the country’s confirmed Ebola case has ended without secondary infections, but the NCDC cautions that Nigeria has not yet been officially declared Ebola-free. Politically, opposition leaders including Atiku Abubakar, Peter Obi and Seyi Makinde are expected at a Monday summit to consider a unity pact; it is not a formal merger. Rabiu Kwankwaso has accused Kano political rivals of using an EFCC petition to damage his image, while the petitioning group says it seeks accountability and the EFCC says it will assess the matter on its merits. INEC has warned of political attacks reported in nine states and is due to test accreditation technology on Saturday. Across Africa, Eritrea has warned against threats to sovereignty and maritime stability in the Horn of Africa. Internationally, Zelenskyy warns of a possible new Russian mass strike, while Trump says he urged Putin to pull back; no ceasefire has been agreed. Kyiv also claims North Korea has paused some military support to Russia, a claim not confirmed by Moscow or Pyongyang.",
+  "presentedAt": "Friday, 27 November 2026 — Evening",
+  "editionTime": "Evening",
+  "eveningEdition": true,
   "nightSummary": "Good evening. The night edition leads with INEC’s establishment of an artificial intelligence division to tackle misinformation ahead of the 2027 elections. The NDLEA says it has uncovered a methamphetamine production laboratory in Enugu and arrested five Mexican nationals; the suspects are entitled to due process. Former Vice-President Atiku Abubakar has questioned a reported ₦1.44 trillion decline in oil revenue, a figure that requires comparison with official accounts. Internationally, Donald Trump says he urged Vladimir Putin to pull back military aggression across Europe, but no withdrawal agreement has been announced. The African Union says any Sudan peace process must be Sudanese-led amid disagreement over Ethiopia’s proposed mediation role. Dozens of countries have also urged Russia to stop using tear gas on the Ukraine battlefield following findings reported by the chemical weapons watchdog. RadiantWaves distinguishes official statements, political claims and allegations from independently established findings.",
   "nightEdition": false,
   "morningEdition": true,

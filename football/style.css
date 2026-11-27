@@ -12,3 +12,18 @@ input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);
 .media-section{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);display:grid;gap:14px}.media-section h3{margin:0;font-size:20px}.media-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.video-card{background:#0f1b2c;border:1px solid var(--line);border-radius:12px;padding:10px}.video-card video{width:100%;border-radius:8px;background:#000}.video-card p{font-size:12px;color:var(--muted);margin:8px 2px 2px}.admin-section{margin-top:28px;padding-top:24px;border-top:2px solid var(--gold)}.admin-tag{font-size:11px;color:var(--gold);border:1px solid #f2bd5577;padding:6px 9px;border-radius:20px}.admin-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}.admin-filters label{display:grid;gap:7px;font-size:12px;color:var(--muted)}.admin-results{display:grid;gap:10px;margin-top:16px}.player-result{border:1px solid var(--line);background:#0f1b2c;border-radius:10px;padding:13px}.player-result h4{margin:0 0 7px;color:var(--gold)}.player-result p{font-size:12px;color:var(--muted);line-height:1.5;margin:5px 0}
 
 .admin-subheading{margin:24px 0 8px;color:var(--gold);font-size:17px}
+
+
+.messages-section{margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.messages-section h3{margin:0 0 8px}
+.message-compose{background:#0f1b2c;border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.message-compose h4{margin:0 0 12px;color:var(--gold)}
+.message-thread{display:grid;gap:10px;margin-top:14px}
+.message-item{background:#0f1b2c;border:1px solid var(--line);border-radius:11px;padding:14px}
+.message-item-head{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--gold);font-size:12px}
+.message-item time{color:var(--muted);font-size:11px}
+.message-item h4{margin:10px 0 6px;font-size:14px}
+.message-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+.message-actions{display:flex;gap:10px;flex-wrap:wrap}
+.admin-messages{margin-bottom:20px}
+@media(max-width:620px){.message-item-head{align-items:flex-start;flex-direction:column}}

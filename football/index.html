@@ -112,6 +112,16 @@
           <div class="file-status" id="file-status"></div>
           <button class="primary-button" type="submit">Save my profile</button>
         </form>
+                <section class="media-section messages-section" id="player-messages-section">
+          <h3>Messages from Talent Administration</h3>
+          <p class="muted">Read updates from RadiantWaves Football Talent and reply to the administration team here.</p>
+          <div id="player-messages" class="message-thread"></div>
+          <form id="player-reply-form" class="form-panel message-compose">
+            <label>Your reply<textarea id="player-reply-body" rows="4" maxlength="10000" required placeholder="Write your reply to the Talent Administration Team"></textarea></label>
+            <button class="primary-button" type="submit">Send reply</button>
+          </form>
+          <div id="player-message-status" class="file-status" aria-live="polite"></div>
+        </section>
         <section class="media-section">
           <h3>Match highlights</h3>
           <p class="muted">Upload up to 3 short football highlight videos. Maximum 60 seconds and 50 MB per video.</p>
@@ -136,6 +146,23 @@
         <button id="admin-refresh" class="outline-button" type="button">Refresh player list</button>
         <div id="admin-status" class="file-status" aria-live="polite"></div>
         <div id="admin-results" class="admin-results"></div>
+                <section class="messages-section admin-messages">
+          <h3 class="admin-subheading">Player contact and messages</h3>
+          <p class="muted">Send registration updates and read player replies. Messages appear in the player's dashboard when they log in.</p>
+          <div id="admin-message-compose" class="message-compose hidden">
+            <h4 id="admin-message-recipient">New player message</h4>
+            <form id="admin-message-form" class="form-panel">
+              <label>Subject<input id="admin-message-subject" maxlength="180" required value="RadiantWaves Football Talent – Registration Update"></label>
+              <label>Message<textarea id="admin-message-body" rows="5" maxlength="10000" required placeholder="Write a message to this player"></textarea></label>
+              <div class="message-actions">
+                <button class="primary-button" type="submit">Send message</button>
+                <button id="admin-message-cancel" class="outline-button" type="button">Cancel</button>
+              </div>
+            </form>
+          </div>
+          <div id="admin-message-status" class="file-status" aria-live="polite"></div>
+          <div id="admin-message-results" class="message-thread"></div>
+        </section>
         <h3 class="admin-subheading">Uploaded player media</h3>
         <div id="admin-media-status" class="file-status" aria-live="polite"></div>
         <div id="admin-media-results" class="admin-results"></div>
